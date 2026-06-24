@@ -1,0 +1,245 @@
+<!-- Source: https://vasp.at/wiki/index.php/Category:Parallelization | revid: 35533 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# Category:Parallelization
+VASP makes use of parallel machines splitting the calculation into many
+tasks, that communicate with each other using MPI. Since a single core
+cannot perform enough operations, for many complex problems, this
+parallelization is necessary to finish the calculation in a reasonable
+time.
+
+## Contents
+
+- [1 Theory](#Theory)
+  - [1.1 Basic parallelization](#Basic_parallelization)
+  - [1.2 Communication patterns](#Communication_patterns)
+  - [1.3 MPI setup](#MPI_setup)
+  - [1.4 File handling](#File_handling)
+  - [1.5 Terminology in high-performance computing
+    (HPC)](#Terminology_in_high-performance_computing_(HPC))
+- [2 How to](#How_to)
+  - [2.1 Optimizing the
+    parallelization](#Optimizing_the_parallelization)
+  - [2.2 OpenMP/OpenACC](#OpenMP/OpenACC)
+- [3 Additional parallelization
+  options](#Additional_parallelization_options)
+
+## Theory
+### Basic parallelization
+By default, VASP distributes the number of bands
+([NBANDS](../incar-tags/NBANDS.md)) over the available MPI ranks. But it
+is often beneficial to add parallelization of the FFTs
+([NCORE](../incar-tags/NCORE.md)), parallelization over **k** points
+([KPAR](../incar-tags/KPAR.md)), and parallelization over separate
+calculations ([IMAGES](../incar-tags/IMAGES.md)). All these tags default
+to 1 and divide the number of MPI ranks among the parallelization
+options. Additionally, there are some parallelization options for
+specific algorithms in VASP, e.g.,
+[NOMEGAPAR](../incar-tags/NOMEGAPAR.md). In summary, VASP parallelizes
+with
+
+$\text{total ranks} = \text{ranks parallelizing
+bands} \times \text{NCORE} \times \text{KPAR} \times \text{IMAGES}
+\times \text{other algorithm-dependent tags}.$
+
+In addition to the parallelization using MPI, VASP can make use of
+[OpenMP
+threading](../misc/Combining_MPI_and_OpenMP.md)
+and/or [offloading to
+GPUs](../misc/GPU_ports_of_VASP.md). Note that running on
+multiple OpenMP threads and/or GPUs switches off the
+[NCORE](../incar-tags/NCORE.md) parallelization.
+
+### Communication patterns
+[![VASP divides the available MPI ranks into images, k-point groups, and
+band
+groups](https://vasp.at/wiki/images/thumb/1/19/Communication.png/513px-Communication.png)](https://vasp.at/wiki/File:Communication.png "VASP divides the available MPI ranks into images, k-point groups, and band groups")
+[![VASP divides the available MPI ranks into images, k-point groups, and
+band
+groups](https://vasp.at/wiki/images/thumb/0/08/Communication2.png/513px-Communication2.png)](https://vasp.at/wiki/File:Communication2.png "VASP divides the available MPI ranks into images, k-point groups, and band groups")
+
+The aforementioned parallelization levels directly map onto MPI
+communicators. Initially, VASP divides all available ranks into
+[IMAGES](../incar-tags/IMAGES.md) equally-sized images. Setting
+[KPAR](../incar-tags/KPAR.md) splits each of these images further into
+groups of **k** points. Properties involving all **k** points (e.g.
+density, Fermi energy) require then a communication over these
+**k**-point groups. VASP divides the **k**-point group into band groups
+of size [NCORE](../incar-tags/NCORE.md). The band group parallelizes the
+FFTs and triggers the most frequent communications. To evaluate
+properties involving multiple bands (e.g. Hamiltonian,
+orthonormalization) communication between the band groups occurs.
+
+### MPI setup
+[![All ranks associated with a particular band group are on the same
+node. All communication for the FFTs is
+intranode.](https://vasp.at/wiki/images/thumb/7/7f/Good_process_binding.png/380px-Good_process_binding.png)](https://vasp.at/wiki/File:Good_process_binding.png "All ranks associated with a particular band group are on the same node. All communication for the FFTs is intranode.")
+[![Ranks of some band groups extend over multiple nodes. Every FFT
+requires internode
+communication.](https://vasp.at/wiki/images/thumb/5/5d/Bad_process_binding.png/380px-Bad_process_binding.png)](https://vasp.at/wiki/File:Bad_process_binding.png "Ranks of some band groups extend over multiple nodes. Every FFT requires internode communication.")
+
+The MPI setup determines the placement of the ranks onto the nodes. VASP
+assumes the ranks first fill up a node before the next node is occupied.
+As an example when running with 20 ranks on two nodes, VASP expects rank
+1–10 on node 1 and rank 11–20 on node 2. If the ranks are placed
+differently, communication between the nodes occurs for every parallel
+FFT. Because FFTs are essential to VASP's speed, this deteriorates the
+performance of the calculation. A manifestation is an increase in
+computing time when the number of nodes is increased from 1 to 2. If
+[NCORE](../incar-tags/NCORE.md) is not used this issue is less severe but
+will still reduce the performance.
+
+To address this issue, please check the setup of the MPI library and the
+submitted job script. It is usually possible to overwrite the placement
+by setting environment variables or command-line arguments. When in
+doubt, contact the HPC administration of your machine to investigate the
+behavior.
+
+### File handling
+When VASP is started it reads the file [INCAR](../input-files/INCAR.md) in
+the root directory. Because the MPI setup needs to happen early in the
+general setup of the calculation the following tags are processed before
+any of the other settings:
+[NCORE_IN_IMAGE1](../incar-tags/NCORE_IN_IMAGE1.md),
+[IMAGES](../incar-tags/IMAGES.md), [KPAR](../incar-tags/KPAR.md),
+[NCORE](../incar-tags/NCORE.md), [NPAR](../incar-tags/NPAR.md),
+[NCSHMEM](../incar-tags/NCSHMEM.md),
+[LUSENCCL](../incar-tags/LUSENCCL.md). When
+[IMAGES](../incar-tags/IMAGES.md) are used, subsequently any input given
+in the root directory is superseded by the same file in subdirectories
+01, 02, ... Any file not present in these subdirectories will be read
+from the root directory. The output files are always written to the
+subdirectories.
+
+### Terminology in high-performance computing (HPC)
+CPU  
+The central processing unit of a computer. A CPU may consist of multiple
+*cores*. One or more CPUs can be combined with accelerators like *GPUs*
+to form a *node*. Desktop computers typically contain a single CPU.
+
+GPU  
+The graphical processing unit. A GPU is very efficient at matrix and
+vector operations and may accelerate a program by transferring
+particularly suitable tasks from the *CPU* to the GPU.
+
+Core  
+When a *CPU* has the option to execute multiple tasks in parallel, we
+refer to this as a multi-core CPU. Because these computational cores are
+physically close, they typically exhibit a fast communication between
+them.
+
+Node  
+The node constitutes a physical entity consisting of one or more *CPUs*
+potentially accelerated by *GPUs*. The communication between nodes is
+much slower compared to the communication within a single node.
+
+NUMA (Non-Uniform Memory Access) domain  
+these are distinct regions within a computer system where each core or
+group of cores has its own local memory that can be accessed faster than
+memory connected to other cores. In a NUMA architecture, memory access
+times vary depending on the proximity of the memory to the CPU core
+requesting it — local memory access is quicker, while remote access
+across domains incurs latency.
+
+Socket  
+*Processes* communicate via sockets. Each socket corresponds to an
+endpoint in this communication.
+
+Process  
+A process is a program executing on one or more *cores*. Multiple
+processes may distribute work via communication. Each process may spawn
+multiple *threads* to execute their task.
+
+OpenMP thread  
+These threads live on a single *node*. *Processes* can instantiate these
+threads for loops or other parallel tasks.
+
+Message Passing Interface (MPI)  
+A communication protocol to facilitate parallel execution of multiple
+*processes*. The *processes* send messages among them to synchronize
+parallel tasks when necessary.
+
+Rank  
+Each rank corresponds to one *process* participating in the *MPI*
+communication. These ranks determine which particular task a *process*
+works on and identify senders and receivers of messages.
+
+Memory  
+*Processes* store the data they work on in the dynamic random access
+memory (DRAM) or random access memory (RAM). From there it propagates to
+the execution *cores* via the *cache*.
+
+Cache  
+The cache is physically much closer to the *CPU* than the *memory*.
+Therefore, data is moved from the *memory* to the cache before
+processing.
+
+|  |
+|----|
+| **Warning:** The terminology of nodes, cores, CPUs, threads, etc. is not universal. For instance, some refer to a single core as a CPU, others refer to an entire node as a CPU. |
+
+|  |
+|----|
+| **Tip:** There is a lecture on [high-performance computing (HPC)](https://youtu.be/KzIuL_e0zz8) in VASP available on our YouTube channel. |
+
+## How to
+### Optimizing the parallelization
+The performance of a specific parallelization depends on the system,
+i.e., the number of ions, the elements, the size of the cell, etc.
+Different algorithms ([density-functional
+theory](Category-Electronic_minimization.md),
+[many-body perturbation
+theory](Category-Many-body_perturbation_theory.md),
+or [molecular
+dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics))
+require a separate optimization of the parallel setup. To obtain
+publishable results, many projects require performing many similar
+calculations, i.e., calculations with similar input and using the same
+algorithms. Therefore, we recommend optimizing the parallelization to
+make the most of the available compute time. This optimization process
+depends greatly on the hardware and [compiler
+toolchain](../misc/Toolchains.md) on which you run your
+calculation. Hence, make sure to verify your setup when switching one of
+these.
+
+|  |
+|----|
+| **Tip:** Run a few test calculations varying the parallel setup and use the optimal choice of parameters for the rest of the calculations. |
+
+For more detailed advice, check the following:
+
+- How to [optimize the
+  parallelization](../tutorials/Optimizing_the_parallelization.md)
+  in a nutshell
+
+### OpenMP/OpenACC
+Both [OpenMP](../misc/Combining_MPI_and_OpenMP.md)
+and [offloading to GPUs](../misc/GPU_ports_of_VASP.md)
+parallelize the FFTs and therefore disregard any conflicting
+specification of [NCORE](../incar-tags/NCORE.md). When running any of the
+[GPU ports of VASP](../misc/GPU_ports_of_VASP.md), the
+offloaded code path takes precedence, but any code not ported to GPU
+benefits from the additional OpenMP threads on the CPU. This approach is
+relevant because the recommended NVIDIA Collective Communications
+Library requires a single MPI rank per GPU (as does RCCL for AMD). Learn
+more about the OpenMP and OpenACC parallelization in these sections
+
+- How to [parallelize with multiple OpenMP threads per MPI
+  rank](../misc/Combining_MPI_and_OpenMP.md)
+- How to [run on GPUs](../misc/GPU_ports_of_VASP.md)
+
+## Additional parallelization options
+[KPAR](../incar-tags/KPAR.md)  
+For Laplace transformed MP2 this tag [has a different
+meaning](../tutorials/LTMP2_-_Tutorial.md).
+
+[NCORE_IN_IMAGE1](../incar-tags/NCORE_IN_IMAGE1.md)  
+Defines how many ranks work on the first image in the thermodynamic
+coupling constant integration
+([VCAIMAGES](../incar-tags/VCAIMAGES.md)).
+
+[NOMEGAPAR](../incar-tags/NOMEGAPAR.md)  
+Parallelize over imaginary frequency points in $GW$ and RPA calculations.
+
+[NTAUPAR](../incar-tags/NTAUPAR.md)  
+Parallelize over imaginary time points in $GW$ and RPA calculations.

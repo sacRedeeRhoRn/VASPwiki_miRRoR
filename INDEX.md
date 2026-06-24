@@ -1,0 +1,1361 @@
+# VASP Wiki — Reference Index
+
+Snapshot: 2026-06-24 · 1341 pages · GFDL 1.2 (© VASP wiki contributors, from https://vasp.at/wiki/)
+How to use: run `vaspwiki search "<query>"` (tool in tools/vaspwiki) or grep this file, then open ONLY the listed reference files.
+
+## categories (66)
+- **Category:2D materials** — - [1 Surfaces, thin films, and 2D  ·  aliases: 2D material, 2D materials, Surfaces, thin films, and 2D materials  →  references/categories/Category-2D_materials.md
+- **Category:Advanced molecular-dynamics sampling** — In a  ·  aliases: Advanced molecular-dynamics sampling  →  references/categories/Category-Advanced_molecular-dynamics_sampling.md
+- **Category:Atoms and Molecules** — - Improved dimer method: [Improved Dimer  ·  aliases: Category:Molecules  →  references/categories/Category-Atoms_and_Molecules.md
+- **Category:Band structure** — The band structure describes the eigenvalues of the orbitals throughout  ·  aliases: Band structure  →  references/categories/Category-Band_structure.md
+- **Category:Berry phases** — The polarization in a periodic system can be computed using the [berry  →  references/categories/Category-Berry_phases.md
+- **Category:Biased molecular dynamics** — *Biased molecular dynamics'* (MD) refers to advanced [MD-simulation  →  references/categories/Category-Biased_molecular_dynamics.md
+- **Category:Calculation setup** — The Vienna ab-initio simulation package (VASP) is a computer program for  ·  aliases: Calculation setup, Computational setup  →  references/categories/Category-Calculation_setup.md
+- **Category:Charge density** —   ·  aliases: Charge density  →  references/categories/Category-Charge_density.md
+- **Category:Common Pitfalls** — - What kind of "technical" errors do exist, an overview: [Technical  →  references/categories/Category-Common_Pitfalls.md
+- **Category:Constrained molecular dynamics** — - Constrained molecular dynamics: [Constrained molecular  →  references/categories/Category-Constrained_molecular_dynamics.md
+- **Category:Crystal momentum** — A crystal is characterized by the fact that it obeys translational  ·  aliases: Crystal momentum  →  references/categories/Category-Crystal_momentum.md
+- **Category:Defects** — - Dipole corrections for defects in solids: [Dipole corrections for  →  references/categories/Category-Defects.md
+- **Category:Density mixing** — Density mixing refers to the way of updating, e.g., the charge  ·  aliases: Category:Mixing, Density mixing  →  references/categories/Category-Density_mixing.md
+- **Category:Density of states** — ![](https://vasp.at/wiki/File:Si.png)  ·  aliases: Density of states  →  references/categories/Category-Density_of_states.md
+- **Category:Development version** — This category only contains tags and features that are only available in  →  references/categories/Category-Development_version.md
+- **Category:Dielectric properties** — - 1 Dielectric function  ·  aliases: Dielectric function, Dielectric properties, Optical properties  →  references/categories/Category-Dielectric_properties.md
+- **Category:Electron-phonon interactions** — In many systems, it suffices to treat the  ·  aliases: Electron-phonon coupling  →  references/categories/Category-Electron-phonon_interactions.md
+- **Category:Electronic ground-state properties** — At the end of an [electronic  ·  aliases: Electronic ground-state properties  →  references/categories/Category-Electronic_ground-state_properties.md
+- **Category:Electronic minimization** — By electronic minimization we denote the process of determining the  ·  aliases: Electronic minimization  →  references/categories/Category-Electronic_minimization.md
+- **Category:Electronic occupancy** — Within the PAW method there is the  ·  aliases: Electronic occupancy  →  references/categories/Category-Electronic_occupancy.md
+- **Category:Electrostatics** — Computing the properties of charged and dipolar systems requires proper  ·  aliases: Electrostatics  →  references/categories/Category-Electrostatics.md
+- **Category:Ensemble properties** — In a  ·  aliases: Ensemble properties  →  references/categories/Category-Ensemble_properties.md
+- **Category:Ensembles** — A central concept of statistical mechanics is the ensemble.  ·  aliases: Ensemble, Ensembles  →  references/categories/Category-Ensembles.md
+- **Category:Examples** — All articles related to VASP example calculations  →  references/categories/Category-Examples.md
+- **Category:Exchange-correlation functionals** — In the Kohn-Sham (KS) formulation of density-functional theory  ·  aliases: Exchange-correlation functional, Exchange-correlation functionals, XC functional, XC functionals  →  references/categories/Category-Exchange-correlation_functionals.md
+- **Category:Files** — All VASP [input  ·  aliases: Files  →  references/categories/Category-Files.md
+- **Category:GPU** — All tags and articles that are important for the GPU-port of VASP are  →  references/categories/Category-GPU.md
+- **Category:HDF5 support** — Since VASP 6.2.0 we started supporting the feature of reading and  →  references/categories/Category-HDF5_support.md
+- **Category:Howto** — All Howto's will show up here.  ·  aliases: Howto  →  references/categories/Category-Howto.md
+- **Category:INCAR tag** — The INCAR file is the central [input  ·  aliases: Category:INCAR, INCAR tag, INCAR tags  →  references/categories/Category-INCAR_tag.md
+- **Category:Input files** — As a minimal setup, VASP requires the following input files:  ·  aliases: Input file, Input files  →  references/categories/Category-Input_files.md
+- **Category:Installation** —   ·  aliases: Installation  →  references/categories/Category-Installation.md
+- **Category:Interface pinning** —   →  references/categories/Category-Interface_pinning.md
+- **Category:Ionic minimization** — By virtue of the Born-Oppenheimer approximation, the electronic and  ·  aliases: Ionic minimization  →  references/categories/Category-Ionic_minimization.md
+- **Category:Linear response** — Apart from ground-state properties, VASP can compute how a system reacts  ·  aliases: Linear response  →  references/categories/Category-Linear_response.md
+- **Category:Machine-learned force fields** — Machine-learned force fields used in combination with ab-initio  ·  aliases: MLFF, Machine-learned force fields  →  references/categories/Category-Machine-learned_force_fields.md
+- **Category:Magnetism** — There are three ingredients to obtain magnetism:  ·  aliases: Magnetic materials  →  references/categories/Category-Magnetism.md
+- **Category:Many-body perturbation theory** — Treating the electron-electron interaction within many-body  ·  aliases: Many-body perturbation theory  →  references/categories/Category-Many-body_perturbation_theory.md
+- **Category:Memory** — Memory can be a limiting factor for VASP calculations of large  ·  aliases: Memory  →  references/categories/Category-Memory.md
+- **Category:Molecular Dynamics** — To get an idea about what basically molecular dynamics is and what the  →  references/categories/Category-Molecular_Dynamics.md
+- **Category:Monopole Dipole and Quadrupole Corrections** — Monopole, dipole and quadrupole corrections: [Monopole Dipole and  →  references/categories/Category-Monopole_Dipole_and_Quadrupole_Corrections.md
+- **Category:NMR** — Nuclear magnetic resonance (NMR) spectroscopy is a highly sensitive  ·  aliases: NMR, Nuclear magnetic resonance  →  references/categories/Category-NMR.md
+- **Category:Noncollinear magnetism** — - Noncollinear magnetism:  →  references/categories/Category-Noncollinear_magnetism.md
+- **Category:Output Files** — The main output file of VASP is the OUTCAR.  →  references/categories/Category-Output_Files.md
+- **Category:Parallelization** — VASP makes use of parallel machines splitting the calculation into many  ·  aliases: Parallelization  →  references/categories/Category-Parallelization.md
+- **Category:Performance** — The performance of VASP depends on multiple factors that the user can  ·  aliases: Performance  →  references/categories/Category-Performance.md
+- **Category:Phonons** — Phonons are the collective excitation of nuclei in an extended periodic  ·  aliases: Phonon, Phonons  →  references/categories/Category-Phonons.md
+- **Category:POTCAR tag** — The POTCAR file contains the  ·  aliases: POTCAR tag  →  references/categories/Category-POTCAR_tag.md
+- **Category:Potential** —   →  references/categories/Category-Potential.md
+- **Category:Programming** — - General guidelines and programming advices for VASP developers and  →  references/categories/Category-Programming.md
+- **Category:Projector-augmented-wave method** — The projector-augmented-wave (PAW) method is a specific kind of  ·  aliases: Category:PAW, PAW, Projector-augmented wave  →  references/categories/Category-Projector-augmented-wave_method.md
+- **Category:Pseudopotentials** — [![Sketch of a pseudopotential and  ·  aliases: Pseudopotential, Pseudopotentials  →  references/categories/Category-Pseudopotentials.md
+- **Category:Slow-growth approach** — - Slow-growth approach: [Slow-growth  →  references/categories/Category-Slow-growth_approach.md
+- **Category:Spin spirals** — - Spin spirals: Spin spirals.  →  references/categories/Category-Spin_spirals.md
+- **Category:Spin-orbit coupling** — Spin-orbit coupling (SOC) is the relativistic interaction between  ·  aliases: Relativistic corrections, Spin-orbit coupling  →  references/categories/Category-Spin-orbit_coupling.md
+- **Category:Symmetry** — VASP determines the symmetry of the structure by analyzing the ionic  ·  aliases: Symmetry  →  references/categories/Category-Symmetry.md
+- **Category:Theory** — The Vienna ab-initio simulation package (VASP) is a computer program  ·  aliases: Theory  →  references/categories/Category-Theory.md
+- **Category:Thermodynamic integration** — This category contains all tags related to thermodynamic integration.  →  references/categories/Category-Thermodynamic_integration.md
+- **Category:Thermostats** — Thermostats are used in [molecular-dynamics  ·  aliases: Thermostat, Thermostats  →  references/categories/Category-Thermostats.md
+- **Category:Transition States** — ![](https://vasp.at/wiki/File:Transition_state_pathway.png)  →  references/categories/Category-Transition_States.md
+- **Category:Tutorials** — This page contains the list of all tutorials.  →  references/categories/Category-Tutorials.md
+- **Category:VASP** — This is the top-level category  →  references/categories/Category-VASP.md
+- **Category:Version** —   →  references/categories/Category-Version.md
+- **Category:Wannier functions** — Wannier functions $ w_{mmathbf{R}}rangle$ are constructed by a linear combination of Bloch states  ·  aliases: Wannier Functions, Wannier basis, Wannier states  →  references/categories/Category-Wannier_functions.md
+- **Category:Workshops** — All tags and articles that deal with VASP workshops (talks, exercises,  →  references/categories/Category-Workshops.md
+- **Category:XAS** — X-ray absorption spectroscopy (XAS) is a powerful method for  ·  aliases: XAS  →  references/categories/Category-XAS.md
+
+## incar-tags (626)
+- **ADDGRID** — .TRUE. | .FALSE., default = .FALSE. ADDGRID determines whether an additional support grid is used for the evaluation of the augmentation charges.  →  references/incar-tags/ADDGRID.md
+- **AEXX** — [real], default = 0.25 if LHFCALC=.TRUE. .AND. LRHFCALC=.FALSE. AEXX specifies the fraction of exact exchange in a Hartree-Fock-type/hybrid-functional calculation.  →  references/incar-tags/AEXX.md
+- **AGGAC** — [real], default = 1.0 if LHFCALC$=$.FALSE. or AEXX$neq$1.0. AGGAC is a parameter that multiplies the gradient correction in the GGA correlation functional.  →  references/incar-tags/AGGAC.md
+- **AGGAX** — [real], default = 1.0-AEXX if LHFCALC=.TRUE. AGGAX is a parameter that multiplies the gradient correction in the GGA exchange functional.  →  references/incar-tags/AGGAX.md
+- **ALDAC** — [real], default = 1.0 if LHFCALC$=$.FALSE. or AEXX$neq$1.0. ALDAC is a parameter that multiplies the LDA correlation functional or the LDA part of the GGA correlation functional.  →  references/incar-tags/ALDAC.md
+- **ALDAX** — [real], default = 1.0-AEXX if LHFCALC=.TRUE. ALDAX is a parameter that multiplies the LDA exchange functional or the LDA part of the GGA exchange functional.  →  references/incar-tags/ALDAX.md
+- **ALGO** — [string], default = Normal. Selects the electronic-minimization algorithm and/or the many-body method:  ·  aliases: Electronic-minimization algorithm  →  references/incar-tags/ALGO.md
+- **ALPHA_VDW** — [real], default = 0.94950 for IVDW_NL=3 or. Specify $alpha$ in vdW-DF3-opt1/vdW-DF3-opt2.  →  references/incar-tags/ALPHA_VDW.md
+- **AMGGAC** — [real], default = 1.0 if LHFCALC$=$.FALSE. or AEXX$neq$1.0. AMGGAC is a parameter that multiplies the meta-GGA correlation functional (available as of VASP.6.4.0).  →  references/incar-tags/AMGGAC.md
+- **AMGGAX** — [real], default = 1.0-AEXX if LHFCALC=.TRUE. AMGGAX is a parameter that multiplies the meta-GGA exchange functional (available as of VASP.6.4.0).  →  references/incar-tags/AMGGAX.md
+- **AMIN** — [real]. AMIN specifies the minimal mixing parameter in Kerker's initial approximation^([[1]](#cite_note-kerker:prb:1981-1)) to the charge-dielectric function used in the  →  references/incar-tags/AMIN.md
+- **AMIX** — [real], default = 0.8 if ISPIN=1 and one uses US-PPs. AMIX specifies the linear mixing parameter.  →  references/incar-tags/AMIX.md
+- **AMIX_MAG** — [real], default = 1.6. Linear mixing parameter for the magnetization density.  →  references/incar-tags/AMIX_MAG.md
+- **ANDERSEN_PROB** — 0≤[real]≤1, default = 0. ANDERSEN_PROB sets the collision probability for the Anderson thermostat (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/ANDERSEN_PROB.md
+- **ANTIRES** — 0 | 1 | 2, default = 0. ANTIRES determines whether the Tamm-Dancoff approximation is used or not.  →  references/incar-tags/ANTIRES.md
+- **APACO** — [real], default = 10. APACO sets the maximum distance in the evaluation of the pair-correlation function (in Å).  →  references/incar-tags/APACO.md
+- **BANDGAP** — COMPACT | WEIGHT | KPOINT, default = COMPACT. BANDGAP determines the verbosity for reporting the bandgap to the OUTCAR file.  →  references/incar-tags/BANDGAP.md
+- **BEXT** — [real] ( [real] [real] ), default = 0.0 if ISPIN=2. Specifies an external magnetic field in eV.  →  references/incar-tags/BEXT.md
+- **BEXX** — [real], default = 1 if LHFCALC=.TRUE. BEXX specifies the fraction of short-range exact exchange in range-separated hybrid-functionals constructed with LMODELHF=.TRUE.  →  references/incar-tags/BEXX.md
+- **BMIX** — [real], default = 1.0. BMIX sets the cutoff wave vector for Kerker mixing scheme (IMIX=1 and/or INIMIX=1).  →  references/incar-tags/BMIX.md
+- **BMIX_MAG** — [real], default = 1.0. Sets the cutoff wave vector for Kerker mixing scheme (IMIX=1 and/or INIMIX=1) for the magnetization density ^([[1]](#cite_note-kerker:prb:1981-1)).  →  references/incar-tags/BMIX_MAG.md
+- **BPARAM** — [real], default = 6.3. The tag BPARAM specifies the value of the parameter $b$ in the kernel of the nonlocal rVV10 correlation functional.  →  references/incar-tags/BPARAM.md
+- **BSEELECTRON** — [real array]. BSEELECTRON sets the coordinates of the fixed electron of the exciton wavefunction  →  references/incar-tags/BSEELECTRON.md
+- **BSEHOLE** — [real array]. BSEHOLE sets the coordinates of the fixed hole of the exciton wavefunction  →  references/incar-tags/BSEHOLE.md
+- **BSEPREC** — Low | Medium | High | Accurate, default = Medium. Determines the precision of the time-evolution algorithm, where it controls the timestep and the number of steps, and the precision of the Lanczos algorithms, where it sets the convergence  →  references/incar-tags/BSEPREC.md
+- **CH_AMPLIFICATION** — [real], default = 1.0. This tag is used to scale (amplify) the calculated dielectric function within the supercell core-hole method and the BSE+GW method for core electrons.  →  references/incar-tags/CH_AMPLIFICATION.md
+- **CH_LSPEC** — [logical], default = .FALSE. This flag controls whether the dielecectric function using the supercell core-hole method is calculated or not.  →  references/incar-tags/CH_LSPEC.md
+- **CH_NEDOS** — [integer], default = 1000. This tag specifies the number of frequency (energy) grid points on the x-axis in the calculation of the dielectric function in the supercell core-hole method.  →  references/incar-tags/CH_NEDOS.md
+- **CH_SIGMA** — [real], default = 0.3. This tag specifies the width of the Gaussian broadening in eV of the imaginary dielectric function within the supercell core-hole method.  →  references/incar-tags/CH_SIGMA.md
+- **CHECKPOINT_FD** — CONTINUE | RESET | NONE | SINGLE, default = RESET. Enables a finite differences calculation to be restarted or split up into displacements.  →  references/incar-tags/CHECKPOINT_FD.md
+- **CLL** — [integer], default = 0. CLL selects the angular quantum number $l$ of the excited core electron when using ICORELEVEL>0.  →  references/incar-tags/CLL.md
+- **CLN** — [integer], default = 1. CLN selects the main quantum number $n$ of the excited core electron when using ICORELEVEL>0.  →  references/incar-tags/CLN.md
+- **CLNT** — [integer], default = 1. CLNT selects the type of the excited atoms in XAS calculations with ICORELEVEL>0.  →  references/incar-tags/CLNT.md
+- **CLZ** — [real], default = 0. CLZ selects a fractional or the full electron charge for the core hole in the core-excitation calculations with ICORELEVEL=2.  →  references/incar-tags/CLZ.md
+- **CMBJ** — [real (array)], default = calculated self-consistently. defines the $c$ parameter in the MBJ potential.  →  references/incar-tags/CMBJ.md
+- **CMBJA** — [real], default = −0.012 if METAGGA=MBJ. sets the $alpha$ parameter in the MBJ and LMBJ potentials.  →  references/incar-tags/CMBJA.md
+- **CMBJB** — [real], default = 1.023 if METAGGA=MBJ. sets the $beta$ parameter in the MBJ and LMBJ potentials.  →  references/incar-tags/CMBJB.md
+- **CMBJE** — [real], default = 0.5. sets the $e$ parameter in the MBJ and local MBJ potentials.  →  references/incar-tags/CMBJE.md
+- **CO** — Overview >  →  references/incar-tags/CO.md
+- **CPARAM** — [real], default = 0.0093. The tag CPARAM allows to specify the value of the parameter $C$ in the kernel of the nonlocal rVV10 correlation functional.^([[1]](#cite_note-sabatini:prb:2013-1))  →  references/incar-tags/CPARAM.md
+- **CSHIFT** — [real], default = 0.1 for LOPTICS. CSHIFT sets a Lorentzian broadening in eV of the dielectric tensor via the complex shift η in the Kramers-Kronig transformation of the response function.  →  references/incar-tags/CSHIFT.md
+- **CUTOFF_MU** — [real] ( [real] ), default = 0.8 * Fermi level of a system with NUM_WANN orbitals occupied. CUTOFF_MU specifies the energy cutoff $mu$ in eV for the function specified by CUTOFF_MU.  →  references/incar-tags/CUTOFF_MU.md
+- **CUTOFF_SIGMA** — [real] ( [real] ), default = 0.1. CUTOFF_SIGMA specifies the broadening $sigma$ in eV for the cutoff function specified by CUTOFF_TYPE.  →  references/incar-tags/CUTOFF_SIGMA.md
+- **CUTOFF_TYPE** — erfc | gaussian | fermi | num_wann, default = erfc. CUTOFF_TYPE chooses the type of cutoff function to be used before performing the singular-value decomposition (SVD) of the initial projections matrix.  →  references/incar-tags/CUTOFF_TYPE.md
+- **DEG_THRESHOLD** — [real], default = $2 times 10^{-3}$. DEG_THRESHOLD specifies whether two eigenvalues should be treated as degenerate during clustering of orbitals in the linear response code.  →  references/incar-tags/DEG_THRESHOLD.md
+- **DEPER** — [real], default = 0.3. DEPER specifies a relative stopping criterion for the optimization of an eigenvalue.  →  references/incar-tags/DEPER.md
+- **DFTD4_MODEL** — [string], default = D4. DFTD4_MODEL defines the model in the DFT-D4 method.  →  references/incar-tags/DFTD4_MODEL.md
+- **DFTD4_XC** — [string], default = The functional set by the. DFTD4_XC sets the exchange-correlation functional which determines the van der Waals parameters used in the DFT-D4 method implemented in the DFT-D4 package.  →  references/incar-tags/DFTD4_XC.md
+- **DIMER_DIST** — [real], default = 0.01. The flag DIMER_DIST defines the step size for the numerical differentiation (in $AA$) for the Improved Dimer Method.  →  references/incar-tags/DIMER_DIST.md
+- **DIPOL** — [real array]. specifies the center of the cell in direct lattice coordinates with respect to which the total dipole-moment in the cell is calculated.  →  references/incar-tags/DIPOL.md
+- **DQ** — [real], default = 0.001. step size for the finite difference *k*-space derivative in the linear response calculation of chemical shifts.  →  references/incar-tags/DQ.md
+- **EAUG** — [real], default = value read from POTCAR. EAUG specifies the energy cutoff for the plane-wave representation for the augmentation charges in eV for the pseudopotential it is read from.  →  references/incar-tags/EAUG.md
+- **EBREAK** — [real]. EBREAK specifies an absolute stopping criterion for the optimization of an eigenvalue.  →  references/incar-tags/EBREAK.md
+- **EDIFF** — [real], default = $10^{-4}$. EDIFF specifies the global break condition for the electronic SC-loop.  →  references/incar-tags/EDIFF.md
+- **EDIFFG** — [real], default = EDIFF×10. EDIFFG defines the break condition for the ionic relaxation loop.  →  references/incar-tags/EDIFFG.md
+- **EFERMI** — MIDGAP | LEGACY | [real], default = LEGACY. Defines how the Fermi energy is calculated in VASP.  →  references/incar-tags/EFERMI.md
+- **EFERMI_NEDOS** — [integer], default = 21. Number of Gauss–Legendre integration points used to evaluate the Fermi–Dirac distribution and determine the Fermi level at finite temperature using the tetrahedron method only with ISMEAR = −14 or -15 .  →  references/incar-tags/EFERMI_NEDOS.md
+- **EFIELD** — [real]. EFIELD controls the magnitude of the applied electric force field.  →  references/incar-tags/EFIELD.md
+- **EFIELD_PEAD** — [real array], default = 3*0.01 if LCALCEPS=.TRUE. EFIELD_PEAD specifies the homogeneous electric force field in the electric enthalpy functional used to compute the self-consistent response to finite electric fields.  →  references/incar-tags/EFIELD_PEAD.md
+- **EFOR** — [real array], default = 3 * NIONS * 0.0. EFOR sets external forces in eV/Å on each atom in the cartesian x-, y-, and z-directions.  →  references/incar-tags/EFOR.md
+- **EINT** — [real1] [real2] | [real1], default = not set. EINT sets the energy interval for bands contributing to the calculation of the partial charge density in eV.  →  references/incar-tags/EINT.md
+- **ELPH KSPACING** — [real]. The tag ELPH_KSPACING determines the k point mesh if the KPOINTS_ELPH file is not present.  →  references/incar-tags/ELPH_KSPACING.md
+- **ELPH_DECOMPOSE** — [string], default = VDPR. Chooses which contributions to include in the computation of the electron-phonon matrix elements.  →  references/incar-tags/ELPH_DECOMPOSE.md
+- **ELPH_DRIVER** — el | mels, default = el. Chooses which driver to use for electron-phonon calculations.  →  references/incar-tags/ELPH_DRIVER.md
+- **ELPH_FERMI_NEDOS** — [integer], default = 501. Number of Gauss–Legendre integration points used to evaluate the Fermi–Dirac distribution and determine the electronic Fermi level at finite temperature in the context of electron–phonon (el–ph) coupling  →  references/incar-tags/ELPH_FERMI_NEDOS.md
+- **ELPH_IGNORE_IMAG_PHONONS** — [logical], default = .FALSE. If enabled, VASP ignores imaginary phonon frequencies during electron-phonon calculations.  →  references/incar-tags/ELPH_IGNORE_IMAG_PHONONS.md
+- **ELPH_ISMEAR** — -15 | -14 | -5 | -4 | -1 | 0 | [integer]>0, default = 0. Chooses the smearing method to determine the fermi level and chemical potential before an electron-phonon calculation.  →  references/incar-tags/ELPH_ISMEAR.md
+- **ELPH_LR** — [integer], default = 1. Controls the treatment of the long-range part of the electron-phonon potential.  →  references/incar-tags/ELPH_LR.md
+- **ELPH_MODE** — [string]. Meta tag that selects reasonable defaults for electron-phonon calculations  →  references/incar-tags/ELPH_MODE.md
+- **ELPH_NBANDS** — [integer], default = NBANDS. Number of bands to compute on the dense k point grid for the electron-phonon driver  →  references/incar-tags/ELPH_NBANDS.md
+- **ELPH_NBANDS_SUM** — [integer array]. Number of intermediate states to include in the computation of the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_NBANDS_SUM.md
+- **ELPH_POT_FFT_MESH** — [real real real]. Specifies the FFT mesh for mapping the electron-phonon potential to the primitive cell.  →  references/incar-tags/ELPH_POT_FFT_MESH.md
+- **ELPH_POT_GENERATE** — [logical], default = False. Calculates the electron-phonon potential from finite atomic displacements.  →  references/incar-tags/ELPH_POT_GENERATE.md
+- **ELPH_POT_LATTICE** — [3x3 real]. Allows specifying an alternative primitive cell for the mapping of the electron-phonon potential.  →  references/incar-tags/ELPH_POT_LATTICE.md
+- **ELPH_PREPARE** — [logical], default = .FALSE. Writes the potential, the force-constants and other information related to electron-phonon interactions to the vaspout.h5 file.  →  references/incar-tags/ELPH_PREPARE.md
+- **ELPH_RUN** — [logical], default = .false. Select whether to run and electron-phonon calculation.  →  references/incar-tags/ELPH_RUN.md
+- **ELPH_SCATTERING_APPROX** — [string], default = SERTA MRTA_LAMBDA. Select which type of approximation is used to compute the electron scattering lifetimes due to electron-phonon coupling  →  references/incar-tags/ELPH_SCATTERING_APPROX.md
+- **ELPH_SELFEN_BAND_START** — [real], default = 1. Compute the electron self-energy due to electron-phonon coupling only for bands with indices starting from ELPH_SELFEN_BAND_START.  →  references/incar-tags/ELPH_SELFEN_BAND_START.md
+- **ELPH_SELFEN_BAND_STOP** — [real]. Compute the electron self-energy due to electron-phonon coupling only for bands with indices until ELPH_SELFEN_BAND_STOP.  →  references/incar-tags/ELPH_SELFEN_BAND_STOP.md
+- **ELPH_SELFEN_BROAD_TOL** — [real], default = 1e-6. defines the fraction of the total weight of the broadening function (derived from the imaginary part of the electron self-energy) that is excluded when setting the energy window beyond which the delta function is  →  references/incar-tags/ELPH_SELFEN_BROAD_TOL.md
+- **ELPH_SELFEN_CARRIER_DEN** — [real array], default = 0.0. List of additional carrier densities in units of $cm^{-3}$ at which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_CARRIER_DEN.md
+- **ELPH_SELFEN_CARRIER_DEN_RANGE** — [real array]. List of carrier density ranges in logarithmic scale (in $cm^{-3}$) at which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_CARRIER_DEN_RANGE.md
+- **ELPH_SELFEN_CARRIER_PER_CELL** — [real array], default = 0.0. List of additional number of carriers for which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_CARRIER_PER_CELL.md
+- **ELPH_SELFEN_DELTA** — [real array], default = 0.01. Complex imaginary shift to use when computing the self-energy due to electron-phonon coupling.  →  references/incar-tags/ELPH_SELFEN_DELTA.md
+- **ELPH_SELFEN_DW** — [logical], default = .FALSE. Controls whether the Debye-Waller contribution is included in the calculation of the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_SELFEN_DW.md
+- **ELPH_SELFEN_ENERGY_WINDOW** — [real, real], default = 0.0 0.0. Specifies the energy window (in eV) around the band edges within which the electron-phonon self-energy is computed.  →  references/incar-tags/ELPH_SELFEN_ENERGY_WINDOW.md
+- **ELPH_SELFEN_FAN** — [logical], default = .FALSE. Controls whether the Fan-Migdal contribution is included in the calculation of the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_SELFEN_FAN.md
+- **ELPH_SELFEN_G_SKIP** — [logical], default = .FALSE. Skip the computation of the electron-phonon matrix elements and instead assume their numerical value is 1.  →  references/incar-tags/ELPH_SELFEN_G_SKIP.md
+- **ELPH_SELFEN_GAPS** — [logical], default = .FALSE. Find the direct and indirect gaps and the valence and conduction Kohn-Sham states that form it and select to compute their self-energy due to electron-phonon coupling.  →  references/incar-tags/ELPH_SELFEN_GAPS.md
+- **ELPH_SELFEN_IKPT** — [real array], default = All k-points. Compute the electron self-energy due to electron-phonon for a list of k-points specified by their index in the irreducible Brillouin zone generated from KPOINTS_ELPH.  →  references/incar-tags/ELPH_SELFEN_IKPT.md
+- **ELPH_SELFEN_IMAG_SKIP** — [logical], default = .FALSE. Use the tetrahedron method to skip the computation of electron-phonon matrix elements for which the energy-conserving delta functions are zero.  →  references/incar-tags/ELPH_SELFEN_IMAG_SKIP.md
+- **ELPH_SELFEN_KPTS** — [real array], default = All k-points. Computes the electron self-energy due to electron-phonon for a list of k-points specified by their fractional coordinates.  →  references/incar-tags/ELPH_SELFEN_KPTS.md
+- **ELPH_SELFEN_MU** — [real array], default = 0.0. List of chemical potentials at which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_MU.md
+- **ELPH_SELFEN_MU_RANGE** — [real array]. List of the range of chemical potentials (in eV) at which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_MU_RANGE.md
+- **ELPH_SELFEN_NW** — [integer], default = 1. Number of energies to use when computing the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_SELFEN_NW.md
+- **ELPH_SELFEN_STATIC** — [logical], default = .FALSE. Activates the adiabatic approximation for the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_SELFEN_STATIC.md
+- **ELPH_SELFEN_TEMPS** — [real array], default = 0 100 200 300 400 500. List of temperatures for which to compute the electron self-energy due to electron-phonon coupling.  →  references/incar-tags/ELPH_SELFEN_TEMPS.md
+- **ELPH_SELFEN_TEMPS_RANGE** — [real array]. The range of temperatures (in K) at which to compute the phonon-mediated electron self-energy and transport coefficients.  →  references/incar-tags/ELPH_SELFEN_TEMPS_RANGE.md
+- **ELPH_SELFEN_WRANGE** — [real], default = 0. Together with ELPH_SELFEN_NW specifies the energy window in which to evaluate the phonon-induced electron self-energy.  →  references/incar-tags/ELPH_SELFEN_WRANGE.md
+- **ELPH_TRANSPORT** — [logical], default = .FALSE. Activates transport calculation involving electron-phonon coupling  →  references/incar-tags/ELPH_TRANSPORT.md
+- **ELPH_TRANSPORT_DFERMI_TOL** — [real], default = 1e-6. choose the fraction of the integral weight of the derivative of the Fermi–Dirac distribution that is excluded when defining the energy window for the Onsager coefficients.  →  references/incar-tags/ELPH_TRANSPORT_DFERMI_TOL.md
+- **ELPH_TRANSPORT_DRIVER** — [integer], default = 2. choose method to compute the Onsager coefficients, which are then used to compute the transport coefficients.  →  references/incar-tags/ELPH_TRANSPORT_DRIVER.md
+- **ELPH_TRANSPORT_EMAX** — [real]. Upper bound of the energy window in which states are considered for transport calculations.  →  references/incar-tags/ELPH_TRANSPORT_EMAX.md
+- **ELPH_TRANSPORT_EMAX_PLOT** — [real], default = $max(varepsilon_{nmathbf{k}})$+5. Specifies the maximum energy (in eV) to be considered when computing the transport distribution function for plotting.  →  references/incar-tags/ELPH_TRANSPORT_EMAX_PLOT.md
+- **ELPH_TRANSPORT_EMIN** — [real]. Lower bound of the energy window in which states are considered for transport calculations.  →  references/incar-tags/ELPH_TRANSPORT_EMIN.md
+- **ELPH_TRANSPORT_EMIN_PLOT** — [real], default = $min(varepsilon_{nmathbf{k}})$-5. Specifies the minimum energy (in eV) to be considered when computing the transport distribution function for plotting.  →  references/incar-tags/ELPH_TRANSPORT_EMIN_PLOT.md
+- **ELPH_TRANSPORT_NEDOS_PLOT** — [integer], default = -1. Specifies the number of energy points used to sample the transport distribution function for plotting.  →  references/incar-tags/ELPH_TRANSPORT_NEDOS_PLOT.md
+- **ELPH_USEBLAS** — [logical], default = .TRUE. Toggles the use of BLAS routines for computing electron-phonon matrix elements.  →  references/incar-tags/ELPH_USEBLAS.md
+- **ELPH_USERECIP** — logical, default = .FALSE. Computes electron-phonon matrix elements in reciprocal space instead of real space.  →  references/incar-tags/ELPH_USERECIP.md
+- **ELPH_WF_CACHE_MB** — real, default = 1000. Maximum memory (in MB) allocated for caching wavefunctions during electron-phonon matrix element calculations.  →  references/incar-tags/ELPH_WF_CACHE_MB.md
+- **ELPH_WF_CACHE_PREFILL** — logical, default = .TRUE. Pre-fills the wavefunction cache before the main electron-phonon loop begins.  →  references/incar-tags/ELPH_WF_CACHE_PREFILL.md
+- **ELPH_WF_COMM_OPT** — [integer], default = 0. Selects the MPI communication pattern used to exchange orbitals between different MPI ranks.  →  references/incar-tags/ELPH_WF_COMM_OPT.md
+- **ELPH_WF_REDISTRIBUTE** — [logical], default = .FALSE. After computing the electronic states, they are redistributed among the CPUs such that the workload to compute the electron self-energy is similar among the different CPUs.  →  references/incar-tags/ELPH_WF_REDISTRIBUTE.md
+- **ELPH_WRITE_HDF5VEL** — [logical], default = .FALSE. If set, writes the electron group velocities to the vaspout.h5 file.  →  references/incar-tags/ELPH_WRITE_HDF5VEL.md
+- **ELPH_WRITE_TEXTVEL** — [logical], default = .FALSE. If set, writes the electron group velocities to a velocity") human-readable text file.  →  references/incar-tags/ELPH_WRITE_TEXTVEL.md
+- **EMAX** — [real], default = highest KS eigenvalue + $Delta$. EMAX specifies the upper boundary of the energy range for the evaluation of the electronic density of states (DOS).  →  references/incar-tags/EMAX.md
+- **EMIN** — [real], default = lowest KS eigenvalue - $Delta$. EMIN specifies the lower boundary of the energy range for the evaluation of the electronic density of states (DOS).  →  references/incar-tags/EMIN.md
+- **ENAUG** — [real], default = largest *EAUG* read from the. Specifies the cutoff energy of the plane-wave representation of the augmentation charges in eV.  →  references/incar-tags/ENAUG.md
+- **ENCUT** — [real], default = largest ENMAX in the POTCAR file. ENCUT specifies the energy cutoff for the plane-wave basis set in eV.  ·  aliases: ENMAX  →  references/incar-tags/ENCUT.md
+- **ENCUTFOCK** — [real]. The ENCUTFOCK tag sets the energy cutoff that determines the FFT grids used by the Hartree-Fock routines.  →  references/incar-tags/ENCUTFOCK.md
+- **ENCUTGW** — [real], default = 2/3 ENCUT. The tag ENCUTGW sets the energy cutoff for the response function.  →  references/incar-tags/ENCUTGW.md
+- **ENCUTGWSOFT** — [real], default = ENCUTGW$times 0.8$ for ALGO=*ACFDT*. ENCUTGWSOFT = [real]  →  references/incar-tags/ENCUTGWSOFT.md
+- **ENCUTLR** — [real], default = 50 eV. Reciprocal space cutoff for the treatment of the long-range contribution.  →  references/incar-tags/ENCUTLR.md
+- **ENINI** — [real], default = ENCUT. ENINI controls the cutoff during the initial (steepest descent) phase for IALGO=48.  →  references/incar-tags/ENINI.md
+- **ENMIN** — [real], default = value read from POTCAR. ENMIN describes the minimum viable plane-wave energy cutoff in eV for the pseudopotential it is read from.  →  references/incar-tags/ENMIN.md
+- **EPSILON** — [real], default = 1. EPSILON sets the dielectric constant of the medium.  →  references/incar-tags/EPSILON.md
+- **ESTOP** — [real], default = 0.05. ESTOP specifies the stop condition for stochastic MP2.  →  references/incar-tags/ESTOP.md
+- **EVENONLY** — .TRUE. | .FALSE., default = .FALSE. EVENONLY=.TRUE.  →  references/incar-tags/EVENONLY.md
+- **EVENONLYGW** — [logical], default = .FALSE. EVENONLYGW allows to restrict the k-points in the evaluation of response functions (in GW calculations) to even values.  →  references/incar-tags/EVENONLYGW.md
+- **EWALD_CUTOFF** — [real], default = 4.0. EWALD_CUTOFF sets the unified cutoff radius for the Ewald summation of the electrostatic interaction.  →  references/incar-tags/EWALD_CUTOFF.md
+- **FAQ** — - [1 I can not compile the parallel version of VASP under  →  references/incar-tags/FAQ.md
+- **FBIAS_A** — [real (array)]. Defines the step height for the bias potential in $eV$.  →  references/incar-tags/FBIAS_A.md
+- **FBIAS_D** — [real (array)]. Sets the slope of the bias potential.  →  references/incar-tags/FBIAS_D.md
+- **FBIAS_R0** — [real (array)]. Defines the half-step position for the bias potential.  →  references/incar-tags/FBIAS_R0.md
+- **FERDO** — [real array]. FERDO sets the occupancies of the states in the down-spin channel for ISMEAR=-2 and ISPIN=2.  →  references/incar-tags/FERDO.md
+- **FERWE** — [real array]. FERWE sets the occupancies of the states for ISMEAR=-2.  →  references/incar-tags/FERWE.md
+- **FINDIFF** — [integer], default = 1. Defines whether a forward (FINDIFF=1) or a central (FINDIFF=2) difference formula for the numerical differentiation to compute the curvature along the dimer direction is used in the improved dimer method.  →  references/incar-tags/FINDIFF.md
+- **FMP_ACTIVE** — logical (aray), default = NIONS * False. Select which atom types in the POSCAR-file participate in swapping within the Müller-Plathe method.  →  references/incar-tags/FMP_ACTIVE.md
+- **FMP_DIRECTION** — 1 | 2 | 3, default = 3. Index of the lattice vector $mathbf{a}_i$ along which the temperature gradient is created in the (Müller-Plathe method).  →  references/incar-tags/FMP_DIRECTION.md
+- **FMP_PERIOD** — integer, default = 10. Number of time steps between two swapping events in the Müller-Plathe method.  →  references/incar-tags/FMP_PERIOD.md
+- **FMP_SNUMBER** — integer, default = 10. Number of slabs perpendicular to the temperature gradient in the Müller-Plathe method.  →  references/incar-tags/FMP_SNUMBER.md
+- **FMP_SWAPNUM** — integer, default = 1. Number of pairs that are exchanged in a single swapping event in the Müller-Plathe method.  →  references/incar-tags/FMP_SWAPNUM.md
+- **FOCKCORR** — 1 | 2, default = 2 if LMAXFOCKAE>0. The tag FOCKCORR determines how the Coulomb convergence corrections are applied.  →  references/incar-tags/FOCKCORR.md
+- **GAMMA_VDW** — [real], default = 1.12 for IVDW_NL=3 or. Specify $gamma$ in vdW-DF3-opt1/vdW-DF3-opt2.  →  references/incar-tags/GAMMA_VDW.md
+- **GGA** — [string], default = The functional specified by. Selects a LDA or GGA exchange-correlation functional.  →  references/incar-tags/GGA.md
+- **GGA_COMPAT** — .TRUE. | .FALSE., default = .TRUE. If set to GGA_COMPAT = .*FALSE*., this tag restores the full lattice symmetry for gradient-corrected functionals.  →  references/incar-tags/GGA_COMPAT.md
+- **H2O** — Overview >  →  references/incar-tags/H2O.md
+- **HESSEMAT** — HESSEMAT defines the Hesse matrix in Cartesian coordinates  →  references/incar-tags/HESSEMAT.md
+- **HFALPHA** — [real], default = 6/sqrt(ENMAX)/(2π) if HFRCUT is 0. HFALPHA sets the decay constant used in the method of Massida, Posternak, and Baldereschi, which is activated by HFRCUT=0.  →  references/incar-tags/HFALPHA.md
+- **HFLMAX** — [integer], default = 4. To be compatible w.r.t.  →  references/incar-tags/HFLMAX.md
+- **HFRCUT** — [real], default = 0. HFRCUT specifies how the Coulomb kernel is approximated at G=0 when the Fock energy and the exchange potential are evaluated.  →  references/incar-tags/HFRCUT.md
+- **HFSCREEN** — [real], default = 0 (none). HFSCREEN (in Å⁻¹) specifies the range-separation parameter in range-separated hybrid functionals.  →  references/incar-tags/HFSCREEN.md
+- **HILLS_BIN** — [Integer], default = NSW. HILLS_BIN sets the number of steps after which the bias potential is updated in a metadynamics run (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/HILLS_BIN.md
+- **HILLS_H** — [Real], default = $10^{-3}$. HILLS_H specifies the height of the Gaussian hill (in eV) used in metadynamics (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/HILLS_H.md
+- **HILLS_W** — [Real], default = $10^{-3}$. HILLS_W specifies the width of the Gaussian hill (in units of the corresponding collective variable) used in metadynamics (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/HILLS_W.md
+- **HILLSPOT** — During the metadynamics simulation, the time-dependent bias potential  →  references/incar-tags/HILLSPOT.md
+- **HITOLER** — [real], default = $5times10^{-5}$. HITOLER specifies the convergence parameter for the iterative Hirschfeld partitioning in the Tkatchenko-Scheffler method.  →  references/incar-tags/HITOLER.md
+- **I_CONSTRAINED_M** — 1 | 2 | 4, default = none. I_CONSTRAINED_M switches on the constrained local moments approach.  →  references/incar-tags/I_CONSTRAINED_M.md
+- **IALGO** — -1 | 2-4 | 5-8 | 15-18 | 28 | 38 | 44-48 | 53-58, default = 8 for VASP.4.4 and older. IALGO selects the algorithm to optimize the orbitals.  →  references/incar-tags/IALGO.md
+- **IALL_IN_ONE** — default = 1 for LALL_IN_ONE=.TRUE. or NBANDS<0. IALL_IN_ONE>0 enables the all-in-one mode for many-body perturbation theory calculations, i.e., ALGO=[ACFDT[R]](/wiki/ACFDT/RPA_calculations "ACFDT/RPA calculations"),  →  references/incar-tags/IALL_IN_ONE.md
+- **IBAND** — [integer array], default = not set. IBAND sets a list of bands that contribute to calculating the partial charge density.  →  references/incar-tags/IBAND.md
+- **IBRION** — -1 | 0 | 1 | 2 | 3 | 5 | 6 | 7 | 8 | 11 | 12 | 40 | 44, default = -1 for NSW=−1 or 0. determines how the crystal structure changes during the calculation:  →  references/incar-tags/IBRION.md
+- **IBSE** — 0 | 1 | 2 | 3, default = 2. IBSE can be used to select the algorithm for solving the Bethe-Salpeter or Casida equation.  →  references/incar-tags/IBSE.md
+- **ICHARG** — 0 | 1 | 2 | 4 | 5, default = 2 if ISTART=0. ICHARG determines how VASP constructs the *initial* charge density.  →  references/incar-tags/ICHARG.md
+- **ICHIBARE** — 1 | 2 | 3, default = 1. determines the order of the finite difference stencil used to calculate the magnetic susceptibility.  →  references/incar-tags/ICHIBARE.md
+- **ICORELEVEL** — 0 | 1 | 2, default = 0. ICORELEVEL controls whether the core energies are explicitly calculated or not and how they are calculated.  →  references/incar-tags/ICORELEVEL.md
+- **IDIPOL** — 1 | 2 | 3 | 4. IDIPOL switches on monopole/dipole and quadrupole corrections to the total energy in a specific direction (1-3) or all directions (4)  →  references/incar-tags/IDIPOL.md
+- **IEPSILON** — 1 | 2 | 3 | 4. IEPSILON determines along which Cartesian direction the E field is applied.  →  references/incar-tags/IEPSILON.md
+- **IFC_ASR** — [integer], default = 1. If positive, enforces the acoustic sum rule on the interatomic force constants during an electron-phonon calculation.  →  references/incar-tags/IFC_ASR.md
+- **IFC_LR** — [integer], default = 1. Controls the treatment of the long-range part of the interatomic force constants during electron-phonon calculations.  →  references/incar-tags/IFC_LR.md
+- **IGPAR** — 1 | 2 | 3. This tag specifies the socalled parallel or $mathbf{G}_{parallel}$ direction in the integration over the reciprocal space unit cell needed for LCALCPOL.  →  references/incar-tags/IGPAR.md
+- **IMAGE_1** — block construct, default = None. Group INCAR settings for calculations using IMAGES.  ·  aliases: IMAGE 2, IMAGE N  →  references/incar-tags/IMAGE_1.md
+- **IMAGES** — [integer], default = 0. Defines the number of VASP calculations in separate directories, (e.g., 01, 02, 03, etc.) for nudged elastic band calculations, parallel tempering, and thermodynamic integration.  →  references/incar-tags/IMAGES.md
+- **IMIX** — 0 | 1 | 2 | 4, default = 4. IMIX specifies the type of density mixing.  →  references/incar-tags/IMIX.md
+- **INCREM** — [real array], default = 0. INCREM controls the transformation velocity in the slow-growth approach (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/INCREM.md
+- **INIMIX** — 0 | 1 | 2, default = 1. Determines the functional form of the initial mixing matrix in the Broyden scheme (IMIX=4).  →  references/incar-tags/INIMIX.md
+- **INIWAV** — 0 | 1, default = 1. Specifies how to set up the initial orbitals in case ISTART = 0.  →  references/incar-tags/INIWAV.md
+- **INMRPRINT** — -1 | 0 | 1, default = 0. Determines the verbosity of the NMR output.  →  references/incar-tags/INMRPRINT.md
+- **INTERACTIVE** — [logical], default = .FALSE. INTERACTIVE enables an interactive mode in which a series of structures is piped into VASP via stdin.  →  references/incar-tags/INTERACTIVE.md
+- **IPEAD** — 1 | 2 | 3 | 4, default = 4. IPEAD specifies the order of the finite difference stencil used to compute the derivative of the cell-periodic part of the orbitals w.r.t.  →  references/incar-tags/IPEAD.md
+- **IRC_DELTA0** — real, default = 0.0015. Defines the tolerance factor $Delta_0$ in Å used in the IRC calculations.  →  references/incar-tags/IRC_DELTA0.md
+- **IRC_DIRECTION** — -1 | 1, default = 1. Defines the direction of the initial displacement of the initial transition-state structure in IRC calculations.  →  references/incar-tags/IRC_DIRECTION.md
+- **IRC_MAXSTEP** — real, default = 3.000. Upper limit for the step size (in fs).  →  references/incar-tags/IRC_MAXSTEP.md
+- **IRC_MINSTEP** — real, default = 0.0250. Lower limit for the step size (in fs).  →  references/incar-tags/IRC_MINSTEP.md
+- **IRC_STOP** — integer, default = 20. Sets the number of steps in which the energy must monotonously increase before an IRC calculation terminates.  →  references/incar-tags/IRC_STOP.md
+- **IRC_VNORM0** — real, default = 0.002. The constant velocity vector (in Å/fs) in an IRC calculation.  →  references/incar-tags/IRC_VNORM0.md
+- **ISEARCH** — 0 | 1, default = 0. Controls the line-search algorithm used during the direct minimization of the electronic structure (ALGO = All).  →  references/incar-tags/ISEARCH.md
+- **ISIF** — 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8, default = 0 for IBRION = 0 (molecular dynamics) or LHFCALC = .TRUE. (hybrid functionals). Determines if the stress tensor is calculated and which ionic degrees of freedom are varied.  →  references/incar-tags/ISIF.md
+- **ISMEAR** — -15 | -14 | -5 | -4 | -3 | -2 | -1 | 0 | [integer]>0, default = 1. ISMEAR determines how the partial occupancies *f*_(nk) are set for each orbital.  →  references/incar-tags/ISMEAR.md
+- **ISPIN** — 1 | 2, default = 1. ISPIN specifies whether a calculation is performed with or without spin polarization.  →  references/incar-tags/ISPIN.md
+- **ISTART** — 0 | 1 | 2 | 3, default = 1 if a WAVECAR file exists. ISTART determines whether or not to read the WAVECAR file.  →  references/incar-tags/ISTART.md
+- **ISYM** — -1 | 0 | 1 | 2 | 3, default = 1 if VASP runs with USPPs. ISYM determines the way VASP treats symmetry.  →  references/incar-tags/ISYM.md
+- **IVDW** — [integer], default = 0 (no correction). IVDW specifies a vdW dispersion term of the atom-pairwise or many-body type.  ·  aliases: LVDW  →  references/incar-tags/IVDW.md
+- **IVDW_NL** — [integer], default = 1 for a GGA. IVDW_NL allows to select the kernel of the nonlocal van der Waals part of a functional (available as of VASP.6.4.0).  →  references/incar-tags/IVDW_NL.md
+- **IWAVPR** — 0 | 1 | 2 | 3 | 10 | 11 | 12 | 13, default = 12 if IBRION=0 (MD) and 11 (relaxation, on-the-fly machine learning MD). IWAVPR determines how orbitals and/or charge densities are extrapolated from one ionic configuration to the next  →  references/incar-tags/IWAVPR.md
+- **K_MULTIPLY** — [integer array], default = -1 -1 -1 if not set in INCAR. K_MULTIPLY sets the per-direction k-point grid multiplier for downsampling from a denser WAVECAR  →  references/incar-tags/K_MULTIPLY.md
+- **KBLOCK** — [integer], default = NSW. After KBLOCK * NBLOCK ionic steps the averaged pair-correlation function and DOS are written to the files PCDAT and DOSCAR.  →  references/incar-tags/KBLOCK.md
+- **KERNEL_TRUNCATION/FACTOR** — real, default = $sqrt{3}$ if KERNEL_TRUNCATION/IDIMENSIONALITY = 0. KERNEL_TRUNCATION/FACTOR = real  →  references/incar-tags/KERNEL_TRUNCATION__FACTOR.md
+- **KERNEL_TRUNCATION/IDIMENSIONALITY** — 0 | 2 | 3, default = 3. Specifies the boundary condition used to compute the hartree and ionic potential.  →  references/incar-tags/KERNEL_TRUNCATION__IDIMENSIONALITY.md
+- **KERNEL_TRUNCATION/IPAD** — integer, default = 3 if KERNEL_TRUNCATION/IDIMENSIONALITY = 0. KERNEL_TRUNCATION/IPAD = integer  →  references/incar-tags/KERNEL_TRUNCATION__IPAD.md
+- **KERNEL_TRUNCATION/ISURFACE** — 1 | 2 | 3. Specifies the non-periodic dimension when performing calculations with the Coulomb-kernel-truncation method for 2D materials.  →  references/incar-tags/KERNEL_TRUNCATION__ISURFACE.md
+- **KERNEL_TRUNCATION/LCOARSEN** — .True. | .False., default = .False. Coarsen the charge density before padding to speed up the computation of the local potential in the Coulomb-kernel-truncation method.  →  references/incar-tags/KERNEL_TRUNCATION__LCOARSEN.md
+- **KERNEL_TRUNCATION/LTRUNCATE** — .True. | .False., default = .False. Truncates the Coulomb kernel to remove electrostatic interactions along non-periodic dimensions.  →  references/incar-tags/KERNEL_TRUNCATION__LTRUNCATE.md
+- **KGAMMA** — [logical], default = .TRUE. Whether the automatically generated k-point mesh is centered at the $Gamma$ point.  →  references/incar-tags/KGAMMA.md
+- **KPAR** — [integer], default = 1. KPAR determines the number of k-points that are to be treated in parallel (available as of VASP.5.3.2).  →  references/incar-tags/KPAR.md
+- **KPOINT_BSE** — [integer] (optionally [integer],[integer],[integer]). KPOINT_BSE specifies the k-point index at which VASP calculates the dielectric matrix.  →  references/incar-tags/KPOINT_BSE.md
+- **KPOINTS_OPT_MODE** — 0 | 1 | 2, default = 1. Selects which diagonalization algorithm to use for the optional k-points driver  →  references/incar-tags/KPOINTS_OPT_MODE.md
+- **KPOINTS_OPT_NKBATCH** — [integer]. KPOINTS_OPT_NKBATCH determines the size of the batch of k-points for the KPOINTS_OPT driver.  →  references/incar-tags/KPOINTS_OPT_NKBATCH.md
+- **KPUSE** — [integer array], default = not set. KPUSE sets a list of k points that contribute to calculating the partial charge density.  →  references/incar-tags/KPUSE.md
+- **KSPACING** — [real], default = 0.5. Spacing between k points in automatically generated mesh if the KPOINTS file is not present.  →  references/incar-tags/KSPACING.md
+- **KSPACING_OPT** — [real], default = 0.5. Spacing between k points in the automatically generated mesh for the KPOINTS_OPT driver if the KPOINTS_OPT file is not present.  →  references/incar-tags/KSPACING_OPT.md
+- **LADDER** — [logical], default = .NOT. LRPA. Controls whether the ladder diagrams are included in the BSE calculation.  →  references/incar-tags/LADDER.md
+- **LAECHG** — .TRUE. | .FALSE., default = .FALSE. when LAECHG=.TRUE.  →  references/incar-tags/LAECHG.md
+- **LALL IN ONE** — .FALSE. | .TRUE.. LALL_IN_ONE=.TRUE.  →  references/incar-tags/LALL_IN_ONE.md
+- **LAMBDA** — [real], default = 0. LAMBDA sets the weight with which the penalty terms of the constrained local moment approach enter into the total energy expression and the Hamiltonian.  →  references/incar-tags/LAMBDA.md
+- **LANCZOSTHR** — default = $10^{-3}$. LANCZOSTHR is used by the BSE Lanczos algorithm to stop the iterative procedure, once the dielectric function has reached numerical convergence.  →  references/incar-tags/LANCZOSTHR.md
+- **LANGEVIN_GAMMA** — [Real array], default = NTYP×0. LANGEVIN_GAMMA specifies the friction coefficients (in ps⁻¹) for atomic degrees-of-freedom when using a Langevin thermostat (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/LANGEVIN_GAMMA.md
+- **LANGEVIN_GAMMA_L** — [Real], default = 0. LANGEVIN_GAMMA_L specifies the friction coefficient (in ps⁻¹) for lattice degrees-of-freedom in case of Parrinello-Rahman dynamics (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/LANGEVIN_GAMMA_L.md
+- **LASPH** — .TRUE. | .FALSE., default = .FALSE. include non-spherical contributions related to the gradient of the density in the PAW spheres.  →  references/incar-tags/LASPH.md
+- **LASYNC** — [logical], default = .FALSE. Controls the overlap in communication.  →  references/incar-tags/LASYNC.md
+- **LATTICE_CONSTRAINTS** — [logical][logical][logical]. Sets three boolean to selectively allow changes in the lattice vectors.  →  references/incar-tags/LATTICE_CONSTRAINTS.md
+- **LBERRY** — [logical], default = .FALSE. This tag is used in the the evaluation of the Berry phase expression for the electronic polarization of an insulating system.  →  references/incar-tags/LBERRY.md
+- **LBLUEOUT** — .TRUE.|.FALSE., default = .FALSE. for LBLUEOUT=.TRUE., VASP writes output for the free-energy gradient calculation to the REPORT file (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/LBLUEOUT.md
+- **LBONE** — .TRUE. | .FALSE., default = .FALSE. LBONE adds the small *B*-component to the chemical shift tensor.  →  references/incar-tags/LBONE.md
+- **LCALCEPS** — .TRUE. | .FALSE., default = .FALSE. for LCALCEPS=.TRUE.  →  references/incar-tags/LCALCEPS.md
+- **LCALCPOL** — .TRUE. | .FALSE., default = .FALSE. LCALCPOL=.TRUE.  →  references/incar-tags/LCALCPOL.md
+- **LCHARG** — [logical], default = .True. Determines whether the charge density is written.  →  references/incar-tags/LCHARG.md
+- **LCHARGH5** — [logical], default = LH5. Determines whether the charge densities are written to vaspwave.h5.  →  references/incar-tags/LCHARGH5.md
+- **LCHIMAG** — .TRUE. | .FALSE., default = .FALSE. Calculate the chemical shifts and magnetic susceptibility within linear response theory.  →  references/incar-tags/LCHIMAG.md
+- **LCORR** — [logical], default = .TRUE. Controls whether Harris corrections are calculated or not.  →  references/incar-tags/LCORR.md
+- **LDAU** — .TRUE. | .FALSE., default = .FALSE. LDAU=.TRUE.  →  references/incar-tags/LDAU.md
+- **LDAUJ** — [real array], default = NTYP*0.0. Sets the effective on-site exchange interactions (eV).  →  references/incar-tags/LDAUJ.md
+- **LDAUL** — [integer array], default = NTYP*2. LDAUL specifies the $l$-quantum number for which the on-site interaction is added.  →  references/incar-tags/LDAUL.md
+- **LDAUPRINT** — 0 | 1, default = 0. LDAUPRINT controls the verbosity of a DFT+U calculation.  →  references/incar-tags/LDAUPRINT.md
+- **LDAUTYPE** — 1 | 2 | 4, default = 2. LDAUTYPE specifies the DFT+U variant that will be used.  →  references/incar-tags/LDAUTYPE.md
+- **LDAUU** — [real array], default = NTYP*0.0. Sets the effective on-site Coulomb interactions (eV).  →  references/incar-tags/LDAUU.md
+- **LDIAG** — [logical], default = .TRUE. Determines whether a subspace diagonalization is performed within the algorithm selected by ALGO or IALGO.  →  references/incar-tags/LDIAG.md
+- **LDIPOL** — .TRUE. | .FALSE., default = .FALSE. LDIPOL switches on corrections to the potential and forces.  →  references/incar-tags/LDIPOL.md
+- **LDISENTANGLED** — [logical], default = .FALSE. Selects the disentanglement-cRPA method "Constrained–random-phase–approximation formalism").  →  references/incar-tags/LDISENTANGLED.md
+- **LDMATRIX** — .TRUE. | .FALSE., default = .FALSE. Computes the zero-field splitting (ZFS) matrix.  →  references/incar-tags/LDMATRIX.md
+- **LDOWNSAMPLE** — [logical], default = .FALSE. LDOWNSAMPLE selects a sub-grid of k-points defined in KPOINTS from WAVECAR  →  references/incar-tags/LDOWNSAMPLE.md
+- **LEFG** — .TRUE. | .FALSE., default = .FALSE. The LEFG computes the electric field gradient (EFG) at positions of the atomic nuclei.  →  references/incar-tags/LEFG.md
+- **LELF** — .TRUE. | .FALSE., default = .FALSE. LELF determines whether to create an ELFCAR file or not.  →  references/incar-tags/LELF.md
+- **LEPSILON** — .TRUE. | .FALSE., default = .FALSE. LEPSILON=.TRUE.  →  references/incar-tags/LEPSILON.md
+- **LEXCH** — [string] LEXCH = CA.OR.PBE, default = CA for LDA pseudopotentials. LEXCH = [string] LEXCH = CA.OR.PBE  →  references/incar-tags/LEXCH.md
+- **LFINITE_TEMPERATURE** — [logical], default = .FALSE. LFINITE_TEMPERATURE switches on the finite-temperature formalism of many-body perturbation theory for adiabatic-connection-fluctuation-dissipation-theorem (ACFDT)/GW calculations.  →  references/incar-tags/LFINITE_TEMPERATURE.md
+- **LFOCKACE** — .TRUE. | .FALSE., default = .TRUE. LFOCKACE determines whether the Adaptively Compressed Exchange Operator is used.^([[1]](#cite_note-linlin:jctc:2016-1))  →  references/incar-tags/LFOCKACE.md
+- **LFOCKAEDFT** — [logical], default = .FALSE. LFOCKAEDFT forces VASP to use the same charge augmentation for the Hartree and DFT exchange correlation part as is used in the Fock exchange and the many body beyond DFT methods, such as RPA, MP2 etc.  →  references/incar-tags/LFOCKAEDFT.md
+- **LFOCKSTD** — [logical], default = .FALSE. LFOCKSTD applies to RPA and GW calculations.  →  references/incar-tags/LFOCKSTD.md
+- **LFXC** — .TRUE. | .FALSE., default = .FALSE. LFXC enables the (semi-)local exchange-correlation kernel in Casida and time-evolution TDDFT calculations.  →  references/incar-tags/LFXC.md
+- **LH5** — [logical], default = .FALSE. LH5 determines whether the output is written to the legacy files (CHGCAR, CHG, WAVECAR) or the vaspwave.h5 file.  →  references/incar-tags/LH5.md
+- **LHARTREE** — [logical], default = .TRUE. Controls whether the bubble diagrams are included in the BSE calculation.  →  references/incar-tags/LHARTREE.md
+- **LHFCALC** — .TRUE. | .FALSE., default = .FALSE. LHFCALC specifies whether a Hartree-Fock/DFT hybrid functional type calculation is performed.  →  references/incar-tags/LHFCALC.md
+- **LHYPERFINE** — .TRUE. | .FALSE., default = .FALSE. compute the hyperfine tensors at the atomic sites (available as of vasp.5.3.2).  →  references/incar-tags/LHYPERFINE.md
+- **LIBMBD_ALPHA** — [real array]. LIBMBD_ALPHA defines the free-atom polarizabilities $alpha_{0}$ (bohr$^{3}$) used in the Tkatchenko-Scheffler and Many-body dispersion energy methods as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_ALPHA.md
+- **LIBMBD_C6AU** — [real array]. LIBMBD_C6AU defines the free-atom $C_6$ parameters ($mathrm{Hartree}$ $mathrm{bohr}^{6}$) used in the Tkatchenko-Scheffler and Many-body dispersion energy methods as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_C6AU.md
+- **LIBMBD_K_GRID** — [array of three integers], default = determined in libMBD according to the cell. LIBMBD_K_GRID sets the k-mesh of the collective oscillations defined in the methods available in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_K_GRID.md
+- **LIBMBD_K_GRID_SHIFT** — [real], default = 0.5 (default in libMBD). LIBMBD_K_GRID_SHIFT sets the shift for the k-mesh of the collective oscillations defined in the methods available in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_K_GRID_SHIFT.md
+- **LIBMBD_MBD_A** — [real], default = 6.0. LIBMBD_MBD_A sets the value of the damping parameter $a$ in the many-body methods as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_MBD_A.md
+- **LIBMBD_MBD_BETA** — [real], default = value that was determined for the. LIBMBD_MBD_BETA sets the value of the scaling factor $beta$ (usually denoted $s_R$) in the many-body methods as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_MBD_BETA.md
+- **LIBMBD_METHOD** — [string], default = mbd-rsscs (default in libMBD). LIBMBD_METHOD selects one of the methods available in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_METHOD.md
+- **LIBMBD_N_OMEGA_GRID** — [integer], default = 15 (default in libMBD). LIBMBD_N_OMEGA_GRID sets the number of points on the grid of imaginary frequencies used in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_N_OMEGA_GRID.md
+- **LIBMBD_PARALLEL_MODE** — auto | kpoints | atoms. LIBMBD_PARALLEL_MODE selects the parallelization scheme used in the library libMBD of many-body dispersion methods^([[1]](#cite_note-libmbd_1-1)[[2]](#cite_note-libmbd_2-2)[[3]](#cite_note-hermann:jcp:2023-3)).  →  references/incar-tags/LIBMBD_PARALLEL_MODE.md
+- **LIBMBD_R0AU** — [real array]. LIBMBD_R0AU defines the free-atom $R_0$ parameters (bohr) used in the Tkatchenko-Scheffler and Many-body dispersion energy methods as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_R0AU.md
+- **LIBMBD_TS_D** — [real], default = 20. LIBMBD_TS_D sets the value of the damping parameter $d$ in the Tkatchenko-Scheffler method^([[1]](#cite_note-tkatchenko:prl:09-1)) as implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_TS_D.md
+- **LIBMBD_TS_SR** — [real], default = value that was determined for the. LIBMBD_TS_SR sets the value of the scaling factor $s_R$ in the Tkatchenko-Scheffler method^([[1]](#cite_note-tkatchenko:prl:09-1)) as implemented in the library libMBD of many-body  →  references/incar-tags/LIBMBD_TS_SR.md
+- **LIBMBD_VDW_PARAMS_KIND** — ts | tssurf. LIBMBD_VDW_PARAMS_KIND sets the type of free-atom van der Waals parameters that are used for the methods implemented in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_VDW_PARAMS_KIND.md
+- **LIBMBD_XC** — pbe | pbe0 | hse | blyp | b3lyp | revpbe | am05 | none. LIBMBD_XC sets the exchange-correlation functional for the setting of damping parameters used in the methods available in the library libMBD of many-body dispersion  →  references/incar-tags/LIBMBD_XC.md
+- **LIBXC1** — [string] or [integer]. LIBXC1 specifies the exchange or exchange-correlation functional from the library of exchange-correlation functionals  →  references/incar-tags/LIBXC1.md
+- **LIBXC1_Pn** — [real]. LIBXC1_Pn, where $n=1, 2, ldots$ allows to specify the values of the parameters of the functional implemented in Libxc that is called with LIBXC1.  →  references/incar-tags/LIBXC1_Pn.md
+- **LIBXC2** — [string] or [integer]. LIBXC2 specifies the correlation functional from the library of exchange-correlation functionals  →  references/incar-tags/LIBXC2.md
+- **LIBXC2_Pn** — [real]. LIBXC2_Pn, where $n=1, 2, ldots$ allows to specify the values of the parameters of the functional implemented in Libxc that is called with LIBXC2.  →  references/incar-tags/LIBXC2_Pn.md
+- **LKPOINTS WAN** — .TRUE.| .FALSE.. LKPOINTS_WAN controlls whether VASP reads the KPOINTS_WAN file.  →  references/incar-tags/LKPOINTS_WAN.md
+- **LKPOINTS_OPT** — .TRUE.| .FALSE., default = .TRUE. if KPOINTS_OPT file is present. Enable reading the KPOINTS_OPT file.  →  references/incar-tags/LKPOINTS_OPT.md
+- **LKPROJ** — .TRUE. | .FALSE., default = .FALSE. switches on the k-point projection scheme.  →  references/incar-tags/LKPROJ.md
+- **LLRAUG** — .TRUE. | .FALSE., default = .FALSE. LLRAUG calculates the two-center contributions to the chemical shift tensor.  →  references/incar-tags/LLRAUG.md
+- **LMAXFOCK** — [integer], default = 4. LMAXFOCK sets the maximum angular momentum quantum number  →  references/incar-tags/LMAXFOCK.md
+- **LMAXMIX** — [integer], default = 2. LMAXMIX controls up to which *l*-quantum number the one-center PAW charge densities are passed through the charge density mixer and written to the CHGCAR file.  →  references/incar-tags/LMAXMIX.md
+- **LMAXPAW** — [integer], default = 2*l* _(max), where *l* _(max) is the maximum. The maximum *l*-quantum number for the evaluation of the one-center terms on the radial grids in the PAW method.  →  references/incar-tags/LMAXPAW.md
+- **LMAXTAU** — [integer], default = 6 if LASPH=.TRUE. LMAXTAU is the maximum *l*-quantum number included in the PAW one-center expansion of the kinetic energy density.  →  references/incar-tags/LMAXTAU.md
+- **LMIXTAU** — .TRUE. | .FALSE., default = .FALSE. send the kinetic-energy density through the density mixer as well.  →  references/incar-tags/LMIXTAU.md
+- **LMODELHF** — .TRUE. | .FALSE., default = .FALSE. LMODELHF selects dielectric-dependent range-separated hybrid functionals with AEXX and BEXX for the exact Hartree-Fock exchange at long- and short-range, respectively.  →  references/incar-tags/LMODELHF.md
+- **LMONO** — .TRUE. | .FALSE., default = .FALSE. LMONO switches on monopole-monopole corrections for the total energy.  →  references/incar-tags/LMONO.md
+- **LMP2LT** — .FALSE. | .TRUE., default = .FALSE. LMP2LT selects a Laplace transformed MP2 algorithm.  →  references/incar-tags/LMP2LT.md
+- **LNABLA** — .TRUE. | .FALSE., default = .FALSE. LNABLA=.TRUE.  →  references/incar-tags/LNABLA.md
+- **LNICSALL** — .TRUE. | .FALSE., default = .FALSE. LNICSALL=.TRUE.  →  references/incar-tags/LNICSALL.md
+- **LNMR_SYM_RED** — .TRUE. | .FALSE., default = .FALSE. discard symmetry operations that are not consistent with the way *k*-space derivatives are calculated in the linear-response calculations of chemical shifts.  →  references/incar-tags/LNMR_SYM_RED.md
+- **LNMRCAR** — .TRUE. | .FALSE., default = .TRUE. Write the NMRCAR.magres file for EFG calculations and chemical shielding calculations.  →  references/incar-tags/LNMRCAR.md
+- **LNMRLEG** — .TRUE.| .FALSE., default = .FALSE. LNMRLEG controls whether VASP prints NMR properties to OUTCAR according to the old format (pre-version 6.6.0).  →  references/incar-tags/LNMRLEG.md
+- **LNMRSHIELD** — .TRUE.| .FALSE., default = .TRUE. LNMRSHIELD controls whether the shielding or shift is printed.  →  references/incar-tags/LNMRSHIELD.md
+- **LNOAUGXC** — .TRUE. | .FALSE., default = .FALSE. LNOAUGXC specifies if a METAGGA functional is evaluated with a density that is augmented or not.  →  references/incar-tags/LNOAUGXC.md
+- **LNONCOLLINEAR** — .True. | .False., default = .False. Switch on noncollinear magnetic calculations.  →  references/incar-tags/LNONCOLLINEAR.md
+- **LOCPROJ** — **<sites>** : **<functions-Ylm-specs>** : **<functions-radial-specs>**, default = None. The LOCPROJ tag specifies local functions on which the orbitals are projected.  →  references/incar-tags/LOCPROJ.md
+- **LOPTICS** — .TRUE. | .FALSE., default = .FALSE. LOPTICS=.TRUE.  →  references/incar-tags/LOPTICS.md
+- **LORBIT** — 0 | 1 | 2 | 5 | 10 | 11 | 12, default = 0. Selects a projection method onto local quantum numbers ($lm$) and writes PROCAR/PROOUT file.  →  references/incar-tags/LORBIT.md
+- **LORBITALREAL** — .TRUE. | .FALSE., default = .FALSE. LORBITALREAL forces VASP to make the orbitals $phi({bf r})$ real-valued at the Gamma point and the Brillouin zone boundary.  →  references/incar-tags/LORBITALREAL.md
+- **LORBMOM** — .TRUE. | .FALSE., default = .FALSE. Specifies whether the orbital moments are written out.  →  references/incar-tags/LORBMOM.md
+- **LPARD** — [logical], default = .FALSE. Determines whether partial (band and/or  →  references/incar-tags/LPARD.md
+- **LPARDH5** — [logical], default = .FALSE. LPARDH5 determines whether the partial charges are written to PARCHG or vaspout.h5.  →  references/incar-tags/LPARDH5.md
+- **LPEAD** — .TRUE. | .FALSE, default = .FALSE. for LPEAD=.TRUE., the derivative of the cell-periodic part of the orbitals w.r.t.  →  references/incar-tags/LPEAD.md
+- **LPHON_DISPERSION** — .TRUE. | .FALSE., default = .FALSE. LPHON_DISPERSION requests the calculation of the phonon dispersion along the q-point path supplied in file QPOINTS (same format as KPOINTS).  →  references/incar-tags/LPHON_DISPERSION.md
+- **LPHON_POLAR** — .TRUE. | .FALSE., default = .FALSE. LPHON_POLAR includes dipole-dipole corrections in the computation of the phonon dispersion.  →  references/incar-tags/LPHON_POLAR.md
+- **LPHON_READ_FORCE_CONSTANTS** — .TRUE. | .FALSE., default = .FALSE. LPHON_READ_FORCE_CONSTANTS read the force constants from a vaspin.h5 file containing the force constants computed with a previous VASP run.  →  references/incar-tags/LPHON_READ_FORCE_CONSTANTS.md
+- **LPLANE** — [logical], default = .TRUE. LPLANE switches on the plane-wise data distribution in real space.  →  references/incar-tags/LPLANE.md
+- **LPOSNICS** — .TRUE.| .FALSE., default = .TRUE. if POSNICS file is present. LPOSNICS controls if VASP reads the POSNICS file.  →  references/incar-tags/LPOSNICS.md
+- **LREAL** — .FALSE. | Auto (or A) | On (or O) | .TRUE., default = .FALSE. LREAL determines whether the projection operators are evaluated in real-space or in reciprocal space.  →  references/incar-tags/LREAL.md
+- **LRHFCALC** — .TRUE. | .FALSE., default = .FALSE. Switch on the decomposition of the exchange for the hybrid functionals using full Hartree-Fock exchange at long range.  →  references/incar-tags/LRHFCALC.md
+- **LRPA** — .TRUE. | .FALSE., default = .FALSE. LRPA=.TRUE.  →  references/incar-tags/LRPA.md
+- **LRPAFORCE** — .TRUE. | .FALSE., default = .FALSE. LRPAFORCE=.TRUE.  →  references/incar-tags/LRPAFORCE.md
+- **LSCAAWARE** — [logical], default = .TRUE. if VASP is compiled with scaLAPACK support (precompiler flag -DscaLAPACK). LSCAAWARE controls the distribution of the Hamilton matrix.  →  references/incar-tags/LSCAAWARE.md
+- **LSCALAPACK** — [logical], default = .TRUE. if VASP is compiled with scaLAPACK support (precompiler flag -DscaLAPACK). LSCALAPACK controls the use of scaLAPACK.  →  references/incar-tags/LSCALAPACK.md
+- **LSCALER0** — .TRUE. | .FALSE., default = .TRUE. LSCALER0 decides whether to re-scale the van der Waals radii $R_{0}$ (LSCALER0=*.TRUE.*) or not.  →  references/incar-tags/LSCALER0.md
+- **LSCALU** — [logical], default = .FALSE. LSCALU switches on the parallel LU decomposition (using scaLAPACK) in the orthonormalization of the wave functions.  →  references/incar-tags/LSCALU.md
+- **LSCDM** — .TRUE. | .FALSE., default = .FALSE. LSCDM switches on the selected columns of the density matrix (SCDM) method.  →  references/incar-tags/LSCDM.md
+- **LSCK** — [logical], default = .FALSE. LSCK=.True.  →  references/incar-tags/LSCK.md
+- **LSCRPA** — [logical], default = .FALSE. LSCRPA selects the spectral-cRPA method "Constrained–random-phase–approximation formalism").  →  references/incar-tags/LSCRPA.md
+- **LSCSGRAD** — .TRUE. | .FALSE., default = .TRUE. LSCSGRAD decides whether to compute gradients in the calculation of the MBD dispersion energy or the SCS contribution.  →  references/incar-tags/LSCSGRAD.md
+- **LSELFENERGY** — [logical], default = .FALSE. Controls whether the frequency-dependent self-energy is calculated or not.  →  references/incar-tags/LSELFENERGY.md
+- **LSEPB** — [logical], default = .FALSE. Specifies whether the partial charge density is summed up for all selected bands or separated and printed out in different files.  →  references/incar-tags/LSEPB.md
+- **LSEPK** — [logical], default = .FALSE. Specifies whether the partial charge density is summed up for all selected k points or separated and printed out in different files.  →  references/incar-tags/LSEPK.md
+- **LSFBXC** — .TRUE. | .FALSE., default = .FALSE. Removes sources and drains from the exchange-correlation B field.  →  references/incar-tags/LSFBXC.md
+- **LSINGLES** — .TRUE. | .FALSE., default = .FALSE. Switch on singles contribution to correlation energy for GW algorithms.^([[1]](#cite_note-klimes:jcp:143-1))  →  references/incar-tags/LSINGLES.md
+- **LSMP2LT** — .FALSE. | .TRUE., default = .FALSE. LSMP2LT selects a stochastic Laplace transformed MP2 algorithm.  →  references/incar-tags/LSMP2LT.md
+- **LSORBIT** — .TRUE. | .FALSE., default = .FALSE. Switch on spin-orbit coupling.  →  references/incar-tags/LSORBIT.md
+- **LSOSHIFT** — [logical], default = LSORBIT. LSOSHIFT = .True.  →  references/incar-tags/LSOSHIFT.md
+- **LSPECTRAL** — .FALSE. | .TRUE., default = .TRUE. if NOMEGA>2. LSPECTRAL specifies to use the spectral method.  →  references/incar-tags/LSPECTRAL.md
+- **LSPECTRALGW** — .FALSE. | .TRUE., default = .FALSE. LSPECTRALGW specifies to use the spectral method for calculating the self-energy.  →  references/incar-tags/LSPECTRALGW.md
+- **LSPIN_VDW** — [logical], default = .FALSE. LSPIN_VDW=.TRUE.  →  references/incar-tags/LSPIN_VDW.md
+- **LSPIRAL** — .TRUE. | .FALSE., default = .FALSE. set LSPIRAL=.TRUE.  →  references/incar-tags/LSPIRAL.md
+- **LSUBROT** — .FALSE. | .TRUE.. This flag can be set for hybrid functionals (HF-type calculations).  →  references/incar-tags/LSUBROT.md
+- **LSYNCH5** — [logical], default = .FALSE. LSYNCH5 determines whether the output in vaspout.h5 is always synchronized with VASP while the calculation is running.  →  references/incar-tags/LSYNCH5.md
+- **LTAU** — .True. | .False., default = .False. Request evaluation of the kinetic energy density.  →  references/incar-tags/LTAU.md
+- **LTBOUNDLIBXC** — .TRUE. | .FALSE., default = .FALSE. LTBOUNDLIBXC specifies whether or not the lower bound for the Kohn-Sham kinetic-energy density $tau_{sigma}$ ($tau_{sigma}^{textrm{W}}<tau_{sigma}$) is enforced before $tau_{sigma}$ is used in a METAGGA  →  references/incar-tags/LTBOUNDLIBXC.md
+- **LTEMPER** — [logical], default = .FALSE. LTEMPER specified whether parallel tempering is used.  →  references/incar-tags/LTEMPER.md
+- **LTHOMAS** — .TRUE. | .FALSE., default = .FALSE. LTHOMAS selects a decomposition of the exchange functional based on Thomas-Fermi exponential screening.  →  references/incar-tags/LTHOMAS.md
+- **LTRIPLET** — .TRUE. | .FALSE., default = .FALSE. LTRIPLET selects a triplet ansatz for Bethe-Salpeter-equations (BSE) calculations.  →  references/incar-tags/LTRIPLET.md
+- **LTSSURF** — .TRUE. | .FALSE., default = .FALSE. if LTSSURF set to .TRUE., the standard parametrization of the Tkatchenko-Scheffler method is replaced by the one designed to enable reliable modeling of structure and stability for a broad class of  →  references/incar-tags/LTSSURF.md
+- **LTWO_CENTRE** — [logical], default = .FALSE. LTWO_CENTRE calculates off-center Coulomb integrals.  ·  aliases: LTWO CENTER  →  references/incar-tags/LTWO_CENTRE.md
+- **LUSE_VDW** — [logical], default = .FALSE. LUSE_VDW=.TRUE.  →  references/incar-tags/LUSE_VDW.md
+- **LUSENCCL** — [logical], default = .TRUE. LUSENCCL allows deactivating the NVIDIA Collective Communications Library (NCCL) during runtime when the code was compiled with the -DUSENCCL option.  →  references/incar-tags/LUSENCCL.md
+- **LVACPOTAV** — .True. | .False., default = .False. Switch on determining the vacuum potential by averaging the local potential over a field-free region.  →  references/incar-tags/LVACPOTAV.md
+- **LVDW_EWALD** — logical, default = .FALSE. LVDW_EWALD decides whether the lattice summation in $E_{disp}$ expression by means of Ewald's summation is computed.  →  references/incar-tags/LVDW_EWALD.md
+- **LVDW_ONECELL** — [logical][logical][logical], default = .FALSE. .FALSE. .FALSE. LVDW_ONECELL can be used to disable vdW interaction with mirror image in X Y Z direction.  →  references/incar-tags/LVDW_ONECELL.md
+- **LVDWEXPANSION** — .TRUE. | .FALSE., default = .FALSE. LVDWEXPANSION decides whether to write the two- to six- body contributions to MBD dispersion energy in the OUTCAR file.  →  references/incar-tags/LVDWEXPANSION.md
+- **LVDWSCS** — .TRUE. | .FALSE., default = .FALSE. LVDWSCS activates the self-consistent screening in Tkatchenko-Scheffler method.  →  references/incar-tags/LVDWSCS.md
+- **LVGVAPPL** — .TRUE. | .FALSE., default = .FALSE. LVGVAPPL determines whether the *vGv* orbital magnetic susceptibility is applied in the calculation of the CSA tensor.  →  references/incar-tags/LVGVAPPL.md
+- **LVGVCALC** — .TRUE. | .FALSE., default = .TRUE. LVGVCALC switches on calculation of the *vGv* expression for the orbital magnetic susceptibility.  →  references/incar-tags/LVGVCALC.md
+- **LVHAR** — [logical], default = .FALSE. Determines whether the local potential $V_{text{ionic}}(mathbf{r}) +V_{text{hartree}}(mathbf{r})$ (in eV) is written to the LOCPOT file.  →  references/incar-tags/LVHAR.md
+- **LVTOT** — [logical], default = .FALSE. Determines whether the total local potential $V_{text{LOCPOT}}(mathbf{r})$ (in eV) is written to the LOCPOT file.  →  references/incar-tags/LVTOT.md
+- **LWANNIER90** — .TRUE. | .FALSE., default = .FALSE. LWANNIER90=.TRUE.  →  references/incar-tags/LWANNIER90.md
+- **LWANNIER90_RUN** — .TRUE. | .FALSE., default = .FALSE. LWANNIER90_RUN executes wannier_setup (see LWANNIER90=.TRUE.) and subsequently runs WANNIER90 in library mode (wannier_run).  →  references/incar-tags/LWANNIER90_RUN.md
+- **LWAVE** — [logical], default = .TRUE. Determines whether the wavefunctions are written at the end of a run.  →  references/incar-tags/LWAVE.md
+- **LWAVEH5** — [logical], default = LH5. Determines whether the wavefunctions are written to vaspwave.h5 file at the end of a run.  →  references/incar-tags/LWAVEH5.md
+- **LWEIGHTED** — [logical], default = .FALSE. LWEIGHTED selects the weighted-cRPA method "Constrained–random-phase–approximation formalism").  →  references/incar-tags/LWEIGHTED.md
+- **LWRITE_MMN_AMN** — .TRUE. | .FALSE., default = .TRUE. if LWANNIER90=.TRUE. LWRITE_MMN_AMN=.TRUE.  →  references/incar-tags/LWRITE_MMN_AMN.md
+- **LWRITE_SPN** — .TRUE. | .FALSE., default = .FALSE. Write wannier90.spn file for noncollinear calculations.  →  references/incar-tags/LWRITE_SPN.md
+- **LWRITE_UNK** — .TRUE. | .FALSE., default = .FALSE. LWRITE_UNK decides whether the cell-periodic part of the relevant Bloch functions is written.  →  references/incar-tags/LWRITE_UNK.md
+- **LWRITE_WANPROJ** — [logical], default = .FALSE. LWRITE_WANPROJ determines whether the Wannier projection file WANPROJ is written.  →  references/incar-tags/LWRITE_WANPROJ.md
+- **LWRT_AUGMENTED_DENSITY** — .TRUE. | .FALSE., default = .TRUE. Switch for WRT_DENSITY to write without augmentation (compensation charge=0).  →  references/incar-tags/LWRT_AUGMENTED_DENSITY.md
+- **LZEROZ** — .TRUE. | .FALSE., default = .FALSE. for LZEROZ=.TRUE.  →  references/incar-tags/LZEROZ.md
+- **LZORA** — [logical], default = .False. LZORA = .True.  →  references/incar-tags/LZORA.md
+- **M CONSTR** — [real array]. M_CONSTR specifies the desired local magnetic moment (size and/or direction) for the constrained local moments approach.  →  references/incar-tags/M_CONSTR.md
+- **MAGMOM** — [real array], default = NIONS * 1.0 for ISPIN=2. Initial magnetic moment for each atom if no magnetization density is present.  →  references/incar-tags/MAGMOM.md
+- **MAXDIS** — [real], default = 0.0 (switched off). This tag sets the maximum distance that an atom is allowed to travel (in Angstrom) between two ab-initio steps before the charge density is reset to atomic an atomic charge density.  →  references/incar-tags/MAXDIS.md
+- **MAXMEM** — [integer], default = 2800 (VASP.5.4.4. and older), automatically set as. MAXMEM specifies the maximum memory one MPI rank will attempt to allocate (in MByte).  →  references/incar-tags/MAXMEM.md
+- **MAXMIX** — [integer], default = -45. MAXMIX specifies the maximum number of steps stored in the Broyden mixer (IMIX=4).  →  references/incar-tags/MAXMIX.md
+- **MDALGO** — 0 | 1 | 2 | 3 | 4 | 5 | 11 | 21 | 13, default = 0. Specifies the thermostat and lattice dynamics for molecular-dynamics calculations (in case IBRION = 0).  →  references/incar-tags/MDALGO.md
+- **METAGGA** — [string], default = The functional specified by. Selects a meta-GGA exchange-correlation functional.  →  references/incar-tags/METAGGA.md
+- **MINROT** — [real], default = 0.01. The flag MINROT defines the value for which the dimer is rotated only if the predicted rotation angle is greater than MINROT (rad.) in the Improved Dimer Method.  →  references/incar-tags/MINROT.md
+- **MIXPRE** — 0 | 1 | 2 | 3, default = 1. MIXPRE specifies the metric in the Broyden mixing scheme(IMIX=4).  →  references/incar-tags/MIXPRE.md
+- **ML_AFILT2** — [real], default = 0.002. This tag sets the filtering parameter for the angular filtering for ML_IAFILT2 in the machine learning force field method.  ·  aliases: ML FF AFILT2 MB  →  references/incar-tags/ML_AFILT2.md
+- **ML_CALGO** — [integer], default = 0. Chooses error estimation type for on-the-fly training or reselection of local referenc configurations.  →  references/incar-tags/ML_CALGO.md
+- **ML_CDOUB** — [real], default = 4.0 for ML_MODE = select. This tag controls the criterion for "enforced" DFT calculations within the machine learning force field method.  ·  aliases: ML FF CDOUB  →  references/incar-tags/ML_CDOUB.md
+- **ML_CSIG** — [real], default = $0.4$. Parameter used in the automatic determination of threshold ML_CTIFOR for error estimation in the machine learning force field method.  ·  aliases: ML FF CSIG  →  references/incar-tags/ML_CSIG.md
+- **ML_CSLOPE** — [real], default = $0.2$. Parameter used in the automatic determination of threshold for error estimation in the machine learning force field method.  ·  aliases: ML FF CSLOPE  →  references/incar-tags/ML_CSLOPE.md
+- **ML_CTIFOR** — default = 0.002 if ML_CALGO = 0. This flag sets the threshold for the error estimation in the machine learning force field method.  ·  aliases: ML FF CTIFOR  →  references/incar-tags/ML_CTIFOR.md
+- **ML_CX** — [real], default = 0.0. The parameter determines to which value the threshold (ML_CTIFOR) is updated within the machine learning force field methods.  ·  aliases: ML XMIX  →  references/incar-tags/ML_CX.md
+- **ML_DESC_TYPE** — [integer], default = 0. Selects the descriptor type of the three-body descriptor used in machine learning force fields.  →  references/incar-tags/ML_DESC_TYPE.md
+- **ML_EATOM_REF** — [real array], default = 0.0. Reference total energies of isolated atoms used in the machine learning force field method.  ·  aliases: ML FF EATOM  →  references/incar-tags/ML_EATOM_REF.md
+- **ML_EMPPOT_RCUT** — [real], default = 0.0. Sets the cutoff radius for the empirical potentials.  →  references/incar-tags/ML_EMPPOT_RCUT.md
+- **ML_EPS_LOW** — [real], default = 1E-11 for ML_MODE = SELECT, REFIT. Threshold for the CUR algorithm used in the sparsification of local reference configurations within the machine learning force fields.  ·  aliases: ML FF EPS LOW  →  references/incar-tags/ML_EPS_LOW.md
+- **ML_EPS_REG** — [real], default = 1E-15. Initial value for the threshold of the eigenvalues of the covariance matrix in the evidence approximation.  →  references/incar-tags/ML_EPS_REG.md
+- **ML_ESTBLOCK** — [integer]. Calculation and output frequency of error estimates for ML_MODE=*RUN* computations.  ·  aliases: ML IERR  →  references/incar-tags/ML_ESTBLOCK.md
+- **ML_GRACE_MODEL** — [string], default = ./SavedModel. String-based tag specifying the GRACE force field name or path.  →  references/incar-tags/ML_GRACE_MODEL.md
+- **ML_IAFILT2** — [integer], default = 2. This tag specifies the type of angular filtering used in the machine learning force field method.  ·  aliases: ML FF IAFILT2 MB  →  references/incar-tags/ML_IAFILT2.md
+- **ML_IALGO_LINREG** — [integer], default = 4 if ML_MODE=refit. This tag determines the algorithm that is employed to solve the system of linear equations in the ridge regression method for machine learning.  →  references/incar-tags/ML_IALGO_LINREG.md
+- **ML_ICOUPLE** — [integer array]. This tag specifies the atoms where the coupling parameter is introduced to calculate the chemical potential within the machine learning force field method.  ·  aliases: ML FF ICOUPLE MB  →  references/incar-tags/ML_ICOUPLE.md
+- **ML_ICRITERIA** — [integer], default = 3 if ML_MODE = SELECT and ML_CALGO = 0. Decides how the error threshold (ML_CTIFOR) is updated within the machine learning force field method.  ·  aliases: ML FF LCRITERIA  →  references/incar-tags/ML_ICRITERIA.md
+- **ML_IREG** — [integer], default = 2. This tag specifies whether the regularization parameters are kept constant or not in the machine learning force field method.  ·  aliases: ML FF IREG MB  →  references/incar-tags/ML_IREG.md
+- **ML_ISCALE_TOTEN** — [integer], default = 2. This tag specifies how to scale the energy data in the machine learning force field method.  ·  aliases: ML FF ISCALE TOTEN MB  →  references/incar-tags/ML_ISCALE_TOTEN.md
+- **ML_ISTART** — [integer], default = 0. This tag selects the mode of operation (e.g.  ·  aliases: ML FF ISTART  →  references/incar-tags/ML_ISTART.md
+- **ML_IWEIGHT** — [integer], default = 3. This tag controls which procedure is used for normalizing and weighting the energies, forces, and stresses in the machine learning force field method.  ·  aliases: ML FF IWEIGHT  →  references/incar-tags/ML_IWEIGHT.md
+- **ML_LAFILT2** — [logical], default = .TRUE. This tag specifies whether angular filtering is applied or not within the machine learning force field method.  ·  aliases: ML FF LAFILT2 MB  →  references/incar-tags/ML_LAFILT2.md
+- **ML_LBASIS_DISCARD** — [logical], default = .TRUE. Controls whether calculation is continued or stopped after the maximum number of local reference configurations ML_MB for a given species is reached.  →  references/incar-tags/ML_LBASIS_DISCARD.md
+- **ML_LCOUPLE** — [logical], default = .TRUE. if ML_LEMPPOT=.TRUE. This tag specifies whether thermodynamic integration is activated in order to calculate the chemical potentials within the machine learning force field method.  ·  aliases: ML FF LCOUPLE MB  →  references/incar-tags/ML_LCOUPLE.md
+- **ML_LEATOM** — [logical], default = .FALSE. This term specifies whether the total atomic energy is written out or not.  ·  aliases: ML FF LEATOM MB  →  references/incar-tags/ML_LEATOM.md
+- **ML_LEMPPOT** — [logical], default = .FALSE. Enables the use of auxiliary empirical potentials for thermodynamic integration using VCAIMAGES.  →  references/incar-tags/ML_LEMPPOT.md
+- **ML_LERR** — [logical], default = .TRUE. Decides whether the Bayesian error estimates are calculated and written out or not.  →  references/incar-tags/ML_LERR.md
+- **ML_LFAST** — [logical], default = .TRUE. for ML_MODE = refit. This tag switches on the descriptors for refitting in the fast execution mode within machine learning force fields.  →  references/incar-tags/ML_LFAST.md
+- **ML_LHEAT** — [logical], default = .FALSE. This tag specifies whether the heat flux is calculated or not in the machine learning force field method.  ·  aliases: ML FF LHEAT MB  →  references/incar-tags/ML_LHEAT.md
+- **ML_LIB** — [logical], default = .TRUE. if compiled with VASPml library (precompiler flag -Dlibvaspml). ML_LIB enables/disables the use of the VASPml C++ library for machine-learning features.  →  references/incar-tags/ML_LIB.md
+- **ML_LMAX2** — [integer], default = 3 for ML_LAFILT2 = .TRUE. This tag specifies the maximum angular momentum quantum number $L_max$ of spherical harmonics used to expand atomic distributions within the machine learning force field method.  ·  aliases: ML FF LMAX2 MB  →  references/incar-tags/ML_LMAX2.md
+- **ML_LMLFF** — [logical], default = .FALSE. Main control tag which enables/disables the use of machine learning force fields.  ·  aliases: ML FF LMLFF  →  references/incar-tags/ML_LMLFF.md
+- **ML_LSPARSDES** — [logical], default = .FALSE. Specifies whether angular-descriptor sparsification is enabled within the machine learning force field method.  ·  aliases: ML FF LSPARSDES MB  →  references/incar-tags/ML_LSPARSDES.md
+- **ML_LUSE_NAMES** — [logical], default = .FALSE. Decides whether training structures are additionally subdivided into groups internally due to their structure name.  →  references/incar-tags/ML_LUSE_NAMES.md
+- **ML_MB** — [integer], default = see below. This tag sets the maximum number of local reference configurations (i.e.  ·  aliases: ML FF MB MB  →  references/incar-tags/ML_MB.md
+- **ML_MB_MIN** — [integer], default = 3. ML_MB_MIN sets the minimum number of local reference configurations required for generation of a machine-learned force field.  →  references/incar-tags/ML_MB_MIN.md
+- **ML_MCONF** — [integer], default = see below. This tag sets the maximum number of structures stored in memory that are used for training in the machine learning force field method.  ·  aliases: ML FF MCONF  →  references/incar-tags/ML_MCONF.md
+- **ML_MCONF_NEW** — [integer], default = 5. This tag sets the number of configurations that are stored temporarily as candidates for the training data in the machine learning force field method.  ·  aliases: ML FF MCONF NEW  →  references/incar-tags/ML_MCONF_NEW.md
+- **ML_MHIS** — [integer], default = 10. This tag sets the number of estimated errors stored in memory to determine the threshold for error estimation in the machine learning force field method for ML_ICRITERIA=1.  ·  aliases: ML FF MHIS  →  references/incar-tags/ML_MHIS.md
+- **ML_MODE** — train | select | refit | refitbayesian | run | delta | none, default = none. String-based tag selecting operation mode for machine learning force fields.  →  references/incar-tags/ML_MODE.md
+- **ML_MOPOT_DM** — [real], default = 1.0. Specifies the well depth of the Morse potentials used as auxiliary potentials in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_MOPOT_DM.md
+- **ML_MOPOT_IJM** — [integer array], default = none. Specifies the list of Morse potential pairs used as auxiliary potentials in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_MOPOT_IJM.md
+- **ML_MOPOT_NM** — [integer], default = 0. Specifies the number of Morse-potential pairs used as auxiliary potentials in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_MOPOT_NM.md
+- **ML_MOPOT_RKM** — [real], default = 1.0. Specifies the width parameter of the Morse potentials used as auxiliary potentials in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_MOPOT_RKM.md
+- **ML_MOPOT_RM** — [real], default = 1.0. Specifies the equilibrium bond distance of the Morse potentials used as auxiliary potentials in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_MOPOT_RM.md
+- **ML_MRB1** — [integer], default = 12. This tag sets the number $N_text{R}^0$ of radial basis functions used to expand the radial descriptor $rho^{(2)}_i(r)$ within the machine learning force field method.  ·  aliases: ML FF MRB1 MB  →  references/incar-tags/ML_MRB1.md
+- **ML_MRB2** — [integer], default = 8. This tag sets the number $N_text{R}^l$ (for all $l$) of radial basis functions used to expand the angular descriptor within the machine learning force field method.  ·  aliases: ML FF MRB2 MB  →  references/incar-tags/ML_MRB2.md
+- **ML_NATOM_COUPLED** — [integer], default = 0. This tag specifies the number of atoms for which a coupling parameter is introduced to calculate the chemical potential within the machine learning force field method.  ·  aliases: ML FF NATOM COUPLED MB  →  references/incar-tags/ML_NATOM_COUPLED.md
+- **ML_NCSHMEM** — [integer], default = komplex see below VASP.6.6.0 or higher. Specifies the number of MPI ranks that share a single shared memory segment.  →  references/incar-tags/ML_NCSHMEM.md
+- **ML_NHYP** — [integer], default = 4. This tag specifies the polynomial power $zeta$ of the kernel within the machine learning force field method (see this section).  ·  aliases: ML FF NHYP1 MB  →  references/incar-tags/ML_NHYP.md
+- **ML_NMDINT** — [integer], default = 1 for ML_MODE = SELECT. Tag to control the minimum interval to get training samples in the machine learning force field method.  ·  aliases: ML FF NMDINT  →  references/incar-tags/ML_NMDINT.md
+- **ML_NRANK_SPARSDES** — [integer], default = 5. This tag sets the number of highest eigenvalues to which the correlation is measured within the angular descriptor sparsification (within the machine learning force field method).  ·  aliases: ML FF NRANK SPARSDES MB  →  references/incar-tags/ML_NRANK_SPARSDES.md
+- **ML_OUTBLOCK** — [integer], default = 1 if 0<=VCAIMAGES<=1 and ML_LMLFF=.FALSE. in one of the two images. Output distance in number of steps for molecular-dynamics simulations with machine-learned force fields in prediction-only mode (ML_MODE = run).  →  references/incar-tags/ML_OUTBLOCK.md
+- **ML_OUTPUT_MODE** — default = 0 if ML_MODE = run. This tag allows to disable certain file output which helps to increase performance in molecular-dynamics simulations with machine-learned force fields in prediction-only mode (ML_MODE = run).  →  references/incar-tags/ML_OUTPUT_MODE.md
+- **ML_RCOUPLE** — [real], default = 0.0 if ML_LEMPPOT=.TRUE. This tag specifies the value of the coupling parameter for the calculation of the chemical potential within the machine learning force field method.  ·  aliases: ML FF RCOUPLE MB  →  references/incar-tags/ML_RCOUPLE.md
+- **ML_RCUT1** — [real], default = 8.0. Sets the cutoff radius $R_text{cut}$ for the radial descriptor $rho^{(2)}_i(r)$ in $AA$.  ·  aliases: ML FF RCUT1 MB  →  references/incar-tags/ML_RCUT1.md
+- **ML_RCUT2** — [real], default = 5.0. This flag sets the cutoff radius $R_text{cut}$ for the angular descriptor $rho^{(3)}_i(r)$ in the machine learning force field method.  ·  aliases: ML FF RCUT2 MB  →  references/incar-tags/ML_RCUT2.md
+- **ML_RDES_SPARSDES** — [real], default = 0.5. Sets the ratio of descriptors kept during angular-descriptor sparsification.  ·  aliases: ML FF RDES SPARSDES MB  →  references/incar-tags/ML_RDES_SPARSDES.md
+- **ML_SCLC_CTIFOR** — [real], default = 0.6. Sets fraction by which the error threshold for the maximum forces is lowered in the selection of local reference calculations.  →  references/incar-tags/ML_SCLC_CTIFOR.md
+- **ML_SIGV0** — [real], default = 1.0. This flag sets the noise parameter $s_{mathrm{v}}$ (see here for definition) for the fitting in the machine learning force field method.  ·  aliases: ML FF SIGV0 MB  →  references/incar-tags/ML_SIGV0.md
+- **ML_SIGW0** — [real], default = 1E-7 for ML_MODE = REFIT. This flag sets the precision parameter $s_{mathrm{w}}$ (see here for definition) for the fitting in the machine learning force field method.  ·  aliases: ML FF SIGW0 MB  →  references/incar-tags/ML_SIGW0.md
+- **ML_SION1** — [real], default = 0.5. This tag specifies the width $sigma_text{atom}$ of the Gaussian functions used for broadening the atomic distributions of the radial descriptor $rho^{(2)}_i(r)$ within the machine learning force field method.  ·  aliases: ML FF SION1 MB  →  references/incar-tags/ML_SION1.md
+- **ML_SION2** — [real], default = ML_SION1. This tag specifies the width $sigma_text{atom}$ of the Gaussian functions used for broadening the atomic distributions of the angular descriptor $rho^{(3)}_i(r)$ within the machine learning force field method.  ·  aliases: ML FF SION2 MB  →  references/incar-tags/ML_SION2.md
+- **ML_SRPOT_B0** — [real], default = 1.0. Specifies the height of a soft repulsive exponential potential used as an auxiliary potential in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_SRPOT_B0.md
+- **ML_SRPOT_N0** — [integer], default = 10. Specifies the exponent of a soft repulsive exponential potential used as an auxiliary potential in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_SRPOT_N0.md
+- **ML_SRPOT_S0** — [real], default = 2.0. Specifies the broadening of a soft repulsive exponential potential used as an auxiliary potential in thermodynamic integration (VCAIMAGES).  →  references/incar-tags/ML_SRPOT_S0.md
+- **ML_TYPE** — kernel | vasp | grace, default = kernel. String-based tag selecting type of machine-learned force field to use.  →  references/incar-tags/ML_TYPE.md
+- **ML_W1** — [real], default = 0.1. This tag defines the weight $beta$ for the radial (and angular) descriptor within the machine learning force field method (see this section).  ·  aliases: ML FF W1 MB  →  references/incar-tags/ML_W1.md
+- **ML_WTIFOR** — [real], default = 0.05 if ML_IWEIGHT=1. This tag sets the weight for the scaling of the forces in the training data within the machine learning force field method.  ·  aliases: ML FF WTIFOR  →  references/incar-tags/ML_WTIFOR.md
+- **ML_WTOTEN** — [real], default = 0.005 if ML_IWEIGHT=1. Sets a scaling of the fitted potential energy.  ·  aliases: ML FF WTOTEN  →  references/incar-tags/ML_WTOTEN.md
+- **ML_WTSIF** — [real], default = 5.0 if ML_IWEIGHT=1. This tag sets the weight for the scaling of the stress in the training data within the machine learning force field method.  ·  aliases: ML FF WTSIF  →  references/incar-tags/ML_WTSIF.md
+- **MP2** — *MP2* in the [INCAR](../input-files/INCAR.md) file VASP calculates MP2 correlation energies. It is strongly recommended to calculate all virtual states spanned by the basis set before calling the MP2 routines.. By specifying ALGO=*MP2* in  →  references/incar-tags/MP2.md
+- **MSDGW F** — [real]. A positive value of MSDGW_F triggers the mixed stochastic-deterministic compression algorithm of Altman and co-workers.^([[1]](#cite_note-altman:prl:2024-1))  →  references/incar-tags/MSDGW_F.md
+- **NATURALO** — [integer], default = 0; for low scaling GW type calculations the. calculate RPA natural orbitals.  →  references/incar-tags/NATURALO.md
+- **NBANDS** — [integer], default = $max left( frac{1}{2}operatorname{nint} left(N_{mathrm{elect}} + 2right) + maxleft(frac{1}{2}N_{mathrm{ions}}, 3right), operatorname{int}left(frac{3}{5} N_{mathrm{elect}}right) right)$. NBANDS specifies the total  →  references/incar-tags/NBANDS.md
+- **NBANDS_WAVE** — [integer]. NBANDS_WAVE specifies the number of bands written to WAVECAR in the all-in-one mode of many-body perturbation theory calculations, i.e., ALGO=[ACFDT[R]](/wiki/ACFDT/RPA_calculations "ACFDT/RPA calculations"),  →  references/incar-tags/NBANDS_WAVE.md
+- **NBANDSEXACT** — [integer], default = -1 for LALL_IN_ONE=.FALSE. NBANDSEXACT specifies the number of bands used in the all-in-one mode of many-body perturbation theory calculations.  →  references/incar-tags/NBANDSEXACT.md
+- **NBANDSGW** — [integer], default = twice the number of occupied states. The flag determines how many QP energies are calculated and updated in GW type calculations.  →  references/incar-tags/NBANDSGW.md
+- **NBANDSO** — [integer], default = number of occupied orbitals. NBANDSO determines how many occupied orbitals are included in the Casida/BSE calculations or time propagation (ALGO=TIMEEV.  →  references/incar-tags/NBANDSO.md
+- **NBANDSV** — [integer]. NBANDSV determines how many unoccupied orbitals are included in the Casida/BSE calculations or timepropagation.  →  references/incar-tags/NBANDSV.md
+- **NBLK** — [integer], default = -1 VASP.4.6. NBLK determines the blocking factor in many BLAS level 3 routines.  →  references/incar-tags/NBLK.md
+- **NBLOCK** — [integer], default = 1. After NBLOCK ionic steps the pair-correlation function and the DOS are calculated and the ionic configuration is written to the XDATCAR-file.  →  references/incar-tags/NBLOCK.md
+- **NBLOCK_FOCK** — [integer], default = 64 CPU build. Sets the number of orbitals that are processed simultaneously when computing the action of the Fock potential.  →  references/incar-tags/NBLOCK_FOCK.md
+- **NBMOD** — -3 | -2 | -1 | 0 | [positive integer], default = n if IBAND is set and contains n values. NBMOD controls how bands are selected when computing partial charge densities.  →  references/incar-tags/NBMOD.md
+- **NBSEBLOCKO** — [integer], default = -1. NBSEBLOCKO specifies the blocking factor for the occupied states when setting up the BSE Hamiltonian.  →  references/incar-tags/NBSEBLOCKO.md
+- **NBSEBLOCKV** — [integer], default = -1. NBSEBLOCKV specifies the blocking factor for the unoccupied states when setting up the BSE Hamiltonian.  →  references/incar-tags/NBSEBLOCKV.md
+- **NBSEEIG** — [integer], default = 0. NBSEEIG sets the number of BSE eigenvectors written to the BSEFATBAND file.  →  references/incar-tags/NBSEEIG.md
+- **NCORE** — [integer], default = 1. NCORE controls how many MPI ranks collaborate on a single band, parallelizing the FFTs for that band.  →  references/incar-tags/NCORE.md
+- **NCORE_IN_IMAGE1** — [integer], default = 0. This tag specifies the number of cores in the first image.  →  references/incar-tags/NCORE_IN_IMAGE1.md
+- **NCRPA_BANDS** — [integer array]. Controls which bands are excluded in the constrained random-phase approximation.  →  references/incar-tags/NCRPA_BANDS.md
+- **NCSHMEM** — [integer], default = 1. Specifies the number of MPI ranks that share a single shared memory segment in the non-cubic scaling GW routines.  →  references/incar-tags/NCSHMEM.md
+- **NEDOS** — [integer], default = $301$. Number of grid points for the electronic density of states (DOS) and dielectric function.  →  references/incar-tags/NEDOS.md
+- **NELECT** — [real], default = number of valence electrons. NELECT sets the number of electrons.  →  references/incar-tags/NELECT.md
+- **NELM** — [integer], default = 60. NELM sets the maximum number of electronic SC (self-consistency) steps.  →  references/incar-tags/NELM.md
+- **NELMDL** — [integer], default = -12 if ISTART=0, INIWAV=1, and IALGO=48 or IALGO=50. NELMDL specifies the number of non-self-consistent steps at the beginning.  →  references/incar-tags/NELMDL.md
+- **NELMGW** — [integer], default = 1. NELMGW sets the number of self-consistent GW steps.  →  references/incar-tags/NELMGW.md
+- **NELMIN** — [integer], default = 2. NELMIN specifies the minimum number of electronic self-consistency steps.  →  references/incar-tags/NELMIN.md
+- **NFREE** — [integer], default = 1 if IBRION=2. depending on IBRION, NFREE specifies the number of remembered steps in the history of ionic convergence runs, or the number of ionic displacements in frozen phonon calculations.  →  references/incar-tags/NFREE.md
+- **NGX** — [integer], default = set in accordance with PREC and. NGX sets the number of grid points in the FFT grid along the first lattice vector.  →  references/incar-tags/NGX.md
+- **NGXF** — [integer], default = set in accordance with PREC,. NGXF sets the number of grid points in the "fine" FFT grid along the first lattice vector.  →  references/incar-tags/NGXF.md
+- **NGY** — [integer], default = set in accordance with PREC and. NGY sets the number of grid points in the FFT grid along the second lattice vector.  →  references/incar-tags/NGY.md
+- **NGYF** — [integer], default = set in accordance with PREC,. NGYF sets the number of grid points in the "fine" FFT grid along the second lattice vector.  →  references/incar-tags/NGYF.md
+- **NGYROMAG** — [real array], default = NTYP*1.0. NGYROMAG specifies the nuclear gyromagnetic ratios (in MHz, for H₀ = 1 T) for the atomic types on the POTCAR file.  →  references/incar-tags/NGYROMAG.md
+- **NGZ** — [integer], default = set in accordance with PREC and. NGZ sets the number of grid points in the FFT grid along the third lattice vector.  →  references/incar-tags/NGZ.md
+- **NGZF** — [integer], default = set in accordance with PREC,. NGZF sets the number of grid points in the "fine" FFT grid along the first lattice vector.  →  references/incar-tags/NGZF.md
+- **NHC_NCHAINS** — [integer], default = 0. Length of the Nosé-Hoover chain.  →  references/incar-tags/NHC_NCHAINS.md
+- **NHC_NRESPA** — [integer], default = 1. The number of subdivisions of the integration step used in propagation of thermostat variables in the Nosé-Hoover chain thermostat.  →  references/incar-tags/NHC_NRESPA.md
+- **NHC_NS** — [integer] 1 | 3 | 7, default = 1. The number of subdivisions of each RESPA step used in the integration step used in propagation of thermostat variables in the Nosé-Hoover chain thermostat.  →  references/incar-tags/NHC_NS.md
+- **NICS** — The NICS file contains the NMR nucleus-independent chemical shielding  →  references/incar-tags/NICS.md
+- **NKRED** — [integer], default = 1. NKRED specifies an uniform reduction factor for the  →  references/incar-tags/NKRED.md
+- **NKREDX** — [integer], default = 1. NKREDX specifies a reduction factor for the q-point grid representation of the exact exchange potential along reciprocal space direction b₁.  →  references/incar-tags/NKREDX.md
+- **NKREDY** — [integer], default = 1. NKREDY specifies a reduction factor for the q-point grid representation of the exact exchange potential along reciprocal space direction b₂.  →  references/incar-tags/NKREDY.md
+- **NKREDZ** — [integer], default = 1. NKREDZ specifies a reduction factor for the q-point grid representation of the exact exchange potential along reciprocal space direction b₃.  →  references/incar-tags/NKREDZ.md
+- **NLSPLINE** — .TRUE. | .FALSE., default = .FALSE. construct the PAW projectors in reciprocal space using spline interpolation so that they are *k*-differentiable.  →  references/incar-tags/NLSPLINE.md
+- **NMAXFOCKAE and LMAXFOCKAE** — 1|2. NMAXFOCKAE and LMAXFOCKAE determine whether the overlap densities in the Fock exchange and correlated wave function methods are accurately reconstructed on the plane wave grid (shape restoration).  ·  aliases: LMAXFOCKAE, NMAXFOCKAE  →  references/incar-tags/NMAXFOCKAE_and_LMAXFOCKAE.md
+- **NMRCAR.magres** — The NMRCAR.magres file is writte when [calculating the chemical  →  references/incar-tags/NMRCAR.magres.md
+- **NOMEGA** — [integer], default = 100 for GW calculations. NOMEGA specifies the number of (imaginary) frequency and imaginary time grid points.  →  references/incar-tags/NOMEGA.md
+- **NOMEGA_DUMP** — [integer], default = -1. NOMEGA_DUMP selects the imaginary frequency point of screened potential in low-scaling GW calculations that is written to file.  →  references/incar-tags/NOMEGA_DUMP.md
+- **NOMEGAPAR** — [integer], default = NOMEGA used in low scaling GW and RPA/ACFDT calculations. NOMEGAPAR available as of VASP.6, specifies the number of processor groups sharing the same imaginary frequency grid points.  →  references/incar-tags/NOMEGAPAR.md
+- **NOMEGAR** — [integer], default = NOMEGA for GW calculations. NOMEGAR specifies the number of frequency grid points along the real axis.  →  references/incar-tags/NOMEGAR.md
+- **NPACO** — [integer], default = 256. NPACO sets the number of slots in the pair-correlation function written to PCDAT.  →  references/incar-tags/NPACO.md
+- **NPAR** — [integer], default = available ranks. NPAR determines the number of bands that are treated in parallel.  →  references/incar-tags/NPAR.md
+- **NPPSTR** — [integer]. NPPSTR specifies the number of k-points on the strings in the IGPAR direction.  →  references/incar-tags/NPPSTR.md
+- **NRMM** — [integer], default = 4. Maximum number of iterative steps for RMM-DIIS (IALGO=4X) or Davidson algorithms (IALGO=3X).  ·  aliases: NDAV  →  references/incar-tags/NRMM.md
+- **NSIM** — [integer], default = 4. NSIM sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm.  →  references/incar-tags/NSIM.md
+- **NSTORB** — [integer], default = -1. NSTORB specifies the number of stochastic orbitals per cycle in the stochastic MP2 algorithm.  →  references/incar-tags/NSTORB.md
+- **NSUBSYS** — [integer array]. NSUBSYS defines the atomic subsystems in calculations with multiple Anderson thermostats (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/NSUBSYS.md
+- **NSW** — [integer], default = 0. NSW sets the maximum number of ionic steps.  →  references/incar-tags/NSW.md
+- **NTARGET_STATES** — [integer array]. Controls which Wannier states are excluded in constrained random-phase approximation.  →  references/incar-tags/NTARGET_STATES.md
+- **NTAUPAR** — [integer], default = depends on MAXMEM used in low scaling GW and RPA/ACFDT calculations. NTAUPAR available as of VASP.6, specifies the number of MPI groups sharing same imaginary time grid points.  →  references/incar-tags/NTAUPAR.md
+- **NTEMPER** — [integer], default = 200. NTEMPER specifies how often temperature swaps are attempted during parallel tempering.  →  references/incar-tags/NTEMPER.md
+- **NUCIND** — .TRUE. | .FALSE., default = .FALSE. Allows the nucleus-independent chemical shielding (NICS) to be calculated.  →  references/incar-tags/NUCIND.md
+- **NUM_WANN** — [integer], default = NBANDS. Controls the number of Wannier orbitals to be constructed.  →  references/incar-tags/NUM_WANN.md
+- **NUPDOWN** — [positive real], default = not set. Sets the difference between the number of electrons in the up and down spin components.  →  references/incar-tags/NUPDOWN.md
+- **NWRITE** — 0 | 1 | 2 | 3 | 4, default = 2. This tag determines how much will be written to the file OUTCAR ('verbosity tag').  →  references/incar-tags/NWRITE.md
+- **ODDONLY** — .TRUE. | .FALSE., default = .FALSE. ODDONLY=.TRUE.  →  references/incar-tags/ODDONLY.md
+- **ODDONLYGW** — [logical], default = .FALSE. ODDONLYGW allows to avoid the inclusion of the $Gamma$ point in the evaluation of response functions (in GW calculations).  →  references/incar-tags/ODDONLYGW.md
+- **OFIELD_A** — [real]. The tag OFIELD_A sets the desired order parameter $Q_6$ in the Interface pinning method.  →  references/incar-tags/OFIELD_A.md
+- **OFIELD_KAPPA** — [real]. The tag OFIELD_KAPPA sets the strength of the bias potential in the Interface pinning method.  →  references/incar-tags/OFIELD_KAPPA.md
+- **OFIELD_Q6_FAR** — [real]. OFIELD_Q6_FAR sets the far fading distance for the computation of a continuous $Q_6$ parameter in the interface-pinning method.  →  references/incar-tags/OFIELD_Q6_FAR.md
+- **OFIELD_Q6_NEAR** — [real]. OFIELD_Q6_NEAR sets the near-fading distance (in $AA$) for the computation of a continuous $Q_6$ parameter in the interface-pinning method.  →  references/incar-tags/OFIELD_Q6_NEAR.md
+- **OMEGAMAX** — [real], default = outermost node in dielectric function. OMEGAMAX specifies the maximum frequency for the dense part of the frequency grid for GW calculations (old GW code, does not apply to GWR).  →  references/incar-tags/OMEGAMAX.md
+- **OMEGAMIN** — [real], default = minimum transition energy (0.05 for metals). OMEGAMIN sets the minimum frequency in the frequency grid.  →  references/incar-tags/OMEGAMIN.md
+- **OMEGATL** — [real], default = 10 $times$. OMEGATL specifies the maximum frequency for the coarse part of the frequency grid.  →  references/incar-tags/OMEGATL.md
+- **PARAM1** — [real], default = 0.1234. $mu$ for GGA=MK, $beta$ for GGA=BO.  →  references/incar-tags/PARAM1.md
+- **PARAM2** — [real], default = 1.0. $kappa$ for GGA=MK, or $mu$ for GGA=BO.  →  references/incar-tags/PARAM2.md
+- **PFLAT** — [logical]. Control flag for the output of the profiling routines.  →  references/incar-tags/PFLAT.md
+- **PHON_BORN_CHARGES** — [3x3xNIONS real], default = None. PHON_BORN_CHARGES sets the Born effective charges to be used for the dipole-dipole corrections in the computation of the phonon dispersion.  →  references/incar-tags/PHON_BORN_CHARGES.md
+- **PHON_DIELECTRIC** — [3x3 real], default = None. PHON_DIELECTRIC sets the static dielectric tensor to be used for the dipole-dipole corrections in the computation of the phonon dispersion.  →  references/incar-tags/PHON_DIELECTRIC.md
+- **PHON_DOS** — 0 | 1 | 2, default = 0. Select the approach to use when computing the phonon density-of-states (DOS).  →  references/incar-tags/PHON_DOS.md
+- **PHON_G_CUTOFF** — [real], default = 8.0. PHON_G_CUTOFF sets the cutoff radius in reciprocal space used to determine the number of $mathbf{G}$ vectors involved in the Ewald sum in polar phonon calculations.  →  references/incar-tags/PHON_G_CUTOFF.md
+- **PHON_LBOSE** — [logical], default = .TRUE. Determines whether structures in the sampling are created according to Bose-Einstein or Maxwell-Boltzmann statistics.  →  references/incar-tags/PHON_LBOSE.md
+- **PHON_LMC** — [logical], default = .FALSE. Controls whether electron-phonon interactions from Monte-Carlo sampling are calculated or not.  →  references/incar-tags/PHON_LMC.md
+- **PHON_NEDOS** — [integer], default = 2000. Sets the number of frequency points to compute the phonon density of states.  →  references/incar-tags/PHON_NEDOS.md
+- **PHON_NSTRUCT** — [integer], default = none. Sets the number of structures for electron-phonon interactions from Monte-Carlo (MC) sampling.  →  references/incar-tags/PHON_NSTRUCT.md
+- **PHON_NWRITE** — [integer], default = 1. PHON_NWRITE determines how much output is written to the OUTCAR file when computing the phonon dispersion LPHON_DISPERSION=.TRUE.  →  references/incar-tags/PHON_NWRITE.md
+- **PHON_SIGMA** — [real], default = 0.0005 eV. Set the width of the Gaussian function in eV to compute the phonon density of states.  →  references/incar-tags/PHON_SIGMA.md
+- **PHON_TLIST** — [real array], default = none. Provides the list of temperatures for that the electron-phonon interaction using the ZG configuration^([[1]](#cite_note-zacharias:prb:2016-1)) is evaluated.  →  references/incar-tags/PHON_TLIST.md
+- **PLEVEL** — [integer]. Control tag for the output of the profiling routines.  →  references/incar-tags/PLEVEL.md
+- **PLUGINS/FORCE AND STRESS** — .True. | .False.. PLUGINS/FORCE_AND_STRESS calls the Python plugin for the force and stress interface for each ionic relaxation step  →  references/incar-tags/PLUGINS__FORCE_AND_STRESS.md
+- **PLUGINS/LOCAL_POTENTIAL** — .True. | .False., default = .False. PLUGINS/LOCAL_POTENTIAL calls the Python plugin for the local potential interface for each SCF step  →  references/incar-tags/PLUGINS__LOCAL_POTENTIAL.md
+- **PLUGINS/MACHINE LEARNING** — .True. | .False.. PLUGINS/MACHINE_LEARNING calls the Python plugin for the machine learning interface for each ionic relaxation step  →  references/incar-tags/PLUGINS__MACHINE_LEARNING.md
+- **PLUGINS/ML MODE** — none | run. String-based tag selecting operation mode for running PLUGINS/FORCE_AND_STRESS plugins.  →  references/incar-tags/PLUGINS__ML_MODE.md
+- **PLUGINS/ML OUTBLOCK** — [integer]. Equivalent to ML_OUTBLOCK for calculations run via plugins instead of using VASP internal force fields.  →  references/incar-tags/PLUGINS__ML_OUTBLOCK.md
+- **PLUGINS/ML OUTPUT MODE** — [integer]. Equivalent to ML_OUTPUT_MODE for calculations run via plugins instead of using VASP internal force fields.  →  references/incar-tags/PLUGINS__ML_OUTPUT_MODE.md
+- **PLUGINS/NEIGHBOR CUTOFF** — [real]. PLUGINS/NEIGHBOR_CUTOFF determines the cutoff up to which the neighbor list is computed that is passed to the Python plugins.  →  references/incar-tags/PLUGINS__NEIGHBOR_CUTOFF.md
+- **PLUGINS/OCCUPANCIES** — .True. | .False., default = .False. PLUGINS/OCCUPANCIES calls the Python plugin for the occupancies interface for each ionic relaxation step  →  references/incar-tags/PLUGINS__OCCUPANCIES.md
+- **PLUGINS/STRUCTURE** — .True. | .False., default = .False. PLUGINS/STRUCTURE calls the Python plugin for the structure interface for each ionic relaxation step  →  references/incar-tags/PLUGINS__STRUCTURE.md
+- **PMASS** — [Real], default = 1000. PMASS assigns a fictitious mass (in amu) to the lattice degrees-of-freedom in case of Parrinello-Rahman dynamics (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/PMASS.md
+- **POMASS** — [real array], default = values read from POTCAR. Array of masses of the atoms in atomic units.  →  references/incar-tags/POMASS.md
+- **POSNICS** — The POSNICS file is an input file that defines the positions to  →  references/incar-tags/POSNICS.md
+- **POTIM** — [real], default = none, *must* be set if IBRION= 0 (MD). POTIM sets the time step in molecular dynamics or the step width in ionic relaxations.  →  references/incar-tags/POTIM.md
+- **PREC** — Normal | Single | SingleN | Accurate | Low | Medium | High, default = Medium for VASP.4.X. PREC specifies the "precision" mode.  →  references/incar-tags/PREC.md
+- **PRECFOCK** — Normal | Accurate | Fast | Medium | Single | Low, default = Fast for RPAR calculations. PRECFOCK controls the FFT grids used in the exact exchange routines (Hartree-Fock and hybrid functionals).  →  references/incar-tags/PRECFOCK.md
+- **Profiling** — In the most recent version of VASP, profiling routines were added to all  →  references/incar-tags/Profiling.md
+- **PROJCAR** — The PROJCAR file contains information about the projections of the  →  references/incar-tags/PROJCAR.md
+- **PROUTINE** — [integer]. Control flag for the output of the profiling routines.  →  references/incar-tags/PROUTINE.md
+- **PSTRESS** — [real], default = 0. Sets the external pressure in kB or adds corrections to the stress tensor.  →  references/incar-tags/PSTRESS.md
+- **PSUBSYS** — [real array]. PSUBSYS sets the collision probabilities for the atoms in each atomic subsystem in calculations with multiple Anderson thermostats (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/PSUBSYS.md
+- **PTHRESHOLD** — [real]. Control flag for the output of the profiling routines.  →  references/incar-tags/PTHRESHOLD.md
+- **QMAXFOCKAE** — [real array]. Controls at which wave vectors the local augmentation charges are fitted to obtain an accurate charge augmentation on the plane-wave grid.  →  references/incar-tags/QMAXFOCKAE.md
+- **QSPIRAL** — [real array], default = 3*0.0. the QSPIRAL-tag specifies the spin spiral propagation vector.  →  references/incar-tags/QSPIRAL.md
+- **QUAD_EFG** — [real array], default = NTYP*1.0. nuclear quadrupole moment (in millbarn) for the atomic types on the POTCAR file.  →  references/incar-tags/QUAD_EFG.md
+- **RANDOM_GENERATOR** — default | pcg_32. Specifies the random-number generator used to initialize the wavefunction (see INIWAV) for electronic minimization, initialize atomic velocities for molecular dynamics, etc.  →  references/incar-tags/RANDOM_GENERATOR.md
+- **RANDOM_SEED** — [integer][integer][integer], default = based on the system clock. RANDOM_SEED specifies the seed of the random-number generator (compile VASP with -Dtbdyn).  →  references/incar-tags/RANDOM_SEED.md
+- **ROPT** — [real array], one entry for each species on the [POTCAR](../input-files/POTCAR.md) file, default = -5E-4 if LREAL=Auto and PREC=Normal. ROPT determines how accurately the projectors are represented in real space.  →  references/incar-tags/ROPT.md
+- **RSMBJ** — [real], default = 7. sets the $r_{s}^{mathrm{th}}$ parameter (in bohr) in the LMBJ potential.  →  references/incar-tags/RSMBJ.md
+- **RWIGS** — [real array], default = -1. RWIGS specifies the Wigner-Seitz radius (in $AA$) for each atom type.  →  references/incar-tags/RWIGS.md
+- **SAXIS** — [real array], default = (0, 0, 1). Set the global spin-quantization axis w.r.t.  →  references/incar-tags/SAXIS.md
+- **SCALEE** — [real], default = 1. This tag specifies the coupling parameter of the energies and forces between a fully interacting system and a reference system.  →  references/incar-tags/SCALEE.md
+- **SCISSOR** — [real], default = 0. SCISSOR specifies the shift for the scissor operator in eV.  →  references/incar-tags/SCISSOR.md
+- **SCSRAD** — [real], default = 120. SCSRAD defines the cutoff radius (in $AA$) used in the calculation of $tau_{ij}$ within the Tkatchenko-Scheffler method Self-consistent screening in Tkatchenko-Scheffler method.  →  references/incar-tags/SCSRAD.md
+- **SDFTD3_DAMPING** — zero | rational | mzero | mrational | optimizedpower. SDFTD3_DAMPING sets the type of damping function in the DFT-D3 method implemented in the simple-DFT-D3 package.  →  references/incar-tags/SDFTD3_DAMPING.md
+- **SDFTD3_XC** — [string], default = The functional set by the. SDFTD3_XC sets the exchange-correlation functional which determines the van der Waals parameters used in the DFT-D3 method implemented in the simple-DFT-D3 package.  →  references/incar-tags/SDFTD3_XC.md
+- **SHAKEMAXITER** — [Integer], default = 1000. SHAKEMAXITER specifies the maximum number of iterations in the SHAKE algorithm (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/SHAKEMAXITER.md
+- **SHAKETOL** — [Real], default = $10^{-5}$. SHAKETOL specifies the tolerance for the SHAKE algorithm (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/SHAKETOL.md
+- **SHAKETOLSOF** — [Real]. SHAKETOLSOFT specifies the soft tolerance for the SHAKE algorithm (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/SHAKETOLSOF.md
+- **SHAKETOLSOFT** — [Real], default = SHAKETOL. SHAKETOLSOFT specifies the soft tolerance for the SHAKE algorithm (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/SHAKETOLSOFT.md
+- **SIGMA** — [real], default = 0.2. SIGMA specifies the width of the smearing in eV.  →  references/incar-tags/SIGMA.md
+- **SMASS** — -3 | -2 | -1 | [real] ≥ 0, default = -3. SMASS controls the velocities during an ab-initio molecular-dynamics run.  →  references/incar-tags/SMASS.md
+- **SMBJ** — [real], default = 2. sets the $sigma$ parameter (in $AA$) in the LMBJ potential.  →  references/incar-tags/SMBJ.md
+- **SMEARINGS** — [real array of length (2 * [NSW](NSW.md))], default = not set. SMEARINGS defines the smearing parameters for ISMEAR = -3 in the calculation of the partial occupancies.  →  references/incar-tags/SMEARINGS.md
+- **SPRING** — [integer], default = -5. SPRING gives the *spring constant* between the images as used in the elastic band method.  →  references/incar-tags/SPRING.md
+- **SPRING_K** — [real (array)]. Force constant for harmonic bias potential.  →  references/incar-tags/SPRING_K.md
+- **SPRING_R0** — [real (array)]. Position of the minimum for a harmonic bias potential.  →  references/incar-tags/SPRING_R0.md
+- **SPRING_V0** — [real (array)], default = 0 for all coordinates with status=8 in ICONST. Rate at which the bias potential is shifted in $uc/fs$.  →  references/incar-tags/SPRING_V0.md
+- **STEP_MAX** — [real], default = 0.1. The flag STEP_MAX defines the trust radius (upper limit) for the optimization step (in $AA$ ) in the Improved Dimer Method.  →  references/incar-tags/STEP_MAX.md
+- **STEP_SIZE** — [real], default = 0.01. The flag STEP_SIZE defines the trial step size for the optimization step (in $AA$ ) in the Improved Dimer Method.  →  references/incar-tags/STEP_SIZE.md
+- **STOP_ON** — Error|Alert, default = Error. STOP_ON defines if the code should stop on errors only or also on alerts.  →  references/incar-tags/STOP_ON.md
+- **STOPCAR** — Using the STOPCAR file it is possible to stop VASP during the program  →  references/incar-tags/STOPCAR.md
+- **SYMPREC** — [real], default = $10^{-5}$. SYMPREC determines to which accuracy the positions in the POSCAR file must be specified (as of VASP.4.4.4).  →  references/incar-tags/SYMPREC.md
+- **SYSTEM** — [string], default = unknown system. The "title string" defined by SYSTEM is for the user only and should help the user to identify what he/she wants to do with this specific input file.  →  references/incar-tags/SYSTEM.md
+- **TEBEG** — [real], default = 0. TEBEG sets the starting temperature (in K) for an ab-initio molecular dynamics run (IBRION=0) and other routines (e.g.  →  references/incar-tags/TEBEG.md
+- **TEEND** — [real], default = TEBEG. TEEND sets the final temperature (in K) for an ab-initio molecular-dynamics run.  →  references/incar-tags/TEEND.md
+- **TILAMBDA** — real, default = 0.0. TILAMBDA defines the coupling parameter $lambda$ used in Thermodynamic integration using a Hessian reference.  →  references/incar-tags/TILAMBDA.md
+- **TIME** — [real], default = 0.4. TIME controls the time step for IALGO=5X and for the initial (steepest descent) phase of IALGO=4X.  →  references/incar-tags/TIME.md
+- **TITEL** — [string]. TITEL = [string]  →  references/incar-tags/TITEL.md
+- **TRANSPORT_NEDOS** — [integer], default = 501. Choose the number of points in the Gauss-Legendre integration grid for the computation of the Onsager coefficients, which in turn are used to compute the transport coefficients.  ·  aliases: ELPH TRANSPORT NEDOS  →  references/incar-tags/TRANSPORT_NEDOS.md
+- **TRANSPORT_RELAXATION_TIME** — [real], default = 1E-14. Value of the constant relaxation time in unit of seconds.  →  references/incar-tags/TRANSPORT_RELAXATION_TIME.md
+- **TSUBSYS** — [real array]. TSUBSYS sets the temperatures for the atomic subsystems in calculations with multiple Anderson thermostats (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/TSUBSYS.md
+- **VACPOTFLAT** — [real], default = 0.1. Maximum permissible 2D-averaged electric field for a region considered to be field-free in eV/Å.  →  references/incar-tags/VACPOTFLAT.md
+- **VALUE_MAX** — [real array]. VALUE_MAX sets the upper limits for the monitoring of geometric parameters (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/VALUE_MAX.md
+- **VALUE_MIN** — [real array]. VALUE_MIN sets the lower limits for the monitoring of geometric parameters (in case VASP was compiled with -Dtbdyn).  →  references/incar-tags/VALUE_MIN.md
+- **VCA** — [real array], default = read from the POTCAR file. VCA is short for the virtual crystal approximation; the tag allows to "weight" each species found in the POTCAR file.  →  references/incar-tags/VCA.md
+- **VCAIMAGES** — [real], default = -1. The tag VCAIMAGES allows to perform thermodynamic integrations (TI); it defines the coupling parameter λ.  →  references/incar-tags/VCAIMAGES.md
+- **VCUTOFF** — [real], default = 1.1 ENCUTGW. The parameter VCUTOFF sets the energy cutoff for bare Coulomb matrix elements and controls the basis set for the bare Coulomb interaction.  →  references/incar-tags/VCUTOFF.md
+- **VDW_A1** — [real]. VDW_A1 sets the scaling $a_{1}$ of the critical radii in the rational Becke-Johnson damping function of the DFT-D3 and DFT-D4 methods.  →  references/incar-tags/VDW_A1.md
+- **VDW_A2** — [real]. VDW_A2 sets the offset $a_{2}$ of the critical radii in the rational Becke-Johnson damping function of the DFT-D3 and DFT-D4 methods.  →  references/incar-tags/VDW_A2.md
+- **VDW_ALPHA** — [real (array)]. VDW_ALPHA defines the polarizability $alpha_{0}$ (bohr$^{3}$) for each species defined in the POSCAR file.  →  references/incar-tags/VDW_ALPHA.md
+- **VDW_BETA** — [real]. VDW_BETA sets the offset for the damping radius or the power for the zero-damping component in the DFT-D3 methods implemented in the simple-DFT-D3 package.  →  references/incar-tags/VDW_BETA.md
+- **VDW_C6** — [real (array)]. VDW_C6 defines the $C_6$ parameters ($mathrm{Jnm}^{6}mathrm{mol}^{-1}$) for each species defined in the POSCAR file.  →  references/incar-tags/VDW_C6.md
+- **VDW_C6AU** — [real (array)]. VDW_C6AU defines the $C_6$ parameters ($mathrm{Hartree}$ $mathrm{bohr}^{6}$) for each species defined in the POSCAR file.  →  references/incar-tags/VDW_C6AU.md
+- **VDW_CNRADIUS** — [real], default = 21.17 if IVDW=11, 12 or 15. VDW_CNRADIUS (in Å) sets the coordination number cutoff of the DFT-D3 and DFT-D4 methods.  →  references/incar-tags/VDW_CNRADIUS.md
+- **VDW_D** — [real], default = 20 for DFT-D2 and Tkatchenko-Scheffler. VDW_D defines the damping parameter $d$.  →  references/incar-tags/VDW_D.md
+- **VDW_R0** — [real (array)]. VDW_R0 defines the $R_0$ parameters ($AA$) for each species defined in the POSCAR file.  →  references/incar-tags/VDW_R0.md
+- **VDW_R0AU** — [real (array)]. VDW_R0AU defines the $R_0$ parameters (bohr) for each species defined in the POSCAR file.  →  references/incar-tags/VDW_R0AU.md
+- **VDW_RADIUS** — [real], default = 50 if IVDW=1, 2, 3, 4, or 21. VDW_RADIUS (in Å) sets the two-body interaction cutoff in van der Waals methods.  →  references/incar-tags/VDW_RADIUS.md
+- **VDW_S6** — [real]. VDW_S6 sets a parameter in the damping function of van der Waals methods.  ·  aliases: VDW SCALING  →  references/incar-tags/VDW_S6.md
+- **VDW_S8** — [real]. VDW_S8 sets the scaling $s_{8}$ of the dipole-quadrupole dispersion of the DFT-D3 and DFT-D4 methods.  →  references/incar-tags/VDW_S8.md
+- **VDW_S9** — [real], default = 1 if IVDW=13 (DFT-D4 package). VDW_S9 sets the contribution of the three-body term to the dispersion energy.  →  references/incar-tags/VDW_S9.md
+- **VDW_SR** — [real]. VDW_SR sets a parameter in the damping function of van der Waals methods.  →  references/incar-tags/VDW_SR.md
+- **VDW_SR8** — [real]. VDW_SR8 sets the radii scaling $s_{r,8}$ in the dipole-quadrupole zero-damping function of the DFT-D3 method.  →  references/incar-tags/VDW_SR8.md
+- **VELOCITY** — [logical], default = .false. Determines whether the ionic velocities are written to the vaspout.h5 file during an MD run.  →  references/incar-tags/VELOCITY.md
+- **VOSKOWN** — 0 | 1, default = 0. Determines whether Vosko-Wilk-Nusair interpolation is used or not.  →  references/incar-tags/VOSKOWN.md
+- **WANNIER90_WIN** — [string], default = None. WANNIER90_WIN sets the content of the wannier90.win file.  →  references/incar-tags/WANNIER90_WIN.md
+- **WC** — [real], default = 1000. WC specifies the weight factor for each step in Broyden mixing scheme (IMIX=4).  →  references/incar-tags/WC.md
+- **WEIMIN** — [real], default = 0.001 for IBRION≥0. WEIMIN specifies the maximum weight for a band to be considered empty.  →  references/incar-tags/WEIMIN.md
+- **WPLASMAI** — [real], default = 0. WPLASMAI sets the complex shift (in eV) for the Drude term in the dielectric function.  →  references/incar-tags/WPLASMAI.md
+- **WRT_DENSITY** — string, default = None Description: Select which densities. WRT_DENSITY = string  →  references/incar-tags/WRT_DENSITY.md
+- **WRT_NMRCUR** — 0 | 1 | 2 | 3 | 4, default = 0. Allows to write the NMR current response in atomic units to file.  →  references/incar-tags/WRT_NMRCUR.md
+- **WRT_POTENTIAL** — string, default = None. Select which component of the local potential to be written as a post-processing step.  →  references/incar-tags/WRT_POTENTIAL.md
+- **XC** — Combination of functionals, default = GGA if the GGA tag is used. Specifies a combination of exchange-correlation functionals.  →  references/incar-tags/XC.md
+- **XC_C** — [real array], default = 1.0*NXC. Multiplication factors for the components of the functional given by the XC tag.  →  references/incar-tags/XC_C.md
+- **XCm_Pn** — [real]. XCm_Pn, where $m=1, 2, ldots$ and $n=1, 2, ldots$ allows to modify the parameters in a semilocal functional.  →  references/incar-tags/XCm_Pn.md
+- **ZVAL** — [real]. ZVAL states the valency of the pseudopotential.  →  references/incar-tags/ZVAL.md
+
+## input-files (28)
+- **Available pseudopotentials** — Pseudopotentials  ·  aliases: Available PAW potentials  →  references/input-files/Available_pseudopotentials.md
+- **CHGCAR** — The CHGCAR file stores the charge density and the PAW one-center  →  references/input-files/CHGCAR.md
+- **DYNMATFULL** — This file contains the eigenvalues, eigenvectors from the  →  references/input-files/DYNMATFULL.md
+- **GAMMA** — The GAMMA file is an input file used when  →  references/input-files/GAMMA.md
+- **ICONST** — In the ICONST file, geometric parameters are defined, which are then  →  references/input-files/ICONST.md
+- **INCAR** — The INCAR file is the central input file of VASP, which determines *what  →  references/input-files/INCAR.md
+- **IRCCAR** — The IRCCAR file defines a discretized transformation path.  →  references/input-files/IRCCAR.md
+- **KPOINTS** — The KPOINTS file specifies the Bloch vectors (k points) used to  →  references/input-files/KPOINTS.md
+- **KPOINTS WAN** — KPOINTS_WAN is an optional input file to obtain eigenstates and  →  references/input-files/KPOINTS_WAN.md
+- **KPOINTS_ELPH** — KPOINTS_ELPH is an optional input file to perform an additional one-shot  →  references/input-files/KPOINTS_ELPH.md
+- **KPOINTS_OPT** — KPOINTS_OPT is an optional input file to perform an additional one-shot  →  references/input-files/KPOINTS_OPT.md
+- **ML_AB** — This file is used as input (with file name ML_AB) and output  ·  aliases: ML ABCAR  →  references/input-files/ML_AB.md
+- **ML_FF** — This file contains the machine-learned force field, necessary for  ·  aliases: ML FFCAR  →  references/input-files/ML_FF.md
+- **PENALTYPOT** — File that defines the bias potential for a [biased  →  references/input-files/PENALTYPOT.md
+- **phelel_params.hdf5** — The phelel_params.hdf5 file is used to calculate electron-phonon  →  references/input-files/Phelel_params.hdf5.md
+- **POSCAR** — The POSCAR file is a mandatory VASP input file.  ·  aliases: Selective dynamics  →  references/input-files/POSCAR.md
+- **POTCAR** — The POTCAR file is a mandatory [input  →  references/input-files/POTCAR.md
+- **QPOINTS** — The QPOINTS file specifies the (q points) used to sample the  →  references/input-files/QPOINTS.md
+- **TAUCAR** — The TAUCAR file stores kinetic-energy density  →  references/input-files/TAUCAR.md
+- **vasp.lock** — The vasp.lock file is only used in combination with  →  references/input-files/Vasp.lock.md
+- **vaspcheckfd.h5** — The vaspcheckfd.h5 file is used to store the displacements for a  →  references/input-files/Vaspcheckfd.h5.md
+- **vaspgamma.h5** — The vaspgamma.h5 file is an input file used when  →  references/input-files/Vaspgamma.h5.md
+- **vaspin.h5** — This file can be used to replace the typical  →  references/input-files/Vaspin.h5.md
+- **WANPROJ** — The WANPROJ file is generated after  →  references/input-files/WANPROJ.md
+- **WAVECAR** — The WAVECAR file is a binary file containing the following data:  →  references/input-files/WAVECAR.md
+- **WAVEDER** — The WAVEDER binary file is written when  →  references/input-files/WAVEDER.md
+- **WFULLxxxx.tmp** — These files store the full-screened exchange $W$, needed for BSE calculations.  →  references/input-files/WFULLxxxx.tmp.md
+- **Wxxxx.tmp** — These files store only the diagonal elements of the screened exchange  →  references/input-files/Wxxxx.tmp.md
+
+## methods (48)
+- **ACFDT/RPA calculations** — The adiabatic-connection-fluctuation-dissipation theorem (ACFDT) can be  ·  aliases: ACFDT calculations  →  references/methods/ACFDT__RPA_calculations.md
+- **Band-structure calculation using hybrid functionals** — [Band-structure  →  references/methods/Band-structure_calculation_using_hybrid_functionals.md
+- **Band-structure calculation using meta-GGA functionals** — For [band-structure  →  references/methods/Band-structure_calculation_using_meta-GGA_functionals.md
+- **Best practices for machine-learned force fields** — Using the [machine-learning-force-fields  →  references/methods/Best_practices_for_machine-learned_force_fields.md
+- **Category:DFT+U** — The LDA and semilocal GGA functionals often fail to describe systems  ·  aliases: DFT+U  →  references/methods/Category-DFT+U.md
+- **Category:Forces** — Forces on particles describe the interactions that cause particles,  ·  aliases: Forces  →  references/methods/Category-Forces.md
+- **Category:Hybrid functionals** — Hybrid functionals go beyond the semilocal approximations by mixing  ·  aliases: Hybrid functionals, Hybrids  →  references/methods/Category-Hybrid_functionals.md
+- **Category:Strongly correlated electrons** — ![](https://vasp.at/wiki/File:Ni_d_s_bands.png)  →  references/methods/Category-Strongly_correlated_electrons.md
+- **Category:Van der Waals functionals** — The semilocal (SL) and hybrid exchange-correlation functionals do not  →  references/methods/Category-Van_der_Waals_functionals.md
+- **Coulomb singularity** — The bare Coulomb operator  →  references/methods/Coulomb_singularity.md
+- **DDsC dispersion correction** — The expression for the density-dependent energy correction  →  references/methods/DDsC_dispersion_correction.md
+- **DFT-D2** — In the DFT-D2 method of Grimme^([[1]](#cite_note-grimme:jcc:06-1)) the  →  references/methods/DFT-D2.md
+- **DFT-D3** — In the DFT-D3 method of Grimme et  →  references/methods/DFT-D3.md
+- **DFT-D4** — DFT-D4^([[1]](#cite_note-caldeweyher:jcp:2019-1)[[2]](#cite_note-dftd4_1-2)[[3]](#cite_note-dftd4_2-3))  →  references/methods/DFT-D4.md
+- **DFT-ulg** — In the DFT-ulg method of Kim et  →  references/methods/DFT-ulg.md
+- **Downsampling of the Hartree-Fock operator** — - 1 Downsampling  ·  aliases: Downsampling of Hartree-Fock operator  →  references/methods/Downsampling_of_the_Hartree-Fock_operator.md
+- **Exciton band structure** — ![](https://vasp.at/wiki/File:Exciton_band_structure_hBN.png)  →  references/methods/Exciton_band_structure.md
+- **GW and dielectric matrix** — - 1 Spectral Method  →  references/methods/GW_and_dielectric_matrix.md
+- **GW approximation of Hedin's equations** — - 1 Green's functions  ·  aliases: The GW approximation of Hedin's equations  →  references/methods/GW_approximation_of_Hedin's_equations.md
+- **Harris-Foulkes functional** — The Harris-Foulkes (HF) functional is a non-self-consistent  ·  aliases: Harris Foulkes functional  →  references/methods/Harris-Foulkes_functional.md
+- **Hybrid functionals: formalism** — The exchange energy in hybrid functionals is a mixture of semilocal (SL)  ·  aliases: Hybrid functionals theory  →  references/methods/Hybrid_functionals-_formalism.md
+- **List of hybrid functionals** — A certain number of [unscreened and screened hybrid  →  references/methods/List_of_hybrid_functionals.md
+- **Low-scaling GW: The space-time formalism** — Available as of VASP.6 are low-scaling algorithms for  →  references/methods/Low-scaling_GW-_The_space-time_formalism.md
+- **Machine learning force field calculations: Basics** — The machine-learned force fields (MLFF) feature of VASP allows you to  ·  aliases: Machine learning force field calculations  →  references/methods/Machine_learning_force_field_calculations-_Basics.md
+- **Machine learning force field: Theory** — Here we present the theory for on-the-fly machine learning force fields.  ·  aliases: Machine learning force fields: Theory  →  references/methods/Machine_learning_force_field-_Theory.md
+- **Many-body dispersion energy** — The many-body dispersion energy method (MBD@rsSCS) of Tkatchenko et  →  references/methods/Many-body_dispersion_energy.md
+- **Many-body dispersion energy with fractionally ionic model for polarizability** — A variant of [Many-body dispersion  →  references/methods/Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability.md
+- **MSDGW NP** — Number of protected bands in mixed stochastic-deterministic compression algorithm.^([[1]](#cite_note-altman:prl:2024-1))  →  references/methods/MSDGW_NP.md
+- **MSDGW NXI** — Number of pseudo orbitals per compressed energy of mixed stochastic-deterministic compression algorithm.^([[1]](#cite_note-altman:prl:2024-1))  →  references/methods/MSDGW_NXI.md
+- **MSDGW SEED** — Seed for pseudo orbitals used by mixed stochastic-deterministic compression algorithm.^([[1]](#cite_note-altman:prl:2024-1))  →  references/methods/MSDGW_SEED.md
+- **Nonlocal vdW-DF functionals** — The vdW-DF method originally proposed by Dion *et  ·  aliases: Nonlocal van der Waals density functionals  →  references/methods/Nonlocal_vdW-DF_functionals.md
+- **PAW control tags** — There are a few tags that control the behavior of the PAW  →  references/methods/PAW_control_tags.md
+- **Practical guide to GW calculations** — The [GW  ·  aliases: GW calculations  →  references/methods/Practical_guide_to_GW_calculations.md
+- **Projector-augmented-wave formalism** — - 1 Basics of the PAW formalism  ·  aliases: PAW formalism, PAW method  →  references/methods/Projector-augmented-wave_formalism.md
+- **RPA/ACFDT: Correlation energy in the Random Phase Approximation** — - [1 Diagrammatic approach to the correlation  ·  aliases: Groundstate in the Random Phase Approximation  →  references/methods/RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md
+- **Running GRACE force fields in VASP** — Pre-trained GRACE machine-learned  →  references/methods/Running_GRACE_force_fields_in_VASP.md
+- **Running machine-learned force fields in LAMMPS** — LAMMPS is a very popular molecular dynamics  →  references/methods/Running_machine-learned_force_fields_in_LAMMPS.md
+- **Running universal machine-learned force fields** — Universal machine-learned force fields (uMLFF, or alternatively: uMLIP  →  references/methods/Running_universal_machine-learned_force_fields.md
+- **Self-consistent screening in Tkatchenko-Scheffler method** — A computationally efficient way to account for electrodynamic response  →  references/methods/Self-consistent_screening_in_Tkatchenko-Scheffler_method.md
+- **Shared memory** — VASP is mainly  →  references/methods/Shared_memory.md
+- **Simple-DFT-D3** — Simple  →  references/methods/Simple-DFT-D3.md
+- **Time-dependent density-functional theory** — Time-dependent density-functional theory (TDDFT) is an extension of  →  references/methods/Time-dependent_density-functional_theory.md
+- **Time-dependent density-functional theory calculations** — VASP offers a powerful module for performing time-dependent  ·  aliases: TDDFT calculations  →  references/methods/Time-dependent_density-functional_theory_calculations.md
+- **Tkatchenko-Scheffler method** — The expression for the dispersion energy within the method of Tkatchenko  →  references/methods/Tkatchenko-Scheffler_method.md
+- **Tkatchenko-Scheffler method with iterative Hirshfeld partitioning** — The [Tkatchenko-Scheffler  →  references/methods/Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning.md
+- **Using metadynamics to train a machine-learned force field** — It can be tricky to model transition states using [static  →  references/methods/Using_metadynamics_to_train_a_machine-learned_force_field.md
+- **VASPml library** — VASPml is a C++ library accompanying VASP 6.5.0 and above, providing  →  references/methods/VASPml_library.md
+- **Volume relaxation** — - 1 Introduction  →  references/methods/Volume_relaxation.md
+
+## misc (187)
+- **Adsorption of H2O on TiO2** — In this example you will investigate the adsorption of H₂O on a TiO₂  →  references/misc/Adsorption_of_H2O_on_TiO2.md
+- **All.conf** —   →  references/misc/All.conf.md
+- **Alpha-AlF3** — Exercise : Determine the ²⁷Al C_(q) value and the Al and F  →  references/misc/Alpha-AlF3.md
+- **Alpha-SiO2** — Exercise : Determine the ¹⁷O C_(q) value and the Si and O  →  references/misc/Alpha-SiO2.md
+- **Angular functions** — real spherical harmonics  →  references/misc/Angular_functions.md
+- **At and mol further** — Overview >  →  references/misc/At_and_mol_further.md
+- **Band gap renormalization in diamond using one-shot method** — Overview >  ·  aliases: Electron Phonon Couplings: Statistical averages  →  references/misc/Band_gap_renormalization_in_diamond_using_one-shot_method.md
+- **Bandgap of Si in GW** — Overview >  →  references/misc/Bandgap_of_Si_in_GW.md
+- **Bandgap of Si using different DFT+HF methods** — Overview >  →  references/misc/Bandgap_of_Si_using_different_DFT+HF_methods.md
+- **Bandstructure and CRPA of SrVO3** — Overview >  →  references/misc/Bandstructure_and_CRPA_of_SrVO3.md
+- **Bandstructure of Si in GW (VASP2WANNIER90)** — Overview >  →  references/misc/Bandstructure_of_Si_in_GW_(VASP2WANNIER90).md
+- **Bandstructure of SrVO3 in GW** — Overview >  →  references/misc/Bandstructure_of_SrVO3_in_GW.md
+- **Basis set convergence of RPA-ACFDT calculations** — The expression for the ACFDT-RPA correlation energy written in terms of  →  references/misc/Basis_set_convergence_of_RPA-ACFDT_calculations.md
+- **Be careful with the default smearing method (ISMEAR=1)** — The default for ISMEAR is 1 in VASP.  →  references/misc/Be_careful_with_the_default_smearing_method_(ISMEAR=1).md
+- **Beta-tin Si** — Overview >  →  references/misc/Beta-tin_Si.md
+- **Calculate U for LSDA+U** — - 1 Task  →  references/misc/Calculate_U_for_LSDA+U.md
+- **Cd Si** — Overview >  →  references/misc/Cd_Si.md
+- **Cd Si relaxation** — Overview >  →  references/misc/Cd_Si_relaxation.md
+- **Cd Si volume relaxation** — Overview >  →  references/misc/Cd_Si_volume_relaxation.md
+- **Changelog** — - 1 6.6.0  →  references/misc/Changelog.md
+- **Chester 2019** — - 1 Lectures  →  references/misc/Chester_2019.md
+- **CO on Ni 111 surface** — Overview >  →  references/misc/CO_on_Ni_111_surface.md
+- **CO partial DOS** — Overview >  →  references/misc/CO_partial_DOS.md
+- **CO vibration** — Overview >  →  references/misc/CO_vibration.md
+- **Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation** — Overview >  →  references/misc/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001)-_Nudged_Elastic_Band_Calculation.md
+- **Combining MPI and OpenMP** — VASP can be built to use a combination of OpenMP threading and  →  references/misc/Combining_MPI_and_OpenMP.md
+- **Command-line arguments** — You provide command line arguments to the VASP executables.  →  references/misc/Command-line_arguments.md
+- **Compiler options** — The compiler options are specified by compiler variables that set the  →  references/misc/Compiler_options.md
+- **Constrained MD using a canonical ensemble** — Description: Compare adsoption of H2O on TiO2[110] using a simple  →  references/misc/Constrained_MD_using_a_canonical_ensemble.md
+- **Constrained MD using a microcanonical ensemble** — Description: Compare adsoption of H2O on TiO2[110] using a simple  →  references/misc/Constrained_MD_using_a_microcanonical_ensemble.md
+- **Constraining local magnetic moments** — Overview > [fcc Ni  →  references/misc/Constraining_local_magnetic_moments.md
+- **Constraining the local magnetic moments** — Constraining the local magnetic moments on NiO.  →  references/misc/Constraining_the_local_magnetic_moments.md
+- **Construction talk:ALGO** —   →  references/misc/Construction_talk-ALGO.md
+- **Construction talk:Installing VASP.6.X.X deprecated** —   →  references/misc/Construction_talk-Installing_VASP.6.X.X_deprecated.md
+- **Construction talk:Wiki style guide** —   →  references/misc/Construction_talk-Wiki_style_guide.md
+- **CRPA of SrVO3** — Overview >  →  references/misc/CRPA_of_SrVO3.md
+- **CSVR_PERIOD** — Time scale of the CSVR thermostat in terms of the number of MD steps.  →  references/misc/CSVR_PERIOD.md
+- **CUDA-C GPU port of VASP** — Several core algorithms of VASP have been ported to run on  →  references/misc/CUDA-C_GPU_port_of_VASP.md
+- **Cuda.conf** — export VASP_TESTSUITE_EXE_STD="mpirun -np 4 $PWD/../bin/vasp_gpu"  →  references/misc/Cuda.conf.md
+- **DAMP NEWTON** — Sets the damping factor applied to the RPA forces during Newton-step structure relaxation.  →  references/misc/DAMP_NEWTON.md
+- **Delta Self-Consistent Field** — $Delta$SCF is a method that allows to  →  references/misc/Delta_Self-Consistent_Field.md
+- **Determining the Magnetic Anisotropy** — Magnetocrystalline Anisotropy Energy determined non-self-consistently  →  references/misc/Determining_the_Magnetic_Anisotropy.md
+- **Dielectric properties of Si** — Overview >  →  references/misc/Dielectric_properties_of_Si.md
+- **Dielectric properties of Si using BSE** — Calculate the dielectric function of Si including excitonic effects by solving the Bethe-Salpeter equation (BSE) on top of GW0.  →  references/misc/Dielectric_properties_of_Si_using_BSE.md
+- **Dielectric properties of SiC** — Overview >  →  references/misc/Dielectric_properties_of_SiC.md
+- **Electron-phonon accumulators** — Performing electron-phonon calculations using the , for example, to  →  references/misc/Electron-phonon_accumulators.md
+- **Equilibrium volume of Si in the RPA** — Overview >  →  references/misc/Equilibrium_volume_of_Si_in_the_RPA.md
+- **ESF_CONV** — Sets the convergence criterion for ESF_SPLINES, i.e., the threshold for the energy difference between two interpolations (in eV).  →  references/misc/ESF_CONV.md
+- **ESF_NINTER** — ESF_NINTER sets the maximum number of interpolation steps for the electronic structure factor (ESF_SPLINES).  →  references/misc/ESF_NINTER.md
+- **ESF_SPLINES** — Enable k-point interpolation of the electronic structure factor using tricubic splines in ACFDT/RPA calculations.  →  references/misc/ESF_SPLINES.md
+- **Estimation of J magnetic coupling** — Estimation of the J magnetic exchange coupling using the GGA+U method.  →  references/misc/Estimation_of_J_magnetic_coupling.md
+- **Fast.conf** — export VASP_TESTSUITE_RUN_FAST=Y  →  references/misc/Fast.conf.md
+- **Fcc Ni** — Overview >  →  references/misc/Fcc_Ni.md
+- **Fcc Ni (revisited)** — Overview > fcc Ni  →  references/misc/Fcc_Ni_(revisited).md
+- **Fcc Ni DOS** — Overview >  →  references/misc/Fcc_Ni_DOS.md
+- **Fcc Ni DOS with hybrid functional** — Overview >  →  references/misc/Fcc_Ni_DOS_with_hybrid_functional.md
+- **Fcc Si** — Overview >  →  references/misc/Fcc_Si.md
+- **Fcc Si bandstructure** — Overview >  →  references/misc/Fcc_Si_bandstructure.md
+- **Fcc Si DOS** — Overview >  →  references/misc/Fcc_Si_DOS.md
+- **GPU ports of VASP** — VASP offers two different GPU ports.  ·  aliases: OpenACC GPU port of VASP  →  references/misc/GPU_ports_of_VASP.md
+- **Graphite interlayer distance** — Overview >  →  references/misc/Graphite_interlayer_distance.md
+- **Graphite MBD binding energy** — Overview >  →  references/misc/Graphite_MBD_binding_energy.md
+- **Graphite TS binding energy** — Overview >  →  references/misc/Graphite_TS_binding_energy.md
+- **H2O molecular dynamics** — Overview >  →  references/misc/H2O_molecular_dynamics.md
+- **H2O vibration** — Overview >  →  references/misc/H2O_vibration.md
+- **Hydrogenic radial function** — *n*s type Hydrogen radial wave functions  →  references/misc/Hydrogenic_radial_function.md
+- **ICAMM Rennes 2016** — - 1 Lectures  →  references/misc/ICAMM_Rennes_2016.md
+- **ICAMM Rennes 2016 HOWTO** — Here is a brief tutorial on how to run a calculation and how to run  →  references/misc/ICAMM_Rennes_2016_HOWTO.md
+- **ICAMM Rennes 2019** — - 1 Lectures  →  references/misc/ICAMM_Rennes_2019.md
+- **ICAMM Rennes 2019 HOWTO** — Here is a brief tutorial on how to run a calculation and how to run  →  references/misc/ICAMM_Rennes_2019_HOWTO.md
+- **Impi+omp.conf** — nthrds=4  →  references/misc/Impi+omp.conf.md
+- **Improved Dimer Method** — The dimer method^([[1]](#cite_note-henkelman:jpc:1999-1)) is a  →  references/misc/Improved_Dimer_Method.md
+- **Improving the dielectric function** — Overview > [Dielectric  →  references/misc/Improving_the_dielectric_function.md
+- **Including the Spin-Orbit Coupling** — Spin-Orbit Coupling (SOC) included self-consistently  →  references/misc/Including_the_Spin-Orbit_Coupling.md
+- **Input** — Overview >  →  references/misc/Input.md
+- **Input and Output - a short Intro** — - 1 Input  →  references/misc/Input_and_Output_-_a_short_Intro.md
+- **Input and Output - Tutorial** — Overview > Input > [Preparing a Super  ·  aliases: Input and Output  →  references/misc/Input_and_Output_-_Tutorial.md
+- **Installing VASP.5.X.X** — - 1 Requirements  →  references/misc/Installing_VASP.5.X.X.md
+- **Installing VASP.6.X.X** — As a license holder, you can download the source  →  references/misc/Installing_VASP.6.X.X.md
+- **Ionic contributions to the frequency dependent dielectric function of NaCl** — Overview >  →  references/misc/Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl.md
+- **IOP Chester 2019** — - 1 Lectures  →  references/misc/IOP_Chester_2019.md
+- **Kinetic-energy density mixing** — For the density mixing schemes to work reliably, the charge density  →  references/misc/Kinetic-energy_density_mixing.md
+- **Known issues** — Below we provide an incomplete list of known issues.  →  references/misc/Known_issues.md
+- **Lectures and presentations** — - [DFT, PW, and  →  references/misc/Lectures_and_presentations.md
+- **Linking to libraries** — The link is specified by linker variables and then the linker is invoked  →  references/misc/Linking_to_libraries.md
+- **Liquid Si - Freezing** — Overview >[Liquid  ·  aliases: Liquid Si  →  references/misc/Liquid_Si_-_Freezing.md
+- **Liquid Si - MLFF** — Overview >  →  references/misc/Liquid_Si_-_MLFF.md
+- **Liquid Si - Standard MD** — Overview >Liquid  →  references/misc/Liquid_Si_-_Standard_MD.md
+- **makefile.include** — Writing a makefile.include file from scratch is not easy, so we  →  references/misc/Makefile.include.md
+- **makefile.include.amdflang** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.amdflang.md
+- **makefile.include.amdflang_omp** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.amdflang_omp.md
+- **makefile.include.aocc_ompi_aocl** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.aocc_ompi_aocl.md
+- **makefile.include.aocc_ompi_aocl_omp** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.aocc_ompi_aocl_omp.md
+- **makefile.include.cray** — CPP_OPTIONS = -DHOST="LinuxFTN"  →  references/misc/Makefile.include.cray.md
+- **makefile.include.cray_omp** — CPP_OPTIONS = -DHOST="LinuxFTN"  →  references/misc/Makefile.include.cray_omp.md
+- **makefile.include.cray_omp_off** — CPP_OPTIONS = -DHOST="LinuxFTN"  →  references/misc/Makefile.include.cray_omp_off.md
+- **makefile.include.fujitsu_a64fx** — CPP_OPTIONS = -DHOST="FJ-A64FX"  →  references/misc/Makefile.include.fujitsu_a64fx.md
+- **makefile.include.fujitsu_a64fx_omp** — CPP_OPTIONS = -DHOST="FJ-A64FX"  →  references/misc/Makefile.include.fujitsu_a64fx_omp.md
+- **makefile.include.gnu** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.gnu.md
+- **makefile.include.gnu_omp** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.gnu_omp.md
+- **makefile.include.gnu_ompi_aocl** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.gnu_ompi_aocl.md
+- **makefile.include.gnu_ompi_aocl_omp** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.gnu_ompi_aocl_omp.md
+- **makefile.include.gnu_ompi_mkl_omp** — CPP_OPTIONS = -DHOST="LinuxGNU"  →  references/misc/Makefile.include.gnu_ompi_mkl_omp.md
+- **makefile.include.intel** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.intel.md
+- **makefile.include.intel_omp** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.intel_omp.md
+- **makefile.include.intel_ompi_mkl_omp** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.intel_ompi_mkl_omp.md
+- **makefile.include.intel_serial** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.intel_serial.md
+- **Makefile.include.linux gfortran** — CPP_OPTIONS= -DMPI -DHOST="IFC91_ompi" -DIFC  →  references/misc/Makefile.include.linux_gfortran.md
+- **Makefile.include.linux intel cuda** — CPP_OPTIONS= -DMPI -DHOST="LinuxIFC" -DIFC  →  references/misc/Makefile.include.linux_intel_cuda.md
+- **makefile.include.linux_intel** — CPP_OPTIONS= -DHOST="LinuxIFC"  →  references/misc/Makefile.include.linux_intel.md
+- **makefile.include.nec_aurora** — CPP_OPTIONS = -DHOST="SXAurora"  →  references/misc/Makefile.include.nec_aurora.md
+- **makefile.include.nvhpc** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc.md
+- **makefile.include.nvhpc_acc** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc_acc.md
+- **makefile.include.nvhpc_omp** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc_omp.md
+- **makefile.include.nvhpc_omp_acc** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc_omp_acc.md
+- **makefile.include.nvhpc_ompi_mkl_omp** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc_ompi_mkl_omp.md
+- **makefile.include.nvhpc_ompi_mkl_omp_acc** — CPP_OPTIONS = -DHOST="LinuxNV"  →  references/misc/Makefile.include.nvhpc_ompi_mkl_omp_acc.md
+- **makefile.include.oneapi** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.oneapi.md
+- **makefile.include.oneapi_omp** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.oneapi_omp.md
+- **makefile.include.oneapi_omp_off** — CPP_OPTIONS = -DHOST="LinuxIFC"  →  references/misc/Makefile.include.oneapi_omp_off.md
+- **Matsubara Formalism** — The zero-temperature formalism of many-body perturbation theory breaks  →  references/misc/Matsubara_Formalism.md
+- **MgO optimum mixing** — Overview >  →  references/misc/MgO_optimum_mixing.md
+- **NCORES PER BAND** — NCORES_PER_BAND determines the number of compute cores that work on an individual orbital.  →  references/misc/NCORES_PER_BAND.md
+- **NERSC Berkeley 2016** — - 1 Lectures  →  references/misc/NERSC_Berkeley_2016.md
+- **NERSC Berkeley 2016 HOWTO** — - The examples:  →  references/misc/NERSC_Berkeley_2016_HOWTO.md
+- **NHC_PERIOD** — Time scale of the Nosé-Hoover chain in terms of the number of MD steps.  →  references/misc/NHC_PERIOD.md
+- **Ni 100 surface bandstructure** — Overview >  →  references/misc/Ni_100_surface_bandstructure.md
+- **Ni 100 surface DOS** — Overview >  →  references/misc/Ni_100_surface_DOS.md
+- **Ni 100 surface relaxation** — Overview >  →  references/misc/Ni_100_surface_relaxation.md
+- **Ni 111 surface high precision** — Overview >  →  references/misc/Ni_111_surface_high_precision.md
+- **Ni 111 surface relaxation** — Overview >  →  references/misc/Ni_111_surface_relaxation.md
+- **NiO** — Overview > [fcc Ni  →  references/misc/NiO.md
+- **NiO GGA** — Exercise : Determine the most stable magnetic order between the  →  references/misc/NiO_GGA.md
+- **NiO GGA+U** — Antiferromagnetic (AFM) configuration for NiO in the GGA+U_(eff) (Dudarev's) approach ; PBE functional  →  references/misc/NiO_GGA+U.md
+- **NiO HSE06** — Hybrid functional calculation using the HSE06 functional.  →  references/misc/NiO_HSE06.md
+- **NiO LSDA+U** — Overview > [fcc Ni  →  references/misc/NiO_LSDA+U.md
+- **Nosé-Hoover chain thermostat** — The [standard Nosé-Hoover  ·  aliases: Nose-Hoover-chain thermostat  →  references/misc/Nosé-Hoover_chain_thermostat.md
+- **NpH ensemble** — The NpH ensemble (isoenthalpic–isobaric ensemble) is a [statistical  →  references/misc/NpH_ensemble.md
+- **NpT ensemble** — The NpT ensemble (isothermal-isobaric ensemble) is a [statistical  →  references/misc/NpT_ensemble.md
+- **Nucleophile Substitution CH3Cl - Standard MD** — Overview >[Liquid  ·  aliases: Nuclephile Substitution CH3Cl - Standard MD  →  references/misc/Nucleophile_Substitution_CH3Cl_-_Standard_MD.md
+- **Nuclephile Substitution CH3Cl - BM** — Overview >[Liquid  →  references/misc/Nuclephile_Substitution_CH3Cl_-_BM.md
+- **Nuclephile Substitution CH3Cl - mMD1** — Overview >[Liquid  ·  aliases: Nuclephile Substitution CH3Cl - mMD  →  references/misc/Nuclephile_Substitution_CH3Cl_-_mMD1.md
+- **Nuclephile Substitution CH3Cl - mMD2** — Overview >[Liquid  →  references/misc/Nuclephile_Substitution_CH3Cl_-_mMD2.md
+- **Nuclephile Substitution CH3Cl - mMD3** — Overview >[Liquid  →  references/misc/Nuclephile_Substitution_CH3Cl_-_mMD3.md
+- **Nuclephile Substitution CH3Cl - SG** — Overview >[Liquid  →  references/misc/Nuclephile_Substitution_CH3Cl_-_SG.md
+- **Number of bands NBANDS** — NBANDS must be chosen in such that a considerable number of empty bands  →  references/misc/Number_of_bands_NBANDS.md
+- **Number of G-vectors changed in the star** — This happens because the number of G vectors in the plane-wave basis for  →  references/misc/Number_of_G-vectors_changed_in_the_star.md
+- **Number of k points and method for smearing** — Please read and understand [K-point  →  references/misc/Number_of_k_points_and_method_for_smearing.md
+- **NVE ensemble** — The NVE ensemble (micro-canonical ensemble) is a [statistical  →  references/misc/NVE_ensemble.md
+- **NVT ensemble** — The NVT ensemble (canonical ensemble) is a [statistical  →  references/misc/NVT_ensemble.md
+- **O atom** — Overview >  →  references/misc/O_atom.md
+- **O atom spinpolarized** — Overview >  →  references/misc/O_atom_spinpolarized.md
+- **O atom spinpolarized low symmetry** — Overview >  →  references/misc/O_atom_spinpolarized_low_symmetry.md
+- **O dimer** — Overview >  →  references/misc/O_dimer.md
+- **Ompi+omp.conf** — kmp="-x KMP_AFFINITY=verbose,granularity=fine,compact,1,0 -x KMP_STACKSIZE=512m"  →  references/misc/Ompi+omp.conf.md
+- **Partial DOS of CO on Ni 111 surface** — Overview >  →  references/misc/Partial_DOS_of_CO_on_Ni_111_surface.md
+- **Performance issues, try NCORE, KPAR, ALGO, LREAL** — Many user have difficulties to make good choices for various  →  references/misc/Performance_issues,_try_NCORE,_KPAR,_ALGO,_LREAL.md
+- **Personal computer installation** — Here you will find instructions on how to install VASP on some  →  references/misc/Personal_computer_installation.md
+- **Plotting the BSE fatband structure of Si** — Overview > [Dielectric  →  references/misc/Plotting_the_BSE_fatband_structure_of_Si.md
+- **POSCAR.prim** — The POSCAR.prim file contains the structural information of the  →  references/misc/POSCAR.prim.md
+- **Precompiler options** — Precompiler flags are used to activate/deactivate certain code features  ·  aliases: Precompiler flags  →  references/misc/Precompiler_options.md
+- **Relaxed geometry** — calculate the relaxed geometry of NH3: the total energy is the energy of the initial state of the flipping reaction  →  references/misc/Relaxed_geometry.md
+- **Self-Consistent Potential Correction** — SCPC (self-consistent potential correction) is an external package  →  references/misc/Self-Consistent_Potential_Correction.md
+- **Si bandstructure** — Overview >  →  references/misc/Si_bandstructure.md
+- **Si HSE bandstructure** — Bandstructure for Si within DFT+HF  →  references/misc/Si_HSE_bandstructure.md
+- **Sigma2 Oslo 2019** — - 1 Lectures  →  references/misc/Sigma2_Oslo_2019.md
+- **Spin-orbit coupling in a Fe monolayer** — Overview > [fcc Ni  →  references/misc/Spin-orbit_coupling_in_a_Fe_monolayer.md
+- **Spin-orbit coupling in a Ni monolayer** — Overview > [fcc Ni  →  references/misc/Spin-orbit_coupling_in_a_Ni_monolayer.md
+- **Standard relaxation** — ANDERSEN_PROB,  →  references/misc/Standard_relaxation.md
+- **STM of graphene** — Overview >  →  references/misc/STM_of_graphene.md
+- **STM of graphite** — Overview >  →  references/misc/STM_of_graphite.md
+- **Stochastic boundary conditions** — In some cases, it is desirable to study the approach of an initially  →  references/misc/Stochastic_boundary_conditions.md
+- **Technical errors** — Technical errors fall into four categories:  →  references/misc/Technical_errors.md
+- **The VASP Manual** — If you have questions or run into trouble, please have a look at the  ·  aliases: Main Page  →  references/misc/The_VASP_Manual.md
+- **TI LAMBDA** —   →  references/misc/TI_LAMBDA.md
+- **Toolchains** — Below we list the toolchains (compilers + assorted libraries) that we  →  references/misc/Toolchains.md
+- **Transition State Search of Ammonia** — In this example you will determine the transition state in the flipping  →  references/misc/Transition_State_Search_of_Ammonia.md
+- **TS search using the Improved Dimer Method** —   →  references/misc/TS_search_using_the_Improved_Dimer_Method.md
+- **TS search using the NEB Method** — the Nudged Elastic Band Method generates an energy profile along a reaction path, using equidistant IMAGES along the path.  →  references/misc/TS_search_using_the_NEB_Method.md
+- **Validation tests** — As of VASP.6.1.0, each release contains a testsuite for validation.  ·  aliases: Testsuite  →  references/misc/Validation_tests.md
+- **VASP workshop** — The lectures and tutorials listed below constitute a typical 2-3 day  →  references/misc/VASP_workshop.md
+- **VASP workshop 2003** — [Introduction to Computational  →  references/misc/VASP_workshop_2003.md
+- **Vaspwiki standards** — {{TAG TAGNAME}} ...  →  references/misc/Vaspwiki_standards.md
+- **Vibrational Analysis of the TS** — the Improved Dimer Method needs an educated guess of the decay path, which is extimated from the hardest vibration mode with imaginary frequency of the TS geometry (which is a planar NH3 molecule):  →  references/misc/Vibrational_Analysis_of_the_TS.md
+- **Vibrational frequencies of CO on Ni 111 surface** — Overview >  →  references/misc/Vibrational_frequencies_of_CO_on_Ni_111_surface.md
+- **Welcome** — Let us take a tour through the resources that are available to you as a  →  references/misc/Welcome.md
+- **XANES in Diamond** — Important: This feature will be only available from VASP 6.0.  →  references/misc/XANES_in_Diamond.md
+
+## output-files (40)
+- **BSEFATBAND** — The BSEFATBAND file contains the NBSEEIG  →  references/output-files/BSEFATBAND.md
+- **CHG** — This file contains the lattice vectors, atomic coordinates and the total  →  references/output-files/CHG.md
+- **CONTCAR** — The CONTCAR file contains information about the structure, e.g., the  →  references/output-files/CONTCAR.md
+- **CONTCAR ELPH** — The CONTCAR_ELPH file is an output file of a [supercell  →  references/output-files/CONTCAR_ELPH.md
+- **CONTCAR_disp-N** — The CONTCAR_disp-N file is an output file of a [split finite differences  →  references/output-files/CONTCAR_disp-N.md
+- **DOSCAR** — The DOSCAR file contains the DOS and integrated DOS.  →  references/output-files/DOSCAR.md
+- **EIGENVAL** — The EIGENVAL file contains the Kohn-Sham-eigenvalues for all k-points,  →  references/output-files/EIGENVAL.md
+- **ELFCAR** — The ELFCAR file is created when the LELF=*.TRUE.*  →  references/output-files/ELFCAR.md
+- **IBZKPT** — The IBZKPT file is compatible with the  →  references/output-files/IBZKPT.md
+- **LOCPOT** — The LOCPOT file stores the local potential (in eV).  →  references/output-files/LOCPOT.md
+- **ML_ABN** — In context of the machine-learned force fields method this file serves  ·  aliases: ML ABNCAR  →  references/output-files/ML_ABN.md
+- **ML_EATOM** — This file includes information on lattice constants, atom types, atom  →  references/output-files/ML_EATOM.md
+- **ML_FFN** — The ML_FFN file is a binary file that contains a force field generated  ·  aliases: ML FFNCAR  →  references/output-files/ML_FFN.md
+- **ML_HEAT** — This file contains the local heat flux at every MD step in units of  →  references/output-files/ML_HEAT.md
+- **ML_HIS** — This file contains the distribution of energies, forces and stress in a  ·  aliases: ML HISCAR  →  references/output-files/ML_HIS.md
+- **ML_LOGFILE** — Every VASP run with activated machine learning  →  references/output-files/ML_LOGFILE.md
+- **ML_REG** — This file contains the regression results of the force field training  ·  aliases: ML REGCAR  →  references/output-files/ML_REG.md
+- **NMRCURBX** — The NMRCURBX file contains the NMR current density in atomic units  ·  aliases: NMRCURBY, NMRCURBZ  →  references/output-files/NMRCURBX.md
+- **OSZICAR** — Information about convergence speed and about the current step is  →  references/output-files/OSZICAR.md
+- **OUTCAR** — There are three main output files: OUTCAR in human-readable format,  →  references/output-files/OUTCAR.md
+- **Output** — Overview >  →  references/output-files/Output.md
+- **PARCHG** — PARCHG is an output file created when [partial charge  ·  aliases: PARCHG.0001.0001, PARCHG.ALLB.nk, PARCHG.nb.ALLK  →  references/output-files/PARCHG.md
+- **PCDAT** — The PCDAT file contains the pair correlation function.  →  references/output-files/PCDAT.md
+- **POT** — The POT file contains the total local potential (in eV), including the  →  references/output-files/POT.md
+- **PRJCAR** — The PRJCAR file stores the output of the k-point projection scheme  →  references/output-files/PRJCAR.md
+- **PROCAR** — The PROCAR file contains the spd- and site-projected wave function  →  references/output-files/PROCAR.md
+- **PROCAR_OPT** — The PROCAR_OPT file contains the spd- and site-projected wave function  →  references/output-files/PROCAR_OPT.md
+- **PROOUT** — This file is written if LORBIT=5 and the  →  references/output-files/PROOUT.md
+- **REPORT** — The output file REPORT contains information about the MD run such as  →  references/output-files/REPORT.md
+- **Terminal output** — The screen output of VASP consists of several sections and can contain  ·  aliases: Screen output, Standard output, Stdout  →  references/output-files/Terminal_output.md
+- **TMPCAR** — TMPCAR is a binary file which is generated during dynamic simulations  →  references/output-files/TMPCAR.md
+- **UIJKL** — The UIJKL file stores the effectively screened Coulomb integrals at the  →  references/output-files/UIJKL.md
+- **URijkl** — The URijkl file stores the effectively screened off-center Coulomb  →  references/output-files/URijkl.md
+- **vaspelph.h5** — The vaspelph.h5 file contains electron-phonon matrix elements and  →  references/output-files/Vaspelph.h5.md
+- **vaspout.h5** — The vaspout.h5 file is a hierarchical HDF5 file containing the inputs  →  references/output-files/Vaspout.h5.md
+- **vasprun.xml** — The vasprun.xml is written in xml format and contains both, general  →  references/output-files/Vasprun.xml.md
+- **vaspwave.h5** — The vaspwave.h5 file is the hdf5 counterpart of the  →  references/output-files/Vaspwave.h5.md
+- **VIJKL** — The VIJKL file stores the bare Coulomb integrals at the unit-cell origin  →  references/output-files/VIJKL.md
+- **VRijkl** — The VRijkl file is written for ALGO = 2e4wa and  →  references/output-files/VRijkl.md
+- **XDATCAR** — This file contains the ionic configuration of the system after a given  →  references/output-files/XDATCAR.md
+
+## theory (43)
+- **Berry phases and finite electric fields** — - 1 Modern Theory of Polarization  →  references/theory/Berry_phases_and_finite_electric_fields.md
+- **Bethe-Salpeter equation** — The Bethe-Salpeter equation (BSE) was first derived and applied in the  ·  aliases: BSE theory  →  references/theory/Bethe-Salpeter_equation.md
+- **Biased molecular dynamics** — *Biased molecular dynamics'* (MD) refers to advanced [MD-simulation  →  references/theory/Biased_molecular_dynamics.md
+- **Blocked-Davidson algorithm** — The workflow of the blocked-Davidson iterative matrix diagonalization  →  references/theory/Blocked-Davidson_algorithm.md
+- **Blue moon ensemble** — In general, [constrained molecular  ·  aliases: Category:Blue-moon ensemble  →  references/theory/Blue_moon_ensemble.md
+- **Category:ACFDT** — The adiabatic connection fluctuation-dissipation theorem (ACFDT)  →  references/theory/Category-ACFDT.md
+- **Category:Bethe-Salpeter equations** — The formalism of the Bethe-Salpeter equation (BSE) allows for  ·  aliases: BSE, Bethe-Salpeter equations  →  references/theory/Category-Bethe-Salpeter_equations.md
+- **Category:Constrained-random-phase approximation** — The constrained random-phase approximation (cRPA) is a method that  ·  aliases: CRPA, Constrained random-phase approximation, Constrained-random-phase approximation  →  references/theory/Category-Constrained-random-phase_approximation.md
+- **Category:GW** — - 1 Theory  ·  aliases: GW, GW method  →  references/theory/Category-GW.md
+- **Category:Low-scaling GW and RPA** — This category shows all tags and articles concerning low scaling GW and  →  references/theory/Category-Low-scaling_GW_and_RPA.md
+- **Category:MP2** — - MP2 method: [MP2  →  references/theory/Category-MP2.md
+- **Category:Time-dependent density functional theory** — Time-dependent density-functional theory (TDDFT) extends  ·  aliases: Category:Time-dependent density-functional theory  →  references/theory/Category-Time-dependent_density_functional_theory.md
+- **Charge sloshing** — ![](https://vasp.at/wiki/File:Sloshing1.png)  →  references/theory/Charge_sloshing.md
+- **Charged systems with density functional theory** — On this page, we describe technical issues with computing the energies  →  references/theory/Charged_systems_with_density_functional_theory.md
+- **Chemical potential in electron-phonon interactions** — The [chemical  ·  aliases: Chemical potential  →  references/theory/Chemical_potential_in_electron-phonon_interactions.md
+- **Conjugate gradient optimization** — Instead of the previous iteration scheme, which is just some kind of  →  references/theory/Conjugate_gradient_optimization.md
+- **Constrained molecular dynamics** — Constrained molecular dynamics is performed using the  →  references/theory/Constrained_molecular_dynamics.md
+- **Constrained–random-phase–approximation formalism** — The constrained random-phase approximation (cRPA) is a method that  ·  aliases: CRPA formalism  →  references/theory/Constrained–random-phase–approximation_formalism.md
+- **CSVR thermostat** — One popular strategy to control the temperature in NVT MD is based on  →  references/theory/CSVR_thermostat.md
+- **Direct optimization of the orbitals** — With "direct optimization of the orbitals" we denote a category of  →  references/theory/Direct_optimization_of_the_orbitals.md
+- **Electric field response from density-functional-perturbation theory** — Density-functional-perturbation theory (DFPT) provides a way to  →  references/theory/Electric_field_response_from_density-functional-perturbation_theory.md
+- **Electron-phonon interactions theory** — This theory section outlines the most important equations and their  →  references/theory/Electron-phonon_interactions_theory.md
+- **Electronic transport coefficients** — The theoretical framework is based on the [linearized Boltzmann  →  references/theory/Electronic_transport_coefficients.md
+- **Hellmann-Feynman forces** — Within the finite temperature, LDA forces are defined as the derivative  →  references/theory/Hellmann-Feynman_forces.md
+- **Integrating over all orbitals** — Computing expectation values of observables *O* over all Kohn-Sham  ·  aliases: K-point integration  →  references/theory/Integrating_over_all_orbitals.md
+- **Interface pinning** — Interface pinning^([[1]](#cite_note-pedersen:prb:13-1)) is used to  →  references/theory/Interface_pinning.md
+- **LOCALIZED_BASIS** — Specifies which basis is used for Coulomb matrix elements in constrained random-phase approximation (cRPA) calculations.  ·  aliases: DMFT BASIS  →  references/theory/LOCALIZED_BASIS.md
+- **Metadynamics** — In  ·  aliases: Category:Metadynamics  →  references/theory/Metadynamics.md
+- **Phonons: Theory** — Phonons are the collective excitation of nuclei in an extended periodic  →  references/theory/Phonons-_Theory.md
+- **Plot BSE fatbands** — It can be useful to inspect which electron-hole pairs or transitions  ·  aliases: Plot BSE fatband  →  references/theory/Plot_BSE_fatbands.md
+- **Plotting exciton wavefunction** — ![](https://vasp.at/wiki/File:HBN_exciton.png)  →  references/theory/Plotting_exciton_wavefunction.md
+- **Preconditioning** — The idea is to find a matrix that multiplied with the residual vector  →  references/theory/Preconditioning.md
+- **RMM-DIIS** — The implementation of the Residual Minimization Method with Direct  →  references/theory/RMM-DIIS.md
+- **Self-consistency cycle** — ![](https://vasp.at/wiki/File:SCC.png)  →  references/theory/Self-consistency_cycle.md
+- **Slow-growth approach** — The free-energy profile along a geometric parameter  →  references/theory/Slow-growth_approach.md
+- **Spin spirals** — Spin spirals are magnetic structures in which the direction of the  →  references/theory/Spin_spirals.md
+- **Static linear response: theory** — Let’s consider three types of static perturbations  →  references/theory/Static_linear_response-_theory.md
+- **Stochastic LTMP2** — Overview >  →  references/theory/Stochastic_LTMP2.md
+- **Supercell core-hole theory** — In the Supercell core-hole  ·  aliases: XAS theory  →  references/theory/Supercell_core-hole_theory.md
+- **Thermodynamic integration** — There are three implementations of thermodynamic integration (TI).  →  references/theory/Thermodynamic_integration.md
+- **Time-propagation algorithms in molecular dynamics** — In molecular dynamics simulations, the ionic positions  →  references/theory/Time-propagation_algorithms_in_molecular_dynamics.md
+- **VASP from a Gaussian-type orbitals perspective** — For those of you first coming into VASP from outside of solid-state  ·  aliases: Introducing VASP coming from Gaussian type orbitals, VASP from a Gaussian type orbitals perspective  →  references/theory/VASP_from_a_Gaussian-type_orbitals_perspective.md
+- **Wrap-around errors** — Wrap-around errors arise if the [Fast Fourier transformation (FFT)  ·  aliases: Wrap-around error  →  references/theory/Wrap-around_errors.md
+
+## tutorials (303)
+- **Andersen thermostat** — In the approach proposed by Andersen  →  references/tutorials/Andersen_thermostat.md
+- **Atoms and Molecules - Tutorial** — Overview > O atom > [O atom  →  references/tutorials/Atoms_and_Molecules_-_Tutorial.md
+- **Band-structure calculation using density-functional theory** — The step-by-step instructions below cover calculating the [band  ·  aliases: Band-structure calculation using DFT  →  references/tutorials/Band-structure_calculation_using_density-functional_theory.md
+- **Bandgap renormalization due to electron-phonon coupling** — The band-structure renormalization within the nonadiabatic Allen Heine  →  references/tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md
+- **Best practices for Bethe-Salpeter calculations** — - 1 Optimizing performance  →  references/tutorials/Best_practices_for_Bethe-Salpeter_calculations.md
+- **Bethe-Salpeter equation for core excitations** — VASP offers two approaches for calculating the X-ray Absorption Spectra  →  references/tutorials/Bethe-Salpeter_equation_for_core_excitations.md
+- **Bethe-Salpeter-equations calculations** — VASP offers a powerful module for solving the Bethe-Salpeter (BSE)  ·  aliases: BSE calculations  →  references/tutorials/Bethe-Salpeter-equations_calculations.md
+- **Biased molecular dynamics calculations** — - 1 How to  →  references/tutorials/Biased_molecular_dynamics_calculations.md
+- **Blue moon ensemble calculations** — The information needed to determine the blue moon ensemble averages  →  references/tutorials/Blue_moon_ensemble_calculations.md
+- **Born effective charges** — The change in polarization from the displacement of an atom is not  →  references/tutorials/Born_effective_charges.md
+- **BSE - Tutorial** — Overview > [Dielectric properties of Si using  →  references/tutorials/BSE_-_Tutorial.md
+- **Bulk Systems - Tutorial** — Overview > fcc Si > [fcc Si  ·  aliases: Bulk Systems  →  references/tutorials/Bulk_Systems_-_Tutorial.md
+- **Calculating the chemical shieldings** — The chemical shielding tensor *σ* is the relation between the induced  →  references/tutorials/Calculating_the_chemical_shieldings.md
+- **Calculating the electric field gradient** — Nuclei with a spin > ± ½ are called quadrupolar nuclei.  →  references/tutorials/Calculating_the_electric_field_gradient.md
+- **Calculating the hyperfine-coupling constant** — The hyperfine coupling constant (cf.  ·  aliases: Calculating the hyperfine coupling constant  →  references/tutorials/Calculating_the_hyperfine-coupling_constant.md
+- **Calculating the magnetic susceptibility** — The magnetic susceptibility  →  references/tutorials/Calculating_the_magnetic_susceptibility.md
+- **Calculating the Schottky barrier** — The [Schottky  →  references/tutorials/Calculating_the_Schottky_barrier.md
+- **Calculation of atoms** — The following files are needed for the calculation of atoms  →  references/tutorials/Calculation_of_atoms.md
+- **Calculation of dimers** — Reproducing accurate dimer distances is an important difficult benchmark  →  references/tutorials/Calculation_of_dimers.md
+- **Choosing pseudopotentials** — Several [pseudopotential variants labeled by  →  references/tutorials/Choosing_pseudopotentials.md
+- **Computing the phonon dispersion and DOS** — After computing the force constants using the [finite  →  references/tutorials/Computing_the_phonon_dispersion_and_DOS.md
+- **Computing the spin texture** — The spin texture is the momentum-resolved expectation value of the spin,  →  references/tutorials/Computing_the_spin_texture.md
+- **Computing the work function** — The work function is defined as the work needed to move an electron from  →  references/tutorials/Computing_the_work_function.md
+- **Constrained molecular dynamics calculations** — Geometric constraints are introduced by defining one or more entries  ·  aliases: Constrained molecuar dynamics calculations  →  references/tutorials/Constrained_molecular_dynamics_calculations.md
+- **Constructing Wannier orbitals** — [Wannier  ·  aliases: Wannier orbitals from VASP  →  references/tutorials/Constructing_Wannier_orbitals.md
+- **Construction:A CentOS based installation of VASP** —   →  references/tutorials/Construction-A_CentOS_based_installation_of_VASP.md
+- **Construction:A Debian based installation of VASP** —   →  references/tutorials/Construction-A_Debian_based_installation_of_VASP.md
+- **Construction:A Fedora based installation of VASP** —   →  references/tutorials/Construction-A_Fedora_based_installation_of_VASP.md
+- **Construction:A Ubuntu based installation of VASP** —   →  references/tutorials/Construction-A_Ubuntu_based_installation_of_VASP.md
+- **Construction:Agent** —   →  references/tutorials/Construction-Agent.md
+- **Construction:Available PAW PBE potentials for unoccupied states calculations** —   →  references/tutorials/Construction-Available_PAW_PBE_potentials_for_unoccupied_states_calculations.md
+- **Construction:Available PAW potentials** —   →  references/tutorials/Construction-Available_PAW_potentials.md
+- **Construction:Band-decomposed charge densities** —   →  references/tutorials/Construction-Band-decomposed_charge_densities.md
+- **Construction:Bandgap renormalization due to electron-phonon coupling** —   →  references/tutorials/Construction-Bandgap_renormalization_due_to_electron-phonon_coupling.md
+- **Construction:Best practices for Bethe-Salpeter calculations** —   →  references/tutorials/Construction-Best_practices_for_Bethe-Salpeter_calculations.md
+- **Construction:BEXT** —   →  references/tutorials/Construction-BEXT.md
+- **Construction:BEXX** —   →  references/tutorials/Construction-BEXX.md
+- **Construction:Blue-moon ensemble** —   →  references/tutorials/Construction-Blue-moon_ensemble.md
+- **Construction:Born effective charges** —   →  references/tutorials/Construction-Born_effective_charges.md
+- **Construction:BSEPREC** —   →  references/tutorials/Construction-BSEPREC.md
+- **Construction:Calculating and visualizing DFT band-structures** —   →  references/tutorials/Construction-Calculating_and_visualizing_DFT_band-structures.md
+- **Construction:Calculating the infrared spectrum** —   →  references/tutorials/Construction-Calculating_the_infrared_spectrum.md
+- **Construction:Calculating the Raman spectrum** —   →  references/tutorials/Construction-Calculating_the_Raman_spectrum.md
+- **Construction:Category:Band structure** —   →  references/tutorials/Construction-Category-Band_structure.md
+- **Construction:Category:Electrochemistry** —   →  references/tutorials/Construction-Category-Electrochemistry.md
+- **Construction:Category:Electrostatics** —   →  references/tutorials/Construction-Category-Electrostatics.md
+- **Construction:Category:Phonons** —   →  references/tutorials/Construction-Category-Phonons.md
+- **Construction:Category:Pseudopotentials** —   →  references/tutorials/Construction-Category-Pseudopotentials.md
+- **Construction:Category:Thermodynamic integration** —   →  references/tutorials/Construction-Category-Thermodynamic_integration.md
+- **Construction:Changelog** —   →  references/tutorials/Construction-Changelog.md
+- **Construction:Charged systems with density functional theory** —   →  references/tutorials/Construction-Charged_systems_with_density_functional_theory.md
+- **Construction:CHECKPOINT** —   →  references/tutorials/Construction-CHECKPOINT.md
+- **Construction:CHECKPOINT FD** —   →  references/tutorials/Construction-CHECKPOINT_FD.md
+- **Construction:Chemical potential** —   →  references/tutorials/Construction-Chemical_potential.md
+- **Construction:Combining MPI and OpenMP** —   →  references/tutorials/Construction-Combining_MPI_and_OpenMP.md
+- **Construction:Command line arguments** —   →  references/tutorials/Construction-Command_line_arguments.md
+- **Construction:Comparing to Experiment** —   ·  aliases: Category:Comparing to Experiment  →  references/tutorials/Construction-Comparing_to_Experiment.md
+- **Construction:Computing electron-phonon matrix elements** —   →  references/tutorials/Construction-Computing_electron-phonon_matrix_elements.md
+- **Construction:Computing the spin texture** —   →  references/tutorials/Construction-Computing_the_spin_texture.md
+- **Construction:Computing the workfunction** —   →  references/tutorials/Construction-Computing_the_workfunction.md
+- **Construction:Computing-the-workfunction** —   →  references/tutorials/Construction-Computing-the-workfunction.md
+- **Construction:Constrained–random-phase–approximation calculation** —   →  references/tutorials/Construction-Constrained–random-phase–approximation_calculation.md
+- **Construction:Constraints** —   →  references/tutorials/Construction-Constraints.md
+- **Construction:Construction:Recommended PAW potentials for calculations involving unoccupied states** —   →  references/tutorials/Construction-Construction-Recommended_PAW_potentials_for_calculations_involving_unoccupied_states.md
+- **Construction:Construction:Recommended PAW potentials for calculations of mainly occupied states** —   →  references/tutorials/Construction-Construction-Recommended_PAW_potentials_for_calculations_of_mainly_occupied_states.md
+- **Construction:Coulomb singularity** —   →  references/tutorials/Construction-Coulomb_singularity.md
+- **Construction:DEG THRESHOLD** —   →  references/tutorials/Construction-DEG_THRESHOLD.md
+- **Construction:DEGEN THR** —   →  references/tutorials/Construction-DEGEN_THR.md
+- **Construction:Deltascf** —   →  references/tutorials/Construction-Deltascf.md
+- **Construction:Dipole correction and charged defects** —   →  references/tutorials/Construction-Dipole_correction_and_charged_defects.md
+- **Construction:Dipole correction applied to defects and charged defects** —   →  references/tutorials/Construction-Dipole_correction_applied_to_defects_and_charged_defects.md
+- **Construction:EAUG** —   →  references/tutorials/Construction-EAUG.md
+- **Construction:EFERMI** —   →  references/tutorials/Construction-EFERMI.md
+- **Construction:Effective potential fitting methods for phonons** —   →  references/tutorials/Construction-Effective_potential_fitting_methods_for_phonons.md
+- **Construction:Efficient single band eigenvalue-minimization** —   →  references/tutorials/Construction-Efficient_single_band_eigenvalue-minimization.md
+- **Construction:EFOR** —   →  references/tutorials/Construction-EFOR.md
+- **Construction:Electric Field Gradient** —   →  references/tutorials/Construction-Electric_Field_Gradient.md
+- **Construction:Electric field response from density-functional-perturbation theory** —   →  references/tutorials/Construction-Electric_field_response_from_density-functional-perturbation_theory.md
+- **Construction:Electrochemistry** —   →  references/tutorials/Construction-Electrochemistry.md
+- **Construction:Electron-phonon interactions using Wannier interpolation** —   →  references/tutorials/Construction-Electron-phonon_interactions_using_Wannier_interpolation.md
+- **Construction:Electron-phonon potential from supercells** —   →  references/tutorials/Construction-Electron-phonon_potential_from_supercells.md
+- **Construction:Electronic transport coefficients** —   →  references/tutorials/Construction-Electronic_transport_coefficients.md
+- **Construction:ELPH FERMI NEDOS** —   →  references/tutorials/Construction-ELPH_FERMI_NEDOS.md
+- **Construction:ELPH LR NSPLINE** —   →  references/tutorials/Construction-ELPH_LR_NSPLINE.md
+- **Construction:ELPH MELS** —   →  references/tutorials/Construction-ELPH_MELS.md
+- **Construction:ELPH NQBATCH** —   →  references/tutorials/Construction-ELPH_NQBATCH.md
+- **Construction:ELPH NSIM** —   →  references/tutorials/Construction-ELPH_NSIM.md
+- **Construction:ELPH SCISSOR** —   →  references/tutorials/Construction-ELPH_SCISSOR.md
+- **Construction:ELPH SELFEN BAND START KP** —   →  references/tutorials/Construction-ELPH_SELFEN_BAND_START_KP.md
+- **Construction:ELPH SELFEN BAND STOP KP** —   →  references/tutorials/Construction-ELPH_SELFEN_BAND_STOP_KP.md
+- **Construction:ELPH SELFEN BROAD TOL** —   →  references/tutorials/Construction-ELPH_SELFEN_BROAD_TOL.md
+- **Construction:ELPH SELFEN CARRIER DEN RANGE** —   →  references/tutorials/Construction-ELPH_SELFEN_CARRIER_DEN_RANGE.md
+- **Construction:ELPH SELFEN ENERGY WINDOW** —   →  references/tutorials/Construction-ELPH_SELFEN_ENERGY_WINDOW.md
+- **Construction:ELPH SELFEN G SKIP** —   →  references/tutorials/Construction-ELPH_SELFEN_G_SKIP.md
+- **Construction:ELPH SELFEN IMAG SKIP** —   →  references/tutorials/Construction-ELPH_SELFEN_IMAG_SKIP.md
+- **Construction:ELPH SELFEN MU RANGE** —   →  references/tutorials/Construction-ELPH_SELFEN_MU_RANGE.md
+- **Construction:ELPH SELFEN TEMPS RANGE** —   →  references/tutorials/Construction-ELPH_SELFEN_TEMPS_RANGE.md
+- **Construction:ELPH TRANSPORT EMAX PLOT** —   →  references/tutorials/Construction-ELPH_TRANSPORT_EMAX_PLOT.md
+- **Construction:ELPH TRANSPORT EMIN PLOT** —   →  references/tutorials/Construction-ELPH_TRANSPORT_EMIN_PLOT.md
+- **Construction:ELPH TRANSPORT NEDOS** —   →  references/tutorials/Construction-ELPH_TRANSPORT_NEDOS.md
+- **Construction:ELPH TRANSPORT NEDOS PLOT** —   →  references/tutorials/Construction-ELPH_TRANSPORT_NEDOS_PLOT.md
+- **Construction:ELPH USE AVERAGE PHASES** —   →  references/tutorials/Construction-ELPH_USE_AVERAGE_PHASES.md
+- **Construction:ELPH USE POT IBZ** —   →  references/tutorials/Construction-ELPH_USE_POT_IBZ.md
+- **Construction:ELPH WF CACHE PREFILL** —   →  references/tutorials/Construction-ELPH_WF_CACHE_PREFILL.md
+- **Construction:ELPH WF COMM OPT** —   →  references/tutorials/Construction-ELPH_WF_COMM_OPT.md
+- **Construction:ELPH WF REDISTRIBUTE** —   →  references/tutorials/Construction-ELPH_WF_REDISTRIBUTE.md
+- **Construction:Elphon wannier.h5** —   →  references/tutorials/Construction-Elphon_wannier.h5.md
+- **Construction:ENMIN** —   →  references/tutorials/Construction-ENMIN.md
+- **Construction:EREF** —   →  references/tutorials/Construction-EREF.md
+- **Construction:ESF CONV** —   →  references/tutorials/Construction-ESF_CONV.md
+- **Construction:ESF NINTER** —   →  references/tutorials/Construction-ESF_NINTER.md
+- **Construction:ESF SPLINES** —   →  references/tutorials/Construction-ESF_SPLINES.md
+- **Construction:Finite temperature phonon renormalization with velocity correlation functions** —   →  references/tutorials/Construction-Finite_temperature_phonon_renormalization_with_velocity_correlation_functions.md
+- **Construction:Geometric constraints** —   →  references/tutorials/Construction-Geometric_constraints.md
+- **Construction:Guide to exchange-correlation methods** —   →  references/tutorials/Construction-Guide_to_exchange-correlation_methods.md
+- **Construction:High quality quantitative versus qualitative calculations** —   →  references/tutorials/Construction-High_quality_quantitative_versus_qualitative_calculations.md
+- **Construction:Hyperfine coupling calculations** —   →  references/tutorials/Construction-Hyperfine_coupling_calculations.md
+- **Construction:IBRION** —   →  references/tutorials/Construction-IBRION.md
+- **Construction:IBSE** —   →  references/tutorials/Construction-IBSE.md
+- **Construction:ICONST** —   →  references/tutorials/Construction-ICONST.md
+- **Construction:ICORELEVEL** —   →  references/tutorials/Construction-ICORELEVEL.md
+- **Construction:IMAGE N** —   →  references/tutorials/Construction-IMAGE_N.md
+- **Construction:Installation with OS packages** —   →  references/tutorials/Construction-Installation_with_OS_packages.md
+- **Construction:Integrating over all orbitals** —   →  references/tutorials/Construction-Integrating_over_all_orbitals.md
+- **Construction:Intrinsic Atomic Orbitals** —   →  references/tutorials/Construction-Intrinsic_Atomic_Orbitals.md
+- **Construction:IRCCAR** —   →  references/tutorials/Construction-IRCCAR.md
+- **Construction:IRESTART** —   →  references/tutorials/Construction-IRESTART.md
+- **Construction:ISEARCH** —   →  references/tutorials/Construction-ISEARCH.md
+- **Construction:JCARBY** —   →  references/tutorials/Construction-JCARBY.md
+- **Construction:JCARBZ** —   →  references/tutorials/Construction-JCARBZ.md
+- **Construction:K MULTIPLY** —   →  references/tutorials/Construction-K_MULTIPLY.md
+- **Construction:KERNEL TRUNCATION/IDIMENSIONALITY** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__IDIMENSIONALITY.md
+- **Construction:KERNEL TRUNCATION/IDIMENSIONALITY CUTOFF** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__IDIMENSIONALITY_CUTOFF.md
+- **Construction:KERNEL TRUNCATION/ISURFACE** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__ISURFACE.md
+- **Construction:KERNEL TRUNCATION/ISURFACE NORMAL** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__ISURFACE_NORMAL.md
+- **Construction:KERNEL TRUNCATION/LCOARSEN** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__LCOARSEN.md
+- **Construction:KERNEL TRUNCATION/LCOARSEN BEFORE PAD** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__LCOARSEN_BEFORE_PAD.md
+- **Construction:KERNEL TRUNCATION/LTRUNCATE** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__LTRUNCATE.md
+- **Construction:KERNEL TRUNCATION/LTRUNCATE COULOMB KERNEL** —   →  references/tutorials/Construction-KERNEL_TRUNCATION__LTRUNCATE_COULOMB_KERNEL.md
+- **Construction:LANCZOSTHR** —   →  references/tutorials/Construction-LANCZOSTHR.md
+- **Construction:LIBXC1** —   →  references/tutorials/Construction-LIBXC1.md
+- **Construction:LIBXC1 Pn** —   →  references/tutorials/Construction-LIBXC1_Pn.md
+- **Construction:LIBXC2** —   →  references/tutorials/Construction-LIBXC2.md
+- **Construction:Linking gfortran with Intel MKL** —   →  references/tutorials/Construction-Linking_gfortran_with_Intel_MKL.md
+- **Construction:List of all GW/RPA-PAW potentials** —   →  references/tutorials/Construction-List_of_all_GW__RPA-PAW_potentials.md
+- **Construction:Lists of pseudopotentials** —   →  references/tutorials/Construction-Lists_of_pseudopotentials.md
+- **Construction:LMAXFOCKAE** —   →  references/tutorials/Construction-LMAXFOCKAE.md
+- **Construction:LNICSALL** —   →  references/tutorials/Construction-LNICSALL.md
+- **Construction:LNMRSHIELD** —   →  references/tutorials/Construction-LNMRSHIELD.md
+- **Construction:LPOSNICS** —   →  references/tutorials/Construction-LPOSNICS.md
+- **Construction:LRHFCALC** —   →  references/tutorials/Construction-LRHFCALC.md
+- **Construction:LSCDM** —   →  references/tutorials/Construction-LSCDM.md
+- **Construction:LTRIPLET** —   →  references/tutorials/Construction-LTRIPLET.md
+- **Construction:LWAP** —   →  references/tutorials/Construction-LWAP.md
+- **Construction:Machine learning force field calculations: Intermediate** —   →  references/tutorials/Construction-Machine_learning_force_field_calculations-_Intermediate.md
+- **Construction:Machine learning force field: Theory** —   →  references/tutorials/Construction-Machine_learning_force_field-_Theory.md
+- **Construction:Makefile.include** —   →  references/tutorials/Construction-Makefile.include.md
+- **Construction:Makefile.include.cray** —   →  references/tutorials/Construction-Makefile.include.cray.md
+- **Construction:Makefile.include.cray omp** —   →  references/tutorials/Construction-Makefile.include.cray_omp.md
+- **Construction:Makefile.include.cray omp off** —   →  references/tutorials/Construction-Makefile.include.cray_omp_off.md
+- **Construction:Makefile.include.oneapi omp off** —   →  references/tutorials/Construction-Makefile.include.oneapi_omp_off.md
+- **Construction:MAXDIS** —   →  references/tutorials/Construction-MAXDIS.md
+- **Construction:Memory requirement Machine-learned force fields** —   →  references/tutorials/Construction-Memory_requirement_Machine-learned_force_fields.md
+- **Construction:ML LIB** —   →  references/tutorials/Construction-ML_LIB.md
+- **Construction:ML NCSHMEM** —   →  references/tutorials/Construction-ML_NCSHMEM.md
+- **Construction:MLFF+metadynamics** —   →  references/tutorials/Construction-MLFF+metadynamics.md
+- **Construction:MSDGW F** —   →  references/tutorials/Construction-MSDGW_F.md
+- **Construction:My theory review** —   →  references/tutorials/Construction-My_theory_review.md
+- **Construction:MYTAG** —   →  references/tutorials/Construction-MYTAG.md
+- **Construction:NBSEBLOCKO** —   →  references/tutorials/Construction-NBSEBLOCKO.md
+- **Construction:NBSEBLOCKV** —   →  references/tutorials/Construction-NBSEBLOCKV.md
+- **Construction:Ncore** —   →  references/tutorials/Construction-Ncore.md
+- **Construction:NICS** —   →  references/tutorials/Construction-NICS.md
+- **Construction:NMAXFOCKAE** —   →  references/tutorials/Construction-NMAXFOCKAE.md
+- **Construction:NMIN** —   →  references/tutorials/Construction-NMIN.md
+- **Construction:NREBOOT** —   →  references/tutorials/Construction-NREBOOT.md
+- **Construction:NUCIND** —   →  references/tutorials/Construction-NUCIND.md
+- **Construction:Obtaining the color of a material with py4vasp** —   →  references/tutorials/Construction-Obtaining_the_color_of_a_material_with_py4vasp.md
+- **Construction:One-shot - old text** —   →  references/tutorials/Construction-One-shot_-_old_text.md
+- **Construction:OpenMP GPU port of VASP** —   →  references/tutorials/Construction-OpenMP_GPU_port_of_VASP.md
+- **Construction:OUTCAR** —   →  references/tutorials/Construction-OUTCAR.md
+- **Construction:Paramagnetic phonons from finite differences** —   →  references/tutorials/Construction-Paramagnetic_phonons_from_finite_differences.md
+- **Construction:Partial charge densities and STM simulations** —   →  references/tutorials/Construction-Partial_charge_densities_and_STM_simulations.md
+- **Construction:Phonons from density-functional-perturbation theory** —   →  references/tutorials/Construction-Phonons_from_density-functional-perturbation_theory.md
+- **Construction:Plot exciton wavefunction** —   →  references/tutorials/Construction-Plot_exciton_wavefunction.md
+- **Construction:Plotting the BSE fatband structure** —   →  references/tutorials/Construction-Plotting_the_BSE_fatband_structure.md
+- **Construction:Plugins** —   →  references/tutorials/Construction-Plugins.md
+- **Construction:PLUGINS/FORCE AND STRESS** —   →  references/tutorials/Construction-PLUGINS__FORCE_AND_STRESS.md
+- **Construction:PLUGINS/LOCAL POTENTIAL** —   →  references/tutorials/Construction-PLUGINS__LOCAL_POTENTIAL.md
+- **Construction:PLUGINS/OCCUPANCIES** —   →  references/tutorials/Construction-PLUGINS__OCCUPANCIES.md
+- **Construction:PLUGINS/STRUCTURE** —   →  references/tutorials/Construction-PLUGINS__STRUCTURE.md
+- **Construction:POSNICS** —   →  references/tutorials/Construction-POSNICS.md
+- **Construction:Potcar.h5** —   →  references/tutorials/Construction-Potcar.h5.md
+- **Construction:Practical Considerations for Transition State Calculations** —   →  references/tutorials/Construction-Practical_Considerations_for_Transition_State_Calculations.md
+- **Construction:Practical considerations for transition state finding calculations** —   →  references/tutorials/Construction-Practical_considerations_for_transition_state_finding_calculations.md
+- **Construction:Practical guide to constrained random-phase approximation** —   →  references/tutorials/Construction-Practical_guide_to_constrained_random-phase_approximation.md
+- **Construction:Pulay stress** —   →  references/tutorials/Construction-Pulay_stress.md
+- **Construction:Recommended PAW potentials for calculations involving unoccupied states** —   →  references/tutorials/Construction-Recommended_PAW_potentials_for_calculations_involving_unoccupied_states.md
+- **Construction:Recommended PAW potentials for calculations of mainly occupied states** —   →  references/tutorials/Construction-Recommended_PAW_potentials_for_calculations_of_mainly_occupied_states.md
+- **Construction:Restarting finite differences calculations** —   →  references/tutorials/Construction-Restarting_finite_differences_calculations.md
+- **Construction:Running machine-learned force fields in LAMMPS** —   →  references/tutorials/Construction-Running_machine-learned_force_fields_in_LAMMPS.md
+- **Construction:Running universal machine-learned force fields in VASP** —   →  references/tutorials/Construction-Running_universal_machine-learned_force_fields_in_VASP.md
+- **Construction:SCDM method** —   →  references/tutorials/Construction-SCDM_method.md
+- **Construction:Schottky barrier and computing tunneling current** —   →  references/tutorials/Construction-Schottky_barrier_and_computing_tunneling_current.md
+- **Construction:Shared memory** —   →  references/tutorials/Construction-Shared_memory.md
+- **Construction:Single band steepest descent scheme** —   →  references/tutorials/Construction-Single_band_steepest_descent_scheme.md
+- **Construction:Smearing technique** —   →  references/tutorials/Construction-Smearing_technique.md
+- **Construction:SOCSCALE** —   →  references/tutorials/Construction-SOCSCALE.md
+- **Construction:Stdout** —   →  references/tutorials/Construction-Stdout.md
+- **Construction:Structure optimization** —   →  references/tutorials/Construction-Structure_optimization.md
+- **Construction:Structure optimization 2** —   →  references/tutorials/Construction-Structure_optimization_2.md
+- **Construction:Tag documentation template** —   →  references/tutorials/Construction-Tag_documentation_template.md
+- **Construction:Template:TAGO** —   →  references/tutorials/Construction-Template-TAGO.md
+- **Construction:Theory:Pseudopotential basics** —   →  references/tutorials/Construction-Theory-Pseudopotential_basics.md
+- **Construction:Thermodynamic integration between density functionals** —   →  references/tutorials/Construction-Thermodynamic_integration_between_density_functionals.md
+- **Construction:Thermodynamic integration between MLFF and GGAs** —   →  references/tutorials/Construction-Thermodynamic_integration_between_MLFF_and_GGAs.md
+- **Construction:Thermodynamic integration between MLFFs** —   →  references/tutorials/Construction-Thermodynamic_integration_between_MLFFs.md
+- **Construction:Thermodynamic integration for particle insertion** —   →  references/tutorials/Construction-Thermodynamic_integration_for_particle_insertion.md
+- **Construction:Thermodynamic integration howto** —   →  references/tutorials/Construction-Thermodynamic_integration_howto.md
+- **Construction:Thermodynamic integration using SCALEE** —   →  references/tutorials/Construction-Thermodynamic_integration_using_SCALEE.md
+- **Construction:Thermodynamic integration using TILAMBDA** —   →  references/tutorials/Construction-Thermodynamic_integration_using_TILAMBDA.md
+- **Construction:Thermodynamic integration using VCAIMAGES** —   →  references/tutorials/Construction-Thermodynamic_integration_using_VCAIMAGES.md
+- **Construction:Thermodynamic integration: redox** —   →  references/tutorials/Construction-Thermodynamic_integration-_redox.md
+- **Construction:Thermodynamic integration: redox potential** —   →  references/tutorials/Construction-Thermodynamic_integration-_redox_potential.md
+- **Construction:Time-dependent density functional theory** —   →  references/tutorials/Construction-Time-dependent_density_functional_theory.md
+- **Construction:Time-dependent density functional theory calculations** —   →  references/tutorials/Construction-Time-dependent_density_functional_theory_calculations.md
+- **Construction:Time-dependent density-functional theory calculations** —   →  references/tutorials/Construction-Time-dependent_density-functional_theory_calculations.md
+- **Construction:Time-evolution algorithm new** —   →  references/tutorials/Construction-Time-evolution_algorithm_new.md
+- **Construction:TITEL** —   →  references/tutorials/Construction-TITEL.md
+- **Construction:Toolchains** —   →  references/tutorials/Construction-Toolchains.md
+- **Construction:Training MLFF for redox reactions** —   →  references/tutorials/Construction-Training_MLFF_for_redox_reactions.md
+- **Construction:Transport coefficients including electron-phonon scattering** —   →  references/tutorials/Construction-Transport_coefficients_including_electron-phonon_scattering.md
+- **Construction:Transport coefficients using Wannier interpolation** —   →  references/tutorials/Construction-Transport_coefficients_using_Wannier_interpolation.md
+- **Construction:Troubleshooting electronic convergence** —   →  references/tutorials/Construction-Troubleshooting_electronic_convergence.md
+- **Construction:TURBO** —   →  references/tutorials/Construction-TURBO.md
+- **Construction:Unitary Matrix Constrained Optimization** —   →  references/tutorials/Construction-Unitary_Matrix_Constrained_Optimization.md
+- **Construction:Using IRCCAR** —   →  references/tutorials/Construction-Using_IRCCAR.md
+- **Construction:Using metadynamics to train a machine-learned force field** —   →  references/tutorials/Construction-Using_metadynamics_to_train_a_machine-learned_force_field.md
+- **Construction:Vacuum reference** —   →  references/tutorials/Construction-Vacuum_reference.md
+- **Construction:VASP for chemists** —   →  references/tutorials/Construction-VASP_for_chemists.md
+- **Construction:VASP from Gaussian type orbitals** —   →  references/tutorials/Construction-VASP_from_Gaussian_type_orbitals.md
+- **Construction:Vaspcheck.h5** —   →  references/tutorials/Construction-Vaspcheck.h5.md
+- **Construction:VASPML LAMMPS Interface** —   →  references/tutorials/Construction-VASPML_LAMMPS_Interface.md
+- **Construction:VASPml library** —   →  references/tutorials/Construction-VASPml_library.md
+- **Construction:Vaspout.h5** —   →  references/tutorials/Construction-Vaspout.h5.md
+- **Construction:Volume relaxation** —   →  references/tutorials/Construction-Volume_relaxation.md
+- **Construction:Wannier interpolation** —   →  references/tutorials/Construction-Wannier_interpolation.md
+- **Construction:WAVEDER** —   →  references/tutorials/Construction-WAVEDER.md
+- **Construction:Wiki Style Guide** —   →  references/tutorials/Construction-Wiki_Style_Guide.md
+- **Construction:WPLASMAI** —   →  references/tutorials/Construction-WPLASMAI.md
+- **DFT+DMFT calculations** — Density-functional theory plus dynamical mean-field theory  →  references/tutorials/DFT+DMFT_calculations.md
+- **Dipole corrections for defects in solids** — Similar to the case of charged atoms and molecules in a large cubic box  →  references/tutorials/Dipole_corrections_for_defects_in_solids.md
+- **Electron-energy-loss spectrum** — One of the many ways in which it is possible to probe neutral  →  references/tutorials/Electron-energy-loss_spectrum.md
+- **Electron-phonon interactions from Monte-Carlo sampling** — For the theory on electron-phonon interactions from Monte-Carlo (MC)  →  references/tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md
+- **Electron-phonon potential from supercells** — The computation of the electron-phonon potential, $partial_{nu mathbf{q}} V(mathbf{r})$, is a prerequisite  →  references/tutorials/Electron-phonon_potential_from_supercells.md
+- **Electrostatic corrections** — For charged cells or for calculations of molecules and surfaces with a  →  references/tutorials/Electrostatic_corrections.md
+- **Energy cutoff and FFT meshes** — The [plane-wave expansion of the Kohn-Sham (KS)  ·  aliases: Energy cut off and FFT mesh, FFT, FFT grid, FFT grids, FFT mesh, FFT meshes, FFTs, Fast Fourier transform  →  references/tutorials/Energy_cutoff_and_FFT_meshes.md
+- **GW and ACFDT - Tutorial** — Overview > [bandgap of Si in  ·  aliases: GW and ACFDT  →  references/tutorials/GW_and_ACFDT_-_Tutorial.md
+- **How to handle imaginary phonon modes** — An imaginary (soft) phonon mode signals that the current structure is a  →  references/tutorials/How_to_handle_imaginary_phonon_modes.md
+- **Hybrid functionals - Tutorial** — Overview > [bandgap of Si using different DFT+HF  →  references/tutorials/Hybrid_functionals_-_Tutorial.md
+- **Interface pinning calculations** — Interface pinning uses the $Np_zT$  →  references/tutorials/Interface_pinning_calculations.md
+- **Intrinsic-reaction-coordinate calculations** — The potential energy profiles along the intrinsic reaction  ·  aliases: IRC calculations  →  references/tutorials/Intrinsic-reaction-coordinate_calculations.md
+- **Langevin thermostat** — The Langevin  →  references/tutorials/Langevin_thermostat.md
+- **Lattice Dynamics - Tutorial** — Overview > [Band gap renormalization in diamond using one-shot  ·  aliases: Lattice Dynamics  →  references/tutorials/Lattice_Dynamics_-_Tutorial.md
+- **LTMP2 - Tutorial** — Overview >  ·  aliases: LTMP2  →  references/tutorials/LTMP2_-_Tutorial.md
+- **Machine learning force field - Tutorial** — Overview > [Liquid Si -  →  references/tutorials/Machine_learning_force_field_-_Tutorial.md
+- **Magnetism - Tutorial** — Overview > [fcc Ni  ·  aliases: Magnetism  →  references/tutorials/Magnetism_-_Tutorial.md
+- **Memory requirements** — The memory requirements of VASP can easily exceed your computer  →  references/tutorials/Memory_requirements.md
+- **Metadynamics calculations** — - For a metadynamics run with Andersen thermostat, one has to:  →  references/tutorials/Metadynamics_calculations.md
+- **Minimal reproducible example** — A minimal reproducible example is a set of input and output files  →  references/tutorials/Minimal_reproducible_example.md
+- **Molecular dynamics - Tutorial** — Overview >[Liquid Si - Standard  →  references/tutorials/Molecular_dynamics_-_Tutorial.md
+- **Molecular-dynamics calculations** — Molecular dynamics (MD) is used to study the movement of atoms over time  ·  aliases: MD calculations, MD run, MD runs, MD simulations, Molecular dynamics calculations  →  references/tutorials/Molecular-dynamics_calculations.md
+- **MP2 calculations** — By specifying ALGO=*MP2* in the  →  references/tutorials/MP2_calculations.md
+- **MP2 ground state calculation - Tutorial** — Overview > MP2 >  ·  aliases: MP2 ground state calculation  →  references/tutorials/MP2_ground_state_calculation_-_Tutorial.md
+- **Müller-Plathe method** — There are two components of the thermal conductivity, the  ·  aliases: Mueller-Plathe method  →  references/tutorials/Müller-Plathe_method.md
+- **Nosé-Hoover thermostat** — In the approach by Nosé and  ·  aliases: Nose-Hoover thermostat  →  references/tutorials/Nosé-Hoover_thermostat.md
+- **Not enough memory** — Nowadays, for standard DFT and hybrid functional calculations, memory is  →  references/tutorials/Not_enough_memory.md
+- **Nudged elastic bands** — The nudged elastic band (NEB)  ·  aliases: Category:Elastic band method  →  references/tutorials/Nudged_elastic_bands.md
+- **Optical properties and dielectric response - Tutorial** — Overview > [dielectric properties of  ·  aliases: Optical properties and dielectric response  →  references/tutorials/Optical_properties_and_dielectric_response_-_Tutorial.md
+- **Optimizing the parallelization** — To find the optimal  →  references/tutorials/Optimizing_the_parallelization.md
+- **Partial charge densities and STM simulations** — The partial (band-decomposed) charge density can be used to analyze the  ·  aliases: Band-decomposed charge densities  →  references/tutorials/Partial_charge_densities_and_STM_simulations.md
+- **Phonons from density-functional-perturbation theory** — The phonon calculations using [density-functional-perturbation theory  →  references/tutorials/Phonons_from_density-functional-perturbation_theory.md
+- **Phonons from finite differences** — The phonon calculations using a [finite differences  →  references/tutorials/Phonons_from_finite_differences.md
+- **Plugins** — Implementing features over VASP carries a significant overhead, both in  →  references/tutorials/Plugins.md
+- **Practical considerations for transition state finding calculations** — This page details a few practical considerations for obtaining accurate  →  references/tutorials/Practical_considerations_for_transition_state_finding_calculations.md
+- **Preparing a POTCAR** — The POTCAR file is a mandatory [input  ·  aliases: Prepare a POTCAR  →  references/tutorials/Preparing_a_POTCAR.md
+- **Preparing a Super Cell** — Overview >  →  references/tutorials/Preparing_a_Super_Cell.md
+- **Pulay stress** — Pulay stress is unphysical stress resulting from unconverged  →  references/tutorials/Pulay_stress.md
+- **Restart and output files cheat sheet** — VASP can continue a calculation from the converged results of a previous  →  references/tutorials/Restart_and_output_files_cheat_sheet.md
+- **Restarting finite differences calculations** — It is possible to restart [finite difference  →  references/tutorials/Restarting_finite_differences_calculations.md
+- **Sampling phonon spectra from molecular-dynamics simulations** — ![](https://vasp.at/wiki/File:PhononDOS.png)  →  references/tutorials/Sampling_phonon_spectra_from_molecular-dynamics_simulations.md
+- **Setting up an electronic minimization** — Setting up an [electronic  ·  aliases: Ground-state calculations, Setting up electronic minimization  →  references/tutorials/Setting_up_an_electronic_minimization.md
+- **Slow-growth approach calculations** — - For a slow-growth simulation, one has to perform a calcualtion very  →  references/tutorials/Slow-growth_approach_calculations.md
+- **Smearing technique** — - 1 How to set ISMEAR  →  references/tutorials/Smearing_technique.md
+- **Spin-spiral calculations** — Spin-spiral calculations model continuously rotating magnetic  →  references/tutorials/Spin-spiral_calculations.md
+- **Structure optimization** — - 1 Overview  ·  aliases: Structure relaxation  →  references/tutorials/Structure_optimization.md
+- **Supercell core-hole calculations** — The SCH  ·  aliases: SCH calculations  →  references/tutorials/Supercell_core-hole_calculations.md
+- **Surface Science - Tutorial** — Overview > [Ni 100 surface  ·  aliases: Surface Science  →  references/tutorials/Surface_Science_-_Tutorial.md
+- **Thermodynamic integration calculations** — [Thermodynamic  →  references/tutorials/Thermodynamic_integration_calculations.md
+- **Time-evolution algorithm** — The [macroscopic dielectric  ·  aliases: Time Evolution  →  references/tutorials/Time-evolution_algorithm.md
+- **Transport coefficients including electron-phonon scattering** — In the framework of the linearized Boltzmann equations, we can compute a  →  references/tutorials/Transport_coefficients_including_electron-phonon_scattering.md
+- **Troubleshooting electronic convergence** — There can be many reasons why convergence to the electronic ground state  ·  aliases: Difficult to converge systems  →  references/tutorials/Troubleshooting_electronic_convergence.md
+- **XAS - Tutorial** — Overview > [XANES in  →  references/tutorials/XAS_-_Tutorial.md

@@ -1,0 +1,54 @@
+<!-- Source: https://vasp.at/wiki/index.php/MP2 | revid: 18023 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# MP2
+By specifying [ALGO](ALGO.md)=*MP2* in the
+[INCAR](../input-files/INCAR.md) file VASP calculates MP2 correlation
+energies. It is strongly recommended to calculate all virtual states
+spanned by the basis set before calling the MP2 routines.
+
+Thus any MP2 calculation should proceed in three steps:
+
+- The first step is the determination of the occupied orbitals of the
+  Hartree-Fock Hamiltonian. Note that MP2 requires calculating the
+  Hartree-Fock ground state, and any LDA or GGA correlation should be
+  switched off. Following specific [INCAR](../input-files/INCAR.md) tags
+  have to be set:
+
+&nbsp;
+
+    LHFCALC = .TRUE.
+    AEXX = 1.0 ; ALDAC = 0.0 ; AGGAC = 0.0
+    ALGO = D ; EDIFF = 1E-7
+
+- Next search for maximum number of plane-waves in the
+  [OUTCAR](../output-files/OUTCAR.md) file and execute VASP again using the
+  following [INCAR](../input-files/INCAR.md) tags:
+
+&nbsp;
+
+    NBANDS  =   maximum number of plane-waves
+    LHFCALC = .TRUE.
+    AEXX = 1.0 ; ALDAC = 0.0 ; AGGAC = 0.0
+    ALGO = Exact ; NELM = 1 ; LOPTICS = .TRUE.
+
+- Finally calculate the MP2 correlation energy:
+
+&nbsp;
+
+    NBANDS  =   maximum number of plane-waves
+    LHFCALC = .TRUE. ;  AEXX = 1.0 ; ALDAC = 0.0
+    LMAXMP2 = 2
+
+The flag LMAXMP2 specifies the maximum $l$ quantum number for the treatment of the one-center terms.
+This should be set to twice the maximum of the non-local component in
+the pseudopotential. Alternatively
+[LMAXFOCKAE](../redirects/LMAXFOCKAE.md) can be set in the INCAR
+file. This is expected to be more efficient but slightly less accurate.
+Combining [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) and
+[LMAXFOCKMP2](https://vasp.at/wiki/index.php/index.php)")
+is in principle also allowed but hardly offers any advantage over using
+only [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) or
+[LMAXFOCKMP2](https://vasp.at/wiki/index.php/index.php)").
+
+------------------------------------------------------------------------

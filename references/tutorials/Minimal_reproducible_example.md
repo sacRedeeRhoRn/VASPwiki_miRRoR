@@ -1,0 +1,69 @@
+<!-- Source: https://vasp.at/wiki/index.php/Minimal_reproducible_example | revid: 22963 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# Minimal reproducible example
+A **minimal reproducible example** is a set of input and output files
+that allow a bug, problem, or result to be demonstrated and reproduced.
+A crucial point is that the **minimal reproducible example** should be
+as small and simple as possible.
+
+It is helpful to create a **minimal reproducible example** when
+reporting an issue to a colleague, supervisor, or on the [VASP
+forum](https://www.vasp.at/forum/), but also as a starting point to
+explore more options and features based on a known system.
+
+## Contents
+
+- [1 How to create a minimal reproducible
+  example](#How_to_create_a_minimal_reproducible_example)
+  - [1.1 Step 1](#Step_1)
+  - [1.2 Step 2](#Step_2)
+  - [1.3 Step 3](#Step_3)
+- [2 Related tags and articles](#Related_tags_and_articles)
+
+## How to create a minimal reproducible example
+### Step 1
+To reduce the complexity of a calculation, remove all preparatory and
+unnecessary post-processing steps from the workflow and any [INCAR
+tags](../redirects/INCAR_tag.md) that are unnecessary to reproduce the
+issue. This may mean using a different structure
+([POSCAR](../input-files/POSCAR.md)) with fewer atoms. Or, for a magnetic
+calculation that may imply switching off projections
+([LORBIT](../incar-tags/LORBIT.md)), the use of spin-orbit coupling
+([LSORBIT](../incar-tags/LSORBIT.md)) or perhaps an on-site Coulomb
+interaction ([LDAU](../incar-tags/LDAU.md)) if this is not essential to what
+is demonstrated. For a molecular-dynamics run, reducing the complexity
+may imply starting from an intermediate time step with a random seed
+([RANDOM_SEED](../incar-tags/RANDOM_SEED.md)) and choosing a smaller
+supercell.
+
+### Step 2
+Select parameters that reproduce the result with minimal computational
+effort, even though it may reduce the accuracy of the calculation. For
+instance, this often implies reducing ([ENCUT](../incar-tags/ENCUT.md)),
+choosing a coarser k mesh ([KPOINTS](../input-files/KPOINTS.md)), lowering
+[PREC](../incar-tags/PREC.md), etc.
+
+### Step 3
+Finally, ensure to include
+
+1.  all files to run the calculation (execution commands/submission
+    script and input files that may include
+    [INCAR](../input-files/INCAR.md), [POSCAR](../input-files/POSCAR.md),
+    [POTCAR](../input-files/POTCAR.md), [KPOINTS](../input-files/KPOINTS.md),
+    [ICONST](../input-files/ICONST.md), etc.),
+2.  the main output files (stdout, [OUTCAR](../output-files/OUTCAR.md),
+    [REPORT](../output-files/REPORT.md) for molecular-dynamics runs,
+    [ML_LOGFILE](../output-files/ML_LOGFILE.md) for machine-learning
+    force fields, etc.)
+3.  and any problem-specific files that, e.g., include the specific data
+    in focus or that extract and plot the data from the output files.
+
+If the problem only occurs for specific hardware, versions of VASP, or
+toolchains, it is also essential to include that information.
+
+## Related tags and articles
+[Input files](../categories/Category-Input_files.md),
+[Output files](https://vasp.at/wiki/index.php/Category:Output_files),
+[Troubleshooting electronic
+convergence](Troubleshooting_electronic_convergence.md)

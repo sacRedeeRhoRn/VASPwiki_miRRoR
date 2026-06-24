@@ -1,0 +1,285 @@
+<!-- Source: https://vasp.at/wiki/index.php/Computing_the_phonon_dispersion_and_DOS | revid: 36048 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# Computing the phonon dispersion and DOS
+After computing the force constants using the [finite
+differences](Phonons_from_finite_differences.md)
+or [density-functional-perturbation
+theory](Phonons_from_density-functional-perturbation_theory.md)
+(DFPT) approaches, it is possible to compute the phonon dispersion
+relation as well as the phonon density of states (DOS). This is
+accomplished by Fourier interpolating the interatomic force constants
+from a supercell calculation to the primitive cell.
+
+## Contents
+
+- [1 Phonon dispersion: Step-by-step
+  instructions](#Phonon_dispersion:_Step-by-step_instructions)
+  - [1.1 Step 1: Compute the force
+    constants](#Step_1:_Compute_the_force_constants)
+  - [1.2 Step 2: Provide **q**-points along a high-symmetry
+    path](#Step_2:_Provide_q-points_along_a_high-symmetry_path)
+  - [1.3 Step 3: Compute the phonon
+    dispersion](#Step_3:_Compute_the_phonon_dispersion)
+  - [1.4 Reading of force constants](#Reading_of_force_constants)
+- [2 Phonon DOS: Step-by-step
+  instructions](#Phonon_DOS:_Step-by-step_instructions)
+  - [2.1 Step 1: Compute the force
+    constants](#Step_1:_Compute_the_force_constants_2)
+  - [2.2 Step 2: Specify a uniform **q**-point
+    mesh](#Step_2:_Specify_a_uniform_q-point_mesh)
+  - [2.3 Step 3: Compute the DOS](#Step_3:_Compute_the_DOS)
+- [3 Polar materials](#Polar_materials)
+  - [3.1 Obtaining the dielectric
+    properties](#Obtaining_the_dielectric_properties)
+  - [3.2 Specifying the dielectric properties as
+    input](#Specifying_the_dielectric_properties_as_input)
+  - [3.3 LO-TO splitting](#LO-TO_splitting)
+- [4 Practical hints](#Practical_hints)
+- [5 Related tags and articles](#Related_tags_and_articles)
+- [6 References](#References)
+
+## Phonon dispersion: Step-by-step instructions
+### Step 1: Compute the force constants
+There are two possible approaches for computing the force constants and
+then building the dynamical matrix:
+
+1.  Using [finite
+    differences](Phonons_from_finite_differences.md)
+    with [`IBRION`](../incar-tags/IBRION.md)` = 5, 6`.
+2.  Using
+    [DFPT](Phonons_from_density-functional-perturbation_theory.md)
+    with [`IBRION`](../incar-tags/IBRION.md)` = 7, 8`.
+
+These calculations must be performed in a supercell so that the force
+constants vanish at large distances.
+
+|  |
+|----|
+| **Important:** The phonon frequencies need to be converged with respect to the supercell size. |
+
+### Step 2: Provide **q**-points along a high-symmetry path
+Create a [QPOINTS](../input-files/QPOINTS.md) file containing a
+**q**-points path at which the phonon dispersion is computed. This is
+accomplished using the [line
+mode](../input-files/KPOINTS.md) of the
+[KPOINTS](../input-files/KPOINTS.md)-file format. External
+tools^([\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2))
+are useful to decide which paths in the Brillouin zone to include. The
+tools provide the coordinates and the labels for a given structure.
+
+### Step 3: Compute the phonon dispersion
+To compute the phonon dispersion, set
+[`LPHON_DISPERSION`](../incar-tags/LPHON_DISPERSION.md)` = true`
+in the [INCAR](../input-files/INCAR.md) file. The amount of information
+written to the [OUTCAR](../output-files/OUTCAR.md) file can be tuned using
+the [PHON_NWRITE](../incar-tags/PHON_NWRITE.md) tag.
+
+### Reading of force constants
+Steps 1-3 can be performed in one VASP calculation. However, generating
+the finite displacements in the supercell to compute force constants is
+time-consuming. It is possible to skip that step by providing force
+constants from a previous run. Rename the
+[vaspout.h5](../output-files/Vaspout.h5.md) output file from the
+previous calculation to [vaspin.h5](../input-files/Vaspin.h5.md), set
+
+     LPHON_READ_FORCE_CONSTANTS = True 
+     LPHON_DISPERSION = True
+
+and provide a [QPOINTS](../input-files/QPOINTS.md) file.
+
+## Phonon DOS: Step-by-step instructions
+### Step 1: Compute the force constants
+Same as
+[above](#Phonon_dispersion:_Step-by-step_instructions#Step_1:_Compute_the_force_constants).
+This can be skipped by providing force constants in
+[vaspin.h5](../input-files/Vaspin.h5.md) and setting
+[`LPHON_READ_FORCE_CONSTANTS`](../incar-tags/LPHON_READ_FORCE_CONSTANTS.md)` = True`.
+
+### Step 2: Specify a uniform **q**-point mesh
+Create a [QPOINTS](../input-files/QPOINTS.md) file that specifies a
+sufficiently dense, uniform **q**-point mesh.
+
+### Step 3: Compute the DOS
+Set [`PHON_DOS`](../incar-tags/PHON_DOS.md)` > 0` in the
+[INCAR](../input-files/INCAR.md) file. The DOS is computed between
+$\[\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma\]$
+with $\omega_{\text{min}}$ and
+$\omega_{\text{max}}$ the lowest and
+highest phonon frequency and $\sigma$
+the broadening ([PHON_SIGMA](../incar-tags/PHON_SIGMA.md)).
+
+The number of energy points in this energy range is specified by the
+[PHON_NEDOS](../incar-tags/PHON_NEDOS.md) tag. To use a
+Gaussian-smearing method for the computation of the DOS set
+[`PHON_DOS`](../incar-tags/PHON_DOS.md)` = 1` or to use the tetrahedron
+method set [`PHON_DOS`](../incar-tags/PHON_DOS.md)` = 2`.
+
+## Polar materials
+If the material is polar, i.e., two or more atoms in the unit cell carry
+non-zero Born effective charge tensors, the long-range dipole-dipole
+interaction has to be treated by [Ewald
+summation](../theory/Phonons-_Theory.md).
+This is achieved by setting
+[`LPHON_POLAR`](../incar-tags/LPHON_POLAR.md)` = True`, supplying the
+static dielectric tensor
+([PHON_DIELECTRIC](../incar-tags/PHON_DIELECTRIC.md)) and the
+Born-effective charges
+([PHON_BORN_CHARGES](../incar-tags/PHON_BORN_CHARGES.md)). The
+values for these dielectric properties have to be obtained from a
+separate VASP calculation in the unit cell setting
+[LEPSILON](../incar-tags/LEPSILON.md) or
+[LCALCEPS](../incar-tags/LCALCEPS.md).
+
+|  |
+|----|
+| **Important:** Make sure to properly converge this unit-cell calculation with respect to the k-point mesh ([KPOINTS](../input-files/KPOINTS.md)) and the electronic cutoff energy ([ENCUT](../incar-tags/ENCUT.md)) since the optical phonon frequencies depend strongly on the dielectric properties. |
+
+Optionally, specify a reciprocal space cutoff radius
+([PHON_G_CUTOFF](../incar-tags/PHON_G_CUTOFF.md)) for the Ewald
+summation.
+
+### Obtaining the dielectric properties
+After a successful linear-response calculation using either
+[LEPSILON](../incar-tags/LEPSILON.md) or
+[LCALCEPS](../incar-tags/LCALCEPS.md), VASP writes the Born effective
+charge tensor and the ion-clamped static dielectric tensor to
+[OUTCAR](../output-files/OUTCAR.md),
+[vasprun.xml](../output-files/Vasprun.xml.md) and
+[vaspout.h5](../output-files/Vaspout.h5.md).
+
+|  |
+|----|
+| **Mind:** The [vaspout.h5](../output-files/Vaspout.h5.md) file is only available if VASP is compiled with [HDF5 support](../categories/Category-HDF5_support.md). |
+
+Here is an example output for a system consisting of two atoms per cell
+(MgO) in the [OUTCAR](../output-files/OUTCAR.md) file:
+
+     MACROSCOPIC STATIC DIELECTRIC TENSOR (including local field effects in DFT)
+     ------------------------------------------------------
+               3.130368    -0.000000    -0.000000
+               0.000000     3.130368     0.000000
+              -0.000000     0.000000     3.130368
+
+and
+
+     BORN EFFECTIVE CHARGES (including local field effects) (in |e|, cummulative output)
+     ---------------------------------------------------------------------------------
+     ion    1
+        1     1.97026     0.00000    -0.00000
+        2    -0.00000     1.97026     0.00000
+        3    -0.00000     0.00000     1.97026
+     ion    2
+        1    -1.97026    -0.00000     0.00000
+        2     0.00000    -1.97026    -0.00000
+        3     0.00000    -0.00000    -1.97026
+
+The corresponding XML entries in the
+[vasprun.xml](../output-files/Vasprun.xml.md) file can be queried with
+the following XPath queries:
+
+    /modeling/calculation/array[@name="born_charges"]
+    /modeling/calculation/varray[@name="dielectric_dft"]
+
+Finally, the same information is also available in the
+[vaspout.h5](../output-files/Vaspout.h5.md) binary file at the following
+dataset locations:
+
+    results/born_charges/born_charges
+    results/dielectric/dielectric_dft
+
+### Specifying the dielectric properties as input
+Once the Born effective charges and the ion-clamped static dielectric
+tensor have been retrieved, they need to be specified in the
+[INCAR](../input-files/INCAR.md) file of the supercell calculation via their
+respective tags
+([PHON_BORN_CHARGES](../incar-tags/PHON_BORN_CHARGES.md) and
+[PHON_DIELECTRIC](../incar-tags/PHON_DIELECTRIC.md)). Each tensor
+is specified row by row as a list of real numbers. Line breaks can
+optionally be inserted using the "`\`" character to improve readability.
+For example, the values from the MgO calculation above could be
+specified as follows:
+
+    PHON_DIELECTRIC = \
+      3.13036840     -0.00000000     -0.00000000 \
+      0.00000000      3.13036840      0.00000000 \
+     -0.00000000      0.00000000      3.13036840
+
+    PHON_BORN_CHARGES = \
+        1.97025920     -0.00000000     -0.00000000 \
+        0.00000000      1.97025920      0.00000000 \
+       -0.00000000      0.00000000      1.97025920 \
+    \
+       -1.97025920      0.00000000      0.00000000 \
+       -0.00000000     -1.97025920     -0.00000000 \
+        0.00000000     -0.00000000     -1.97025920
+
+### LO-TO splitting
+[![](https://vasp.at/wiki/images/thumb/3/31/MgO-phonons-LR-comparison.png/400px-MgO-phonons-LR-comparison.png)](https://vasp.at/wiki/File:MgO-phonons-LR-comparison.png)
+
+Phonon dispersion relation of MgO (rock-salt) comparing calculations
+with and without long-range (LR) dipole corrections. Notice the strong
+splitting of frequencies at the Γ-point.
+
+[![](https://vasp.at/wiki/images/thumb/f/fb/AlN-phonons-LR-comparison.png/400px-AlN-phonons-LR-comparison.png)](https://vasp.at/wiki/File:AlN-phonons-LR-comparison.png)
+
+Phonon dispersion relation of AlN (wurtzite) comparing calculations with
+and without long-range (LR) dipole corrections. Notice the
+discontinuities around the Γ-point.
+
+As described on the [theory
+page](../theory/Phonons-_Theory.md),
+the presence of long-range electrostatic interactions leads to the
+splitting of the longitudinal optical (LO) from the transverse optical
+(TO) phonon modes. Once the required dielectric properties are provided
+and [`LPHON_POLAR`](../incar-tags/LPHON_POLAR.md)` = True` is set,
+VASP automatically considers the long-range dipole-dipole contributions
+to the interatomic force constants for phonon calculations.
+
+To illustrate the importance of long-range dipole corrections, we show
+two calculations of phonons in polar materials with strong LO-TO
+splitting. First is MgO, which forms an ionic rock-salt crystal
+structure (face-centered cubic). The corresponding figure shows a
+comparison against a calculation that does not include the long-range
+dipole corrections. Both calculations were performed in a `4x4x4`
+supercell with only the Γ-point in the k-point mesh. In the case of MgO,
+the magnitude of the LO-TO splitting is considerably large, on the same
+order of magnitude as the LO phonon frequencies. Notice also the
+improved smoothness of the phonon bands when long-range corrections are
+included. Otherwise the interpolation procedure is prone to
+overshooting, resulting in unwanted oscillations.
+
+The second example is AlN in the hexagonal wurtzite structure. This
+structure is less isotropic than the rock-salt structure of MgO. In this
+case, the Born effective charges and dielectric constants associated
+with different spatial directions can be different. The phonon
+frequencies obtained by including the long-range dipole corrections are
+therefore more dependent on the direction of the phonon wave vector,
+$\mathbf{q}$. This results in
+discontinuities around the Γ-point when $\mathbf{q} \to \mathbf{0}$, as shown in the accompanying
+figure.
+
+## Practical hints
+- Bear in mind that the choice of exchange-correlation functional (e.g.,
+  GGA or hybrid functionals) can have a big impact on the [Born
+  effective
+  charges](Born_effective_charges.md) and
+  the [dielectric
+  function](../categories/Category-Dielectric_properties.md),
+  and thereby the LO-TO splitting and phonon dispersion.
+
+## Related tags and articles
+[QPOINTS](../input-files/QPOINTS.md),
+[LPHON_DISPERSION](../incar-tags/LPHON_DISPERSION.md),
+[PHON_NWRITE](../incar-tags/PHON_NWRITE.md),
+[LPHON_POLAR](../incar-tags/LPHON_POLAR.md),
+[PHON_DIELECTRIC](../incar-tags/PHON_DIELECTRIC.md),
+[PHON_BORN_CHARGES](../incar-tags/PHON_BORN_CHARGES.md),
+[PHON_G_CUTOFF](../incar-tags/PHON_G_CUTOFF.md)
+
+## References
+1.  [↑](#cite_ref-bilbao:kvec_1-0) [www.cryst.ehu.es/cryst/get_kvec.html
+    (2022).](https://www.cryst.ehu.es/cryst/get_kvec.html)
+2.  [↑](#cite_ref-seekpath_2-0)
+    [www.materialscloud.org/work/tools/seekpath
+    (2022).](https://www.materialscloud.org/work/tools/seekpath)

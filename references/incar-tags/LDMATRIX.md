@@ -1,0 +1,107 @@
+<!-- Source: https://vasp.at/wiki/index.php/LDMATRIX | revid: 32893 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# LDMATRIX
+LDMATRIX = .TRUE. \| .FALSE.  
+Default: **LDMATRIX** = .FALSE. 
+
+Description: Computes the zero-field splitting (ZFS) matrix.
+
+------------------------------------------------------------------------
+
+To compute the zero-field-splitting (ZFS) tensor due to spin-spin
+interactions in a collinear magnetic calculation
+([`ISPIN`](ISPIN.md)` = 2`), set:
+
+     LDMATRIX = True
+     # sets default LHFCALC = True ; AEXX=0.0
+
+The ZFS arises from spin-spin interactions between unpaired electrons in
+a high-spin state with a total spin $S \geq 1$. The ZFS matrix, also called D matrix, is measured in
+electron-spin resonance (ESR) experiments and provides insights into the
+local electronic environment of defect centers.
+
+The implementation follows the formalism of Rayson and Briddon
+(2008)^([\[1\]](#cite_note-rayson:prb:2008-1)), which efficiently
+evaluates the spin-spin interaction within periodic density-functional
+theory (DFT) using reciprocal space methods. This approach avoids
+expensive six-dimensional real-space integrations, leading to a stable
+and computationally efficient method. The expressions are similar to
+integrals used to evaluate the exact exchange energies for [hybrid and
+HF-type
+calculation](../methods/Category-Hybrid_functionals.md),
+hence VASP sets [`LHFCALC`](LHFCALC.md)` = True`. This
+still allows for simple DFT calculations
+([`AEXX`](AEXX.md)` = 0.0` default), however mind that the
+default symmetrization is [`ISYM`](ISYM.md)` = 3`. LDMATRIX
+should not be combined with [`ISYM`](ISYM.md)` = 1`, or `2`.
+
+## Contents
+
+- [1 Output](#Output)
+- [2 Advice](#Advice)
+- [3 Related tags an articles](#Related_tags_an_articles)
+- [4 References](#References)
+
+## Output
+The computed zero-field splitting is written in MHz to the stdout:
+
+     Jij:    -0.0003356     0.0003475    -0.0000119   965.1231107   965.1238969   965.1238508
+    -Kij:    -0.0002748    -0.0000059     0.0002807    64.8471208    64.8472015    64.8471523
+     D1c:    -0.0000541     0.0000275     0.0000267    11.1897131    11.1897125    11.1897272
+
+and the [OUTCAR](../output-files/OUTCAR.md) file:
+
+    Spin-spin contribution to zero-field splitting tensor (MHz)
+    ---------------------------------------------------------------
+         D_xx      D_yy      D_zz      D_xy      D_xz      D_yz 
+    ---------------------------------------------------------------
+         0.001     0.000    -0.001  1042.316  1020.260  1041.130
+    ---------------------------------------------------------------
+
+    after diagonalization
+    ---------------------------------------------
+        D_diag          eigenvector (x,y,z)
+    ---------------------------------------------
+     -1020.244      -0.697    -0.019     0.717
+     -1048.926      -0.427     0.814    -0.393
+      2069.171      -0.576    -0.580    -0.576
+    ---------------------------------------------
+
+## Advice
+- [Choice of PAW
+  potentials](../tutorials/Choosing_pseudopotentials.md):
+  The ZFS tensor values can be sensitive to the specific [PAW
+  potential](../categories/Category-Pseudopotentials.md)
+  used, as different
+  [pseudopotentials](../categories/Category-Pseudopotentials.md)
+  include varying number of electrons in the valence. In particular, it
+  is crucial that the states that give rise to the magnetic moment are
+  included.
+- [NUPDOWN](NUPDOWN.md) tag can be used to obtain a
+  high-spin state.
+- The LDMATRIX implementation is best tested for `vasp_std`. A bug for
+  `vasp_gam` with [`NCORE`](NCORE.md)` > 1` has been fixed,
+  see [D-matrix broken for
+  vasp_gam](../misc/Known_issues.md).
+
+|  |
+|----|
+| **Warning:** LDMATRIX cannot be used with noncollinear magnetic calculations ([LNONCOLLINEAR](LNONCOLLINEAR.md) and/or [LSORBIT](LSORBIT.md)). |
+
+- Spin-contamination corrections: Some users have modified the source
+  code to include spin-contamination corrections, particularly for
+  low-spin states ($S=0$). These
+  modifications are *not* included in the default VASP version but can
+  be implemented manually. See forum discussion:
+  [https://vasp.at/forum/viewtopic.php?p=29801p29801](https://vasp.at/forum/viewtopic.php?p=29801p29801)
+
+## Related tags an articles
+[LHFCALC](LHFCALC.md), [NUPDOWN](NUPDOWN.md),
+[ISPIN](ISPIN.md)
+
+## References
+1.  [↑](#cite_ref-rayson:prb:2008_1-0) [Rayson, M. J., and Briddon, P.
+    R., *First principles method for the calculation of zero-field
+    splitting tensors in periodic systems*, Phys. Rev. B, **77**, 035119
+    (2008).](https://doi.org/10.1103/PhysRevB.77.035119)

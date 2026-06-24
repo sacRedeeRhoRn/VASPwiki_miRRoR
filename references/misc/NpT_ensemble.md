@@ -1,0 +1,88 @@
+<!-- Source: https://vasp.at/wiki/index.php/NpT_ensemble | revid: 20295 | retrieved: 2026-06-24 -->
+<!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
+
+# NpT ensemble
+The NpT ensemble (isothermal-isobaric ensemble) is a [statistical
+ensemble](../categories/Category-Ensembles.md) that is used to
+study material properties under the conditions of a constant particle
+number N, a pressure p fluctuating around an equilibrium value
+$\langle p \rangle$ and a temperature T
+fluctuating around an equilibrium value $\langle T
+\rangle$. This page describes how to sample the NpT ensemble
+from a
+[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
+run.
+
+**Instructions for setting up an NpT ensemble**
+
+The Parinello-Rahman
+algorithm^([\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2))
+is the method of choice when setting up an NpT
+[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
+run. To use the Parinello-Rahman algorithm the [Langevin
+thermostat](../tutorials/Langevin_thermostat.md) has to be
+adjusted for an NpT simulation by setting the
+[ISIF](../incar-tags/ISIF.md)=3 in the [INCAR](../input-files/INCAR.md) file.
+Otherwise, the lattice is not allowed to change during the simulation,
+preventing VASP from keeping the pressure constant. Additionally the
+user can set [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md) as
+when simulating a [NVT ensemble](NVT_ensemble.md), the
+tag [LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md) which
+is a friction coefficient for the lattice degrees of freedom and the
+[PMASS](../incar-tags/PMASS.md) tag to assign a fictitious mass to the
+lattice degrees of freedom.
+
+|  |  |
+|----|----|
+| NpT ensemble | Langevin |
+| [MDALGO](../incar-tags/MDALGO.md) | 3 |
+| [ISIF](../incar-tags/ISIF.md) | 3 |
+| additional tags to set | [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md), [LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md) |
+| optional tags to set | [PMASS](../incar-tags/PMASS.md) |
+
+The additional tags in the column for the thermostat have to be set
+because the default values are zero resulting in a different ensemble.
+To use the NpT ensemble VASP has to be compiled with the precompiler
+flag [-Dtbdyn](../redirects/Precompiler_flags.md). A general
+guide for molecular-dynamics simulations can be found on the
+[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
+page.
+
+*An example [INCAR](../input-files/INCAR.md) file for the NpT ensemble*
+
+     #INCAR molecular-dynamics tags NpT ensemble 
+     IBRION = 0                      # choose molecular-dynamics 
+     MDALGO = 3                      # using Langevin thermostat
+     ISIF = 3                        # compute stress tensor and change box volume/shape 
+     TEBEG = 300                     # set temperature 
+     NSW = 10000                     # number of time steps 
+     POTIM = 1.0                     # time step in femto seconds 
+     LANGEVIN_GAMMA = 10.0 10.0 10.0 # Langevin friction coefficient for three atomic species
+     LANGEVIN_GAMMA_L = 10.0         # Langevin friction coefficient for lattice degrees of freedom
+     PMASS = 1000                    # the fictitious mass of the lattice degrees of freedom
+
+|  |
+|----|
+| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The [electronic minimization](../redirects/Electronic_minimization.md) or the [machine learning](../redirects/Machine-learned_force_fields.md) tags have to be added. |
+
+|  |
+|----|
+| **Warning:** Calculations of systems with limited long-range order (e.g. liquids) may lead to irreversible deformations of the cell within this ensemble. For those systems one must use an [ICONST](../input-files/ICONST.md) file containing constraints for the Bravais lattice. |
+
+## Related tags and articles
+[Molecular-dynamics
+calculations](../redirects/Molecular_dynamics_calculations.md),
+[ISIF](../incar-tags/ISIF.md), [MDALGO](../incar-tags/MDALGO.md),
+[LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md),
+[LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md),
+[PMASS](../incar-tags/PMASS.md),
+[Ensembles](../categories/Category-Ensembles.md),
+[ICONST](../input-files/ICONST.md)
+
+## References
+1.  [↑](#cite_ref-parrinello:prl:1980_1-0) [M. Parrinello and A. Rahman,
+    Phys. Rev. Lett. **45**, 1196
+    (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
+2.  [↑](#cite_ref-parrinello:jap:1981_2-0) [M. Parrinello and A.
+    Rahman, J. Appl. Phys. **52**, 7182
+    (1981).](https://doi.org/10.1063/1.328693)
