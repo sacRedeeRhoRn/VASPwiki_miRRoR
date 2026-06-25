@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LOCALIZED_BASIS
-LOCALIZED_BASIS = MLWF \| BLOCH \| LOCPROJ 
+
+
+LOCALIZED_BASIS = MLWF \|
+BLOCH \| LOCPROJ 
 
 Description: Specifies which basis is used for Coulomb matrix elements
 in constrained random-phase approximation (cRPA) calculations.
@@ -30,7 +33,11 @@ basis](../incar-tags/LWANNIER90.md) for the states 1, 4, 5 and 8
 defined in the [INCAR](../input-files/INCAR.md) file or read from the
 [WANPROJ](../input-files/WANPROJ.md) file.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LOCALIZED_BASIS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](../incar-tags/ALGO.md),
 [NCRPA_BANDS](../incar-tags/NCRPA_BANDS.md),
 [NTARGET_STATES](../incar-tags/NTARGET_STATES.md),
@@ -40,3 +47,5 @@ defined in the [INCAR](../input-files/INCAR.md) file or read from the
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LOCALIZED_BASIS-_incategory-Howto)
+
+

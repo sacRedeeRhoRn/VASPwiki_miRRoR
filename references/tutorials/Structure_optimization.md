@@ -2,20 +2,42 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Structure optimization
+
+
+
 ## Contents
 
-- [1 Overview](#Overview)
-- [2 Common considerations](#Common_considerations)
-- [3 RMM-DIIS](#RMM-DIIS)
-  - [3.1 Understanding the output](#Understanding_the_output)
-- [4 Conjugate gradient](#Conjugate_gradient)
-  - [4.1 Understanding the output](#Understanding_the_output_2)
-- [5 Damped molecular dynamics](#Damped_molecular_dynamics)
-  - [5.1 Understanding the output](#Understanding_the_output_3)
-- [6 Related tags and articles](#Related_tags_and_articles)
-- [7 References](#References)
 
-## Overview
+- [1
+  Overview](#Overview)
+- [2 Common
+  considerations](#Common_considerations)
+- [3
+  RMM-DIIS](#RMM-DIIS)
+  - [3.1
+    Understanding the
+    output](#Understanding_the_output)
+- [4 Conjugate
+  gradient](#Conjugate_gradient)
+  - [4.1
+    Understanding the
+    output](#Understanding_the_output_2)
+- [5 Damped
+  molecular dynamics](#Damped_molecular_dynamics)
+  - [5.1
+    Understanding the
+    output](#Understanding_the_output_3)
+- [6 Related tags
+  and articles](#Related_tags_and_articles)
+- [7
+  References](#References)
+
+
+## Overview\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Overview">edit</a> \| (./index.php.md)\]
+
 Structure optimization describes the task of finding the lattice vectors
 and atom positions that minimize the energy of the system. In its most
 general form, this optimization problem is extremely challenging because
@@ -27,15 +49,26 @@ structure is close enough to a minimum for the optimizers to work. (ii)
 You may need to consider a diverse set of starting structures, if you
 are not sure about the most reasonable one.
 
-There is a lecture on [structure
-optimization](https://youtu.be/gwA0KtAcmH4) available on our YouTube
+There is a lecture on
+<a href="https://youtu.be/gwA0KtAcmH4" class="external text"
+rel="nofollow">structure optimization</a> available on our YouTube
 channel.
 
-## Common considerations
-[![](https://vasp.at/wiki/images/thumb/e/eb/Structure_optimization.png/600px-Structure_optimization.png)](https://vasp.at/wiki/File:Structure_optimization.png)
+## Common considerations\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Common considerations">edit</a> \| (./index.php.md)\]
 
-Figure 1: Heuristics for choosing a suitable structure optimization
-algorithm.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Structure_optimization.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/eb/Structure_optimization.png/600px-Structure_optimization.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/eb/Structure_optimization.png/900px-Structure_optimization.png 1.5x, /wiki/images/thumb/e/eb/Structure_optimization.png/1200px-Structure_optimization.png 2x"
+width="600" height="291" /></a>
+<figcaption>Figure 1: Heuristics for choosing a suitable structure
+optimization algorithm.</figcaption>
+</figure>
 
 Typically, optimization problems are more difficult to solve, the more
 free parameters they have. In VASP, you can control the degrees of
@@ -87,16 +120,21 @@ obtain the optimal step size.
 |----|
 | **Mind:** If you use the default value of [`ISYM`](../incar-tags/ISYM.md)` = 2`, lower symmetry structures will be inaccessible to the relaxation algorithms. It is usually preferable to break symmetries intentionally by modifying the starting structure instead of turning symmetry operations off via [`ISYM`](../incar-tags/ISYM.md)` = 0`. |
 
-## RMM-DIIS
+## RMM-DIIS\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: RMM-DIIS">edit</a> \| (./index.php.md)\]
+
 For [`IBRION`](../incar-tags/IBRION.md)` = 1`, VASP uses a RMM-DIIS
 algorithm to relax the ions into their instantaneous groundstate.
 RMM-DIIS stands for *residual-minimization method, direct inversion in
-the iterative subspace*.^([\[1\]](#cite_note-pulay:cpl:1980-1)) The
-forces and the stress tensor determine the search directions for finding
-the equilibrium positions; the total energy is not taken into account.
-This algorithm is very fast and efficient close to a local minimum, but
-fails badly if the initial positions are a bad guess (use [conjugate
-gradient](#Conjugate_gradient) instead).
+the iterative
+subspace*.<sup>[\[1\]](#cite_note-pulay:cpl:1980-1)</sup>
+The forces and the stress tensor determine the search directions for
+finding the equilibrium positions; the total energy is not taken into
+account. This algorithm is very fast and efficient close to a local
+minimum, but fails badly if the initial positions are a bad guess (use
+[conjugate gradient](#Conjugate_gradient) instead).
 
 RMM-DIIS implicitly calculates an approximation of the inverse Hessian
 matrix by taking into account information from previous iterations. The
@@ -125,7 +163,11 @@ significantly. We recommend to find an optimal
 [`IBRION`](../incar-tags/IBRION.md)` = 2` or performing a few test
 calculations (see above).
 
-### Understanding the output
+### Understanding the output\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Understanding the output">edit</a> \| (./index.php.md)\]
+
 RMM-DIIS will produce output similar to the following to *stdout*
 
     BRION: g(F)=  0.463E-01 g(S)=  0.000E+00 retain N=  2 mean eig= 5.94
@@ -146,7 +188,11 @@ respectively. VASP also reports the eigenvalues of the approximate
 Hessian and how many vectors are currently stored in the iteration
 history.
 
-## Conjugate gradient
+## Conjugate gradient\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Conjugate gradient">edit</a> \| (./index.php.md)\]
+
 In the conjugate-gradient algorithm
 [`IBRION`](../incar-tags/IBRION.md)` = 2`, we optimize the structure along
 a search direction. The initial search direction is given by forces and
@@ -154,7 +200,8 @@ stress; in subsequent steps, we require that the search is conjugate
 (perpendicular) to the previous direction. Once the search direction is
 chosen, a line search along this direction determines the optimal step
 size. *Numerical Recipes* by Press *et al.* contains more details about
-conjugate gradient.^([\[2\]](#cite_note-press:book:1986-2))
+conjugate
+gradient.<sup>[\[2\]](#cite_note-press:book:1986-2)</sup>
 
 In VASP, the line search along the search direction uses the following
 steps
@@ -170,13 +217,17 @@ steps
     current search direction vanish, we perform the next trial step.
     Otherwise, we improve the line minimization by further corrector
     steps using a variant of Brent's
-    algorithm.^([\[2\]](#cite_note-press:book:1986-2))
+    algorithm.<sup>[\[2\]](#cite_note-press:book:1986-2)</sup>
 
 |  |
 |----|
 | **Tip:** If your structure is well suited for the conjugate-gradient algorithm, you should see one initial calculation for the structure in the [POSCAR](../input-files/POSCAR.md) file. Then, VASP should alternate between trial and corrector step. |
 
-### Understanding the output
+### Understanding the output\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Understanding the output">edit</a> \| (./index.php.md)\]
+
 In a trial step, you will see similar output like this in the *stdout*
 
     trial-energy change:   -0.415121  1 .order   -0.385587   -0.435540   -0.335634
@@ -229,21 +280,24 @@ Occasionally, you may get output from *ZBRENT*. This indicates that the
 error in the corrector step was too large and the line search is further
 refined.
 
-## Damped molecular dynamics
+## Damped molecular dynamics\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Damped molecular dynamics">edit</a> \| (./index.php.md)\]
+
 With [`IBRION`](../incar-tags/IBRION.md)` = 3` and
 [SMASS](../incar-tags/SMASS.md), VASP will execute a damped second order
 equation of motion for the degrees of freedom
 
-${\ddot {\vec x}} = -2 \alpha {\vec F} - \mu {\dot
-{\vec x}},$
+${\ddot {\vec x}} = -2 \alpha {\vec F} - \mu {\dot {\vec x}},$
 
 where [SMASS](../incar-tags/SMASS.md) supplies the damping factor μ and
 [POTIM](../incar-tags/POTIM.md) controls α. Discretising the differential
 equation with a simple velocity Verlet algorithm yields
 
-$\begin{align} {\vec v_{N+1/2}} =& \frac{(2-\mu)
-{\vec v_{N-1/2}} - 4\alpha {\vec F_N}} {2+\mu}\\ {\vec x_{N+1}} =&
-{\vec x_{N}} + {\vec v_{N+1/2}} \end{align}$
+$\begin{align} {\vec v_{N+1/2}} =& \frac{(2-\mu) {\vec v_{N-1/2}} -
+4\alpha {\vec F_N}} {2+\mu}\\ {\vec x_{N+1}} =& {\vec x_{N}} + {\vec
+v_{N+1/2}} \end{align}$
 
 One may immediately recognize, that μ=2 is equivalent to a simple
 steepest descent algorithm without line optimization. Hence, μ=2
@@ -269,8 +323,8 @@ conjugate gradient method by a factor of two.
 If [`SMASS`](../incar-tags/SMASS.md)` < 0` a velocity quench algorithm is
 used.
 
-$\vec v_{\rm quench} = \rm{max}((\vec v + \alpha
-\vec F) \cdot \vec F, 0) \frac{\vec F}{F^2} + \alpha \vec F$
+$\vec v_{\rm quench} = \rm{max}((\vec v + \alpha \vec F) \cdot \vec F,
+0) \frac{\vec F}{F^2} + \alpha \vec F$
 
 You can see that velocities are projected onto the forces and only
 remain if that projection is a positive number.
@@ -279,7 +333,11 @@ remain if that projection is a positive number.
 |----|
 | **Mind:** For [`IBRION`](../incar-tags/IBRION.md)` = 3`, a reasonable time step [POTIM](../incar-tags/POTIM.md) *must* be supplied. Too large time steps will result in divergence, too small ones will slow down the convergence. A good choice is usually twice the *smallest* step size you would observe with the conjugate gradient algorithm. |
 
-### Understanding the output
+### Understanding the output\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Understanding the output">edit</a> \| (./index.php.md)\]
+
 Damped molecular dynamics produces relatively little output compared to
 the other two algorithms. If [SMASS](../incar-tags/SMASS.md) is set to a
 value larger than 0, you will see output like this in *stdout*
@@ -296,15 +354,30 @@ In both cases *g(F)* and *g(S)* are the norm of forces and stress. The
 extra line in the latter case is a sanity check on the average
 velocities and should produce vanishingly small numbers.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [POTIM](../incar-tags/POTIM.md),
 [NSW](../incar-tags/NSW.md), [SMASS](../incar-tags/SMASS.md)
 
-## References
-1.  [↑](#cite_ref-pulay:cpl:1980_1-0) [P. Pulay, Chem. Phys. Lett.
-    **73**, 393 (1980).](https://doi.org/10.1016/0009-2614(80)80396-4)
-2.  ↑ ^([a](#cite_ref-press:book:1986_2-0))
-    ^([b](#cite_ref-press:book:1986_2-1)) [W. H. Press, B. P.
-    Flannery, S. A. Teukolsky, and W. T. Vetterling, em Numerical
-    Recipes (Cambridge University Press, New York,
-    1986).](https://archive.org/details/numericalrecipes00pres)
+## References\[<a
+href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-pulay:cpl:1980_1-0)
+    <a href="https://doi.org/10.1016/0009-2614(80)80396-4"
+    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett.
+    <strong>73</strong>, 393 (1980).</a>
+2.  ↑
+    <sup>[a](#cite_ref-press:book:1986_2-0)</sup>
+    <sup>[b](#cite_ref-press:book:1986_2-1)</sup>
+    <a href="https://archive.org/details/numericalrecipes00pres"
+    class="external text" rel="nofollow">W. H. Press, B. P. Flannery, S. A.
+    Teukolsky, and W. T. Vetterling, em Numerical Recipes (Cambridge
+    University Press, New York, 1986).</a>
+
+

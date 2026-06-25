@@ -2,14 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IFC_ASR
+
+
 IFC_ASR = \[integer\]  
 Default: **IFC_ASR** = 1 
 
 Description: If positive, enforces the acoustic sum rule on the
 interatomic force constants during an electron-phonon calculation.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -22,14 +24,20 @@ interpolation of the IFC
 matrix](../tutorials/Computing_the_phonon_dispersion_and_DOS.md)
 can become imaginary.
 
-By setting `IFC_ASR`` > 0`, the ASR is explicitly enforced on the IFC
-matrix via an iterative scheme. The number of iterations is also given
-by IFC_ASR.
+By setting `IFC_ASR`` > 0`,
+the ASR is explicitly enforced on the IFC matrix via an iterative
+scheme. The number of iterations is also given by
+IFC_ASR.
 
 |  |
 |----|
 | **Mind:** `IFC_ASR`` = -2` has a special meaning. Usually, the IFC matrix is forced to be symmetric. However, if `IFC_ASR`` = -2`, then the IFC matrix is neither forced to be symmetric nor is the ASR applied. We do not recommend to use this setting. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=IFC_ASR&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_IGNORE_IMAG_PHONONS](ELPH_IGNORE_IMAG_PHONONS.md)
+
+

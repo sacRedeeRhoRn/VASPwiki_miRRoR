@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Electron-phonon accumulators
+
+
 Performing electron-phonon calculations using the , for example, to
 compute [transport
 coefficients](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
@@ -13,22 +15,35 @@ matrix elements in the electron–phonon module. It allows to perform a
 single VASP run while evaluating multiple derived quantities—such as
 transport coefficients under different scattering approximations or at
 varying chemical potentials—without recalculating the matrix elements
-(for more information on the theory of chemical potentials see [chemical
-potential](../redirects/Chemical_potential.md)). The
-accumulator technique circumvents the need to repeat these calculations
-for every set of parameters.
+(for more information on the theory of chemical potentials see
+<a href="/wiki/Chemical_potential" class="mw-redirect"
+title="Chemical potential">chemical potential</a>). The accumulator
+technique circumvents the need to repeat these calculations for every
+set of parameters.
+
 
 ## Contents
 
-- [1 How it works](#How_it_works)
-- [2 Output](#Output)
-  - [2.1 Plain-text output in the OUTCAR
-    file](#Plain-text_output_in_the_OUTCAR_file)
-  - [2.2 Binary output in the vaspout.h5 HDF5
-    file](#Binary_output_in_the_vaspout.h5_HDF5_file)
-- [3 Related tags and articles](#Related_tags_and_articles)
 
-## How it works
+- [1 How it
+  works](#How_it_works)
+- [2
+  Output](#Output)
+  - [2.1 Plain-text
+    output in the OUTCAR
+    file](#Plain-text_output_in_the_OUTCAR_file)
+  - [2.2 Binary
+    output in the vaspout.h5 HDF5
+    file](#Binary_output_in_the_vaspout.h5_HDF5_file)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## How it works\[<a
+href="/wiki/index.php?title=Electron-phonon_accumulators&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How it works">edit</a> \| (./index.php.md)\]
+
 The basic idea behind accumulators is to separate the calculation of
 matrix elements from their subsequent use. Once computed, these elements
 are “accumulated” into different bins corresponding to various parameter
@@ -60,14 +75,22 @@ with negligible additional computational cost.
 |----|
 | **Mind:** Different temperatures supplied via [ELPH_SELFEN_TEMPS](../incar-tags/ELPH_SELFEN_TEMPS.md) will *not* create additional accumulators. The temperatures are handled as an array inside each accumulator. |
 
-## Output
+## Output\[<a
+href="/wiki/index.php?title=Electron-phonon_accumulators&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The output of each accumulator is provided in the
 [OUTCAR](../output-files/OUTCAR.md) file as well as in the
 [vaspout.h5](../output-files/Vaspout.h5.md) file. In both cases, each
 accumulator is labeled by a unique ID that simply counts the number of
 accumulators. In this section, we explain the format of the output.
 
-### Plain-text output in the [OUTCAR](../output-files/OUTCAR.md) file
+### Plain-text output in the [OUTCAR](../output-files/OUTCAR.md) file\[<a
+href="/wiki/index.php?title=Electron-phonon_accumulators&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Plain-text output in the OUTCAR file">edit</a> \| (./index.php.md)\]
+
 In the [OUTCAR](../output-files/OUTCAR.md) file, each accumulator is first
 listed with its ID, `N`, and all the relevant information that defines
 this accumulator is written in a corresponding block. Here is an example
@@ -220,7 +243,11 @@ Transport for self-energy accumulator N=     2
 This allows us to identify the first data set (`N = 1`) as the CRTA
 calculation and the second data set (`N = 2`) as the SERTA calculation.
 
-### Binary output in the [vaspout.h5](../output-files/Vaspout.h5.md) HDF5 file
+### Binary output in the [vaspout.h5](../output-files/Vaspout.h5.md) HDF5 file\[<a
+href="/wiki/index.php?title=Electron-phonon_accumulators&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Binary output in the vaspout.h5 HDF5 file">edit</a> \| (./index.php.md)\]
+
 The information in each accumulator is also written to the standard
 [vaspout.h5](../output-files/Vaspout.h5.md) binary output file. In this
 case, the accumulators are organized as HDF5 groups, with the unique
@@ -279,7 +306,7 @@ or
 accumulators created via
 [ELPH_SCATTERING_APPROX](../incar-tags/ELPH_SCATTERING_APPROX.md)
 
-&nbsp;
+<!-- -->
 
 `id_size`  
 lists the number of accumulators created for each kind of parameters (in
@@ -337,7 +364,11 @@ tetrahedron              Dataset {SCALAR}
 The `id_name` is the same as in the meta-data, and the `id_idx` indexes
 the `id_size`.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Electron-phonon_accumulators&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Band-structure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -354,3 +385,5 @@ the `id_size`.
 - [ELPH_SELFEN_CARRIER_PER_CELL](../incar-tags/ELPH_SELFEN_CARRIER_PER_CELL.md)
 - [ELPH_MODE](../incar-tags/ELPH_MODE.md)
 - [ELPH_RUN](../incar-tags/ELPH_RUN.md)
+
+

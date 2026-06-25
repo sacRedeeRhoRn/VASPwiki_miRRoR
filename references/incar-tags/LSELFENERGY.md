@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LSELFENERGY
+
+
 LSELFENERGY = \[logical\]  
 Default: **LSELFENERGY** = .FALSE. 
 
@@ -10,8 +12,9 @@ calculated or not.
 
 ------------------------------------------------------------------------
 
-- If `LSELFENERGY`` = .FALSE.` (default), quasi-particle (QP) shifts are
-  evaluated.
+- If `LSELFENERGY`` = .FALSE.`
+  (default), quasi-particle (QP) shifts are evaluated.
+
 
     QP shifts <psi_nk| G(iteration)W_0 |psi_nk>: iteration 1
      for sc-GW calculations column KS-energies equals QP-energies in previous step 
@@ -27,12 +30,13 @@ calculated or not.
           5       0.4603      -0.4663     -13.7603     -12.5200     -18.1532       0.7471       2.0000       0.2167
           6       0.4603      -0.4663     -13.7603     -12.5200     -18.1532       0.7471       2.0000       0.2167
 
-- If `LSELFENERGY`` = .TRUE.`, the frequency dependent self-energy
-  $\langle \psi_{n {\mathbf{k}}} |
-  \Sigma(\omega) |\psi_{n {\mathbf{k}}} \rangle$ is
-  evaluated and printed to
+
+- If `LSELFENERGY`` = .TRUE.`,
+  the frequency dependent self-energy $\langle \psi_{n
+  {\mathbf{k}}} | \Sigma(\omega) |\psi_{n {\mathbf{k}}} \rangle$ is evaluated and printed to
   [vasprun.xml](../output-files/Vasprun.xml.md). An example output
   looks like the following:
+
 
     <varray name="selfenergy" >                                                                                                                                                                                                                                               
       <v>    -150.00000000     -25.40060536       0.24429448 </v>                                                                                                                                                                                                              
@@ -43,24 +47,39 @@ calculated or not.
       <v>    -148.50000000     -25.42762671       0.25647992 </v>                                                                                                                                                                                                              
       <v>    -148.20000000     -25.43303731       0.25888834 </v>
 
+
 To print the self-energy is a slight extra computational effort since,
 within the GW algorithms, the self-energy is usually just evaluated near
-KS eigenenergies $\epsilon_{nk}$ and
-not the entire frequency range.
+KS eigenenergies $\epsilon_{nk}$ and not the entire frequency range.
 
 |  |
 |----|
 | **Mind:** In quartic-scaling GW the self-energy is given on the real-frequency axis, while for low-scaling GW the self-energy is given on the imaginary-frequency axis. |
 
+
 ## Contents
 
-- [1 Format](#Format)
-  - [1.1 Real frequencies](#Real_frequencies)
-  - [1.2 Imaginary frequencies](#Imaginary_frequencies)
-- [2 Related tags and articles](#Related_tags_and_articles)
 
-## Format
-### Real frequencies
+- [1
+  Format](#Format)
+  - [1.1 Real
+    frequencies](#Real_frequencies)
+  - [1.2 Imaginary
+    frequencies](#Imaginary_frequencies)
+- [2 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Format\[<a
+href="/wiki/index.php?title=LSELFENERGY&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Format">edit</a> \| (./index.php.md)\]
+
+### Real frequencies\[<a
+href="/wiki/index.php?title=LSELFENERGY&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Real frequencies">edit</a> \| (./index.php.md)\]
+
 If **quartic-scaling GW algorithms** are selected, e.g.
 [ALGO](ALGO.md)=EVGW0, the first column corresponds to points
 on the real-frequency axis (in eV). The second and third columns are the
@@ -97,14 +116,20 @@ bands and **k** points, i.e., the band index is always the fastest. The
 frequency grid cannot be controlled. It is always 1000 points in the
 range of -150 to 150.
 
-### Imaginary frequencies
+### Imaginary frequencies\[<a
+href="/wiki/index.php?title=LSELFENERGY&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Imaginary frequencies">edit</a> \| (./index.php.md)\]
+
 For [low-scaling GW
 algorithms](../methods/Practical_guide_to_GW_calculations.md),
 the QP shifts are evaluated and printed to
-[OUTCAR](../output-files/OUTCAR.md) for both, LSELFENERGY=T and F. For
-LSELFENERGY=T, the [vasprun.xml](../output-files/Vasprun.xml.md) file
-additionally contains the self-energy for a given band index and **k**
-point on the imaginary-frequency axis:
+[OUTCAR](../output-files/OUTCAR.md) for both,
+LSELFENERGY=T and F. For
+LSELFENERGY=T, the
+[vasprun.xml](../output-files/Vasprun.xml.md) file additionally
+contains the self-energy for a given band index and **k** point on the
+imaginary-frequency axis:
 
     <varray name="selfenergy along imaginary axis" >                                                                                                                                                                                                                          
       <v>       0.1570801806644298    -23.7971327349915711     -0.0179645094529067</v>                                                                                                                                                                                         
@@ -117,12 +142,17 @@ To identify the band index and **k** point, the ordering has to be taken
 from the QP shifts block in the [OUTCAR](../output-files/OUTCAR.md). The
 band index is faster than the **k** point. The imaginary frequency is
 selected by the Minimax
-routines^([\[1\]](#cite_note-Kaltak:PRB:2020-1)), and the number of
-points depends on [NOMEGA](NOMEGA.md).
+routines<sup>[\[1\]](#cite_note-Kaltak:PRB:2020-1)</sup>,
+and the number of points depends on [NOMEGA](NOMEGA.md).
 
-## Related tags and articles
-- for a practical guide to [GW
-  calculations](../redirects/GW_calculations.md)
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LSELFENERGY&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+- for a practical guide to
+  <a href="/wiki/GW_calculations" class="mw-redirect"
+  title="GW calculations">GW calculations</a>
 - [ALGO](ALGO.md) for response functions and *RPA*
   calculations
 - [LFINITE_TEMPERATURE](LFINITE_TEMPERATURE.md)
@@ -135,6 +165,10 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSELFENERGY-_incategory-Exam
 
 ------------------------------------------------------------------------
 
-1.  [↑](#cite_ref-Kaltak:PRB:2020_1-0) [M. Kaltak and G. Kresse, Phys.
-    Rev. B. **101**, 205145
-    (2020).](https://doi.org/10.1103/PhysRevB.101.205145)
+
+1.  [↑](#cite_ref-Kaltak:PRB:2020_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
+    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
+    B. <strong>101</strong>, 205145 (2020).</a>
+
+

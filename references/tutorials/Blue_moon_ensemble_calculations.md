@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Blue moon ensemble calculations
+
+
 The information needed to determine the blue moon ensemble averages
 within a [Constrained molecular
 dynamics](../categories/Category-Constrained_molecular_dynamics.md)
@@ -17,7 +19,8 @@ step in the file [REPORT](../output-files/REPORT.md):
   
 with the four numerical terms indicating $\lambda_{\xi_k}$, $|Z|^{-1/2}$, $\left ( \frac{k_B T}{2 |Z|}
 \sum_{j=1}^{r}(Z^{-1})_{kj} \sum_{i=1}^{3N} m_i^{-1}\nabla_i \xi_j
-\cdot \nabla_i |Z| \right )$, and $\left ( |Z|^{-1/2} \[\lambda_k +\frac{k_B T}{2 |Z|}
+\cdot \nabla_i |Z| \right )$, and
+$\left ( |Z|^{-1/2} \[\lambda_k +\frac{k_B T}{2 |Z|}
 \sum_{j=1}^{r}(Z^{-1})_{kj} \sum_{i=1}^{3N} m_i^{-1}\nabla_i \xi_j
 \cdot \nabla_i |Z|\] \right )$, respectively.
 
@@ -29,18 +32,19 @@ with the four numerical terms indicating $\lambda_{\xi_k}$, $|Z|^{-1/2}$, $\left
 
 Note that one line introduced by the string 'b_m\>' is written for each
 constrained coordinate. With this output, the free energy gradient with
-respect to the fixed coordinate ${\xi_k}$ can conveniently be determined (by the equation given above)
-as a ratio between averages of the last and the second numerical terms.
-In the simplest case when only one constraint is used, the free energy
-gradient can be obtained as follows:
+respect to the fixed coordinate ${\xi_k}$ can
+conveniently be determined (by the equation given above) as a ratio
+between averages of the last and the second numerical terms. In the
+simplest case when only one constraint is used, the free energy gradient
+can be obtained as follows:
 
     grep b_m REPORT |awk 'BEGIN {a=0.;b=0.} {a+=$5;b+=$3} END {print a/b}'
 
 As an example of a blue moon ensemble average, let us consider the
 calculation of an unbiased potential energy average from constrained MD.
 For simplicity, only a single constraint is assumed. Here we extract
-$|Z|^{-1/2}$ for each step and store
-the data in an auxiliary file zet.dat:
+$|Z|^{-1/2}$ for each step and store the data in an
+auxiliary file zet.dat:
 
     grep b_m REPORT |awk '{print $3}' > zet.dat
 
@@ -54,7 +58,11 @@ formula shown above:
 
     paste energy.dat zet.dat |awk 'BEGIN {a=0.;b=0.} {a+=$1*$2;b+=$2} END {print a/b}'
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Blue_moon_ensemble_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md),
 [SHAKEMAXITER](../incar-tags/SHAKEMAXITER.md),
 [SHAKETOL](../incar-tags/SHAKETOL.md),
@@ -62,3 +70,5 @@ formula shown above:
 [LBLUEOUT](../incar-tags/LBLUEOUT.md), [REPORT](../output-files/REPORT.md)
 
 [Blue moon ensemble](../theory/Blue_moon_ensemble.md)
+
+

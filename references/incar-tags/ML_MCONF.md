@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_MCONF
+
+
 ML_MCONF = \[integer\]  
 Default: **ML_MCONF** = see below 
 
@@ -11,9 +13,9 @@ method.
 
 ------------------------------------------------------------------------
 
-The defaults for ML_MCONF are different for each different
-[ML_MODE](ML_MODE.md) setting. Here are the defaults for
-each mode:
+The defaults for ML_MCONF are
+different for each different [ML_MODE](ML_MODE.md) setting.
+Here are the defaults for each mode:
 
 - [ML_MODE](ML_MODE.md)='TRAIN':
   - No [ML_AB](../input-files/ML_AB.md) present (learning from scratch):
@@ -34,7 +36,8 @@ using the following definition:
 The default value for [ML_MODE](ML_MODE.md)=*TRAIN* is
 usually a safe value for solids and easy-to-learn liquids but should be
 set to a higher value as soon as it is reached. When this happens the
-code stops and gives an error instructing to increase ML_MCONF.
+code stops and gives an error instructing to increase
+ML_MCONF.
 
 This flag sets also the maximum number of rows for the design matrix,
 which is usually a huge matrix. The design matrix is to be allocated
@@ -49,7 +52,10 @@ allocation. The design matrix is fully distributed in a block cyclic
 fashion for scaLAPACK and should almost perfectly linearly scale with
 the number of used processors.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ML_MCONF&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_FF_MCONF-_incategory-Examples)
 
@@ -58,3 +64,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_FF_MCONF-_incategory-Exam
 [ML_LMLFF](ML_LMLFF.md),
 [ML_MCONF_NEW](ML_MCONF_NEW.md),
 [ML_MB](ML_MB.md)
+
+

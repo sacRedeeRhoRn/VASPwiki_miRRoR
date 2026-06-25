@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # XC functional
+
+
+
 Redirect to:
 
 - [Category:Exchange-correlation
   functionals](../categories/Category-Exchange-correlation_functionals.md)
+
+

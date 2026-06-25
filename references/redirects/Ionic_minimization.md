@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Ionic minimization
+
+
+
 Redirect to:
 
 - [Category:Ionic
   minimization](../categories/Category-Ionic_minimization.md)
+
+

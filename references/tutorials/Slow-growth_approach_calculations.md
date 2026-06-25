@@ -2,7 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Slow-growth approach calculations
-## Anderson thermostat
+
+
+## Anderson thermostat\[<a
+href="/wiki/index.php?title=Slow-growth_approach_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Anderson thermostat">edit</a> \| (./index.php.md)\]
+
 - For a slow-growth simulation, one has to perform a calcualtion very
   similar to [Constrained molecular
   dynamics](../theory/Constrained_molecular_dynamics.md)
@@ -22,13 +28,17 @@
 4.  When the free-energy gradient is to be computed, set
     [LBLUEOUT](../incar-tags/LBLUEOUT.md)=.TRUE.
 
-&nbsp;
+<!-- -->
 
 5.  Specify the transformation velocity-related
     [INCREM](../incar-tags/INCREM.md)-tag for each geometric parameter
     with `STATUS=0`.
 
-## Nose-Hoover thermostat
+## Nose-Hoover thermostat\[<a
+href="/wiki/index.php?title=Slow-growth_approach_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Nose-Hoover thermostat">edit</a> \| (./index.php.md)\]
+
 - For a slow-growth approach run with Nose-Hoover thermostat, one has
   to:
 
@@ -43,7 +53,7 @@
 4.  When the free-energy gradient is to be computed, set
     [LBLUEOUT](../incar-tags/LBLUEOUT.md)=.TRUE.
 
-&nbsp;
+<!-- -->
 
 5.  Specify the transformation velocity-related
     [INCREM](../incar-tags/INCREM.md)-tag for each geometric parameter
@@ -62,7 +72,11 @@ the [SHAKE algorithm](#SHAKE). Hard constraints may also be used in
 constraints is written onto the [REPORT](../output-files/REPORT.md)-file:
 check the lines following the string: `Const_coord`
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Slow-growth_approach_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md), [INCREM](../incar-tags/INCREM.md),
 [SHAKEMAXITER](../incar-tags/SHAKEMAXITER.md),
 [SHAKETOL](../incar-tags/SHAKETOL.md),
@@ -71,3 +85,5 @@ check the lines following the string: `Const_coord`
 
 [Slow-growth
 approach](../theory/Slow-growth_approach.md)
+
+

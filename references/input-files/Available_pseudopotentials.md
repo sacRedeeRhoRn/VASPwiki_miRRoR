@@ -2,76 +2,116 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Available pseudopotentials
+
+
 [Pseudopotentials](../categories/Category-Pseudopotentials.md)
 are stored in [POTCAR](POTCAR.md) files and are available
-for all elements in the periodic table from the [VASP
-Portal](https://www.vasp.at/sign_in/portal/). The available
-pseudopotentials are mostly so-called PAW potentials that are based on
-the [projector-augmented-wave (PAW)
-method](../methods/Projector-augmented-wave_formalism.md)^([\[1\]](#cite_note-bloechl:prb:94b-1)).
+for all elements in the periodic table from the
+<a href="https://www.vasp.at/sign_in/portal/" class="external text"
+rel="nofollow">VASP Portal</a>. The
+available pseudopotentials are
+mostly so-called PAW potentials that are based on the
+[projector-augmented-wave (PAW)
+method](../methods/Projector-augmented-wave_formalism.md)<sup>[\[1\]](#cite_note-bloechl:prb:94b-1)</sup>.
 The PAW potentials have been created following the recipes discussed in
-Ref. ^([\[2\]](#cite_note-kresse:prb:99-2)). Cite Ref.
-^([\[1\]](#cite_note-bloechl:prb:94b-1)) and Ref.
-^([\[2\]](#cite_note-kresse:prb:99-2)) when using any PAW potential.
+Ref.
+<sup>[\[2\]](#cite_note-kresse:prb:99-2)</sup>.
+Cite Ref.
+<sup>[\[1\]](#cite_note-bloechl:prb:94b-1)</sup>
+and Ref.
+<sup>[\[2\]](#cite_note-kresse:prb:99-2)</sup>
+when using any PAW potential.
 
 Also see:
 
 - Simple instructions to set up a [POTCAR](POTCAR.md) file
-  with the correct format: [Prepare a
-  POTCAR](../redirects/Prepare_a_POTCAR.md).
+  with the correct format:
+  <a href="/wiki/Prepare_a_POTCAR" class="mw-redirect"
+  title="Prepare a POTCAR">Prepare a POTCAR</a>.
 
-&nbsp;
+<!-- -->
 
 - Guide on **recommendations** and checks to decide which
   pseudopotential flavor to use for a specific calculation: [Choosing
   pseudopotentials](../tutorials/Choosing_pseudopotentials.md).
 
+
 ## Contents
 
-- [1 Available pseudopotential sets](#Available_pseudopotential_sets)
-  - [1.1 potpaw.64 (latest,
-    recommended)](#potpaw.64_(latest,_recommended))
-    - [1.1.1 Standard potentials](#Standard_potentials)
-    - [1.1.2 GW potentials](#GW_potentials)
-  - [1.2 potpaw.54](#potpaw.54)
-    - [1.2.1 Standard potentials](#Standard_potentials_2)
-    - [1.2.2 GW potentials](#GW_potentials_2)
-  - [1.3 potpaw.52](#potpaw.52)
-    - [1.3.1 Standard potentials](#Standard_potentials_3)
-    - [1.3.2 GW potentials](#GW_potentials_3)
-  - [1.4 LDA (2010), PW91 (2006) and PBE (2010) PAW
-    potentials](#LDA_(2010),_PW91_(2006)_and_PBE_(2010)_PAW_potentials)
-    - [1.4.1 Standard potentials](#Standard_potentials_4)
-    - [1.4.2 GW potentials](#GW_potentials_4)
-  - [1.5 Ultrasoft pseudopotentials for LDA and PW91
-    (2002)](#Ultrasoft_pseudopotentials_for_LDA_and_PW91_(2002))
-  - [1.6 LDA & PBE, 5.2 & 5.4 (original univie release
-    version)](#LDA_&_PBE,_5.2_&_5.4_(original_univie_release_version))
-- [2 Different variants specified by the
-  suffix](#Different_variants_specified_by_the_suffix)
-- [3 Related tags and sections](#Related_tags_and_sections)
-- [4 References](#References)
 
-## Available pseudopotential sets
+- [1 Available
+  pseudopotential sets](#Available_pseudopotential_sets)
+  - [1.1 potpaw.64
+    (latest, recommended)](#potpaw.64_(latest,_recommended))
+    - [1.1.1
+      Standard
+      potentials](#Standard_potentials)
+    - [1.1.2 GW
+      potentials](#GW_potentials)
+  - [1.2
+    potpaw.54](#potpaw.54)
+    - [1.2.1
+      Standard
+      potentials](#Standard_potentials_2)
+    - [1.2.2 GW
+      potentials](#GW_potentials_2)
+  - [1.3
+    potpaw.52](#potpaw.52)
+    - [1.3.1
+      Standard
+      potentials](#Standard_potentials_3)
+    - [1.3.2 GW
+      potentials](#GW_potentials_3)
+  - [1.4 LDA
+    (2010), PW91 (2006) and PBE (2010) PAW
+    potentials](#LDA_(2010),_PW91_(2006)_and_PBE_(2010)_PAW_potentials)
+    - [1.4.1
+      Standard
+      potentials](#Standard_potentials_4)
+    - [1.4.2 GW
+      potentials](#GW_potentials_4)
+  - [1.5 Ultrasoft
+    pseudopotentials for LDA and PW91
+    (2002)](#Ultrasoft_pseudopotentials_for_LDA_and_PW91_(2002))
+  - [1.6 LDA & PBE,
+    5.2 & 5.4 (original univie release
+    version)](#LDA_&_PBE,_5.2_&_5.4_(original_univie_release_version))
+- [2 Different
+  variants specified by the
+  suffix](#Different_variants_specified_by_the_suffix)
+- [3 Related tags
+  and sections](#Related_tags_and_sections)
+- [4
+  References](#References)
+
+
+## Available pseudopotential sets\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Available pseudopotential sets">edit</a> \| (./index.php.md)\]
+
 The tables list all available pseudopotentials split between
 
 - *standard potentials*: these are intended for treating mostly occupied
   states and are appropriate for calculations within density-functional
   theory, and
 
-&nbsp;
+<!-- -->
 
 - *GW potentials*: these are optimized for treating unoccupied states
   far above the Fermi level and have an [\_GW
   suffix](#Different_variants_specified_by_the_suffix). GW potentials
-  are recommended for computing [optical
-  properties](../redirects/Optical_properties.md) and
-  calculations within [many-body perturbation
-  theory](../redirects/Many-body_perturbation_theory.md).
+  are recommended for computing
+  <a href="/wiki/Optical_properties" class="mw-redirect"
+  title="Optical properties">optical properties</a> and calculations
+  within
+  <a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+  title="Many-body perturbation theory">many-body perturbation theory</a>.
 
 The tables comprise the name of the potential, number of valence
 electrons, valence electron configuration for the reference system, and
-the cutoff energy ([ENMAX](../redirects/ENMAX.md)).
+the cutoff energy
+(<a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a>).
 
 The **bold-highlighted entries are the default recommendations**, but
 depending on the specific calculation, it might be preferable or
@@ -82,7 +122,11 @@ pseudopotential](../tutorials/Choosing_pseudopotentials.md).
 |----|
 | **Important:** Refer to the explanation of [different variants](#Different_variants_specified_by_the_suffix) to understand the suffix in the name of the potential. |
 
-### potpaw.64 (latest, recommended)
+### potpaw.64 (latest, recommended)\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: potpaw.64 (latest, recommended)">edit</a> \| (./index.php.md)")\]
+
 Updated potentials with respect to the potpaw.54 set:
 
 - Li_GW, He_GW: improved accuracy
@@ -100,7 +144,11 @@ Newly added potentials:
 - H_GW_new, B_GW_new, B_h_GW, C_s_GW
 - Dy_h, Er_h, Eu_h, Gd_h, Ho_h, Nd_h, Pm_h, Pr_h, Sm_h, Tb_h, Tm_h, Yb_h
 
-#### Standard potentials
+#### Standard potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard potentials">edit</a> \| (./index.php.md)\]
+
 Standard PAW potentials are appropriate for calculations that mainly
 involve occupied states, e.g., calculations within density-functional
 theory *without* computing optical properties.
@@ -109,670 +157,679 @@ theory *without* computing optical properties.
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 250.0 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 250.0 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **477.779** |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **498.387** |
-| **Be** | **2** | **2*s*^(1.9999) 2*p*^(0.001)** | **247.951** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.9999) 2*p*^(0.001) | 308.45 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.251 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 742.464 |
-| C_s | 4 | 2*s*² 2*p*² | 273.704 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 755.833 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.424 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 765.442 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.604 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 772.351 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.647 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.403** |
-| Na | 1 | 3*s*¹ | 101.956 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.494** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 644.874 |
-| **Mg** | **2** | **3*s*^(1.999) 3*p*^(0.001)** | **200.0** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 473.54 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.704** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.155** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.903 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.84 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.272 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.101** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.596 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.279** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.552 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.727** |
-| Sc | 3 | 3*d*² 4*s*¹ | 155.006 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.7** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.52 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.435 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.719** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.706 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.722 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.722** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.202 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.753** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.443 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.944 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.944** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.112 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.969** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.303 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.513 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **268.056** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 270.871 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.343 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.618** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.726 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.521** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.406 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.847** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.829** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.723 |
-| Ge | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.448** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.604 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.87** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.762 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.392** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 122.21 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.215** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **226.327** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.554** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **230.037** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 207.263 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.304** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.535 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.535 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **236.514** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.636 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.345** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.479 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.221 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **239.907** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.687 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.926 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.321** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.832** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.832 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.752** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.68 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.265** |
-| In | 3 | 5*s*² 5*p*¹ | 96.062 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.196** |
-| Sn | 4 | 5*s*² 5*p*² | 103.318 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.107** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.301** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.021** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.727** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.001) 6*s*^(1.999)** | **186.981** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.044** |
-| La_s | 9 | 4*f*^(0.0001) 5*p*⁶ 5*d*^(0.9999) 6*s*² | 136.594 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.088** |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.927 |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.431 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.431** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.414 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.759 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.759** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.126 |
-| **W_sv** | **14** | **5*s*² 5*p*⁶ 5*d*⁵ 6*s*¹** | **223.126** |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.25** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.25 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.023** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.023 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.837** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.228** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.53 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.869** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.142** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.239 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.001** |
-| Pb | 4 | 6*s*² 6*p*² | 98.039 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.817** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.071 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.856** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.801 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.606** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.481** |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **151.461** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.489** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.216** |
-| **Ac** | **11** | **5*f*^(0.0001) 6*s*² 6*p*⁶ 6*d*^(0.9999) 7*s*²** | **170.048** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.389** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.575 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.31** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.642 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.603** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.218 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.349** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 213.932 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.436** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 211.493 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.953** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **258.027** |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **477.779** |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **498.387** |
+| **Be** | **2** | **2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup>** | **247.951** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 308.45 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.251 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 742.464 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.704 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.833 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.424 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.442 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.604 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 772.351 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.647 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.403** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.956 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.494** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 644.874 |
+| **Mg** | **2** | **3*s*<sup>1.999</sup> 3*p*<sup>0.001</sup>** | **200.0** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 473.54 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.903 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.84 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.272 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.101** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.596 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.279** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.552 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.727** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 155.006 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.7** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.52 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.435 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.719** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.706 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.722 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.722** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.202 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.753** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.443 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.944 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.944** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.112 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.969** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.303 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.513 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **268.056** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 270.871 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.343 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.618** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.726 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.521** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.406 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.847** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.829** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.723 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.448** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.604 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.762 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.392** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 122.21 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.215** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **226.327** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.554** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **230.037** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 207.263 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.304** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **236.514** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.636 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.345** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.479 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.221 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **239.907** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.687 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.926 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.321** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.832** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.752** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.68 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.265** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 96.062 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.196** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.318 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.107** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.301** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.021** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.727** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.001</sup> 6*s*<sup>1.999</sup>** | **186.981** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.044** |
+| La_s | 9 | 4*f*<sup>0.0001</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup> | 136.594 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.088** |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.927 |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.431 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.431** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.414 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.759 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.759** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.126 |
+| **W_sv** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup>** | **223.126** |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.25** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.25 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.023** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.023 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.837** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.228** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.53 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.869** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.142** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.239 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.001** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 98.039 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.817** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.071 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.856** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.801 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.606** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.481** |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **151.461** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.489** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.216** |
+| **Ac** | **11** | **5*f*<sup>0.0001</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>0.9999</sup> 7*s*<sup>2</sup>** | **170.048** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.389** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.575 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.31** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.642 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.603** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.218 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.349** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 213.932 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.436** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 211.493 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.953** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **258.027** |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 250.0 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 250.0 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **478.896** |
-| He_AE | 2 | 1*s*² | 2135.871 |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **499.034** |
-| **Be** | **2** | **2*s*^(1.99) 2*p*^(0.01)** | **247.543** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.99) 2*p*^(0.01) | 308.768 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.245 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 741.689 |
-| C_s | 4 | 2*s*² 2*p*² | 273.911 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 755.582 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.692 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 765.519 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.853 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 772.626 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.837 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.606** |
-| Na | 1 | 3*s*¹ | 101.968 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.561** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 645.64 |
-| **Mg** | **2** | **3*s*²** | **200.0** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 495.223 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.345** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.04** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.202 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.436 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.136 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.408** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.731 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.264** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.559 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.622** |
-| Sc | 3 | 3*d*² 4*s*¹ | 154.763 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.66** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.33 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.335 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.61** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.543 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.673 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.673** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.08 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.681** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.471 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.864 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.864** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.187 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.882** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.238 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.558 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **267.968** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 271.042 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.362 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.532** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.986 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.446** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.648 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.723** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.691** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.601 |
-| Ge | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.294** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.425 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.702** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.651 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.331** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 121.882 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.112** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **229.353** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.626** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **229.898** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 208.608 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.235** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.584 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.584 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **242.676** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.694 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.523** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.703 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.271 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **240.049** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.855 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.996 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.408** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.925** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.925 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.844** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.865 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.336** |
-| In | 3 | 5*s*² 5*p*¹ | 95.934 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.211** |
-| Sn | 4 | 5*s*² 5*p*² | 103.236 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.083** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.069** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.118** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.318** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.01) 6*s*^(1.99)** | **187.181** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.292** |
-| La_s | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 136.53 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.042** |
-| Ce_3 | 11 | 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 176.506 |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.9 |
-| Pr | 13 | 4*f*^(2.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 337.25 |
-| **Pr_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **181.719** |
-| Pr_h | 13 | 4*f*^(2.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 400.742 |
-| Nd | 14 | 4*f*^(3.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 338.34 |
-| **Nd_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **182.619** |
-| Nd_h | 14 | 4*f*^(3.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 402.016 |
-| Pm | 15 | 4*f*^(4.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 340.358 |
-| **Pm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **176.959** |
-| Pm_h | 15 | 4*f*^(4.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 404.406 |
-| Sm | 16 | 4*f*^(5.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 341.177 |
-| **Sm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **177.087** |
-| Sm_h | 16 | 4*f*^(5.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 405.382 |
-| Eu | 17 | 4*f*^(6.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 344.705 |
-| **Eu_2** | **8** | **5*p*⁶ 6*s*²** | **99.328** |
-| Eu_3 | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 129.057 |
-| Eu_h | 17 | 4*f*^(6.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 403.212 |
-| Gd | 18 | 4*f*^(7.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 342.859 |
-| **Gd_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.332** |
-| Gd_h | 18 | 4*f*^(7.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 407.403 |
-| Tb | 19 | 4*f*^(8.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 340.855 |
-| **Tb_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.613** |
-| Tb_h | 19 | 4*f*^(8.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 405.043 |
-| Dy | 20 | 4*f*^(9.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 341.547 |
-| **Dy_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.713** |
-| Dy_h | 20 | 4*f*^(9.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 405.886 |
-| Ho | 21 | 4*f*^(10.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 343.845 |
-| **Ho_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.137** |
-| Ho_h | 21 | 4*f*^(10.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 415.91 |
-| Er | 22 | 4*f*^(11.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 346.295 |
-| Er_2 | 8 | 5*p*⁶ 6*s*² | 119.75 |
-| **Er_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.037** |
-| Er_h | 22 | 4*f*^(11.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 429.583 |
-| Tm | 23 | 4*f*^(12.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 344.206 |
-| **Tm_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **149.221** |
-| Tm_h | 23 | 4*f*^(12.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 419.812 |
-| Yb | 24 | 4*f*^(13.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 344.312 |
-| **Yb_2** | **8** | **5*p*⁶ 6*s*²** | **112.578** |
-| Yb_3 | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 188.359 |
-| Yb_h | 24 | 4*f*^(13.5) 5*s*² 5*p*⁶ 5*d*^(0.5) 6*s*² | 409.285 |
-| Lu | 25 | 4*f*¹⁴ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 255.695 |
-| **Lu_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.992** |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.334 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.334** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.444 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.667 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.667** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.057 |
-| **W_sv** | **14** | **5*s*² 5*p*⁶ 5*d*⁵ 6*s*¹** | **223.057** |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.216** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.216 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.022** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.022 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.864** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.283** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.607 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.943** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.204** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.14 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.053** |
-| Pb | 4 | 6*s*² 6*p*² | 97.973 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.835** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.037 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.839** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.707 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.565** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.43** |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **151.497** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.54** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.367** |
-| **Ac** | **11** | **6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **172.351** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.306** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.363 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.193** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.466 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.502** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.23 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.26** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.713 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.353** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.83 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.875** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **257.953** |
-| Cf | 20 | 5*f*⁸ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 414.614 |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **478.896** |
+| He_AE | 2 | 1*s*<sup>2</sup> | 2135.871 |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **499.034** |
+| **Be** | **2** | **2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup>** | **247.543** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup> | 308.768 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.245 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 741.689 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.911 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.582 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.692 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.519 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.853 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 772.626 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.837 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.606** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.968 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.561** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 645.64 |
+| **Mg** | **2** | **3*s*<sup>2</sup>** | **200.0** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 495.223 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.202 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.436 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.136 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.408** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.731 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.264** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.559 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.622** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 154.763 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.66** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.33 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.335 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.61** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.543 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.673 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.673** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.08 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.681** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.471 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.864 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.864** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.187 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.882** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.238 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.558 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **267.968** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 271.042 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.362 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.532** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.986 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.446** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.648 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.723** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.691** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.601 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.294** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.425 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.651 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.331** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 121.882 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.112** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **229.353** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.626** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **229.898** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 208.608 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.235** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **242.676** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.694 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.523** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.703 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.271 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **240.049** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.855 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.996 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.408** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.925** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.844** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.865 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.336** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 95.934 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.211** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.236 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.083** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.069** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.118** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.318** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.01</sup> 6*s*<sup>1.99</sup>** | **187.181** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.292** |
+| La_s | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 136.53 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.042** |
+| Ce_3 | 11 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 176.506 |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.9 |
+| Pr | 13 | 4*f*<sup>2.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 337.25 |
+| **Pr_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **181.719** |
+| Pr_h | 13 | 4*f*<sup>2.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 400.742 |
+| Nd | 14 | 4*f*<sup>3.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 338.34 |
+| **Nd_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **182.619** |
+| Nd_h | 14 | 4*f*<sup>3.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 402.016 |
+| Pm | 15 | 4*f*<sup>4.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 340.358 |
+| **Pm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **176.959** |
+| Pm_h | 15 | 4*f*<sup>4.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 404.406 |
+| Sm | 16 | 4*f*<sup>5.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 341.177 |
+| **Sm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **177.087** |
+| Sm_h | 16 | 4*f*<sup>5.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 405.382 |
+| Eu | 17 | 4*f*<sup>6.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 344.705 |
+| **Eu_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **99.328** |
+| Eu_3 | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 129.057 |
+| Eu_h | 17 | 4*f*<sup>6.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 403.212 |
+| Gd | 18 | 4*f*<sup>7.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 342.859 |
+| **Gd_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.332** |
+| Gd_h | 18 | 4*f*<sup>7.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 407.403 |
+| Tb | 19 | 4*f*<sup>8.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 340.855 |
+| **Tb_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.613** |
+| Tb_h | 19 | 4*f*<sup>8.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 405.043 |
+| Dy | 20 | 4*f*<sup>9.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 341.547 |
+| **Dy_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.713** |
+| Dy_h | 20 | 4*f*<sup>9.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 405.886 |
+| Ho | 21 | 4*f*<sup>10.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 343.845 |
+| **Ho_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.137** |
+| Ho_h | 21 | 4*f*<sup>10.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 415.91 |
+| Er | 22 | 4*f*<sup>11.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 346.295 |
+| Er_2 | 8 | 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 119.75 |
+| **Er_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.037** |
+| Er_h | 22 | 4*f*<sup>11.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 429.583 |
+| Tm | 23 | 4*f*<sup>12.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 344.206 |
+| **Tm_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **149.221** |
+| Tm_h | 23 | 4*f*<sup>12.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 419.812 |
+| Yb | 24 | 4*f*<sup>13.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 344.312 |
+| **Yb_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **112.578** |
+| Yb_3 | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 188.359 |
+| Yb_h | 24 | 4*f*<sup>13.5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.5</sup> 6*s*<sup>2</sup> | 409.285 |
+| Lu | 25 | 4*f*<sup>14</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 255.695 |
+| **Lu_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.992** |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.334 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.334** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.444 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.667 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.667** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.057 |
+| **W_sv** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup>** | **223.057** |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.216** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.216 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.022** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.022 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.864** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.283** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.607 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.943** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.204** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.14 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.053** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 97.973 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.835** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.037 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.839** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.707 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.565** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.43** |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **151.497** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.54** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.367** |
+| **Ac** | **11** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **172.351** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.306** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.363 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.193** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.466 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.502** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.23 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.26** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.713 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.353** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.83 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.875** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **257.953** |
+| Cf | 20 | 5*f*<sup>8</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 414.614 |
 
-#### GW potentials
+#### GW potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: GW potentials">edit</a> \| (./index.php.md)\]
+
 GW potentials are recommended for calculations involving unoccupied
-states, e.g., computing [optical
-properties](../redirects/Optical_properties.md) or using
-[many-body perturbation
-theory](../redirects/Many-body_perturbation_theory.md).
+states, e.g., computing
+<a href="/wiki/Optical_properties" class="mw-redirect"
+title="Optical properties">optical properties</a> or using
+<a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+title="Many-body perturbation theory">many-body perturbation theory</a>.
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **404.806** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.253 |
-| Li_GW | 1 | 2*s*¹ | 112.417 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.253** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.951 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **536.216** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| B_GW_new | 3 | 2*s*² 2*p*¹ | 318.762 |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 433.894 |
-| C_h_GW | 4 | 2*s*² 2*p*² | 742.464 |
-| C_s_GW | 4 | 2*s*² 2*p*² | 304.668 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.681** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 452.165 |
-| N_h_GW | 5 | 2*s*² 2*p*³ | 755.833 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 312.431 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.315** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 466.114 |
-| O_h_GW | 6 | 2*s*² 2*p*⁴ | 765.442 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.366 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.335** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 479.919 |
-| F_h_GW | 7 | 2*s*² 2*p*⁵ | 847.822 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **431.952** |
-| Ne_s_GW | 8 | 2*s*² 2*p*⁶ | 317.594 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*p*¹** | **372.86** |
-| Mg_GW | 2 | 3*s*² | 126.671 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **430.099** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.007 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.704** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 546.548 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.155** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **290.518** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.606** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.209** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **378.598** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **383.48** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **382.093** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **384.753** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.537 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **384.488** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.044 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **387.727** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.447 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **387.407** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.352 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **389.485** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.032 |
-| **Cu_sv_GW** | **19** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*¹** | **466.991** |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.312 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*²** | **401.745** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.723** |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 404.723 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **375.614** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 410.604 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.87** |
-| As_sv_GW | 23 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*³ | 415.514 |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| Se_sv_GW | 24 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁴ | 469.258 |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| Br_sv_GW | 25 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁵ | 475.88 |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **252.563** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **220.92** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.532** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **339.94** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **346.437** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **353.857** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **344.65** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **350.798** |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **347.881** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.321 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **350.989** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.832 |
-| **Pd_sv_GW** | **18** | **4*s*² 4*p*⁶ 4*d*¹⁰** | **355.88** |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.752 |
-| **Ag_sv_GW** | **19** | **4*s*² 4*p*⁶ 4*d*¹¹** | **354.226** |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 253.99 |
-| **Cd_sv_GW** | **20** | **4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*²** | **361.653** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.582** |
-| In_sv_GW | 21 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*¹ | 366.636 |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.086** |
-| Sn_sv_GW | 22 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*² | 368.704 |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.301 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.147** |
-| Sb_sv_GW | 23 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*³ | 372.498 |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| Te_sv_GW | 24 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁴ | 376.686 |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| I_sv_GW | 25 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁵ | 381.757 |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.528** |
-| Xe_sv_GW | 26 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁶ | 400.581 |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.012** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*²** | **237.484** |
-| **La_GW** | **11** | **4*f*^(0.2) 5*s*² 5*p*⁶ 5*d*^(0.8) 6*s*²** | **313.728** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.649** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **308.829** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **285.798** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **316.943** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **316.85** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.628** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.708** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.657 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.536** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.263 |
-| **Au_sv_GW** | **19** | **5*s*² 5*p*⁶ 5*d*¹¹** | **306.52** |
-| **Hg_sv_GW** | **20** | **5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*²** | **311.949** |
-| **Tl_d_GW** | **15** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*¹** | **237.001** |
-| Tl_sv_GW | 21 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*¹ | 316.502 |
-| **Pb_d_GW** | **16** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*²** | **237.793** |
-| Pb_sv_GW | 22 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*² | 317.138 |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.628 |
-| **Bi_d_GW** | **17** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*³** | **261.89** |
-| Bi_sv_GW | 23 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*³ | 323.502 |
-| **Po_d_GW** | **18** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*⁴** | **267.666** |
-| Po_sv_GW | 24 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁴ | 326.653 |
-| **At_d_GW** | **17** | **5*d*¹⁰ 6*s*² 6*p*⁵** | **266.303** |
-| At_sv_GW | 25 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁵ | 328.597 |
-| **Rn_d_GW** | **18** | **5*d*¹⁰ 6*s*² 6*p*⁶** | **267.397** |
-| Rn_sv_GW | 26 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁶ | 329.841 |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **404.806** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.253 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.417 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.253** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.951 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **536.216** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| B_GW_new | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 318.762 |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 433.894 |
+| C_h_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 742.464 |
+| C_s_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 304.668 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.681** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 452.165 |
+| N_h_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.833 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 312.431 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.315** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 466.114 |
+| O_h_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.442 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.366 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.335** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 479.919 |
+| F_h_GW | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 847.822 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **431.952** |
+| Ne_s_GW | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 317.594 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*p*<sup>1</sup>** | **372.86** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.671 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **430.099** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.007 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 546.548 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **290.518** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.606** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.209** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **378.598** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **383.48** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **382.093** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **384.753** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.537 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **384.488** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.044 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **387.727** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.447 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **387.407** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.352 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **389.485** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.032 |
+| **Cu_sv_GW** | **19** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **466.991** |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.312 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **401.745** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.723** |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.723 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **375.614** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.604 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| As_sv_GW | 23 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 415.514 |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| Se_sv_GW | 24 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>4</sup> | 469.258 |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| Br_sv_GW | 25 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>5</sup> | 475.88 |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **252.563** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **220.92** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.532** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **339.94** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **346.437** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **353.857** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **344.65** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **350.798** |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **347.881** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.321 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **350.989** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| **Pd_sv_GW** | **18** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **355.88** |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.752 |
+| **Ag_sv_GW** | **19** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>11</sup>** | **354.226** |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 253.99 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **361.653** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.582** |
+| In_sv_GW | 21 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 366.636 |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.086** |
+| Sn_sv_GW | 22 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 368.704 |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.301 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.147** |
+| Sb_sv_GW | 23 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 372.498 |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| Te_sv_GW | 24 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>4</sup> | 376.686 |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| I_sv_GW | 25 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>5</sup> | 381.757 |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.528** |
+| Xe_sv_GW | 26 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> | 400.581 |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.012** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>2</sup>** | **237.484** |
+| **La_GW** | **11** | **4*f*<sup>0.2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.8</sup> 6*s*<sup>2</sup>** | **313.728** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.649** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **308.829** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **285.798** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **316.943** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **316.85** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.628** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.708** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.657 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.536** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.263 |
+| **Au_sv_GW** | **19** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>11</sup>** | **306.52** |
+| **Hg_sv_GW** | **20** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **311.949** |
+| **Tl_d_GW** | **15** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.001** |
+| Tl_sv_GW | 21 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 316.502 |
+| **Pb_d_GW** | **16** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.793** |
+| Pb_sv_GW | 22 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 317.138 |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.628 |
+| **Bi_d_GW** | **17** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **261.89** |
+| Bi_sv_GW | 23 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 323.502 |
+| **Po_d_GW** | **18** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **267.666** |
+| Po_sv_GW | 24 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 326.653 |
+| **At_d_GW** | **17** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **266.303** |
+| At_sv_GW | 25 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 328.597 |
+| **Rn_d_GW** | **18** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **267.397** |
+| Rn_sv_GW | 26 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> | 329.841 |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_GW_new | 1 | 1*s*¹ | 536.615 |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **405.78** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.699 |
-| Li_GW | 1 | 2*s*¹ | 112.104 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.699** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.543 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **537.454** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| B_GW_new | 3 | 2*s*² 2*p*¹ | 318.614 |
-| B_h_GW | 3 | 2*s*² 2*p*¹ | 731.373 |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 433.983 |
-| C_h_GW | 4 | 2*s*² 2*p*² | 741.689 |
-| C_s_GW | 4 | 2*s*² 2*p*² | 304.843 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.902** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 452.633 |
-| N_h_GW | 5 | 2*s*² 2*p*³ | 755.582 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 312.986 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.635** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 466.797 |
-| O_h_GW | 6 | 2*s*² 2*p*⁴ | 765.519 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.664 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.698** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 480.281 |
-| F_h_GW | 7 | 2*s*² 2*p*⁵ | 848.626 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **432.275** |
-| Ne_s_GW | 8 | 2*s*² 2*p*⁶ | 318.26 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*p*¹** | **372.853** |
-| Mg_GW | 2 | 3*s*² | 126.143 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **429.893** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.109 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.345** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 547.578 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.04** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **290.599** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.998** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.43** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **378.961** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **383.774** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **382.321** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **384.932** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.466 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **384.627** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.007 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **387.837** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.4 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **387.491** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.323 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **389.645** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.039 |
-| **Cu_sv_GW** | **19** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*¹** | **467.331** |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.191 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*²** | **401.665** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.602** |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 404.602 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **375.434** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 410.425 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.702** |
-| As_sv_GW | 23 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*³ | 415.313 |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| Se_sv_GW | 24 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁴ | 469.344 |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| Br_sv_GW | 25 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁵ | 475.692 |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **252.232** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **221.197** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.817** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **339.758** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **346.364** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **353.872** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **344.914** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **351.044** |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **348.106** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.408 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **351.206** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.925 |
-| **Pd_sv_GW** | **18** | **4*s*² 4*p*⁶ 4*d*¹⁰** | **356.093** |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.844 |
-| **Ag_sv_GW** | **19** | **4*s*² 4*p*⁶ 4*d*¹¹** | **354.43** |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 254.045 |
-| **Cd_sv_GW** | **20** | **4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*²** | **361.806** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.624** |
-| In_sv_GW | 21 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*¹ | 366.771 |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.066** |
-| Sn_sv_GW | 22 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*² | 368.778 |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.069 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.1** |
-| Sb_sv_GW | 23 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*³ | 372.491 |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| Te_sv_GW | 24 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁴ | 376.618 |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| I_sv_GW | 25 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁵ | 381.674 |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.547** |
-| Xe_sv_GW | 26 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁶ | 400.476 |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.101** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*¹** | **267.02** |
-| **La_GW** | **11** | **4*f*^(0.2) 5*s*² 5*p*⁶ 5*d*^(0.8) 6*s*²** | **313.688** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.625** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **309.037** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **286.008** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **317.132** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **317.012** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.773** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.843** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.716 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.669** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.344 |
-| **Au_sv_GW** | **19** | **5*s*² 5*p*⁶ 5*d*¹¹** | **306.658** |
-| **Hg_sv_GW** | **20** | **5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*²** | **312.028** |
-| **Tl_d_GW** | **15** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*¹** | **237.053** |
-| Tl_sv_GW | 21 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*¹ | 316.583 |
-| **Pb_d_GW** | **16** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*²** | **237.809** |
-| Pb_sv_GW | 22 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*² | 317.193 |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.53 |
-| **Bi_d_GW** | **17** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*³** | **261.876** |
-| Bi_sv_GW | 23 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*³ | 323.513 |
-| **Po_d_GW** | **18** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*⁴** | **267.847** |
-| Po_sv_GW | 24 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁴ | 326.618 |
-| **At_d_GW** | **17** | **5*d*¹⁰ 6*s*² 6*p*⁵** | **266.251** |
-| At_sv_GW | 25 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁵ | 328.529 |
-| **Rn_d_GW** | **18** | **5*d*¹⁰ 6*s*² 6*p*⁶** | **267.347** |
-| Rn_sv_GW | 26 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁶ | 329.758 |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_GW_new | 1 | 1*s*<sup>1</sup> | 536.615 |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **405.78** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.699 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.104 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.699** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.543 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **537.454** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| B_GW_new | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 318.614 |
+| B_h_GW | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 731.373 |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 433.983 |
+| C_h_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 741.689 |
+| C_s_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 304.843 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.902** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 452.633 |
+| N_h_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.582 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 312.986 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.635** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 466.797 |
+| O_h_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.519 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.664 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.698** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 480.281 |
+| F_h_GW | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 848.626 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **432.275** |
+| Ne_s_GW | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 318.26 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*p*<sup>1</sup>** | **372.853** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.143 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **429.893** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.109 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 547.578 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **290.599** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.998** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.43** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **378.961** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **383.774** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **382.321** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **384.932** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.466 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **384.627** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.007 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **387.837** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.4 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **387.491** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.323 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **389.645** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.039 |
+| **Cu_sv_GW** | **19** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **467.331** |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.191 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **401.665** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.602** |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.602 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **375.434** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.425 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| As_sv_GW | 23 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 415.313 |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| Se_sv_GW | 24 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>4</sup> | 469.344 |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| Br_sv_GW | 25 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>5</sup> | 475.692 |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **252.232** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **221.197** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.817** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **339.758** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **346.364** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **353.872** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **344.914** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **351.044** |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **348.106** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.408 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **351.206** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| **Pd_sv_GW** | **18** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **356.093** |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.844 |
+| **Ag_sv_GW** | **19** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>11</sup>** | **354.43** |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 254.045 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **361.806** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.624** |
+| In_sv_GW | 21 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 366.771 |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.066** |
+| Sn_sv_GW | 22 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 368.778 |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.069 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.1** |
+| Sb_sv_GW | 23 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 372.491 |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| Te_sv_GW | 24 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>4</sup> | 376.618 |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| I_sv_GW | 25 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>5</sup> | 381.674 |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.547** |
+| Xe_sv_GW | 26 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> | 400.476 |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.101** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>1</sup>** | **267.02** |
+| **La_GW** | **11** | **4*f*<sup>0.2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.8</sup> 6*s*<sup>2</sup>** | **313.688** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.625** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **309.037** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **286.008** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **317.132** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **317.012** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.773** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.843** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.716 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.669** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.344 |
+| **Au_sv_GW** | **19** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>11</sup>** | **306.658** |
+| **Hg_sv_GW** | **20** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **312.028** |
+| **Tl_d_GW** | **15** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.053** |
+| Tl_sv_GW | 21 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 316.583 |
+| **Pb_d_GW** | **16** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.809** |
+| Pb_sv_GW | 22 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 317.193 |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.53 |
+| **Bi_d_GW** | **17** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **261.876** |
+| Bi_sv_GW | 23 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 323.513 |
+| **Po_d_GW** | **18** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **267.847** |
+| Po_sv_GW | 24 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 326.618 |
+| **At_d_GW** | **17** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **266.251** |
+| At_sv_GW | 25 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 328.529 |
+| **Rn_d_GW** | **18** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **267.347** |
+| Rn_sv_GW | 26 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> | 329.758 |
 
-### potpaw.54
+### potpaw.54\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: potpaw.54">edit</a> \| (./index.php.md)\]
+
 LDA and PBE PAW datasets version 54, including the GW variety (original
 release 2015-09-04). When read by VASP these files yield identical
 results as the files distributed before. The POTCAR files, however,
@@ -782,651 +839,663 @@ differ from previous versions:
     reside for: O_GW_new, Ge_GW, G_GW_new, Cd_GW, Br_GW, B_GW.
 2.  HASH key added to all POTCAR files.
 
-#### Standard potentials
+#### Standard potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard potentials">edit</a> \| (./index.php.md)\]
+
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 250.0 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 250.0 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **477.779** |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **498.387** |
-| **Be** | **2** | **2*s*^(1.9999) 2*p*^(0.001)** | **247.951** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.9999) 2*p*^(0.001) | 308.45 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.251 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 700.0 |
-| C_s | 4 | 2*s*² 2*p*² | 273.704 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 700.0 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.424 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 700.0 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.604 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 772.351 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.647 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.403** |
-| Na | 1 | 3*s*¹ | 101.956 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.494** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 644.874 |
-| **Mg** | **2** | **3*s*^(1.999) 3*p*^(0.001)** | **200.0** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 473.54 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.704** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.155** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.903 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.84 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.272 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.101** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.596 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.279** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.552 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.727** |
-| Sc | 3 | 3*d*² 4*s*¹ | 155.006 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.7** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.52 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.435 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.719** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.706 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.722 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.722** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.202 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.753** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.443 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.944 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.944** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.112 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.969** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.303 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.513 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **268.056** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 270.871 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.343 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.618** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.726 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.521** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.406 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.847** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.829** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.723 |
-| Ge | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.448** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.604 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.87** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.762 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.392** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 122.21 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.215** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **226.327** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.554** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **230.037** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 207.263 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.304** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.535 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.535 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **236.514** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.636 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.345** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.479 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.221 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **239.907** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.687 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.926 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.321** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.832** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.832 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.752** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.68 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.265** |
-| In | 3 | 5*s*² 5*p*¹ | 96.062 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.196** |
-| Sn | 4 | 5*s*² 5*p*² | 103.318 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.107** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.301** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.021** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.727** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.001) 6*s*^(1.999)** | **186.981** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.044** |
-| La_s | 9 | 4*f*^(0.0001) 5*p*⁶ 5*d*^(0.9999) 6*s*² | 136.594 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.088** |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.927 |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.431 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.431** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.414 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.759 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.759** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.126 |
-| **W_sv** | **14** | **5*s*² 5*p*⁶ 5*d*⁵ 6*s*¹** | **223.126** |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.25** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.25 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.023** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.023 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.837** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.228** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.53 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.869** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.142** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.239 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.001** |
-| Pb | 4 | 6*s*² 6*p*² | 98.039 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.817** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.071 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.856** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.801 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.606** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.481** |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **152.086** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.489** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.216** |
-| **Ac** | **11** | **5*f*^(0.0001) 6*s*² 6*p*⁶ 6*d*^(0.9999) 7*s*²** | **170.048** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.389** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.575 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.31** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.642 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.603** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.218 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.349** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 213.932 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.436** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 211.493 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.953** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **258.027** |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **477.779** |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **498.387** |
+| **Be** | **2** | **2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup>** | **247.951** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 308.45 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.251 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 700.0 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.704 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 700.0 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.424 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 700.0 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.604 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 772.351 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.647 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.403** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.956 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.494** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 644.874 |
+| **Mg** | **2** | **3*s*<sup>1.999</sup> 3*p*<sup>0.001</sup>** | **200.0** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 473.54 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.903 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.84 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.272 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.101** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.596 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.279** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.552 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.727** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 155.006 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.7** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.52 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.435 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.719** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.706 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.722 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.722** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.202 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.753** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.443 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.944 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.944** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.112 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.969** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.303 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.513 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **268.056** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 270.871 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.343 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.618** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.726 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.521** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.406 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.847** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.829** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.723 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.448** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.604 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.762 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.392** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 122.21 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.215** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **226.327** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.554** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **230.037** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 207.263 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.304** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **236.514** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.636 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.345** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.479 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.221 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **239.907** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.687 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.926 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.321** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.832** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.752** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.68 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.265** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 96.062 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.196** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.318 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.107** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.301** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.021** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.727** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.001</sup> 6*s*<sup>1.999</sup>** | **186.981** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.044** |
+| La_s | 9 | 4*f*<sup>0.0001</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup> | 136.594 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.088** |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.927 |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.431 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.431** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.414 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.759 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.759** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.126 |
+| **W_sv** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup>** | **223.126** |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.25** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.25 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.023** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.023 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.837** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.228** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.53 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.869** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.142** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.239 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.001** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 98.039 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.817** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.071 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.856** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.801 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.606** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.481** |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **152.086** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.489** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.216** |
+| **Ac** | **11** | **5*f*<sup>0.0001</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>0.9999</sup> 7*s*<sup>2</sup>** | **170.048** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.389** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.575 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.31** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.642 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.603** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.218 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.349** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 213.932 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.436** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 211.493 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.953** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **258.027** |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 250.0 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 250.0 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **478.896** |
-| He_AE | 2 | 1*s*² | 2135.871 |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **499.034** |
-| **Be** | **2** | **2*s*^(1.99) 2*p*^(0.01)** | **247.543** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.99) 2*p*^(0.01) | 308.768 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.245 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 700.0 |
-| C_s | 4 | 2*s*² 2*p*² | 273.911 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 700.0 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.692 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 700.0 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.853 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 772.626 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.837 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.606** |
-| Na | 1 | 3*s*¹ | 101.968 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.561** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 645.64 |
-| **Mg** | **2** | **3*s*²** | **200.0** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 495.223 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.345** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.04** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.202 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.436 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.136 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.408** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.731 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.264** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.559 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.622** |
-| Sc | 3 | 3*d*² 4*s*¹ | 154.763 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.66** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.33 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.335 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.61** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.543 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.673 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.673** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.08 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.681** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.471 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.864 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.864** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.187 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.882** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.238 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.558 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **267.968** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 271.042 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.362 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.532** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.986 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.446** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.648 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.723** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.691** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.601 |
-| Ge | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.294** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.425 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.702** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.651 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.331** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 121.882 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.112** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **229.353** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.626** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **229.898** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 208.608 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.235** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.584 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.584 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **242.676** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.694 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.523** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.703 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.271 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **240.049** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.855 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.996 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.408** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.925** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.925 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.844** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.865 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.336** |
-| In | 3 | 5*s*² 5*p*¹ | 95.934 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.211** |
-| Sn | 4 | 5*s*² 5*p*² | 103.236 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.083** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.069** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.118** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.318** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.01) 6*s*^(1.99)** | **187.181** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.292** |
-| La_s | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 136.53 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.042** |
-| Ce_3 | 11 | 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 176.506 |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.9 |
-| Pr | 13 | 4*f*² 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 272.941 |
-| **Pr_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **181.719** |
-| Nd | 14 | 4*f*³ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 253.189 |
-| **Nd_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **182.619** |
-| Pm | 15 | 4*f*⁴ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 258.627 |
-| **Pm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **176.959** |
-| Sm | 16 | 4*f*⁵ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.515 |
-| **Sm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **177.087** |
-| Eu | 17 | 4*f*⁷ 5*s*² 5*p*⁶ 6*s*² | 249.668 |
-| **Eu_2** | **8** | **5*p*⁶ 6*s*²** | **99.328** |
-| Eu_3 | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 129.057 |
-| Gd | 18 | 4*f*⁷ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 256.472 |
-| **Gd_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.332** |
-| Tb | 19 | 4*f*⁸ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 264.824 |
-| **Tb_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.613** |
-| Dy | 20 | 4*f*⁹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 255.467 |
-| **Dy_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.713** |
-| Ho | 21 | 4*f*¹⁰ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.168 |
-| **Ho_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.137** |
-| Er | 22 | 4*f*¹¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 298.116 |
-| Er_2 | 8 | 5*p*⁶ 6*s*² | 119.75 |
-| **Er_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.037** |
-| Tm | 23 | 4*f*¹² 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.42 |
-| **Tm_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **149.221** |
-| Yb | 24 | 4*f*¹⁴ 5*s*² 5*p*⁶ 6*s*² | 253.028 |
-| **Yb_2** | **8** | **5*p*⁶ 6*s*²** | **112.578** |
-| Yb_3 | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 188.359 |
-| Lu | 25 | 4*f*¹⁴ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 255.695 |
-| **Lu_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.992** |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.334 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.334** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.444 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.667 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.667** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.057 |
-| **W_sv** | **14** | **5*s*² 5*p*⁶ 5*d*⁵ 6*s*¹** | **223.057** |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.216** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.216 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.022** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.022 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.864** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.283** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.607 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.943** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.204** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.14 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.053** |
-| Pb | 4 | 6*s*² 6*p*² | 97.973 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.835** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.037 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.839** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.707 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.565** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.43** |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **152.121** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.54** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.367** |
-| **Ac** | **11** | **6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **172.351** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.306** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.363 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.193** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.466 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.502** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.23 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.26** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.713 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.353** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.83 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.875** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **257.953** |
-| Cf | 20 | 5*f*⁸ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 414.614 |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **478.896** |
+| He_AE | 2 | 1*s*<sup>2</sup> | 2135.871 |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **499.034** |
+| **Be** | **2** | **2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup>** | **247.543** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup> | 308.768 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.245 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 700.0 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.911 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 700.0 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.692 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 700.0 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.853 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 772.626 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.837 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.606** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.968 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.561** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 645.64 |
+| **Mg** | **2** | **3*s*<sup>2</sup>** | **200.0** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 495.223 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.202 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.436 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.136 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.408** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.731 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.264** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.559 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.622** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 154.763 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.66** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.33 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.335 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.61** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.543 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.673 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.673** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.08 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.681** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.471 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.864 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.864** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.187 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.882** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.238 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.558 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **267.968** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 271.042 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.362 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.532** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.986 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.446** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.648 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.723** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.691** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.601 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.294** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.425 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.651 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.331** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 121.882 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.112** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **229.353** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.626** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **229.898** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 208.608 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.235** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **242.676** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.694 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.523** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.703 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.271 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **240.049** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.855 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.996 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.408** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.925** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.844** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.865 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.336** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 95.934 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.211** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.236 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.083** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.069** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.118** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.318** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.01</sup> 6*s*<sup>1.99</sup>** | **187.181** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.292** |
+| La_s | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 136.53 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.042** |
+| Ce_3 | 11 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 176.506 |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.9 |
+| Pr | 13 | 4*f*<sup>2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 272.941 |
+| **Pr_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **181.719** |
+| Nd | 14 | 4*f*<sup>3</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 253.189 |
+| **Nd_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **182.619** |
+| Pm | 15 | 4*f*<sup>4</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 258.627 |
+| **Pm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **176.959** |
+| Sm | 16 | 4*f*<sup>5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.515 |
+| **Sm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **177.087** |
+| Eu | 17 | 4*f*<sup>7</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 249.668 |
+| **Eu_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **99.328** |
+| Eu_3 | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 129.057 |
+| Gd | 18 | 4*f*<sup>7</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 256.472 |
+| **Gd_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.332** |
+| Tb | 19 | 4*f*<sup>8</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 264.824 |
+| **Tb_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.613** |
+| Dy | 20 | 4*f*<sup>9</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 255.467 |
+| **Dy_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.713** |
+| Ho | 21 | 4*f*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.168 |
+| **Ho_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.137** |
+| Er | 22 | 4*f*<sup>11</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 298.116 |
+| Er_2 | 8 | 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 119.75 |
+| **Er_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.037** |
+| Tm | 23 | 4*f*<sup>12</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.42 |
+| **Tm_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **149.221** |
+| Yb | 24 | 4*f*<sup>14</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 253.028 |
+| **Yb_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **112.578** |
+| Yb_3 | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 188.359 |
+| Lu | 25 | 4*f*<sup>14</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 255.695 |
+| **Lu_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.992** |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.334 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.334** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.444 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.667 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.667** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.057 |
+| **W_sv** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup>** | **223.057** |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.216** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.216 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.022** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.022 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.864** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.283** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.607 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.943** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.204** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.14 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.053** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 97.973 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.835** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.037 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.839** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.707 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.565** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.43** |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **152.121** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.54** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.367** |
+| **Ac** | **11** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **172.351** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.306** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.363 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.193** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.466 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.502** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.23 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.26** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.713 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.353** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.83 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.875** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **257.953** |
+| Cf | 20 | 5*f*<sup>8</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 414.614 |
 
-#### GW potentials
+#### GW potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: GW potentials">edit</a> \| (./index.php.md)\]
+
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **404.806** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.253 |
-| Li_GW | 1 | 2*s*¹ | 112.417 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.253** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.951 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **536.216** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 413.992 |
-| C_h_GW | 4 | 2*s*² 2*p*² | 742.464 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.681** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 420.681 |
-| N_h_GW | 5 | 2*s*² 2*p*³ | 755.833 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 296.222 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.315** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 433.745 |
-| O_h_GW | 6 | 2*s*² 2*p*⁴ | 765.442 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.366 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.335** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 487.335 |
-| F_h_GW | 7 | 2*s*² 2*p*⁵ | 847.822 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **431.952** |
-| Ne_s_GW | 8 | 2*s*² 2*p*⁶ | 317.594 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*p*¹** | **372.86** |
-| Mg_GW | 2 | 3*s*² | 126.671 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **430.099** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.007 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.704** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 546.548 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.155** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **290.518** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.606** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.209** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **378.598** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **383.48** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **382.093** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **384.753** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.537 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **384.488** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.044 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **387.727** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.447 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **387.407** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.352 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **389.485** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.032 |
-| **Cu_sv_GW** | **19** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*¹** | **391.702** |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.312 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*²** | **401.745** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.723** |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 404.723 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **375.614** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 410.604 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.87** |
-| As_sv_GW | 23 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*³ | 415.514 |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| Se_sv_GW | 24 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁴ | 469.258 |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| Br_sv_GW | 25 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁵ | 475.88 |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **252.563** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **220.92** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.532** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **339.94** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **346.437** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **353.857** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **344.65** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **350.798** |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **347.881** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.321 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **350.989** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.832 |
-| **Pd_sv_GW** | **18** | **4*s*² 4*p*⁶ 4*d*¹⁰** | **355.88** |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.752 |
-| **Ag_sv_GW** | **19** | **4*s*² 4*p*⁶ 4*d*¹¹** | **354.226** |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 253.99 |
-| **Cd_sv_GW** | **20** | **4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*²** | **361.653** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.582** |
-| In_sv_GW | 21 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*¹ | 366.636 |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.086** |
-| Sn_sv_GW | 22 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*² | 368.704 |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.301 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.147** |
-| Sb_sv_GW | 23 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*³ | 372.498 |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| Te_sv_GW | 24 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁴ | 376.686 |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| I_sv_GW | 25 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁵ | 381.757 |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.528** |
-| Xe_sv_GW | 26 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁶ | 400.581 |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.012** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*²** | **237.484** |
-| **La_GW** | **11** | **4*f*^(0.2) 5*s*² 5*p*⁶ 5*d*^(0.8) 6*s*²** | **313.728** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.649** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **282.716** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **285.798** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **316.943** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **316.85** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.628** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.708** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.657 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.536** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.263 |
-| **Au_sv_GW** | **19** | **5*s*² 5*p*⁶ 5*d*¹¹** | **306.52** |
-| **Hg_sv_GW** | **20** | **5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*²** | **311.949** |
-| **Tl_d_GW** | **15** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*¹** | **237.001** |
-| Tl_sv_GW | 21 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*¹ | 316.502 |
-| **Pb_d_GW** | **16** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*²** | **237.793** |
-| Pb_sv_GW | 22 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*² | 317.138 |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.628 |
-| **Bi_d_GW** | **17** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*³** | **261.89** |
-| Bi_sv_GW | 23 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*³ | 323.502 |
-| **Po_d_GW** | **18** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*⁴** | **267.666** |
-| Po_sv_GW | 24 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁴ | 326.653 |
-| **At_d_GW** | **17** | **5*d*¹⁰ 6*s*² 6*p*⁵** | **266.303** |
-| At_sv_GW | 25 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁵ | 328.597 |
-| **Rn_d_GW** | **18** | **5*d*¹⁰ 6*s*² 6*p*⁶** | **268.546** |
-| Rn_sv_GW | 26 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁶ | 331.257 |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **404.806** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.253 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.417 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.253** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.951 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **536.216** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 413.992 |
+| C_h_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 742.464 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.681** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 420.681 |
+| N_h_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.833 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 296.222 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.315** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 433.745 |
+| O_h_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.442 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.366 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.335** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 487.335 |
+| F_h_GW | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 847.822 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **431.952** |
+| Ne_s_GW | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 317.594 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*p*<sup>1</sup>** | **372.86** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.671 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **430.099** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.007 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 546.548 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **290.518** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.606** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.209** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **378.598** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **383.48** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **382.093** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **384.753** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.537 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **384.488** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.044 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **387.727** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.447 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **387.407** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.352 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **389.485** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.032 |
+| **Cu_sv_GW** | **19** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **391.702** |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.312 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **401.745** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.723** |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.723 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **375.614** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.604 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| As_sv_GW | 23 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 415.514 |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| Se_sv_GW | 24 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>4</sup> | 469.258 |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| Br_sv_GW | 25 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>5</sup> | 475.88 |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **252.563** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **220.92** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.532** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **339.94** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **346.437** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **353.857** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **344.65** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **350.798** |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **347.881** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.321 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **350.989** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| **Pd_sv_GW** | **18** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **355.88** |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.752 |
+| **Ag_sv_GW** | **19** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>11</sup>** | **354.226** |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 253.99 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **361.653** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.582** |
+| In_sv_GW | 21 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 366.636 |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.086** |
+| Sn_sv_GW | 22 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 368.704 |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.301 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.147** |
+| Sb_sv_GW | 23 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 372.498 |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| Te_sv_GW | 24 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>4</sup> | 376.686 |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| I_sv_GW | 25 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>5</sup> | 381.757 |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.528** |
+| Xe_sv_GW | 26 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> | 400.581 |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.012** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>2</sup>** | **237.484** |
+| **La_GW** | **11** | **4*f*<sup>0.2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.8</sup> 6*s*<sup>2</sup>** | **313.728** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.649** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **282.716** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **285.798** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **316.943** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **316.85** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.628** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.708** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.657 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.536** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.263 |
+| **Au_sv_GW** | **19** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>11</sup>** | **306.52** |
+| **Hg_sv_GW** | **20** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **311.949** |
+| **Tl_d_GW** | **15** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.001** |
+| Tl_sv_GW | 21 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 316.502 |
+| **Pb_d_GW** | **16** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.793** |
+| Pb_sv_GW | 22 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 317.138 |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.628 |
+| **Bi_d_GW** | **17** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **261.89** |
+| Bi_sv_GW | 23 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 323.502 |
+| **Po_d_GW** | **18** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **267.666** |
+| Po_sv_GW | 24 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 326.653 |
+| **At_d_GW** | **17** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **266.303** |
+| At_sv_GW | 25 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 328.597 |
+| **Rn_d_GW** | **18** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **268.546** |
+| Rn_sv_GW | 26 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> | 331.257 |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **405.78** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.699 |
-| Li_GW | 1 | 2*s*¹ | 112.104 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.699** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.543 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **537.454** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 413.992 |
-| C_h_GW | 4 | 2*s*² 2*p*² | 741.689 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.902** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 420.902 |
-| N_h_GW | 5 | 2*s*² 2*p*³ | 755.582 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 296.495 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.635** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 434.431 |
-| O_h_GW | 6 | 2*s*² 2*p*⁴ | 765.519 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.664 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.698** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 487.698 |
-| F_h_GW | 7 | 2*s*² 2*p*⁵ | 848.626 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **432.275** |
-| Ne_s_GW | 8 | 2*s*² 2*p*⁶ | 318.26 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*p*¹** | **372.853** |
-| Mg_GW | 2 | 3*s*² | 126.143 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **429.893** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.109 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.345** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 547.578 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.04** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **290.599** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.998** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.43** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **378.961** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **383.774** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **382.321** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **384.932** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.466 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **384.627** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.007 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **387.837** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.4 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **387.491** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.323 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **389.645** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.039 |
-| **Cu_sv_GW** | **19** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*¹** | **391.688** |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.191 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*²** | **401.665** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.602** |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 404.602 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **375.434** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 410.425 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.702** |
-| As_sv_GW | 23 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*³ | 415.313 |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| Se_sv_GW | 24 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁴ | 469.344 |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| Br_sv_GW | 25 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*⁵ | 475.692 |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **252.232** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **221.197** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.817** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **339.758** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **346.364** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **353.872** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **344.914** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **351.044** |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **348.106** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.408 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **351.206** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.925 |
-| **Pd_sv_GW** | **18** | **4*s*² 4*p*⁶ 4*d*¹⁰** | **356.093** |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.844 |
-| **Ag_sv_GW** | **19** | **4*s*² 4*p*⁶ 4*d*¹¹** | **354.43** |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 254.045 |
-| **Cd_sv_GW** | **20** | **4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*²** | **361.806** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.624** |
-| In_sv_GW | 21 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*¹ | 366.771 |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.066** |
-| Sn_sv_GW | 22 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*² | 368.778 |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.069 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.1** |
-| Sb_sv_GW | 23 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*³ | 372.491 |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| Te_sv_GW | 24 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁴ | 376.618 |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| I_sv_GW | 25 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁵ | 381.674 |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.547** |
-| Xe_sv_GW | 26 | 4*s*² 4*p*⁶ 4*d*¹⁰ 5*s*² 5*p*⁶ | 400.476 |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.101** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*²** | **237.515** |
-| **La_GW** | **11** | **4*f*^(0.2) 5*s*² 5*p*⁶ 5*d*^(0.8) 6*s*²** | **313.688** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.625** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **282.964** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **286.008** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **317.132** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **317.012** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.773** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.843** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.716 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.669** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.344 |
-| **Au_sv_GW** | **19** | **5*s*² 5*p*⁶ 5*d*¹¹** | **306.658** |
-| **Hg_sv_GW** | **20** | **5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*²** | **312.028** |
-| **Tl_d_GW** | **15** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*¹** | **237.053** |
-| Tl_sv_GW | 21 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*¹ | 316.583 |
-| **Pb_d_GW** | **16** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*²** | **237.809** |
-| Pb_sv_GW | 22 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*² | 317.193 |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.53 |
-| **Bi_d_GW** | **17** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*³** | **261.876** |
-| Bi_sv_GW | 23 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*³ | 323.513 |
-| **Po_d_GW** | **18** | **5*s*² 5*d*¹⁰ 6*s*² 6*p*⁴** | **267.847** |
-| Po_sv_GW | 24 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁴ | 326.618 |
-| **At_d_GW** | **17** | **5*d*¹⁰ 6*s*² 6*p*⁵** | **266.251** |
-| At_sv_GW | 25 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁵ | 328.529 |
-| **Rn_d_GW** | **18** | **5*d*¹⁰ 6*s*² 6*p*⁶** | **268.495** |
-| Rn_sv_GW | 26 | 5*s*² 5*p*⁶ 5*d*¹⁰ 6*s*² 6*p*⁶ | 331.173 |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **405.78** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.699 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.104 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.699** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.543 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **537.454** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 413.992 |
+| C_h_GW | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 741.689 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.902** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 420.902 |
+| N_h_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 755.582 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 296.495 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.635** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 434.431 |
+| O_h_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 765.519 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.664 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.698** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 487.698 |
+| F_h_GW | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 848.626 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **432.275** |
+| Ne_s_GW | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 318.26 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*p*<sup>1</sup>** | **372.853** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.143 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **429.893** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.109 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 547.578 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **290.599** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.998** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.43** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **378.961** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **383.774** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **382.321** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **384.932** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.466 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **384.627** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.007 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **387.837** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.4 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **387.491** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.323 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **389.645** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.039 |
+| **Cu_sv_GW** | **19** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **391.688** |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.191 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **401.665** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.602** |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.602 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **375.434** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.425 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| As_sv_GW | 23 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 415.313 |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| Se_sv_GW | 24 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>4</sup> | 469.344 |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| Br_sv_GW | 25 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>5</sup> | 475.692 |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **252.232** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **221.197** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.817** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **339.758** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **346.364** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **353.872** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **344.914** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **351.044** |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **348.106** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.408 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **351.206** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| **Pd_sv_GW** | **18** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **356.093** |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.844 |
+| **Ag_sv_GW** | **19** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>11</sup>** | **354.43** |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 254.045 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **361.806** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.624** |
+| In_sv_GW | 21 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 366.771 |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.066** |
+| Sn_sv_GW | 22 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 368.778 |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.069 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.1** |
+| Sb_sv_GW | 23 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 372.491 |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| Te_sv_GW | 24 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>4</sup> | 376.618 |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| I_sv_GW | 25 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>5</sup> | 381.674 |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.547** |
+| Xe_sv_GW | 26 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> | 400.476 |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.101** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>2</sup>** | **237.515** |
+| **La_GW** | **11** | **4*f*<sup>0.2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.8</sup> 6*s*<sup>2</sup>** | **313.688** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.625** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **282.964** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **286.008** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **317.132** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **317.012** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.773** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.843** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.716 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.669** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.344 |
+| **Au_sv_GW** | **19** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>11</sup>** | **306.658** |
+| **Hg_sv_GW** | **20** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **312.028** |
+| **Tl_d_GW** | **15** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.053** |
+| Tl_sv_GW | 21 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 316.583 |
+| **Pb_d_GW** | **16** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.809** |
+| Pb_sv_GW | 22 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 317.193 |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.53 |
+| **Bi_d_GW** | **17** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **261.876** |
+| Bi_sv_GW | 23 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 323.513 |
+| **Po_d_GW** | **18** | **5*s*<sup>2</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **267.847** |
+| Po_sv_GW | 24 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 326.618 |
+| **At_d_GW** | **17** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **266.251** |
+| At_sv_GW | 25 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 328.529 |
+| **Rn_d_GW** | **18** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **268.495** |
+| Rn_sv_GW | 26 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> | 331.173 |
 
-### potpaw.52
+### potpaw.52\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: potpaw.52">edit</a> \| (./index.php.md)\]
+
 PBE and LDA PAW datasets version 52, including early GW variety
 (snapshot 19-04-2012). When read by VASP these files yield identical
 results as the files distributed in 2012. The POTCAR files, however,
@@ -1440,616 +1509,632 @@ differ from previous versions:
 
 |  |
 |----|
-| **Mind:** The C_GW_new, N_GW_new, O_GW_new, and F_GW_new [POTCAR](POTCAR.md) files, use the f-pseudopotential as local potential and possess d-projectors. In contrast, the C_GW, N_GW, O_GW, and F_GW [POTCAR](POTCAR.md) files use the d-pseudopotential as local potential and possess no d-projectors. Calculations usually converge faster with respect to the energy cutoff [ENMAX](../redirects/ENMAX.md) using the C_GW, N_GW, O_GW, and G_GW potentials. Whether the new potentials possess a precision advantage over the old potentials is not entirely clear. In theory, they should be more precise for correlated wavefunction calculations. However, in practice, the improvements seem modest and often do not justify the greater computational load. |
+| **Mind:** The C_GW_new, N_GW_new, O_GW_new, and F_GW_new [POTCAR](POTCAR.md) files, use the f-pseudopotential as local potential and possess d-projectors. In contrast, the C_GW, N_GW, O_GW, and F_GW [POTCAR](POTCAR.md) files use the d-pseudopotential as local potential and possess no d-projectors. Calculations usually converge faster with respect to the energy cutoff <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> using the C_GW, N_GW, O_GW, and G_GW potentials. Whether the new potentials possess a precision advantage over the old potentials is not entirely clear. In theory, they should be more precise for correlated wavefunction calculations. However, in practice, the improvements seem modest and often do not justify the greater computational load. |
 
-#### Standard potentials
+#### Standard potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard potentials">edit</a> \| (./index.php.md)\]
+
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 250.0 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 250.0 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **477.779** |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **498.387** |
-| **Be** | **2** | **2*s*^(1.9999) 2*p*^(0.001)** | **247.951** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.9999) 2*p*^(0.001) | 308.45 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.251 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 700.0 |
-| C_s | 4 | 2*s*² 2*p*² | 273.704 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 700.0 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.424 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 700.0 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.604 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 700.0 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.647 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.403** |
-| Na | 1 | 3*s*¹ | 101.956 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.494** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 644.874 |
-| **Mg** | **2** | **3*s*^(1.999) 3*p*^(0.001)** | **213.415** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 473.54 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.704** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.155** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.903 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.84 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.272 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.101** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.596 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.279** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.552 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.727** |
-| Sc | 3 | 3*d*² 4*s*¹ | 155.006 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.7** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.52 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.435 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.719** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.706 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.722 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.722** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.202 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.753** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.443 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.944 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.944** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.112 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.969** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.303 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.513 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **268.056** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 270.871 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.343 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.618** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.726 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.521** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.406 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.847** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.829** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.723 |
-| Ge | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.448** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.604 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.87** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.762 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.392** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 122.21 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.215** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **226.327** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.554** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **230.037** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 207.263 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.304** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.535 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.535 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **236.514** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.636 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.345** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.479 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.221 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **239.907** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.687 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.926 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.321** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.832** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.832 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.752** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.68 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.265** |
-| In | 3 | 5*s*² 5*p*¹ | 96.062 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.196** |
-| Sn | 4 | 5*s*² 5*p*² | 103.318 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.107** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.301** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.021** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.727** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.001) 6*s*^(1.999)** | **186.981** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.044** |
-| La_s | 9 | 4*f*^(0.0001) 5*p*⁶ 5*d*^(0.9999) 6*s*² | 136.594 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.088** |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.927 |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.431 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.431** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.414 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.759 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.759** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.126 |
-| W_pv | 12 | 5*p*⁶ 5*d*⁵ 6*s*¹ | 223.126 |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.25** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.25 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.023** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.023 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.837** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.228** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.53 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.869** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.142** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.239 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.001** |
-| Pb | 4 | 6*s*² 6*p*² | 98.039 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.817** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.071 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.856** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.801 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.606** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.481** |
-| At_d | 17 | 5*d*¹⁰ 6*s*² 6*p*⁵ | 266.303 |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **152.086** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.489** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.216** |
-| **Ac** | **11** | **5*f*^(0.0001) 6*s*² 6*p*⁶ 6*d*^(0.9999) 7*s*²** | **170.048** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.389** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.575 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.31** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.642 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.603** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.218 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.349** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 213.932 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.436** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 211.493 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.953** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **258.027** |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **477.779** |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **498.387** |
+| **Be** | **2** | **2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup>** | **247.951** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 308.45 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.251 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 700.0 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.704 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 700.0 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.424 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 700.0 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.604 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 700.0 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.647 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.403** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.956 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.494** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 644.874 |
+| **Mg** | **2** | **3*s*<sup>1.999</sup> 3*p*<sup>0.001</sup>** | **213.415** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 473.54 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.903 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.84 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.272 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.101** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.596 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.279** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.552 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.727** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 155.006 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.7** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.52 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.435 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.719** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.706 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.722 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.722** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.202 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.753** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.443 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.944 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.944** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.112 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.969** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.303 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.513 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **268.056** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 270.871 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.343 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.618** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.726 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.521** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.406 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.847** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.829** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.723 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.448** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.604 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.762 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.392** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 122.21 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.215** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **226.327** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.554** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **230.037** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 207.263 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.304** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.535 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **236.514** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.636 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.345** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.479 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.221 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **239.907** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.687 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.926 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.321** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.832** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.752** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.68 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.265** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 96.062 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.196** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.318 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.107** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.301** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.021** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.727** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.001</sup> 6*s*<sup>1.999</sup>** | **186.981** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.044** |
+| La_s | 9 | 4*f*<sup>0.0001</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup> | 136.594 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.088** |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.927 |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.431 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.431** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.414 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.759 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.759** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.126 |
+| W_pv | 12 | 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.126 |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.25** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.25 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.023** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.023 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.837** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.228** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.53 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.869** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.142** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.239 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.001** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 98.039 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.817** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.071 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.856** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.801 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.606** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.481** |
+| At_d | 17 | 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 266.303 |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **152.086** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.489** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.216** |
+| **Ac** | **11** | **5*f*<sup>0.0001</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>0.9999</sup> 7*s*<sup>2</sup>** | **170.048** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.389** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.575 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.31** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.642 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.603** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.218 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.349** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 213.932 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.436** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 211.493 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.953** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **258.027** |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H** | **1** | **1*s*¹** | **250.0** |
-| H.25 | 0.25 | 1*s*^(0.25) | 250.0 |
-| H.33 | 0.33 | 1*s*^(0.33) | 250.0 |
-| H.42 | 0.42 | 1*s*^(0.42) | 250.0 |
-| H.5 | 0.5 | 1*s*^(0.5) | 250.0 |
-| H.58 | 0.58 | 1*s*^(0.58) | 250.0 |
-| H.66 | 0.66 | 1*s*^(0.66) | 250.0 |
-| H.75 | 0.75 | 1*s*^(0.75) | 250.0 |
-| H1.25 | 1.25 | 1*s*^(1.25) | 457.521 |
-| H1.33 | 1.33 | 1*s*^(1.33) | 250.0 |
-| H1.5 | 1.5 | 1*s*^(1.5) | 250.0 |
-| H1.66 | 1.66 | 1*s*^(1.66) | 250.0 |
-| H1.75 | 1.75 | 1*s*^(1.75) | 250.0 |
+| **H** | **1** | **1*s*<sup>1</sup>** | **250.0** |
+| H.25 | 0.25 | 1*s*<sup>0.25</sup> | 250.0 |
+| H.33 | 0.33 | 1*s*<sup>0.33</sup> | 250.0 |
+| H.42 | 0.42 | 1*s*<sup>0.42</sup> | 250.0 |
+| H.5 | 0.5 | 1*s*<sup>0.5</sup> | 250.0 |
+| H.58 | 0.58 | 1*s*<sup>0.58</sup> | 250.0 |
+| H.66 | 0.66 | 1*s*<sup>0.66</sup> | 250.0 |
+| H.75 | 0.75 | 1*s*<sup>0.75</sup> | 250.0 |
+| H1.25 | 1.25 | 1*s*<sup>1.25</sup> | 457.521 |
+| H1.33 | 1.33 | 1*s*<sup>1.33</sup> | 250.0 |
+| H1.5 | 1.5 | 1*s*<sup>1.5</sup> | 250.0 |
+| H1.66 | 1.66 | 1*s*<sup>1.66</sup> | 250.0 |
+| H1.75 | 1.75 | 1*s*<sup>1.75</sup> | 250.0 |
 | H_AE | 1 |  | 1000.0 |
-| H_h | 1 | 1*s*¹ | 700.0 |
-| H_s | 1 | 1*s*¹ | 200.0 |
-| **He** | **2** | **1*s*²** | **478.896** |
-| Li | 1 | 2*s*¹ | 140.0 |
-| **Li_sv** | **3** | **1*s*² 2*s*¹** | **499.034** |
-| **Be** | **2** | **2*s*^(1.99) 2*p*^(0.01)** | **247.543** |
-| Be_sv | 4 | 1*s*² 2*s*^(1.99) 2*p*^(0.01) | 308.768 |
-| **B** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| B_h | 3 | 2*s*² 2*p*¹ | 700.0 |
-| B_s | 3 | 2*s*² 2*p*¹ | 269.245 |
-| **C** | **4** | **2*s*² 2*p*²** | **400.0** |
-| C_h | 4 | 2*s*² 2*p*² | 700.0 |
-| C_s | 4 | 2*s*² 2*p*² | 273.911 |
-| **N** | **5** | **2*s*² 2*p*³** | **400.0** |
-| N_h | 5 | 2*s*² 2*p*³ | 700.0 |
-| N_s | 5 | 2*s*² 2*p*³ | 279.692 |
-| **O** | **6** | **2*s*² 2*p*⁴** | **400.0** |
-| O_h | 6 | 2*s*² 2*p*⁴ | 700.0 |
-| O_s | 6 | 2*s*² 2*p*⁴ | 282.853 |
-| **F** | **7** | **2*s*² 2*p*⁵** | **400.0** |
-| F_h | 7 | 2*s*² 2*p*⁵ | 700.0 |
-| F_s | 7 | 2*s*² 2*p*⁵ | 289.837 |
-| **Ne** | **8** | **2*s*² 2*p*⁶** | **343.606** |
-| Na | 1 | 3*s*¹ | 101.968 |
-| **Na_pv** | **7** | **2*p*⁶ 3*s*¹** | **259.561** |
-| Na_sv | 9 | 2*s*² 2*p*⁶ 3*s*¹ | 645.64 |
-| **Mg** | **2** | **3*s*²** | **126.143** |
-| Mg_pv | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| Mg_sv | 10 | 2*s*² 2*p*⁶ 3*s*² | 495.223 |
-| **Al** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| **Si** | **4** | **3*s*² 3*p*²** | **245.345** |
-| **P** | **5** | **3*s*² 3*p*³** | **255.04** |
-| P_h | 5 | 3*s*² 3*p*³ | 390.202 |
-| **S** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| S_h | 6 | 3*s*² 3*p*⁴ | 402.436 |
-| **Cl** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| Cl_h | 7 | 3*s*² 3*p*⁵ | 409.136 |
-| **Ar** | **8** | **3*s*² 3*p*⁶** | **266.408** |
-| K_pv | 7 | 3*p*⁶ 4*s*¹ | 116.731 |
-| **K_sv** | **9** | **3*s*² 3*p*⁶ 4*s*¹** | **259.264** |
-| Ca_pv | 8 | 3*p*⁶ 4*s*² | 119.559 |
-| **Ca_sv** | **10** | **3*s*² 3*p*⁶ 4*s*²** | **266.622** |
-| Sc | 3 | 3*d*² 4*s*¹ | 154.763 |
-| **Sc_sv** | **11** | **3*s*² 3*p*⁶ 3*d*² 4*s*¹** | **222.66** |
-| Ti | 4 | 3*d*³ 4*s*¹ | 178.33 |
-| Ti_pv | 10 | 3*p*⁶ 3*d*³ 4*s*¹ | 222.335 |
-| **Ti_sv** | **12** | **3*s*² 3*p*⁶ 3*d*³ 4*s*¹** | **274.61** |
-| V | 5 | 3*d*⁴ 4*s*¹ | 192.543 |
-| V_pv | 11 | 3*p*⁶ 3*d*⁴ 4*s*¹ | 263.673 |
-| **V_sv** | **13** | **3*s*² 3*p*⁶ 3*d*⁴ 4*s*¹** | **263.673** |
-| Cr | 6 | 3*d*⁵ 4*s*¹ | 227.08 |
-| **Cr_pv** | **12** | **3*p*⁶ 3*d*⁵ 4*s*¹** | **265.681** |
-| Cr_sv | 14 | 3*s*² 3*p*⁶ 3*d*⁵ 4*s*¹ | 395.471 |
-| Mn | 7 | 3*d*⁶ 4*s*¹ | 269.864 |
-| **Mn_pv** | **13** | **3*p*⁶ 3*d*⁶ 4*s*¹** | **269.864** |
-| Mn_sv | 15 | 3*s*² 3*p*⁶ 3*d*⁶ 4*s*¹ | 387.187 |
-| **Fe** | **8** | **3*d*⁷ 4*s*¹** | **267.882** |
-| Fe_pv | 14 | 3*p*⁶ 3*d*⁷ 4*s*¹ | 293.238 |
-| Fe_sv | 16 | 3*s*² 3*p*⁶ 3*d*⁷ 4*s*¹ | 390.558 |
-| **Co** | **9** | **3*d*⁸ 4*s*¹** | **267.968** |
-| Co_pv | 15 | 3*p*⁶ 3*d*⁸ 4*s*¹ | 271.042 |
-| Co_sv | 17 | 3*s*² 3*p*⁶ 3*d*⁸ 4*s*¹ | 390.362 |
-| **Ni** | **10** | **3*d*⁹ 4*s*¹** | **269.532** |
-| Ni_pv | 16 | 3*p*⁶ 3*d*⁹ 4*s*¹ | 367.986 |
-| **Cu** | **11** | **3*d*¹⁰ 4*s*¹** | **295.446** |
-| Cu_pv | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 368.648 |
-| **Zn** | **12** | **3*d*¹⁰ 4*s*²** | **276.723** |
-| Ga | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **282.691** |
-| Ga_h | 13 | 3*d*¹⁰ 4*s*² 4*p*¹ | 404.601 |
-| Ge | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.294** |
-| Ge_h | 14 | 3*d*¹⁰ 4*s*² 4*p*² | 410.425 |
-| **As** | **5** | **4*s*² 4*p*³** | **208.702** |
-| As_d | 15 | 3*d*¹⁰ 4*s*² 4*p*³ | 288.651 |
-| **Se** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| **Br** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| **Kr** | **8** | **4*s*² 4*p*⁶** | **185.331** |
-| Rb_pv | 7 | 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999) | 121.882 |
-| **Rb_sv** | **9** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(0.999)** | **220.112** |
-| **Sr_sv** | **10** | **4*s*² 4*p*⁶ 4*d*^(0.001) 5*s*^(1.999)** | **229.353** |
-| **Y_sv** | **11** | **4*s*² 4*p*⁶ 4*d*² 5*s*¹** | **202.626** |
-| **Zr_sv** | **12** | **4*s*² 4*p*⁶ 4*d*³ 5*s*¹** | **229.898** |
-| Nb_pv | 11 | 4*p*⁶ 4*d*⁴ 5*s*¹ | 208.608 |
-| **Nb_sv** | **13** | **4*s*² 4*p*⁶ 4*d*⁴ 5*s*¹** | **293.235** |
-| Mo | 6 | 4*d*⁵ 5*s*¹ | 224.584 |
-| Mo_pv | 12 | 4*p*⁶ 4*d*⁵ 5*s*¹ | 224.584 |
-| **Mo_sv** | **14** | **4*s*² 4*p*⁶ 4*d*⁵ 5*s*¹** | **242.676** |
-| Tc | 7 | 4*d*⁶ 5*s*¹ | 228.694 |
-| **Tc_pv** | **13** | **4*p*⁶ 4*d*⁶ 5*s*¹** | **263.523** |
-| Tc_sv | 15 | 4*s*² 4*p*⁶ 4*d*⁶ 5*s*¹ | 318.703 |
-| Ru | 8 | 4*d*⁷ 5*s*¹ | 213.271 |
-| **Ru_pv** | **14** | **4*p*⁶ 4*d*⁷ 5*s*¹** | **240.049** |
-| Ru_sv | 16 | 4*s*² 4*p*⁶ 4*d*⁷ 5*s*¹ | 318.855 |
-| Rh | 9 | 4*d*⁸ 5*s*¹ | 228.996 |
-| **Rh_pv** | **15** | **4*p*⁶ 4*d*⁸ 5*s*¹** | **247.408** |
-| **Pd** | **10** | **4*d*⁹ 5*s*¹** | **250.925** |
-| Pd_pv | 16 | 4*p*⁶ 4*d*⁹ 5*s*¹ | 250.925 |
-| **Ag** | **11** | **4*d*¹⁰ 5*s*¹** | **249.844** |
-| Ag_pv | 17 | 4*p*⁶ 4*d*¹⁰ 5*s*¹ | 297.865 |
-| **Cd** | **12** | **4*d*¹⁰ 5*s*²** | **274.336** |
-| In | 3 | 5*s*² 5*p*¹ | 95.934 |
-| **In_d** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **239.211** |
-| Sn | 4 | 5*s*² 5*p*² | 103.236 |
-| **Sn_d** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **241.083** |
-| **Sb** | **5** | **5*s*² 5*p*³** | **172.069** |
-| **Te** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| **I** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| **Xe** | **8** | **5*s*² 5*p*⁶** | **153.118** |
-| **Cs_sv** | **9** | **5*s*² 5*p*⁶ 6*s*¹** | **220.318** |
-| **Ba_sv** | **10** | **5*s*² 5*p*⁶ 5*d*^(0.01) 6*s*^(1.99)** | **187.181** |
-| **La** | **11** | **4*f*^(0.0001) 5*s*² 5*p*⁶ 5*d*^(0.9999) 6*s*²** | **219.292** |
-| La_s | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 136.53 |
-| **Ce** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **273.042** |
-| Ce_3 | 11 | 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 176.506 |
-| Ce_h | 12 | 4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 299.9 |
-| Pr | 13 | 4*f*² 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 272.941 |
-| **Pr_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **181.719** |
-| Nd | 14 | 4*f*³ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 253.189 |
-| **Nd_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **182.619** |
-| Pm | 15 | 4*f*⁴ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 258.627 |
-| **Pm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **176.959** |
-| Sm | 16 | 4*f*⁵ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.515 |
-| **Sm_3** | **11** | **5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **177.087** |
-| Eu | 17 | 4*f*⁷ 5*s*² 5*p*⁶ 6*s*² | 249.668 |
-| **Eu_2** | **8** | **5*p*⁶ 6*s*²** | **99.328** |
-| Eu_3 | 9 | 5*p*⁶ 5*d*¹ 6*s*² | 129.057 |
-| Gd | 18 | 4*f*⁷ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 256.472 |
-| **Gd_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.332** |
-| Tb | 19 | 4*f*⁸ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 264.824 |
-| **Tb_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.613** |
-| Dy | 20 | 4*f*⁹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 255.467 |
-| **Dy_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.713** |
-| Ho | 21 | 4*f*¹⁰ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.168 |
-| **Ho_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.137** |
-| Er | 22 | 4*f*¹¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 298.116 |
-| Er_2 | 8 | 5*p*⁶ 6*s*² | 119.75 |
-| **Er_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **155.037** |
-| Tm | 23 | 4*f*¹² 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 257.42 |
-| **Tm_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **149.221** |
-| Yb | 24 | 4*f*¹⁴ 5*s*² 5*p*⁶ 6*s*² | 253.028 |
-| **Yb_2** | **8** | **5*p*⁶ 6*s*²** | **112.578** |
-| Lu | 25 | 4*f*¹⁴ 5*s*² 5*p*⁶ 5*d*¹ 6*s*² | 255.695 |
-| **Lu_3** | **9** | **5*p*⁶ 5*d*¹ 6*s*²** | **154.992** |
-| Hf | 4 | 5*d*³ 6*s*¹ | 220.334 |
-| **Hf_pv** | **10** | **5*p*⁶ 5*d*³ 6*s*¹** | **220.334** |
-| Hf_sv | 12 | 5*s*² 5*p*⁶ 5*d*⁴ | 237.444 |
-| Ta | 5 | 5*d*⁴ 6*s*¹ | 223.667 |
-| **Ta_pv** | **11** | **5*p*⁶ 5*d*⁴ 6*s*¹** | **223.667** |
-| W | 6 | 5*d*⁵ 6*s*¹ | 223.057 |
-| W_pv | 12 | 5*p*⁶ 5*d*⁵ 6*s*¹ | 223.057 |
-| **Re** | **7** | **5*d*⁶ 6*s*¹** | **226.216** |
-| Re_pv | 13 | 5*p*⁶ 5*d*⁶ 6*s*¹ | 226.216 |
-| **Os** | **8** | **5*d*⁷ 6*s*¹** | **228.022** |
-| Os_pv | 14 | 5*p*⁶ 5*d*⁷ 6*s*¹ | 228.022 |
-| **Ir** | **9** | **5*d*⁸ 6*s*¹** | **210.864** |
-| **Pt** | **10** | **5*d*⁹ 6*s*¹** | **230.283** |
-| Pt_pv | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 294.607 |
-| **Au** | **11** | **5*d*¹⁰ 6*s*¹** | **229.943** |
-| **Hg** | **12** | **5*d*¹⁰ 6*s*²** | **233.204** |
-| Tl | 3 | 6*s*² 6*p*¹ | 90.14 |
-| **Tl_d** | **13** | **5*d*¹⁰ 6*s*² 6*p*¹** | **237.053** |
-| Pb | 4 | 6*s*² 6*p*² | 97.973 |
-| **Pb_d** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.835** |
-| Bi | 5 | 6*s*² 6*p*³ | 105.037 |
-| **Bi_d** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.839** |
-| Po | 6 | 6*s*² 6*p*⁴ | 159.707 |
-| **Po_d** | **16** | **5*d*¹⁰ 6*s*² 6*p*⁴** | **264.565** |
-| **At** | **7** | **6*s*² 6*p*⁵** | **161.43** |
-| At_d | 17 | 5*d*¹⁰ 6*s*² 6*p*⁵ | 266.251 |
-| **Rn** | **8** | **6*s*² 6*p*⁶** | **152.121** |
-| **Fr_sv** | **9** | **6*s*² 6*p*⁶ 7*s*¹** | **214.54** |
-| **Ra_sv** | **10** | **6*s*² 6*p*⁶ 7*s*²** | **237.367** |
-| **Ac** | **11** | **6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **172.351** |
-| **Th** | **12** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*¹ 7*s*²** | **247.306** |
-| Th_s | 10 | 5*f*¹ 6*p*⁶ 6*d*¹ 7*s*² | 169.363 |
-| **Pa** | **13** | **5*f*¹ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.193** |
-| Pa_s | 11 | 5*f*¹ 6*p*⁶ 6*d*² 7*s*² | 193.466 |
-| **U** | **14** | **5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **252.502** |
-| U_s | 14 | 5*f*² 6*s*² 6*p*⁶ 6*d*² 7*s*² | 209.23 |
-| **Np** | **15** | **5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.26** |
-| Np_s | 15 | 5*f*³ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.713 |
-| **Pu** | **16** | **5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **254.353** |
-| Pu_s | 16 | 5*f*⁴ 6*s*² 6*p*⁶ 6*d*² 7*s*² | 207.83 |
-| **Am** | **17** | **5*f*⁵ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **255.875** |
-| **Cm** | **18** | **5*f*⁶ 6*s*² 6*p*⁶ 6*d*² 7*s*²** | **257.953** |
+| H_h | 1 | 1*s*<sup>1</sup> | 700.0 |
+| H_s | 1 | 1*s*<sup>1</sup> | 200.0 |
+| **He** | **2** | **1*s*<sup>2</sup>** | **478.896** |
+| Li | 1 | 2*s*<sup>1</sup> | 140.0 |
+| **Li_sv** | **3** | **1*s*<sup>2</sup> 2*s*<sup>1</sup>** | **499.034** |
+| **Be** | **2** | **2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup>** | **247.543** |
+| Be_sv | 4 | 1*s*<sup>2</sup> 2*s*<sup>1.99</sup> 2*p*<sup>0.01</sup> | 308.768 |
+| **B** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| B_h | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 700.0 |
+| B_s | 3 | 2*s*<sup>2</sup> 2*p*<sup>1</sup> | 269.245 |
+| **C** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **400.0** |
+| C_h | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 700.0 |
+| C_s | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 273.911 |
+| **N** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **400.0** |
+| N_h | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 700.0 |
+| N_s | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 279.692 |
+| **O** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **400.0** |
+| O_h | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 700.0 |
+| O_s | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 282.853 |
+| **F** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **400.0** |
+| F_h | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 700.0 |
+| F_s | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 289.837 |
+| **Ne** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **343.606** |
+| Na | 1 | 3*s*<sup>1</sup> | 101.968 |
+| **Na_pv** | **7** | **2*p*<sup>6</sup> 3*s*<sup>1</sup>** | **259.561** |
+| Na_sv | 9 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>1</sup> | 645.64 |
+| **Mg** | **2** | **3*s*<sup>2</sup>** | **126.143** |
+| Mg_pv | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| Mg_sv | 10 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 495.223 |
+| **Al** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| **Si** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| **P** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| P_h | 5 | 3*s*<sup>2</sup> 3*p*<sup>3</sup> | 390.202 |
+| **S** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| S_h | 6 | 3*s*<sup>2</sup> 3*p*<sup>4</sup> | 402.436 |
+| **Cl** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| Cl_h | 7 | 3*s*<sup>2</sup> 3*p*<sup>5</sup> | 409.136 |
+| **Ar** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.408** |
+| K_pv | 7 | 3*p*<sup>6</sup> 4*s*<sup>1</sup> | 116.731 |
+| **K_sv** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>1</sup>** | **259.264** |
+| Ca_pv | 8 | 3*p*<sup>6</sup> 4*s*<sup>2</sup> | 119.559 |
+| **Ca_sv** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 4*s*<sup>2</sup>** | **266.622** |
+| Sc | 3 | 3*d*<sup>2</sup> 4*s*<sup>1</sup> | 154.763 |
+| **Sc_sv** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup> 4*s*<sup>1</sup>** | **222.66** |
+| Ti | 4 | 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 178.33 |
+| Ti_pv | 10 | 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup> | 222.335 |
+| **Ti_sv** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup> 4*s*<sup>1</sup>** | **274.61** |
+| V | 5 | 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 192.543 |
+| V_pv | 11 | 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup> | 263.673 |
+| **V_sv** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup> 4*s*<sup>1</sup>** | **263.673** |
+| Cr | 6 | 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 227.08 |
+| **Cr_pv** | **12** | **3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup>** | **265.681** |
+| Cr_sv | 14 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup> 4*s*<sup>1</sup> | 395.471 |
+| Mn | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 269.864 |
+| **Mn_pv** | **13** | **3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup>** | **269.864** |
+| Mn_sv | 15 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 387.187 |
+| **Fe** | **8** | **3*d*<sup>7</sup> 4*s*<sup>1</sup>** | **267.882** |
+| Fe_pv | 14 | 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 293.238 |
+| Fe_sv | 16 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 390.558 |
+| **Co** | **9** | **3*d*<sup>8</sup> 4*s*<sup>1</sup>** | **267.968** |
+| Co_pv | 15 | 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 271.042 |
+| Co_sv | 17 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 390.362 |
+| **Ni** | **10** | **3*d*<sup>9</sup> 4*s*<sup>1</sup>** | **269.532** |
+| Ni_pv | 16 | 3*p*<sup>6</sup> 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 367.986 |
+| **Cu** | **11** | **3*d*<sup>10</sup> 4*s*<sup>1</sup>** | **295.446** |
+| Cu_pv | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 368.648 |
+| **Zn** | **12** | **3*d*<sup>10</sup> 4*s*<sup>2</sup>** | **276.723** |
+| Ga | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **282.691** |
+| Ga_h | 13 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 404.601 |
+| Ge | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.294** |
+| Ge_h | 14 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 410.425 |
+| **As** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| As_d | 15 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>3</sup> | 288.651 |
+| **Se** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| **Br** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| **Kr** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.331** |
+| Rb_pv | 7 | 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup> | 121.882 |
+| **Rb_sv** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>0.999</sup>** | **220.112** |
+| **Sr_sv** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>0.001</sup> 5*s*<sup>1.999</sup>** | **229.353** |
+| **Y_sv** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup> 5*s*<sup>1</sup>** | **202.626** |
+| **Zr_sv** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup> 5*s*<sup>1</sup>** | **229.898** |
+| Nb_pv | 11 | 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup> | 208.608 |
+| **Nb_sv** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup> 5*s*<sup>1</sup>** | **293.235** |
+| Mo | 6 | 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| Mo_pv | 12 | 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup> | 224.584 |
+| **Mo_sv** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup> 5*s*<sup>1</sup>** | **242.676** |
+| Tc | 7 | 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 228.694 |
+| **Tc_pv** | **13** | **4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup>** | **263.523** |
+| Tc_sv | 15 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup> 5*s*<sup>1</sup> | 318.703 |
+| Ru | 8 | 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 213.271 |
+| **Ru_pv** | **14** | **4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup>** | **240.049** |
+| Ru_sv | 16 | 4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 318.855 |
+| Rh | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 228.996 |
+| **Rh_pv** | **15** | **4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup>** | **247.408** |
+| **Pd** | **10** | **4*d*<sup>9</sup> 5*s*<sup>1</sup>** | **250.925** |
+| Pd_pv | 16 | 4*p*<sup>6</sup> 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| **Ag** | **11** | **4*d*<sup>10</sup> 5*s*<sup>1</sup>** | **249.844** |
+| Ag_pv | 17 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 297.865 |
+| **Cd** | **12** | **4*d*<sup>10</sup> 5*s*<sup>2</sup>** | **274.336** |
+| In | 3 | 5*s*<sup>2</sup> 5*p*<sup>1</sup> | 95.934 |
+| **In_d** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **239.211** |
+| Sn | 4 | 5*s*<sup>2</sup> 5*p*<sup>2</sup> | 103.236 |
+| **Sn_d** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **241.083** |
+| **Sb** | **5** | **5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **172.069** |
+| **Te** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| **I** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| **Xe** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **153.118** |
+| **Cs_sv** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>1</sup>** | **220.318** |
+| **Ba_sv** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.01</sup> 6*s*<sup>1.99</sup>** | **187.181** |
+| **La** | **11** | **4*f*<sup>0.0001</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>0.9999</sup> 6*s*<sup>2</sup>** | **219.292** |
+| La_s | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 136.53 |
+| **Ce** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **273.042** |
+| Ce_3 | 11 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 176.506 |
+| Ce_h | 12 | 4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 299.9 |
+| Pr | 13 | 4*f*<sup>2</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 272.941 |
+| **Pr_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **181.719** |
+| Nd | 14 | 4*f*<sup>3</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 253.189 |
+| **Nd_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **182.619** |
+| Pm | 15 | 4*f*<sup>4</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 258.627 |
+| **Pm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **176.959** |
+| Sm | 16 | 4*f*<sup>5</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.515 |
+| **Sm_3** | **11** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **177.087** |
+| Eu | 17 | 4*f*<sup>7</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 249.668 |
+| **Eu_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **99.328** |
+| Eu_3 | 9 | 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 129.057 |
+| Gd | 18 | 4*f*<sup>7</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 256.472 |
+| **Gd_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.332** |
+| Tb | 19 | 4*f*<sup>8</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 264.824 |
+| **Tb_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.613** |
+| Dy | 20 | 4*f*<sup>9</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 255.467 |
+| **Dy_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.713** |
+| Ho | 21 | 4*f*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.168 |
+| **Ho_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.137** |
+| Er | 22 | 4*f*<sup>11</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 298.116 |
+| Er_2 | 8 | 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 119.75 |
+| **Er_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **155.037** |
+| Tm | 23 | 4*f*<sup>12</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 257.42 |
+| **Tm_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **149.221** |
+| Yb | 24 | 4*f*<sup>14</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 6*s*<sup>2</sup> | 253.028 |
+| **Yb_2** | **8** | **5*p*<sup>6</sup> 6*s*<sup>2</sup>** | **112.578** |
+| Lu | 25 | 4*f*<sup>14</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup> | 255.695 |
+| **Lu_3** | **9** | **5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **154.992** |
+| Hf | 4 | 5*d*<sup>3</sup> 6*s*<sup>1</sup> | 220.334 |
+| **Hf_pv** | **10** | **5*p*<sup>6</sup> 5*d*<sup>3</sup> 6*s*<sup>1</sup>** | **220.334** |
+| Hf_sv | 12 | 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup> | 237.444 |
+| Ta | 5 | 5*d*<sup>4</sup> 6*s*<sup>1</sup> | 223.667 |
+| **Ta_pv** | **11** | **5*p*<sup>6</sup> 5*d*<sup>4</sup> 6*s*<sup>1</sup>** | **223.667** |
+| W | 6 | 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.057 |
+| W_pv | 12 | 5*p*<sup>6</sup> 5*d*<sup>5</sup> 6*s*<sup>1</sup> | 223.057 |
+| **Re** | **7** | **5*d*<sup>6</sup> 6*s*<sup>1</sup>** | **226.216** |
+| Re_pv | 13 | 5*p*<sup>6</sup> 5*d*<sup>6</sup> 6*s*<sup>1</sup> | 226.216 |
+| **Os** | **8** | **5*d*<sup>7</sup> 6*s*<sup>1</sup>** | **228.022** |
+| Os_pv | 14 | 5*p*<sup>6</sup> 5*d*<sup>7</sup> 6*s*<sup>1</sup> | 228.022 |
+| **Ir** | **9** | **5*d*<sup>8</sup> 6*s*<sup>1</sup>** | **210.864** |
+| **Pt** | **10** | **5*d*<sup>9</sup> 6*s*<sup>1</sup>** | **230.283** |
+| Pt_pv | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 294.607 |
+| **Au** | **11** | **5*d*<sup>10</sup> 6*s*<sup>1</sup>** | **229.943** |
+| **Hg** | **12** | **5*d*<sup>10</sup> 6*s*<sup>2</sup>** | **233.204** |
+| Tl | 3 | 6*s*<sup>2</sup> 6*p*<sup>1</sup> | 90.14 |
+| **Tl_d** | **13** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>1</sup>** | **237.053** |
+| Pb | 4 | 6*s*<sup>2</sup> 6*p*<sup>2</sup> | 97.973 |
+| **Pb_d** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.835** |
+| Bi | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 105.037 |
+| **Bi_d** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.839** |
+| Po | 6 | 6*s*<sup>2</sup> 6*p*<sup>4</sup> | 159.707 |
+| **Po_d** | **16** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>4</sup>** | **264.565** |
+| **At** | **7** | **6*s*<sup>2</sup> 6*p*<sup>5</sup>** | **161.43** |
+| At_d | 17 | 5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>5</sup> | 266.251 |
+| **Rn** | **8** | **6*s*<sup>2</sup> 6*p*<sup>6</sup>** | **152.121** |
+| **Fr_sv** | **9** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>1</sup>** | **214.54** |
+| **Ra_sv** | **10** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 7*s*<sup>2</sup>** | **237.367** |
+| **Ac** | **11** | **6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **172.351** |
+| **Th** | **12** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup>** | **247.306** |
+| Th_s | 10 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>1</sup> 7*s*<sup>2</sup> | 169.363 |
+| **Pa** | **13** | **5*f*<sup>1</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.193** |
+| Pa_s | 11 | 5*f*<sup>1</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 193.466 |
+| **U** | **14** | **5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **252.502** |
+| U_s | 14 | 5*f*<sup>2</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 209.23 |
+| **Np** | **15** | **5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.26** |
+| Np_s | 15 | 5*f*<sup>3</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.713 |
+| **Pu** | **16** | **5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **254.353** |
+| Pu_s | 16 | 5*f*<sup>4</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup> | 207.83 |
+| **Am** | **17** | **5*f*<sup>5</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **255.875** |
+| **Cm** | **18** | **5*f*<sup>6</sup> 6*s*<sup>2</sup> 6*p*<sup>6</sup> 6*d*<sup>2</sup> 7*s*<sup>2</sup>** | **257.953** |
 
-#### GW potentials
+#### GW potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: GW potentials">edit</a> \| (./index.php.md)\]
+
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of LDA potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **404.806** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.253 |
-| Li_GW | 1 | 2*s*¹ | 112.417 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.253** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.951 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **536.216** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.762** |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 413.992 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.681** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 420.681 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 296.222 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.315** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 433.745 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.366 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.335** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 487.335 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **317.594** |
-| Ne_GW_soft | 8 | 2*s*² 2*p*⁶ | 317.594 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*d*¹** | **260.372** |
-| Mg_GW | 2 | 3*s*² | 126.671 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.538 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **430.099** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.957** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.007 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.704** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 546.548 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.155** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.602** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.25** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **266.101** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.606** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.209** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **284.878** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **285.665** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **322.537** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **327.752** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.537 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **357.618** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.044 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **364.41** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.447 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **363.483** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.352 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **413.158** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.032 |
-| Cu_pv_GW | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 466.991 |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.312 |
-| Zn_pv_GW | 18 | 3*p*⁶ 3*d*¹⁰ 4*s*² | 360.353 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹²** | **496.249** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.8 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.723** |
-| Ga_pv_GW | 19 | 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 422.753 |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 503.451 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.969 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.448** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 454.654 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.87** |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.602** |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.224** |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **185.392** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **220.92** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.532** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **229.027** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **282.169** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **285.574** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **311.692** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **317.903** |
-| Ru_pv_GW | 14 | 4*p*⁶ 4*d*⁷ 5*s*¹ | 239.907 |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **320.997** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.321 |
-| Rh_pv_GW | 15 | 4*p*⁶ 4*d*⁸ 5*s*¹ | 247.321 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **319.891** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.832 |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.752 |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 253.99 |
-| Cd_pv_GW | 18 | 4*p*⁶ 4*d*¹⁰ 5*s*² | 396.576 |
-| **Cd_sv_GW** | **20** | **4*s*⁴ 4*p*⁶ 4*d*¹⁰** | **650.91** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.582** |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.086** |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.301 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.147** |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **175.144** |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.712** |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.528** |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.012** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*²** | **237.484** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.649** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **282.716** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **285.798** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **316.943** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **316.85** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.628** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.708** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.657 |
-| Pt_pv_GW | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 248.657 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.536** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.263 |
-| Au_pv_GW | 17 | 5*p*⁶ 5*d*¹⁰ 6*s*¹ | 248.263 |
-| **Pb_d_GW** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.793** |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.628 |
-| **Bi_d_GW** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.856** |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **404.806** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.253 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.417 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.253** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.951 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **536.216** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.762** |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 413.992 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.681** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 420.681 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 296.222 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.315** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 433.745 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.366 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.335** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 487.335 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **317.594** |
+| Ne_GW_soft | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 317.594 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>1</sup>** | **260.372** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.671 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.538 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **430.099** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.957** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.007 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.704** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 546.548 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.155** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.602** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.25** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.101** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.606** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.209** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **284.878** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **285.665** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **322.537** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **327.752** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.537 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **357.618** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.044 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **364.41** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.447 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **363.483** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.352 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **413.158** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.032 |
+| Cu_pv_GW | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 466.991 |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.312 |
+| Zn_pv_GW | 18 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 360.353 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>12</sup>** | **496.249** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.8 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.723** |
+| Ga_pv_GW | 19 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 422.753 |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 503.451 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.969 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.448** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 454.654 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.87** |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.602** |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.224** |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.392** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **220.92** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.532** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **229.027** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **282.169** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **285.574** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **311.692** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **317.903** |
+| Ru_pv_GW | 14 | 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 239.907 |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **320.997** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.321 |
+| Rh_pv_GW | 15 | 4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.321 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **319.891** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.832 |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.752 |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 253.99 |
+| Cd_pv_GW | 18 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 396.576 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>4</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **650.91** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.582** |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.086** |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.301 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.147** |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **175.144** |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.712** |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.528** |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.012** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>2</sup>** | **237.484** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.649** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **282.716** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **285.798** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **316.943** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **316.85** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.628** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.708** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.657 |
+| Pt_pv_GW | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.657 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.536** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.263 |
+| Au_pv_GW | 17 | 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.263 |
+| **Pb_d_GW** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.793** |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.628 |
+| **Bi_d_GW** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.856** |
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 | List of PBE potentials |  |  |  |
 | Potential name | Number of valence electrons | Valence electron configuration | ENAMX \[eV\] |
-| **H_GW** | **1** | **1*s*¹** | **300.0** |
-| H_h_GW | 1 | 1*s*¹ | 700.0 |
-| **He_GW** | **2** | **1*s*²** | **405.78** |
-| Li_AE_GW | 3 | 1*s*² 2*p*¹ | 433.699 |
-| Li_GW | 1 | 2*s*¹ | 112.104 |
-| **Li_sv_GW** | **3** | **1*s*² 2*p*¹** | **433.699** |
-| Be_GW | 2 | 2*s*^(1.9999) 2*p*^(0.001) | 247.543 |
-| **Be_sv_GW** | **4** | **1*s*² 2*p*²** | **537.454** |
-| **B_GW** | **3** | **2*s*² 2*p*¹** | **318.614** |
-| **C_GW** | **4** | **2*s*² 2*p*²** | **413.992** |
-| C_GW_new | 4 | 2*s*² 2*p*² | 413.992 |
-| **N_GW** | **5** | **2*s*² 2*p*³** | **420.902** |
-| N_GW_new | 5 | 2*s*² 2*p*³ | 420.902 |
-| N_s_GW | 5 | 2*s*² 2*p*³ | 296.495 |
-| **O_GW** | **6** | **2*s*² 2*p*⁴** | **414.635** |
-| O_GW_new | 6 | 2*s*² 2*p*⁴ | 434.431 |
-| O_s_GW | 6 | 2*s*² 2*p*⁴ | 334.664 |
-| **F_GW** | **7** | **2*s*² 2*p*⁵** | **487.698** |
-| F_GW_new | 7 | 2*s*² 2*p*⁵ | 487.698 |
-| **Ne_GW** | **8** | **2*s*² 2*p*⁶** | **318.26** |
-| Ne_GW_soft | 8 | 2*s*² 2*p*⁶ | 318.26 |
-| **Na_sv_GW** | **9** | **2*s*² 2*p*⁶ 3*d*¹** | **260.065** |
-| Mg_GW | 2 | 3*s*² | 126.143 |
-| Mg_pv_GW | 8 | 2*p*⁶ 3*s*² | 403.929 |
-| **Mg_sv_GW** | **10** | **2*s*² 2*p*⁶ 3*d*²** | **429.893** |
-| **Al_GW** | **3** | **3*s*² 3*p*¹** | **240.3** |
-| Al_sv_GW | 11 | 2*s*² 2*p*⁶ 3*s*² 3*p*¹ | 411.109 |
-| **Si_GW** | **4** | **3*s*² 3*p*²** | **245.345** |
-| Si_sv_GW | 12 | 2*s*² 2*p*⁶ 3*s*² 3*p*² | 547.578 |
-| **P_GW** | **5** | **3*s*² 3*p*³** | **255.04** |
-| **S_GW** | **6** | **3*s*² 3*p*⁴** | **258.689** |
-| **Cl_GW** | **7** | **3*s*² 3*p*⁵** | **262.472** |
-| **Ar_GW** | **8** | **3*s*² 3*p*⁶** | **266.408** |
-| **K_sv_GW** | **9** | **3*s*² 3*p*⁶ 3*d*¹** | **248.998** |
-| **Ca_sv_GW** | **10** | **3*s*² 3*p*⁶ 3*d*²** | **281.43** |
-| **Sc_sv_GW** | **11** | **3*s*² 3*p*⁶ 3*d*³** | **285.066** |
-| **Ti_sv_GW** | **12** | **3*s*² 3*p*⁶ 3*d*⁴** | **285.998** |
-| **V_sv_GW** | **13** | **3*s*² 3*p*⁶ 3*d*⁵** | **323.07** |
-| **Cr_sv_GW** | **14** | **3*s*² 3*p*⁶ 3*d*⁶** | **328.282** |
-| Mn_GW | 7 | 3*d*⁶ 4*s*¹ | 278.466 |
-| **Mn_sv_GW** | **15** | **3*s*² 3*p*⁶ 3*d*⁷** | **357.944** |
-| Fe_GW | 8 | 3*d*⁷ 4*s*¹ | 321.007 |
-| **Fe_sv_GW** | **16** | **3*s*² 3*p*⁶ 3*d*⁸** | **364.719** |
-| Co_GW | 9 | 3*d*⁸ 4*s*¹ | 323.4 |
-| **Co_sv_GW** | **17** | **3*s*² 3*p*⁶ 3*d*⁹** | **363.77** |
-| Ni_GW | 10 | 3*d*⁹ 4*s*¹ | 357.323 |
-| **Ni_sv_GW** | **18** | **3*s*² 3*p*⁶ 3*d*¹⁰** | **413.475** |
-| Cu_GW | 11 | 3*d*¹⁰ 4*s*¹ | 417.039 |
-| Cu_pv_GW | 17 | 3*p*⁶ 3*d*¹⁰ 4*s*¹ | 467.331 |
-| Zn_GW | 12 | 3*d*¹⁰ 4*s*² | 328.191 |
-| Zn_pv_GW | 18 | 3*p*⁶ 3*d*¹⁰ 4*s*² | 360.246 |
-| **Zn_sv_GW** | **20** | **3*s*² 3*p*⁶ 3*d*¹²** | **496.604** |
-| Ga_GW | 3 | 4*s*² 4*p*¹ | 134.678 |
-| **Ga_d_GW** | **13** | **3*d*¹⁰ 4*s*² 4*p*¹** | **404.602** |
-| Ga_pv_GW | 19 | 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 423.002 |
-| Ga_sv_GW | 21 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*¹ | 503.418 |
-| Ge_GW | 4 | 4*s*² 4*p*² | 173.807 |
-| **Ge_d_GW** | **14** | **3*d*¹⁰ 4*s*² 4*p*²** | **310.294** |
-| Ge_sv_GW | 22 | 3*s*² 3*p*⁶ 3*d*¹⁰ 4*s*² 4*p*² | 454.489 |
-| **As_GW** | **5** | **4*s*² 4*p*³** | **208.702** |
-| **Se_GW** | **6** | **4*s*² 4*p*⁴** | **211.555** |
-| **Br_GW** | **7** | **4*s*² 4*p*⁵** | **216.285** |
-| **Kr_GW** | **8** | **4*s*² 4*p*⁶** | **185.331** |
-| **Rb_sv_GW** | **9** | **4*s*² 4*p*⁶ 4*d*¹** | **221.197** |
-| **Sr_sv_GW** | **10** | **4*s*² 4*p*⁶ 4*d*²** | **224.817** |
-| **Y_sv_GW** | **11** | **4*s*² 4*p*⁶ 4*d*³** | **229.276** |
-| **Zr_sv_GW** | **12** | **4*s*² 4*p*⁶ 4*d*⁴** | **282.431** |
-| **Nb_sv_GW** | **13** | **4*s*² 4*p*⁶ 4*d*⁵** | **285.792** |
-| **Mo_sv_GW** | **14** | **4*s*² 4*p*⁶ 4*d*⁶** | **311.905** |
-| **Tc_sv_GW** | **15** | **4*s*² 4*p*⁶ 4*d*⁷** | **318.11** |
-| Ru_pv_GW | 14 | 4*p*⁶ 4*d*⁷ 5*s*¹ | 240.049 |
-| **Ru_sv_GW** | **16** | **4*s*² 4*p*⁶ 4*d*⁸** | **321.2** |
-| Rh_GW | 9 | 4*d*⁸ 5*s*¹ | 247.408 |
-| Rh_pv_GW | 15 | 4*p*⁶ 4*d*⁸ 5*s*¹ | 247.408 |
-| **Rh_sv_GW** | **17** | **4*s*² 4*p*⁶ 4*d*⁹** | **320.091** |
-| Pd_GW | 10 | 4*d*⁹ 5*s*¹ | 250.925 |
-| Ag_GW | 11 | 4*d*¹⁰ 5*s*¹ | 249.844 |
-| Cd_GW | 12 | 4*d*¹⁰ 5*s*² | 254.045 |
-| Cd_pv_GW | 18 | 4*p*⁶ 4*d*¹⁰ 5*s*² | 396.766 |
-| **Cd_sv_GW** | **20** | **4*s*⁴ 4*p*⁶ 4*d*¹⁰** | **651.254** |
-| **In_d_GW** | **13** | **4*d*¹⁰ 5*s*² 5*p*¹** | **278.624** |
-| **Sn_d_GW** | **14** | **4*d*¹⁰ 5*s*² 5*p*²** | **260.066** |
-| Sb_GW | 5 | 5*s*² 5*p*³ | 172.069 |
-| **Sb_d_GW** | **15** | **4*d*¹⁰ 5*s*² 5*p*³** | **263.1** |
-| **Te_GW** | **6** | **5*s*² 5*p*⁴** | **174.982** |
-| **I_GW** | **7** | **5*s*² 5*p*⁵** | **175.647** |
-| **Xe_GW** | **8** | **5*s*² 5*p*⁶** | **179.547** |
-| **Cs_sv_GW** | **9** | **5*s*² 5*p*⁶ 5*d*¹** | **198.101** |
-| **Ba_sv_GW** | **10** | **5*s*² 5*p*⁶ 5*d*²** | **237.515** |
-| **Ce_GW** | **12** | **4*f*¹ 5*s*² 5*p*⁶ 5*d*¹ 6*s*²** | **304.625** |
-| **Hf_sv_GW** | **12** | **5*s*² 5*p*⁶ 5*d*⁴** | **282.964** |
-| **Ta_sv_GW** | **13** | **5*s*² 5*p*⁶ 5*d*⁵** | **286.008** |
-| **W_sv_GW** | **14** | **5*s*² 5*p*⁶ 5*d*⁶** | **317.132** |
-| **Re_sv_GW** | **15** | **5*s*² 5*p*⁶ 5*d*⁷** | **317.012** |
-| **Os_sv_GW** | **16** | **5*s*² 5*p*⁶ 5*d*⁸** | **319.773** |
-| **Ir_sv_GW** | **17** | **5*s*² 5*p*⁶ 5*d*⁹** | **319.843** |
-| Pt_GW | 10 | 5*d*⁹ 6*s*¹ | 248.716 |
-| Pt_pv_GW | 16 | 5*p*⁶ 5*d*⁹ 6*s*¹ | 248.716 |
-| **Pt_sv_GW** | **18** | **5*s*² 5*p*⁶ 5*d*¹⁰** | **323.669** |
-| Au_GW | 11 | 5*d*¹⁰ 6*s*¹ | 248.344 |
-| Au_pv_GW | 17 | 5*p*⁶ 5*d*¹⁰ 6*s*¹ | 248.344 |
-| **Pb_d_GW** | **14** | **5*d*¹⁰ 6*s*² 6*p*²** | **237.809** |
-| Bi_GW | 5 | 6*s*² 6*p*³ | 146.53 |
-| **Bi_d_GW** | **15** | **5*d*¹⁰ 6*s*² 6*p*³** | **242.839** |
+| **H_GW** | **1** | **1*s*<sup>1</sup>** | **300.0** |
+| H_h_GW | 1 | 1*s*<sup>1</sup> | 700.0 |
+| **He_GW** | **2** | **1*s*<sup>2</sup>** | **405.78** |
+| Li_AE_GW | 3 | 1*s*<sup>2</sup> 2*p*<sup>1</sup> | 433.699 |
+| Li_GW | 1 | 2*s*<sup>1</sup> | 112.104 |
+| **Li_sv_GW** | **3** | **1*s*<sup>2</sup> 2*p*<sup>1</sup>** | **433.699** |
+| Be_GW | 2 | 2*s*<sup>1.9999</sup> 2*p*<sup>0.001</sup> | 247.543 |
+| **Be_sv_GW** | **4** | **1*s*<sup>2</sup> 2*p*<sup>2</sup>** | **537.454** |
+| **B_GW** | **3** | **2*s*<sup>2</sup> 2*p*<sup>1</sup>** | **318.614** |
+| **C_GW** | **4** | **2*s*<sup>2</sup> 2*p*<sup>2</sup>** | **413.992** |
+| C_GW_new | 4 | 2*s*<sup>2</sup> 2*p*<sup>2</sup> | 413.992 |
+| **N_GW** | **5** | **2*s*<sup>2</sup> 2*p*<sup>3</sup>** | **420.902** |
+| N_GW_new | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 420.902 |
+| N_s_GW | 5 | 2*s*<sup>2</sup> 2*p*<sup>3</sup> | 296.495 |
+| **O_GW** | **6** | **2*s*<sup>2</sup> 2*p*<sup>4</sup>** | **414.635** |
+| O_GW_new | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 434.431 |
+| O_s_GW | 6 | 2*s*<sup>2</sup> 2*p*<sup>4</sup> | 334.664 |
+| **F_GW** | **7** | **2*s*<sup>2</sup> 2*p*<sup>5</sup>** | **487.698** |
+| F_GW_new | 7 | 2*s*<sup>2</sup> 2*p*<sup>5</sup> | 487.698 |
+| **Ne_GW** | **8** | **2*s*<sup>2</sup> 2*p*<sup>6</sup>** | **318.26** |
+| Ne_GW_soft | 8 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> | 318.26 |
+| **Na_sv_GW** | **9** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>1</sup>** | **260.065** |
+| Mg_GW | 2 | 3*s*<sup>2</sup> | 126.143 |
+| Mg_pv_GW | 8 | 2*p*<sup>6</sup> 3*s*<sup>2</sup> | 403.929 |
+| **Mg_sv_GW** | **10** | **2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*d*<sup>2</sup>** | **429.893** |
+| **Al_GW** | **3** | **3*s*<sup>2</sup> 3*p*<sup>1</sup>** | **240.3** |
+| Al_sv_GW | 11 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>1</sup> | 411.109 |
+| **Si_GW** | **4** | **3*s*<sup>2</sup> 3*p*<sup>2</sup>** | **245.345** |
+| Si_sv_GW | 12 | 2*s*<sup>2</sup> 2*p*<sup>6</sup> 3*s*<sup>2</sup> 3*p*<sup>2</sup> | 547.578 |
+| **P_GW** | **5** | **3*s*<sup>2</sup> 3*p*<sup>3</sup>** | **255.04** |
+| **S_GW** | **6** | **3*s*<sup>2</sup> 3*p*<sup>4</sup>** | **258.689** |
+| **Cl_GW** | **7** | **3*s*<sup>2</sup> 3*p*<sup>5</sup>** | **262.472** |
+| **Ar_GW** | **8** | **3*s*<sup>2</sup> 3*p*<sup>6</sup>** | **266.408** |
+| **K_sv_GW** | **9** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>1</sup>** | **248.998** |
+| **Ca_sv_GW** | **10** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>2</sup>** | **281.43** |
+| **Sc_sv_GW** | **11** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>3</sup>** | **285.066** |
+| **Ti_sv_GW** | **12** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>4</sup>** | **285.998** |
+| **V_sv_GW** | **13** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>5</sup>** | **323.07** |
+| **Cr_sv_GW** | **14** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>6</sup>** | **328.282** |
+| Mn_GW | 7 | 3*d*<sup>6</sup> 4*s*<sup>1</sup> | 278.466 |
+| **Mn_sv_GW** | **15** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>7</sup>** | **357.944** |
+| Fe_GW | 8 | 3*d*<sup>7</sup> 4*s*<sup>1</sup> | 321.007 |
+| **Fe_sv_GW** | **16** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>8</sup>** | **364.719** |
+| Co_GW | 9 | 3*d*<sup>8</sup> 4*s*<sup>1</sup> | 323.4 |
+| **Co_sv_GW** | **17** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>9</sup>** | **363.77** |
+| Ni_GW | 10 | 3*d*<sup>9</sup> 4*s*<sup>1</sup> | 357.323 |
+| **Ni_sv_GW** | **18** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup>** | **413.475** |
+| Cu_GW | 11 | 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 417.039 |
+| Cu_pv_GW | 17 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>1</sup> | 467.331 |
+| Zn_GW | 12 | 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 328.191 |
+| Zn_pv_GW | 18 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> | 360.246 |
+| **Zn_sv_GW** | **20** | **3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>12</sup>** | **496.604** |
+| Ga_GW | 3 | 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 134.678 |
+| **Ga_d_GW** | **13** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup>** | **404.602** |
+| Ga_pv_GW | 19 | 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 423.002 |
+| Ga_sv_GW | 21 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>1</sup> | 503.418 |
+| Ge_GW | 4 | 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 173.807 |
+| **Ge_d_GW** | **14** | **3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup>** | **310.294** |
+| Ge_sv_GW | 22 | 3*s*<sup>2</sup> 3*p*<sup>6</sup> 3*d*<sup>10</sup> 4*s*<sup>2</sup> 4*p*<sup>2</sup> | 454.489 |
+| **As_GW** | **5** | **4*s*<sup>2</sup> 4*p*<sup>3</sup>** | **208.702** |
+| **Se_GW** | **6** | **4*s*<sup>2</sup> 4*p*<sup>4</sup>** | **211.555** |
+| **Br_GW** | **7** | **4*s*<sup>2</sup> 4*p*<sup>5</sup>** | **216.285** |
+| **Kr_GW** | **8** | **4*s*<sup>2</sup> 4*p*<sup>6</sup>** | **185.331** |
+| **Rb_sv_GW** | **9** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>1</sup>** | **221.197** |
+| **Sr_sv_GW** | **10** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>2</sup>** | **224.817** |
+| **Y_sv_GW** | **11** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>3</sup>** | **229.276** |
+| **Zr_sv_GW** | **12** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>4</sup>** | **282.431** |
+| **Nb_sv_GW** | **13** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>5</sup>** | **285.792** |
+| **Mo_sv_GW** | **14** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>6</sup>** | **311.905** |
+| **Tc_sv_GW** | **15** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>7</sup>** | **318.11** |
+| Ru_pv_GW | 14 | 4*p*<sup>6</sup> 4*d*<sup>7</sup> 5*s*<sup>1</sup> | 240.049 |
+| **Ru_sv_GW** | **16** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>8</sup>** | **321.2** |
+| Rh_GW | 9 | 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.408 |
+| Rh_pv_GW | 15 | 4*p*<sup>6</sup> 4*d*<sup>8</sup> 5*s*<sup>1</sup> | 247.408 |
+| **Rh_sv_GW** | **17** | **4*s*<sup>2</sup> 4*p*<sup>6</sup> 4*d*<sup>9</sup>** | **320.091** |
+| Pd_GW | 10 | 4*d*<sup>9</sup> 5*s*<sup>1</sup> | 250.925 |
+| Ag_GW | 11 | 4*d*<sup>10</sup> 5*s*<sup>1</sup> | 249.844 |
+| Cd_GW | 12 | 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 254.045 |
+| Cd_pv_GW | 18 | 4*p*<sup>6</sup> 4*d*<sup>10</sup> 5*s*<sup>2</sup> | 396.766 |
+| **Cd_sv_GW** | **20** | **4*s*<sup>4</sup> 4*p*<sup>6</sup> 4*d*<sup>10</sup>** | **651.254** |
+| **In_d_GW** | **13** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>1</sup>** | **278.624** |
+| **Sn_d_GW** | **14** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>2</sup>** | **260.066** |
+| Sb_GW | 5 | 5*s*<sup>2</sup> 5*p*<sup>3</sup> | 172.069 |
+| **Sb_d_GW** | **15** | **4*d*<sup>10</sup> 5*s*<sup>2</sup> 5*p*<sup>3</sup>** | **263.1** |
+| **Te_GW** | **6** | **5*s*<sup>2</sup> 5*p*<sup>4</sup>** | **174.982** |
+| **I_GW** | **7** | **5*s*<sup>2</sup> 5*p*<sup>5</sup>** | **175.647** |
+| **Xe_GW** | **8** | **5*s*<sup>2</sup> 5*p*<sup>6</sup>** | **179.547** |
+| **Cs_sv_GW** | **9** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup>** | **198.101** |
+| **Ba_sv_GW** | **10** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>2</sup>** | **237.515** |
+| **Ce_GW** | **12** | **4*f*<sup>1</sup> 5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>1</sup> 6*s*<sup>2</sup>** | **304.625** |
+| **Hf_sv_GW** | **12** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>4</sup>** | **282.964** |
+| **Ta_sv_GW** | **13** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>5</sup>** | **286.008** |
+| **W_sv_GW** | **14** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>6</sup>** | **317.132** |
+| **Re_sv_GW** | **15** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>7</sup>** | **317.012** |
+| **Os_sv_GW** | **16** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>8</sup>** | **319.773** |
+| **Ir_sv_GW** | **17** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>9</sup>** | **319.843** |
+| Pt_GW | 10 | 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.716 |
+| Pt_pv_GW | 16 | 5*p*<sup>6</sup> 5*d*<sup>9</sup> 6*s*<sup>1</sup> | 248.716 |
+| **Pt_sv_GW** | **18** | **5*s*<sup>2</sup> 5*p*<sup>6</sup> 5*d*<sup>10</sup>** | **323.669** |
+| Au_GW | 11 | 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.344 |
+| Au_pv_GW | 17 | 5*p*<sup>6</sup> 5*d*<sup>10</sup> 6*s*<sup>1</sup> | 248.344 |
+| **Pb_d_GW** | **14** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>2</sup>** | **237.809** |
+| Bi_GW | 5 | 6*s*<sup>2</sup> 6*p*<sup>3</sup> | 146.53 |
+| **Bi_d_GW** | **15** | **5*d*<sup>10</sup> 6*s*<sup>2</sup> 6*p*<sup>3</sup>** | **242.839** |
 
-### LDA (2010), PW91 (2006) and PBE (2010) PAW potentials
+### LDA (2010), PW91 (2006) and PBE (2010) PAW potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: LDA (2010), PW91 (2006) and PBE (2010) PAW potentials">edit</a> \| (./index.php.md), PW91 (2006) and PBE (2010) PAW potentials")\]
+
 The LDA, PW91 and PBE PAW datasets (snapshot: 05-05-2010, 19-09-2006 and
 06-05-2010, respectively). These files are outdated, not supported and
 only distributed as is. Some VASP feature might yield undesired results
 with these files (e.g. [METAGGA](../incar-tags/METAGGA.md)).
 
-#### Standard potentials
+#### Standard potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard potentials">edit</a> \| (./index.php.md)\]
+
 |                        |                             |              |
 |:----------------------:|:---------------------------:|:------------:|
 | List of LDA potentials |                             |              |
@@ -2681,7 +2766,11 @@ with these files (e.g. [METAGGA](../incar-tags/METAGGA.md)).
 |          Pu_s          |             16              |   211.344    |
 |         **Am**         |           **17**            | **255.875**  |
 
-#### GW potentials
+#### GW potentials\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: GW potentials">edit</a> \| (./index.php.md)\]
+
 |                        |                             |              |
 |:----------------------:|:---------------------------:|:------------:|
 | List of LDA potentials |                             |              |
@@ -2830,7 +2919,11 @@ with these files (e.g. [METAGGA](../incar-tags/METAGGA.md)).
 |         Eu_GW          |             17              |   603.254    |
 |      **Hf_sv_GW**      |           **12**            | **317.394**  |
 
-### Ultrasoft pseudopotentials for LDA and PW91 (2002)
+### Ultrasoft pseudopotentials for LDA and PW91 (2002)\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Ultrasoft pseudopotentials for LDA and PW91 (2002)">edit</a> \| (./index.php.md)")\]
+
 Ultrasoft pseudo potentials for LDA and PW91 (dated 2002-08-20 and
 2002-04-08, respectively). These files are outdated, not supported and
 only distributed as is. Some VASP feature might yield undesired results
@@ -3045,12 +3138,20 @@ with these files (e.g. [METAGGA](../incar-tags/METAGGA.md)).
 |           Pb            |              4              |    88.425    |
 |        **Pb_d**         |           **14**            | **144.354**  |
 
-### LDA & PBE, 5.2 & 5.4 (original univie release version)
+### LDA & PBE, 5.2 & 5.4 (original univie release version)\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: LDA &amp; PBE, 5.2 &amp; 5.4 (original univie release version)">edit</a> \| (./index.php.md)")\]
+
 |  |
 |----|
 | **Mind:** *LDA & PBE, 5.2 & 5.4 (original univie release version)* potentials are equivalent to the [potpaw.52](#potpaw.52) and [potpaw.54](#potpaw.54) sets, other than some TITLE strings and missing hash keys. Thus, they are not listed explicitly here. Use them only if you need strictly identical files. |
 
-## Different variants specified by the suffix
+## Different variants specified by the suffix\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Different variants specified by the suffix">edit</a> \| (./index.php.md)\]
+
 For most elements different variants of [POTCAR](POTCAR.md)
 files exist for each element within a specific set (e.g. potpaw_PBE.64).
 The different [POTCAR](POTCAR.md) vartiations are
@@ -3060,51 +3161,70 @@ every element or in all pseudopotential sets.
 |  |  |  |
 |----|----|----|
 | Suffix | Explanation | Example |
-| **\_s** | This suffix indicates a soft potential, with a larger core radius and a lower requirement for the plane-wave energy cutoff. Although computation time is significantly reduced, transferability and accuracy are compromised to some extent. | The O potential has a core radius of 1.52 atomic units (a.u.) and [ENMAX](../redirects/ENMAX.md) of 400 electron Volts (eV). The O_s potential has a core radius of 1.85 a.u. and a cutoff of 282.9 eV. |
-| **\_h** | This suffix signifies a hard potential, with a smaller core radius and a higher requirement for the plane-wave energy cutoff. Although this type of potentials increases computational cost, it might be required for some systems, particularly when dealing with short bonds. Additionally, hard potentials tend to be more transferable than soft ones. | The O_h potential has a core radius of 1.1 a.u. and [ENMAX](../redirects/ENMAX.md) is set to 765.5 eV. |
+| **\_s** | This suffix indicates a soft potential, with a larger core radius and a lower requirement for the plane-wave energy cutoff. Although computation time is significantly reduced, transferability and accuracy are compromised to some extent. | The O potential has a core radius of 1.52 atomic units (a.u.) and <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> of 400 electron Volts (eV). The O_s potential has a core radius of 1.85 a.u. and a cutoff of 282.9 eV. |
+| **\_h** | This suffix signifies a hard potential, with a smaller core radius and a higher requirement for the plane-wave energy cutoff. Although this type of potentials increases computational cost, it might be required for some systems, particularly when dealing with short bonds. Additionally, hard potentials tend to be more transferable than soft ones. | The O_h potential has a core radius of 1.1 a.u. and <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> is set to 765.5 eV. |
 | **\_pv** | Semicore *p* states are considered valence states. Additionally, these types of potentials are a bit harder. Computational cost increases, but accuracy and transferability as well. | The Ti potential has four valence electrons, two in the 3*d* shell, and two in the 4*s* shell. Ti_pv adds six electrons in the 3*p* shell. |
-| **\_sv** | Semicore *p* and *s* states are considered valence states. Additionally, these types of potentials are harder than those without a suffix. Computational cost increases, but accuracy and transferability as well. | Ti_sv adds two more electrons, so now we have a 3*s*²3*p*⁶3*d*²4*s*² configuration with 12 total electrons |
+| **\_sv** | Semicore *p* and *s* states are considered valence states. Additionally, these types of potentials are harder than those without a suffix. Computational cost increases, but accuracy and transferability as well. | Ti_sv adds two more electrons, so now we have a 3*s*<sup>2</sup>3*p*<sup>6</sup>3*d*<sup>2</sup>4*s*<sup>2</sup> configuration with 12 total electrons |
 | **\_d** | Semicore *d* states are considered valence states. Additionally these type of potentials are a bit harder. Computational cost increases, but accuracy and transferability as well. | The Ge potential has four valence electrons, two in the 4*s* shell, and two in the 4*p* shell. Ge_d adds ten electrons in the *3d* shell. |
-| **\_2** or **\_3** | Pseudopotentials with an integer suffix denote a specific valence state. These potentials are only provided for the Lanthanides. Some 4*f* electrons for these potentials are put in the frozen core, although they are higher in energy than other valence states. Be careful when using these potentials and read [the section about lanthanides with fixed valence](../tutorials/Choosing_pseudopotentials.md) beforehand. | The Er potential has 22 valence electrons with the configuration 4*f*¹²5*s*²5*p*⁶6*s*² and an energy cutoff of ~350 eV. Er_2 has 8 valence electrons with the configuration 5*p*⁶6*s*² and a recommended cutoff energy of ~120 eV, while Er_3 has 9 valence electrons and the configuration 5*p*⁶5*d*¹6*s*² and a cutoff of ~155 eV. |
-| **\_AE** | These potentials are only provided for H, He, and Li. They are very hard and contain all electrons (AE). These potentials are optimized to reproduce the wave functions in the atomic core region as well as possible. | Both the He and the HE_AE pseudopotentials contain two electrons, but the \_AE variant has an extremely small core radius of 0.6 a.u. (compared to 1.1 a.u. for He), and [ENMAX](../redirects/ENMAX.md) of ~2135 eV, and [EAUG](../incar-tags/EAUG.md) of ~2900 eV. |
-| **\_GW** | These potentials are optimized for calculations requiring a large number of unoccupied states well above the Fermi level. This is achieved by using different projectors and taking care to reproduce the all-electron scattering properties for high energies. They are superior for excited-state properties and any calculation considering [electron-electron correlation](../categories/Category-Many-body_perturbation_theory.md) like GW, RPA, BSE, and MP2. There are some results that indicate that the \_GW potentials are also more accurate for ground-state-DFT calculations^([\[3\]](#cite_note-bosoni:natphysrev:2023-3)), but the results should be very comparable with the standard potentials in most cases. Note that the \_GW suffix is the only one that is often combined with other suffixes. | The Ge and the Ge_GW potential do not differ in core-radius, recommended plane-wave-energy cutoff, or the reference configuration of the atom. However, the partial waves and projector functions used in the generation of the potential are different. |
+| **\_2** or **\_3** | Pseudopotentials with an integer suffix denote a specific valence state. These potentials are only provided for the Lanthanides. Some 4*f* electrons for these potentials are put in the frozen core, although they are higher in energy than other valence states. Be careful when using these potentials and read [the section about lanthanides with fixed valence](../tutorials/Choosing_pseudopotentials.md) beforehand. | The Er potential has 22 valence electrons with the configuration 4*f*<sup>12</sup>5*s*<sup>2</sup>5*p*<sup>6</sup>6*s*<sup>2</sup> and an energy cutoff of ~350 eV. Er_2 has 8 valence electrons with the configuration 5*p*<sup>6</sup>6*s*<sup>2</sup> and a recommended cutoff energy of ~120 eV, while Er_3 has 9 valence electrons and the configuration 5*p*<sup>6</sup>5*d*<sup>1</sup>6*s*<sup>2</sup> and a cutoff of ~155 eV. |
+| **\_AE** | These potentials are only provided for H, He, and Li. They are very hard and contain all electrons (AE). These potentials are optimized to reproduce the wave functions in the atomic core region as well as possible. | Both the He and the HE_AE pseudopotentials contain two electrons, but the \_AE variant has an extremely small core radius of 0.6 a.u. (compared to 1.1 a.u. for He), and <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> of ~2135 eV, and [EAUG](../incar-tags/EAUG.md) of ~2900 eV. |
+| **\_GW** | These potentials are optimized for calculations requiring a large number of unoccupied states well above the Fermi level. This is achieved by using different projectors and taking care to reproduce the all-electron scattering properties for high energies. They are superior for excited-state properties and any calculation considering [electron-electron correlation](../categories/Category-Many-body_perturbation_theory.md) like GW, RPA, BSE, and MP2. There are some results that indicate that the \_GW potentials are also more accurate for ground-state-DFT calculations<sup>[\[3\]](#cite_note-bosoni:natphysrev:2023-3)</sup>, but the results should be very comparable with the standard potentials in most cases. Note that the \_GW suffix is the only one that is often combined with other suffixes. | The Ge and the Ge_GW potential do not differ in core-radius, recommended plane-wave-energy cutoff, or the reference configuration of the atom. However, the partial waves and projector functions used in the generation of the potential are different. |
 
-## Related tags and sections
-[Pseudopotentials](../redirects/Pseudopotentials.md),
-[POTCAR](POTCAR.md), [Pseudopotential
-basics](https://vasp.at/wiki/index.php/index.php)"),
-[Projector-augmented-wave
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Pseudopotentials" class="mw-redirect"
+title="Pseudopotentials">Pseudopotentials</a>,
+[POTCAR](POTCAR.md), <a
+href="/wiki/index.php?title=Pseudopotential_basics&amp;action=edit&amp;redlink=1"
+class="new"
+title="Pseudopotential basics (page does not exist)">Pseudopotential
+basics</a>, [Projector-augmented-wave
 formalism](../methods/Projector-augmented-wave_formalism.md)
 
 Simple instructions to set up a [POTCAR](POTCAR.md) with the
-correct format: [Prepare a
-POTCAR](../redirects/Prepare_a_POTCAR.md)
+correct format: <a href="/wiki/Prepare_a_POTCAR" class="mw-redirect"
+title="Prepare a POTCAR">Prepare a POTCAR</a>
 
 Guide on how to check which flavor of pseudopotential is appropriate for
 a specific calculation: [Choosing
 pseudopotentials](../tutorials/Choosing_pseudopotentials.md)
 
-## References
-1.  ↑ ^([a](#cite_ref-bloechl:prb:94b_1-0))
-    ^([b](#cite_ref-bloechl:prb:94b_1-1)) [P. E. Blöchl, Phys. Rev. B
-    **50**, 17953 (1994).](https://doi.org/10.1103/PhysRevB.50.17953)
-2.  ↑ ^([a](#cite_ref-kresse:prb:99_2-0))
-    ^([b](#cite_ref-kresse:prb:99_2-1)) [I. G. Kresse and D. Joubert,
-    Phys. Rev. B **59**, 1758
-    (1999).](https://doi.org/10.1103/PhysRevB.59.1758)
-3.  [↑](#cite_ref-bosoni:natphysrev:2023_3-0) [Emanuele Bosoni, Louis
-    Beal, Marnik Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin
-    Callsen, Stefaan Cottenier, Augustin Degomme, Vladimir Dikan,
-    Kristjan Eimre, Espen Flage-Larsen, Marco Fornari, Alberto Garcia,
-    Luigi Genovese, Matteo Giantomassi, Sebastiaan P. Huber, Henning
-    Janssen, Georg Kastlunger, Matthias Krack, Georg Kresse, Thomas D.
-    Kühne, Kurt Lejaeghere, Georg K. H. Madsen, Martijn Marsman, Nicola
-    Marzari, Gregor Michalicek, Hossein Mirhosseini, Tiziano M. A.
-    Müller, Guido Petretto, Chris J. Pickard, Samuel Poncé, Gian-Marco
-    Rignanese, Oleg Rubel, Thomas Ruh, Michael Sluydts, Danny E. P.
-    Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel Wortmann,
-    Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu,
-    Giovanni Pizzi, *How to verify the precision of
-    density-functional-theory implementations via reproducible and
-    universal workflows*, Nat Rev Phys 6, 45–58
-    (2024).](https://doi.org/10.1038/s42254-023-00655-3)
+## References\[<a
+href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-bloechl:prb:94b_1-0)</sup>
+    <sup>[b](#cite_ref-bloechl:prb:94b_1-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.50.17953"
+    class="external text" rel="nofollow">P. E. Blöchl, Phys. Rev. B
+    <strong>50</strong>, 17953 (1994).</a>
+2.  ↑
+    <sup>[a](#cite_ref-kresse:prb:99_2-0)</sup>
+    <sup>[b](#cite_ref-kresse:prb:99_2-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.59.1758" class="external text"
+    rel="nofollow">I. G. Kresse and D. Joubert, Phys. Rev. B
+    <strong>59</strong>, 1758 (1999).</a>
+3.  [↑](#cite_ref-bosoni:natphysrev:2023_3-0)
+    <a href="https://doi.org/10.1038/s42254-023-00655-3"
+    class="external text" rel="nofollow">Emanuele Bosoni, Louis Beal, Marnik
+    Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin Callsen, Stefaan
+    Cottenier, Augustin Degomme, Vladimir Dikan, Kristjan Eimre, Espen
+    Flage-Larsen, Marco Fornari, Alberto Garcia, Luigi Genovese, Matteo
+    Giantomassi, Sebastiaan P. Huber, Henning Janssen, Georg Kastlunger,
+    Matthias Krack, Georg Kresse, Thomas D. Kühne, Kurt Lejaeghere, Georg K.
+    H. Madsen, Martijn Marsman, Nicola Marzari, Gregor Michalicek, Hossein
+    Mirhosseini, Tiziano M. A. Müller, Guido Petretto, Chris J. Pickard,
+    Samuel Poncé, Gian-Marco Rignanese, Oleg Rubel, Thomas Ruh, Michael
+    Sluydts, Danny E. P. Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel
+    Wortmann, Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu,
+    Giovanni Pizzi, <em>How to verify the precision of
+    density-functional-theory implementations via reproducible and universal
+    workflows</em>, Nat Rev Phys 6, 45–58 (2024).</a>
+
+

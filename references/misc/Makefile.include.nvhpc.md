@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include.nvhpc
+
+
     # Default precompiler options
     CPP_OPTIONS = -DHOST=\"LinuxNV\" \
                   -DMPI -DMPI_BLOCK=8000 -Duse_collective \
@@ -108,3 +110,5 @@
 ------------------------------------------------------------------------
 
 [makefile.include](Makefile.include.md)
+
+

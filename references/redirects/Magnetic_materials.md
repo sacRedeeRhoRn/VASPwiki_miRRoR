@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Magnetic materials
+
+
+
 Redirect to:
 
 - [Category:Magnetism](../categories/Category-Magnetism.md)
+
+

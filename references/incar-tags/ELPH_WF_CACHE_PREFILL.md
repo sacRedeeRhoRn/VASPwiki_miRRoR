@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_WF_CACHE_PREFILL
-ELPH_WF_CACHE_PREFILL = logical  
+
+
+ELPH_WF_CACHE_PREFILL =
+logical  
 Default: **ELPH_WF_CACHE_PREFILL** = .TRUE. 
 
 Description: Pre-fills the wavefunction cache before the main
 electron-phonon loop begins.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -27,7 +30,13 @@ wavefunctions are then fetched on demand during the loop. This reduces
 the upfront communication cost but increases total MPI traffic and is
 generally slower.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_WF_CACHE_PREFILL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_WF_CACHE_MB](ELPH_WF_CACHE_MB.md)
 - [ELPH_WF_REDISTRIBUTE](ELPH_WF_REDISTRIBUTE.md)
 - [ELPH_WF_COMM_OPT](ELPH_WF_COMM_OPT.md)
+
+

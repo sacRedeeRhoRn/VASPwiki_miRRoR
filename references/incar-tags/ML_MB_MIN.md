@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_MB_MIN
+
+
 ML_MB_MIN = \[integer\]  
 Default: **ML_MB_MIN** = 3 
 
-Description: ML_MB_MIN sets the minimum number of local reference
-configurations required for generation of a machine-learned force field.
+Description: ML_MB_MIN sets
+the minimum number of local reference configurations required for
+generation of a machine-learned force field.
 
 |  |
 |----|
@@ -64,13 +67,18 @@ message will be emitted in the `MSG` line. Here is an example:
     -------------------------------------------------------------------------------- 
     ...
 
-Here, in the first two steps the ML_MB_MIN threshold prevents training
-of an MLFF, even if the Bayesian error estimation signals a `critical`
-step. The force field is then only generated in the third step, after
-the minimum number of three local reference configurations have been
-collected.
+Here, in the first two steps the
+ML_MB_MIN threshold prevents
+training of an MLFF, even if the Bayesian error estimation signals a
+`critical` step. The force field is then only generated in the third
+step, after the minimum number of three local reference configurations
+have been collected.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_MB_MIN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_MODE](ML_MODE.md), [ML_MB](ML_MB.md),
 [ML_MCONF_NEW](ML_MCONF_NEW.md),
@@ -81,3 +89,5 @@ collected.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_MB_MIN-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

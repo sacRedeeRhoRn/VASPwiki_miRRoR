@@ -2,23 +2,34 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IRC_DELTA0
+
+
 IRC_DELTA0 = real  
 Default: **IRC_DELTA0** = 0.0015 
 
-Description: Defines the tolerance factor $\Delta_0$ in Å used in the [IRC
-calculations](../redirects/IRC_calculations.md).
+Description: Defines the tolerance factor $\Delta_0$ in
+Å used in the <a href="/wiki/IRC_calculations" class="mw-redirect"
+title="IRC calculations">IRC calculations</a>.
 
 ------------------------------------------------------------------------
 
-The smaller the value of IRC_DELTA0, the closer the computed IRC
-trajectory follows the true IRC pathway. However, a small tolerance
-factor $\Delta_0$ necessitates more time
-steps and, thus, computational effort.
+The smaller the value of
+IRC_DELTA0, the closer the
+computed IRC trajectory follows the true IRC pathway. However, a small
+tolerance factor $\Delta_0$
+necessitates more time steps and, thus, computational effort.
 
-## Related tags and articles
-[IRC calculations](../redirects/IRC_calculations.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=IRC_DELTA0&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/IRC_calculations" class="mw-redirect"
+title="IRC calculations">IRC calculations</a>,
 [IRC_DIRECTION](IRC_DIRECTION.md) ,
 [IRC_STOP](IRC_STOP.md),
 [IRC_MINSTEP](IRC_MINSTEP.md),
 [IRC_MAXSTEP](IRC_MAXSTEP.md),
 [IRC_VNORM0](IRC_VNORM0.md)
+
+

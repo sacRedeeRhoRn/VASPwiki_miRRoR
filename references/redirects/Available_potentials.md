@@ -2,7 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Available potentials
+
+
+
 Redirect to:
 
-- [Available PAW
-  potentials](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=Available_PAW_potentials&amp;redirect=no"
+  class="mw-redirect" title="Available PAW potentials">Available PAW
+  potentials</a>
+
+

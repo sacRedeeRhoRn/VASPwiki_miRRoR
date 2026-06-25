@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # REGCAR
+
+
+
 Redirect to:
 
-- [ML REGCAR](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=ML_REGCAR&amp;redirect=no"
+  class="mw-redirect" title="ML REGCAR">ML REGCAR</a>
+
+

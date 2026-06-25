@@ -2,34 +2,40 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LWANNIER90
-LWANNIER90 = .TRUE. \| .FALSE.  
+
+
+LWANNIER90 = .TRUE. \|
+.FALSE.  
 Default: **LWANNIER90** = .FALSE. 
 
-Description: LWANNIER90=.TRUE. switches on the interface between VASP
-and [WANNIER90](http://www.wannier.org).
+Description: LWANNIER90=.TRUE.
+switches on the interface between VASP and
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">WANNIER90</a>.
 
 **N.B.**: This feature is only present if VASP is compiled with
-[-DVASP2WANNIER90 or
--DVASP2WANNIER90v2](../redirects/Precompiler_flags.md).
+<a href="/wiki/Precompiler_flags#Optional" class="mw-redirect"
+title="Precompiler flags">-DVASP2WANNIER90 or -DVASP2WANNIER90v2</a>.
 
 ------------------------------------------------------------------------
 
-For LWANNIER90=.TRUE., VASP will write the input files for a WANNIER90
-run: **wannier90.win**, **wannier90.mmn**, **wannier90.eig**,
-**wannier90.amn**, and if
+For LWANNIER90=.TRUE., VASP
+will write the input files for a WANNIER90 run: **wannier90.win**,
+**wannier90.mmn**, **wannier90.eig**, **wannier90.amn**, and if
 [LWRITE_UNK](LWRITE_UNK.md)=.TRUE. **wannier90.UNKp.s**.
 This is done by running `wannier_setup` in library mode as described in
-Chapter 6 of the [WANNIER90
-manual](http://www.wannier.org/doc/user_guide.pdf). For documentation of
-these files and tags therein, please refer to the [WANNIER90
-manual](http://www.wannier.org/doc/user_guide.pdf).
+Chapter 6 of the <a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a>. For
+documentation of these files and tags therein, please refer to the
+<a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a>.
 
 The following cases may occur:
 
 - If **wannier90.win** does not exist, VASP will write the following
   template
 
-&nbsp;
+<!-- -->
 
     num_wann = NBANDS
 
@@ -69,16 +75,22 @@ files.
   this block agrees with the k points used in the VASP calculation!
 
 The user may create a **wannier90.win** file prior to running VASP with
-LWANNIER90=.TRUE., and specify any tag and/or block that is understood
-by `wannier_setup` and/or `wannier_run`. For instance, one can specify
-the `projections` block in the **wannier90.win** file that controls the
-initial guess for the maximally localized Wannier functions. Then, VASP
-writes the projections of the Bloch functions onto the relevant
-projectors to the **wannier90.amn** file. See Chapter 3 of the
-[WANNIER90 manual](http://www.wannier.org/doc/user_guide.pdf) for more
+LWANNIER90=.TRUE., and specify
+any tag and/or block that is understood by `wannier_setup` and/or
+`wannier_run`. For instance, one can specify the `projections` block in
+the **wannier90.win** file that controls the initial guess for the
+maximally localized Wannier functions. Then, VASP writes the projections
+of the Bloch functions onto the relevant projectors to the
+**wannier90.amn** file. See Chapter 3 of the
+<a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a> for more
 information.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LWANNIER90&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LWRITE_UNK](LWRITE_UNK.md),
 [LWRITE_MMN_AMN](LWRITE_MMN_AMN.md),
 [LWRITE_SPN](LWRITE_SPN.md),
@@ -90,3 +102,5 @@ information.
 tag](https://vasp.at/wiki/index.php/Special-Search/-LWANNIER90-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

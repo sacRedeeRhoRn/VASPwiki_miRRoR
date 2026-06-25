@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_NMDINT
+
+
 ML_NMDINT = \[integer\] 
 
 |  |  |  |
@@ -22,11 +24,15 @@ This tag defines a lower threshold for taking new configurations from
 the MD, so that as long as the upper threshold for the Bayesian error
 (e.g. [ML_CDOUB](ML_CDOUB.md) times
 [ML_CTIFOR](ML_CTIFOR.md)) is not exceeded, at least
-ML_NMDINT MD steps are preformed using the MLFF (i.e. no first
-principles calculation is performed). This avoids that many nearly
-identical structures are added.
+ML_NMDINT MD steps are
+preformed using the MLFF (i.e. no first principles calculation is
+performed). This avoids that many nearly identical structures are added.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_NMDINT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_MCONF_NEW](ML_MCONF_NEW.md),
 [ML_CDOUB](ML_CDOUB.md),
@@ -37,3 +43,5 @@ identical structures are added.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_NMDINT-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

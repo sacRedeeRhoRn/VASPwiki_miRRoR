@@ -2,31 +2,59 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constraining local magnetic moments
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
 [NiO](NiO.md) \> [NiO
-LSDA+U](NiO_LSDA+U.md) \> [Spin-orbit coupling in a Ni
+LSDA+U](NiO_LSDA+U.md) \>
+[Spin-orbit coupling in a Ni
 monolayer](Spin-orbit_coupling_in_a_Ni_monolayer.md) \>
 [Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>constraining
-local magnetic moments  \> [List of
+local magnetic moments
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Constraining the local magnetic moments on an Fe dimer.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     Fe dimer                               
      1.00000000000000000
          8.0000000000000000    0.0000000000000000    0.0000000000000000
@@ -37,7 +65,11 @@ Constraining the local magnetic moments on an Fe dimer.
      3.00  0.00  0.00
      5.00  0.00  0.00
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM        = Fe dimer
     ISTART        = 0
     ISYM          = 0
@@ -60,7 +92,11 @@ Constraining the local magnetic moments on an Fe dimer.
 - Symmetry is switched off ([ISYM](../incar-tags/ISYM.md)=0).
 - Initially moments for ferromagnetic calculation are initialized.
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     k-points
     0
     Monkhorst Pack
@@ -69,12 +105,16 @@ Constraining the local magnetic moments on an Fe dimer.
 
 - A single k point in the calculation is sufficient.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - By using the initial ferromagnetic initialization of
   [MAGMOM](../incar-tags/MAGMOM.md) = 0 0 3 0 0 3 we get the following
   magnetic moments in the [OSZICAR](../output-files/OSZICAR.md) file:
 
-&nbsp;
+<!-- -->
 
     ...
     DAV:  20    -0.929676054634E+01   -0.26101E-03   -0.16780E-03    60   0.102E-01    0.537E-02
@@ -85,7 +125,7 @@ Constraining the local magnetic moments on an Fe dimer.
   [MAGMOM](../incar-tags/MAGMOM.md) = 0 0 3 0 2 2 the system converges to
   a ferromagnetic solution:
 
-&nbsp;
+<!-- -->
 
      magnetization (y)                          magnetization (z)
     # of ion     s       p       d       tot   # of ion     s       p       d       tot
@@ -107,12 +147,12 @@ Constraining the local magnetic moments on an Fe dimer.
   - Target directions for constraints on magnetic moments
     ([M_CONSTR](../incar-tags/M_CONSTR.md)= 0 0 1 0 1 1).
 
-&nbsp;
+<!-- -->
 
 - The necessary information is found in the
   [OSZICAR](../output-files/OSZICAR.md) file:
 
-&nbsp;
+<!-- -->
 
      E_p =  0.35424E-02  lambda =  0.100E+02
      ion        MW_int                 M_int
@@ -127,7 +167,7 @@ Constraining the local magnetic moments on an Fe dimer.
   *E_p* down (slowly so the solution remains stable from one run to
   another):
 
-&nbsp;
+<!-- -->
 
      E_p =  0.22591E-03  lambda =  0.500E+02
      ion        MW_int                 M_int
@@ -158,17 +198,29 @@ Constraining the local magnetic moments on an Fe dimer.
   - Use constraints to stabilize the magnetic configuration.
   - Pray.
 
-## Download
-[4_5_Fe_dimer.tgz](https://vasp.at/wiki/images/d/da/4_5_Fe_dimer.tgz "4 5 Fe dimer.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Constraining_local_magnetic_moments&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+<a href="/wiki/images/d/da/4_5_Fe_dimer.tgz" class="internal"
+title="4 5 Fe dimer.tgz">4_5_Fe_dimer.tgz</a>
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
 [NiO](NiO.md) \> [NiO
-LSDA+U](NiO_LSDA+U.md) \> [Spin-orbit coupling in a Ni
+LSDA+U](NiO_LSDA+U.md) \>
+[Spin-orbit coupling in a Ni
 monolayer](Spin-orbit_coupling_in_a_Ni_monolayer.md) \>
 [Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>constraining
-local magnetic moments  \> [List of
+local magnetic moments
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
+
 Back to the [main page](The_VASP_Manual.md).
+
+

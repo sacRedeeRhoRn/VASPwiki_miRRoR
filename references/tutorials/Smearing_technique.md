@@ -2,20 +2,41 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Smearing technique
+
+
+
 ## Contents
 
-- [1 How to set ISMEAR](#How_to_set_ISMEAR)
-- [2 Broadening techniques](#Broadening_techniques)
-  - [2.1 Gaussian broadening](#Gaussian_broadening)
-  - [2.2 Methfessel-Paxton broadening](#Methfessel-Paxton_broadening)
-  - [2.3 Fermi-Dirac broadening](#Fermi-Dirac_broadening)
-- [3 Tetrahedron methods](#Tetrahedron_methods)
-- [4 Calculation of the Fermi energy](#Calculation_of_the_Fermi_energy)
-- [5 Which method to use](#Which_method_to_use)
-- [6 Other methods](#Other_methods)
-- [7 Related tags and articles](#Related_tags_and_articles)
 
-## How to set ISMEAR
+- [1 How to set
+  ISMEAR](#How_to_set_ISMEAR)
+- [2 Broadening
+  techniques](#Broadening_techniques)
+  - [2.1 Gaussian
+    broadening](#Gaussian_broadening)
+  - [2.2
+    Methfessel-Paxton
+    broadening](#Methfessel-Paxton_broadening)
+  - [2.3
+    Fermi-Dirac
+    broadening](#Fermi-Dirac_broadening)
+- [3 Tetrahedron
+  methods](#Tetrahedron_methods)
+- [4 Calculation of
+  the Fermi energy](#Calculation_of_the_Fermi_energy)
+- [5 Which method
+  to use](#Which_method_to_use)
+- [6 Other
+  methods](#Other_methods)
+- [7 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## How to set ISMEAR\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How to set ISMEAR">edit</a> \| (./index.php.md)\]
+
 For the calculation of the *total energy* in bulk materials, we
 recommend the tetrahedron method with Blöchl corrections
 ([ISMEAR](../incar-tags/ISMEAR.md)=-5). This method also gives a good
@@ -33,20 +54,30 @@ energy to the middle of the bandgap
 
 If you do not know much about your system, we recommend to start with
 this setup. Below, we explain why this is a good choice and when you
-should deviate from that. You may also look into [K-point
-integration](../redirects/K-point_integration.md) for the
-theory behind the methods.
+should deviate from that. You may also look into
+<a href="/wiki/K-point_integration" class="mw-redirect"
+title="K-point integration">K-point integration</a> for the theory
+behind the methods.
 
-## Broadening techniques
-[![](https://vasp.at/wiki/images/thumb/0/0f/Smearing.png/400px-Smearing.png)](https://vasp.at/wiki/File:Smearing.png)
+## Broadening techniques\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Broadening techniques">edit</a> \| (./index.php.md)\]
 
-Broading of different smearing techniques near the Fermi energy ϵ_(F).
-The energy is measured in units of the smearing σ
-([SIGMA](../incar-tags/SIGMA.md)). The Methfessel-Paxton method (cyan) is
-narrower than the Gaussian distribution (blue) but also has negative
-features. The smearing Fermi-Dirac distribution (purple) corresponds to
-a temperature but is much broader at the same value of
-[SIGMA](../incar-tags/SIGMA.md)
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Smearing.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/0/0f/Smearing.png/400px-Smearing.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/0/0f/Smearing.png/600px-Smearing.png 1.5x, /wiki/images/thumb/0/0f/Smearing.png/800px-Smearing.png 2x"
+width="400" height="339" /></a>
+<figcaption>Broading of different smearing techniques near the Fermi
+energy ϵ<sub>F</sub>. The energy is measured in units of the smearing σ
+(<a href="/wiki/SIGMA" title="SIGMA">SIGMA</a>). The Methfessel-Paxton
+method (cyan) is narrower than the Gaussian distribution (blue) but also
+has negative features. The smearing Fermi-Dirac distribution (purple)
+corresponds to a temperature but is much broader at the same value of <a
+href="/wiki/SIGMA" title="SIGMA">SIGMA</a></figcaption>
+</figure>
 
 With broadening techniques, each state is occupied not only if the Fermi
 energy exceeds its eigenvalue but also within a certain width described
@@ -57,7 +88,11 @@ particular for metallic systems. There is a trade-off in choosing
 total energy while too small smearing ones require a dense mesh of **k**
 points.
 
-### Gaussian broadening
+### Gaussian broadening\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Gaussian broadening">edit</a> \| (./index.php.md)\]
+
 The Gaussian-smearing method leads to very reasonable results in most
 cases. Within this method it is necessary to extrapolate from finite
 [SIGMA](../incar-tags/SIGMA.md) results to
@@ -72,7 +107,11 @@ converged results.
 |----|
 | **Mind:** The forces and stress are consistent with the free energy and not with the extrapolated energy [SIGMA](../incar-tags/SIGMA.md)→0 so make sure that forces and stress are converged with respect to [SIGMA](../incar-tags/SIGMA.md) as well. |
 
-### Methfessel-Paxton broadening
+### Methfessel-Paxton broadening\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Methfessel-Paxton broadening">edit</a> \| (./index.php.md)\]
+
 The method of Methfessel-Paxton ([ISMEAR](../incar-tags/ISMEAR.md))
 results in a very accurate description of the total energy in metals.
 Nevertheless, the width of the smearing ([SIGMA](../incar-tags/SIGMA.md))
@@ -90,7 +129,11 @@ frequencies in metals.
 |----|
 | **Warning:** Avoid using [`ISMEAR`](../incar-tags/ISMEAR.md)` > 0` for semiconductors and insulators, since this often leads to incorrect results. Since the occupancies are not monotonous Methfessel-Paxton does not guarantee deterministic results in systems with a gap. Errors for phonons frequencies can exceed 20%. These errors are very hard to spot if you do not look carefully. For insulators, use Gaussian smearing ([`ISMEAR`](../incar-tags/ISMEAR.md)` = 0`) or the tetrahedron method ([`ISMEAR`](../incar-tags/ISMEAR.md)` = -5`). |
 
-### Fermi-Dirac broadening
+### Fermi-Dirac broadening\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Fermi-Dirac broadening">edit</a> \| (./index.php.md)\]
+
 With the Fermi-Dirac method ([`ISMEAR`](../incar-tags/ISMEAR.md)` = -1`),
 the smearing [SIGMA](../incar-tags/SIGMA.md) corresponds to the temperature
 of the electronic system. You should use this method, if this
@@ -98,15 +141,26 @@ temperature equivalence is important for you, e.g., if you want to
 compute some properties based on the occupations. In all other cases,
 you can use the other smearing methods instead.
 
-## Tetrahedron methods
-[![](https://vasp.at/wiki/images/thumb/c/ce/Dos-gauss-tetra.png/400px-Dos-gauss-tetra.png)](https://vasp.at/wiki/File:Dos-gauss-tetra.png)
+## Tetrahedron methods\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Tetrahedron methods">edit</a> \| (./index.php.md)\]
 
-The density of states (DOS) obtained with Gaussian broadening (blue) has
-much more oscillations than the one obtained with tetrahedron
-interpolation (red). These spikes correspond to eigenvalue of the bands
-at different **k** points. In the tetrahedron method the band is
-interpolated between the points flattening out the DOS. Another artifact
-of the broadening is that the DOS extends into the band gap.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Dos-gauss-tetra.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/c/ce/Dos-gauss-tetra.png/400px-Dos-gauss-tetra.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/c/ce/Dos-gauss-tetra.png/600px-Dos-gauss-tetra.png 1.5x, /wiki/images/thumb/c/ce/Dos-gauss-tetra.png/800px-Dos-gauss-tetra.png 2x"
+width="400" height="345" /></a>
+<figcaption>The density of states (DOS) obtained with Gaussian
+broadening (blue) has much more oscillations than the one obtained with
+tetrahedron interpolation (red). These spikes correspond to eigenvalue
+of the bands at different <strong>k</strong> points. In the tetrahedron
+method the band is interpolated between the points flattening out the
+DOS. Another artifact of the broadening is that the DOS extends into the
+band gap.</figcaption>
+</figure>
 
 In bulk materials, we recommend the tetrahedron method with Blöchl
 corrections ([ISMEAR](../incar-tags/ISMEAR.md)=-5) for the calculation of
@@ -135,7 +189,11 @@ add temperature on top of the tetrahedron method with
 if accurate occupancies are required e.g. in the context of [transport
 calculations](Transport_coefficients_including_electron-phonon_scattering.md).
 
-## Calculation of the Fermi energy
+## Calculation of the Fermi energy\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation of the Fermi energy">edit</a> \| (./index.php.md)\]
+
 VASP implicitly computes the Fermi energy such that the sum over all
 occupations results in the number of electrons. In insulators and
 semiconductors, this choice is not unique if
@@ -155,7 +213,11 @@ larger than the smearing width [SIGMA](../incar-tags/SIGMA.md) the search
 will terminate immediately. In all other cases, it will fall back to
 determine the Fermi energy iteratively.
 
-## Which method to use
+## Which method to use\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Which method to use">edit</a> \| (./index.php.md)\]
+
 If you have no prior knowledge of your system always use Gaussian
 smearing [`ISMEAR`](../incar-tags/ISMEAR.md)` = 0` in combination with a
 small [`SIGMA`](../incar-tags/SIGMA.md)` = 0.03 to 0.1`. This applies in
@@ -190,7 +252,11 @@ method ([`ISMEAR`](../incar-tags/ISMEAR.md)` = -5`). You would often do
 this at the end of a relaxation for the converged structure with a
 denser **k**-point mesh to get an accurate DOS.
 
-## Other methods
+## Other methods\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Other methods">edit</a> \| (./index.php.md)\]
+
 If you want to keep the occupancies fixed, use
 [`ISMEAR`](../incar-tags/ISMEAR.md)` = -2`. This may be useful to
 constraint the electronic state. However, keep in mind that this is only
@@ -206,8 +272,14 @@ broadening is used. Please refer to the documentation of
 methods. This feature uses the relaxation engine to change the smearings
 so you cannot combine it with relaxations.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Smearing_technique&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ISMEAR](../incar-tags/ISMEAR.md), [SIGMA](../incar-tags/SIGMA.md),
 [FERWE](../incar-tags/FERWE.md), [FERDO](../incar-tags/FERDO.md),
 [SMEARINGS](../incar-tags/SMEARINGS.md), [Integrating over all
 orbitals](../theory/Integrating_over_all_orbitals.md)
+
+

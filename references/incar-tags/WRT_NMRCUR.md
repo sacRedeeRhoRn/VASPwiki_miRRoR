@@ -2,41 +2,52 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # WRT_NMRCUR
-WRT_NMRCUR = 0 \| 1 \| 2 \| 3 \| 4  
+
+
+WRT_NMRCUR = 0 \| 1 \| 2 \| 3
+\| 4  
 Default: **WRT_NMRCUR** = 0 
 
 Description: Allows to write the
 [NMR](../categories/Category-NMR.md) current response in atomic
 units to file.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.6.0 |
 
 ------------------------------------------------------------------------
 
 In conjunction with [`LCHIMAG`](LCHIMAG.md)` = True`,
-WRT_NMRCUR allows to write the current response on the fine grid
-[NGXF](NGXF.md) x [NGYF](NGYF.md) x
-[NGZF](NGZF.md) in atomic units (hartree
-bohr$^{-2}$) to an external magnetic
-field within [linear response NMR](../categories/Category-NMR.md).
+WRT_NMRCUR allows to write the
+current response on the fine grid [NGXF](NGXF.md) x
+[NGYF](NGYF.md) x [NGZF](NGZF.md) in atomic units
+(hartree bohr$^{-2}$) to an
+external magnetic field within [linear response
+NMR](../categories/Category-NMR.md).
 
 |  |
 |----|
 | **Important:** The fine FFT grid is only the plane-wave contribution to the current response; the one-center diamagnetic and paramagnetic contributions are calculated on radial grids and not the fine FFT grid. This does not affect the chemical shieldings, which include the contribution from all three parts. |
 
 The output is written to [NMRCURBX](../output-files/NMRCURBX.md),
-[NMRCURBY](../redirects/NMRCURBY.md), and/or
-[NMRCURBZ](../redirects/NMRCURBZ.md) depending on the selected
-direction of the perturbing $\mathbf{B}$
+<a href="/wiki/NMRCURBY" class="mw-redirect"
+title="NMRCURBY">NMRCURBY</a>, and/or
+<a href="/wiki/NMRCURBZ" class="mw-redirect"
+title="NMRCURBZ">NMRCURBZ</a> depending on the selected direction of the
+perturbing $\mathbf{B}$
 field:
 
-- `WRT_NMRCUR`` = 0`: no current response written to file (default)
-- `WRT_NMRCUR`` = 1`: $B_x$
-- `WRT_NMRCUR`` = 2`: $B_y$
-- `WRT_NMRCUR`` = 3`: $B_z$
-- `WRT_NMRCUR`` = 4`: all three directions of $\mathbf{B}=(B_x,B_y,B_z)^T$
+- `WRT_NMRCUR`` = 0`: no
+  current response written to file (default)
+- `WRT_NMRCUR`` = 1`:
+  $B_x$
+- `WRT_NMRCUR`` = 2`:
+  $B_y$
+- `WRT_NMRCUR`` = 3`:
+  $B_z$
+- `WRT_NMRCUR`` = 4`: all
+  three directions of $\mathbf{B}=(B_x,B_y,B_z)^T$
 
 It is also written to [vaspout.h5](../output-files/Vaspout.h5.md), if
 compiled with [HDF5
@@ -57,19 +68,22 @@ find the data groups
      /results/nmrcurbx/structure/position/system Dataset {SCALAR}
      /results/nmrcurbx/values Dataset {3, 24, 24, 24}
 
-and use [py4vasp](https://vasp.at/py4vasp/latest/index.html) to access
-these, e.g., using
+and use <a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> to access these, e.g.,
+using
+
 
     import py4vasp as pv
     calc = pv.Calculation.from_path(".")
     calc.current_density.to_contour("NMR(x)", a=0.5) + calc.current_density.to_quiver("NMR(x)", a=0.5)
 
-to select the current response triggered by $B_x$. It will result in a contour plot showing the magnitude of
-the current density and a quiver plot with the projected current in the
-selected plane. The plane is selected as a fraction
-$x$ of the lattice vector. Here, `x=0.5`
-along $\mathbf{a}$. For the other
-lattice vectors use `b=x` or `c=x`.
+
+to select the current response triggered by $B_x$. It will
+result in a contour plot showing the magnitude of the current density
+and a quiver plot with the projected current in the selected plane. The
+plane is selected as a fraction $x$ of the
+lattice vector. Here, `x=0.5` along $\mathbf{a}$.
+For the other lattice vectors use `b=x` or `c=x`.
 
 |  |
 |----|
@@ -79,6 +93,12 @@ lattice vectors use `b=x` or `c=x`.
 |----|
 | **Tip:** Consider switching on current augmentation ([`LLRAUG`](LLRAUG.md)` = True`). |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=WRT_NMRCUR&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LCHIMAG](LCHIMAG.md), [LLRAUG](LLRAUG.md),
 [NMRCURBX](../output-files/NMRCURBX.md)
+
+

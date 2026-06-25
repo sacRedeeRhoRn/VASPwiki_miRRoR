@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Density of states
+
+
+
 Redirect to:
 
 - [Category:Density of
   states](../categories/Category-Density_of_states.md)
+
+

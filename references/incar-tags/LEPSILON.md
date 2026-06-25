@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LEPSILON
+
+
 LEPSILON = .TRUE. \| .FALSE.  
 Default: **LEPSILON** = .FALSE. 
 
-Description: LEPSILON=.TRUE. determines the static dielectric matrix,
-ion-clamped piezoelectric tensor, and the Born effective charges using
-density functional perturbation theory.
+Description: LEPSILON=.TRUE.
+determines the static dielectric matrix, ion-clamped piezoelectric
+tensor, and the Born effective charges using density functional
+perturbation theory.
 
 ------------------------------------------------------------------------
 
@@ -20,27 +23,28 @@ level, i.e. including changes of the Hartree potential. To include
 microscopic changes of the exchange-correlation potential the tag
 [LRPA](LRPA.md)=.FALSE. must be set. The method is explained
 in detail in paper by Gajdoš *et al.*
-^([\[1\]](#cite_note-gajdos:hummer:2006-1)) and closely follows the
-original work of Baroni and Resta
-^([\[2\]](#cite_note-baroni:resta:1986-2)). A summation over empty
-conduction band states is not required, instead the usual expressions in
-perturbation theory ([LOPTICS](LOPTICS.md)=.TRUE.),
+<sup>[\[1\]](#cite_note-gajdos:hummer:2006-1)</sup>
+and closely follows the original work of Baroni and Resta
+<sup>[\[2\]](#cite_note-baroni:resta:1986-2)</sup>.
+A summation over empty conduction band states is not required, instead
+the usual expressions in perturbation theory
+([LOPTICS](LOPTICS.md)=.TRUE.),
 
-$| \nabla_{\mathbf{k}}
-|\tilde{u}_{n\mathbf{k}} \rangle = \sum_{n'\ne n} \frac{ |
-\tilde{u}_{n'\mathbf{k}} \rangle \langle \tilde{u}_{n'\mathbf{k}} |
-\frac{\partial\\ (\mathbf{H}(\mathbf k) -\epsilon_{n\mathbf{k}}
-\mathbf{S}(\mathbf k))}{ \partial {\mathbf{k}}} |
-\tilde{u}_{n\mathbf{k}} \rangle }{\epsilon_{n\mathbf{k}}-
+$|
+\nabla_{\mathbf{k}} |\tilde{u}_{n\mathbf{k}} \rangle = \sum_{n'\ne
+n} \frac{ | \tilde{u}_{n'\mathbf{k}} \rangle \langle
+\tilde{u}_{n'\mathbf{k}} | \frac{\partial\\ (\mathbf{H}(\mathbf k)
+-\epsilon_{n\mathbf{k}} \mathbf{S}(\mathbf k))}{ \partial {\mathbf{k}}}
+| \tilde{u}_{n\mathbf{k}} \rangle }{\epsilon_{n\mathbf{k}}-
 \epsilon_{n'\mathbf{k}}},$
 
 are rewritten as linear Sternheimer equations:
 
-$\left( \mathbf{H}(\mathbf k) -
-\epsilon_{n\mathbf k} \mathbf{S}(\mathbf k) \right) |
-\nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}} \rangle = - \frac{\partial
-\\(\mathbf{H}(\mathbf k)- \epsilon_{n\mathbf{k}} \mathbf{S}(\mathbf k))
-} { \partial {\mathbf{k}}} | \tilde{u}_{n\mathbf{k}} \rangle .$
+$\left( \mathbf{H}(\mathbf k) - \epsilon_{n\mathbf k} \mathbf{S}(\mathbf
+k) \right) | \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}} \rangle = -
+\frac{\partial \\(\mathbf{H}(\mathbf k)- \epsilon_{n\mathbf{k}}
+\mathbf{S}(\mathbf k)) } { \partial {\mathbf{k}}} |
+\tilde{u}_{n\mathbf{k}} \rangle .$
 
 The solution of this equation involves similar iterative techniques as
 the conventional selfconsistency cycles. Hence, for each element of the
@@ -75,8 +79,8 @@ should match exactly to the zero frequency values ω→0 determined by the
 method selected using [LOPTICS](LOPTICS.md)=.TRUE.. This
 offers a convenient way to determine how many empty bands are required
 for [LOPTICS](LOPTICS.md)=.TRUE.. Simply execute VASP using
-LEPSILON=.TRUE. in order to determine the exact values for the
-dielectric constants. Next, switch to
+LEPSILON=.TRUE. in order to
+determine the exact values for the dielectric constants. Next, switch to
 [LOPTICS](LOPTICS.md)=.TRUE. and increase the number of
 conduction bands until the same values are obtained using density
 functional perturbation theory.
@@ -117,14 +121,19 @@ Cons compared to [LOPTICS](LOPTICS.md)=.TRUE.
 
   
 We do not recommend to select [LOPTICS](LOPTICS.md)=.TRUE.
-and LEPSILON=.TRUE. in a single run (although it might work in some
-versions). Density functional perturbation theory LEPSILON=.TRUE. does
-not require to increase [NBANDS](NBANDS.md) and is, in fact,
+and LEPSILON=.TRUE. in a
+single run (although it might work in some versions). Density functional
+perturbation theory
+LEPSILON=.TRUE. does not
+require to increase [NBANDS](NBANDS.md) and is, in fact,
 much slower if [NBANDS](NBANDS.md) is increased, whereas the
 summation over empty conduction band states requires a large number of
 such states.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LEPSILON&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LOPTICS](LOPTICS.md), [LRPA](LRPA.md),
 [LCALCEPS](LCALCEPS.md), [IBRION](IBRION.md),
 [Electric field response from density-functional-perturbation
@@ -133,12 +142,21 @@ theory](../theory/Electric_field_response_from_density-functional-perturbation_t
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LEPSILON-_incategory-HowTo)
 
-## References
-1.  [↑](#cite_ref-gajdos:hummer:2006_1-0) [M. Gajdoš, K. Hummer, G.
-    Kresse, J. Furthmüller, and F. Bechstedt, *Linear optical properties
-    in the projector-augmented wave methodology*, Phys. Rev. B **73**,
-    045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
-2.  [↑](#cite_ref-baroni:resta:1986_2-0) [S. Baroni and R. Resta, *Ab
-    initio calculation of the macroscopic dielectric constant in
-    silicon*, Phys. Rev. B **33**, 7017
-    (1986).](https://doi.org/10.1103/PhysRevB.33.7017)
+## References\[<a href="/wiki/index.php?title=LEPSILON&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-gajdos:hummer:2006_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
+    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
+    Furthmüller, and F. Bechstedt, <em>Linear optical properties in the
+    projector-augmented wave methodology</em>, Phys. Rev. B
+    <strong>73</strong>, 045112 (2006).</a>
+2.  [↑](#cite_ref-baroni:resta:1986_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.33.7017" class="external text"
+    rel="nofollow">S. Baroni and R. Resta, <em>Ab initio calculation of the
+    macroscopic dielectric constant in silicon</em>, Phys. Rev. B
+    <strong>33</strong>, 7017 (1986).</a>
+
+

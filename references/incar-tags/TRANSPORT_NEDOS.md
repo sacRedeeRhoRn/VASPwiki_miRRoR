@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # TRANSPORT_NEDOS
-TRANSPORT_NEDOS = \[integer\]  
+
+
+TRANSPORT_NEDOS =
+\[integer\]  
 Default: **TRANSPORT_NEDOS** = 501 
 
 Description: Choose the number of points in the Gauss-Legendre
 integration grid for the computation of the Onsager coefficients, which
 in turn are used to compute the transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -33,10 +36,16 @@ calculation, especially for very dense grids.
 |----|
 | **Mind:** **ELPH_TRANSPORT_NEDOS** is a valid alternative way of writing this tag. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=TRANSPORT_NEDOS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
 - [ELPH_TRANSPORT_DRIVER](ELPH_TRANSPORT_DRIVER.md)
 - [ELPH_FERMI_NEDOS](ELPH_FERMI_NEDOS.md)
+
+

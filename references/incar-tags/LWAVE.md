@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LWAVE
+
+
 LWAVE = \[logical\]  
 Default: **LWAVE** = .TRUE. 
 
@@ -15,7 +17,10 @@ file by default. If [`LH5`](LH5.md)` = T`, the wavefunctions
 are written to the [vaspwave.h5](../output-files/Vaspwave.h5.md)
 instead.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LWAVE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Restart and output files cheat
 sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 
@@ -26,3 +31,5 @@ sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
   
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LWAVE-_incategory-HowTo)
+
+

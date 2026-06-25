@@ -2,26 +2,28 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constraining the local magnetic moments
+
+
 Description: Constraining the local magnetic moments on NiO.
 
-To orient locally each spin, a penalty energy $E_p$ is added, inversely proportional to the
-$\lambda$
-([LAMBDA](../incar-tags/LAMBDA.md)) parameter. Thus, the process has to
-begin with a low [LAMBDA](../incar-tags/LAMBDA.md), which is increased
-step by step.
+To orient locally each spin, a penalty energy
+$E_p$ is added, inversely proportional to the
+$\lambda$ ([LAMBDA](../incar-tags/LAMBDA.md)) parameter.
+Thus, the process has to begin with a low
+[LAMBDA](../incar-tags/LAMBDA.md), which is increased step by step.
 
 For additional information, go to the
 [I_CONSTRAINED_M](../incar-tags/I_CONSTRAINED_M.md) page.
 
-**Exercise :** Verify the $E_p=f(1/\lambda)$ relation by constraining the spin directions. Check the
-efficiency of the method by constraining only the direction, then the
-direction and the size of spins.
+*<u>Exercise :</u>* Verify the $E_p=f(1/\lambda)$ relation by constraining the spin directions. Check
+the efficiency of the method by constraining only the direction, then
+the direction and the size of spins.
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO GGA+U Constr.
       SYSTEM        = "NiO"
@@ -67,7 +69,7 @@ direction and the size of spins.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -77,7 +79,7 @@ direction and the size of spins.
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -91,7 +93,14 @@ direction and the size of spins.
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-## Download
-[nio_constr.tgz](https://vasp.at/wiki/images/a/a3/Nio_constr.tgz "Nio constr.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Constraining_the_local_magnetic_moments&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/a/a3/Nio_constr.tgz" class="internal"
+title="Nio constr.tgz">nio_constr.tgz</a>
 
 ------------------------------------------------------------------------
+
+

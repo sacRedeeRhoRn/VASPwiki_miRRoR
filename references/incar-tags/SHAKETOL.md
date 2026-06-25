@@ -2,30 +2,37 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # SHAKETOL
+
+
 SHAKETOL = \[Real\]  
 Default: **SHAKETOL** = $10^{-5}$ 
 
-Description: SHAKETOL specifies the tolerance for the SHAKE algorithm
-(in case VASP was compiled with
+Description: SHAKETOL
+specifies the tolerance for the SHAKE algorithm (in case VASP was
+compiled with
 [-Dtbdyn](../misc/Precompiler_options.md)).
 
 ------------------------------------------------------------------------
 
 Constrained molecular dynamics ([MDALGO](MDALGO.md)=1 \| 2
 \| 3 \| 4 \| 5) are performed using a [SHAKE
-algorithm](MDALGO.md).^([\[1\]](#cite_note-Ryckaert77-1))
+algorithm](MDALGO.md).<sup>[\[1\]](#cite_note-Ryckaert77-1)</sup>
 
-SHAKETOL specifies the tolerance for the SHAKE algorithm. If the error
-for all geometric constraints does not decrease below this predefined
-tolerance within the allowed number of iterations
+SHAKETOL specifies the
+tolerance for the SHAKE algorithm. If the error for all geometric
+constraints does not decrease below this predefined tolerance within the
+allowed number of iterations
 ([SHAKEMAXITER](SHAKEMAXITER.md)), VASP terminates
 with an error message. This behavior can be changed by defining the soft
 convergence tolerance [SHAKETOLSOFT](SHAKETOLSOFT.md)
-\> SHAKETOL, in which case the algorithm will not terminate if at least
-accuracy specified by [SHAKETOLSOFT](SHAKETOLSOFT.md)
-was reached.
+\> SHAKETOL, in which case the
+algorithm will not terminate if at least accuracy specified by
+[SHAKETOLSOFT](SHAKETOLSOFT.md) was reached.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=SHAKETOL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [SHAKETOLSOFT](SHAKETOLSOFT.md),
 [SHAKEMAXITER](SHAKEMAXITER.md),
 [MDALGO](MDALGO.md)
@@ -36,9 +43,17 @@ dynamics](../theory/Constrained_molecular_dynamics.md)
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-SHAKETOL-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-Ryckaert77_1-0) [J. P. Ryckaert, G. Ciccotti,
-    and H. J. C. Berendsen, J. Comp. Phys. 23, 327
-    (1977).](http://dx.doi.org/10.1016/0021-9991(77)90098-5)
+## References\[<a href="/wiki/index.php?title=SHAKETOL&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-Ryckaert77_1-0)
+    <a href="http://dx.doi.org/10.1016/0021-9991(77)90098-5"
+    class="external text" rel="nofollow">J. P. Ryckaert, G. Ciccotti, and H.
+    J. C. Berendsen, J. Comp. Phys. 23, 327 (1977).</a>
+
 
 ------------------------------------------------------------------------
+
+

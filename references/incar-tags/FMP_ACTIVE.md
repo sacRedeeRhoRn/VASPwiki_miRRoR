@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FMP_ACTIVE
+
+
 FMP_ACTIVE = logical (aray) 
 
 |                         |                  |     |
@@ -15,20 +17,27 @@ method](../tutorials/Müller-Plathe_method.md).
 
 ------------------------------------------------------------------------
 
-FMP_ACTIVE specifies whether or not (.TRUE. or .FALSE., respectively) an
-atomic type allowed for swapping within the [Müller-Plathe
+FMP_ACTIVE specifies whether
+or not (.TRUE. or .FALSE., respectively) an atomic type allowed for
+swapping within the [Müller-Plathe
 method](../tutorials/Müller-Plathe_method.md). One
 item for each of the atomic types defined in
 [POSCAR](../input-files/POSCAR.md) must be supplied.
 
-|                                                           |
-|-----------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This tag will only be available from VASP 6.4.4 |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=FMP_ACTIVE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Müller-Plathe
 method](../tutorials/Müller-Plathe_method.md),
 [FMP_DIRECTION](FMP_DIRECTION.md),
 [FMP_SNUMBER](FMP_SNUMBER.md),
 [FMP_SWAPNUM](FMP_SWAPNUM.md),
 [FMP_PERIOD](FMP_PERIOD.md)
+
+

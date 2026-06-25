@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NCSHMEM
+
+
 NCSHMEM = \[integer\]  
 Default: **NCSHMEM** = 1 
 
@@ -30,8 +32,13 @@ best performance (in this case, memory will not be shared between NUMA
 domains). The performance penalty may be particularly significant if
 memory is shared between sockets.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NCSHMEM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Shared memory](../methods/Shared_memory.md),
 [ML_NCSHMEM](ML_NCSHMEM.md), [ALGO](ALGO.md),
 [Practical guide to GW
 calculations](../methods/Practical_guide_to_GW_calculations.md)
+
+

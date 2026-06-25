@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Fast.conf
+
+
     #
     # define the commands that run vasp_std, vasp_ncl, and vasp_gam
     #
@@ -15,3 +17,5 @@
     # Run the tests in the FAST category
     #
     export VASP_TESTSUITE_RUN_FAST=Y
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Electrostatics
+
+
 Computing the properties of charged and dipolar systems requires proper
 treatment of the **electrostatics**. Without appropriate corrections,
 the energies, forces, and potentials will not correspond to the expected
@@ -11,7 +13,11 @@ to activate these corrections. Practical details regarding convergence,
 setting up, and running relevant calculations can be found in the how-to
 section.
 
-## Summary of relevant INCAR tags
+## Summary of relevant INCAR tags\[<a
+href="/wiki/index.php?title=Category:Electrostatics&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Summary of relevant INCAR tags">edit</a> \| (./index.php.md)\]
+
 The table contains a summary of [INCAR](../input-files/INCAR.md) tags for
 performing monopole, dipole, and quadrupole corrections. Please see the
 relevant pages of the respective tags for more detailed information. In
@@ -44,7 +50,11 @@ atom or a molecule).
 |----|
 | **Tip:** If an external electrostatic field is desired for slab or molecular calculations, see [EFIELD](../incar-tags/EFIELD.md). |
 
-## How to
+## How to\[<a
+href="/wiki/index.php?title=Category:Electrostatics&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 Practical guides to electrostatic corrections implemented in VASP:
 
 - [Electrostatic
@@ -53,3 +63,5 @@ Practical guides to electrostatic corrections implemented in VASP:
   function](../tutorials/Computing_the_work_function.md)
 - [Dipole correction for defects in
   solids](../tutorials/Dipole_corrections_for_defects_in_solids.md)
+
+

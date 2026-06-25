@@ -2,20 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IBAND
+
+
 IBAND = \[integer array\]  
 Default: **IBAND** = not set 
 
-Description: IBAND sets a list of bands that contribute to calculating
-the [partial charge
-density](../redirects/Band-decomposed_charge_densities.md).
+Description: IBAND sets a list
+of bands that contribute to calculating the
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">partial charge density</a>.
 
 ------------------------------------------------------------------------
 
-IBAND selects a subset of bands for which the partial charge density is
-calculated when [LPARD](LPARD.md) = .TRUE.. Partial charge
-densities are written to the [PARCHG](../output-files/PARCHG.md) file, or
-one of its variants, depending on the setting of
-[LSEPB](LSEPB.md) and [LSEPK](LSEPK.md).
+IBAND selects a subset of
+bands for which the partial charge density is calculated when
+[LPARD](LPARD.md) = .TRUE.. Partial charge densities are
+written to the [PARCHG](../output-files/PARCHG.md) file, or one of its
+variants, depending on the setting of [LSEPB](LSEPB.md) and
+[LSEPK](LSEPK.md).
 
 |  |
 |----|
@@ -25,15 +29,22 @@ E.g. if `IBAND = 20 21 22 23 45` the charge density will be calculated
 for the four bands 20 to 23 and band 45, and
 [NBMOD](NBMOD.md) will be set to 5.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=IBAND&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LPARD](LPARD.md), [NBMOD](NBMOD.md),
 [EINT](EINT.md), [KPUSE](KPUSE.md),
 [LSEPB](LSEPB.md), [LSEPK](LSEPK.md),
 [LPARDH5](LPARDH5.md), [PARCHG](../output-files/PARCHG.md),
-[vaspout.h5](../output-files/Vaspout.h5.md), [Band-decomposed charge
-densities](../redirects/Band-decomposed_charge_densities.md)
+[vaspout.h5](../output-files/Vaspout.h5.md),
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">Band-decomposed charge
+densities</a>
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-IBAND-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

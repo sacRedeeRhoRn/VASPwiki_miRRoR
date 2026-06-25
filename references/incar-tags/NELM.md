@@ -2,11 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NELM
+
+
 NELM = \[integer\]  
 Default: **NELM** = 60 
 
-Description: NELM sets the maximum number of electronic SC
-(self-consistency) steps.
+Description: NELM sets the
+maximum number of electronic SC (self-consistency) steps.
 
 ------------------------------------------------------------------------
 
@@ -23,8 +25,13 @@ time. If you wish to set it by yourself, be advised that the input value
 must be greater than 100, otherwise VASP will ignore it and fall to the
 default settings.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NELM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NELMDL](NELMDL.md), [NELMIN](NELMIN.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NELM-_incategory-Examples)
+
+

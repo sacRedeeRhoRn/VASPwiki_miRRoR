@@ -2,14 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:HDF5 support
+
+
 Since VASP 6.2.0 we started supporting the feature of reading and
 writing hdf5 files. The HDF5 file format
-^([\[1\]](#cite_note-hdf5format:web-1)) is a hierarchical data file
-designed to store large amounts of numeric data. This file format
-combines the flexibility and hierarchy of an XML file with the speed and
-size economy of binary files. The writing and reading of hdf5 files are
-handled by the HDF5 library which is written in C but wrappers for
-Fortran, python, and C++ are available.
+<sup>[\[1\]](#cite_note-hdf5format:web-1)</sup>
+is a hierarchical data file designed to store large amounts of numeric
+data. This file format combines the flexibility and hierarchy of an XML
+file with the speed and size economy of binary files. The writing and
+reading of hdf5 files are handled by the HDF5 library which is written
+in C but wrappers for Fortran, python, and C++ are available.
 
 Currently, VASP accepts the following HDF5 files:
 
@@ -28,9 +30,14 @@ accordingly.
 As of VASP 6.2.0 we only support reading/writing of hdf5 files in serial
 mode. For extracting data from the
 [vaspout.h5](../output-files/Vaspout.h5.md) file we strongly recommend
-using the [py4vasp](https://vasp.at/py4vasp/latest/index.html) package.
+using the <a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> package.
 
-## Command line tools
+## Command line tools\[<a
+href="/wiki/index.php?title=Category:HDF5_support&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Command line tools">edit</a> \| (./index.php.md)\]
+
 The HDF5 library ships with a series of command-line tools that can be
 used to quickly inspect the contents of any HDF5 file.
 
@@ -65,12 +72,22 @@ screen. For example:
 The meaning of each of the energy values can be printed by replacing
 `energies` by `energies_tags` in the command above. For a complete list
 of HDF5 tools, the user is referred to the official HDF5 documentation
-^([\[2\]](#cite_note-hdf5tools:web-2)).
+<sup>[\[2\]](#cite_note-hdf5tools:web-2)</sup>.
 
-## References
+## References\[<a
+href="/wiki/index.php?title=Category:HDF5_support&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
 1.  [↑](#cite_ref-hdf5format:web_1-0)
-    [https://www.hdfgroup.org/solutions/hdf5/
-    (2023).](https://www.hdfgroup.org/solutions/hdf5/)
+    <a href="https://www.hdfgroup.org/solutions/hdf5/" class="external text"
+    rel="nofollow">https://www.hdfgroup.org/solutions/hdf5/ (2023).</a>
 2.  [↑](#cite_ref-hdf5tools:web_2-0)
-    [https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools
-    (2023).](https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools)
+    <a
+    href="https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools"
+    class="external text"
+    rel="nofollow">https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools
+    (2023).</a>
+
+

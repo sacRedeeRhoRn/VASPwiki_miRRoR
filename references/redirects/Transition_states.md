@@ -2,7 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Transition states
+
+
+
 Redirect to:
 
-- [Category:Transition
-  States](https://vasp.at/wiki/index.php/index.php)
+- <a
+  href="/wiki/index.php?title=Category:Transition_States&amp;redirect=no"
+  class="mw-redirect"
+  title="Category:Transition States">Category:Transition States</a>
+
+

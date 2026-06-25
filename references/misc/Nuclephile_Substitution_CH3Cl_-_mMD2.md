@@ -2,15 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Nuclephile Substitution CH3Cl - mMD2
+
+
+
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD1](Nuclephile_Substitution_CH3Cl_-_mMD1.md) \>
-Nuclephile Substitution CH3Cl - mMD2 \> [Nuclephile Substitution CH3Cl -
+Nuclephile Substitution CH3Cl -
+mMD2 \> [Nuclephile
+Substitution CH3Cl -
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
 [Nuclephile Substitution CH3Cl -
 SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
@@ -18,28 +24,55 @@ SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-  - [2.3 INCAR](#INCAR)
-  - [2.4 ICONST](#ICONST)
-  - [2.5 PENALTYPOT](#PENALTYPOT)
-- [3 Calculation](#Calculation)
-  - [3.1 Running the calculation](#Running_the_calculation)
-  - [3.2 Time evolution of distance](#Time_evolution_of_distance)
-  - [3.3 1D free-energy profile](#1D_free-energy_profile)
-- [4 Download](#Download)
 
-## Task
-In this example the nucleophile substitution of a Cl⁻ by another Cl⁻ in
-CH₃Cl via meta dynamics is correctly simulated by using extra "repulsive
-potential walls."
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+  - [2.3
+    INCAR](#INCAR)
+  - [2.4
+    ICONST](#ICONST)
+  - [2.5
+    PENALTYPOT](#PENALTYPOT)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Running
+    the calculation](#Running_the_calculation)
+  - [3.2 Time
+    evolution of distance](#Time_evolution_of_distance)
+  - [3.3 1D
+    free-energy profile](#1D_free-energy_profile)
+- [4
+  Download](#Download)
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+
+## Task\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
+In this example the nucleophile substitution of a Cl<sup>-</sup> by
+another Cl<sup>-</sup> in CH<sub>3</sub>Cl via meta dynamics is
+correctly simulated by using extra "repulsive potential walls."
+
+## Input\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
        1.00000000000000
          12.0000000000000000    0.0000000000000000    0.0000000000000000
          0.0000000000000000    12.0000000000000000    0.0000000000000000
@@ -53,7 +86,11 @@ potential walls."
              4.32824726  8.75151396  7.80743202
              6.84157897  6.18713289  4.46842049
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Automatic
      0
     Gamma
@@ -64,7 +101,11 @@ potential walls."
   are negligible (in sufficiently large cells) hence no Brillouin zone
   sampling is necessary.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     PREC=Low
     EDIFF=1e-6
     LWAVE=.FALSE.
@@ -90,10 +131,15 @@ potential walls."
     ##############################################################################
 
 - Same [INCAR](../input-files/INCAR.md) file as in the previous example
-  ([Nuclephile Substitution CH3Cl -
-  mMD](../redirects/Nuclephile_Substitution_CH3Cl_-_mMD.md)).
+  (<a href="/wiki/Nuclephile_Substitution_CH3Cl_-_mMD" class="mw-redirect"
+  title="Nuclephile Substitution CH3Cl - mMD">Nuclephile Substitution
+  CH3Cl - mMD</a>).
 
-### [ICONST](../input-files/ICONST.md)
+### [ICONST](../input-files/ICONST.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: ICONST">edit</a> \| (./index.php.md)\]
+
     R 1 5 0
     R 1 6 0
     S 1 -1 5
@@ -102,32 +148,44 @@ potential walls."
   Substitution CH3Cl -
   mMD1](Nuclephile_Substitution_CH3Cl_-_mMD1.md)).
 
-### [PENALTYPOT](../input-files/PENALTYPOT.md)
+### [PENALTYPOT](../input-files/PENALTYPOT.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: PENALTYPOT">edit</a> \| (./index.php.md)\]
+
       -3.00000   1.00000   0.30000
        3.00000   1.00000   0.30000
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 In principle, meta dynamics always seeks for the path of least
 resistance. In the case of our model system this corresponds to the
 dissociation of the vdW complex (which is linked with a lower barrier
 than the SN2 reaction). In order to avoid this undesired process, an
 extra bias potential ("repulsive walls") is used whose role is to
 restrict our sampling to a relevant region (approx.
-$-3 \AA <$ collective variable
-$< 3 A$). In fact, the positions of
-walls can be chosen arbitrarily - we only require that the region
-between the walls contains all the information we are interested in (in
-this case we want to see free-energy minima for both "reactant" and
-"product" as well as the "transition state"). In order for the walls to
-be effective, we also require that they are significantly higher than
-the expected reaction barrier (otherwise the likelihood to cross the
-wall during meta dynamics would be higher than that for the barrier).
-From the potential energy profile (static calculations not reported
-here) we obtained a reasonable guess for the reaction barrier - it is
-about 0.4 eV - hence the height for the wall of 1 eV should be
-sufficient.
+$-3
+\AA <$ collective variable $< 3 A$). In
+fact, the positions of walls can be chosen arbitrarily - we only require
+that the region between the walls contains all the information we are
+interested in (in this case we want to see free-energy minima for both
+"reactant" and "product" as well as the "transition state"). In order
+for the walls to be effective, we also require that they are
+significantly higher than the expected reaction barrier (otherwise the
+likelihood to cross the wall during meta dynamics would be higher than
+that for the barrier). From the potential energy profile (static
+calculations not reported here) we obtained a reasonable guess for the
+reaction barrier - it is about 0.4 eV - hence the height for the wall of
+1 eV should be sufficient.
 
-### Running the calculation
+### Running the calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Running the calculation">edit</a> \| (./index.php.md)\]
+
 The mass for hydrogen in this example is set 3.016 a.u. corresponding to
 the tritium isotope. This way larger timesteps can be chosen for the MD
 (note that the free energy is independent of the masses of atoms).
@@ -183,11 +241,15 @@ which looks as follows:
   for the executable command.
 - Please run this script by typing:
 
-&nbsp;
+<!-- -->
 
     bash ./run
 
-### Time evolution of distance
+### Time evolution of distance\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Time evolution of distance">edit</a> | (./index.php.md)\]
+
 During the simulation, the time evolution of collective variable can be
 monitored using the script *timeEv.sh*:
 
@@ -217,7 +279,12 @@ execute the following command:
 The plot of the collective variable with respect to the timestep should
 look similar to this:
 
-[![](https://vasp.at/wiki/images/thumb/3/3c/TimeEvol_CHCl3_mMD2.jpg/500px-TimeEvol_CHCl3_mMD2.jpg)](https://vasp.at/wiki/File:TimeEvol_CHCl3_mMD2.jpg)
+<a href="/wiki/File:TimeEvol_CHCl3_mMD2.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/3/3c/TimeEvol_CHCl3_mMD2.jpg/500px-TimeEvol_CHCl3_mMD2.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/3/3c/TimeEvol_CHCl3_mMD2.jpg 1.5x" width="500"
+height="375" /></a>
 
 If everything goes well, you should observe that the amplitude of
 oscillations of the collective variable increases (as larger and larger
@@ -229,7 +296,11 @@ on how long you ran the calculation (50 or more ps) one or two crossings
 of the transition state (where the collective variable is equal to
 zero).
 
-### 1D free-energy profile
+### 1D free-energy profile\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: 1D free-energy profile">edit</a> | (./index.php.md)\]
+
 The current bias potential generated by meta dynamics is written to the
 [HILLSPOT](../incar-tags/HILLSPOT.md) file. A negative image of this
 potential serves as an approximation of the free-energy profile and it
@@ -287,11 +358,11 @@ can be visualized using the script *calcprofile1D.py*:
 This script projects one-dimensional Gaussians defined in the input file
 (such as [PENALTYPOT](../input-files/PENALTYPOT.md) or
 [HILLSPOT](../incar-tags/HILLSPOT.md)) onto a regular grid of
-$N$ points defined by a user. The user
-is asked to provide the following data: (a) name of the input file, (b)
-the initial (x1_min) and the final (x1_max) grid point position, and the
-number of grid points (M) for the axis corresponding to the collective
-variable. The result is written in file with extension *.xyz*.
+$N$ points defined by a user. The user is asked to provide
+the following data: (a) name of the input file, (b) the initial (x1_min)
+and the final (x1_max) grid point position, and the number of grid
+points (M) for the axis corresponding to the collective variable. The
+result is written in file with extension *.xyz*.
 
 In our example we will use the following inputs:
 
@@ -313,23 +384,39 @@ To plot the 1D free energy profile type:
 
 The resulting free energy profile should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/8/80/1D_free_energy_CHCl3_mMD2.jpg/500px-1D_free_energy_CHCl3_mMD2.jpg)](https://vasp.at/wiki/File:1D_free_energy_CHCl3_mMD2.jpg)
+<a href="/wiki/File:1D_free_energy_CHCl3_mMD2.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/80/1D_free_energy_CHCl3_mMD2.jpg/500px-1D_free_energy_CHCl3_mMD2.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/8/80/1D_free_energy_CHCl3_mMD2.jpg 1.5x"
+width="500" height="375" /></a>
 
-## Download
-[CH3Cl_mMD2.tgz](https://vasp.at/wiki/images/1/13/CH3Cl_mMD2.tgz "CH3Cl mMD2.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD2&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/1/13/CH3Cl_mMD2.tgz" class="internal"
+title="CH3Cl mMD2.tgz">CH3Cl_mMD2.tgz</a>
+
 
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD1](Nuclephile_Substitution_CH3Cl_-_mMD1.md) \>
-Nuclephile Substitution CH3Cl - mMD2 \> [Nuclephile Substitution CH3Cl -
+Nuclephile Substitution CH3Cl -
+mMD2 \> [Nuclephile
+Substitution CH3Cl -
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
 [Nuclephile Substitution CH3Cl -
 SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 [Nuclephile Substitution CH3Cl -
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
+
+

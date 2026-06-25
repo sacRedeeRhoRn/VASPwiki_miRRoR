@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NVT ensemble
-The NVT ensemble (canonical ensemble) is a [statistical
+
+
+The NVT ensemble (canonical
+ensemble) is a [statistical
 ensemble](../categories/Category-Ensembles.md) that is used to
 study material properties under the conditions of a constant particle
 number N, constant volume V and a temperature fluctuating around an
-equilibrium value $\langle T \rangle$.
-This page describes how to sample the NVT ensemble from a
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run.
+equilibrium value $\langle T \rangle$. This page describes how to sample the NVT ensemble
+from a
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run.
 
 **Instructions for setting up an NVT ensemble**
 
@@ -29,7 +32,7 @@ can be used. See table for the corresponding
 
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
-| NVT ensemble | Nosé-Hoover^([\[1\]](#cite_note-legacy-nh-1)) | Andersen | Nosé-Hoover | Langevin | Nosé-Hoover chain | CSVR | Multiple Andersen |
+| NVT ensemble | Nosé-Hoover<sup>[\[1\]](#cite_note-legacy-nh-1)</sup> | Andersen | Nosé-Hoover | Langevin | Nosé-Hoover chain | CSVR | Multiple Andersen |
 | [MDALGO](../incar-tags/MDALGO.md) | 0 | 1 | 2 | 3 | 4 | 5 | 13 |
 | additional tags to set | [SMASS](../incar-tags/SMASS.md) | [ANDERSEN_PROB](../incar-tags/ANDERSEN_PROB.md) | [SMASS](../incar-tags/SMASS.md) | [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md) | [NHC_NCHAINS](../incar-tags/NHC_NCHAINS.md), [NHC_PERIOD](NHC_PERIOD.md), [NHC_NRESPA](../incar-tags/NHC_NRESPA.md), [NHC_NS](../incar-tags/NHC_NS.md) | [CSVR_PERIOD](CSVR_PERIOD.md) | [NSUBSYS](../incar-tags/NSUBSYS.md), [TSUBSYS](../incar-tags/TSUBSYS.md), [PSUBSYS](../incar-tags/PSUBSYS.md) |
 
@@ -48,8 +51,8 @@ structure and volume optimization with
 [`IBRION`](../incar-tags/IBRION.md)` = 1 or 2` and setting
 [`ISIF`](../incar-tags/ISIF.md)` > 2`. A general guide for
 molecular-dynamics simulations can be found on the
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-page.
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> page.
 
 *Example [INCAR](../input-files/INCAR.md) file for the [Nosé-Hoover
 thermostat](../tutorials/Nosé-Hoover_thermostat.md)*
@@ -65,19 +68,34 @@ thermostat](../tutorials/Nosé-Hoover_thermostat.md)*
 
 |  |
 |----|
-| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The [electronic minimization](../redirects/Electronic_minimization.md) or the [machine learning](../redirects/Machine-learned_force_fields.md) tags have to be added. |
+| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The <a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a> or the <a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">machine learning</a> tags have to be added. |
 
-## Related tags and articles
-[Molecular-dynamics
-calculations](../redirects/Molecular_dynamics_calculations.md),
-[ISIF](../incar-tags/ISIF.md), [MDALGO](../incar-tags/MDALGO.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NVT_ensemble&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">Molecular-dynamics
+calculations</a>, [ISIF](../incar-tags/ISIF.md),
+[MDALGO](../incar-tags/MDALGO.md),
 [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md),
 [SMASS](../incar-tags/SMASS.md),[ANDERSEN_PROB](../incar-tags/ANDERSEN_PROB.md),
 [NSUBSYS](../incar-tags/NSUBSYS.md), [TSUBSYS](../incar-tags/TSUBSYS.md),
 [PSUBSYS](../incar-tags/PSUBSYS.md)
 
-## Footnotes and references
-1.  [↑](#cite_ref-legacy-nh_1-0) If possible, use another Nosé–Hoover
+## Footnotes and references\[<a
+href="/wiki/index.php?title=NVT_ensemble&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Footnotes and references">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-legacy-nh_1-0)
+    If possible, use another Nosé–Hoover
     thermostat implementation, e.g.
     [`MDALGO`](../incar-tags/MDALGO.md)` = 2`, see also comments
     [here](../incar-tags/MDALGO.md).
+
+

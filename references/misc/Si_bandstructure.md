@@ -2,42 +2,66 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Si bandstructure
+
+
+
 [Overview](../tutorials/Hybrid_functionals_-_Tutorial.md) \>
 [bandgap of Si using different DFT+HF
 methods](Bandgap_of_Si_using_different_DFT+HF_methods.md) \>
-[MgO optimum mixing](MgO_optimum_mixing.md) \>
+[MgO optimum
+mixing](MgO_optimum_mixing.md) \>
 [fcc Ni DOS with hybrid
 functional](Fcc_Ni_DOS_with_hybrid_functional.md) \>
-Si bandstructure  \> [List of
+Si bandstructure
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Procedure 1: Standard procedure
-  (DFT)](#Procedure_1:_Standard_procedure_(DFT))
-  - [2.1 Standard self-consistent (SC)
-    run](#Standard_self-consistent_(SC)_run)
-  - [2.2 Non-SC calculation
-    (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
-  - [2.3 Plot using p4v](#Plot_using_p4v)
-- [3 Procedure 2: 0-weight (Fake) SC procedure (PBE &
-  Hybrids)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(PBE_&_Hybrids))
-  - [3.1 Standard DFT run](#Standard_DFT_run)
-  - [3.2 Hybrid calculation using a suitably modified KPOINTS
-    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
-  - [3.3 Plot using p4v](#Plot_using_p4v_2)
-- [4 Procedure 3: VASP2WANNIER90 (GW, Hybrids,
-  PBE)](#Procedure_3:_VASP2WANNIER90_(GW,_Hybrids,_PBE))
-  - [4.1 Standard DFT run](#Standard_DFT_run_2)
-  - [4.2 HSE + LWANNIER90 run](#HSE_+_LWANNIER90_run)
-  - [4.3 Compute Wannier functions](#Compute_Wannier_functions)
-  - [4.4 Obtain bandstructure (Wannier interpolation) and plot using
-    XMGRACE or
-    GNUPLOT](#Obtain_bandstructure_(Wannier_interpolation)_and_plot_using_XMGRACE_or_GNUPLOT)
-- [5 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2 Procedure 1:
+  Standard procedure
+  (DFT)](#Procedure_1:_Standard_procedure_(DFT))
+  - [2.1 Standard
+    self-consistent (SC) run](#Standard_self-consistent_(SC)_run)
+  - [2.2 Non-SC
+    calculation (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
+  - [2.3 Plot using
+    p4v](#Plot_using_p4v)
+- [3 Procedure 2:
+  0-weight (Fake) SC procedure (PBE &
+  Hybrids)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(PBE_&_Hybrids))
+  - [3.1 Standard
+    DFT run](#Standard_DFT_run)
+  - [3.2 Hybrid
+    calculation using a suitably modified KPOINTS
+    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
+  - [3.3 Plot using
+    p4v](#Plot_using_p4v_2)
+- [4 Procedure 3:
+  VASP2WANNIER90 (GW, Hybrids,
+  PBE)](#Procedure_3:_VASP2WANNIER90_(GW,_Hybrids,_PBE))
+  - [4.1 Standard
+    DFT run](#Standard_DFT_run_2)
+  - [4.2 HSE +
+    LWANNIER90 run](#HSE_+_LWANNIER90_run)
+  - [4.3 Compute
+    Wannier functions](#Compute_Wannier_functions)
+  - [4.4 Obtain
+    bandstructure (Wannier interpolation) and plot using XMGRACE or
+    GNUPLOT](#Obtain_bandstructure_(Wannier_interpolation)_and_plot_using_XMGRACE_or_GNUPLOT)
+- [5
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the bandstructure for Si within DFT+HF.
 
 The bandstructure in VASP can be obtained following three different
@@ -49,14 +73,22 @@ example](Fcc_Si_bandstructure.md).
 Within Hybrid functional theory it is possible to plot bandstructure
 using procedure 2 or 3.
 
-## Procedure 1: Standard procedure (DFT)
+## Procedure 1: Standard procedure (DFT)\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 1: Standard procedure (DFT)">edit</a> \| (./index.php.md)")\]
+
 Only possible within DFT. Described in [Fcc Si bandstructure
 example](Fcc_Si_bandstructure.md):
 
-### Standard self-consistent (SC) run
+### Standard self-consistent (SC) run\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard self-consistent (SC) run">edit</a> \| (./index.php.md) run")\]
+
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     system Si
     5.430
@@ -70,14 +102,14 @@ example](Fcc_Si_bandstructure.md):
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     System = fcc Si 
     ISMEAR = 0; SIGMA = 0.1;
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     4x4x4
      0
@@ -85,13 +117,17 @@ example](Fcc_Si_bandstructure.md):
      4 4 4
      0 0 0
 
-### Non-SC calculation ([ICHARG](../incar-tags/ICHARG.md)=11)
+### Non-SC calculation ([ICHARG](../incar-tags/ICHARG.md)=11)\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Non-SC calculation (ICHARG=11)">edit</a> \| (./index.php.md)")\]
+
 Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
 [KPOINTS](../input-files/KPOINTS.md) file (KPOINTS_PBE_bands)
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     System = fcc Si 
     ICHARG = 11 #charge read file
@@ -100,7 +136,7 @@ Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points for bandstructure L-G-X-U K-G
      10
@@ -118,17 +154,30 @@ Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
       0.37500  0.7500   0.37500    1
       0.00000  0.00000  0.00000    1
 
-### Plot using p4v
-P4VASP: [p4v](http://www.p4vasp.at)
+### Plot using p4v\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Plot using p4v">edit</a> \| (./index.php.md)\]
 
-## Procedure 2: 0-weight (Fake) SC procedure (PBE & Hybrids)
+P4VASP: <a href="http://www.p4vasp.at" class="external text"
+rel="nofollow">p4v</a>
+
+## Procedure 2: 0-weight (Fake) SC procedure (PBE & Hybrids)\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 2: 0-weight (Fake) SC procedure (PBE &amp; Hybrids)">edit</a> \| (./index.php.md) SC procedure (PBE & Hybrids)")\]
+
 This procedure can be applied to compute bandstructure at Hybrid
 functionals and DFT level.
 
-### Standard DFT run
+### Standard DFT run\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard DFT run">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ## Default       
     ISMEAR =  0
@@ -141,7 +190,7 @@ functionals and DFT level.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     Automatically generated mesh
      0
@@ -149,10 +198,14 @@ functionals and DFT level.
      4 4 4
      0 0 0
 
-### Hybrid calculation using a suitably modified [KPOINTS](../input-files/KPOINTS.md) file
+### Hybrid calculation using a suitably modified [KPOINTS](../input-files/KPOINTS.md) file\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Hybrid calculation using a suitably modified KPOINTS file">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ## Default       
     ISMEAR =  0
@@ -165,7 +218,7 @@ functionals and DFT level.
 
 - KPOINTS_HSE_bands (see README.txt)
 
-&nbsp;
+<!-- -->
 
     Explicit k-points list
           18
@@ -189,22 +242,35 @@ functionals and DFT level.
     0.00000000 0.44444444 0.44444444 0.000
     0.00000000 0.50000000 0.50000000 0.000
 
-### Plot using p4v
-P4VASP: [p4v](http://www.p4vasp.at)
+### Plot using p4v\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Plot using p4v">edit</a> \| (./index.php.md)\]
+
+P4VASP: <a href="http://www.p4vasp.at" class="external text"
+rel="nofollow">p4v</a>
 
 **Mind**: Remove from the bandstructure plot the eigenvalues
 corresponding to the the regular k-points mesh.
 
-## Procedure 3: VASP2WANNIER90 (GW, Hybrids, PBE)
+## Procedure 3: VASP2WANNIER90 (GW, Hybrids, PBE)\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 3: VASP2WANNIER90 (GW, Hybrids, PBE)">edit</a> \| (./index.php.md)")\]
+
 Wannier function interpolation using the VASP2WANNIER90 interface.
 Applicable in all cases (here applied for hybrids; for GW see
 [Bandstructure_of_Si_in_GW\_(VASP2WANNIER90)
 example](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)")).
 
-### Standard DFT run
+### Standard DFT run\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard DFT run">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ## Default       
     ISMEAR =  0
@@ -220,7 +286,7 @@ example](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER9
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     Automatically generated mesh
      0
@@ -228,10 +294,14 @@ example](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER9
      4 4 4
      0 0 0
 
-### HSE + LWANNIER90 run
+### HSE + LWANNIER90 run\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: HSE + LWANNIER90 run">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ## Default       
     ISMEAR =  0
@@ -253,11 +323,12 @@ needed to generate the necessary input files for the WANNIER90 runs
 default wannier90.win compatible with the POSCAR and INCAR files, which
 needs to be suitably modified by including the proper instruction
 required to generate the maximally localized wannier functions (refer to
-the [WANNIER90 manual](http://www.wannier.org/doc/user_guide.pdf)).
+the <a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a>).
 
 - wannier90.win
 
-&nbsp;
+<!-- -->
 
     num_wann=8
     num_bands=8
@@ -362,7 +433,11 @@ the [WANNIER90 manual](http://www.wannier.org/doc/user_guide.pdf)).
         -0.2500000     0.2500000    -0.5000000
     end kpoints
 
-### Compute Wannier functions
+### Compute Wannier functions\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Compute Wannier functions">edit</a> \| (./index.php.md)\]
+
 run wannier90:
 
 wannier90.x wannier90
@@ -370,7 +445,11 @@ wannier90.x wannier90
 This run generates the wannier90 standard output (wannier90.wout) and
 the file wannier90.chk needed for the wannier interpolation (next step)
 
-### Obtain bandstructure (Wannier interpolation) and plot using XMGRACE or GNUPLOT
+### Obtain bandstructure (Wannier interpolation) and plot using XMGRACE or GNUPLOT\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Obtain bandstructure (Wannier interpolation) and plot using XMGRACE or GNUPLOT">edit</a> \| (./index.php.md) and plot using XMGRACE or GNUPLOT")\]
+
 Uncomment the bandstructure plot flags in wannier90.win and rerun
 (restart) wannier90:
 
@@ -389,13 +468,13 @@ wannier90_band.gnu
 
 - README.txt
 
-&nbsp;
+<!-- -->
 
     Bandstructure plot in VASP (Three different ways)
 
     1) Standard way: PBE (Fcc Si bandstructure example).
        1.1  Standard self-consistent (SC) run
-       1.2  non-SC calculation ({{TAGBL|ICHARG}}=11) using preconverged {{TAGBL|CHGCAR}} file and KPOINTS_PBE_bands
+       1.2  non-SC calculation (ICHARG=11) using preconverged CHGCAR file and KPOINTS_PBE_bands
        1.3  Plot using p4v
 
     2) Fake SC procedure: PBE & HSE
@@ -404,7 +483,7 @@ wannier90_band.gnu
        2.3 Plot using p4v 
 
     ----
-    The file KPOINTS_HSE_bands is constructed by copying the {{TAG|IBZKPT}} file from run 2.1 to the {{TAG|KPOINTS}} file:
+    The file KPOINTS_HSE_bands is constructed by copying the IBZKPT file from run 2.1 to the KPOINTS file:
 
     IBZKPT
     Automatically generated mesh
@@ -451,7 +530,7 @@ wannier90_band.gnu
 
     ----
     If the wannier90.win file does not exist VASP will create a default wannier90.win compatible with
-    the {{TAG|POSCAR}} and {{TAG|INCAR}}, which need to be suitably modify by including the proper instruction required 
+    the POSCAR and INCAR, which need to be suitably modify by including the proper instruction required 
     to generate the MLWFs (refer to the wannier90 manual):
 
     default wannier90.win
@@ -540,20 +619,30 @@ wannier90_band.gnu
     end kpoints
     ----
 
-Wannier90 Manual: [WANNIER90
-manual](http://www.wannier.org/doc/user_guide.pdf)
+Wannier90 Manual: <a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a>
 
 LWANNIER90 in the VASP Manual:
 [LWANNIER90](../incar-tags/LWANNIER90.md).
 
-## Download
-[5_4_Si_bandstructure.tgz](https://vasp.at/wiki/images/d/d1/5_4_Si_bandstructure.tgz "5 4 Si bandstructure.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Si_bandstructure&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/d/d1/5_4_Si_bandstructure.tgz" class="internal"
+title="5 4 Si bandstructure.tgz">5_4_Si_bandstructure.tgz</a>
+
 
 [Overview](../tutorials/Hybrid_functionals_-_Tutorial.md) \>
 [bandgap of Si using different DFT+HF
 methods](Bandgap_of_Si_using_different_DFT+HF_methods.md) \>
-[MgO optimum mixing](MgO_optimum_mixing.md) \>
+[MgO optimum
+mixing](MgO_optimum_mixing.md) \>
 [fcc Ni DOS with hybrid
 functional](Fcc_Ni_DOS_with_hybrid_functional.md) \>
-Si bandstructure  \> [List of
+Si bandstructure
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

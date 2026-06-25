@@ -2,26 +2,35 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NSIM
+
+
 NSIM = \[integer\]  
 Default: **NSIM** = 4 
 
-Description: NSIM sets the number of bands that are optimized
-simultaneously by the RMM-DIIS algorithm. This also controls for the
-blocked-Davidson at certain places how many orbitals are worked on
-simultaneously as well as in the calculation of forces. Especially, GPUs
-benefit from increasing NSIM.
+Description: NSIM sets the
+number of bands that are optimized simultaneously by the RMM-DIIS
+algorithm. This also controls for the blocked-Davidson at certain places
+how many orbitals are worked on simultaneously as well as in the
+calculation of forces. Especially, GPUs benefit from increasing
+NSIM.
 
 ------------------------------------------------------------------------
 
 The RMM-DIIS algorithm ([IALGO](IALGO.md)=48) works in a
-blocked mode. NSIM bands are optimized at the same time. This allows to
-use matrix-matrix operations instead of matrix-vector operation for the
-evaluations of the non local projection operators in real space, and
-might speed up calculations on some machines. There should be no
-difference in the total energy and the convergence behavior between
-NSIM=1 and NSIM\>1, only the performance should improve.
+blocked mode. NSIM bands are
+optimized at the same time. This allows to use matrix-matrix operations
+instead of matrix-vector operation for the evaluations of the non local
+projection operators in real space, and might speed up calculations on
+some machines. There should be no difference in the total energy and the
+convergence behavior between
+NSIM=1 and
+NSIM\>1, only the performance
+should improve.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NSIM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IALGO](IALGO.md), [NCORE](NCORE.md),
 [NPAR](NPAR.md), [LPLANE](LPLANE.md),
 [LSCALU](LSCALU.md), [KPAR](KPAR.md),
@@ -32,3 +41,5 @@ NSIM=1 and NSIM\>1, only the performance should improve.
 tag](https://vasp.at/wiki/index.php/Special-Search/-NSIM-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

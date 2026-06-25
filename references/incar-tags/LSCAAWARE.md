@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LSCAAWARE
+
+
 LSCAAWARE = \[logical\] 
 
 |  |  |  |
@@ -9,16 +11,23 @@ LSCAAWARE = \[logical\] 
 | Default: **LSCAAWARE** | = .TRUE. | if VASP is compiled with scaLAPACK support (precompiler flag -DscaLAPACK) |
 |  | = .FALSE. | otherwise |
 
-Description: LSCAAWARE controls the distribution of the Hamilton matrix.
+Description: LSCAAWARE
+controls the distribution of the Hamilton matrix.
 
 ------------------------------------------------------------------------
 
-For LSCAAWARE=.TRUE., VASP distributes the Hamilton matrix among the MPI
-ranks. For LSCAAWARE=.FALSE., each MPI ranks allocates the complete
-Hamiltonain. In both cases [LSCALAPACK](LSCALAPACK.md)
-decides if ScaLAPACK routines are used for diagonalization.
+For LSCAAWARE=.TRUE., VASP
+distributes the Hamilton matrix among the MPI ranks. For
+LSCAAWARE=.FALSE., each MPI
+ranks allocates the complete Hamiltonain. In both cases
+[LSCALAPACK](LSCALAPACK.md) decides if ScaLAPACK
+routines are used for diagonalization.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LSCAAWARE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NPAR](NPAR.md), [NCORE](NCORE.md),
 [LPLANE](LPLANE.md), [NSIM](NSIM.md),
 [KPAR](KPAR.md), [LSCALU](LSCALU.md),
@@ -28,3 +37,5 @@ decides if ScaLAPACK routines are used for diagonalization.
 tag](https://vasp.at/wiki/index.php/Special-Search/-LSCAAWARE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

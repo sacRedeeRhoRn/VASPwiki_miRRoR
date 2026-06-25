@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NBMOD
-NBMOD = -3 \| -2 \| -1 \| 0 \| \[positive integer\] 
+
+
+NBMOD = -3 \| -2 \| -1 \| 0 \|
+\[positive integer\] 
 
 |  |  |  |
 |----|----|----|
@@ -10,23 +13,27 @@ NBMOD = -3 \| -2 \| -1 \| 0 \| \[positive integer\] 
 |  | = -2 | if [EINT](EINT.md) is set and [IBAND](IBAND.md) is not set |
 |  | = -1 | if neither [EINT](EINT.md) nor [IBAND](IBAND.md) are set |
 
-Description: NBMOD controls how bands are selected when computing
-[partial charge
-densities](../redirects/Band-decomposed_charge_densities.md).
+Description: NBMOD controls
+how bands are selected when computing
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">partial charge densities</a>.
 
 ------------------------------------------------------------------------
 
-NBMOD is used with other tags to define the mode of band selection for
-partial charge densities in [PARCHG](../output-files/PARCHG.md),
+NBMOD is used with other tags
+to define the mode of band selection for partial charge densities in
+[PARCHG](../output-files/PARCHG.md),
 [vaspout.h5](../output-files/Vaspout.h5.md), or
 [CHGCAR](../input-files/CHGCAR.md) files. There are several ways to set
 this tag.
 
 - NBMOD = n: Use n bands
 
-If a positive integer is passed, NBMOD represents the number of values
-in the array [IBAND](IBAND.md). If
-[IBAND](IBAND.md) is specified, NBMOD is set automatically to
+If a positive integer is passed,
+NBMOD represents the number of
+values in the array [IBAND](IBAND.md). If
+[IBAND](IBAND.md) is specified,
+NBMOD is set automatically to
 the number of values passed in [IBAND](IBAND.md).
 
 |  |
@@ -40,7 +47,8 @@ partial charge density. E.g. the resulting partial charge density in the
 [PARCHG](../output-files/PARCHG.md) file will sum up to twice the value of
 the number of total bands [NBANDS](NBANDS.md).
 
-- NBMOD = -1: Use all occupied bands
+- NBMOD = -1: Use all occupied
+  bands
 
 This mode writes the charge density of all occupied states to the
 [CHGCAR](../input-files/CHGCAR.md) file, and no
@@ -52,35 +60,43 @@ methodology (e.g. by setting [LPARD](LPARD.md) = .FALSE.,
 the [augmentation
 occupancies](../methods/Projector-augmented-wave_formalism.md)
 is not included in the produced [CHGCAR](../input-files/CHGCAR.md) file for
-NBMOD = -1. However, the fine FFT grid's valence charge density is
-equivalent.
+NBMOD = -1. However, the fine
+FFT grid's valence charge density is equivalent.
 
-- NBMOD = -2: Use an absolute energy interval to select contributing
-  bands
+- NBMOD = -2: Use an absolute
+  energy interval to select contributing bands
 
 The partial charge density is calculated for electrons in the energy
 interval specified by [EINT](EINT.md).
 
-- NBMOD = -3: Use an energy interval to select contributing bands and
-  add the Fermi energy $\epsilon_f$ to
-  the passed values
+- NBMOD = -3: Use an energy
+  interval to select contributing bands and add the Fermi energy
+  $\epsilon_f$ to the passed values
 
 The partial charge density is calculated for electrons in the energy
 interval specified by [EINT](EINT.md). In this mode, the
 values in [EINT](EINT.md) are interpreted as relative to the
-Fermi energy $\epsilon_f$. E.g. if
-[EINT](EINT.md) = -0.1 0.5 and $\epsilon_f$ = 2.43, the chosen energy interval will range from
-2.33 to 2.93 eV.
+Fermi energy $\epsilon_f$.
+E.g. if [EINT](EINT.md) = -0.1 0.5 and
+$\epsilon_f$ = 2.43, the chosen energy interval will
+range from 2.33 to 2.93 eV.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NBMOD&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LPARD](LPARD.md), [IBAND](IBAND.md),
 [EINT](EINT.md), [KPUSE](KPUSE.md),
 [LSEPB](LSEPB.md), [LSEPK](LSEPK.md),
 [LPARDH5](LPARDH5.md), [PARCHG](../output-files/PARCHG.md),
-[vaspout.h5](../output-files/Vaspout.h5.md), [Band-decomposed charge
-densities](../redirects/Band-decomposed_charge_densities.md)
+[vaspout.h5](../output-files/Vaspout.h5.md),
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">Band-decomposed charge
+densities</a>
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NBMOD-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,20 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NERSC Berkeley 2016 HOWTO
+
+
 - **The examples**:
 
-&nbsp;
+<!-- -->
 
 - can be copied from:
 
-&nbsp;
+<!-- -->
 
     /project/projectdirs/training/www/VASPWorkshop2016/exercises
 
 - or may be downloaded from the [workshop wiki
   page](NERSC_Berkeley_2016.md).
 
-&nbsp;
+<!-- -->
 
 - **Running the examples**:
 
@@ -29,7 +31,7 @@ following:
 - Copy the files `hsw.sl` and `sub.sh` to the directory where you want
   to run the example:
 
-&nbsp;
+<!-- -->
 
     cd path-to-your-directory
     cp /project/projectdirs/training/www/VASPWorkshop2016/exercises/hsw.sl .
@@ -37,7 +39,7 @@ following:
 
 - To submit for instance the jobscripts *run.sh*, you specify:
 
-&nbsp;
+<!-- -->
 
     ./sub.sh run.sh
 
@@ -100,3 +102,5 @@ will submit the following `sub.sl` file:
 
     export vasp_std="srun -n 4 -c 16 --cpu_bind=cores /global/homes/u/usgsw/vasp/20161102/hsw/intel/bin/vasp_std"
     ./run.sh
+
+

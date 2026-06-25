@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Tempalte:VIDEO
+
+
+
 Redirect to:
 
-- [Template:VIDEO](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=Template:VIDEO&amp;redirect=no"
+  class="mw-redirect" title="Template:VIDEO">Template:VIDEO</a>
+
+

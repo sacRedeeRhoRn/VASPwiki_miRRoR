@@ -2,9 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # OSZICAR
+
+
 Information about convergence speed and about the current step is
-written to stdout and to the OSZICAR file. Always keep a copy of the
-OSZICAR file, it might give important information.
+written to stdout and to the
+OSZICAR file. Always keep a
+copy of the OSZICAR file, it
+might give important information.
 
 Typically you will get something similar to the following lines:
 
@@ -36,13 +40,15 @@ output charge density.
 The next line (after the *N*+1 lines) gives information about the total
 energy after obtaining convergence. The first values is the total free
 energy *F* (at this point the energy of the reference atom has been
-subtracted), *E0* is the energy for $\sigma \to 0$ (see also [Partial
-occupancies](https://vasp.at/wiki/index.php/index.php)"))
-and *dE* is the change in the total energy between the current and the
-last step; for a static run *dE* is the entropy multiplied by
-$sigma$. For a molecular dynamics
-calculation ([IBRION](../incar-tags/IBRION.md)=0) this line looks a little
-bit different:
+subtracted), *E0* is the energy for $\sigma \to 0$
+(see also <a
+href="/wiki/index.php?title=Partial_occupancies&amp;action=edit&amp;redlink=1"
+class="new" title="Partial occupancies (page does not exist)">Partial
+occupancies</a>) and *dE* is the change in the total energy between the
+current and the last step; for a static run *dE* is the entropy
+multiplied by $sigma$. For a
+molecular dynamics calculation ([IBRION](../incar-tags/IBRION.md)=0) this
+line looks a little bit different:
 
        1 T= 1873.0 E= -.13382154E+04 F= -.13401522E+04 E0= -.13397340E+04 
         EK=   .19368E+01 SP=  .00E+00 SK=  .00E+00
@@ -56,10 +62,12 @@ kinetic energy, *SP* is the potential energy of the Nosé thermostat and
 Additional technical parameters and some status reports are written to
 stdout.
 
-The ouput to the OSZICAR file is also written for force-field only steps
-when machine learning force fields are used. In that case the *E0* entry
-contains the same as the *F* entry since the entropy cannot be
-calculated in this method. The rest is analogous to the ab initio
-output.
+The ouput to the OSZICAR file
+is also written for force-field only steps when machine learning force
+fields are used. In that case the *E0* entry contains the same as the
+*F* entry since the entropy cannot be calculated in this method. The
+rest is analogous to the ab initio output.
 
 ------------------------------------------------------------------------
+
+

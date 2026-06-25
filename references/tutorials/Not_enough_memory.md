@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Not enough memory
+
+
 Nowadays, for standard DFT and hybrid functional calculations, memory is
 usually not an issues. Furthermore, by increasing the number of cores,
 the memory requirements per core can be reduced significantly.
@@ -62,3 +64,5 @@ the orbitals is usually most memory demanding.
   
 
 ------------------------------------------------------------------------
+
+

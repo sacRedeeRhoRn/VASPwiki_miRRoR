@@ -2,13 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Nuclephile Substitution CH3Cl - mMD1
+
+
+
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
-Nuclephile Substitution CH3Cl - mMD1 \> [Nuclephile Substitution CH3Cl -
+Nuclephile Substitution CH3Cl -
+mMD1 \> [Nuclephile
+Substitution CH3Cl -
 mMD2](Nuclephile_Substitution_CH3Cl_-_mMD2.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
@@ -18,27 +24,55 @@ SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-  - [2.3 INCAR](#INCAR)
-  - [2.4 ICONST](#ICONST)
-- [3 Calculation](#Calculation)
-  - [3.1 Running the calculation](#Running_the_calculation)
-  - [3.2 Expectation](#Expectation)
-  - [3.3 Reality](#Reality)
-  - [3.4 Solution](#Solution)
-- [4 Download](#Download)
 
-## Task
-In this example a nucleophile substitution of a Cl⁻ by another Cl⁻ in
-CH₃Cl is attempted via a meta dynamics calculation.
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+  - [2.3
+    INCAR](#INCAR)
+  - [2.4
+    ICONST](#ICONST)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Running
+    the calculation](#Running_the_calculation)
+  - [3.2
+    Expectation](#Expectation)
+  - [3.3
+    Reality](#Reality)
+  - [3.4
+    Solution](#Solution)
+- [4
+  Download](#Download)
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+
+## Task\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
+In this example a nucleophile substitution of a Cl<sup>-</sup> by
+another Cl<sup>-</sup> in CH<sub>3</sub>Cl is attempted via a meta
+dynamics calculation.
+
+## Input\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
        1.00000000000000
          12.0000000000000000    0.0000000000000000    0.0000000000000000
           0.0000000000000000   12.0000000000000000    0.0000000000000000
@@ -60,7 +94,11 @@ CH₃Cl is attempted via a meta dynamics calculation.
   between neighbouring cells and hence to simulate an isolated molecular
   reaction.
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Automatic
      0
     Gamma
@@ -71,7 +109,11 @@ CH₃Cl is attempted via a meta dynamics calculation.
   are negligible (in sufficiently large cells) hence no Brillouin zone
   sampling is necessary.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     PREC=Low
     EDIFF=1e-6
     LWAVE=.FALSE.
@@ -119,7 +161,11 @@ CH₃Cl is attempted via a meta dynamics calculation.
   small as possible while [HILLS_BIN](../incar-tags/HILLS_BIN.md)
   should be as large as possible.
 
-### [ICONST](../input-files/ICONST.md)
+### [ICONST](../input-files/ICONST.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: ICONST">edit</a> \| (./index.php.md)\]
+
 For this example an [ICONST](../input-files/ICONST.md) file is used which
 looks like:
 
@@ -133,16 +179,24 @@ looks like:
   with the exception that the 5 at the fourth entry in the third row
   specifies that a bias potential is applied to the special coordinate.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 As in the previous example ([Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md))
 the reaction coordinate, the difference between two C-Cl distances, is
-monitored. Expected values for reactant: $\approx
-1 \AA$, for product: $~-1 \AA$, for transition state: $0 \AA$.
+monitored. Expected values for reactant: $\approx 1 \AA$, for product: $~-1 \AA$, for
+transition state: $0 \AA$.
 
   
 
-### Running the calculation
+### Running the calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Running the calculation">edit</a> \| (./index.php.md)\]
+
 The mass for hydrogen in this example is set 3.016 a.u. corresponding to
 the tritium isotope. This way larger timesteps can be chosen for the MD.
 For practical reasons, we split our (pressumably long) meta dynamics
@@ -202,11 +256,15 @@ The calculation is executed using the "run" script:
   for the executable command.
 - Please run this script by typing:
 
-&nbsp;
+<!-- -->
 
     bash ./run
 
-### Expectation
+### Expectation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Expectation">edit</a> | (./index.php.md)\]
+
 The meta dynamics simulation pushes the system against the reaction
 barrier. The amplitude of oscillation of the collective variable
 increases (as a larger and larger region of configuration space is
@@ -214,13 +272,17 @@ visited) and at some point the collective variable switches from a
 positive value (corresponding to the reactant) to a negative value
 (corresponding to the product).
 
-### Reality
+### Reality\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Reality">edit</a> | (./index.php.md)\]
+
 Most likely the collective variable increases to unexpectedly large
-values ($\>3 \AA$) while the transition
-region (around $0 \AA$) is either not
-sampled or it is smpled only in the final part of the simulation. In
-other words, the simulation spent most of its time sampling an
-uninteresting part of the configuration space related to the
+values ($\>3 \AA$)
+while the transition region (around $0 \AA$) is
+either not sampled or it is smpled only in the final part of the
+simulation. In other words, the simulation spent most of its time
+sampling an uninteresting part of the configuration space related to the
 dissociation of the vdW complex instead pushing the configuration over
 the barrier. This is because meta dynamics always seeks for the path of
 least resistance. In the case of our model system this corresponds to
@@ -238,7 +300,12 @@ The time evolution is visualized using the command:
 
 It should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/2/2d/TimeEvol_mMD1_CH3Cl.jpg/300px-TimeEvol_mMD1_CH3Cl.jpg)](https://vasp.at/wiki/File:TimeEvol_mMD1_CH3Cl.jpg)
+<a href="/wiki/File:TimeEvol_mMD1_CH3Cl.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/2/2d/TimeEvol_mMD1_CH3Cl.jpg/300px-TimeEvol_mMD1_CH3Cl.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/2/2d/TimeEvol_mMD1_CH3Cl.jpg/450px-TimeEvol_mMD1_CH3Cl.jpg 1.5x, /wiki/images/thumb/2/2d/TimeEvol_mMD1_CH3Cl.jpg/600px-TimeEvol_mMD1_CH3Cl.jpg 2x"
+width="300" height="225" /></a>
 
 We indeed see that the transition region is never sampled and that the
 meta dynamics simulation takes the path of least resistance, which is
@@ -246,23 +313,36 @@ the dissociation of the vdW complex.
 
   
 
-### Solution
+### Solution\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Solution">edit</a> | (./index.php.md)\]
+
 In order to restrict the sampling into the part of configuration space
 that is relevant for the process of interest (say between
-$-2 \AA$ and $2
-\AA$) we must use some trick which is explained in the next
-example.
+$-2
+\AA$ and $2 \AA$) we
+must use some trick which is explained in the next example.
 
-## Download
-[CH3Cl_mMD1.tgz](https://vasp.at/wiki/images/6/64/CH3Cl_mMD1.tgz "CH3Cl mMD1.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_mMD1&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/6/64/CH3Cl_mMD1.tgz" class="internal"
+title="CH3Cl mMD1.tgz">CH3Cl_mMD1.tgz</a>
+
 
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
-Nuclephile Substitution CH3Cl - mMD1 \> [Nuclephile Substitution CH3Cl -
+Nuclephile Substitution CH3Cl -
+mMD1 \> [Nuclephile
+Substitution CH3Cl -
 mMD2](Nuclephile_Substitution_CH3Cl_-_mMD2.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
@@ -271,3 +351,5 @@ SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 [Nuclephile Substitution CH3Cl -
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
+
+

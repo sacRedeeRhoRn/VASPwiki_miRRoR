@@ -2,34 +2,68 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # O atom spinpolarized
+
+
+
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](O_atom.md) \> O atom spinpolarized \> [O atom
-spinpolarized low
+[O
+atom](O_atom.md) \>
+O atom
+spinpolarized \> [O
+atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](O_dimer.md) \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+[O
+dimer](O_dimer.md) \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Performing a spin polarized calculation for a single oxygen atom in a
 cubic box to get the correct magnetic moment of the atom.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     O atom in a box
      1.0          ! universal scaling parameters
      8.0 0.0 0.0  ! lattice vector  a(1)
@@ -39,32 +73,44 @@ cubic box to get the correct magnetic moment of the atom.
     cart          ! positions in cartesian coordinates
      0 0 0
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM = O atom in a box
     ISMEAR = 0  ! Gaussian smearing
     ISPIN =  2  ! spin polarized calculation
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Gamma-point only
      0
     Monkhorst Pack
      1 1 1
      0 0 0
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - The O atom is an open shell system with 2 unpaired electrons.
 
-&nbsp;
+<!-- -->
 
 - Starting from the previous chapter add [ISPIN](../incar-tags/ISPIN.md)=2
   to the [INCAR](../input-files/INCAR.md) file remove the
   [WAVECAR](../input-files/WAVECAR.md) file and restart VASP.
 
-&nbsp;
+<!-- -->
 
 - The following example output is obtained (stdout):
 
-&nbsp;
+<!-- -->
 
     running on    8 total cores
     distrk:  each k-point on    8 cores,    1 groups
@@ -97,12 +143,12 @@ cubic box to get the correct magnetic moment of the atom.
   LSDA they interact only via the effective local potential spin-up and
   spin-down potential.
 
-&nbsp;
+<!-- -->
 
 - In the [OUTCAR](../output-files/OUTCAR.md) file one can see two spin
   components:
 
-&nbsp;
+<!-- -->
 
     spin component 1
       
@@ -133,17 +179,34 @@ cubic box to get the correct magnetic moment of the atom.
 The spin component 1 has two more electrons corresponding to a
 magnetization of $2\mu_{B}$.
 
-## Download
-[Oatomspin.tgz](https://vasp.at/wiki/images/b/b5/Oatomspin.tgz "Oatomspin.tgz")
+## Download\[<a
+href="/wiki/index.php?title=O_atom_spinpolarized&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/b/b5/Oatomspin.tgz" class="internal"
+title="Oatomspin.tgz">Oatomspin.tgz</a>
+
 
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](O_atom.md) \> O atom spinpolarized \> [O atom
-spinpolarized low
+[O
+atom](O_atom.md) \>
+O atom
+spinpolarized \> [O
+atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](O_dimer.md) \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+[O
+dimer](O_dimer.md) \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

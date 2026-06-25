@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IRC_STOP
+
+
 IRC_STOP = integer  
 Default: **IRC_STOP** = 20 
 
 Description: Sets the number of steps in which the energy must
-monotonously increase before an [IRC
-calculation](../redirects/IRC_calculations.md) terminates.
+monotonously increase before an
+<a href="/wiki/IRC_calculations" class="mw-redirect"
+title="IRC calculations">IRC calculation</a> terminates.
 
 ------------------------------------------------------------------------
 
@@ -18,16 +21,25 @@ the IRC pathway may encounter regions with relatively constant energy
 (plateaus) or fluctuations due to numerical noise or complex
 interactions, particularly in the vicinity of transition states.
 
-IRC_STOP sets the number of time steps with increasing energy, after
-which the damped-velocity-Verlet algorithm in an [IRC
-calculation](../redirects/IRC_calculations.md) terminates. In
-order to avoid a premature termination, especially close to transition
-states, IRC_STOP should always be greater than 1.
+IRC_STOP sets the number of
+time steps with increasing energy, after which the
+damped-velocity-Verlet algorithm in an
+<a href="/wiki/IRC_calculations" class="mw-redirect"
+title="IRC calculations">IRC calculation</a> terminates. In order to
+avoid a premature termination, especially close to transition states,
+IRC_STOP should always be
+greater than 1.
 
-## Related tags and articles
-[IRC calculations](../redirects/IRC_calculations.md),
+## Related tags and articles\[<a href="/wiki/index.php?title=IRC_STOP&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/IRC_calculations" class="mw-redirect"
+title="IRC calculations">IRC calculations</a>,
 [IRC_DIRECTION](IRC_DIRECTION.md) ,
 [IRC_DELTA0](IRC_DELTA0.md),
 [IRC_MINSTEP](IRC_MINSTEP.md),
 [IRC_MAXSTEP](IRC_MAXSTEP.md),
 [IRC_VNORM0](IRC_VNORM0.md)
+
+

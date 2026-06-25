@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LTMP2
+
+
+
 Redirect to:
 
 - [LTMP2 - Tutorial](../tutorials/LTMP2_-_Tutorial.md)
+
+

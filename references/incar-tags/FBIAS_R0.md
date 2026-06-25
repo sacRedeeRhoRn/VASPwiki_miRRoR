@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FBIAS_R0
+
+
 FBIAS_R0 = \[real (array)\] 
 
 Description: Defines the half-step position for the bias potential.
 
 ------------------------------------------------------------------------
 
-FBIAS_R0 defines the half-step position ($\xi_{0\mu}$) for the Fermi-like step-shaped bias potential of
-the following form:
+FBIAS_R0 defines the half-step
+position ($\xi_{0\mu}$)
+for the Fermi-like step-shaped bias potential of the following form:
 
 $\tilde{V}(\xi_1,\dots,\xi_{M_4}) =
 \sum_{\mu=1}^{M_4}\frac{A_{\mu}}{1+\text{exp}\left
@@ -18,15 +21,22 @@ $\tilde{V}(\xi_1,\dots,\xi_{M_4}) =
 where the sum runs over all ($M_4$)
 coordinates the potential acts upon, which are defined in the
 [ICONST](../input-files/ICONST.md) file by setting the `status` to 4. The
-units of $\xi_{0\mu}$ correspond to
-units of the coordinate the potential acts upon (e.g.,
+units of $\xi_{0\mu}$
+correspond to units of the coordinate the potential acts upon (e.g.,
 ${\AA}$ for coordinates with `flag` R,
-$rad.$ for coordinates with `flag` A,
-dimensionless for coordinates with `flag` W, etc...). The number of
-items defined via FBIAS_R0 must be equal to $M_4$. Otherwise, the calculation terminates with an error message.
+$rad.$ for coordinates with `flag` A, dimensionless for
+coordinates with `flag` W, etc...). The number of items defined via
+FBIAS_R0 must be equal to
+$M_4$. Otherwise, the calculation terminates with an
+error message.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=FBIAS_R0&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [FBIAS_A](FBIAS_A.md), [FBIAS_D](FBIAS_D.md),
 [ICONST](../input-files/ICONST.md)
 
 ------------------------------------------------------------------------
+
+

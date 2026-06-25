@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Band-structure calculation using hybrid functionals
+
+
 [Band-structure
 calculations](../categories/Category-Band_structure.md)
 for [hybrid
@@ -10,16 +12,29 @@ require multiple steps. Below we give a step-by-step introduction and an
 example. Additionally, we provide some advice to reduce computational
 and human effort.
 
+
 ## Contents
 
-- [1 Step-by-step instructions](#Step-by-step_instructions)
-- [2 Recommendations and advice](#Recommendations_and_advice)
-- [3 Example of **k** points for hybrid band-structure
-  calculation](#Example_of_k_points_for_hybrid_band-structure_calculation)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## Step-by-step instructions
+- [1 Step-by-step
+  instructions](#Step-by-step_instructions)
+- [2
+  Recommendations and
+  advice](#Recommendations_and_advice)
+- [3 Example of
+  **k** points for hybrid band-structure
+  calculation](#Example_of_k_points_for_hybrid_band-structure_calculation)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
 For [hybrid
 functionals](Category-Hybrid_functionals.md),
 the Hamiltonian cannot be expressed in terms of the electronic charge
@@ -44,7 +59,7 @@ calculations](../categories/Category-Band_structure.md)
 generally compute the Kohn-Sham orbitals and eigenenergies along a path
 in reciprocal space which usually connects high-symmetry points in the
 first Brillouin zone. Some external
-tools^([\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2))
+tools<sup>[\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2)</sup>
 help to identify the high-symmetry points and **k** points along a
 high-symmetry path for materials of any symmetry.
 
@@ -65,7 +80,7 @@ a high-symmetry path must be added to the
 [KPOINTS](../input-files/KPOINTS.md) file with the value of all weights
 set to zero.
 
-&nbsp;
+<!-- -->
 
 2\. Provide an additional [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file that can specify the [high-symmetry path in line mode](../input-files/KPOINTS.md).  
 Generally, the [KPOINTS](../input-files/KPOINTS.md) file and the
@@ -101,17 +116,23 @@ best for systems with a band gap.
 [INCAR](../input-files/INCAR.md) file and restart the hybrid calculation
 from the DFT [WAVECAR](../input-files/WAVECAR.md) file.
 
-**Step 5:** Plot the band structure, e.g., using
-[py4vasp](https://vasp.at/py4vasp/latest/calculation/band/#py4vasp.calculation._band.Band.to_graph).
-In a python notebook in the directory of the calculation, you can
-execute
+**Step 5:** Plot the band structure, e.g., using <a
+href="https://vasp.at/py4vasp/latest/calculation/band/#py4vasp.calculation._band.Band.to_graph"
+class="external text" rel="nofollow">py4vasp</a>. In a python notebook
+in the directory of the calculation, you can execute
+
 
     import py4vasp as pv
     calc = pv.Calculation.from_path(".")
     calc.band.plot()
     # calc.band.plot("kpoints_opt") # if the high-symmetry path is in KPOINTS_OPT
 
-## Recommendations and advice
+
+## Recommendations and advice\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Recommendations and advice">edit</a> \| (./index.php.md)\]
+
 In case a [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file is
 present, VASP computes the band energies for the **k** points of the
 [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file after SCF is reached
@@ -181,7 +202,11 @@ semi core states. By subtracting the faulty dispersion of the semi-core
 state from all bands, you can recover the true dispersion of the
 conduction bands.
 
-## Example of **k** points for hybrid band-structure calculation
+## Example of **k** points for hybrid band-structure calculation\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Example of k points for hybrid band-structure calculation">edit</a> \| (./index.php.md)\]
+
 For instance, for cubic-diamond Si with the following
 [POSCAR](../input-files/POSCAR.md) file
 
@@ -252,7 +277,11 @@ And continue using the following [KPOINTS](../input-files/KPOINTS.md) file
       3 3 3 
       0 0 0
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [KPOINTS](../input-files/KPOINTS.md),
 [KPOINTS_OPT](../input-files/KPOINTS_OPT.md), [List of hybrid
 functionals](List_of_hybrid_functionals.md),
@@ -260,9 +289,19 @@ functionals](List_of_hybrid_functionals.md),
 formalism](Hybrid_functionals-_formalism.md),
 [Coulomb singularity](Coulomb_singularity.md)
 
-## References
-1.  [↑](#cite_ref-bilbao:kvec_1-0) [www.cryst.ehu.es/cryst/get_kvec.html
-    (2022).](https://www.cryst.ehu.es/cryst/get_kvec.html)
+## References\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-bilbao:kvec_1-0)
+    <a href="https://www.cryst.ehu.es/cryst/get_kvec.html"
+    class="external text"
+    rel="nofollow">www.cryst.ehu.es/cryst/get_kvec.html (2022).</a>
 2.  [↑](#cite_ref-seekpath_2-0)
-    [www.materialscloud.org/work/tools/seekpath
-    (2022).](https://www.materialscloud.org/work/tools/seekpath)
+    <a href="https://www.materialscloud.org/work/tools/seekpath"
+    class="external text"
+    rel="nofollow">www.materialscloud.org/work/tools/seekpath (2022).</a>
+
+

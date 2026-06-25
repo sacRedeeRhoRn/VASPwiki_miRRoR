@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Molecular-dynamics calculations
+
+
 Molecular dynamics (MD) is used to study the movement of atoms over time
 in a given thermodynamic ensemble. This makes MD useful whenever a
 static ground-state calculation is insufficient, e.g., to study thermal
@@ -19,27 +21,48 @@ or external models, such as
 [GRACE](../methods/Running_GRACE_force_fields_in_VASP.md).
 This page explains how to set up and validate standard MD calculations
 in VASP, as well as how to avoid the most common numerical and physical
-pitfalls. More advanced sampling methods are covered under "[advanced
-molecular-dynamics
-sampling](../redirects/Advanced_molecular-dynamics_sampling.md)".
+pitfalls. More advanced sampling methods are covered under
+"<a href="/wiki/Advanced_molecular-dynamics_sampling" class="mw-redirect"
+title="Advanced molecular-dynamics sampling">advanced molecular-dynamics
+sampling</a>".
+
 
 ## Contents
 
-- [1 Step-by-step instructions](#Step-by-step_instructions)
-  - [1.1 Step 1: Prepare a stable starting
-    structure](#Step_1:_Prepare_a_stable_starting_structure)
-  - [1.2 Step 2: Set the core MD tags](#Step_2:_Set_the_core_MD_tags)
-  - [1.3 Step 3: Select the ensemble and cell
-    dynamics](#Step_3:_Select_the_ensemble_and_cell_dynamics)
-  - [1.4 Step 4: Choose how the forces are
-    computed](#Step_4:_Choose_how_the_forces_are_computed)
-  - [1.5 Step 5: Test the run before extending
-    it](#Step_5:_Test_the_run_before_extending_it)
-- [2 Recommendations and advice](#Recommendations_and_advice)
-- [3 Related tags and articles](#Related_tags_and_articles)
 
-## Step-by-step instructions
-### Step 1: Prepare a stable starting structure
+- [1 Step-by-step
+  instructions](#Step-by-step_instructions)
+  - [1.1 Step 1:
+    Prepare a stable starting
+    structure](#Step_1:_Prepare_a_stable_starting_structure)
+  - [1.2 Step 2:
+    Set the core MD tags](#Step_2:_Set_the_core_MD_tags)
+  - [1.3 Step 3:
+    Select the ensemble and cell
+    dynamics](#Step_3:_Select_the_ensemble_and_cell_dynamics)
+  - [1.4 Step 4:
+    Choose how the forces are
+    computed](#Step_4:_Choose_how_the_forces_are_computed)
+  - [1.5 Step 5:
+    Test the run before extending
+    it](#Step_5:_Test_the_run_before_extending_it)
+- [2
+  Recommendations and
+  advice](#Recommendations_and_advice)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
+### Step 1: Prepare a stable starting structure\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Prepare a stable starting structure">edit</a> \| (./index.php.md)\]
+
 Generate a [POSCAR](../input-files/POSCAR.md) containing a large enough
 cell. In practice, MD usually requires a substantial number of ions so
 that the trajectory samples a meaningful distribution of local
@@ -66,9 +89,42 @@ the same ab initio settings used for training. Disable symmetry with
 [`ISYM`](../incar-tags/ISYM.md)` = 0` for MD, since thermal motion generaly
 breaks the symmetry of the relaxed structure.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+Before starting the MD, do not forget to copy <a href="/wiki/CONTCAR"
+title="CONTCAR">CONTCAR</a> to <a href="/wiki/POSCAR"
+title="POSCAR">POSCAR</a>.
+<table
+style="width:100%; table-layout: fixed; border-spacing: 0; padding: 0; margin: 0; background-color: var(--vCB-bg); color: var(--vdefault-text); border-width: 1px; border-style: solid; border-color: var(--vCB-border);">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre
+style="margin: 0; padding: 1em; background: none; border: none; white-space: pre; overflow-x: auto; font-family: monospace;"><code>cp CONTCAR POSCAR</code></pre></td>
+</tr>
+</tbody>
+</table>
+<p>If <a href="/wiki/POSCAR" title="POSCAR">POSCAR</a> does not contain
+velocities, VASP will randomly generate them at the beginning of the
+run. While this is fine for equilibration, it makes it harder to compare
+trajectories from separate runs directly.</p></td>
+</tr>
+</tbody>
+</table>
 
-### Step 2: Set the core MD tags
+### Step 2: Set the core MD tags\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Set the core MD tags">edit</a> \| (./index.php.md)\]
+
 Activate MD with [`IBRION`](../incar-tags/IBRION.md)` = 0`, then define
 the trajectory length, timestep, temperature control, and cell
 constraints.
@@ -106,13 +162,18 @@ more broadly reduce screen and file output frequency.
 |----|
 | **Tip:** The atomic masses can be intentionally changed for MD, by setting the [POMASS](../incar-tags/POMASS.md) tag in the [INCAR](../input-files/INCAR.md). By default the masses are read from [POTCAR](../input-files/POTCAR.md). This can be useful for increasing POTIM for light atoms such as hydrogen, but it changes the physical dynamics and should be avoided when mass-dependent observables are the target. |
 
-### Step 3: Select the ensemble and cell dynamics
+### Step 3: Select the ensemble and cell dynamics\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Select the ensemble and cell dynamics">edit</a> \| (./index.php.md)\]
+
 Select an ensemble based on the physical conditions you want to sample.
 Because VASP determines the ensemble by combining
 [MDALGO](../incar-tags/MDALGO.md) and [ISIF](../incar-tags/ISIF.md), your
-choice of [thermostat](../redirects/Thermostats.md) directly impacts
-your available cell degrees of freedom. For instance, while the
-[Langevin thermostat](Langevin_thermostat.md)
+choice of <a href="/wiki/Thermostats" class="mw-redirect"
+title="Thermostats">thermostat</a> directly impacts your available cell
+degrees of freedom. For instance, while the [Langevin
+thermostat](Langevin_thermostat.md)
 ([`MDALGO`](../incar-tags/MDALGO.md)` = 3`) flexibly supports both
 [NVT](../misc/NVT_ensemble.md) and
 [NpT](../misc/NpT_ensemble.md) simulations, other algorithms
@@ -249,7 +310,11 @@ relaxation very sluggishly. For liquids or soft systems, closely monitor
 the cell evolution and use the [ICONST](../input-files/ICONST.md) file to
 constrain the lattice if the box begins to deform irreversibly.
 
-### Step 4: Choose how the forces are computed
+### Step 4: Choose how the forces are computed\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Choose how the forces are computed">edit</a> \| (./index.php.md)\]
+
 Select the method for force generation, as this choice dictates the
 computational expense and determines whether the workflow incorporates
 machine learning training.
@@ -322,7 +387,11 @@ prediction-only setup.
 |----|
 | **Mind:** If the cell is allowed to change with [`ISIF`](../incar-tags/ISIF.md)` = 3`, monitor the cell shape and volume carefully. The PAW basis is fixed at the beginning of the calculation, so significant cell changes can lead to Pulay-stress errors and unreliable pressure readings. |
 
-### Step 5: Test the run before extending it
+### Step 5: Test the run before extending it\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: Test the run before extending it">edit</a> \| (./index.php.md)\]
+
 Begin with a short trajectory and examine the temperature, forces,
 stress, and electronic convergence before committing to a long run.
 Ensure that the thermostat drives the system toward the intended
@@ -357,7 +426,11 @@ adequate.
 |----|
 | **Mind:** Equilibration and production serve different purposes. Use the initial part of the trajectory to allow the temperature, pressure, volume, and local structure to relax away from the initial configuration. Only after these quantities have fluctuated around a steady state should the trajectory be treated as production data for calculating averages, diffusion coefficients, performing structural analyses, and determining other observables. |
 
-## Recommendations and advice
+## Recommendations and advice\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Recommendations and advice">edit</a> \| (./index.php.md)\]
+
 - Use a generous cutoff for variable-cell runs. With
   [`ISIF`](../incar-tags/ISIF.md)` = 3`, the PAW basis does not update
   during the run. Therefore, large cell distortions can increase
@@ -397,7 +470,11 @@ Common pitfalls:
 - Using MLFF or GRACE production runs outside the range of structures
   represented in the training data.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Molecular-dynamics_calculations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 Files: [POSCAR](../input-files/POSCAR.md), [INCAR](../input-files/INCAR.md),
 [POTCAR](../input-files/POTCAR.md), [CONTCAR](../output-files/CONTCAR.md),
 [OUTCAR](../output-files/OUTCAR.md), [OSZICAR](../output-files/OSZICAR.md),
@@ -421,12 +498,14 @@ Tags: [IBRION](../incar-tags/IBRION.md), [NSW](../incar-tags/NSW.md),
 
 [Structure
 optimization](Structure_optimization.md),
-[Ensembles](../redirects/Ensembles.md), [NVT
+<a href="/wiki/Ensembles" class="mw-redirect"
+title="Ensembles">Ensembles</a>, [NVT
 ensemble](../misc/NVT_ensemble.md), [NVE
 ensemble](../misc/NVE_ensemble.md), [NpT
 ensemble](../misc/NpT_ensemble.md), [NpH
 ensemble](../misc/NpH_ensemble.md),
-[Thermostats](../redirects/Thermostats.md), [Andersen
+<a href="/wiki/Thermostats" class="mw-redirect"
+title="Thermostats">Thermostats</a>, [Andersen
 thermostat](Andersen_thermostat.md),
 [Nosé-Hoover
 thermostat](Nosé-Hoover_thermostat.md),
@@ -434,8 +513,8 @@ thermostat](Nosé-Hoover_thermostat.md),
 [Nosé-Hoover chain
 thermostat](../misc/Nosé-Hoover_chain_thermostat.md),
 [CSVR thermostat](../theory/CSVR_thermostat.md),
-[Machine-learned force
-fields](../redirects/Machine-learned_force_fields.md)
+<a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">Machine-learned force fields</a>
 
 [Advanced MD
 methods](../categories/Category-Advanced_molecular-dynamics_sampling.md)
@@ -454,3 +533,5 @@ parameters](../incar-tags/MDALGO.md),
 integration](../categories/Category-Thermodynamic_integration.md),
 [Müller-Plathe
 method](Müller-Plathe_method.md).
+
+

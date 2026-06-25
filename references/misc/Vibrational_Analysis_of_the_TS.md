@@ -2,8 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Vibrational Analysis of the TS
-Description: the [Improved Dimer
-Method](Improved_Dimer_Method.md) needs an
+
+
+Description: the
+<a href="/wiki/Improved_Dimer_Method" class="mw-redirect"
+title="Improved Dimer Method">Improved Dimer Method</a> needs an
 educated guess of the decay path, which is extimated from the hardest
 vibration mode with imaginary frequency of the TS geometry (which is a
 planar NH3 molecule):
@@ -12,7 +15,7 @@ planar NH3 molecule):
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = Ammonia flipping
     IBRION = 5
@@ -25,7 +28,7 @@ planar NH3 molecule):
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -36,7 +39,7 @@ planar NH3 molecule):
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     ammonia flipping
       1.00000000000000
@@ -51,14 +54,23 @@ planar NH3 molecule):
      0.3538   0.5736   0.5000
      0.5000   0.5000   0.5000
 
-## Download
-[ammonia_flipping.tgz, sub-folder
-TS_vib](http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz)
+## Download\[<a
+href="/wiki/index.php?title=Vibrational_Analysis_of_the_TS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz"
+class="external text" rel="nofollow">ammonia_flipping.tgz, sub-folder
+TS_vib</a>
 
 ------------------------------------------------------------------------
 
-[To the list of
-examples](https://vasp.at/wiki/index.php/index.php)")
-or to the [main page](The_VASP_Manual.md)
+<a
+href="/wiki/index.php?title=VASP_example_calculations&amp;action=edit&amp;redlink=1"
+class="new" title="VASP example calculations (page does not exist)">To
+the list of examples</a> or to the [main
+page](The_VASP_Manual.md)
 
   
+
+

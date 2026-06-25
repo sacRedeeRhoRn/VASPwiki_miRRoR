@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_IMAG_SKIP
-ELPH_SELFEN_IMAG_SKIP = \[logical\]  
+
+
+ELPH_SELFEN_IMAG_SKIP =
+\[logical\]  
 Default: **ELPH_SELFEN_IMAG_SKIP** = .FALSE. 
 
 Description: Use the tetrahedron method to skip the computation of
 electron-phonon matrix elements for which the energy-conserving delta
 functions are zero.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -25,7 +28,13 @@ When using this option, it is also recommended to set
 [ELPH_WF_REDISTRIBUTE](ELPH_WF_REDISTRIBUTE.md)
 = .TRUE.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_IMAG_SKIP&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ELPH_WF_REDISTRIBUTE](ELPH_WF_REDISTRIBUTE.md),
 [ELPH_SCATTERING_APPROX](ELPH_SCATTERING_APPROX.md),
 [ELPH_RUN](ELPH_RUN.md), ((TAG\|ELPH_SELFEN_G_SKIP}}
+
+

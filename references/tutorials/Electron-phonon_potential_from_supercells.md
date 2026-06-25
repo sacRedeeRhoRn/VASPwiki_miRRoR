@@ -2,16 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Electron-phonon potential from supercells
-The computation of the electron-phonon potential, $\partial_{\nu \mathbf{q}} V(\mathbf{r})$, is a prerequisite
-for the calculation of the electron-phonon matrix element:
 
-$g_{mn \mathbf{k}, \nu \mathbf{q}} \equiv \langle
-\psi_{m \mathbf{k} + \mathbf{q}} | \partial_{\nu \mathbf{q}} V |
-\psi_{n \mathbf{k}} \rangle .$
 
-$\partial_{\nu \mathbf{q}} V$ is
-computed from a supercell calculation by means of Fourier interpolation
-while the Bloch orbitals, $\psi_{n
+The computation of the electron-phonon potential,
+$\partial_{\nu \mathbf{q}} V(\mathbf{r})$, is a
+prerequisite for the calculation of the electron-phonon matrix element:
+
+$g_{mn \mathbf{k}, \nu \mathbf{q}} \equiv \langle \psi_{m \mathbf{k} +
+\mathbf{q}} | \partial_{\nu \mathbf{q}} V | \psi_{n \mathbf{k}}
+\rangle .$
+
+$\partial_{\nu \mathbf{q}} V$ is computed from a
+supercell calculation by means of Fourier interpolation while the Bloch
+orbitals, $\psi_{n
 \mathbf{k}}(\mathbf{r})$, are computed directly in the
 primitive cell. The supercell calculation and the primitive-cell
 calculation are performed in two separate VASP runs. This page provides
@@ -27,8 +30,8 @@ For the theory on the electron-phonon potential, see the end of the
 self-energy section of the [theory
 page](../theory/Electron-phonon_interactions_theory.md).
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 |  |
@@ -37,24 +40,44 @@ page](../theory/Electron-phonon_interactions_theory.md).
 
 |  |
 |----|
-| **Tip:** The entire workflow of initializing a calculation, computing the electron-phonon potential in the supercell and performing subsequent electron-phonon calculations in the primitive cell can be facilitated by `velph`. `velph` is a command-line tool included in the [phelel](https://github.com/phonopy/phelel) python package. It helps guide you through the process step by step and ensures a certain level of consistency between the required VASP calculations. |
+| **Tip:** The entire workflow of initializing a calculation, computing the electron-phonon potential in the supercell and performing subsequent electron-phonon calculations in the primitive cell can be facilitated by `velph`. `velph` is a command-line tool included in the <a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a> python package. It helps guide you through the process step by step and ensures a certain level of consistency between the required VASP calculations. |
+
 
 ## Contents
 
-- [1 Finite displacements in the
+
+- [1 Finite
+  displacements in the
   supercell](#Finite_displacements_in_the_supercell)
-  - [1.1 VASP internal driver](#VASP_internal_driver)
-  - [1.2 VASP and phelel](#VASP_and_phelel)
-- [2 Practical hints](#Practical_hints)
-- [3 Related tags and articles](#Related_tags_and_articles)
+  - [1.1 VASP
+    internal driver](#VASP_internal_driver)
+  - [1.2 VASP and
+    phelel](#VASP_and_phelel)
+- [2 Practical
+  hints](#Practical_hints)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
 
-## Finite displacements in the supercell
-[![](https://vasp.at/wiki/images/thumb/4/44/Elphon-workflow.png/400px-Elphon-workflow.png)](https://vasp.at/wiki/File:Elphon-workflow.png)
 
-General workflow when running electron-phonon calculations using
-perturbation theory. Notice that both the "VASP only" workflow as well
-as the "VASP + phelel" workflow produce the same kind of data in
-[phelel_params.hdf5](../input-files/Phelel_params.hdf5.md).
+## Finite displacements in the supercell\[<a
+href="/wiki/index.php?title=Electron-phonon_potential_from_supercells&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Finite displacements in the supercell">edit</a> \| (./index.php.md)\]
+
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:Elphon-workflow.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/44/Elphon-workflow.png/400px-Elphon-workflow.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/4/44/Elphon-workflow.png/600px-Elphon-workflow.png 1.5x, /wiki/images/thumb/4/44/Elphon-workflow.png/800px-Elphon-workflow.png 2x"
+width="400" height="192" /></a>
+<figcaption>General workflow when running electron-phonon calculations
+using perturbation theory. Notice that both the "VASP only" workflow as
+well as the "VASP + phelel" workflow produce the same kind of data in <a
+href="/wiki/Phelel_params.hdf5"
+title="Phelel params.hdf5">phelel_params.hdf5</a>.</figcaption>
+</figure>
 
 The electron-phonon potential is computed from finite atomic
 displacements in a sufficiently large supercell. In this case,
@@ -71,18 +94,23 @@ works with smaller cells.
 Currently, there are two complementary ways to calculate the
 electron-phonon potential. One relies solely on VASP, while the other
 uses VASP in combination with
-[phelel](https://github.com/phonopy/phelel). Both approaches calculate
-the derivative of the Kohn-Sham potential in real space via the
-displacement of atoms. However, they may differ in terms of flexibility
-and computational performance. Below, we describe the general workflow
-of each approach and highlight their advantages and disadvantages.
+<a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a>. Both approaches calculate the derivative of
+the Kohn-Sham potential in real space via the displacement of atoms.
+However, they may differ in terms of flexibility and computational
+performance. Below, we describe the general workflow of each approach
+and highlight their advantages and disadvantages.
 
 Regardless of which approach is chosen, the output is always written to
 the [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 binary file. This file can then be read during a VASP calculation in the
 primitive unit cell to compute electron-phonon interactions.
 
-### VASP internal driver
+### VASP internal driver\[<a
+href="/wiki/index.php?title=Electron-phonon_potential_from_supercells&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: VASP internal driver">edit</a> \| (./index.php.md)\]
+
 This way of calculating the electron-phonon potential is activated by
 setting
 [`ELPH_POT_GENERATE`](../incar-tags/ELPH_POT_GENERATE.md)` = True`
@@ -154,16 +182,23 @@ electron-phonon calculations is also reported in the
 explained on the
 [ELPH_POT_GENERATE](../incar-tags/ELPH_POT_GENERATE.md) page.
 
-### VASP and phelel
+### VASP and phelel\[<a
+href="/wiki/index.php?title=Electron-phonon_potential_from_supercells&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: VASP and phelel">edit</a> \| (./index.php.md)\]
+
 In this approach to calculating the electron-phonon potential, the ionic
 displacements are determined externally using
-[phelel](https://github.com/phonopy/phelel). For people who are familiar
-with phonon calculations using VASP and
-[phonopy](https://github.com/phonopy/phonopy), this workflow will look
-very familiar. In general, this allows for greater flexibility. Here, we
-demonstrate a common workflow that suffices for most purposes. For a
-complete list of features, we refer to the documentation of
-[phelel](https://github.com/phonopy/phelel).
+<a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a>. For people who are familiar with phonon
+calculations using VASP and
+<a href="https://github.com/phonopy/phonopy" class="external text"
+rel="nofollow">phonopy</a>, this workflow will look very familiar. In
+general, this allows for greater flexibility. Here, we demonstrate a
+common workflow that suffices for most purposes. For a complete list of
+features, we refer to the documentation of
+<a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a>.
 
 As an example,
 
@@ -202,7 +237,11 @@ results are written to the
 [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 file.
 
-## Practical hints
+## Practical hints\[<a
+href="/wiki/index.php?title=Electron-phonon_potential_from_supercells&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Practical hints">edit</a> \| (./index.php.md)\]
+
 - You cannot know a priori how large a supercell to use; convergence
   tests must be performed. Even very large supercells can have noise, so
   it is important to start with a small cell and then work up to denser
@@ -214,7 +253,11 @@ file.
   to ignore the imaginary modes. This may be useful even for stable
   structures with small imaginary modes.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Electron-phonon_potential_from_supercells&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Band-structure
   renormalization](Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -222,3 +265,5 @@ file.
 - [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 - [Electron-phonon interactions from Monte-Carlo
   sampling](Electron-phonon_interactions_from_Monte-Carlo_sampling.md)
+
+

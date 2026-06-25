@@ -2,42 +2,64 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Delta Self-Consistent Field
-$\Delta$SCF is a method that allows to
-calculate energies of neutral excitation within DFT by constraining
-occupations. Within the Franck-Condon approximation, the electronic
-excitation is much faster than the nuclear motion. Thus,
-$\Delta$SCF can be used for calculating
-excited-state properties such as vertical absorption (VAE) and vertical
-emission energy (VEE). Furthermore, this method can be used to calculate
-the zero-phonon lines (ZPL) by performing a full atomic relaxation in
-the excited-state configuration and thus account for the Stockes shifts.
-This method is commonly used for calculating the [optical
+
+
+$\Delta$SCF is a method that allows to calculate
+energies of neutral excitation within DFT by constraining occupations.
+Within the Franck-Condon approximation, the electronic excitation is
+much faster than the nuclear motion. Thus, $\Delta$SCF
+can be used for calculating excited-state properties such as vertical
+absorption (VAE) and vertical emission energy (VEE). Furthermore, this
+method can be used to calculate the zero-phonon lines (ZPL) by
+performing a full atomic relaxation in the excited-state configuration
+and thus account for the Stockes shifts. This method is commonly used
+for calculating the [optical
 properties](../categories/Category-Dielectric_properties.md)
 of point defects in semiconductors and insulators
-^([\[1\]](#cite_note-Freysoldt2014-1)).
+<sup>[\[1\]](#cite_note-Freysoldt2014-1)</sup>.
+
 
 ## Contents
 
-- [1 Vertical absorption energies
-  (VAE)](#Vertical_absorption_energies_(VAE))
-- [2 Zero-phonon lines (ZPL)](#Zero-phonon_lines_(ZPL))
-- [3 Vertical emission energies
-  (VEE)](#Vertical_emission_energies_(VEE))
-- [4 Electronic minimization with constrained electronic
+
+- [1 Vertical
+  absorption energies (VAE)](#Vertical_absorption_energies_(VAE))
+- [2 Zero-phonon
+  lines (ZPL)](#Zero-phonon_lines_(ZPL))
+- [3 Vertical
+  emission energies (VEE)](#Vertical_emission_energies_(VEE))
+- [4 Electronic
+  minimization with constrained electronic
   occupation](#Electronic_minimization_with_constrained_electronic_occupation)
-- [5 Example: ZPL of $\mathrm{NV}^-$
-  center in
+- [5 Example: ZPL
+  of $\mathrm{NV}^-$ center in
   diamond](#Example:_ZPL_of_%5Bmath%5D\displaystyle%7B_\mathrm%7BNV%7D%5E-_%7D%5B/math%5D_center_in_diamond)
-  - [5.1 Step 1](#Step_1)
-  - [5.2 Step 2](#Step_2)
-  - [5.3 Step 3](#Step_3)
-- [6 Related tags and articles](#Related_tags_and_articles)
-- [7 References](#References)
+  - [5.1 Step
+    1](#Step_1)
+  - [5.2 Step
+    2](#Step_2)
+  - [5.3 Step
+    3](#Step_3)
+- [6 Related tags
+  and articles](#Related_tags_and_articles)
+- [7
+  References](#References)
 
-## Vertical absorption energies (VAE)
-[![](https://vasp.at/wiki/images/thumb/b/b8/Drawing.png/300px-Drawing.png)](https://vasp.at/wiki/File:Drawing.png)
 
-Schematic representation of the excitation energies.
+## Vertical absorption energies (VAE)\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Vertical absorption energies (VAE)">edit</a> \| (./index.php.md)")\]
+
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Drawing.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/b/b8/Drawing.png/300px-Drawing.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/b/b8/Drawing.png/450px-Drawing.png 1.5x, /wiki/images/thumb/b/b8/Drawing.png/600px-Drawing.png 2x"
+width="300" height="296" /></a>
+<figcaption>Schematic representation of the excitation
+energies.</figcaption>
+</figure>
 
 The VAE can be calculated by performing a full SCF calculation of the
 system in its excited-state configuration following three steps:
@@ -51,9 +73,14 @@ system in its excited-state configuration following three steps:
     to obtain the total energy of the system in its excited-state
     configuration, $E_{ex}$.
 3.  The VAE is then given by the difference between the total energies
-    of the excited and ground states: $\mathrm{VAE} = E_{ex} - E_{gs}.$
+    of the excited and ground states: $\mathrm{VAE} = E_{ex} -
+    E_{gs}.$
 
-## Zero-phonon lines (ZPL)
+## Zero-phonon lines (ZPL)\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Zero-phonon lines (ZPL)">edit</a> \| (./index.php.md)")\]
+
 The ZPL calculation requires performing a full atomic relaxation in the
 excited state configuration. The ZPL calculation can be performed in
 three steps:
@@ -67,11 +94,18 @@ three steps:
     and perform a full [atomic
     relaxation](../tutorials/Structure_optimization.md)
     to obtain the total energy of the system in its excited-state
-    configuration at relaxed atomic positions, $E_{ex}^\*$
+    configuration at relaxed atomic positions,
+    $E_{ex}^\*$
 3.  The ZPL is then given by the difference between the total energies
-    of the relaxed excited and ground states: $\mathrm{ZPL} = E_{ex}^\* - E_{gs}$
+    of the relaxed excited and ground states:
+    $\mathrm{ZPL} =
+    E_{ex}^\* - E_{gs}$
 
-## Vertical emission energies (VEE)
+## Vertical emission energies (VEE)\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Vertical emission energies (VEE)">edit</a> \| (./index.php.md)")\]
+
 The VEE calculation can be performed in three steps:
 
 1.  Set up a [constrained occupation
@@ -85,13 +119,25 @@ The VEE calculation can be performed in three steps:
     to obtain the total energy of the system in this atomic
     configuration, $E_{gs}^\*$.
 3.  The VEE is then given by the difference between the total energies
-    of the excited state and the ground state: $\mathrm{VEE} = E_{ex}^\* - E_{gs}^\*.$
+    of the excited state and the ground state:
+    $\mathrm{VEE} =
+    E_{ex}^\* - E_{gs}^\*.$
 
-## Electronic minimization with constrained electronic occupation
-[![](https://vasp.at/wiki/images/thumb/1/1a/Diagram_delta_scf.png/200px-Diagram_delta_scf.png)](https://vasp.at/wiki/File:Diagram_delta_scf.png)
+## Electronic minimization with constrained electronic occupation\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Electronic minimization with constrained electronic occupation">edit</a> \| (./index.php.md)\]
 
-Scheme of how states order might change upon SCF calculation of the
-excited state.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Diagram_delta_scf.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/1/1a/Diagram_delta_scf.png/200px-Diagram_delta_scf.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/1/1a/Diagram_delta_scf.png/300px-Diagram_delta_scf.png 1.5x, /wiki/images/thumb/1/1a/Diagram_delta_scf.png/400px-Diagram_delta_scf.png 2x"
+width="200" height="136" /></a>
+<figcaption>Scheme of how states order might change upon SCF calculation
+of the excited state.</figcaption>
+</figure>
 
 Identify the band index of the states involved in the excitation based
 on a ground-state calculation. Then, set the [occupations of the
@@ -117,25 +163,37 @@ preceding calculation without constraints.
 |----|
 | **Warning:** In versions of VASP between VASP 5.4.1 and VASP 6.4, the [LDIAG](../incar-tags/LDIAG.md)=.FALSE. was broken and did not preserve the order of states between ionic iterations. |
 
-## Example: ZPL of $\mathrm{NV}^-$ center in diamond
-[![](https://vasp.at/wiki/images/thumb/7/71/Diamond_nv.png/200px-Diamond_nv.png)](https://vasp.at/wiki/File:Diamond_nv.png)
+## Example: ZPL of $\mathrm{NV}^-$ center in diamond\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Example: ZPL of $\mathrm{NV}^-$ center in diamond">edit</a> \| (./index.php.md)\]
 
-$\mathrm{NV}^-$ center in 64-atom
-diamond supercell.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Diamond_nv.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/71/Diamond_nv.png/200px-Diamond_nv.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/7/71/Diamond_nv.png/300px-Diamond_nv.png 1.5x, /wiki/images/thumb/7/71/Diamond_nv.png/400px-Diamond_nv.png 2x"
+width="200" height="204" /></a>
+<figcaption>$\mathrm{NV}^-$
+center in 64-atom diamond supercell.</figcaption>
+</figure>
 
 We consider a negatively charged point defect in diamond, so-called
-$\mathrm{NV}^-$, which consists of an N
-substitution and a vacancy. This is a well-studied point defect in
-diamond, which can be used here for illustrating the principle of the
-ZPL calculations ^([\[2\]](#cite_note-Lofgren2018-2)). In this example,
-we consider a single $\mathrm{NV}^-$ in
-a 64-atom supercell.
+$\mathrm{NV}^-$, which consists of an N substitution and
+a vacancy. This is a well-studied point defect in diamond, which can be
+used here for illustrating the principle of the ZPL calculations
+<sup>[\[2\]](#cite_note-Lofgren2018-2)</sup>.
+In this example, we consider a single $\mathrm{NV}^-$ in a 64-atom supercell.
 
-### Step 1
+### Step 1\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1">edit</a> \| (./index.php.md)\]
+
 Perform a full [atomic
 relaxation](../tutorials/Structure_optimization.md) of
-the $\mathrm{NV}^-$ center in its ground
-state. Identify the band index of the states involved in the excitation.
+the $\mathrm{NV}^-$ center in its ground state. Identify the band index of
+the states involved in the excitation.
 
                 Spin up                             Spin down
        ...
@@ -170,11 +228,15 @@ k-point mesh with 13 k-points in IBZ, we have:
             125*1 1*0 1*1 65*0 125*1 1*0 1*1 65*0 125*1 1*0 1*1 65*0 125*1 1*0 1*1 65*0  \
             125*1 1*0 1*1 65*0
 
-### Step 2
+### Step 2\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2">edit</a> \| (./index.php.md)\]
+
 Perform a full SCF calculation with the above occupations to obtain the
 total energy of the system in its excited-state configuration,
-$E_{ex}$. Make sure that the correct
-excited state is preserved throughout the calculation.
+$E_{ex}$. Make sure that the correct excited state is
+preserved throughout the calculation.
 
                  Spin up                             Spin down
         ...
@@ -189,7 +251,11 @@ excited state is preserved throughout the calculation.
 By subtracting the ground-state energy from the excited state, we find
 the VAE of 1.77 eV.
 
-### Step 3
+### Step 3\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3">edit</a> \| (./index.php.md)\]
+
 To calculate ZPL, perform a full [atomic
 relaxation](../tutorials/Structure_optimization.md) of
 this excited state. After the convergence was achieved, make sure that
@@ -209,17 +275,31 @@ correct.
 The total energy difference between the ground state and the excited
 state after the ionic relaxation, i.e., ZPL is 1.59 eV.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [FERWE](../incar-tags/FERWE.md),[FERDO](../incar-tags/FERDO.md)
 - [Setting up an electronic
   minimization](../tutorials/Setting_up_an_electronic_minimization.md)
 - [Troubleshooting electronic
   convergence](../tutorials/Troubleshooting_electronic_convergence.md)
 
-## References
-1.  [↑](#cite_ref-Freysoldt2014_1-0) [Christoph Freysoldt, Blazej
-    Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and
-    Anderson Janotti, Rev. Mod. Phys.
-    (2014).](http://dx.doi.org/10.1103/RevModPhys.86.253)
-2.  [↑](#cite_ref-Lofgren2018_2-0) [R. Löfgren, R. Pawar, and S. Öberg,
-    New J. Phys. (2018).](http://dx.doi.org/10.1088/1367-2630/aaa382)
+## References\[<a
+href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-Freysoldt2014_1-0)
+    <a href="http://dx.doi.org/10.1103/RevModPhys.86.253"
+    class="external text" rel="nofollow">Christoph Freysoldt, Blazej
+    Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and Anderson
+    Janotti, Rev. Mod. Phys. (2014).</a>
+2.  [↑](#cite_ref-Lofgren2018_2-0)
+    <a href="http://dx.doi.org/10.1088/1367-2630/aaa382"
+    class="external text" rel="nofollow">R. Löfgren, R. Pawar, and S. Öberg,
+    New J. Phys. (2018).</a>
+
+

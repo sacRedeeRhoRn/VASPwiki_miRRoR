@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constrained molecular dynamics calculations
+
+
 Geometric constraints are introduced by defining one or more entries
 with the STATUS parameter set to 0 in the
 [ICONST](../input-files/ICONST.md)-file. Constraints can be used within a
@@ -10,11 +12,15 @@ standard NVT or NpT MD setting introduced by
 parameters related to lattice vectors is not allowed within an NVT
 simulation (VASP would terminate with an error message). Constraints can
 be combined with restraints, time-dependent bias potentials
-([Metadynamics](../redirects/Category-Metadynamics.md)),
-monitored coordinates and other elements available within the context of
-MD.
+(<a href="/wiki/Category:Metadynamics" class="mw-redirect"
+title="Category:Metadynamics">Metadynamics</a>), monitored coordinates
+and other elements available within the context of MD.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Constrained_molecular_dynamics_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md),
 [SHAKEMAXITER](../incar-tags/SHAKEMAXITER.md),
 [SHAKETOL](../incar-tags/SHAKETOL.md),
@@ -23,3 +29,5 @@ MD.
 
 [Constrained molecular
 dynamics](../theory/Constrained_molecular_dynamics.md)
+
+

@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Many-body perturbation theory
+
+
+
 Redirect to:
 
 - [Category:Many-body perturbation
   theory](../categories/Category-Many-body_perturbation_theory.md)
+
+

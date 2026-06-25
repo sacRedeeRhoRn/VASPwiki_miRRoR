@@ -2,20 +2,28 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ZVAL
+
+
 ZVAL = \[real\] 
 
-Description: ZVAL states the valency of the pseudopotential.
+Description: ZVAL states the
+valency of the pseudopotential.
 
 ------------------------------------------------------------------------
 
-The values of ZVAL for all species are read from the
-[POTCAR](../input-files/POTCAR.md) file and printed as a list to the
-[OUTCAR](../output-files/OUTCAR.md) file.
+The values of ZVAL for all
+species are read from the [POTCAR](../input-files/POTCAR.md) file and
+printed as a list to the [OUTCAR](../output-files/OUTCAR.md) file.
 
 The tables on the [Available
 pseudopotentials](../input-files/Available_pseudopotentials.md)
 page show the corresponding electronic valence configurations of all
 available potentials.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ZVAL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [POMASS](POMASS.md), [POTCAR](../input-files/POTCAR.md)
+
+

@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Charge density
+
+
+
 Redirect to:
 
 - [Category:Charge
   density](../categories/Category-Charge_density.md)
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Cuda.conf
+
+
     #
     # N.B.: there is no CUDA-GPU gamma-only version
     #
@@ -22,3 +24,5 @@
     ##export VASP_TESTSUITE_SKIP_GAMMA=Y
     ##export VASP_TESTSUITE_RUN_LREAL=Y
     ##export VASP_TESTSUITE_INCAR_PREPEND="LSCAAWARE=.FALSE. ; $VASP_TESTSUITE_INCAR_PREPEND "
+
+

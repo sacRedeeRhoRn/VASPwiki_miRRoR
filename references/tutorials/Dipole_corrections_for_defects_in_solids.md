@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Dipole corrections for defects in solids
+
+
 Similar to the case of charged atoms and molecules in a large cubic box
 also charged defects in semiconductors impose the problem of potentially
 slow convergence of the results with respect to the supercell size due
@@ -9,8 +11,9 @@ to spurious electrostatic interaction between defects in neighboring
 supercells. Generally, the errors are less dramatic than for charged
 atoms or molecules since the charged defect is embedded in a dielectric
 medium (bulk) and all spurious interactions between neighboring cells
-are scaled down by the bulk dielectric constant $\varepsilon$. Hence, the total error might remain small (order
-of 0.1 eV) and one has not to worry too much about spurious
+are scaled down by the bulk dielectric constant
+$\varepsilon$. Hence, the total error might remain small
+(order of 0.1 eV) and one has not to worry too much about spurious
 electrostatic interactions between neighboring cells. However, there
 exist three critical cases where one should definitely start to worry
 (and to apply dipole corrections):
@@ -21,8 +24,7 @@ exist three critical cases where one should definitely start to worry
   one should note that the smaller lattice constant alone must not yet
   increase the errors dramatically since the leading scaling is
   $1/L$, only the contributions scaling
-  $1/L^3$ may become dangerous for small
-  cells).
+  $1/L^3$ may become dangerous for small cells).
 - Semiconductors with a rather small dielectric constant
   $\varepsilon$.
 - High-charge states like 3+, 4+, 3- or 4- since the spurious
@@ -48,9 +50,9 @@ restrictions apply:
   monopole-monopole term). Therefore, whenever possible the use of cubic
   cells is recommended. Otherwise one should try to use as large as
   possible cells (the dipole-dipole and monopole-quadrupole interactions
-  scale like $1/L^3$ and therefore, for
-  larger cells a monopole-monopole correction alone becomes more and
-  more reliable).
+  scale like $1/L^3$ and
+  therefore, for larger cells a monopole-monopole correction alone
+  becomes more and more reliable).
 - The corrections are only reasonable if the defect-induced perturbation
   of the charge density is strictly localized around the defect, i.e.,
   if only the occupation of localized defect states is changed. Whenever
@@ -64,13 +66,13 @@ restrictions apply:
   difference must vanish within the numerical error bars for the charge
   densities)!
 - Don't forget to scale down all results by the bulk dielectric constant
-  $\varepsilon$! Yet, there is no
-  possibility to enter any dielectric constant, all corrections are
-  calculated and printed for $\varepsilon=1$. Therefore, the corrected total energies printed after the
-  final electronic iteration are meaningless! Hence, you should first
-  calculate the energies without any corrections and later you have to
-  add the corrections *by hand* using the output printed in the
-  [OUTCAR](../output-files/OUTCAR.md) file. You must search for a line
+  $\varepsilon$! Yet, there is no possibility to enter
+  any dielectric constant, all corrections are calculated and printed
+  for $\varepsilon=1$. Therefore, the corrected total energies printed
+  after the final electronic iteration are meaningless! Hence, you
+  should first calculate the energies without any corrections and later
+  you have to add the corrections *by hand* using the output printed in
+  the [OUTCAR](../output-files/OUTCAR.md) file. You must search for a line
   *DIPCOR: dipole corrections for dipole* and following lines. There you
   find the dipole moment, the quadrupole moment and the energy
   corrections. One should note that strictly one has to take the
@@ -139,49 +141,48 @@ restrictions apply:
     the defect-induced} quadrupole moment).
   - Then you finally end up with the correct values for all interactions
     (which have to be summed again and rescaled with
-    $1/\varepsilon$). It's currently a
-    clumsy procedure but it works satisfactorily.
+    $1/\varepsilon$). It's currently a clumsy procedure but it works
+    satisfactorily.
 - Any potential correction ([LDIPOL](../incar-tags/LDIPOL.md)=*.TRUE.*) is
   currently impossible! Hence you can only use
   [LDIPOL](../incar-tags/LDIPOL.md)=*.FALSE.*! The reasons are:
-  - First the downscaling with $\varepsilon$ is missing and second the correction is not calculated
-    from the defect-induced multipoles but from the total monopoles of
-    the defect cell containing at least a meaningless quadrupole
-    contribution (one had to subtract the quadrupole moment of the ideal
-    cell before calculating any correction potential, but this is not
-    yet implemented in the routine dipol.F). However, one has to expect
-    that the potential corrections do not change the results
-    dramatically ...
+  - First the downscaling with $\varepsilon$ is missing and second the correction is not
+    calculated from the defect-induced multipoles but from the total
+    monopoles of the defect cell containing at least a meaningless
+    quadrupole contribution (one had to subtract the quadrupole moment
+    of the ideal cell before calculating any correction potential, but
+    this is not yet implemented in the routine dipol.F). However, one
+    has to expect that the potential corrections do not change the
+    results dramatically ...
 
 Besides charged defects there's another critical type of defects which
 may cause serious trouble (and for which one should also apply dipole
 corrections): **neutral defects** or **defect complexes of low
 symmetry**. For such defects a dipole moment may occur leading to
 considerable dipole-dipole interactions. Though they fall off like
-$1/L^3$ they might not be negligible
-(even for somewhat larger cells) if the induced dipole moment is rather
-large. The worst case that can happen is a defect complex with two (or
-more) rather distant defects (separated by distances of the order of
-nearest-neighbor bond lengths or larger) with a strong charge transfer
-between the defects forming the complex (e.g., one defect might possess
-the charge state 2+ and the other one the charge state 2-). This can
-easily happen for defect complexes representing acceptor-donor pairs.
-The most critical cases are again given for semiconductors with rather
-small lattice constants, rather small dielectric constants and for any
-defect complex causing strong charge transfers. Again the same
-restrictions and comments hold as stated above for charged cells:
+$1/L^3$ they might not be negligible (even for somewhat
+larger cells) if the induced dipole moment is rather large. The worst
+case that can happen is a defect complex with two (or more) rather
+distant defects (separated by distances of the order of nearest-neighbor
+bond lengths or larger) with a strong charge transfer between the
+defects forming the complex (e.g., one defect might possess the charge
+state 2+ and the other one the charge state 2-). This can easily happen
+for defect complexes representing acceptor-donor pairs. The most
+critical cases are again given for semiconductors with rather small
+lattice constants, rather small dielectric constants and for any defect
+complex causing strong charge transfers. Again the same restrictions and
+comments hold as stated above for charged cells:
 
 - You may currently only use cubic cells,
   [LDIPOL](../incar-tags/LDIPOL.md)=*.FALSE.* and you have to rescale the
   correction printed in [OUTCAR](../output-files/OUTCAR.md) by the bulk
-  dielectric constant $\varepsilon$
-  (i.e., the printed energies are again meaningless and have to be
-  corrected *by hand*). There is only one point which might help, that
-  is since in cubic cells any dipole moment can only be defect-induced
-  no additional corrections are necessary (in contrast to the
-  monopole-quadrupole energies of charged cells). \*The other bad news
-  is that for such defect complexes it may sometimes be hard to find the
-  correct *center of mass* ([DIPOL](../incar-tags/DIPOL.md) in
+  dielectric constant $\varepsilon$ (i.e., the printed energies are again meaningless
+  and have to be corrected *by hand*). There is only one point which
+  might help, that is since in cubic cells any dipole moment can only be
+  defect-induced no additional corrections are necessary (in contrast to
+  the monopole-quadrupole energies of charged cells). \*The other bad
+  news is that for such defect complexes it may sometimes be hard to
+  find the correct *center of mass* ([DIPOL](../incar-tags/DIPOL.md) in
   [INCAR](../input-files/INCAR.md) file) for the defect induced charge
   perturbation (it's usually more easy for single point defects since
   [DIPOL](../incar-tags/DIPOL.md)=*position of the point defect* is the
@@ -209,21 +210,24 @@ restrictions and comments hold as stated above for charged cells:
 A **final note** has to be made: besides the electrostatic interactions
 there exist also spurious elastic interactions between neighboring cells
 which (according to a simple *elastic dipole lattice model*) should
-scale like $1/L^3$ (leading order).
-Therefore, the corrected values may still show a certain variation with
-respect to the supercell size. One can check the relaxation energies
-(elastic energies) separately by calculating (and correcting) also
-unrelaxed cells (defect plus remaining atoms in their ideal bulk
-positions). If the k-point sampling is sufficient to obtain
+scale like $1/L^3$
+(leading order). Therefore, the corrected values may still show a
+certain variation with respect to the supercell size. One can check the
+relaxation energies (elastic energies) separately by calculating (and
+correcting) also unrelaxed cells (defect plus remaining atoms in their
+ideal bulk positions). If the k-point sampling is sufficient to obtain
 well-converged results (with respect to the BZ integration) one might
 even try to extrapolate the elastic interaction energies empirically by
-plotting the relaxation energies versus $1/L^3$ (hopefully a linear function; if not try to plot it against
-$1/L^5$ and look whether it matches a
-linear function) and taking the value for $1/L
-\rightarrow 0$ (i.e. the axis offset). However, usually the
-remaining errors due to spurious elastic interactions can be expected to
-be small (rarely larger than about 0.1 eV) and the extrapolation towards
-$L \rightarrow \infty$ may also be
-rather unreliable if the results are not perfectly converged with
-respect to the k-point sampling (though one should note that this may
-then hold for the electrostatic corrections too).
+plotting the relaxation energies versus $1/L^3$
+(hopefully a linear function; if not try to plot it against
+$1/L^5$ and look whether it matches a linear function)
+and taking the value for $1/L \rightarrow 0$ (i.e. the axis offset). However, usually the remaining
+errors due to spurious elastic interactions can be expected to be small
+(rarely larger than about 0.1 eV) and the extrapolation towards
+$L
+\rightarrow \infty$ may also be rather unreliable if
+the results are not perfectly converged with respect to the k-point
+sampling (though one should note that this may then hold for the
+electrostatic corrections too).
+
+

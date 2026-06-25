@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CH_SIGMA
+
+
 CH_SIGMA = \[real\]  
 Default: **CH_SIGMA** = 0.3 
 
@@ -14,7 +16,10 @@ method.
 At the moment only Gaussian broadening of the dielectric function is
 implemented within the supercell core-hole method.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=CH_SIGMA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [CH_LSPEC](CH_LSPEC.md),
 [CH_NEDOS](CH_NEDOS.md),
 [CH_AMPLIFICATION](CH_AMPLIFICATION.md),
@@ -25,3 +30,5 @@ implemented within the supercell core-hole method.
 tag](https://vasp.at/wiki/index.php/Special-Search/-CH_SIGMA-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

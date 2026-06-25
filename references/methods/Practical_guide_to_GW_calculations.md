@@ -2,49 +2,82 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Practical guide to GW calculations
-The [GW
-approximation](../redirects/The_GW_approximation_of_Hedin's_equations.md)
-is an approximation to the self-energy. GW calculations are available as
-of VASP.5.X. For details on the implementation and use of the *GW*
-routines, we recommend the papers by Shishkin *et al.*
-^([\[1\]](#cite_note-shishkin:prb:2006-1)[\[2\]](#cite_note-shishkin:prb:2007-2)[\[3\]](#cite_note-shishkin:prl:2007-3))
-and Fuchs *et al.*^([\[4\]](#cite_note-fuchs:prb:2007-4))
+
+
+The <a href="/wiki/The_GW_approximation_of_Hedin%27s_equations"
+class="mw-redirect"
+title="The GW approximation of Hedin&#39;s equations">GW
+approximation</a> is an approximation to the self-energy. GW
+calculations are available as of VASP.5.X. For details on the
+implementation and use of the *GW* routines, we recommend the papers by
+Shishkin *et al.*
+<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)[\[2\]](#cite_note-shishkin:prb:2007-2)[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>
+and Fuchs *et
+al.*<sup>[\[4\]](#cite_note-fuchs:prb:2007-4)</sup>
+
+ 
+
 
 ## Contents
 
-- [1 Single step procedure: GW in one
-  go](#Single_step_procedure:_GW_in_one_go)
-  - [1.1 Caveats](#Caveats)
-- [2 First step: DFT calculation](#First_step:_DFT_calculation)
-  - [2.1 Optional: Use Hybrid
-    functionals](#Optional:_Use_Hybrid_functionals)
-- [3 Second step: GW calculation](#Second_step:_GW_calculation)
-  - [3.1 Single shot quasiparticle energies:
-    G₀W₀](#Single_shot_quasiparticle_energies:_G0W0)
-  - [3.2 Partially self-consistent calculations:
-    EVGW₀](#Partially_self-consistent_calculations:_EVGW0)
-  - [3.3 Partially self-consistent quasiparticle calculations:
-    QPGW₀](#Partially_self-consistent_quasiparticle_calculations:_QPGW0)
-    - [3.3.1 Caveats](#Caveats_2)
-  - [3.4 Self-consistent EVGW and QPGW
-    calculations](#Self-consistent_EVGW_and_QPGW_calculations)
-    - [3.4.1 Caveats](#Caveats_3)
-- [4 Low scaling GW algorithms](#Low_scaling_GW_algorithms)
-  - [4.1 Low scaling, single shot GW calculations:
-    G₀W₀R](#Low_scaling,_single_shot_GW_calculations:_G0W0R)
-    - [4.1.1 Output description](#Output_description)
-  - [4.2 Optional: RPA Forces](#Optional:_RPA_Forces)
-  - [4.3 Low scaling, partially self-consistent GW calculations:
-    EVGW₀R](#Low_scaling,_partially_self-consistent_GW_calculations:_EVGW0R)
-  - [4.4 Partially self-consistent GW calculations:
-    GW₀R](#Partially_self-consistent_GW_calculations:_GW0R)
-  - [4.5 Fully self-consistent GW caluclations:
-    GWR](#Fully_self-consistent_GW_caluclations:_GWR)
-    - [4.5.1 Caveats](#Caveats_4)
-- [5 Related tags and articles](#Related_tags_and_articles)
-- [6 References](#References)
 
-# Single step procedure: GW in one go
+- [1 Single step
+  procedure: GW in one go](#Single_step_procedure:_GW_in_one_go)
+  - [1.1
+    Caveats](#Caveats)
+- [2 First step:
+  DFT calculation](#First_step:_DFT_calculation)
+  - [2.1 Optional:
+    Use Hybrid functionals](#Optional:_Use_Hybrid_functionals)
+- [3 Second step:
+  GW calculation](#Second_step:_GW_calculation)
+  - [3.1 Single
+    shot quasiparticle energies:
+    G<sub>0</sub>W<sub>0</sub>](#Single_shot_quasiparticle_energies:_G0W0)
+  - [3.2 Partially
+    self-consistent calculations:
+    EVGW<sub>0</sub>](#Partially_self-consistent_calculations:_EVGW0)
+  - [3.3 Partially
+    self-consistent quasiparticle calculations:
+    QPGW<sub>0</sub>](#Partially_self-consistent_quasiparticle_calculations:_QPGW0)
+    - [3.3.1
+      Caveats](#Caveats_2)
+  - [3.4
+    Self-consistent EVGW and QPGW
+    calculations](#Self-consistent_EVGW_and_QPGW_calculations)
+    - [3.4.1
+      Caveats](#Caveats_3)
+- [4 Low scaling GW
+  algorithms](#Low_scaling_GW_algorithms)
+  - [4.1 Low
+    scaling, single shot GW calculations:
+    G<sub>0</sub>W<sub>0</sub>R](#Low_scaling,_single_shot_GW_calculations:_G0W0R)
+    - [4.1.1 Output
+      description](#Output_description)
+  - [4.2 Optional:
+    RPA Forces](#Optional:_RPA_Forces)
+  - [4.3 Low
+    scaling, partially self-consistent GW calculations:
+    EVGW<sub>0</sub>R](#Low_scaling,_partially_self-consistent_GW_calculations:_EVGW0R)
+  - [4.4 Partially
+    self-consistent GW calculations:
+    GW<sub>0</sub>R](#Partially_self-consistent_GW_calculations:_GW0R)
+  - [4.5 Fully
+    self-consistent GW caluclations:
+    GWR](#Fully_self-consistent_GW_caluclations:_GWR)
+    - [4.5.1
+      Caveats](#Caveats_4)
+- [5 Related tags
+  and articles](#Related_tags_and_articles)
+- [6
+  References](#References)
+
+
+# Single step procedure: GW in one go\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Single step procedure: GW in one go">edit</a> \| (./index.php.md)\]
+
 As of VASP.6.3 all GW approximations can be run in one single run by
 selecting the corresponding [ALGO](../incar-tags/ALGO.md) tag and omitting
 [NBANDS](../incar-tags/NBANDS.md)), for instance like so
@@ -64,20 +97,34 @@ to select this procedure.
 
 The two-step procedure is described below.
 
-## Caveats
+## Caveats\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
+
 The single-step GW procedure performs a DFT step internally with an
 exact diagonalization of the Kohn-Sham Hamiltonian using the maximum
-available [NBANDS](../incar-tags/NBANDS.md) supported for the chosen
-[ENCUT](../incar-tags/ENCUT.md) value. Consequently, a large number of
-unoccupied bands is initialized with random plane-wave coefficients. In
-rare cases, this yields two linearly dependent column vectors in the
-Hamiltonian and results in LAPACK errors like "ZPOTRF fails". These
-errors can be prevented using the two-step GW procedure as described
-below. Furthermore, one can "ramp up" NBANDS to the maximum value by
-repeatedly restarting the DFT calculation from a pre-converged
-[WAVECAR](../input-files/WAVECAR.md) with fewer bands.
+available
+[NBANDS](../incar-tags/NBANDS.md)
+supported for the chosen
+[ENCUT](../incar-tags/ENCUT.md)
+value. Consequently, a large number of unoccupied bands is initialized
+with random plane-wave coefficients. In rare cases, this yields two
+linearly dependent column vectors in the Hamiltonian and results in
+LAPACK errors like "ZPOTRF fails". These errors can be prevented using
+the two-step GW procedure as described below. Furthermore, one can "ramp
+up" NBANDS to the maximum value by repeatedly restarting the DFT
+calculation from a pre-converged
+[WAVECAR](../input-files/WAVECAR.md)
+with fewer bands.
 
-# First step: DFT calculation
+ 
+
+# First step: DFT calculation\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: First step: DFT calculation">edit</a> \| (./index.php.md)\]
+
 *GW* calculations always require a one-electron basis set. Usually this
 set is obtained from a standard DFT calculation and written into the
 [WAVECAR](../input-files/WAVECAR.md) file and can be calculated for
@@ -118,7 +165,11 @@ for insulators and semiconductors.
 |----|
 | **Warning:** For metals, in general, we recommend omitting the [LOPTICS](../incar-tags/LOPTICS.md) tag and removing the [WAVEDER](../input-files/WAVEDER.md) file from the directory. |
 
-## Optional: Use Hybrid functionals
+## Optional: Use Hybrid functionals\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Optional: Use Hybrid functionals">edit</a> \| (./index.php.md)\]
+
 Optionally, one can start a *GW* calculation from a [hybrid
 functional](Category-Hybrid_functionals.md),
 such as HSE. For hybrid functionals, the two step procedure will
@@ -145,7 +196,11 @@ Secondly, determine the HSE03 orbitals for unoccupied states:
     LHFCALC = .TRUE. ; AEXX = 0.25 ; HFSCREEN = 0.3 
     LOPTICS = .TRUE. # for insulators
 
-# Second step: GW calculation
+# Second step: GW calculation\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Second step: GW calculation">edit</a> \| (./index.php.md)\]
+
 The actual *GW* calculation is done in a second step. Here different
 *GW* flavors are possible and are selected with the
 [ALGO](../incar-tags/ALGO.md) tag.
@@ -154,26 +209,31 @@ Note that as of VASP.6 the GW [ALGO](../incar-tags/ALGO.md) tags have been
 renamed, see [here](../incar-tags/ALGO.md) for VASP.5.X
 tags.
 
-## Single shot quasiparticle energies: G₀W₀
-This is the simplest *GW* calculation and computationally the most
-efficient one. A single-shot calculation is often referred to as G₀W₀
-and calculates the quasiparticle energies from a single *GW* iteration
-by neglecting all off-diagonal matrix elements of the self-energy and
-employing a Taylor expansion of the self-energy around the DFT energies
-$E_{n{\bf q}}^{(0)}$. The corresponding
-equation becomes
+ 
 
-$E_{n{\bf q}} = E_{n{\bf q}}^{(0)} + Z_{n{\bf
-q}} \langle \phi^{(0)}_{n{\bf q}}| \Sigma(E_{n{\bf q}}^{(0)}) -
-V_{xc} |\phi^{(0)}_{n{\bf q}}\rangle$
+## Single shot quasiparticle energies: G<sub>0</sub>W<sub>0</sub>\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Single shot quasiparticle energies: G0W0">edit</a> \| (./index.php.md)\]
+
+This is the simplest *GW* calculation and computationally the most
+efficient one. A single-shot calculation is often referred to as
+G<sub>0</sub>W<sub>0</sub> and calculates the quasiparticle energies
+from a single *GW* iteration by neglecting all off-diagonal matrix
+elements of the self-energy and employing a Taylor expansion of the
+self-energy around the DFT energies $E_{n{\bf q}}^{(0)}$. The corresponding equation becomes
+
+ $E_{n{\bf q}} = E_{n{\bf
+q}}^{(0)} + Z_{n{\bf q}} \langle \phi^{(0)}_{n{\bf q}}|
+\Sigma(E_{n{\bf q}}^{(0)}) - V_{xc} |\phi^{(0)}_{n{\bf q}}\rangle$ 
 
 with the renormalization factor
 
-$Z_{n{\bf q}}=\frac{1}{1-{\rm Re}\langle
-\phi^{(0)}_{n{\bf q}}| \Sigma'(E_{n{\bf q}}^{(0)}) |
-\phi^{(0)}_{n{\bf q}}\rangle }$
+ $Z_{n{\bf q}}=\frac{1}{1-{\rm
+Re}\langle \phi^{(0)}_{n{\bf q}}| \Sigma'(E_{n{\bf q}}^{(0)}) |
+\phi^{(0)}_{n{\bf q}}\rangle }$ 
 
-In VASP, G₀W₀ calculations are selected using an
+In VASP, G<sub>0</sub>W<sub>0</sub> calculations are selected using an
 [INCAR](../input-files/INCAR.md) file such as
 
     System  = SiC
@@ -192,10 +252,10 @@ orbitals that the plane-wave basis set allows to calculate (except for
 simple tests). For further reading, please consult the section on
 [ENCUTGW](../incar-tags/ENCUTGW.md).
 
-After a successful G₀W₀ run, VASP will write the quasiparticle energies
-into the [OUTCAR](../output-files/OUTCAR.md) file for a set of
-[NBANDSGW](../incar-tags/NBANDSGW.md) bands for every k-point in the
-Brillouin zone. Look for lines similar to
+After a successful G<sub>0</sub>W<sub>0</sub> run, VASP will write the
+quasiparticle energies into the [OUTCAR](../output-files/OUTCAR.md) file for
+a set of [NBANDSGW](../incar-tags/NBANDSGW.md) bands for every k-point
+in the Brillouin zone. Look for lines similar to
 
     QP shifts <psi_nk| G(iteration)W_0 |psi_nk>: iteration 1
     for sc-GW calculations column KS-energies equals QP-energies in previous step 
@@ -212,38 +272,42 @@ Brillouin zone. Look for lines similar to
          6       0.4603      -0.4663     -13.7603     -12.5200     -18.1532       0.7471       2.0000       0.2167
 
 The first column is the band index and the third column denotes the
-quasiparticle energies $E_{n{\bf q}}$.
-Column two, four, five and seven refer to the DFT energies
-$E_{n{\bf q}}^{(0)}$, diagonal matrix
-elements of the self-energy $\langle
-\phi^{(0)}_{n{\bf q}}|\Sigma(\omega=E_{n{\bf q}}^{(0)})
-|\phi^{(0)}_{n{\bf q}}\rangle$, the exchange-correlation
-potential $\langle \phi^{(0)}_{n{\bf q}}|V_{xc}
-|\phi^{(0)}_{n{\bf q}}\rangle$ and the renormalization
-factor $Z_{n{\bf q}}$ defined above,
-respectively.
+quasiparticle energies $E_{n{\bf q}}$. Column two, four, five and seven refer to the DFT
+energies $E_{n{\bf q}}^{(0)}$, diagonal matrix elements of the self-energy
+$\langle \phi^{(0)}_{n{\bf q}}|\Sigma(\omega=E_{n{\bf q}}^{(0)})
+|\phi^{(0)}_{n{\bf q}}\rangle$, the
+exchange-correlation potential $\langle \phi^{(0)}_{n{\bf
+q}}|V_{xc} |\phi^{(0)}_{n{\bf q}}\rangle$ and the
+renormalization factor $Z_{n{\bf q}}$ defined above, respectively.
 
-## Partially self-consistent calculations: EVGW₀
+ 
+
+## Partially self-consistent calculations: EVGW<sub>0</sub>\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Partially self-consistent calculations: EVGW0">edit</a> \| (./index.php.md)\]
+
 In most cases, the *best* results (*i.e.*, closest to experiment) are
 obtained by iterating only $G$ via the
 spectral representation
 
-$G^{(i)}({\bf r},{\bf r}',\omega)=\sum_{n{\bf
-k}}\frac{\phi_{n{\bf k}}^{\*(0)} ({\bf r})\phi^{(0)}_{n{\bf k}} ({\bf
-r}')}{\omega-E^{(i)}_{n{\bf k}}}$
+ $G^{(i)}({\bf r},{\bf
+r}',\omega)=\sum_{n{\bf k}}\frac{\phi_{n{\bf k}}^{\*(0)} ({\bf
+r})\phi^{(0)}_{n{\bf k}} ({\bf r}')}{\omega-E^{(i)}_{n{\bf k}}}$ 
 
-but keeping $W$ and the orbitals
-$\phi^{(0)}_{n{\bf q}}$ fixed to the
-initial DFT level. This method goes back to Hybertsen and Louie
-^([\[5\]](#cite_note-hybertsen:prb:1986-5)) and can be achieved in two
-ways.
+but keeping $W$ and the
+orbitals $\phi^{(0)}_{n{\bf q}}$ fixed to the initial DFT level. This method goes back
+to Hybertsen and Louie
+<sup>[\[5\]](#cite_note-hybertsen:prb:1986-5)</sup>
+and can be achieved in two ways.
 
 If the spectral method is not selected
 ([LSPECTRAL](../incar-tags/LSPECTRAL.md)=.FALSE., requiring much more
 compute time), the quasiparticle (QP) shifts are iterated automatically
 four times, and one finds four sets of QP shifts in the
 [OUTCAR](../output-files/OUTCAR.md) file. The first one corresponds to the
-G₀W₀ case. The [INCAR](../input-files/INCAR.md) file is simply:
+G<sub>0</sub>W<sub>0</sub> case. The [INCAR](../input-files/INCAR.md) file
+is simply:
 
     System = SiC
     NBANDS = 512
@@ -269,7 +333,9 @@ four iterations are sufficient to obtain accurate QP shifts.
     ALGO = EVGW0 ! use "GW0" in VASP.5.X
     NELMGW = 4 ! use NELM in VASP.6.2 and older
 
-The results are found again in the [OUTCAR](../output-files/OUTCAR.md) file
+The results are found again in the
+[OUTCAR](../output-files/OUTCAR.md)
+file
 
     QP shifts <psi_nk| G(iteration)W_0 |psi_nk>: iteration 4
 
@@ -285,9 +351,14 @@ The results are found again in the [OUTCAR](../output-files/OUTCAR.md) file
          7      -0.6957      -0.7006     -13.6827      12.9802     -18.1531       0.7264       2.0000       0.2769
 
 In contrast to single shot GW calculations, the second column represent
-now the QP-energies from the previous iteration.
+now the QP-energies from the previous iteration. 
 
-## Partially self-consistent quasiparticle calculations: QPGW₀
+
+## Partially self-consistent quasiparticle calculations: QPGW<sub>0</sub>\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Partially self-consistent quasiparticle calculations: QPGW0">edit</a> \| (./index.php.md)\]
+
 If non diagonal components of the self-energy (in the orbital basis)
 should be included use [ALGO](../incar-tags/ALGO.md)=QPGW0. The following
 setting can be used:
@@ -301,13 +372,14 @@ setting can be used:
 
 In this case, the orbitals are updated as well by constructing a
 hermitian (energy independent) approximation to the self-energy
-^([\[3\]](#cite_note-shishkin:prl:2007-3)). The "static" COHSEX
-approximation can be selected by setting [NOMEGA](../incar-tags/NOMEGA.md)
-= 1 ^([\[6\]](#cite_note-bruneval:prb:06-6)). To improve convergence to
-the ground-state, the charge density (and the charge density only) is
-mixed using a Kerker type mixing in VASP.5.3.2 and more recent versions
-(see [IMIX](../incar-tags/IMIX.md)). The mixing parameters
-[AMIX](../incar-tags/AMIX.md), [BMIX](../incar-tags/BMIX.md),
+<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
+The "static" COHSEX approximation can be selected by setting
+[NOMEGA](../incar-tags/NOMEGA.md) = 1
+<sup>[\[6\]](#cite_note-bruneval:prb:06-6)</sup>.
+To improve convergence to the ground-state, the charge density (and the
+charge density only) is mixed using a Kerker type mixing in VASP.5.3.2
+and more recent versions (see [IMIX](../incar-tags/IMIX.md)). The mixing
+parameters [AMIX](../incar-tags/AMIX.md), [BMIX](../incar-tags/BMIX.md),
 [AMIX_MAG](../incar-tags/AMIX_MAG.md),
 [BMIX_MAG](../incar-tags/BMIX_MAG.md), [AMIN](../incar-tags/AMIN.md) can be
 adjusted, if convergence problems are encountered.
@@ -345,11 +417,15 @@ After every iteration, VASP writes the following lines into the
          8       5.1013       4.1883       4.2149       3.9518       0.7711       2.0000
 
 For the first iteration, here, the fourth column should be identical to
-the third column of the G₀W₀ results discussed above. The third column
-reports the quasiparticle energies obtained from including the
-off-diagonal matrix elements in the eigenvalue equation.
+the third column of the G<sub>0</sub>W<sub>0</sub> results discussed
+above. The third column reports the quasiparticle energies obtained from
+including the off-diagonal matrix elements in the eigenvalue equation.
 
-### Caveats
+### Caveats\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
+
 The *QPGW0* (or *scGW0* in VASP.5.2.11 and older) must be used with
 great caution, particularly in combination with symmetry. Symmetry is
 handled in a rather sophisticated manner. Specifically, only the minimal
@@ -366,9 +442,15 @@ and only if, their eigenenergies are within 0.01 eV.
 For large supercells with low symmetry, we strongly recommend switching
 off symmetry.
 
-## Self-consistent EVGW and QPGW calculations
+ 
+
+## Self-consistent EVGW and QPGW calculations\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Self-consistent EVGW and QPGW calculations">edit</a> \| (./index.php.md)\]
+
 Self-consistent *QPGW* calculations are only supported in a QP picture.
-As for *QPGW*₀, it is possible to update the eigenvalues only
+As for *QPGW*<sub>0</sub>, it is possible to update the eigenvalues only
 ([ALGO](../incar-tags/ALGO.md)=*EVGW* or *GW* for VASP.5.X), or the
 eigenvalues and one-electron orbitals ([ALGO](../incar-tags/ALGO.md)=*QPGW*
 or *scGW* in VASP.5.2.11 and older). In all cases, a QP picture is
@@ -385,10 +467,10 @@ calculations can be performed by simply repeatedly calling VASP using:
 For QPGW0 or QPGW, nondiagonal terms in the Hamiltonian are accounted
 for, *e.g.* the linearized QP equation is diagonalized, and the
 one-electron orbitals are updated
-^([\[3\]](#cite_note-shishkin:prl:2007-3)). Alternatively (and
-preferably), the user can specify an electronic iteration counter using
-[NELMGW](../incar-tags/NELMGW.md) ([NELM](../incar-tags/NELM.md) in VASP.6.2
-and older):
+<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
+Alternatively (and preferably), the user can specify an electronic
+iteration counter using [NELMGW](../incar-tags/NELMGW.md)
+([NELM](../incar-tags/NELM.md) in VASP.6.2 and older):
 
     System = SiC
     NBANDS = 512
@@ -402,11 +484,12 @@ In this case, the one-electron energies (=QP energies) are updated 3
 times (starting from the DFT eigenvalues) in both G and W. For
 [ALGO](../incar-tags/ALGO.md)=*QPGW* (or [ALGO](../incar-tags/ALGO.md)=*scGW* in
 VASP.5.2.11 and older), the one electron energies and one electron
-orbitals are updated 3 times ^([\[3\]](#cite_note-shishkin:prl:2007-3)).
+orbitals are updated 3 times
+<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
 As for [ALGO](../incar-tags/ALGO.md) = *QPGW0* (or *scGW0* in vasp.5.2.11
 and older), the "static" COHSEX approximation can be selected by setting
 [NOMEGA](../incar-tags/NOMEGA.md)=1
-^([\[6\]](#cite_note-bruneval:prb:06-6)).
+<sup>[\[6\]](#cite_note-bruneval:prb:06-6)</sup>.
 
 To improve convergence to the ground-state, the charge density is mixed
 using a Kerker type mixing starting with VASP.5.3.2 (see
@@ -422,14 +505,21 @@ sophisticated damped MD algorithm that is also used for DFT methods when
 [ALGO](../incar-tags/ALGO.md)=Damped. This method is generally more reliable
 for metals and materials with strong charge sloshing.
 
-Additional information about this method is found
-[here](../redirects/The_GW_approximation_of_Hedin's_equations.md).
+Additional information about this method is found <a
+href="/wiki/The_GW_approximation_of_Hedin%27s_equations#GWLimitations"
+class="mw-redirect"
+title="The GW approximation of Hedin&#39;s equations">here</a>.
 
-### Caveats
+### Caveats\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
+
 Fully self-consistent QPGW calculations with an update of the orbitals
-in $G$ and $W$^([\[3\]](#cite_note-shishkin:prl:2007-3)) require significant
-care and are prone to diverge (QPGW0 calculations are usually less
-critical). As discussed, above, one can select this mode using:
+in $G$ and $W$<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>
+require significant care and are prone to diverge (QPGW0 calculations
+are usually less critical). As discussed, above, one can select this
+mode using:
 
     System = SiC
     NBANDS = 512
@@ -439,10 +529,9 @@ critical). As discussed, above, one can select this mode using:
 
 However, one *caveat* applies to this case: when the orbitals are
 updated, the derivatives of the orbitals with respect to
-$k$ (stored in the
-[WAVEDER](../input-files/WAVEDER.md) file) will become incompatible with
-the orbitals. This can cause severe problems and convergence to the
-incorrect solution.
+$k$ (stored in the [WAVEDER](../input-files/WAVEDER.md)
+file) will become incompatible with the orbitals. This can cause severe
+problems and convergence to the incorrect solution.
 
 |  |
 |----|
@@ -462,68 +551,84 @@ of the orbitals with respect to $k$:
 
 The combination
 [`LOPTICS`](../incar-tags/LOPTICS.md)`=.TRUE.; `[`LPEAD`](../incar-tags/LPEAD.md)`=.TRUE.`
-is required since $\frac{\delta H-\epsilon_{n{\bf
-k}}S}{\delta {k}_i}$ is not available for *GW* like methods.
-[LPEAD](../incar-tags/LPEAD.md)=.TRUE. circumvents this problem by
-calculating the derivatives of the orbitals using numerical
-differentiation on the finite k-point grid (this option is presently
-limited to insulators).
+is required since $\frac{\delta
+H-\epsilon_{n{\bf k}}S}{\delta {k}_i}$ is not
+available for *GW* like methods. [LPEAD](../incar-tags/LPEAD.md)=.TRUE.
+circumvents this problem by calculating the derivatives of the orbitals
+using numerical differentiation on the finite k-point grid (this option
+is presently limited to insulators).
 
 Vertex corrections are presently not documented. This is a feature still
 under construction, and we recommend collaborating with the Vienna group
 if you desperately need that feature.
 
-# Low scaling GW algorithms
+ 
+
+# Low scaling GW algorithms\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Low scaling GW algorithms">edit</a> \| (./index.php.md)\]
+
 The GW implementations in VASP described in the papers of Shishkin *et
-al.*^([\[1\]](#cite_note-shishkin:prb:2006-1))
-^([\[2\]](#cite_note-shishkin:prb:2007-2)) avoids storage of the Green's
-function $G$ as well as Fourier
-transformations between time and frequency domain entirely. That is, all
-calculations are performed solely on the real frequency axis using
-Kramers-Kronig transformations for convolutions in the equation of
-$\chi$ and $\Sigma$ in reciprocal space.
+al.*<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)</sup>
+<sup>[\[2\]](#cite_note-shishkin:prb:2007-2)</sup>
+avoids storage of the Green's function $G$ as well as
+Fourier transformations between time and frequency domain entirely. That
+is, all calculations are performed solely on the real frequency axis
+using Kramers-Kronig transformations for convolutions in the equation of
+$\chi$ and $\Sigma$ in
+reciprocal space.
 
 As of VASP.6 a new cubic scaling GW algorithm
-^([\[7\]](#cite_note-liu:prb:2016-7)) (called space-time implementation
-in the following) can be selected. This approach follows the idea of
-Rojas *et al.* ^([\[8\]](#cite_note-rojas:prl:1995-8)) and performs the
-GW self-consistency cycle on imaginary time $t\to
-i\tau$ and imaginary frequency axes $\omega\to i\omega$.
+<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
+(called space-time implementation in the following) can be selected.
+This approach follows the idea of Rojas *et al.*
+<sup>[\[8\]](#cite_note-rojas:prl:1995-8)</sup>
+and performs the GW self-consistency cycle on imaginary time
+$t\to i\tau$ and imaginary frequency axes
+$\omega\to i\omega$.
 
 |  |
 |----|
 | **Tip:** Using the low-scaling GW algorithm also calculates the total energy in the Random Phase approximation (RPA), which is described in a [separate article](ACFDT__RPA_calculations.md). |
 
-## Low scaling, single shot GW calculations: G₀W₀R
-The low-scaling analogue of G₀W₀ is selected with
-[ALGO](../incar-tags/ALGO.md)=G0W0R. In contrast to the [single-shot GW
-calculations on the
-real-axes](../redirects/GW_calculations.md), here the
-self-energy $\Sigma = G_0 W_0$ is
-determined on the imaginary frequency axis. To this end, the overall
-scaling is reduced by one order of magnitude and is cubic with respect
-to the system size, because a small value for
+ 
+
+## Low scaling, single shot GW calculations: G<sub>0</sub>W<sub>0</sub>R\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Low scaling, single shot GW calculations: G0W0R">edit</a> \| (./index.php.md)\]
+
+The low-scaling analogue of G<sub>0</sub>W<sub>0</sub> is selected with
+[ALGO](../incar-tags/ALGO.md)=G0W0R.
+In contrast to the
+<a href="/wiki/GW_calculations#G0W0" class="mw-redirect"
+title="GW calculations">single-shot GW calculations on the real-axes</a>,
+here the self-energy $\Sigma = G_0 W_0$ is determined on the imaginary frequency axis. To this
+end, the overall scaling is reduced by one order of magnitude and is
+cubic with respect to the system size, because a small value for
 [NOMEGA](../incar-tags/NOMEGA.md) can be used (usually \<20).
 
 This algorithm evaluates:
 
 - Single-shot GW quasiparticle energies (from an analytical continuation
   of the self-energy to the real
-  axis)^([\[7\]](#cite_note-liu:prb:2016-7))
+  axis)<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
 
-&nbsp;
+<!-- -->
 
 - Natural orbitals from the first order change of the density matrix
-  (i.e. $G_0 \Sigma G_0$), see the
-  [NATURALO](../incar-tags/NATURALO.md) tag for more information
-  ^([\[9\]](#cite_note-ramberger:jcp:2019-9)).
+  (i.e. $G_0 \Sigma G_0$), see the [NATURALO](../incar-tags/NATURALO.md) tag
+  for more information
+  <sup>[\[9\]](#cite_note-ramberger:jcp:2019-9)</sup>.
 
-|                                                                   |
-|-------------------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This selection ignores [NELMGW](../incar-tags/NELMGW.md). |
 
-Following [INCAR](../input-files/INCAR.md) file selects the low-scaling GW
-algorithm:
+Following
+[INCAR](../input-files/INCAR.md)
+file selects the low-scaling GW algorithm:
 
     System = SiC
     ISMEAR = 0 ; SIGMA = 0.05
@@ -531,7 +636,9 @@ algorithm:
     ALGO = G0W0R
     NOMEGA = 12 ! small number of frequencies necessary
 
-Search the [OUTCAR](../output-files/OUTCAR.md) file for the following lines
+Search the
+[OUTCAR](../output-files/OUTCAR.md)
+file for the following lines
 
       QP shifts evaluated in KS or natural orbital/ Bruckner basis
       k-point   1 :       0.0000    0.0000    0.0000
@@ -546,18 +653,24 @@ Search the [OUTCAR](../output-files/OUTCAR.md) file for the following lines
 
 Here column four is obtained by a linearization of the self-energy
 around the Kohn-Sham energies (second column) and can be compared to the
-third column of [single-shot GW calculations on the real
-axis](../redirects/GW_calculations.md). Column six
-represents another set of QP-energies that is obtained from the roots of
-the following equation
+third column of <a href="/wiki/GW_calculations#G0W0" class="mw-redirect"
+title="GW calculations">single-shot GW calculations on the real axis</a>.
+Column six represents another set of QP-energies that is obtained from
+the roots of the following equation
 
-$\langle \phi^{(0)}_{n{\bf q}}| T +
-V_{ext}+V_h+ \Sigma(\omega) | \phi^{(0)}_{n{\bf q}}\rangle -\omega =0$
+$\langle \phi^{(0)}_{n{\bf q}}| T + V_{ext}+V_h+ \Sigma(\omega) |
+\phi^{(0)}_{n{\bf q}}\rangle -\omega =0$
 
 These roots represent the poles of the Green's function in the spectral
 representation.
 
-### Output description
+ 
+
+### Output description\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Output description">edit</a> \| (./index.php.md)\]
+
 The meaning of each column is explained briefly in the following.
 
 - `band No.` the band index of KS orbital at given k-point
@@ -574,13 +687,22 @@ The meaning of each column is explained briefly in the following.
 - `Z` renormalization factor obtained from central difference for
   derivative of self-energy w.r.t. frequency
 - `occupation` occupation number for band at given k-point
-- `Imag(E_QP)` imaginary part of complex pole $\omega$, i.e. measure for inverse lifetime of quasi-particle
+- `Imag(E_QP)` imaginary part of complex pole
+  $\omega$, i.e. measure for inverse lifetime of
+  quasi-particle
 - `QP_DIFF` difference of QP energies (of linearized self-energy)
   obtained from Eq. 77 of Liu et.
-  al.^([\[7\]](#cite_note-liu:prb:2016-7)) and M. Grumets
-  thesis^([\[10\]](#cite_note-grumet:thesis:2017-10)).
+  al.<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
+  and M. Grumets
+  thesis<sup>[\[10\]](#cite_note-grumet:thesis:2017-10)</sup>.
 
-## Optional: RPA Forces
+ 
+
+## Optional: RPA Forces\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Optional: RPA Forces">edit</a> \| (./index.php.md)\]
+
 Optionally, RPA forces can be calculated by adding following line to the
 [INCAR](../input-files/INCAR.md):
 
@@ -588,9 +710,10 @@ Optionally, RPA forces can be calculated by adding following line to the
 
 After the QP-energies, VASP performs a linear-response calculation that
 is required for the RPA
-forces.^([\[11\]](#cite_note-ramberger:prl:118-11)) Following data block
-in the [OUTCAR](../output-files/OUTCAR.md) file can be found after a
-successful run:
+forces.<sup>[\[11\]](#cite_note-ramberger:prl:118-11)</sup>
+Following data block in the
+[OUTCAR](../output-files/OUTCAR.md)
+file can be found after a successful run:
 
     POSITION                                       TOTAL RPA FORCE (eV/Angst)
     -----------------------------------------------------------------------------------
@@ -612,13 +735,21 @@ successful run:
 |----|
 | **Warning:** Currently RPA forces for metallic systems are not supported. |
 
-## Low scaling, partially self-consistent GW calculations: EVGW₀R
-|                                      |
-|--------------------------------------|
+ 
+
+## Low scaling, partially self-consistent GW calculations: EVGW<sub>0</sub>R\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Low scaling, partially self-consistent GW calculations: EVGW0R">edit</a> \| (./index.php.md)\]
+
+|  |
+|----|
 | **Mind:** available as of vasp 6.4.0 |
 
-The low-scaling analogue of EVGW₀ is selected with
-[ALGO](../incar-tags/ALGO.md)=EVGW0R. Following [INCAR](../input-files/INCAR.md)
+The low-scaling analogue of EVGW<sub>0</sub> is selected with
+[ALGO](../incar-tags/ALGO.md)=EVGW0R.
+Following
+[INCAR](../input-files/INCAR.md)
 file selects this algorithm:
 
     System = SiC
@@ -632,28 +763,33 @@ After each iteration, a similar block of data as for
 [ALGO](../incar-tags/ALGO.md)=G0W0R calculations is written to
 [OUTCAR](../output-files/OUTCAR.md) showing the
 [NBANDSGW](../incar-tags/NBANDSGW.md) updated quasi-particle energies
-(poles) of the Green's function.
+(poles) of the Green's function.  
 
-## Partially self-consistent GW calculations: GW₀R
+## Partially self-consistent GW calculations: GW<sub>0</sub>R\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Partially self-consistent GW calculations: GW0R">edit</a> \| (./index.php.md)\]
+
 The space-time implementation allows for true self-consistent GW
 calculations. That is, the solution of the Dyson equation for the
 Green's function can be obtained with a modest computational effort. The
 main procedure of a self-consistent GW calculation consists of four main
 steps
 
-- Obtain Green's function $G^{(j)}_{\bf G
-  G'}({\bf q},i\omega_n) = \left\[ \delta_{\bf GG'} -
-  \Sigma^{(j-1)}_{\bf GG'}({\bf q},i\omega_n)G^{(j-1)}_{\bf G G'}({\bf
+- Obtain Green's function $G^{(j)}_{\bf G G'}({\bf
+  q},i\omega_n) = \left\[ \delta_{\bf GG'} - \Sigma^{(j-1)}_{\bf
+  GG'}({\bf q},i\omega_n)G^{(j-1)}_{\bf G G'}({\bf
   q},i\omega_n)\right\]^{-1}G^{(j-1)}_{\bf G G'}({\bf q},i\omega_n)$
-- Compute irreducible polarizability $\chi^{(j)}({\bf r},{\bf r}',i\tau_m) = -G^{(j)}({\bf r},{\bf
-  r}',i\tau_m)G^{(j)}({\bf r}',{\bf r},-i\tau_m)$
-- Determine screened potential $W^{(j)}_{{\bf
-  G}{\bf G}'}({\bf q},\omega_m)=\left\[\delta_{{\bf G}{\bf
+- Compute irreducible polarizability $\chi^{(j)}({\bf r},{\bf
+  r}',i\tau_m) = -G^{(j)}({\bf r},{\bf r}',i\tau_m)G^{(j)}({\bf r}',{\bf
+  r},-i\tau_m)$
+- Determine screened potential $W^{(j)}_{{\bf G}{\bf
+  G}'}({\bf q},\omega_m)=\left\[\delta_{{\bf G}{\bf
   G}'}-\chi^{(j)}_{{\bf G}{\bf G}'}({\bf q},\omega_m)V_{{\bf G}{\bf
   G}'}({\bf q})\right\]^{-1}V_{{\bf G}{\bf G}'}({\bf q})$
-- Calculate GW self-energy $\Sigma^{(j)}({\bf
-  r},{\bf r}',i\tau_m) =- G^{(j)}({\bf r},{\bf r}',i\tau_m)W^{(j)}({\bf
-  r}',{\bf r},i\tau_m)$
+- Calculate GW self-energy $\Sigma^{(j)}({\bf r},{\bf
+  r}',i\tau_m) =- G^{(j)}({\bf r},{\bf r}',i\tau_m)W^{(j)}({\bf r}',{\bf
+  r},i\tau_m)$
 
 This procedure can be selected with the following
 [INCAR](../input-files/INCAR.md) settings
@@ -690,10 +826,17 @@ follows is found in the [OUTCAR](../output-files/OUTCAR.md) file
 Here the meaning of each column is the same as for the other low-scaling
 GW algorithms.
 
-## Fully self-consistent GW caluclations: GWR
+ 
+
+## Fully self-consistent GW caluclations: GWR\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: Fully self-consistent GW caluclations: GWR">edit</a> \| (./index.php.md)\]
+
 If the screened potential should be updated during the self-consistency
-circle ^([\[12\]](#cite_note-grumet:prb:2018-12)) the following
-[INCAR](../input-files/INCAR.md) file can be used
+circle
+<sup>[\[12\]](#cite_note-grumet:prb:2018-12)</sup>
+the following [INCAR](../input-files/INCAR.md) file can be used
 
     System = SiC
     ISMEAR = 0 ; SIGMA = 0.05
@@ -705,7 +848,11 @@ The output is similar to partially self-consistent GW calculations, with
 the difference that *KS-energies* are replaced by the QP energies from
 previous iteration.
 
-### Caveats
+### Caveats\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
+
 Using this option, similar caveats can be expected as for
 [ALGO](../incar-tags/ALGO.md)=*EVGW* and *QPGW* calculations and we
 recommend to leave out the [LOPTICS](../incar-tags/LOPTICS.md) and
@@ -750,8 +897,9 @@ bytes is given by
 where "NCPU" is the number of MPI ranks used for the job,"NGX,NGY,NGZ"
 denotes the number of FFT grid points for the exact exchange and
 "NGX_S,NGY_S,NGZ_S" the number of FFT grid points for the supercell.
-Note, both grids are written to the [OUTCAR](../output-files/OUTCAR.md) file
-after the lines
+Note, both grids are written to the
+[OUTCAR](../output-files/OUTCAR.md)
+file after the lines
 
     FFT grid for exact exchange (Hartree Fock)
     FFT grid for supercell:
@@ -760,18 +908,24 @@ The smaller [NTAUPAR](../incar-tags/NTAUPAR.md) is set, the less memory
 per node the job requires to finish successfully.
 
 The approximate memory requirement is calculated in advance and printed
-to screen and [OUTCAR](../output-files/OUTCAR.md) as follows:
+to screen and
+[OUTCAR](../output-files/OUTCAR.md)
+as follows:
 
     min. memory requirement per mpi rank 1234 MB, per node 9872 MB
 
-# Related tags and articles
+# Related tags and articles\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ALGO](../incar-tags/ALGO.md) for response functions and *GW* calculations
 - [LOPTICS](../incar-tags/LOPTICS.md), derivative of wavefunction w.r.t.
   $k$
 - [LPEAD](../incar-tags/LPEAD.md), derivative of wavefunction with finite
   differences
-- [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) overlap densities and
-  multipoles
+- <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+  title="LMAXFOCKAE">LMAXFOCKAE</a> overlap densities and multipoles
 - [MAXMEM](../incar-tags/MAXMEM.md), memory available to one mpi rank on
   each node
 - [NOMEGA](../incar-tags/NOMEGA.md), [NOMEGAR](../incar-tags/NOMEGAR.md)
@@ -810,49 +964,75 @@ to screen and [OUTCAR](../output-files/OUTCAR.md) as follows:
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-GW_calculations-_incategory-Examples)
 
-# References
-1.  ↑ ^([a](#cite_ref-shishkin:prb:2006_1-0))
-    ^([b](#cite_ref-shishkin:prb:2006_1-1)) [M. Shishkin and G. Kresse,
-    Phys. Rev. B **74**, 035101
-    (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
-2.  ↑ ^([a](#cite_ref-shishkin:prb:2007_2-0))
-    ^([b](#cite_ref-shishkin:prb:2007_2-1)) [M. Shishkin and G. Kresse,
-    Phys. Rev. B **75**, 235102
-    (2007).](https://doi.org/10.1103/PhysRevB.75.235102)
-3.  ↑ ^([a](#cite_ref-shishkin:prl:2007_3-0))
-    ^([b](#cite_ref-shishkin:prl:2007_3-1))
-    ^([c](#cite_ref-shishkin:prl:2007_3-2))
-    ^([d](#cite_ref-shishkin:prl:2007_3-3))
-    ^([e](#cite_ref-shishkin:prl:2007_3-4)) [M. Shishkin, M. Marsman,
-    and G. Kresse, Phys. Rev. Lett. **99**, 246403
-    (2007).](https://doi.org/10.1103/PhysRevLett.99.246403)
-4.  [↑](#cite_ref-fuchs:prb:2007_4-0) [F. Fuchs, J. Furthmüller, F.
-    Bechstedt, M. Shishkin, and G. Kresse, Phys. Rev. B **76**, 115109
-    (2007).](https://doi.org/10.1103/PhysRevB.76.115109)
-5.  [↑](#cite_ref-hybertsen:prb:1986_5-0) [M. S. Hybertsen and S. G.
-    Louie, Phys. Ref. B **34**, 5390
-    (1986).](https://doi.org/10.1103/PhysRevB.34.5390)
-6.  ↑ ^([a](#cite_ref-bruneval:prb:06_6-0))
-    ^([b](#cite_ref-bruneval:prb:06_6-1)) [F. Bruneval, N. Vast, and L.
-    Reining, Phys. Rev. B **74**, 45102
-    (2006).](https://doi.org/10.1103/PhysRevB.74.045102)
-7.  ↑ ^([a](#cite_ref-liu:prb:2016_7-0))
-    ^([b](#cite_ref-liu:prb:2016_7-1))
-    ^([c](#cite_ref-liu:prb:2016_7-2)) [P. Liu, M. Kaltak, J. Klimes,
-    and G. Kresse, Phys. Rev. B **94**, 165109
-    (2016).](https://doi.org/10.1103/PhysRevB.94.165109)
-8.  [↑](#cite_ref-rojas:prl:1995_8-0) [H. N. Rojas, R. W. Godby,
-    and R. J. Needs, Phys. Rev. Lett. **74**, 1827
-    (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
-9.  [↑](#cite_ref-ramberger:jcp:2019_9-0) [B. Ramberger, Z. Surkuma, T.
-    Schäfer, and G. Kresse, J. Chem. Phys. **151**, 214106
-    (2019).](https://doi.org/10.1063/1.5128415)
-10. [↑](#cite_ref-grumet:thesis:2017_10-0) [M. Grumet, Thesis:
-    Self-consistent GW calculations for
-    solids(2017).](https://utheses.univie.ac.at/detail/43403#)
-11. [↑](#cite_ref-ramberger:prl:118_11-0) [B. Ramberger, T. Schäfer
-    and G. Kresse, Phys. Rev. Lett **118**, 106403
-    (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)
-12. [↑](#cite_ref-grumet:prb:2018_12-0) [M. Grumet, P. Liu, M.
-    Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **98**, 155143
-    (2018).](https://doi.org/10.1103/PhysRevB.98.155143)
+# References\[<a
+href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-shishkin:prb:2006_1-0)</sup>
+    <sup>[b](#cite_ref-shishkin:prb:2006_1-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
+    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
+    Rev. B <strong>74</strong>, 035101 (2006).</a>
+2.  ↑
+    <sup>[a](#cite_ref-shishkin:prb:2007_2-0)</sup>
+    <sup>[b](#cite_ref-shishkin:prb:2007_2-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.75.235102"
+    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
+    Rev. B <strong>75</strong>, 235102 (2007).</a>
+3.  ↑
+    <sup>[a](#cite_ref-shishkin:prl:2007_3-0)</sup>
+    <sup>[b](#cite_ref-shishkin:prl:2007_3-1)</sup>
+    <sup>[c](#cite_ref-shishkin:prl:2007_3-2)</sup>
+    <sup>[d](#cite_ref-shishkin:prl:2007_3-3)</sup>
+    <sup>[e](#cite_ref-shishkin:prl:2007_3-4)</sup>
+    <a href="https://doi.org/10.1103/PhysRevLett.99.246403"
+    class="external text" rel="nofollow">M. Shishkin, M. Marsman, and G.
+    Kresse, Phys. Rev. Lett. <strong>99</strong>, 246403 (2007).</a>
+4.  [↑](#cite_ref-fuchs:prb:2007_4-0)
+    <a href="https://doi.org/10.1103/PhysRevB.76.115109"
+    class="external text" rel="nofollow">F. Fuchs, J. Furthmüller, F.
+    Bechstedt, M. Shishkin, and G. Kresse, Phys. Rev. B <strong>76</strong>,
+    115109 (2007).</a>
+5.  [↑](#cite_ref-hybertsen:prb:1986_5-0)
+    <a href="https://doi.org/10.1103/PhysRevB.34.5390" class="external text"
+    rel="nofollow">M. S. Hybertsen and S. G. Louie, Phys. Ref. B
+    <strong>34</strong>, 5390 (1986).</a>
+6.  ↑
+    <sup>[a](#cite_ref-bruneval:prb:06_6-0)</sup>
+    <sup>[b](#cite_ref-bruneval:prb:06_6-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.74.045102"
+    class="external text" rel="nofollow">F. Bruneval, N. Vast, and L.
+    Reining, Phys. Rev. B <strong>74</strong>, 45102 (2006).</a>
+7.  ↑
+    <sup>[a](#cite_ref-liu:prb:2016_7-0)</sup>
+    <sup>[b](#cite_ref-liu:prb:2016_7-1)</sup>
+    <sup>[c](#cite_ref-liu:prb:2016_7-2)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.94.165109"
+    class="external text" rel="nofollow">P. Liu, M. Kaltak, J. Klimes, and
+    G. Kresse, Phys. Rev. B <strong>94</strong>, 165109 (2016).</a>
+8.  [↑](#cite_ref-rojas:prl:1995_8-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
+    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
+    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
+9.  [↑](#cite_ref-ramberger:jcp:2019_9-0)
+    <a href="https://doi.org/10.1063/1.5128415" class="external text"
+    rel="nofollow">B. Ramberger, Z. Surkuma, T. Schäfer, and G. Kresse, J.
+    Chem. Phys. <strong>151</strong>, 214106 (2019).</a>
+10. [↑](#cite_ref-grumet:thesis:2017_10-0)
+    <a href="https://utheses.univie.ac.at/detail/43403#"
+    class="external text" rel="nofollow">M. Grumet, Thesis: Self-consistent
+    GW calculations for solids(2017).</a>
+11. [↑](#cite_ref-ramberger:prl:118_11-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
+    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
+    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
+12. [↑](#cite_ref-grumet:prb:2018_12-0)
+    <a href="https://doi.org/10.1103/PhysRevB.98.155143"
+    class="external text" rel="nofollow">M. Grumet, P. Liu, M. Kaltak, J.
+    Klimeš, and G. Kresse, Phys. Rev. B <strong>98</strong>, 155143
+    (2018).</a>
+
+

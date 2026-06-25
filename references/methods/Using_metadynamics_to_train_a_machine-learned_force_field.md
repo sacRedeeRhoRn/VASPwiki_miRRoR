@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Using metadynamics to train a machine-learned force field
+
+
 It can be tricky to model transition states using [static
 methods](https://vasp.at/wiki/index.php/Category:Transition_states)
 methods. Sometimes, it is insufficient and more time-consuming [dynamic
@@ -19,41 +21,76 @@ how-to](../misc/Nuclephile_Substitution_CH3Cl_-_mMD3.md).
 The input files may be downloaded in a zip file at the end of this
 tutorial.
 
+
 ## Contents
 
-- [1 Input](#Input)
-  - [1.1 POSCAR](#POSCAR)
-  - [1.2 KPOINTS](#KPOINTS)
-  - [1.3 ICONST](#ICONST)
-  - [1.4 PENALTYPOT](#PENALTYPOT)
-  - [1.5 INCAR.mlff](#INCAR.mlff)
-  - [1.6 INCAR.refit](#INCAR.refit)
-  - [1.7 INCAR.md](#INCAR.md)
-  - [1.8 INCAR.interactive](#INCAR.interactive)
-- [2 Step-by-step instructions](#Step-by-step_instructions)
-  - [2.1 Step 0: Training the MLFF
-    (optional)](#Step_0:_Training_the_MLFF_(optional))
-  - [2.2 Step 1: Refitting the MLFF](#Step_1:_Refitting_the_MLFF)
-  - [2.3 Step 2: Running the MD
-    simulation](#Step_2:_Running_the_MD_simulation)
-    - [2.3.1 MD analysis](#MD_analysis)
-    - [2.3.2 Spilling factor](#Spilling_factor)
-    - [2.3.3 Extracting new training
-      structures](#Extracting_new_training_structures)
-  - [2.4 Step 3: Retrain the MLFF](#Step_3:_Retrain_the_MLFF)
-  - [2.5 Step 4: Refit the MLFF](#Step_4:_Refit_the_MLFF)
-  - [2.6 Step 5: Repeat the MD
-    simulation](#Step_5:_Repeat_the_MD_simulation)
-    - [2.6.1 MD analysis](#MD_analysis_2)
-    - [2.6.2 Spilling factor](#Spilling_factor_2)
-    - [2.6.3 Plotting the biased
-      potential](#Plotting_the_biased_potential)
-- [3 Practical hints](#Practical_hints)
-- [4 Download](#Download)
-- [5 Related tags and articles](#Related_tags_and_articles)
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+- [1
+  Input](#Input)
+  - [1.1
+    POSCAR](#POSCAR)
+  - [1.2
+    KPOINTS](#KPOINTS)
+  - [1.3
+    ICONST](#ICONST)
+  - [1.4
+    PENALTYPOT](#PENALTYPOT)
+  - [1.5
+    INCAR.mlff](#INCAR.mlff)
+  - [1.6
+    INCAR.refit](#INCAR.refit)
+  - [1.7
+    INCAR.md](#incarmd)
+  - [1.8
+    INCAR.interactive](#INCAR.interactive)
+- [2 Step-by-step
+  instructions](#Step-by-step_instructions)
+  - [2.1 Step 0:
+    Training the MLFF
+    (optional)](#Step_0:_Training_the_MLFF_(optional))
+  - [2.2 Step 1:
+    Refitting the MLFF](#Step_1:_Refitting_the_MLFF)
+  - [2.3 Step 2:
+    Running the MD
+    simulation](#Step_2:_Running_the_MD_simulation)
+    - [2.3.1 MD
+      analysis](#MD_analysis)
+    - [2.3.2
+      Spilling factor](#Spilling_factor)
+    - [2.3.3
+      Extracting new training
+      structures](#Extracting_new_training_structures)
+  - [2.4 Step 3:
+    Retrain the MLFF](#Step_3:_Retrain_the_MLFF)
+  - [2.5 Step 4:
+    Refit the MLFF](#Step_4:_Refit_the_MLFF)
+  - [2.6 Step 5:
+    Repeat the MD simulation](#Step_5:_Repeat_the_MD_simulation)
+    - [2.6.1 MD
+      analysis](#MD_analysis_2)
+    - [2.6.2
+      Spilling factor](#Spilling_factor_2)
+    - [2.6.3
+      Plotting the biased
+      potential](#Plotting_the_biased_potential)
+- [3 Practical
+  hints](#Practical_hints)
+- [4
+  Download](#Download)
+- [5 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Input\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
        1.00000000000000
          9.0000000000000000    0.0000000000000000    0.0000000000000000
          0.0000000000000000    9.0000000000000000    0.0000000000000000
@@ -68,7 +105,11 @@ tutorial.
       0.9809163623144840  0.4723904404063168  0.3674924467383788
       0.2601754409903839  0.1874592103557934  0.9964911656110944
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Automatic
      0
     Gamma
@@ -79,14 +120,22 @@ tutorial.
   are negligible (in sufficiently large cells), hence no Brillouin zone
   sampling is necessary.
 
-### [ICONST](../input-files/ICONST.md)
+### [ICONST](../input-files/ICONST.md)\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: ICONST">edit</a> \| (./index.php.md)\]
+
     R 1 5 5
     R 1 6 5
 
 - Two collective variables are used simultaneously to track the C-Cl
   distances.
 
-### [PENALTYPOT](../input-files/PENALTYPOT.md)
+### [PENALTYPOT](../input-files/PENALTYPOT.md)\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: PENALTYPOT">edit</a> \| (./index.php.md)\]
+
        5.00000   1.00000   9.00000   0.50000
        5.00000   2.00000   9.00000   0.50000
        5.00000   3.00000   9.00000   0.50000
@@ -100,7 +149,11 @@ tutorial.
 - To avoid the chlorine atom crossing between cells, a restrictive
   potential is used to hold it close to the molecule.
 
-### [INCAR](../input-files/INCAR.md).mlff
+### [INCAR](../input-files/INCAR.md).mlff\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR.mlff">edit</a> \| (./index.php.md)\]
+
     PREC=Normal
     EDIFF=1e-6
     LWAVE=.FALSE.
@@ -135,13 +188,21 @@ tutorial.
     ML_MODE          =  TRAIN
     ISIF=2
 
-### [INCAR](../input-files/INCAR.md).refit
+### [INCAR](../input-files/INCAR.md).refit\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR.refit">edit</a> \| (./index.php.md)\]
+
     # MLFF tags
     ML_LMLFF         = .TRUE.
     ML_MODE          =  REFIT
     ISIF=2
 
-### [INCAR](../input-files/INCAR.md).md
+### [INCAR](../input-files/INCAR.md).md\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR.md">edit</a> \| (./index.php.md)\]
+
     POMASS = 12.011 4.0 35.453 
 
     ############################# MD setting #####################################
@@ -166,7 +227,11 @@ tutorial.
     ML_ESTBLOCK = 20
     ML_OUTBLOCK = 20
 
-### [INCAR](../input-files/INCAR.md).interactive
+### [INCAR](../input-files/INCAR.md).interactive\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR.interactive">edit</a> \| (./index.php.md)\]
+
     PREC=Normal
     EDIFF=1e-6
     LWAVE=.FALSE.
@@ -204,8 +269,16 @@ tutorial.
     ISIF             = 2
     INTERACTIVE      = .TRUE.
 
-## Step-by-step instructions
-### Step 0: Training the MLFF (optional)
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
+### Step 0: Training the MLFF (optional)\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 0: Training the MLFF (optional)">edit</a> \| (./index.php.md)")\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md), [INCAR](../input-files/INCAR.md).mlff,
 [KPOINTS](../input-files/KPOINTS.md), [ICONST](../input-files/ICONST.md),
@@ -229,7 +302,11 @@ this step.
     cp INCAR.mlff INCAR
     vasp_std
 
-### Step 1: Refitting the MLFF
+### Step 1: Refitting the MLFF\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Refitting the MLFF">edit</a> \| (./index.php.md)\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md), [INCAR](../input-files/INCAR.md).refit,
 [KPOINTS](../input-files/KPOINTS.md)
@@ -243,7 +320,11 @@ Copy the [ML_ABN](../output-files/ML_ABN.md) from step 0 to
     cp ../e00_training/ML_ABN ML_AB
     vasp_std
 
-### Step 2: Running the MD simulation
+### Step 2: Running the MD simulation\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Running the MD simulation">edit</a> \| (./index.php.md)\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md), [INCAR](../input-files/INCAR.md).md,
 [KPOINTS](../input-files/KPOINTS.md), [ICONST](../input-files/ICONST.md),
@@ -262,7 +343,11 @@ variables using the [ICONST](../input-files/ICONST.md) file.
     ln -s ../e01_refit/ML_FFN ML_FF
     vasp_std
 
-#### MD analysis
+#### MD analysis\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: MD analysis">edit</a> \| (./index.php.md)\]
+
 Once the metadynamics MD simulation is completed, plot the time
 evolution of the collective variables (cf.
 [ICONST](../input-files/ICONST.md)) using the `timeEv.sh` script and
@@ -274,25 +359,40 @@ evolution of the collective variables (cf.
 The obtained time evolution of the collective variables looks like the
 following:
 
-[![](https://vasp.at/wiki/images/thumb/7/70/ClCh3Cl_inversion_MLFF_MD.jpeg/600px-ClCh3Cl_inversion_MLFF_MD.jpeg)](https://vasp.at/wiki/File:ClCh3Cl_inversion_MLFF_MD.jpeg)
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:ClCh3Cl_inversion_MLFF_MD.jpeg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/70/ClCh3Cl_inversion_MLFF_MD.jpeg/600px-ClCh3Cl_inversion_MLFF_MD.jpeg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/7/70/ClCh3Cl_inversion_MLFF_MD.jpeg 1.5x"
+width="600" height="450" /></a>
+<figcaption>Two collective variables are monitored, the two C-Cl
+distances (purple and green lines). After a few thousand steps (NB that
+we have used <a href="/wiki/ML_OUTBLOCK" title="ML OUTBLOCK"><code
+class="vasp-dark-link-panel"
+style="padding: 2px">ML_OUTBLOCK</code></a><code
+class="vasp-dark-link-panel" style="padding: 2px"> = 20</code> so there
+are 20 structures between each point), the two collective variables
+switch as the transition state is crossed and the system
+inverts.</figcaption>
+</figure>
 
-Two collective variables are monitored, the two C-Cl distances (purple
-and green lines). After a few thousand steps (NB that we have used
-[`ML_OUTBLOCK`](../incar-tags/ML_OUTBLOCK.md)` = 20` so there are 20
-structures between each point), the two collective variables switch as
-the transition state is crossed and the system inverts.
 
-The Cl⁻ ion is initially far from the C atom. After a few thousand
-steps, the chloromethane molecule inverts as the chloride attacks and
-the opposing chlorine atom is expelled as a chloride. After a thousand
-more steps, the MLFF breaks down, and a non-physical structure is formed
-at which the MD simulation gets stuck.
+The Cl<sup>-</sup> ion is initially far from the C atom. After a few
+thousand steps, the chloromethane molecule inverts as the chloride
+attacks and the opposing chlorine atom is expelled as a chloride. After
+a thousand more steps, the MLFF breaks down, and a non-physical
+structure is formed at which the MD simulation gets stuck.
 
 |  |
 |----|
 | **Important:** If the simulation does not fail, repeat the calculation, try increasing the number of ionic steps ([NSW](../incar-tags/NSW.md)), until you run a simulation where the MLFF breaks down. Alternatively, decrease the number of [NSW](../incar-tags/NSW.md) used for training the MLFF in the first place. This will train an MLFF with fewer structures, i.e., a worse force field that will break down sooner. We only recommend this in this exercise so that you can learn how to fix an MLFF. |
 
-#### Spilling factor
+#### Spilling factor\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Spilling factor">edit</a> \| (./index.php.md)\]
+
 This is when the simulation leaves the configuration space of the MLFF
 training set. You can see this by checking the [spilling
 factor](../incar-tags/ML_ESTBLOCK.md) in the
@@ -328,9 +428,12 @@ You can plot this to visualize what happens and compare to the plot
 above. First, grep for the spilling factor `SFF` in the
 [ML_LOGFILE](../output-files/ML_LOGFILE.md):
 
+
     grep '^SFF[[:space:]]*[0-9]' ML_LOGFILE | awk '{print $2 " " $3}' > sff.dat
 
+
 Then plot `sff.dat` using Python:
+
 
     import py4vasp
     import numpy as np
@@ -339,14 +442,26 @@ Then plot `sff.dat` using Python:
 
     py4vasp.plot(step, spilling_factor, xlabel="MD step", ylabel="Spilling factor", label="Spilling factor")
 
-[![](https://vasp.at/wiki/images/thumb/f/f6/Spilling_factor_plot.png/600px-Spilling_factor_plot.png)](https://vasp.at/wiki/File:Spilling_factor_plot.png)
 
-The spilling factor plotted against the MD step. As it deviates from 0,
-the structures are increasingly outside of the MLFF training set. The
-MLFF then rapidly breaks down and the spilling factor increases to, then
-remains at, 1.
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:Spilling_factor_plot.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f6/Spilling_factor_plot.png/600px-Spilling_factor_plot.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/f/f6/Spilling_factor_plot.png 1.5x" width="600"
+height="450" /></a>
+<figcaption>The spilling factor plotted against the MD step. As it
+deviates from 0, the structures are increasingly outside of the MLFF
+training set. The MLFF then rapidly breaks down and the spilling factor
+increases to, then remains at, 1.</figcaption>
+</figure>
 
-#### Extracting new training structures
+
+#### Extracting new training structures\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Extracting new training structures">edit</a> \| (./index.php.md)\]
+
 The structures after the spilling factor reaches 1 are not meaningful.
 However, those shortly before are very useful. These are where the MLFF
 begins to break down. You can extract these structures using the
@@ -365,7 +480,11 @@ training the MLFF.
 |----|
 | **Important:** `POSCAR.interactive` contains the position of the ions for each configuration in direct coordinates, which is used for interactive mode with [INTERACTIVE](../incar-tags/INTERACTIVE.md). The [POSCAR](../input-files/POSCAR.md) must still be included. |
 
-### Step 3: Retrain the MLFF
+### Step 3: Retrain the MLFF\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Retrain the MLFF">edit</a> \| (./index.php.md)\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md),
 [INCAR](../input-files/INCAR.md).interactive,
@@ -394,7 +513,11 @@ e.g.:
 |----|
 | **Important:** Ensure that you update [NSW](../incar-tags/NSW.md) in the [INCAR](../input-files/INCAR.md) to be equal to the number of configurations in your `POSCAR.interactive` file. |
 
-### Step 4: Refit the MLFF
+### Step 4: Refit the MLFF\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Refit the MLFF">edit</a> \| (./index.php.md)\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md), [INCAR](../input-files/INCAR.md).refit,
 [KPOINTS](../input-files/KPOINTS.md)
@@ -406,7 +529,11 @@ Refit the MLFF as before, copying the [ML_ABN](../output-files/ML_ABN.md) to
     cp ../e03_interactive/ML_ABN ML_AB
     vasp_std
 
-### Step 5: Repeat the MD simulation
+### Step 5: Repeat the MD simulation\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: Repeat the MD simulation">edit</a> \| (./index.php.md)\]
+
 **Required files:** [POSCAR](../input-files/POSCAR.md),
 [POTCAR](../input-files/POTCAR.md), [INCAR](../input-files/INCAR.md).md,
 [KPOINTS](../input-files/KPOINTS.md), [ICONST](../input-files/ICONST.md),
@@ -429,7 +556,11 @@ calculation as normal, increasing the number of ionic steps to 300000:
     ln -s ../e04_new_refit/ML_FFN ML_FF
     vasp_std
 
-#### MD analysis
+#### MD analysis\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: MD analysis">edit</a> \| (./index.php.md)\]
+
 Once the calculation is finished, take a look at the time evolution of
 the collective variables using `timeEv.sh` script and `gnuplot`:
 
@@ -439,24 +570,38 @@ the collective variables using `timeEv.sh` script and `gnuplot`:
 The obtained time evolution of the collective variables looks like the
 following:
 
-[![](https://vasp.at/wiki/images/thumb/f/f9/Updated_inversions.jpeg/600px-Updated_inversions.jpeg)](https://vasp.at/wiki/File:Updated_inversions.jpeg)
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:Updated_inversions.jpeg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f9/Updated_inversions.jpeg/600px-Updated_inversions.jpeg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/f/f9/Updated_inversions.jpeg 1.5x" width="600"
+height="450" /></a>
+<figcaption>Rather than getting stuck after a few thousand steps, this
+new MLFF is much more stable and can keep on inverting back and forth
+over several thousand steps.</figcaption>
+</figure>
 
-Rather than getting stuck after a few thousand steps, this new MLFF is
-much more stable and can keep on inverting back and forth over several
-thousand steps.
 
 Each time the green and purple lines switch, an inversion reaction has
 occurred, and the transition state has been crossed. This is
 signifciantly more stable than the previous iteration and indicates that
 we are now more accurately modeling the transition state.
 
-#### Spilling factor
+#### Spilling factor\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: Spilling factor">edit</a> \| (./index.php.md)\]
+
 You can confirm the stability of your MLFF by taking a look at the
 spilling factor:
 
+
     grep '^SFF[[:space:]]*[0-9]' ML_LOGFILE | awk '{print $2 " " $3}' > sff.dat
 
+
 Then plot `sff.dat` using Python:
+
 
     import py4vasp
     import numpy as np
@@ -465,13 +610,25 @@ Then plot `sff.dat` using Python:
 
     py4vasp.plot(step, spilling_factor, xlabel="MD step", ylabel="Spilling factor", label="Spilling factor")
 
-[![](https://vasp.at/wiki/images/thumb/f/f2/Spilling_factor_plot_improved.png/600px-Spilling_factor_plot_improved.png)](https://vasp.at/wiki/File:Spilling_factor_plot_improved.png)
 
-The spilling factor plotted against the MD step. The spilling factor
-never deviates far from 0, indicating that the MD simulation is well
-within the MLFF training set.
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:Spilling_factor_plot_improved.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f2/Spilling_factor_plot_improved.png/600px-Spilling_factor_plot_improved.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/f/f2/Spilling_factor_plot_improved.png 1.5x"
+width="600" height="450" /></a>
+<figcaption>The spilling factor plotted against the MD step. The
+spilling factor never deviates far from 0, indicating that the MD
+simulation is well within the MLFF training set.</figcaption>
+</figure>
 
-#### Plotting the biased potential
+
+#### Plotting the biased potential\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=22"
+class="mw-editsection-visualeditor"
+title="Edit section: Plotting the biased potential">edit</a> \| (./index.php.md)\]
+
 As a final step, you can visualize the biased potential that you have
 generated. First, take the [HILLSPOT](../incar-tags/HILLSPOT.md) file
 and, using the `gaussians.py` script, generate a file containing the sum
@@ -488,7 +645,14 @@ Then, plot the biased potential with the `contourplot.py` script:
 This will generate the following interactive 3D plot (a 2D plot is also
 created: `gaussian_sum_contour.png`):
 
-[![](https://vasp.at/wiki/images/thumb/3/33/Gaussian_sum.png/600px-Gaussian_sum.png)](https://vasp.at/wiki/File:Gaussian_sum.png)
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:Gaussian_sum.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/3/33/Gaussian_sum.png/600px-Gaussian_sum.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/3/33/Gaussian_sum.png/900px-Gaussian_sum.png 1.5x, /wiki/images/thumb/3/33/Gaussian_sum.png/1200px-Gaussian_sum.png 2x"
+width="600" height="450" /></a>
+</figure>
+
 
 You can set a cutoff for the z-axis, e.g., 0.05, to get a better look at
 the transition state region:
@@ -499,21 +663,30 @@ Taking a look at the biased potential from the initial MLFF training
 (step 0), the first MD (step 2), and the final MD (step 5), you can see
 how the configuration space has been explored:
 
-[![](https://vasp.at/wiki/images/thumb/8/8b/Gaussian_sum_TS_compare.png/1000px-Gaussian_sum_TS_compare.png)](https://vasp.at/wiki/File:Gaussian_sum_TS_compare.png)
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:Gaussian_sum_TS_compare.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/8b/Gaussian_sum_TS_compare.png/1000px-Gaussian_sum_TS_compare.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/8/8b/Gaussian_sum_TS_compare.png/1500px-Gaussian_sum_TS_compare.png 1.5x, /wiki/images/thumb/8/8b/Gaussian_sum_TS_compare.png/2000px-Gaussian_sum_TS_compare.png 2x"
+width="1000" height="293" /></a>
+<figcaption>In the initial MLFF training, only the initial potential
+well is well-explored, that on the lower right. This means that the
+other, second, well (<u>yellow
+ellipse</u>) is not well-described by the MLFF. Additionally, the
+transition state (<u>green
+circle</u>) is barely visited. As a result, the MLFF breaks down
+fairly quickly, failing to describe the transition state during one
+transition and getting stuck in a new region outside of the trained
+space (cf. the spilling factor). The MLFF finds that a non-physical
+structure (<u>white
+circle</u>) is the most stable. Once we take the structures that
+have higher spilling factors (likely those in the second potential and
+the transition state), the entire simulation becomes much more stable
+and the transition state is better described. Both wells become filled
+during the metadynamics run by the biased potential.</figcaption>
+</figure>
 
-In the initial MLFF training, only the initial potential well is
-well-explored, that on the lower right. This means that the other,
-second, well (*yellow ellipse*) is not well-described by the MLFF.
-Additionally, the transition state (*green circle*) is barely visited.
-As a result, the MLFF breaks down fairly quickly, failing to describe
-the transition state during one transition and getting stuck in a new
-region outside of the trained space (cf. the spilling factor). The MLFF
-finds that a non-physical structure (*white circle*) is the most stable.
-Once we take the structures that have higher spilling factors (likely
-those in the second potential and the transition state), the entire
-simulation becomes much more stable and the transition state is better
-described. Both wells become filled during the metadynamics run by the
-biased potential.
 
 As a final exercise, you could try repeating steps 3-5, taking the
 structure from the second MD that have larger spilling factors, writing
@@ -523,7 +696,11 @@ ever more stable MLFF describing the transition state. After a certain
 point, the wells will both be filled and the metadynamics run will be
 completed; after this, the MLFF will become more unstable again.
 
-## Practical hints
+## Practical hints\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=23"
+class="mw-editsection-visualeditor"
+title="Edit section: Practical hints">edit</a> \| (./index.php.md)\]
+
 - Make sure to set the mass of hydrogen to above 1, e.g.,
   [`POMASS`](../incar-tags/POMASS.md)` = 12.011 4.0 35.453`, rather than
   [`POMASS`](../incar-tags/POMASS.md)` = 12.011 1.0 35.453`. This enables
@@ -549,8 +726,9 @@ completed; after this, the MLFF will become more unstable again.
   stability for longer MLFF runs, you should collect the positions for
   structures that are outside of the reliably fitted energy surface.
   These are those that have larger spilling factors. While continuing
-  training (see [step
-  4](../tutorials/Construction-MLFF+metadynamics.md)
+  training (see <a
+  href="/wiki/Construction:MLFF%2Bmetadynamics#Step_4:_Retrain_the_MLFF"
+  class="mw-redirect" title="Construction:MLFF+metadynamics">step 4</a>
   above), [`ML_NMDINT`](../incar-tags/ML_NMDINT.md)` = 1` should be
   used and the Bayesian threshold set to the final value from the
   previous training runs
@@ -560,12 +738,23 @@ completed; after this, the MLFF will become more unstable again.
   [PENALTYPOT](../input-files/PENALTYPOT.md) file present. This is to
   restrain the molecule in place, precisely to stop this movement.
 
-## Download
-[Metadynamics_with_mlff.zip](https://vasp.at/wiki/images/9/97/Metadynamics_with_mlff.zip "Metadynamics with mlff.zip")
+## Download\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=24"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-## Related tags and articles
+<a href="/wiki/images/9/97/Metadynamics_with_mlff.zip" class="internal"
+title="Metadynamics with mlff.zip">Metadynamics_with_mlff.zip</a>
+
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Using_metadynamics_to_train_a_machine-learned_force_field&amp;veaction=edit&amp;section=25"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Nucleophilic substitution of chloromethane by chloride using
 metadynamics](../misc/Nuclephile_Substitution_CH3Cl_-_mMD3.md),
 [INTERACTIVE](../incar-tags/INTERACTIVE.md)
 
 ------------------------------------------------------------------------
+
+

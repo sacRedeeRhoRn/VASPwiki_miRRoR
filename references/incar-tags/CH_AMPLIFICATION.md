@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CH_AMPLIFICATION
+
+
 CH_AMPLIFICATION = \[real\]  
 Default: **CH_AMPLIFICATION** = 1.0 
 
@@ -11,7 +13,11 @@ method for core electrons.
 
 ------------------------------------------------------------------------
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=CH_AMPLIFICATION&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [CH_LSPEC](CH_LSPEC.md),
 [CH_NEDOS](CH_NEDOS.md),
 [ICORELEVEL](ICORELEVEL.md), [CLNT](CLNT.md),
@@ -22,3 +28,5 @@ method for core electrons.
 tag](https://vasp.at/wiki/index.php/Special-Search/-CH_SIGMA-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

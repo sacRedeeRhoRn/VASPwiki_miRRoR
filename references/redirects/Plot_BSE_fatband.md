@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Plot BSE fatband
+
+
+
 Redirect to:
 
 - [Plot BSE fatbands](../theory/Plot_BSE_fatbands.md)
+
+

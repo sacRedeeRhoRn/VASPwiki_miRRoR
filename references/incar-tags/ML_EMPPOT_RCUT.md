@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_EMPPOT_RCUT
+
+
 ML_EMPPOT_RCUT = \[real\]  
 Default: **ML_EMPPOT_RCUT** = 0.0 
 
@@ -9,13 +11,18 @@ Description: Sets the cutoff radius for the empirical potentials.
 
 ------------------------------------------------------------------------
 
-The empirical potentials have a separate neighbor list. ML_EMPPOT_RCUT
-not only determines the cutoffs of the empirical potential functions but
-also the cutoff of the neighbor list.
+The empirical potentials have a separate neighbor list.
+ML_EMPPOT_RCUT not only
+determines the cutoffs of the empirical potential functions but also the
+cutoff of the neighbor list.
 
   
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_EMPPOT_RCUT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LCOUPLE](ML_LCOUPLE.md),
 [ML_ICOUPLE](ML_ICOUPLE.md),
@@ -35,3 +42,5 @@ also the cutoff of the neighbor list.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

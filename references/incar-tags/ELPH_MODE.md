@@ -2,13 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_MODE
+
+
 ELPH_MODE = \[string\] 
 
 Description: Meta tag that selects reasonable defaults for
 electron-phonon calculations
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -19,24 +21,42 @@ the [renormalization of the electronic band
 structure](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 requires a different set of options than computing [transport
 properties](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md).
-The ELPH_MODE tag can help you get started with electron-phonon
-calculations by selecting reasonable default values for other
-[INCAR](../input-files/INCAR.md) tags based on the type of calculation.
+The ELPH_MODE tag can help you
+get started with electron-phonon calculations by selecting reasonable
+default values for other [INCAR](../input-files/INCAR.md) tags based on the
+type of calculation.
 
-The individual tags that are set by ELPH_MODE can still be overwritten
-by specifying them explicitly in the [INCAR](../input-files/INCAR.md) file.
+The individual tags that are set by
+ELPH_MODE can still be
+overwritten by specifying them explicitly in the
+[INCAR](../input-files/INCAR.md) file.
+
 
 ## Contents
 
-- [1 Tag options](#Tag_options)
-  - [1.1 ELPH_MODE = renorm - Band-gap
-    renormalization](#ELPH_MODE_=_renorm_-_Band-gap_renormalization)
-  - [1.2 ELPH_MODE = transport - Transport
-    calculation](#ELPH_MODE_=_transport_-_Transport_calculation)
-- [2 Related tags and articles](#Related_tags_and_articles)
 
-## Tag options
-### `ELPH_MODE`` = renorm` - Band-gap renormalization
+- [1 Tag
+  options](#Tag_options)
+  - [1.1 ELPH_MODE
+    = renorm - Band-gap
+    renormalization](#ELPH_MODE_=_renorm_-_Band-gap_renormalization)
+  - [1.2 ELPH_MODE
+    = transport - Transport
+    calculation](#ELPH_MODE_=_transport_-_Transport_calculation)
+- [2 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Tag options\[<a
+href="/wiki/index.php?title=ELPH_MODE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Tag options">edit</a> \| (./index.php.md)\]
+
+### `ELPH_MODE`` = renorm` - Band-gap renormalization\[<a
+href="/wiki/index.php?title=ELPH_MODE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: ELPH_MODE = renorm - Band-gap renormalization">edit</a> \| (./index.php.md)\]
+
 - [`ELPH_RUN`](ELPH_RUN.md)` = True`
 - [`ELPH_SELFEN_FAN`](ELPH_SELFEN_FAN.md)` = True`
 - [`ELPH_SELFEN_DW`](ELPH_SELFEN_DW.md)` = True`
@@ -44,7 +64,11 @@ by specifying them explicitly in the [INCAR](../input-files/INCAR.md) file.
 - [`ELPH_NBANDS`](ELPH_NBANDS.md)` = -2`
 - [`ELPH_SELFEN_DELTA`](ELPH_SELFEN_DELTA.md)` = 0.01`
 
-### `ELPH_MODE`` = transport` - Transport calculation
+### `ELPH_MODE`` = transport` - Transport calculation\[<a
+href="/wiki/index.php?title=ELPH_MODE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: ELPH_MODE = transport - Transport calculation">edit</a> \| (./index.php.md)\]
+
 - [`ELPH_RUN`](ELPH_RUN.md)` = True`
 - [`ELPH_TRANSPORT`](ELPH_TRANSPORT.md)` = True`
 - [`ELPH_SELFEN_FAN`](ELPH_SELFEN_FAN.md)` = True`
@@ -56,7 +80,11 @@ by specifying them explicitly in the [INCAR](../input-files/INCAR.md) file.
 - [`ELPH_SELFEN_BROAD_TOL`](ELPH_SELFEN_BROAD_TOL.md)` = 1e-4`
 - [`ELPH_WF_REDISTRIBUTE`](ELPH_WF_REDISTRIBUTE.md)` = True`
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_MODE&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -65,3 +93,5 @@ by specifying them explicitly in the [INCAR](../input-files/INCAR.md) file.
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
 - [ELPH_TRANSPORT_DRIVER](ELPH_TRANSPORT_DRIVER.md)
 - [ELPH_DRIVER](ELPH_DRIVER.md)
+
+

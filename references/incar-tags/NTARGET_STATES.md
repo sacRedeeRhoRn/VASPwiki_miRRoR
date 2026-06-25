@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NTARGET_STATES
-NTARGET_STATES = \[integer array\] 
+
+
+NTARGET_STATES = \[integer
+array\] 
 
 Description: Controls which Wannier states are excluded in constrained
 random-phase approximation. Check also
@@ -18,10 +21,16 @@ ignored otherwise. For instance
 selects the Wannier state 1, 2 and 4, where the ordering of the Wannier
 states depends on the chosen basis set.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NTARGET_STATES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md),
 [NCRPA_BANDS](NCRPA_BANDS.md),
 [LOCALIZED_BASIS](../theory/LOCALIZED_BASIS.md)
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NTARGET_STATES-_incategory-Howto)
+
+

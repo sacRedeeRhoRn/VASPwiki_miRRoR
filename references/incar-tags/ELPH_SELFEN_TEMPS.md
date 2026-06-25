@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_TEMPS
-ELPH_SELFEN_TEMPS = \[real array\]  
+
+
+ELPH_SELFEN_TEMPS = \[real
+array\]  
 Default: **ELPH_SELFEN_TEMPS** = 0 100 200 300 400 500 
 
 Description: List of temperatures for which to compute the electron
 self-energy due to electron-phonon coupling.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -21,7 +24,8 @@ context of a [transport
 calculation](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md).
 
 The chemical potential is determined for the list of temperatures
-ELPH_SELFEN_TEMPS and carrier concentrations specified by
+ELPH_SELFEN_TEMPS and carrier
+concentrations specified by
 [ELPH_SELFEN_CARRIER_DEN](ELPH_SELFEN_CARRIER_DEN.md)
 or
 [ELPH_SELFEN_CARRIER_PER_CELL](ELPH_SELFEN_CARRIER_PER_CELL.md).
@@ -31,7 +35,11 @@ Alternatively, one can specify the chemical potential and determine the
 carrier concentration using
 [ELPH_SELFEN_MU](ELPH_SELFEN_MU.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_TEMPS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -47,3 +55,5 @@ carrier concentration using
 - [ELPH_SELFEN_MU_RANGE](ELPH_SELFEN_MU_RANGE.md)
 - [ELPH_SELFEN_FAN](ELPH_SELFEN_FAN.md)
 - [ELPH_SELFEN_DW](ELPH_SELFEN_DW.md)
+
+

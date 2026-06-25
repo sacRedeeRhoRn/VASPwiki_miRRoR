@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Kinetic-energy density mixing
+
+
 For the density mixing schemes to work reliably, the charge density
 mixer must be aware of all quantities that affect the total energy
 during the self-consistency cycle. For a standard DFT functional, this
@@ -17,3 +19,5 @@ or 48), one may set [LMIXTAU](../incar-tags/LMIXTAU.md)=.TRUE. to have
 VASP pass the kinetic energy density through the mixer as well. This
 sometimes helps to cure convergence problems in the selfconsistency
 cycle.
+
+

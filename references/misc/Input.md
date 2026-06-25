@@ -2,21 +2,36 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Input
+
+
+
 [Overview](Input_and_Output_-_Tutorial.md) \>
-Input \> [Preparing a Super
+Input \>
+[Preparing a Super
 Cell](../tutorials/Preparing_a_Super_Cell.md) \>[Output](../output-files/Output.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 VASP basically needs 4 input files for standard production runs:
+
 
 ## Contents
 
-- [1 INCAR](#INCAR)
-- [2 POSCAR](#POSCAR)
-- [3 KPOINTS](#KPOINTS)
-- [4 POTCAR](#POTCAR)
 
-## [INCAR](../input-files/INCAR.md)
+- [1
+  INCAR](#INCAR)
+- [2
+  POSCAR](#POSCAR)
+- [3
+  KPOINTS](#KPOINTS)
+- [4
+  POTCAR](#POTCAR)
+
+
+## [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=Input&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
 The [INCAR](../input-files/INCAR.md) file holds the input parameters which
 "steer" the calculation.
 
@@ -30,13 +45,16 @@ The [INCAR](../input-files/INCAR.md) file holds the input parameters which
 
   
 
-## [POSCAR](../input-files/POSCAR.md)
+## [POSCAR](../input-files/POSCAR.md)\[<a href="/wiki/index.php?title=Input&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
 The [POSCAR](../input-files/POSCAR.md) file contains the information on the
 structure.
 
 - A simple [POSCAR](../input-files/POSCAR.md) file may look like this:
 
-&nbsp;
+<!-- -->
 
     fcc:  Ni
     3.53
@@ -62,13 +80,16 @@ structure.
 
   
 
-## [KPOINTS](../input-files/KPOINTS.md)
+## [KPOINTS](../input-files/KPOINTS.md)\[<a href="/wiki/index.php?title=Input&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
 The [KPOINTS](../input-files/KPOINTS.md) file determines the sampling of
 the 1st Brillouin zone.
 
 - A typical [KPOINTS](../input-files/KPOINTS.md) file:
 
-&nbsp;
+<!-- -->
 
     Automatic mesh
     0
@@ -78,15 +99,18 @@ the 1st Brillouin zone.
 
 - The description of each line is given as follows:
   - 1: Header (comment).
-  - 2: Specifies the k mesh generation type. $N_{\overrightarrow{k}} = 0$: automatic generation scheme.
-  - 3: $\Gamma$-centered
-    (Monkhorst-Pack) grid.
+  - 2: Specifies the k mesh generation type. $N_{\overrightarrow{k}} =
+    0$: automatic generation scheme.
+  - 3: $\Gamma$-centered (Monkhorst-Pack) grid.
   - 4: Number of subdivisions in each direction.
   - 5: Optional shift of the mesh.
 
   
 
-## [POTCAR](../input-files/POTCAR.md)
+## [POTCAR](../input-files/POTCAR.md)\[<a href="/wiki/index.php?title=Input&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: POTCAR">edit</a> \| (./index.php.md)\]
+
 The [POTCAR](../input-files/POTCAR.md) file contains the relevant
 information concerning the pseudopotentials that are necessary to run
 the calculation:
@@ -103,9 +127,14 @@ same order as the atomic species are given in the
 
 **N.B.**: Different XC-types must not be mixed.
 
+
 [Overview](Input_and_Output_-_Tutorial.md) \>
-Input \> [Preparing a Super
+Input \>
+[Preparing a Super
 Cell](../tutorials/Preparing_a_Super_Cell.md) \>[Output](../output-files/Output.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 Back to the [main page](The_VASP_Manual.md).
+
+

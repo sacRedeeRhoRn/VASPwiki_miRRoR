@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CMBJA
+
+
 CMBJA = \[real\] 
 
 |                    |          |                                            |
@@ -9,14 +11,17 @@ CMBJA = \[real\] 
 | Default: **CMBJA** | = −0.012 | if [METAGGA](METAGGA.md)=MBJ  |
 |                    | = 0.488  | if [METAGGA](METAGGA.md)=LMBJ |
 
-Description: sets the $\alpha$ parameter
-in the MBJ and LMBJ potentials.
+Description: sets the $\alpha$
+parameter in the MBJ and LMBJ potentials.
 
 ------------------------------------------------------------------------
 
 See the description of the [METAGGA](METAGGA.md) tag.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=CMBJA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [METAGGA](METAGGA.md), [CMBJ](CMBJ.md),
 [CMBJB](CMBJB.md), [CMBJE](CMBJE.md),
 [SMBJ](SMBJ.md), [RSMBJ](RSMBJ.md),
@@ -27,3 +32,5 @@ See the description of the [METAGGA](METAGGA.md) tag.
 tag](https://vasp.at/wiki/index.php/Special-Search/-CMBJA-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

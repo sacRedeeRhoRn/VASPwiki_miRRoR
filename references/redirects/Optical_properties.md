@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Optical properties
+
+
+
 Redirect to:
 
 - [Category:Dielectric
   properties](../categories/Category-Dielectric_properties.md)
+
+

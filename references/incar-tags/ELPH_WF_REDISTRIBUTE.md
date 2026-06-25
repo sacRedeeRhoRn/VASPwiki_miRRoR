@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_WF_REDISTRIBUTE
-ELPH_WF_REDISTRIBUTE = \[logical\]  
+
+
+ELPH_WF_REDISTRIBUTE =
+\[logical\]  
 Default: **ELPH_WF_REDISTRIBUTE** = .FALSE. 
 
 Description: After computing the electronic states, they are
 redistributed among the CPUs such that the workload to compute the
 electron self-energy is similar among the different CPUs.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -21,11 +24,18 @@ workload as evenly as possible. This redistribution is most relevant
 when used in combination with
 [`ELPH_SELFEN_IMAG_SKIP`](ELPH_SELFEN_IMAG_SKIP.md)` = .TRUE.`.
 When [`ELPH_MODE`](ELPH_MODE.md)` = TRANDPORT`, the
-default value is `ELPH_WF_REDISTRIBUTE`` = .TRUE.`.
+default value is
+`ELPH_WF_REDISTRIBUTE`` = .TRUE.`.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_WF_REDISTRIBUTE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ELPH_MODE](ELPH_MODE.md),
 [ELPH_SELFEN_IMAG_SKIP](ELPH_SELFEN_IMAG_SKIP.md),
 [ELPH_RUN](ELPH_RUN.md),
 [ELPH_WF_COMM_OPT](ELPH_WF_COMM_OPT.md),
 [ELPH_WF_CACHE_PREFILL](ELPH_WF_CACHE_PREFILL.md)
+
+

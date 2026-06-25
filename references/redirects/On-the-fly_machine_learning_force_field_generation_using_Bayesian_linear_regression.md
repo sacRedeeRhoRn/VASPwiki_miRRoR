@@ -2,7 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # On-the-fly machine learning force field generation using Bayesian linear regression
+
+
+
 Redirect to:
 
-- [Machine learning force fields:
-  Theory](https://vasp.at/wiki/index.php/index.php)
+- <a
+  href="/wiki/index.php?title=Machine_learning_force_fields:_Theory&amp;redirect=no"
+  class="mw-redirect"
+  title="Machine learning force fields: Theory">Machine learning force
+  fields: Theory</a>
+
+

@@ -2,41 +2,72 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CO on Ni 111 surface
+
+
+
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
-CO on Ni 111 surface \> [Ni 111 surface high
+CO on Ni 111
+surface \> [Ni 111
+surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-[STM of graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+[STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Adsorbtion of a CO molecule at the top site of a Ni (111) surface.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     Ni - (111) + CO on-top
       3.53
        .70710678  .0000000  .000000
@@ -54,12 +85,14 @@ Adsorbtion of a CO molecule at the top site of a Ni (111) surface.
        .33333333   .66666667   .60298866  T  T  T
 
 - CO molecule put above surface atom "on-top".
-- $z_{\mathrm{C}}=(.540-.444)\cdot 5.196 \cdot
-  3.53 \approx 1.76$ $\AA$.
-- $d_{\mathrm{CO}}=(.603-.540)\cdot 5.196 \cdot
-  3.53 \approx 1.16$ $\AA$.
+- $z_{\mathrm{C}}=(.540-.444)\cdot 5.196 \cdot 3.53 \approx 1.76$ $\AA$.
+- $d_{\mathrm{CO}}=(.603-.540)\cdot 5.196 \cdot 3.53 \approx 1.16$ $\AA$.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
       ISTART = 0
       ICHARG = 2
          
@@ -75,22 +108,30 @@ Adsorbtion of a CO molecule at the top site of a Ni (111) surface.
       POTIM = 0.2
       IBRION = 1
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     K-Points
     0
     Monkhorst-Pack
     9 9 1
     0 0 0
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - Two additional atom types (C and O) in the calculations: append C and
   O potentials to the [POTCAR](../input-files/POTCAR.md) file.
 
-&nbsp;
+<!-- -->
 
 - The sample output for the forces should look like the following:
 
-&nbsp;
+<!-- -->
 
     POSITION                                       TOTAL-FORCE (eV/Angst)
     -----------------------------------------------------------------------------------
@@ -107,39 +148,60 @@ Adsorbtion of a CO molecule at the top site of a Ni (111) surface.
 - Small outward relaxation of surface due to adsorption:
   $\Delta d_{12} = (8.154-6.109)/2.038 = 0.4 \\$.
 
-&nbsp;
+<!-- -->
 
 - CO geometry change: $d_{\mathrm{CO}} = 11.063 -
   9.909 = 1.155$ $\AA$;
-  $z_{\mathrm{C}} = 9.909 -8.154 = 1.755$ $\AA$.
+  $z_{\mathrm{C}} = 9.909 -8.154 = 1.755$
+  $\AA$.
 
-&nbsp;
+<!-- -->
 
 - Visualize the structure using p4vasp:
 
-[![](https://vasp.at/wiki/images/thumb/f/f3/Fig_CO_on_Ni111_1.png/500px-Fig_CO_on_Ni111_1.png)](https://vasp.at/wiki/File:Fig_CO_on_Ni111_1.png)
+<a href="/wiki/File:Fig_CO_on_Ni111_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f3/Fig_CO_on_Ni111_1.png/500px-Fig_CO_on_Ni111_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/f/f3/Fig_CO_on_Ni111_1.png/750px-Fig_CO_on_Ni111_1.png 1.5x, /wiki/images/f/f3/Fig_CO_on_Ni111_1.png 2x"
+width="500" height="662" /></a>
 
-## Download
-[COonNi111_rel.tgz](https://vasp.at/wiki/images/a/a8/COonNi111_rel.tgz "COonNi111 rel.tgz")
+## Download\[<a
+href="/wiki/index.php?title=CO_on_Ni_111_surface&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/a/a8/COonNi111_rel.tgz" class="internal"
+title="COonNi111 rel.tgz">COonNi111_rel.tgz</a>
+
 
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
-CO on Ni 111 surface \> [Ni 111 surface high
+CO on Ni 111
+surface \> [Ni 111
+surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-[STM of graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+[STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 Back to the [main page](The_VASP_Manual.md).
+
+

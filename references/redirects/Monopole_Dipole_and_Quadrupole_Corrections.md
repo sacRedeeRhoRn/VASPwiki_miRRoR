@@ -2,7 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Monopole Dipole and Quadrupole Corrections
+
+
+
 Redirect to:
 
-- [Monopole Dipole and Quadrupole
-  Corrections](https://vasp.at/wiki/index.php/index.php)
+- <a
+  href="/wiki/index.php?title=Monopole_Dipole_and_Quadrupole_Corrections&amp;redirect=no"
+  class="mw-redirect"
+  title="Monopole Dipole and Quadrupole Corrections">Monopole Dipole and
+  Quadrupole Corrections</a>
+
+

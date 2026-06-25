@@ -2,25 +2,44 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Combining MPI and OpenMP
+
+
 VASP can be built to use a combination of OpenMP threading and
 parallelization over MPI ranks. This is beneficial on some hardware.
 
+
 ## Contents
 
-- [1 When to use MPI + OpenMP](#When_to_use_MPI_+_OpenMP)
-- [2 Compilation](#Compilation)
-- [3 Running multiple OpenMP threads per MPI
-  rank](#Running_multiple_OpenMP_threads_per_MPI_rank)
-  - [3.1 For the OpenMP runtime](#For_the_OpenMP_runtime)
-  - [3.2 Using OpenMPI](#Using_OpenMPI)
-  - [3.3 Using IntelMPI](#Using_IntelMPI)
-- [4 MPI versus MPI/OpenMP: the main
-  difference](#MPI_versus_MPI/OpenMP:_the_main_difference)
-- [5 Further reading](#Further_reading)
-- [6 Credits](#Credits)
-- [7 Related tags and articles](#Related_tags_and_articles)
 
-## When to use MPI + OpenMP
+- [1 When to use
+  MPI + OpenMP](#When_to_use_MPI_+_OpenMP)
+- [2
+  Compilation](#Compilation)
+- [3 Running
+  multiple OpenMP threads per MPI
+  rank](#Running_multiple_OpenMP_threads_per_MPI_rank)
+  - [3.1 For the
+    OpenMP runtime](#For_the_OpenMP_runtime)
+  - [3.2 Using
+    OpenMPI](#Using_OpenMPI)
+  - [3.3 Using
+    IntelMPI](#Using_IntelMPI)
+- [4 MPI versus
+  MPI/OpenMP: the main
+  difference](#MPI_versus_MPI/OpenMP:_the_main_difference)
+- [5 Further
+  reading](#Further_reading)
+- [6
+  Credits](#Credits)
+- [7 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## When to use MPI + OpenMP\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: When to use MPI + OpenMP">edit</a> \| (./index.php.md)\]
+
 When is it beneficial to run with multiple OpenMP threads per MPI rank?
 There are not so many cases, but we can discern at least two:
 
@@ -40,7 +59,11 @@ There are not so many cases, but we can discern at least two:
 |----|
 | **Important:** When running with a single OpenMP thread per MPI rank, there is no appreciable difference between a VASP run with an MPI+OpenMP executable and an MPI-only one. The inactive OpenMP constructs incur very little overhead. In that sense, no strong argument speaks against building VASP with OpenMP support per default. |
 
-## Compilation
+## Compilation\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Compilation">edit</a> \| (./index.php.md)\]
+
 To compile VASP with OpenMP support, add the following to the list of
 [precompiler
 flags](Installing_VASP.6.X.X.md)
@@ -68,7 +91,11 @@ VASP.6.X.X](Installing_VASP.6.X.X.md).
 |----|
 | **Mind:** When you compile VASP with OpenMP support and you are **not** using the FFTs from the Intel-MKL library, you should [compile VASP with `fftlib`](Makefile.include.md). Otherwise, the costs of (planning) the OpenMP-threaded FFTs will become prohibitively large at higher thread counts. |
 
-## Running multiple OpenMP threads per MPI rank
+## Running multiple OpenMP threads per MPI rank\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Running multiple OpenMP threads per MPI rank">edit</a> \| (./index.php.md)\]
+
 In principle, running VASP on *n* MPI ranks with *m* OpenMP threads per
 rank is as simple as:
 
@@ -103,7 +130,11 @@ as the MPI library what to do.
 |----|
 | **Warning:** In the above we purposely mention *physical* cores. When your CPU supports *hyperthreading* (and if this is enabled in the BIOS) there are more *logical* cores than *physical* cores (typically a factor 2). As a rule of thumb: makes sure that the total number of MPI ranks × `OMP_NUM_THREADS` (in the above: *m*×*n*) does not exceed the total number of **physical cores** (*i.e.*, do not *oversubscribe* the nodes). In general VASP runs do not benefit from oversubscription. |
 
-### For the OpenMP runtime
+### For the OpenMP runtime\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: For the OpenMP runtime">edit</a> \| (./index.php.md)\]
+
 Tell the OpenMP runtime it may spawn 4 threads per MPI rank:
 
     export OMP_NUM_THREADS=4
@@ -124,9 +155,17 @@ to run, and will cause segmentation faults:
 
 |  |
 |----|
-| **Mind:** [The Intel OpenMP-runtime library (`libiomp5.so`) offers an alternative set of environment variables to control OpenMP-thread placement, stacksize *etc*](https://software.intel.com/content/www/us/en/develop/documentation/cpp-compiler-developer-guide-and-reference/top/optimization-and-programming-guide/openmp-support/openmp-library-support/thread-affinity-interface-linux-and-windows.html). |
+| **Mind:** <a
+href="https://software.intel.com/content/www/us/en/develop/documentation/cpp-compiler-developer-guide-and-reference/top/optimization-and-programming-guide/openmp-support/openmp-library-support/thread-affinity-interface-linux-and-windows.html"
+class="external text" rel="nofollow">The Intel OpenMP-runtime library
+(<code>libiomp5.so</code>) offers an alternative set of environment
+variables to control OpenMP-thread placement, stacksize <em>etc</em></a>. |
 
-### Using OpenMPI
+### Using OpenMPI\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Using OpenMPI">edit</a> \| (./index.php.md)\]
+
 Now start 8 MPI ranks (`-np 8`), with the following placement
 specification: 2 ranks/socket, assigning 4 subsequent cores to each rank
 (`--map-by ppr:2:socket:PE=4`), and bind them to their physical cores
@@ -150,7 +189,11 @@ rank spawns reside on the same package/socket, and pins both the MPI
 ranks as well as the OpenMP threads to specific cores. This is crucial
 for performance.
 
-### Using IntelMPI
+### Using IntelMPI\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Using IntelMPI">edit</a> \| (./index.php.md)\]
+
 Tell MPI to reserve a domain of `OMP_NUM_THREADS` cores for each rank
 
     export I_MPI_PIN_DOMAIN=omp
@@ -184,7 +227,11 @@ rank spawns reside on the same package/socket, and pins both the MPI
 ranks as well as the OpenMP threads to specific cores. This is crucial
 for performance.
 
-## MPI versus MPI/OpenMP: the main difference
+## MPI versus MPI/OpenMP: the main difference\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: MPI versus MPI/OpenMP: the main difference">edit</a> \| (./index.php.md)\]
+
 By default VASP distributes work and data over the MPI ranks on a
 per-orbital basis (in a round-robin fashion): Bloch orbital 1 resides on
 rank 1, orbital 2 on rank 2. and so on. Concurrently, however, the work
@@ -211,16 +258,29 @@ OpenMP-threads/MPI-rank.
 |----|
 | **Warning:** The hybrid MPI/OpenMP version of VASP will internally set [NCORE](../incar-tags/NCORE.md)=1, regardless of what was specified in the [INCAR](../input-files/INCAR.md) file, when it detects it has been started on more than one OpenMP thread. |
 
-## Further reading
-- *OpenMP in VASP: Threading and SIMD*, F. Wende, M. Marsman, J. Kim, F.
-  Vasilev, Z. Zhao, and T. Steinke, [Int. J. Quantum Chem.
-  2018;e25851](http://dx.doi.org/10.1002/qua.25851)
+## Further reading\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Further reading">edit</a> \| (./index.php.md)\]
 
-## Credits
+- *OpenMP in VASP: Threading and SIMD*, F. Wende, M. Marsman, J. Kim, F.
+  Vasilev, Z. Zhao, and T. Steinke,
+  <a href="http://dx.doi.org/10.1002/qua.25851" class="external text"
+  rel="nofollow">Int. J. Quantum Chem. 2018;e25851</a>
+
+## Credits\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Credits">edit</a> \| (./index.php.md)\]
+
 Many thanks to Jeongnim Kim and Fedor Vasilev at Intel, and Florian
 Wende and Thomas Steinke of the Zuse Institute Berlin (ZIB)!
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Combining_MPI_and_OpenMP&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Parallelization](../categories/Category-Parallelization.md),
 [Installing
 VASP.6.X.X](Installing_VASP.6.X.X.md), [GPU
@@ -229,3 +289,5 @@ ports of VASP](GPU_ports_of_VASP.md)
   
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PHON_LBOSE
+
+
 PHON_LBOSE = \[logical\]  
 Default: **PHON_LBOSE** = .TRUE. 
 
@@ -10,9 +12,11 @@ according to Bose-Einstein or Maxwell-Boltzmann statistics.
 
 ------------------------------------------------------------------------
 
-For PHON_LBOSE=*.TRUE.* Bose-Einstein statistics is used.
+For PHON_LBOSE=*.TRUE.*
+Bose-Einstein statistics is used.
 
-For PHON_LBOSE=*.FALSE.* Maxwell-Boltzmann statistics is used.
+For PHON_LBOSE=*.FALSE.*
+Maxwell-Boltzmann statistics is used.
 
 For further usage of this tag see: [Electron-phonon interactions from
 Monte-Carlo
@@ -26,11 +30,15 @@ sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md
 
   
 
-|                                                       |
-|-------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This feature is available for VASP \>= 6.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PHON_LBOSE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Electron-phonon interactions from Monte-Carlo
 sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md),
 [PHON_LMC](PHON_LMC.md),
@@ -42,3 +50,5 @@ sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md
 tag](https://vasp.at/wiki/index.php/Special-Search/-PHON_LBOES-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

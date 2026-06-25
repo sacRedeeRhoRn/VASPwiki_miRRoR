@@ -2,21 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ACFDT/RPA calculations
+
+
 The adiabatic-connection-fluctuation-dissipation theorem (ACFDT) can be
 used to derive the random-phase approximation (RPA). The ACFDT-RPA
-ground-state energy $E_{\mathrm{RPA}}$
-is the sum of the ACFDT-RPA correlation energy $E_{c}$ and the Hartree-Fock (HF) energy
-$E_{\mathrm{EXX}}$ evaluated non
-self-consistently using Kohn-Sham orbitals computed within
-density-functional theory (DFT):
+ground-state energy $E_{\mathrm{RPA}}$ is the sum of the ACFDT-RPA correlation energy
+$E_{c}$ and the Hartree-Fock (HF) energy
+$E_{\mathrm{EXX}}$ evaluated non self-consistently
+using Kohn-Sham orbitals computed within density-functional theory
+(DFT):
 
 $E_{\mathrm{RPA}}=E_{\mathrm{c}}+E_{\mathrm{EXX}}$.
 
-Note that, here $E_{\mathrm{EXX}}$
-includes also the Hartree energy, the kinetic energy, as well as the
-Ewald energy of the ions, whereas often in literature
-$E_{\mathrm{EXX}}$ refers only to the
-exact-exchange (EXX) energy evaluated using DFT orbitals.
+Note that, here $E_{\mathrm{EXX}}$ includes also the Hartree energy, the kinetic energy,
+as well as the Ewald energy of the ions, whereas often in literature
+$E_{\mathrm{EXX}}$ refers only to the exact-exchange
+(EXX) energy evaluated using DFT orbitals.
 
 If [ALGO](../incar-tags/ALGO.md)=RPA is set in the
 [INCAR](../input-files/INCAR.md) file, VASP calculates the correlation
@@ -26,45 +27,65 @@ given in the [WAVECAR](../input-files/WAVECAR.md) file, and then
 determines the correlation energy using the plasmon-fluctuation
 equation:
 
-$E_{c} = \frac{1}{2 \pi} \int_{0}^{\infty}\[
-\mathrm{Tr} \\ \ln(1-\chi( {\rm i} \omega) V) + \chi( {\rm i} \omega) V
-\]\\ d \omega$.
+$E_{c} = \frac{1}{2 \pi} \int_{0}^{\infty}\[ \mathrm{Tr} \\ \ln(1-\chi(
+{\rm i} \omega) V) + \chi( {\rm i} \omega) V \]\\ d \omega$.
 
 More information about the theory behind the RPA is found
 [here](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md).
 
+
 ## Contents
 
-- [1 General recipe to calculate ACFDT-RPA total
-  energies](#General_recipe_to_calculate_ACFDT-RPA_total_energies)
-  - [1.1 Four-step procedure to calculate ACFDT-RPA total
-    energy](#Four-step_procedure_to_calculate_ACFDT-RPA_total_energy)
-  - [1.2 All-in-one approach to calculate ACFDT-RPA total
-    energy](#All-in-one_approach_to_calculate_ACFDT-RPA_total_energy)
-  - [1.3 Output of ACFDT-RPA total
-    energy](#Output_of_ACFDT-RPA_total_energy)
-- [2 Low-scaling ACFDT/RPA algorithm](#Low-scaling_ACFDT/RPA_algorithm)
-  - [2.1 Output of low-scaling
-    ACFDT/RPA](#Output_of_low-scaling_ACFDT/RPA)
-  - [2.2 Singles contribution to the correlation
-    energy](#Singles_contribution_to_the_correlation_energy)
-  - [2.3 Optional: RPA Forces](#Optional:_RPA_Forces)
-  - [2.4 Caveats: Noise in Energies and RPA
-    Forces](#Caveats:_Noise_in_Energies_and_RPA_Forces)
-  - [2.5 Memory bottleneck and
-    Parallelization](#Memory_bottleneck_and_Parallelization)
-- [3 Some Issues Particular to ACFDT-RPA Calculations on
-  Metals](#Some_Issues_Particular_to_ACFDT-RPA_Calculations_on_Metals)
-- [4 Possible tests and known issues](#Possible_tests_and_known_issues)
-  - [4.1 Exact one-centre density
-    terms](#Exact_one-centre_density_terms)
-  - [4.2 Basis set convergence](#Basis_set_convergence)
-  - [4.3 K-point convergence: Spline
-    interpolation](#K-point_convergence:_Spline_interpolation)
-- [5 Related tags and articles](#Related_tags_and_articles)
-- [6 References](#References)
 
-## General recipe to calculate ACFDT-RPA total energies
+- [1 General recipe
+  to calculate ACFDT-RPA total
+  energies](#General_recipe_to_calculate_ACFDT-RPA_total_energies)
+  - [1.1 Four-step
+    procedure to calculate ACFDT-RPA total
+    energy](#Four-step_procedure_to_calculate_ACFDT-RPA_total_energy)
+  - [1.2 All-in-one
+    approach to calculate ACFDT-RPA total
+    energy](#All-in-one_approach_to_calculate_ACFDT-RPA_total_energy)
+  - [1.3 Output of
+    ACFDT-RPA total energy](#Output_of_ACFDT-RPA_total_energy)
+- [2 Low-scaling
+  ACFDT/RPA algorithm](#Low-scaling_ACFDT/RPA_algorithm)
+  - [2.1 Output of
+    low-scaling ACFDT/RPA](#Output_of_low-scaling_ACFDT/RPA)
+  - [2.2 Singles
+    contribution to the correlation
+    energy](#Singles_contribution_to_the_correlation_energy)
+  - [2.3 Optional:
+    RPA Forces](#Optional:_RPA_Forces)
+  - [2.4 Caveats:
+    Noise in Energies and RPA
+    Forces](#Caveats:_Noise_in_Energies_and_RPA_Forces)
+  - [2.5 Memory
+    bottleneck and
+    Parallelization](#Memory_bottleneck_and_Parallelization)
+- [3 Some Issues
+  Particular to ACFDT-RPA Calculations on
+  Metals](#Some_Issues_Particular_to_ACFDT-RPA_Calculations_on_Metals)
+- [4 Possible tests
+  and known issues](#Possible_tests_and_known_issues)
+  - [4.1 Exact
+    one-centre density terms](#Exact_one-centre_density_terms)
+  - [4.2 Basis set
+    convergence](#Basis_set_convergence)
+  - [4.3 K-point
+    convergence: Spline
+    interpolation](#K-point_convergence:_Spline_interpolation)
+- [5 Related tags
+  and articles](#Related_tags_and_articles)
+- [6
+  References](#References)
+
+
+## General recipe to calculate ACFDT-RPA total energies\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: General recipe to calculate ACFDT-RPA total energies">edit</a> \| (./index.php.md)\]
+
 The ACFDT-RPA total energies can be computed in a four-step procedure or
 in an all-in-one approach. The all-in-one approach is available as of
 VASP.6 and can be done in one single step. Both procedures comprise a
@@ -72,7 +93,11 @@ self-consistent DFT calculation, diagonalizing the KS Hamiltonian, and
 the RPA calculation itself. While the all-in-one approach is very
 convenient, there are several caveats discussed below.
 
-### Four-step procedure to calculate ACFDT-RPA total energy
+### Four-step procedure to calculate ACFDT-RPA total energy\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Four-step procedure to calculate ACFDT-RPA total energy">edit</a> \| (./index.php.md)\]
+
 This four-step procedure is the standard procedure in VASP.5, and is
 also available in VASP.6 by setting [NBANDS](../incar-tags/NBANDS.md) in
 the RPA step.
@@ -105,11 +130,13 @@ other choices, e.g., local-density-approximation (LDA) or
 [hybrids](Category-Hybrid_functionals.md),
 are possible as well. For hybrid functionals, we suggest carefully
 considering the caveats mentioned in Ref.
-^([\[1\]](#cite_note-paier:2008-1)). Specifically, the RPA dielectric
-matrix yields too weak screening for hybrid functionals, which
-potentially deteriorates RPA results.
+<sup>[\[1\]](#cite_note-paier:2008-1)</sup>.
+Specifically, the RPA dielectric matrix yields too weak screening for
+hybrid functionals, which potentially deteriorates RPA results.
 
-**Step 2:** Compute the HF energy $E_{\mathrm{EXX}}$ using the DFT orbitals. That is, e.g.,
+**Step 2:** Compute the HF energy
+$E_{\mathrm{EXX}}$ using the DFT orbitals. That
+is, e.g.,
 
     ALGO  = EIGENVAL ; NELM = 1
     LWAVE = .FALSE.                ! WAVECAR not written     
@@ -162,7 +189,11 @@ semiconductors 10-12 suffices.
 |----|
 | **Important:** For VASP 6.X, [NBANDS](../incar-tags/NBANDS.md) must be set in this step. |
 
-### All-in-one approach to calculate ACFDT-RPA total energy
+### All-in-one approach to calculate ACFDT-RPA total energy\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: All-in-one approach to calculate ACFDT-RPA total energy">edit</a> \| (./index.php.md)\]
+
 VASP will read the [WAVECAR](../input-files/WAVECAR.md) file, perform a
 self-consistent DFT calculation by iterating until convergence is
 reached, diagonalize the DFT Hamiltonian in the basis set spanned by all
@@ -205,9 +236,9 @@ recommend starting the calculation from a well-converged DFT
 There are several caveats to the all-in-one approach:
 
 - There is no general support for ACFDT/RPA on top of hybrid
-  functionals. In VASP $\leq$ 6.2, only
-  LDA and gradient corrected functionals are supported. As of VASP 6.2,
-  the all-in-one approach can be used for Hartree-Fock-type
+  functionals. In VASP $\leq$ 6.2,
+  only LDA and gradient corrected functionals are supported. As of VASP
+  6.2, the all-in-one approach can be used for Hartree-Fock-type
   calculations, as well as hybrid functionals without range separation.
   However, range-separated hybrid functionals (including HSE,
   [LMODELHF](../incar-tags/LMODELHF.md)) yield erroneous results or
@@ -233,18 +264,25 @@ There are several caveats to the all-in-one approach:
   can be calculated by setting [LOPTICS](../incar-tags/LOPTICS.md) =
   .TRUE.
 - In the all-in-one procedure, VASP automatically sets
-  [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) and
-  [NMAXFOCKAE](../redirects/NMAXFOCKAE.md). This changes the energies
-  for hybrid functionals and Hartree-Fock slightly. Hence, you need to
-  set [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) = 4 also in Step 1 of
-  the four-step procedure to obtain the same results as in the
-  all-in-one procedure.
+  <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+  title="LMAXFOCKAE">LMAXFOCKAE</a> and
+  <a href="/wiki/NMAXFOCKAE" class="mw-redirect"
+  title="NMAXFOCKAE">NMAXFOCKAE</a>. This changes the energies for
+  hybrid functionals and Hartree-Fock slightly. Hence, you need to set
+  <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+  title="LMAXFOCKAE">LMAXFOCKAE</a> = 4 also in Step 1 of the four-step
+  procedure to obtain the same results as in the all-in-one procedure.
 
-### Output of ACFDT-RPA total energy
+### Output of ACFDT-RPA total energy\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Output of ACFDT-RPA total energy">edit</a> \| (./index.php.md)\]
+
 The ACFDT-RPA total energy is calculated for 8 different energy cutoffs
 and a linear regression is used to extrapolate the results to the
-infinite cutoff limit, see [section below](#basis_cutoff). A successful
-RPA calculation writes the following lines into the
+infinite cutoff limit, see
+<a href="#basis_cutoff" class="mw-selflink-fragment">section below</a>.
+A successful RPA calculation writes the following lines into the
 [OUTCAR](../output-files/OUTCAR.md) file:
 
           cutoff energy     smooth cutoff   RPA   correlation   Hartree contr. to MP2
@@ -264,43 +302,47 @@ Here, the third and fourth columns correspond to the correlation energy
 (for that specific energy cutoff) in the RPA and the direct second-order
 Møller–Plesset (MP2) approximation, i.e., the second-order term in RPA.
 The corresponding results of the linear regression are found in the line
-starting with `converged value`.
+starting with `converged value`.  
 
-## Low-scaling ACFDT/RPA algorithm
+## Low-scaling ACFDT/RPA algorithm\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Low-scaling ACFDT/RPA algorithm">edit</a> \| (./index.php.md)\]
+
 Virtually the same tags and procedures apply to the low-scaling RPA
 algorithm implemented in VASP 6
-^([\[2\]](#cite_note-kaltak:prb:2014-2)). However,
-[ALGO](../incar-tags/ALGO.md)=ACFDT or [ALGO](../incar-tags/ALGO.md)=RPA needs
-to be replaced by either [ALGO](../incar-tags/ALGO.md)=ACFDTR or
-[ALGO](../incar-tags/ALGO.md)=RPAR.
+<sup>[\[2\]](#cite_note-kaltak:prb:2014-2)</sup>.
+However, [ALGO](../incar-tags/ALGO.md)=ACFDT or
+[ALGO](../incar-tags/ALGO.md)=RPA needs to be replaced by either
+[ALGO](../incar-tags/ALGO.md)=ACFDTR or [ALGO](../incar-tags/ALGO.md)=RPAR.
 
 With this setting VASP calculates the independent-particle
-polarizability $\chi(i\omega)$ using
-Green's functions $G(i\tau)$ on the
-imaginary time axis $i\tau$ by the
-contraction formula ^([\[3\]](#cite_note-rojas:prl:1995-3))
+polarizability $\chi(i\omega)$ using Green's functions $G(i\tau)$ on
+the imaginary time axis $i\tau$ by the
+contraction formula
+<sup>[\[3\]](#cite_note-rojas:prl:1995-3)</sup>
 
 $\chi(i\tau_m) = -G(i\tau_m)G(-i\tau_m)$
 
 Subsequently, a compressed Fourier transformation on the imaginary axes
 $\tau_m,\omega_n$ yields
 
-$\chi(i\omega_n) = \sum_{m=1}^{N} \gamma_{nm}
-\chi(i\omega_m)$
+$\chi(i\omega_n) = \sum_{m=1}^{N} \gamma_{nm} \chi(i\omega_m)$
 
 The remaining step is the evaluation of the correlation energy and is
 the same as described above.
 
 Crucial to this approach is the accuracy of the Fourier transformation
-from $\chi(i\tau)\to \chi(i\omega)$,
-which in general depends on two factors: First, the grid order
-$N$ that can be set by
-[NOMEGA](../incar-tags/NOMEGA.md) in the [INCAR](../input-files/INCAR.md)
-file. Here, similar choices as for the [ALGO](../incar-tags/ALGO.md)=ACFDT
-are recommended. Second, the grid points $\tau_m,\omega_n$ and Fourier matrix $\gamma_{nm}$ have to be optimized for the same interval as
-spanned by all possible transition energies in the polarizability. The
-minimum (maximum) transition energy can be set with the
-[OMEGAMIN](../incar-tags/OMEGAMIN.md)
+from $\chi(i\tau)\to \chi(i\omega)$, which in general depends on two factors: First, the
+grid order $N$ that can
+be set by [NOMEGA](../incar-tags/NOMEGA.md) in the
+[INCAR](../input-files/INCAR.md) file. Here, similar choices as for the
+[ALGO](../incar-tags/ALGO.md)=ACFDT are recommended. Second, the grid points
+$\tau_m,\omega_n$ and Fourier matrix
+$\gamma_{nm}$ have to be optimized for the same
+interval as spanned by all possible transition energies in the
+polarizability. The minimum (maximum) transition energy can be set with
+the [OMEGAMIN](../incar-tags/OMEGAMIN.md)
 ([OMEGATL](../incar-tags/OMEGATL.md)) tag and should be smaller (larger)
 than the bandgap, i.e., the maximum transition energy, of the previous
 DFT calculation. VASP determines these values automatically and writes
@@ -321,7 +363,11 @@ first point. The value after `ERR=` corresponds to the maximum
 Fourier-transformation error and should be of similar order as the
 maximum integration error of the frequency grid.
 
-### Output of low-scaling ACFDT/RPA
+### Output of low-scaling ACFDT/RPA\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Output of low-scaling ACFDT/RPA">edit</a> \| (./index.php.md)\]
+
 Selecting the low-scaling RPA algorithm, VASP computes the total energy
 in the RPA and writes the following output
 
@@ -337,26 +383,38 @@ extrapolated value for the RPA correlation energy.
 
 The line `FHF` denotes the exact exchange contribution to the total
 energy. This contribution is determined with an electronic density using
-[LMAXFOCKAE](../redirects/LMAXFOCKAE.md). For most systems the
-resulting energy is in very good agreement with the reference EXX energy
-obtained in [step 2 described above](#EXX-inline-ref). As of version
-6.6.0, exact compatibility with this step can be reached using
+<a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a>. For most systems the resulting energy
+is in very good agreement with the reference EXX energy obtained in
+[step 2 described above](#EXX-inline-ref). As of version 6.6.0, exact
+compatibility with this step can be reached using
 [LFOCKSTD](../incar-tags/LFOCKSTD.md).
 
 |  |
 |----|
 | **Tip:** Select exact one-centre terms for the electronic density in [exact exchange energies](#EXX-inline-ref) with [LFOCKSTD](../incar-tags/LFOCKSTD.md) as of version 6.6.0. |
 
-### Singles contribution to the correlation energy
+### Singles contribution to the correlation energy\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Singles contribution to the correlation energy">edit</a> \| (./index.php.md)\]
+
 The low-scaling RPA algorithm also allows for the determination of the
 so-called singles
-contribution,^([\[4\]](#cite_note-klimes:jcp:143-4)[\[5\]](#cite_note-ren:prb:88-5))
+contribution,<sup>[\[4\]](#cite_note-klimes:jcp:143-4)[\[5\]](#cite_note-ren:prb:88-5)</sup>
 to the total energy represented by following diagrams:
 
-[![](https://vasp.at/wiki/images/thumb/e/eb/SinglesDiagrams.png/320px-SinglesDiagrams.png)](https://vasp.at/wiki/File:SinglesDiagrams.png)
+<a href="/wiki/File:SinglesDiagrams.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/eb/SinglesDiagrams.png/320px-SinglesDiagrams.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/eb/SinglesDiagrams.png/480px-SinglesDiagrams.png 1.5x, /wiki/images/thumb/e/eb/SinglesDiagrams.png/640px-SinglesDiagrams.png 2x"
+width="320" height="97" /></a>
 
-In most textbooks^([\[6\]](#cite_note-mattuck:2012-6)) this contribution
-is assumed to be zero. Ren et al.^([\[5\]](#cite_note-ren:prb:88-5))
+In most
+textbooks<sup>[\[6\]](#cite_note-mattuck:2012-6)</sup>
+this contribution is assumed to be zero. Ren et
+al.<sup>[\[5\]](#cite_note-ren:prb:88-5)</sup>
 pointed out that this is true only in the Hartree-Fock basis set. The
 singles contribution is non-vanishing for other basis sets.
 
@@ -368,24 +426,30 @@ additional lines can be found in OUTCAR:
     renormalized HF singles             -1.23310555
 
 Here, the first line contains the value of the singles as proposed by
-Klimeš et al.,^([\[4\]](#cite_note-klimes:jcp:143-4)) while the second
-line contains the singles contribution of Ren et
-al.^([\[5\]](#cite_note-ren:prb:88-5)). In most cases we found that the
-two values are exceedingly close to each other, which can be understood
-in the way how the propagator is
-renormalized.^([\[4\]](#cite_note-klimes:jcp:143-4))
+Klimeš et
+al.,<sup>[\[4\]](#cite_note-klimes:jcp:143-4)</sup>
+while the second line contains the singles contribution of Ren et
+al.<sup>[\[5\]](#cite_note-ren:prb:88-5)</sup>.
+In most cases we found that the two values are exceedingly close to each
+other, which can be understood in the way how the propagator is
+renormalized.<sup>[\[4\]](#cite_note-klimes:jcp:143-4)</sup>
+ 
 
-### Optional: RPA Forces
+### Optional: RPA Forces\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Optional: RPA Forces">edit</a> \| (./index.php.md)\]
+
 Optionally, RPA forces can be calculated by adding following line to the
 [INCAR](../input-files/INCAR.md) file:
 
      LRPAFORCE = .TRUE. 
 
 For RPA forces the change in the one-electron density is
-required.^([\[7\]](#cite_note-ramberger:prl:118-7)) This is
-automatically performed with the linear-response routine within VASP.
-After a successful run, the following block of data is found in the
-[OUTCAR](../output-files/OUTCAR.md) file.
+required.<sup>[\[7\]](#cite_note-ramberger:prl:118-7)</sup>
+This is automatically performed with the linear-response routine within
+VASP. After a successful run, the following block of data is found in
+the [OUTCAR](../output-files/OUTCAR.md) file.
 
     POSITION                                       TOTAL RPA FORCE (eV/Angst)
     -----------------------------------------------------------------------------------
@@ -416,31 +480,41 @@ recover the groundstate structure. Alternatively, standard relaxations
 |----|
 | **Tip:** Use [LFOCKSTD](../incar-tags/LFOCKSTD.md) to improve total energies and RPA forces as of version 6.6.0. |
 
-### Caveats: Noise in Energies and RPA Forces
+### Caveats: Noise in Energies and RPA Forces\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats: Noise in Energies and RPA Forces">edit</a> \| (./index.php.md)\]
+
 Generally, the energy calculated by the RPA can be quite noisy as a
 function of the ionic positions, in particular, if
 [PRECFOCK](../incar-tags/PRECFOCK.md) = FAST and
-[NMAXFOCKAE](../redirects/NMAXFOCKAE.md) = 1 is set (these are the
-default values for RPA calculations). Most of the noise is related to
-the exact exchange energy. To determine if noise is affecting the
-results, it is useful to calculate the exchange energy separately as
-explained in step 2 above. If the exchange energy reported there is
-smooth, and the exchange energy reported by the all-in-one approach is
-noisy (e.g. shows odd jumps as a function of the positions or volume),
-it is strongly recommended to consider one or both of the options
-discussed below.
+<a href="/wiki/NMAXFOCKAE" class="mw-redirect"
+title="NMAXFOCKAE">NMAXFOCKAE</a> = 1 is set (these are the default
+values for RPA calculations). Most of the noise is related to the exact
+exchange energy. To determine if noise is affecting the results, it is
+useful to calculate the exchange energy separately as explained in step
+2 above. If the exchange energy reported there is smooth, and the
+exchange energy reported by the all-in-one approach is noisy (e.g. shows
+odd jumps as a function of the positions or volume), it is strongly
+recommended to consider one or both of the options discussed below.
 
 Currently, to reduce the noise in the energy and forces, it is sensible
 to set [PRECFOCK](../incar-tags/PRECFOCK.md) = Normal (typically
 doubling the execution time and memory requirement). It is also possible
-to set [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) = -1 (which
-implicitly sets [NMAXFOCKAE](../redirects/NMAXFOCKAE.md) = 0). This
-makes the correlation energies and the related forces less noisy, but
-technically less accurate (i.e. part of the correlation energy will be
-missing at high transition energies). Overall, RPA forces must be used
-carefully and only after extensive testing of all relevant parameters.
+to set <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a> = -1 (which implicitly sets
+<a href="/wiki/NMAXFOCKAE" class="mw-redirect"
+title="NMAXFOCKAE">NMAXFOCKAE</a> = 0). This makes the correlation
+energies and the related forces less noisy, but technically less
+accurate (i.e. part of the correlation energy will be missing at high
+transition energies). Overall, RPA forces must be used carefully and
+only after extensive testing of all relevant parameters.
 
-### Memory bottleneck and Parallelization
+### Memory bottleneck and Parallelization\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Memory bottleneck and Parallelization">edit</a> \| (./index.php.md)\]
+
 The cubic scaling space-time RPA algorithm requires considerably more
 memory than the corresponding quartic-scaling implementations, two
 Green's functions $G({\bf r,r'},i\tau_n)$ have to be stored in real-space. To reduce the memory
@@ -480,8 +554,9 @@ bytes is given by
 where "NCPU" is the number of MPI ranks used for the job,"NGX,NGY,NGZ"
 denotes the number of FFT grid points for the exact exchange and
 "NGX_S,NGY_S,NGZ_S" the number of FFT grid points for the supercell.
-Note, both grids are written to the [OUTCAR](../output-files/OUTCAR.md) file
-after the lines
+Note, both grids are written to the
+[OUTCAR](../output-files/OUTCAR.md)
+file after the lines
 
     FFT grid for exact exchange (Hartree Fock)
     FFT grid for supercell:
@@ -490,20 +565,29 @@ The smaller [NTAUPAR](../incar-tags/NTAUPAR.md) is set, the less memory
 per node the job requires to finish successfully.
 
 The approximate memory requirement is calculated in advance and printed
-to screen and [OUTCAR](../output-files/OUTCAR.md) as follows:
+to screen and
+[OUTCAR](../output-files/OUTCAR.md)
+as follows:
 
     min. memory requirement per mpi rank 1234 MB, per node 9872 MB
 
-## Some Issues Particular to ACFDT-RPA Calculations on Metals
+## Some Issues Particular to ACFDT-RPA Calculations on Metals\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Some Issues Particular to ACFDT-RPA Calculations on Metals">edit</a> \| (./index.php.md)\]
+
 For metals, the RPA groundstate energy converges the fastest with
 respect to k-points, if the exchange (Eq. (12) in reference
-^([\[8\]](#cite_note-harl:2010-8))) and correlation energy are
-calculated on the same k-point grid, [HFRCUT](../incar-tags/HFRCUT.md) is
-not set, and the long-wavelength contributions from the polarizability
-are not considered (see reference ^([\[8\]](#cite_note-harl:2010-8))).
+<sup>[\[8\]](#cite_note-harl:2010-8)</sup>)
+and correlation energy are calculated on the same k-point grid,
+[HFRCUT](../incar-tags/HFRCUT.md) is not set, and the long-wavelength
+contributions from the polarizability are not considered (see reference
+<sup>[\[8\]](#cite_note-harl:2010-8)</sup>).
 
-To evaluate Eq. (12), a correction energy for $E_{\mathrm{EXX}}$ related to partial occupancies has to be
-added to the RPA groundstate energy:^([\[8\]](#cite_note-harl:2010-8))
+To evaluate Eq. (12), a correction energy for
+$E_{\mathrm{EXX}}$ related to partial occupancies has
+to be added to the RPA groundstate
+energy:<sup>[\[8\]](#cite_note-harl:2010-8)</sup>
 
 $E_{\mathrm{RPA}}=E_{\mathrm{c}}+E_{\mathrm{EXX}}+E_{\mathrm{HFc}}$.
 
@@ -517,8 +601,18 @@ To neglect the long-wavelength contributions, simply set
 [ALGO](../incar-tags/ALGO.md)=*Exact* step (third step), and remove the
 [WAVEDER](../input-files/WAVEDER.md) files in the directory.
 
-## Possible tests and known issues
-### Exact one-centre density terms
+ 
+
+## Possible tests and known issues\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Possible tests and known issues">edit</a> \| (./index.php.md)\]
+
+### Exact one-centre density terms\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Exact one-centre density terms">edit</a> \| (./index.php.md)\]
+
 Beginning with version 6.6.0, it is possible to include exact one-center
 terms in the density for the exact exchange (EXX) component of RPA total
 energies and forces by enabling the
@@ -529,39 +623,41 @@ results obtained using finite-difference methods. Therefore, it is
 strongly recommended to activate [LFOCKSTD](../incar-tags/LFOCKSTD.md)
 for GW and RPA calculations starting from version 6.6.0. In earlier
 versions, the one-center contribution to the density was managed using
-the [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) setting.
+the <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a> setting.
 
-### Basis set convergence
+### Basis set convergence\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Basis set convergence">edit</a> \| (./index.php.md)\]
+
 The expression for the ACFDT-RPA correlation energy written in terms of
 reciprocal lattice vectors reads:
 
-$E_{\rm c}^{\rm RPA}=\int_{0}^{\infty}
-\frac{\mathrm{d}\omega}{2\pi} \sum_{{\mathbf{q}}\in \mathbf{BZ}
-}\sum_{{\mathbf{G}}}
+$E_{\rm c}^{\rm RPA}=\int_{0}^{\infty} \frac{\mathrm{d}\omega}{2\pi}
+\sum_{{\mathbf{q}}\in \mathbf{BZ} }\sum_{{\mathbf{G}}}
 \left\\(\mathrm{ln}\[1-\tilde\chi^0({\mathbf{q}},\mathrm{i}\omega)V({\mathbf{q}})\])_{{\mathbf{G,G}}}
 +V_{{\mathbf{G,G}}}({\mathbf{q}})\tilde\chi^0({\mathbf{q}},{\mathrm{i}}\omega)
 \right\\$.
 
 The sum over reciprocal lattice vectors has to be truncated at some
-$\mathbf{G}_{\mathrm{max}}$, determined
-by $\frac{\hbar^2|{\mathbf{G}}+{\mathbf{q}}|^2}{2\mathrm{m}_e}$
-\< [ENCUTGW](../incar-tags/ENCUTGW.md), which can be set in the
-[INCAR](../input-files/INCAR.md) file. The default value is
-$\frac{2}{3}\times$
-[ENCUT](../incar-tags/ENCUT.md), which experience has taught us not to
-change. For systematic convergence tests, instead increase
-[ENCUT](../incar-tags/ENCUT.md) and repeat steps 1 to 4, but be aware that
-the "maximum number of plane-waves" changes when
+$\mathbf{G}_{\mathrm{max}}$, determined by
+$\frac{\hbar^2|{\mathbf{G}}+{\mathbf{q}}|^2}{2\mathrm{m}_e}$ \< [ENCUTGW](../incar-tags/ENCUTGW.md), which can be
+set in the [INCAR](../input-files/INCAR.md) file. The default value is
+$\frac{2}{3}\times$ [ENCUT](../incar-tags/ENCUT.md), which
+experience has taught us not to change. For systematic convergence
+tests, instead increase [ENCUT](../incar-tags/ENCUT.md) and repeat steps 1
+to 4, but be aware that the "maximum number of plane-waves" changes when
 [ENCUT](../incar-tags/ENCUT.md) is increased. Note that it is virtually
 impossible, to converge absolute correlation energies. Rather
 concentrate on relative energies (e.g. energy differences between two
 solids, or between a solid and the constituent atoms).
 
 Since correlation energies converge very slowly with respect to
-$\mathbf{G}_{\rm max }$, VASP
-automatically extrapolates to the infinite basis set limit using a
-linear regression to the equation:
-^([\[9\]](#cite_note-harl:2008-9)[\[8\]](#cite_note-harl:2010-8)[\[10\]](#cite_note-klimes:2014-10))
+$\mathbf{G}_{\rm max }$, VASP automatically
+extrapolates to the infinite basis set limit using a linear regression
+to the equation:
+<sup>[\[9\]](#cite_note-harl:2008-9)[\[8\]](#cite_note-harl:2010-8)[\[10\]](#cite_note-klimes:2014-10)</sup>
 
 $E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}$.
 
@@ -571,24 +667,25 @@ Furthermore, the Coulomb kernel is smoothly truncated between
 function (Hann window function). Alternatively, the basis set
 extrapolation can be performed by setting
 [LSCK](../incar-tags/LSCK.md)=.TRUE., using the squeezed Coulomb kernel
-method.^([\[11\]](#cite_note-riemelmoser:jcp:2020-11))
+method.<sup>[\[11\]](#cite_note-riemelmoser:jcp:2020-11)</sup>
 
 The default for [ENCUTGWSOFT](../incar-tags/ENCUTGWSOFT.md) is
-0.8$\times$[ENCUTGW](../incar-tags/ENCUTGW.md) (again we do not recommend
-to change this default).
+0.8$\times$[ENCUTGW](../incar-tags/ENCUTGW.md) (again we do
+not recommend to change this default).
 
-The integral over $\omega$ is evaluated
-by means of a highly accurate minimax
-integration.^([\[12\]](#cite_note-kaltak:2014-12)) The number of
-$\omega$ points is determined by the
-flag [NOMEGA](../incar-tags/NOMEGA.md), whereas the energy range of
-transitions is determined by the band gap and the energy difference
-between the lowest occupied and highest unoccupied one-electron orbital.
-VASP determines these values automatically (from vasp.5.4.1 on), and the
-user should only carefully converge with respect to the number of
-frequency points [NOMEGA](../incar-tags/NOMEGA.md). A good choice is
-usually [NOMEGA](../incar-tags/NOMEGA.md)=12, however, for large gap
-systems one might obtain $\mu$eV
+The integral over $\omega$ is
+evaluated by means of a highly accurate minimax
+integration.<sup>[\[12\]](#cite_note-kaltak:2014-12)</sup>
+The number of $\omega$
+points is determined by the flag [NOMEGA](../incar-tags/NOMEGA.md),
+whereas the energy range of transitions is determined by the band gap
+and the energy difference between the lowest occupied and highest
+unoccupied one-electron orbital. VASP determines these values
+automatically (from vasp.5.4.1 on), and the user should only carefully
+converge with respect to the number of frequency points
+[NOMEGA](../incar-tags/NOMEGA.md). A good choice is usually
+[NOMEGA](../incar-tags/NOMEGA.md)=12, however, for large gap systems one
+might obtain $\mu$eV
 convergence per atom already using 8 points, whereas for metals up to
 [NOMEGA](../incar-tags/NOMEGA.md)=24 frequency points are sometimes
 necessary, in particular, for large unit cells.
@@ -615,19 +712,23 @@ where the default energy cutoff is the usual one (maximum ENMAX in
 POTCAR files). The frequency integration also needs to be checked
 carefully, in particular for small gap systems (some symmetry broken
 atoms) convergence can be rather slow, since the one-electron band gap
-can be very small, requiring a very small minimum $\omega$ in the frequency integration.
+can be very small, requiring a very small minimum
+$\omega$ in the frequency integration.
 
-### K-point convergence: Spline interpolation
+### K-point convergence: Spline interpolation\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: K-point convergence: Spline interpolation">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Mind:** [ESF_SPLINES](../misc/ESF_SPLINES.md) is available as of VASP.6.5.0 |
 
 It is possible to use spline interpolation to improve upon k-point
 integration errors by rewriting the RPA correlation energy as an
-integral $E_c^{{\rm RPA}}= \sum_{{\mathbf{q}}\in
-\mathbf{BZ} }\sum_{{\mathbf{G}}} S({\bf q+G})$ over the
-electronic structure factor: $S({\bf q}+{\bf G})
-=\int {\rm d}\omega
+integral $E_c^{{\rm RPA}}=
+\sum_{{\mathbf{q}}\in \mathbf{BZ} }\sum_{{\mathbf{G}}} S({\bf q+G})$ over the electronic structure factor:
+$S({\bf q}+{\bf G}) =\int {\rm d}\omega
 \left\\(\mathrm{ln}\[1-\tilde\chi^0({\mathbf{q}},\mathrm{i}\omega)V({\mathbf{q}})\])_{{\mathbf{G,G}}}
 +V_{{\mathbf{G,G}}}({\mathbf{q}})\tilde\chi^0({\mathbf{q}},{\mathrm{i}}\omega)
 \right\\$
@@ -659,14 +760,15 @@ result to [OUTCAR](../output-files/OUTCAR.md) in the following format
 The last column contains the result from the spline interpolation for
 the selected energy cutoffs reported in the first column.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
+|  |
+|----|
 | **Warning:** Delete [WAVEDER](../input-files/WAVEDER.md) for this method. |
 
 Note that this method is incompatible with k-p perturbation theory,
-where the largest q-point integration error $\lim_{\bf q\to 0} \tilde\chi^0_{{\bf G G}'}({\bf q},{\rm i}\omega)
-\cdot {\bf V}_{\bf G G'}({\bf q})$ is added explicitly to the
-RPA integral. This long-wave contribution is stored in
+where the largest q-point integration error $\lim_{\bf q\to 0}
+\tilde\chi^0_{{\bf G G}'}({\bf q},{\rm i}\omega) \cdot {\bf V}_{\bf G
+G'}({\bf q})$ is added explicitly to the RPA integral.
+This long-wave contribution is stored in
 [WAVEDER](../input-files/WAVEDER.md), and VASP assumes you want to add
 this term if the file is present in the working directory.
 
@@ -681,12 +783,16 @@ Nevertheless, for insulators, we still recommend using
 [WAVEDER](../input-files/WAVEDER.md) and not set
 [ESF_SPLINES](../misc/ESF_SPLINES.md) for efficiency reasons.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [RPA/ACFDT: Correlation energy in the Random Phase
   Approximation](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md)
   — theory background
-- [Many-body perturbation
-  theory](../redirects/Many-body_perturbation_theory.md)
+- <a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+  title="Many-body perturbation theory">Many-body perturbation theory</a>
   — parent topic (RPA, GW, BSE, MP2)
 - [Low-scaling GW and
   RPA](../theory/Category-Low-scaling_GW_and_RPA.md)
@@ -717,45 +823,72 @@ Nevertheless, for insulators, we still recommend using
 - [LFOCKSTD](../incar-tags/LFOCKSTD.md) exact one-centre terms in EXX
   part of total energy and RPA forces
 
-## References
-1.  [↑](#cite_ref-paier:2008_1-0) [J. Paier, M. Marsman, and G. Kresse,
-    Phys. Rev. B **78**, 121201
-    (2008).](https://doi.org/10.1103/PhysRevB.78.121201)
-2.  [↑](#cite_ref-kaltak:prb:2014_2-0) [M. Kaltak, J. Klimeš, and G.
-    Kresse, Phys. Rev. B **90**, 054115
-    (2014).](https://doi.org/10.1103/PhysRevB.90.054115)
-3.  [↑](#cite_ref-rojas:prl:1995_3-0) [H. N. Rojas, R. W. Godby,
-    and R. J. Needs, Phys. Rev. Lett. **74**, 1827
-    (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
-4.  ↑ ^([a](#cite_ref-klimes:jcp:143_4-0))
-    ^([b](#cite_ref-klimes:jcp:143_4-1))
-    ^([c](#cite_ref-klimes:jcp:143_4-2)) [J. Klimeš, M. Kaltak, and G.
-    Kresse, J. Chem. Phys. **143**, 102816
-    (2015).](https://doi.org/10.1063/1.4929346)
-5.  ↑ ^([a](#cite_ref-ren:prb:88_5-0)) ^([b](#cite_ref-ren:prb:88_5-1))
-    ^([c](#cite_ref-ren:prb:88_5-2)) [X. Ren, P. Rinke, G. E. Scuseria,
-    and M. Scheffler, Phys. Rev. B **88**, 035120
-    (2013).](http://doi.org/10.1103/PhysRevB.88.035120)
-6.  [↑](#cite_ref-mattuck:2012_6-0) [R. D. Mattuck, Dover Books on
-    Physics
-    (2012).](https://books.google.at/books?id=1P_DAgAAQBAJ&hl=en)
-7.  [↑](#cite_ref-ramberger:prl:118_7-0) [B. Ramberger, T. Schäfer
-    and G. Kresse, Phys. Rev. Lett **118**, 106403
-    (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)
-8.  ↑ ^([a](#cite_ref-harl:2010_8-0)) ^([b](#cite_ref-harl:2010_8-1))
-    ^([c](#cite_ref-harl:2010_8-2)) ^([d](#cite_ref-harl:2010_8-3)) [J.
-    Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126
-    (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
-9.  [↑](#cite_ref-harl:2008_9-0) [J. Harl and G. Kresse, Phys. Rev. B
-    **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
-10. [↑](#cite_ref-klimes:2014_10-0) [J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B **90**, 075125
-    (2014).](https://doi.org/10.1103/PhysRevB.90.075125)
-11. [↑](#cite_ref-riemelmoser:jcp:2020_11-0) [S. Riemelmoser, M. Kaltak,
-    and G. Kresse, J. Chem. Phys. **152(13)**, 134103
-    (2020).](https://doi.org/10.1063/5.0002246)
-12. [↑](#cite_ref-kaltak:2014_12-0) [M. Kaltak, J. Klimeš, and G.
-    Kresse, J. Chem. Theory Comput. **10**, 2498-2507
-    (2014).](https://doi.org/10.1021/ct5001268)
+## References\[<a
+href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-paier:2008_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.78.121201"
+    class="external text" rel="nofollow">J. Paier, M. Marsman, and G.
+    Kresse, Phys. Rev. B <strong>78</strong>, 121201 (2008).</a>
+2.  [↑](#cite_ref-kaltak:prb:2014_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.90.054115"
+    class="external text" rel="nofollow">M. Kaltak, J. Klimeš, and G.
+    Kresse, Phys. Rev. B <strong>90</strong>, 054115 (2014).</a>
+3.  [↑](#cite_ref-rojas:prl:1995_3-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
+    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
+    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
+4.  ↑
+    <sup>[a](#cite_ref-klimes:jcp:143_4-0)</sup>
+    <sup>[b](#cite_ref-klimes:jcp:143_4-1)</sup>
+    <sup>[c](#cite_ref-klimes:jcp:143_4-2)</sup>
+    <a href="https://doi.org/10.1063/1.4929346" class="external text"
+    rel="nofollow">J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys.
+    <strong>143</strong>, 102816 (2015).</a>
+5.  ↑
+    <sup>[a](#cite_ref-ren:prb:88_5-0)</sup>
+    <sup>[b](#cite_ref-ren:prb:88_5-1)</sup>
+    <sup>[c](#cite_ref-ren:prb:88_5-2)</sup>
+    <a href="http://doi.org/10.1103/PhysRevB.88.035120"
+    class="external text" rel="nofollow">X. Ren, P. Rinke, G. E. Scuseria,
+    and M. Scheffler, Phys. Rev. B <strong>88</strong>, 035120 (2013).</a>
+6.  [↑](#cite_ref-mattuck:2012_6-0)
+    <a href="https://books.google.at/books?id=1P_DAgAAQBAJ&amp;hl=en"
+    class="external text" rel="nofollow">R. D. Mattuck, Dover Books on
+    Physics (2012).</a>
+7.  [↑](#cite_ref-ramberger:prl:118_7-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
+    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
+    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
+8.  ↑
+    <sup>[a](#cite_ref-harl:2010_8-0)</sup>
+    <sup>[b](#cite_ref-harl:2010_8-1)</sup>
+    <sup>[c](#cite_ref-harl:2010_8-2)</sup>
+    <sup>[d](#cite_ref-harl:2010_8-3)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
+    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
+    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
+9.  [↑](#cite_ref-harl:2008_9-0)
+    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
+    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
+    <strong>77</strong>, 045136 (2008).</a>
+10. [↑](#cite_ref-klimes:2014_10-0)
+    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
+    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
+    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
+11. [↑](#cite_ref-riemelmoser:jcp:2020_11-0)
+    <a href="https://doi.org/10.1063/5.0002246" class="external text"
+    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
+    <strong>152(13)</strong>, 134103 (2020).</a>
+12. [↑](#cite_ref-kaltak:2014_12-0)
+    <a href="https://doi.org/10.1021/ct5001268" class="external text"
+    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
+    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
+
 
 ------------------------------------------------------------------------
+
+

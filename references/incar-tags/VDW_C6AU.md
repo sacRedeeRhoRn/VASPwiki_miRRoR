@@ -2,25 +2,29 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VDW_C6AU
+
+
 VDW_C6AU = \[real (array)\] 
 
-Description: VDW_C6AU defines the $C_6$
-parameters ($\mathrm{Hartree}$
-$\mathrm{bohr}^{6}$) for each species
-defined in the [POSCAR](../input-files/POSCAR.md) file.
+Description: VDW_C6AU defines
+the $C_6$
+parameters ($\mathrm{Hartree}$ $\mathrm{bohr}^{6}$) for each species defined in the
+[POSCAR](../input-files/POSCAR.md) file.
 
 ------------------------------------------------------------------------
 
-VDW_C6AU sets the $C_6$ parameters
-($\mathrm{Hartree}$
-$\mathrm{bohr}^{6}$) for each species
-defined in the [POSCAR](../input-files/POSCAR.md) file for the
+VDW_C6AU sets the
+$C_6$ parameters ($\mathrm{Hartree}$ $\mathrm{bohr}^{6}$) for each species defined in the
+[POSCAR](../input-files/POSCAR.md) file for the
 [Tkatchenko-Scheffler](../methods/Tkatchenko-Scheffler_method.md)
 and [Many-body dispersion
 energy](../methods/Many-body_dispersion_energy.md)
 methods.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=VDW_C6AU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [VDW_C6](VDW_C6.md), [Tkatchenko-Scheffler
 method](../methods/Tkatchenko-Scheffler_method.md),
 [Many-body dispersion
@@ -30,3 +34,5 @@ energy](../methods/Many-body_dispersion_energy.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-VDW_C6AU-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

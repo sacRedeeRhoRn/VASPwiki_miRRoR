@@ -2,30 +2,52 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Parallelization
+
+
 VASP makes use of parallel machines splitting the calculation into many
 tasks, that communicate with each other using MPI. Since a single core
 cannot perform enough operations, for many complex problems, this
 parallelization is necessary to finish the calculation in a reasonable
 time.
 
+
 ## Contents
 
-- [1 Theory](#Theory)
-  - [1.1 Basic parallelization](#Basic_parallelization)
-  - [1.2 Communication patterns](#Communication_patterns)
-  - [1.3 MPI setup](#MPI_setup)
-  - [1.4 File handling](#File_handling)
-  - [1.5 Terminology in high-performance computing
-    (HPC)](#Terminology_in_high-performance_computing_(HPC))
-- [2 How to](#How_to)
-  - [2.1 Optimizing the
-    parallelization](#Optimizing_the_parallelization)
-  - [2.2 OpenMP/OpenACC](#OpenMP/OpenACC)
-- [3 Additional parallelization
-  options](#Additional_parallelization_options)
 
-## Theory
-### Basic parallelization
+- [1
+  Theory](#Theory)
+  - [1.1 Basic
+    parallelization](#Basic_parallelization)
+  - [1.2
+    Communication
+    patterns](#Communication_patterns)
+  - [1.3 MPI
+    setup](#MPI_setup)
+  - [1.4 File
+    handling](#File_handling)
+  - [1.5
+    Terminology in high-performance computing
+    (HPC)](#Terminology_in_high-performance_computing_(HPC))
+- [2 How
+  to](#How_to)
+  - [2.1 Optimizing
+    the parallelization](#Optimizing_the_parallelization)
+  - [2.2
+    OpenMP/OpenACC](#OpenMP/OpenACC)
+- [3 Additional
+  parallelization options](#Additional_parallelization_options)
+
+
+## Theory\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory">edit</a> \| (./index.php.md)\]
+
+### Basic parallelization\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Basic parallelization">edit</a> \| (./index.php.md)\]
+
 By default, VASP distributes the number of bands
 ([NBANDS](../incar-tags/NBANDS.md)) over the available MPI ranks. But it
 is often beneficial to add parallelization of the FFTs
@@ -38,9 +60,9 @@ specific algorithms in VASP, e.g.,
 [NOMEGAPAR](../incar-tags/NOMEGAPAR.md). In summary, VASP parallelizes
 with
 
-$\text{total ranks} = \text{ranks parallelizing
-bands} \times \text{NCORE} \times \text{KPAR} \times \text{IMAGES}
-\times \text{other algorithm-dependent tags}.$
+$\text{total ranks} = \text{ranks parallelizing bands} \times
+\text{NCORE} \times \text{KPAR} \times \text{IMAGES} \times \text{other
+algorithm-dependent tags}.$
 
 In addition to the parallelization using MPI, VASP can make use of
 [OpenMP
@@ -50,13 +72,25 @@ GPUs](../misc/GPU_ports_of_VASP.md). Note that running on
 multiple OpenMP threads and/or GPUs switches off the
 [NCORE](../incar-tags/NCORE.md) parallelization.
 
-### Communication patterns
-[![VASP divides the available MPI ranks into images, k-point groups, and
-band
-groups](https://vasp.at/wiki/images/thumb/1/19/Communication.png/513px-Communication.png)](https://vasp.at/wiki/File:Communication.png "VASP divides the available MPI ranks into images, k-point groups, and band groups")
-[![VASP divides the available MPI ranks into images, k-point groups, and
-band
-groups](https://vasp.at/wiki/images/thumb/0/08/Communication2.png/513px-Communication2.png)](https://vasp.at/wiki/File:Communication2.png "VASP divides the available MPI ranks into images, k-point groups, and band groups")
+### Communication patterns\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Communication patterns">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/File:Communication.png" class="mw-file-description"
+title="VASP divides the available MPI ranks into images, k-point groups, and band groups"><img
+src="https://vasp.at/wiki/images/thumb/1/19/Communication.png/513px-Communication.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/1/19/Communication.png/769px-Communication.png 1.5x, /wiki/images/thumb/1/19/Communication.png/1025px-Communication.png 2x"
+width="513" height="300"
+alt="VASP divides the available MPI ranks into images, k-point groups, and band groups" /></a>
+<a href="/wiki/File:Communication2.png" class="mw-file-description"
+title="VASP divides the available MPI ranks into images, k-point groups, and band groups"><img
+src="https://vasp.at/wiki/images/thumb/0/08/Communication2.png/513px-Communication2.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/0/08/Communication2.png/769px-Communication2.png 1.5x, /wiki/images/thumb/0/08/Communication2.png/1025px-Communication2.png 2x"
+width="513" height="300"
+alt="VASP divides the available MPI ranks into images, k-point groups, and band groups" /></a>
 
 The aforementioned parallelization levels directly map onto MPI
 communicators. Initially, VASP divides all available ranks into
@@ -70,13 +104,26 @@ FFTs and triggers the most frequent communications. To evaluate
 properties involving multiple bands (e.g. Hamiltonian,
 orthonormalization) communication between the band groups occurs.
 
-### MPI setup
-[![All ranks associated with a particular band group are on the same
-node. All communication for the FFTs is
-intranode.](https://vasp.at/wiki/images/thumb/7/7f/Good_process_binding.png/380px-Good_process_binding.png)](https://vasp.at/wiki/File:Good_process_binding.png "All ranks associated with a particular band group are on the same node. All communication for the FFTs is intranode.")
-[![Ranks of some band groups extend over multiple nodes. Every FFT
-requires internode
-communication.](https://vasp.at/wiki/images/thumb/5/5d/Bad_process_binding.png/380px-Bad_process_binding.png)](https://vasp.at/wiki/File:Bad_process_binding.png "Ranks of some band groups extend over multiple nodes. Every FFT requires internode communication.")
+### MPI setup\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: MPI setup">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/File:Good_process_binding.png"
+class="mw-file-description"
+title="All ranks associated with a particular band group are on the same node. All communication for the FFTs is intranode."><img
+src="https://vasp.at/wiki/images/thumb/7/7f/Good_process_binding.png/380px-Good_process_binding.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/7/7f/Good_process_binding.png/570px-Good_process_binding.png 1.5x, /wiki/images/7/7f/Good_process_binding.png 2x"
+width="380" height="300"
+alt="All ranks associated with a particular band group are on the same node. All communication for the FFTs is intranode." /></a>
+<a href="/wiki/File:Bad_process_binding.png" class="mw-file-description"
+title="Ranks of some band groups extend over multiple nodes. Every FFT requires internode communication."><img
+src="https://vasp.at/wiki/images/thumb/5/5d/Bad_process_binding.png/380px-Bad_process_binding.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/5/5d/Bad_process_binding.png/570px-Bad_process_binding.png 1.5x, /wiki/images/5/5d/Bad_process_binding.png 2x"
+width="380" height="300"
+alt="Ranks of some band groups extend over multiple nodes. Every FFT requires internode communication." /></a>
 
 The MPI setup determines the placement of the ranks onto the nodes. VASP
 assumes the ranks first fill up a node before the next node is occupied.
@@ -95,7 +142,11 @@ by setting environment variables or command-line arguments. When in
 doubt, contact the HPC administration of your machine to investigate the
 behavior.
 
-### File handling
+### File handling\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: File handling">edit</a> \| (./index.php.md)\]
+
 When VASP is started it reads the file [INCAR](../input-files/INCAR.md) in
 the root directory. Because the MPI setup needs to happen early in the
 general setup of the calculation the following tags are processed before
@@ -111,7 +162,11 @@ in the root directory is superseded by the same file in subdirectories
 from the root directory. The output files are always written to the
 subdirectories.
 
-### Terminology in high-performance computing (HPC)
+### Terminology in high-performance computing (HPC)\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Terminology in high-performance computing (HPC)">edit</a> \| (./index.php.md)")\]
+
 CPU  
 The central processing unit of a computer. A CPU may consist of multiple
 *cores*. One or more CPUs can be combined with accelerators like *GPUs*
@@ -180,10 +235,19 @@ processing.
 
 |  |
 |----|
-| **Tip:** There is a lecture on [high-performance computing (HPC)](https://youtu.be/KzIuL_e0zz8) in VASP available on our YouTube channel. |
+| **Tip:** There is a lecture on <a href="https://youtu.be/KzIuL_e0zz8" class="external text"
+rel="nofollow">high-performance computing (HPC)</a> in VASP available on our YouTube channel. |
 
-## How to
-### Optimizing the parallelization
+## How to\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
+### Optimizing the parallelization\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Optimizing the parallelization">edit</a> \| (./index.php.md)\]
+
 The performance of a specific parallelization depends on the system,
 i.e., the number of ions, the elements, the size of the cell, etc.
 Different algorithms ([density-functional
@@ -212,7 +276,11 @@ For more detailed advice, check the following:
   parallelization](../tutorials/Optimizing_the_parallelization.md)
   in a nutshell
 
-### OpenMP/OpenACC
+### OpenMP/OpenACC\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: OpenMP/OpenACC">edit</a> \| (./index.php.md)\]
+
 Both [OpenMP](../misc/Combining_MPI_and_OpenMP.md)
 and [offloading to GPUs](../misc/GPU_ports_of_VASP.md)
 parallelize the FFTs and therefore disregard any conflicting
@@ -228,7 +296,11 @@ more about the OpenMP and OpenACC parallelization in these sections
   rank](../misc/Combining_MPI_and_OpenMP.md)
 - How to [run on GPUs](../misc/GPU_ports_of_VASP.md)
 
-## Additional parallelization options
+## Additional parallelization options\[<a
+href="/wiki/index.php?title=Category:Parallelization&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Additional parallelization options">edit</a> \| (./index.php.md)\]
+
 [KPAR](../incar-tags/KPAR.md)  
 For Laplace transformed MP2 this tag [has a different
 meaning](../tutorials/LTMP2_-_Tutorial.md).
@@ -239,7 +311,11 @@ coupling constant integration
 ([VCAIMAGES](../incar-tags/VCAIMAGES.md)).
 
 [NOMEGAPAR](../incar-tags/NOMEGAPAR.md)  
-Parallelize over imaginary frequency points in $GW$ and RPA calculations.
+Parallelize over imaginary frequency points in
+$GW$ and RPA calculations.
 
 [NTAUPAR](../incar-tags/NTAUPAR.md)  
-Parallelize over imaginary time points in $GW$ and RPA calculations.
+Parallelize over imaginary time points in $GW$ and RPA
+calculations.
+
+

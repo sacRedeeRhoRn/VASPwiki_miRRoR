@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Estimation of J magnetic coupling
+
+
 Description: Estimation of the J magnetic exchange coupling using the
 GGA+U method.
 
@@ -9,21 +11,22 @@ Switching off the symmetry ([ISYM](../incar-tags/ISYM.md) = 0) is often
 necessary to generate different magnetic configurations.
 
   
-**Exercise :** Study the change of the 180° superexchange coupling J₂
-between the next nearest neighbors (d_(Ni-Ni) = 4.17 A) by varying the
-U_(eff) value. The following equation J₂ = (E_(FM) - E_(AFM)) / 12
-expresses the super exchange Ni-O-Ni coupling as a function of the
-energy difference of the ferromagnetic (FM) and antiferromagnetic (AFM)
-configurations. In this case, the superexchange coupling J₁ between the
-nearest neighbors is neglected. The theoretical results can be compared
-to the experimental one : J₂ = 19.01 meV (Hutchings M. T., Samuelsen E.
-J., *Phys. Rev. B 6*, 9, **1972**, 3447)
+*<u>Exercise :</u>* Study the change of the 180° superexchange coupling
+J<sub>2</sub> between the next nearest neighbors (d<sub>Ni-Ni</sub> =
+4.17 A) by varying the U<sub>eff</sub> value. The following equation
+J<sub>2</sub> = (E<sub>FM</sub> - E<sub>AFM</sub>) / 12 expresses the
+super exchange Ni-O-Ni coupling as a function of the energy difference
+of the ferromagnetic (FM) and antiferromagnetic (AFM) configurations. In
+this case, the superexchange coupling J<sub>1</sub> between the nearest
+neighbors is neglected. The theoretical results can be compared to the
+experimental one : J<sub>2</sub> = 19.01 meV (Hutchings M. T., Samuelsen
+E. J., *Phys. Rev. B 6*, 9, **1972**, 3447)
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO GGA+U AFM
       SYSTEM    = "NiO"
@@ -64,7 +67,7 @@ J., *Phys. Rev. B 6*, 9, **1972**, 3447)
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -74,7 +77,7 @@ J., *Phys. Rev. B 6*, 9, **1972**, 3447)
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -91,10 +94,18 @@ J., *Phys. Rev. B 6*, 9, **1972**, 3447)
 ------------------------------------------------------------------------
 
 Necessarely, the J magnetic coupling decreases with the increasing of
-the U_(eff) value. To assess the obtained value, similar calculations
-could be done using a [hybrid functional](NiO_HSE06.md).
+the U<sub>eff</sub> value. To assess the obtained value, similar
+calculations could be done using a [hybrid
+functional](NiO_HSE06.md).
 
-## Download
-[nio_Jcoupl.tgz](https://vasp.at/wiki/images/b/bb/Nio_Jcoupl.tgz "Nio Jcoupl.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Estimation_of_J_magnetic_coupling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/b/bb/Nio_Jcoupl.tgz" class="internal"
+title="Nio Jcoupl.tgz">nio_Jcoupl.tgz</a>
 
 ------------------------------------------------------------------------
+
+

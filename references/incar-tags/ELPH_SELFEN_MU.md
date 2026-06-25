@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_MU
-ELPH_SELFEN_MU = \[real array\]  
+
+
+ELPH_SELFEN_MU = \[real
+array\]  
 Default: **ELPH_SELFEN_MU** = 0.0 
 
 Description: List of chemical potentials at which to compute the
 phonon-mediated electron self-energy and transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -28,9 +31,10 @@ the [OUTCAR](../output-files/OUTCAR.md) file. For example
      Fermi energy:         3.5134142202
      Fermi energy:         3.5314189274 eV (dense k-point grid)
 
-In this example, `ELPH_SELFEN_MU`` = 0.1` means that the chemical
-potential will be set to (3.5314189274 + 0.1) eV. This can be verified
-`Chemical potential calculation` section of the
+In this example,
+`ELPH_SELFEN_MU`` = 0.1` means
+that the chemical potential will be set to (3.5314189274 + 0.1) eV. This
+can be verified `Chemical potential calculation` section of the
 [OUTCAR](../output-files/OUTCAR.md) file.
 
                       Number of electrons per cell
@@ -56,7 +60,8 @@ potential will be set to (3.5314189274 + 0.1) eV. This can be verified
 For each of these chemical potentials and temperatures, the number of
 electrons per cell is computed and reported. These, in turn, can be
 converted to a carrier density by dividing by the volume of the unit
-cell. If more than one value is present in ELPH_SELFEN_MU, more columns
+cell. If more than one value is present in
+ELPH_SELFEN_MU, more columns
 are added to the list of chemical potentials above and more instances of
 the electron self-energy
 [accumulators](../misc/Electron-phonon_accumulators.md)
@@ -71,7 +76,11 @@ ${m^{-3}}$ by using the
 [ELPH_SELFEN_CARRIER_DEN](ELPH_SELFEN_CARRIER_DEN.md)
 tag.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_MU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon
@@ -86,3 +95,5 @@ tag.
 - [ELPH_SELFEN_TEMPS_RANGE](ELPH_SELFEN_TEMPS_RANGE.md)
 - [NELECT](NELECT.md)
 - [ELPH_SELFEN_MU_RANGE](ELPH_SELFEN_MU_RANGE.md)
+
+

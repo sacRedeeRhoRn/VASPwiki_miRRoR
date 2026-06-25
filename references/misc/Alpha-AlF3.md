@@ -2,20 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Alpha-AlF3
-**Exercise :** Determine the ²⁷Al C_(q) value and the Al and F
-shieldings.
 
-α-AlF₃ crystallizes in the trigonal R -3c space group.
+
+*<u>Exercise :</u>* Determine the <sup>27</sup>Al C<sub>q</sub> value
+and the Al and F shieldings.
+
+α-AlF<sub>3</sub> crystallizes in the trigonal R -3c space group.
 
 a = b = 4.9305 Å; c = 12.4462 Å
 
 α = β = 90°; γ = 120°
 
 The unit cell contains two independent atoms (1 Al and 1 F) with 6
-formula units (AlF₃) per unit cell (Z=6). AlF₆ octahedron units are
-linked together by corner sharing. As the conventional unit cell is
-non-primitive, the primitive rhombohedral one is used for the
-calculation. It saves a lot of computational time !
+formula units (AlF<sub>3</sub>) per unit cell (Z=6). AlF<sub>6</sub>
+octahedron units are linked together by corner sharing. As the
+conventional unit cell is non-primitive, the primitive rhombohedral one
+is used for the calculation. It saves a lot of computational time !
 
 We suggest you to use vesta for generation the POSCAR file from the
 AlF3.cif file. In the standard export procedure, the POSCAR file is
@@ -24,11 +26,14 @@ atoms inside). Ask VESTA to reduce to unit cell to the primitive one.
 You will then have only 8 atoms in the POSCAR file.
 
 In this exercise one wants first to calculate the EFG tensor components
-of ²⁷Al. This is very fast task calculated at the end of the first SCF
-calculation (ground state property). The experimental values for the
-C_(q) is 0.21 MHz. The nuclear quadrupolar momentum used to transform
-EFG in C_(q) is Q = 14.66 10⁻³⁰ m² (see the paper of Sadoc *et al.*
-([http://www.sciencedirect.com/science/article/pii/S0926204014000022](http://www.sciencedirect.com/science/article/pii/S0926204014000022))
+of <sup>27</sup>Al. This is very fast task calculated at the end of the
+first SCF calculation (ground state property). The experimental values
+for the C<sub>q</sub> is 0.21 MHz. The nuclear quadrupolar momentum used
+to transform EFG in C<sub>q</sub> is Q = 14.66 10<sup>-30</sup>
+m<sup>2</sup> (see the paper of Sadoc *et al.* (<a
+href="http://www.sciencedirect.com/science/article/pii/S0926204014000022"
+class="external free"
+rel="nofollow">http://www.sciencedirect.com/science/article/pii/S0926204014000022</a>)
 (Flurine has a 1/2 nuclear spin, so Q is zero)
 
 In a second step one wants to calculate the shielding parameters for Al
@@ -42,7 +47,7 @@ Sadoc *et al.*
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
      SYSTEM       =  Al F3
      GGA          = PE
@@ -59,9 +64,10 @@ Ionic minimisation
      ISIF         = 2
      IBRION       = 2
 
-1.  [EDIFFG](../incar-tags/EDIFFG.md) = -2E-2
+1.  [EDIFFG](../incar-tags/EDIFFG.md)
+    = -2E-2
 
-&nbsp;
+<!-- -->
 
      POTIM        = 0.1
 
@@ -96,7 +102,7 @@ Chemical Shift
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     automatic mesh
     0
@@ -105,7 +111,7 @@ Chemical Shift
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     Al1 F3
     1.0
@@ -124,7 +130,14 @@ Chemical Shift
          0.250000000         0.177499995         0.250000000
          0.750000000         0.822499990         0.750000000
 
-## Download
-[AlF3_NMR.tgz](https://vasp.at/wiki/images/f/f7/AlF3_NMR.tgz "AlF3 NMR.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Alpha-AlF3&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/f/f7/AlF3_NMR.tgz" class="internal"
+title="AlF3 NMR.tgz">AlF3_NMR.tgz</a>
 
 ------------------------------------------------------------------------
+
+

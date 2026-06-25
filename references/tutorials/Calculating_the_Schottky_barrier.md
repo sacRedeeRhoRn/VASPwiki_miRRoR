@@ -2,37 +2,55 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Calculating the Schottky barrier
-The [Schottky
-barrier](https://en.wikipedia.org/wiki/Schottky_barrier%7C) is the
-energy barrier that forms at a metal–semiconductor junction. The barrier
-height is an important characteristic for charge transport across the
-junction and a critical parameter in the design of semiconductor
-contacts, transistors, and rectifying diodes. The p-type Schottky
-barrier height $\varphi_{\mathrm{p}}$
-describes the barrier seen by holes in the semiconductor valence band,
-and the n-type Schottky barrier height $\varphi_{\mathrm{n}}$ describes the barrier seen by electrons
-in the conduction band. In VASP, the potential alignment method can be
-used to estimate the Schottky
-barrier^([\[1\]](#cite_note-baldereschi:prl:1988-1)[\[2\]](#cite_note-peressi:1998-2)).
+
+
+The <a href="https://en.wikipedia.org/wiki/Schottky_barrier%7C"
+class="external text" rel="nofollow">Schottky barrier</a> is the energy
+barrier that forms at a metal–semiconductor junction. The barrier height
+is an important characteristic for charge transport across the junction
+and a critical parameter in the design of semiconductor contacts,
+transistors, and rectifying diodes. The p-type Schottky barrier height
+$\varphi_{\mathrm{p}}$ describes the barrier seen by
+holes in the semiconductor valence band, and the n-type Schottky barrier
+height $\varphi_{\mathrm{n}}$ describes the barrier seen by electrons in the
+conduction band. In VASP, the potential alignment method can be used to
+estimate the Schottky
+barrier<sup>[\[1\]](#cite_note-baldereschi:prl:1988-1)[\[2\]](#cite_note-peressi:1998-2)</sup>.
+
 
 ## Contents
 
-- [1 Required quantities](#Required_quantities)
-- [2 Step-by-step instructions](#Step-by-step_instructions)
-- [3 Example](#Example)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## Required quantities
+- [1 Required
+  quantities](#Required_quantities)
+- [2 Step-by-step
+  instructions](#Step-by-step_instructions)
+- [3
+  Example](#Example)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## Required quantities\[<a
+href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Required quantities">edit</a> \| (./index.php.md)\]
+
 Three quantities from bulk calculations, the Fermi energy
-$E_{\mathrm{F}}$ of the metal, and the
-valence-band maximum $E_{\mathrm{VBM}}$
-and band gap $E_{\mathrm{g}}$ of the
-semiconductor, are needed for the calculation. In addition, the
-macroscopic electrostatic potential difference $\Delta\bar{V}$ across the interface is extracted from a
-separate interface slab calculation^([\[3\]](#cite_note-3)).
+$E_{\mathrm{F}}$ of the metal, and the valence-band
+maximum $E_{\mathrm{VBM}}$ and band gap $E_{\mathrm{g}}$ of the semiconductor, are needed for the calculation.
+In addition, the macroscopic electrostatic potential difference
+$\Delta\bar{V}$ across the interface is extracted from a
+separate interface slab
+calculation<sup>[\[3\]](#cite_note-3)</sup>.
 
-## Step-by-step instructions
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Important:** For the calculation of the p- and n-type Schottky barriers, energies, and potentials from different VASP calculations are compared. It is crucial to set a single value for [ENCUT](../incar-tags/ENCUT.md) for all calculations. |
@@ -46,12 +64,15 @@ separate static calculation should be performed with a dense, Γ-centered
 [`ISMEAR`](../incar-tags/ISMEAR.md)` = -5` (tetrahedron method with Blöchl
 corrections), to get an accurate Fermi energy. It can be taken from the
 [OUTCAR](../output-files/OUTCAR.md) and is also easily accessible via
-[py4vasp](https://vasp.at/py4vasp/latest/index.html):
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a>:
+
 
     import py4vasp as pv
     calc = pv.Calculation.from_path("./Step1/")
     E_F = calc.dos.read()["fermi_energy"]
     print(f"E_F = {E_F:.4f} eV")
+
 
 **Step 2:** Compute the band gap and valence-band maximum of the
 semiconductor.
@@ -69,9 +90,12 @@ Generally, it is advisable to select
 output, and ideally to make a full [band-structure
 calculation](../categories/Category-Band_structure.md),
 since the extrema of the bands are often located at high-symmetry lines.
-The fundamental bandgap $E_{\mathrm{g}}$ and the valence-band maximum (VBM) $E_{\mathrm{VBM}}$, can be read from the
+The fundamental bandgap $E_{\mathrm{g}}$ and the valence-band maximum (VBM)
+$E_{\mathrm{VBM}}$, can be read from the
 [OUTCAR](../output-files/OUTCAR.md) file, or with
-[py4vasp](https://vasp.at/py4vasp/latest/index.html):
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a>:
+
 
     import py4vasp as pv
 
@@ -83,25 +107,28 @@ The fundamental bandgap $E_{\mathrm{g}}$ and the valence-band maximum (VBM) $E_{
     print(f"E_g   = {E_g:.4f} eV")
     print(f"E_VBM = {E_VBM:.4f} eV")
 
+
 **Step 3:** Build and relax an interface structure.
 
 Building a lattice-matched metal–semiconductor interface slab is outside
 the scope of this page. Tools such as the `CoherentInterfaceBuilder` in
-pymatgen^([\[4\]](#cite_note-pymatgen-4)) and the interface construction
-utilities in ASE^([\[5\]](#cite_note-ase-5)) can be used to construct
-the initial geometry. An interface structure for a Schottky barrier
-calculation should satisfy the following requirements:
+pymatgen<sup>[\[4\]](#cite_note-pymatgen-4)</sup>
+and the interface construction utilities in
+ASE<sup>[\[5\]](#cite_note-ase-5)</sup>
+can be used to construct the initial geometry. An interface structure
+for a Schottky barrier calculation should satisfy the following
+requirements:
 
 - *Low lattice mismatch.* The supercell should be chosen such that the
   in-plane periodicities of the two surfaces match to within ~2%,
   minimising artificial biaxial strain.
 
-&nbsp;
+<!-- -->
 
 - *Sufficient slab thickness.* Each material should contain enough
   layers that a bulk-like region exists in the centre.
 
-&nbsp;
+<!-- -->
 
 - *No vacuum region.* A cell with a vacuum will result in lateral
   strain, compressing the cell to reduce the surface energy. It is
@@ -129,15 +156,16 @@ setting
 It is also possible to use [`LVHAR`](../incar-tags/LVHAR.md)` = .TRUE.` to
 get the same data, but be aware that [LVTOT](../incar-tags/LVTOT.md) would
 include the (semi-)local exchange-correlation potential
-$V_{\text{xc}}(\mathbf{r})$, which we
-want to exclude here.
+$V_{\text{xc}}(\mathbf{r})$, which we want to exclude
+here.
 
-The planar average $\bar{V}(z)$ of the
-electrostatic potential is obtained by averaging the 3D potential over
-the in-plane (xy) grid at each $z$ point
+The planar average $\bar{V}(z)$
+of the electrostatic potential is obtained by averaging the 3D potential
+over the in-plane (xy) grid at each $z$ point
 (assuming the interface is located in the xy-plane). Then, a macroscopic
 average is computed by applying a uniform box-car convolution of window
-length $L$, where $L$ equals one bulk primitive-cell repeat period along the
+length $L$, where
+$L$ equals one bulk primitive-cell repeat period along the
 interface normal. Averaging over exactly one such period removes the
 short-range oscillations within each atomic layer while preserving the
 long-range potential step across the interface. The Python script below
@@ -149,7 +177,9 @@ from [vaspout.h5](../output-files/Vaspout.h5.md), computes both
 averages, plots the data and reports the macroscopic electrostatic
 potential difference $\Delta\bar{V}$:
 
+
 **Click to show python script**
+
 
     #!/usr/bin/env python3
     """
@@ -286,36 +316,35 @@ potential difference $\Delta\bar{V}$:
     print(f"<V_bar>_SC  = {V_SC:+.4f} eV")
     print(f"dV_bar      = <V_bar>_M - <V_bar>_SC = {delta_V:+.4f} eV")
 
+
 **Step 5:** Compute the Schottky barrier heights.
 
-With $E_{\mathrm{F}}$,
-$E_{\mathrm{VBM}}$,
-$E_{\mathrm{g}}$, and
-$\Delta\bar{V}$ in hand, the potential
-alignment difference $\Delta\bar{V} =
-\bar{V}_{\mathrm{m}} - \bar{V}_{\mathrm{sc}}$ connects the
-bulk reference frames. The p-type and n-type Schottky barrier heights
-are then
+With $E_{\mathrm{F}}$, $E_{\mathrm{VBM}}$, $E_{\mathrm{g}}$, and $\Delta\bar{V}$ in hand, the potential alignment difference
+$\Delta\bar{V} = \bar{V}_{\mathrm{m}} - \bar{V}_{\mathrm{sc}}$ connects the bulk reference frames. The p-type and
+n-type Schottky barrier heights are then
 
-$\varphi_{\mathrm{p}} = \Delta\bar{V} +
-E_{\mathrm{F}} - E_{\mathrm{VBM}},$
+$\varphi_{\mathrm{p}} = \Delta\bar{V} + E_{\mathrm{F}} -
+E_{\mathrm{VBM}},$
 
-$\varphi_{\mathrm{n}} = E_{\mathrm{g}} -
-\varphi_{\mathrm{p}}.$
+$\varphi_{\mathrm{n}} = E_{\mathrm{g}} - \varphi_{\mathrm{p}}.$
 
-## Example
+## Example\[<a
+href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
 Here we will consider the Al(111)/Si(111) interface. The bulk Al
 calculation to determine the Fermi energy is straightforward and yields
-$E_{\mathrm{F}}=8.085$ eV for the PBE
-functional with [`ENCUT`](../incar-tags/ENCUT.md)` = 300`,
+$E_{\mathrm{F}}=8.085$ eV for the PBE functional with
+[`ENCUT`](../incar-tags/ENCUT.md)` = 300`,
 [`KSPACING`](../incar-tags/KSPACING.md)` = 0.2`, and
 [`ISMEAR`](../incar-tags/ISMEAR.md)` = -5`.
 
 For the Si bandgap and valence band maximum, a little more care is
 needed. After relaxing with PBEsol to get the correct lattice parameter,
 a band structure calculation with the HSE06 functional yields a bandgap
-of $E_{\mathrm{g}}=1.160$ eV and a
-valence band maximum of $E_{\mathrm{VBM}}=5.449$ eV.
+of $E_{\mathrm{g}}=1.160$ eV and a valence band maximum of
+$E_{\mathrm{VBM}}=5.449$ eV.
 
 For Al(111) and Si(111), a 4×4 Al supercell matched to a 3×3 Si
 supercell achieves a mismatch of 0.9%. For this example, we chose 13 Al
@@ -326,7 +355,9 @@ bi-layer for each interface) with the [selective
 dynamics](../input-files/POSCAR.md) [POSCAR](../input-files/POSCAR.md)
 option. The relaxed structure with its 316 atoms is given here:
 
+
 **Click to show POSCAR**
+
 
     Al208 Si108                             
        1.00000000000000     
@@ -654,49 +685,72 @@ option. The relaxed structure with its 316 atoms is given here:
          0.1521943969003203    0.8206112061993666    0.6522258679919717   T   T   T
          0.1521943969003203    0.1521943969003203    0.6522258679919717   T   T   T
 
+
 After computing the electrostatic potential by setting
 [`WRT_POTENTIAL`](../incar-tags/WRT_POTENTIAL.md)` = hartree ionic`,
 [`PREC`](../incar-tags/PREC.md)` = Accurate`, and
 [`KSPACING`](../incar-tags/KSPACING.md)` = 0.2`, we can run the Python
 script referenced above in Step 4. For the Al(111)/Si(111) interface
-studied, we get the following results: $\bar{V}_{\mathrm{m}} = -0.694$ eV, $\bar{V}_{\mathrm{sc}} = +1.192$ eV, and
-$\Delta\bar{V} = -1.886$ eV.
+studied, we get the following results: $\bar{V}_{\mathrm{m}} = -0.694$ eV, $\bar{V}_{\mathrm{sc}} =
++1.192$ eV, and $\Delta\bar{V} = -1.886$ eV.
 
-[![](https://vasp.at/wiki/images/thumb/5/5e/Potential_alignment_Si111_Al111.png/800px-Potential_alignment_Si111_Al111.png)](https://vasp.at/wiki/File:Potential_alignment_Si111_Al111.png)
-
-Potential alignment plot for the Al(111) Si(111) interface.
+<figure class="mw-halign-center" typeof="mw:File/Thumb">
+<a href="/wiki/File:Potential_alignment_Si111_Al111.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/5/5e/Potential_alignment_Si111_Al111.png/800px-Potential_alignment_Si111_Al111.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/5/5e/Potential_alignment_Si111_Al111.png/1200px-Potential_alignment_Si111_Al111.png 1.5x, /wiki/images/5/5e/Potential_alignment_Si111_Al111.png 2x"
+width="800" height="320" /></a>
+<figcaption>Potential alignment plot for the Al(111) Si(111)
+interface.</figcaption>
+</figure>
 
 Finally, we arrive at the Schottky barriers:
 
-$\varphi_{\mathrm{p}} = \Delta\bar{V} +
-E_{\mathrm{F}} - E_{\mathrm{VBM}} = -1.886 + 8.085 - 5.449 = 0.75$ eV,
+$\varphi_{\mathrm{p}} = \Delta\bar{V} + E_{\mathrm{F}} -
+E_{\mathrm{VBM}} = -1.886 + 8.085 - 5.449 = 0.75$ eV,
 
 which fits well to the experimental values that vary between 0.68 and
 0.81 eV, depending on sample and experimental
-conditions^([\[6\]](#cite_note-altindal:2007-6)), and
+conditions<sup>[\[6\]](#cite_note-altindal:2007-6)</sup>,
+and
 
-$\varphi_{\mathrm{n}} = E_{\mathrm{g}} -
-\varphi_{\mathrm{p}} = 1.160 - 0.75 = 0.41$ eV.
+$\varphi_{\mathrm{n}} = E_{\mathrm{g}} - \varphi_{\mathrm{p}} =
+1.160 - 0.75 = 0.41$ eV.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LVHAR](../incar-tags/LVHAR.md),
 [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md),
 [BANDGAP](../incar-tags/BANDGAP.md), [Computing the work
 function](Computing_the_work_function.md)
 
-## References
-1.  [↑](#cite_ref-baldereschi:prl:1988_1-0) [A. Baldereschi, S. Baroni,
-    and R. Resta *Band offsets in lattice-matched heterojunctions: A
-    model and first-principles calculations for GaAs/AlAs*, Phys. Rev.
-    Lett. **61**, 734
-    (1988).](https://doi.org/10.1103/PhysRevLett.61.734)
-2.  [↑](#cite_ref-peressi:1998_2-0) [M. Peressi, M. Binggeli, and A.
-    Baldereschi *Band engineering at interfaces: theory and numerical
-    experiments*, J. Phys. D: Appl. Phys. **31**, 1273
-    (1998).](https://doi.org/10.1088/0022-3727/31/11/002)
-3.  [↑](#cite_ref-3) In VASP, the $\mathbf{G}=0$ Fourier component of the Hartree potential is set to zero
-    by convention, so all single-particle eigenvalues are already
-    referenced to the average electrostatic potential of their
+## References\[<a
+href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-baldereschi:prl:1988_1-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.61.734"
+    class="external text" rel="nofollow">A. Baldereschi, S. Baroni, and R.
+    Resta <em>Band offsets in lattice-matched heterojunctions: A model and
+    first-principles calculations for GaAs/AlAs</em>, Phys. Rev. Lett.
+    <strong>61</strong>, 734 (1988).</a>
+2.  [↑](#cite_ref-peressi:1998_2-0)
+    <a href="https://doi.org/10.1088/0022-3727/31/11/002"
+    class="external text" rel="nofollow">M. Peressi, M. Binggeli, and A.
+    Baldereschi <em>Band engineering at interfaces: theory and numerical
+    experiments</em>, J. Phys. D: Appl. Phys. <strong>31</strong>, 1273
+    (1998).</a>
+3.  [↑](#cite_ref-3)
+    In VASP, the
+    $\mathbf{G}=0$ Fourier component of the Hartree potential is set
+    to zero by convention, so all single-particle eigenvalues are
+    already referenced to the average electrostatic potential of their
     respective unit cell. As a consequence, $E_{\mathrm{F}}$ and $E_{\mathrm{VBM}}$ can be read directly from the bulk
     [OUTCAR](../output-files/OUTCAR.md) files without any further potential
     referencing, and only the interface calculation requires the
@@ -705,13 +759,18 @@ function](Computing_the_work_function.md)
     [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md) (recommended)
     or to [LOCPOT](../output-files/LOCPOT.md) via
     [LVHAR](../incar-tags/LVHAR.md) (legacy).
-4.  [↑](#cite_ref-pymatgen_4-0) [https://pymatgen.org/
-    (2022).](https://pymatgen.org/)
-5.  [↑](#cite_ref-ase_5-0) [https://wiki.fysik.dtu.dk/ase/
-    (2025).](https://wiki.fysik.dtu.dk/ase/)
-6.  [↑](#cite_ref-altindal:2007_6-0) [Ş. Altındal, H. Kanbur, A.
-    Tataroğlu, and M.M. Bülbül, *The barrier height distribution in
-    identically prepared Al/p-Si Schottky diodes with the native
-    interfacial insulator layer (SiO2)*, Physica B: Condensed Matter
-    **399**, 146-154
-    (2007).](https://doi.org/10.1016/j.physb.2007.06.002)
+4.  [↑](#cite_ref-pymatgen_4-0)
+    <a href="https://pymatgen.org/" class="external text"
+    rel="nofollow">https://pymatgen.org/ (2022).</a>
+5.  [↑](#cite_ref-ase_5-0)
+    <a href="https://wiki.fysik.dtu.dk/ase/" class="external text"
+    rel="nofollow">https://wiki.fysik.dtu.dk/ase/ (2025).</a>
+6.  [↑](#cite_ref-altindal:2007_6-0)
+    <a href="https://doi.org/10.1016/j.physb.2007.06.002"
+    class="external text" rel="nofollow">Ş. Altındal, H. Kanbur, A.
+    Tataroğlu, and M.M. Bülbül, <em>The barrier height distribution in
+    identically prepared Al/p-Si Schottky diodes with the native interfacial
+    insulator layer (SiO2)</em>, Physica B: Condensed Matter
+    <strong>399</strong>, 146-154 (2007).</a>
+
+

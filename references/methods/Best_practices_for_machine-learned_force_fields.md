@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Best practices for machine-learned force fields
+
+
 Using the [machine-learning-force-fields
 method](../categories/Category-Machine-learned_force_fields.md),
 VASP can construct force fields based on ab-initio simulations. When
@@ -15,47 +17,88 @@ projects. The basic steps required for machine learning force field
 page](Machine_learning_force_field_calculations-_Basics.md)
 on machine learning force field calculations.
 
+
 ## Contents
 
-- [1 Training](#Training)
-  - [1.1 Best practice training modes](#Best_practice_training_modes)
-    - [1.1.1 Treatment of the same atomic species in different
-      enviroments](#Treatment_of_the_same_atomic_species_in_different_enviroments)
-    - [1.1.2 Ab-initio calculation setup](#Ab-initio_calculation_setup)
-    - [1.1.3 Molecular dynamics setup](#Molecular_dynamics_setup)
-    - [1.1.4 General settings for on the fly
-      training](#General_settings_for_on_the_fly_training)
-  - [1.2 Retraining with re-selection of local reference
-    configurations](#Retraining_with_re-selection_of_local_reference_configurations)
-  - [1.3 Retraining with hyper-parameter
-    optimization](#Retraining_with_hyper-parameter_optimization)
-  - [1.4 Accuracy](#Accuracy)
-  - [1.5 Accurate force fields](#Accurate_force_fields)
-  - [1.6 Tuning on-the-fly parameters](#Tuning_on-the-fly_parameters)
-  - [1.7 Monitoring on-the-fly
-    learning](#Monitoring_on-the-fly_learning)
-- [2 Testing and application](#Testing_and_application)
-  - [2.1 Spilling factor: error estimates during production
-    runs](#Spilling_factor:_error_estimates_during_production_runs)
-  - [2.2 Test errors](#Test_errors)
-  - [2.3 Monitoring MLFF run with blocked
-    averages](#Monitoring_MLFF_run_with_blocked_averages)
-- [3 Performance](#Performance)
-  - [3.1 Computational efficiency in production
-    runs](#Computational_efficiency_in_production_runs)
-  - [3.2 Memory consumption](#Memory_consumption)
-  - [3.3 Reduction of memory consumption in on-the-fly
-    calculations](#Reduction_of_memory_consumption_in_on-the-fly_calculations)
-  - [3.4 Descriptor reduction in production
-    runs](#Descriptor_reduction_in_production_runs)
-    - [3.4.1 Reduced descriptors](#Reduced_descriptors)
-    - [3.4.2 Descriptor sparsification](#Descriptor_sparsification)
-- [4 Example](#Example)
-- [5 Related articles](#Related_articles)
-- [6 References](#References)
 
-## Training
-### Best practice training modes
+- [1
+  Training](#Training)
+  - [1.1 Best
+    practice training modes](#Best_practice_training_modes)
+    - [1.1.1
+      Treatment of the same atomic species in
+      different
+      enviroments](#Treatment_of_the_same_atomic_species_in_different_enviroments)
+    - [1.1.2
+      Ab-initio calculation
+      setup](#Ab-initio_calculation_setup)
+    - [1.1.3
+      Molecular dynamics
+      setup](#Molecular_dynamics_setup)
+    - [1.1.4
+      General settings for on the fly
+      training](#General_settings_for_on_the_fly_training)
+  - [1.2 Retraining
+    with re-selection of local reference
+    configurations](#Retraining_with_re-selection_of_local_reference_configurations)
+  - [1.3 Retraining
+    with hyper-parameter
+    optimization](#Retraining_with_hyper-parameter_optimization)
+  - [1.4
+    Accuracy](#Accuracy)
+  - [1.5 Accurate
+    force fields](#Accurate_force_fields)
+  - [1.6 Tuning
+    on-the-fly parameters](#Tuning_on-the-fly_parameters)
+  - [1.7 Monitoring
+    on-the-fly learning](#Monitoring_on-the-fly_learning)
+- [2 Testing and
+  application](#Testing_and_application)
+  - [2.1 Spilling
+    factor: error estimates during production
+    runs](#Spilling_factor:_error_estimates_during_production_runs)
+  - [2.2 Test
+    errors](#Test_errors)
+  - [2.3 Monitoring
+    MLFF run with blocked
+    averages](#Monitoring_MLFF_run_with_blocked_averages)
+- [3
+  Performance](#Performance)
+  - [3.1
+    Computational efficiency in production
+    runs](#Computational_efficiency_in_production_runs)
+  - [3.2 Memory
+    consumption](#Memory_consumption)
+  - [3.3 Reduction
+    of memory consumption in on-the-fly
+    calculations](#Reduction_of_memory_consumption_in_on-the-fly_calculations)
+  - [3.4 Descriptor
+    reduction in production
+    runs](#Descriptor_reduction_in_production_runs)
+    - [3.4.1
+      Reduced
+      descriptors](#Reduced_descriptors)
+    - [3.4.2
+      Descriptor
+      sparsification](#Descriptor_sparsification)
+- [4
+  Example](#Example)
+- [5 Related
+  articles](#Related_articles)
+- [6
+  References](#References)
+
+
+## Training\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Training">edit</a> \| (./index.php.md)\]
+
+### Best practice training modes\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Best practice training modes">edit</a> \| (./index.php.md)\]
+
 To start a training run, set [ML_MODE](../incar-tags/ML_MODE.md) =
 `TRAIN`. Depending on the existence of a valid
 [ML_AB](../input-files/ML_AB.md) in the folder where VASP is executed, one
@@ -73,7 +116,11 @@ of the two modes is automatically selected:
   then adding a molecule to the surface in the
   [POSCAR](../input-files/POSCAR.md) file and continuing the training.
 
-#### Treatment of the same atomic species in different enviroments
+#### Treatment of the same atomic species in different enviroments\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Treatment of the same atomic species in different enviroments">edit</a> \| (./index.php.md)\]
+
 Sometimes, it is helpful to treat atoms of the same element as separate
 species within an MLFF. This is especially important in structures where
 the atoms can have different oxidation states, or where both surface and
@@ -126,7 +173,8 @@ file would be modified as follows:
 
 The main disadvantage is decreased computational efficiency. The
 computational cost scales quadratically with the number of species.
-Using the [reduced descriptor](#Descriptor_reduction_in_production_runs)
+Using the <a href="#Descriptor_reduction_in_production_runs"
+class="mw-selflink-fragment">reduced descriptor</a>
 ([ML_DESC_TYPE](../incar-tags/ML_DESC_TYPE.md) = 1 ) can reduce this
 to linear scaling for major parts of the code, but even perfect linear
 scaling introduces noticeable overhead when increasing the number of
@@ -136,7 +184,11 @@ species.
 |----|
 | **Warning:** It is not possible to give the same name to different groups of atoms in the [POSCAR](../input-files/POSCAR.md) file and the names are restricted to two characters. |
 
-#### Ab-initio calculation setup
+#### Ab-initio calculation setup\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Ab-initio calculation setup">edit</a> \| (./index.php.md)\]
+
 The training mode requires VASP to perform ab-initio calculations, so
 the first step is to set up the [electronic
 minimization](../categories/Category-Electronic_minimization.md)
@@ -180,15 +232,20 @@ ab-initio computation during on-the-fly learning:
 |----|
 | **Warning:** It is very important to **not** change the ab-initio settings in the [INCAR](../input-files/INCAR.md) file between training from scratch and continuing training. Likewise, the [POTCAR](../input-files/POTCAR.md) file is **not** allowed to be changed when resuming training. |
 
-#### Molecular dynamics setup
+#### Molecular dynamics setup\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Molecular dynamics setup">edit</a> \| (./index.php.md)\]
+
 After the forces are obtained from electronic minimization by the
 [Hellmann-Feynman
 Theorem](../theory/Hellmann-Feynman_forces.md), VASP
 must propagate the ions to obtain a new configuration in phase space.
-For the molecular dynamics part, familiarity with setting up [molecular
-dynamics](../redirects/Molecular_dynamics.md) runs is
-beneficial. In addition, we recommend the following settings in the
-molecular dynamics part:
+For the molecular dynamics part, familiarity with setting up
+<a href="/wiki/Molecular_dynamics" class="mw-redirect"
+title="Molecular dynamics">molecular dynamics</a> runs is beneficial. In
+addition, we recommend the following settings in the molecular dynamics
+part:
 
 - Decrease the integration step ([POTIM](../incar-tags/POTIM.md)) if the
   system contains light elements, or increase the light element mass
@@ -216,8 +273,9 @@ molecular dynamics part:
   [here](../input-files/ICONST.md). For an example
   input for constraining the cell shape, see the
   [ICONST](../input-files/ICONST.md)
-  page or the [end of this page](#Example) page. The [NVT
-  ensemble](../misc/NVT_ensemble.md)
+  page or the
+  <a href="#Example" class="mw-selflink-fragment">end of this page</a>
+  page. The [NVT ensemble](../misc/NVT_ensemble.md)
   ([ISIF](../incar-tags/ISIF.md)=2) is also acceptable for training, but use
   the [Langevin
   thermostat](../tutorials/Langevin_thermostat.md) as it is
@@ -227,7 +285,11 @@ molecular dynamics part:
   material as possible. Therefore, one should always **avoid** training
   in the [NVE](../misc/NVE_ensemble.md) ensemble.
 
-#### General settings for on the fly training
+#### General settings for on the fly training\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: General settings for on the fly training">edit</a> \| (./index.php.md)\]
+
 The [ML_MODE](../incar-tags/ML_MODE.md)=TRAIN sets already widely used
 default values for on-the-fly training in machine learning.
 Nevertheless, we would like to provide the following guidelines for
@@ -261,7 +323,11 @@ setting individual machine-learning parameters:
   cannot be expected to provide reliable results for conditions for
   which training data have not been collected.
 
-### Retraining with re-selection of local reference configurations
+### Retraining with re-selection of local reference configurations\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Retraining with re-selection of local reference configurations">edit</a> \| (./index.php.md)\]
+
 This mode is selected with [ML_MODE](../incar-tags/ML_MODE.md)=SELECT. In
 this mode, a new machine-learned force field is generated from the
 ab-initio data provided in the [ML_AB](../input-files/ML_AB.md) file. The
@@ -299,7 +365,11 @@ configurations increases as [ML_CTIFOR](../incar-tags/ML_CTIFOR.md)
 becomes smaller. It is strongly recommended to perform a more accurate
 SVD-based refitting afterward.
 
-### Retraining with hyper-parameter optimization
+### Retraining with hyper-parameter optimization\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Retraining with hyper-parameter optimization">edit</a> \| (./index.php.md)\]
+
 After you have collected a sufficient number of local atomic reference
 configurations, as described in Training from scratch and Continuation
 training, it is recommended to optimize the parameters for your force
@@ -321,7 +391,8 @@ hyperparameters to improve the fitting error, which can be found in the
 [INCAR](../input-files/INCAR.md) file, then run VASP and check the error in
 the [ML_LOGFILE](../output-files/ML_LOGFILE.md). For more information on
 extracting errors from the [ML_LOGFILE](../output-files/ML_LOGFILE.md),
-see [here](#Monitoring_on-the-fly_learning). Adjusting the following
+see <a href="#Monitoring_on-the-fly_learning"
+class="mw-selflink-fragment">here</a>. Adjusting the following
 parameters may improve the quality of the force-fields:
 
 - Adjusting the cutoff radius for the angular and radial descriptor by
@@ -351,7 +422,11 @@ parameters may improve the quality of the force-fields:
 |----|
 | **Mind:** For fluids, reducing to [ML_LMAX2](../incar-tags/ML_LMAX2.md)=2 and [ML_RCUT2](../incar-tags/ML_RCUT2.md)=4 can lead to better fitting results. |
 
-### Accuracy
+### Accuracy\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Accuracy">edit</a> \| (./index.php.md)\]
+
 The achievable accuracy of the force fields depends on many factors,
 e.g. species, temperature, pressure, electronic convergence, machine
 learning method, etc. In our implementation of kernel ridge regression,
@@ -382,7 +457,11 @@ Here are some empirical guidelines:
   acceptable, but these calculations should be thoroughly checked for
   accuracy.
 
-### Accurate force fields
+### Accurate force fields\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Accurate force fields">edit</a> \| (./index.php.md)\]
+
 The default parameters that control learning and sampling are chosen to
 provide a good tradeoff between accuracy and efficiency. In particular,
 the default setting for [ML_EPS_LOW](../incar-tags/ML_EPS_LOW.md)
@@ -429,7 +508,11 @@ refinement with the default value
 [ML_SION1](../incar-tags/ML_SION1.md)=0.5 always improves the accuracy
 of the force field.
 
-### Tuning on-the-fly parameters
+### Tuning on-the-fly parameters\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Tuning on-the-fly parameters">edit</a> \| (./index.php.md)\]
+
 In case too many or too few training structures and local reference
 configurations are selected some on-the-fly parameters can be tuned (for
 an overview of the learning and threshold algorithms we may refer
@@ -514,7 +597,11 @@ an overview of the learning and threshold algorithms we may refer
   In this case, the code disposes of local reference configurations
   whenever the threshold is reached. It does this species dependent.
 
-### Monitoring on-the-fly learning
+### Monitoring on-the-fly learning\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Monitoring on-the-fly learning">edit</a> \| (./index.php.md)\]
+
 The monitoring of your learning can be divided into two parts:
 
 - Molecular dynamics/ensemble-related quantities:
@@ -579,15 +666,15 @@ The monitoring of your learning can be divided into two parts:
     deformations of the system that should be looked into carefully.
   - `LCONF`: Number of local configurations at each learning step.
   - `ERR`: Root mean square error of predicted energy, forces, and
-    stress ($O$) concerning ab-initio
-    data for all training structures up to the current
-    molecular-dynamics step $\Delta
-    O=\sqrt{\sum\limits_{N}(O_{\mathrm{AI}}-O_{\mathrm{MLFF}})^{2}/N}$. Here $N$ goes over all
-    training structures for the energies, element-wise over each
-    training structure, times the number of atoms per structure times
-    three Cartesian directions for the forces, and element-wise for each
-    training structure times nine tensor components for the stress
-    tensor.
+    stress ($O$)
+    concerning ab-initio data for all training structures up to the
+    current molecular-dynamics step $\Delta
+    O=\sqrt{\sum\limits_{N}(O_{\mathrm{AI}}-O_{\mathrm{MLFF}})^{2}/N}$. Here $N$ goes
+    over all training structures for the energies, element-wise over
+    each training structure, times the number of atoms per structure
+    times three Cartesian directions for the forces, and element-wise
+    for each training structure times nine tensor components for the
+    stress tensor.
   - `BEEF`: Estimated Bayesian error of energy, forces, and stress
     (columns 3-5). The current threshold for the maximum Bayesian error
     of forces [ML_CTIFOR](../incar-tags/ML_CTIFOR.md) on column 6.
@@ -599,12 +686,18 @@ A typical evolution of the real errors (column 4 of `ERR`), Bayesian
 errors (column 4 of `BEEF`), and threshold (column 6 of `BEEF`) for the
 forces looks like the following:
 
-[![500ex](https://vasp.at/wiki/images/7/77/ERR_BEEF_CTIFOR_vs_MD_step.png)](https://vasp.at/wiki/File:ERR_BEEF_CTIFOR_vs_MD_step.png "500ex")
+<a href="/wiki/File:ERR_BEEF_CTIFOR_vs_MD_step.png"
+class="mw-file-description" title="500ex"><img
+src="https://vasp.at/wiki/images/7/77/ERR_BEEF_CTIFOR_vs_MD_step.png"
+class="mw-file-element" decoding="async" width="640" height="480"
+alt="500ex" /></a>
 
 The following commands were used to extract the errors from the
 [ML_LOGFILE](../output-files/ML_LOGFILE.md):
 
+
 **Click to show commands**
+
 
 `grep ERR ML_LOGFILE|grep -v "#"|awk '{print $2, $4}' > ERR.dat`
 
@@ -612,9 +705,12 @@ The following commands were used to extract the errors from the
 
 `grep BEEF ML_LOGFILE|grep -v "#"|awk '{print $2, $6}' > CTIFOR.dat`
 
+
 The following gnuplot script was used to plot the errors:
 
+
 **Click to show plot_errors.gnuplot**
+
 
     set key left top
     set xlabel "Molecular-dynamics step"
@@ -626,6 +722,7 @@ The following gnuplot script was used to plot the errors:
     plot "ERR.dat" using 1:2 with lines lw 2 lt rgb "#2fb5ab" title "ERR", \
          "BEEF.dat" using 1:2 with lines lw 2 lt rgb "#808080" title "BEEF", \
          "CTIFOR.dat" using 1:2 with lines lw 2 lt rgb "#a82c35" title "CTIFOR"
+
 
 - From the plot one can see that the Bayesian errors are always smaller
   than the real errors. Bayesian inference catches errors in the data
@@ -654,7 +751,11 @@ The following gnuplot script was used to plot the errors:
     happens one should start to reduce the fitting data by increasing
     [ML_EPS_LOW](../incar-tags/ML_EPS_LOW.md).
 
-## Testing and application
+## Testing and application\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Testing and application">edit</a> \| (./index.php.md)\]
+
 When running force-field-only calculations
 ([ML_MODE](../incar-tags/ML_MODE.md)=RUN) set the ab-initio parameters to
 small values (this is automatically done for some tags, i.e.
@@ -662,7 +763,11 @@ small values (this is automatically done for some tags, i.e.
 of KS orbitals although they are not used during the molecular dynamics
 run with machine learning.
 
-### Spilling factor: error estimates during production runs
+### Spilling factor: error estimates during production runs\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Spilling factor: error estimates during production runs">edit</a> \| (./index.php.md)\]
+
 Using the [spilling
 factor](Machine_learning_force_field-_Theory.md)
 one can measure the error during the production runs. To do so one has
@@ -687,12 +792,12 @@ factor](Machine_learning_force_field-_Theory.md)
 measures the similarity of the local environment of each atom in the
 current structure to that of the local reference configurations of the
 force field. The values of the spilling factor are in the range
-$\[0,1\]$. lf the atomic environment is
-"properly" represented by the local reference configurations the
-spilling factor approaches 0. Vice versa the spilling factor approaches
-quickly 1, meaning that the force field is probably extrapolating.
-Molecular dynamics trajectories where the spilling factor is most of the
-time 1 can still lead to good results, but the calculations should be
+$\[0,1\]$. lf the atomic environment is "properly"
+represented by the local reference configurations the spilling factor
+approaches 0. Vice versa the spilling factor approaches quickly 1,
+meaning that the force field is probably extrapolating. Molecular
+dynamics trajectories where the spilling factor is most of the time 1
+can still lead to good results, but the calculations should be
 cautiously used.
 
 Besides being able to monitor the accuracy during the production runs
@@ -704,9 +809,14 @@ out for each structure. Using the spilling factor the error is directly
 assessed without the need for ab initio calculations making the
 procedure orders of magnitude faster and easier to handle (no evaluation
 script needed). Nevertheless, if one wants to measure the true error on
-a test set we have described how to [below](#Test_errors).
+a test set we have described how to
+<a href="#Test_errors" class="mw-selflink-fragment">below</a>.
 
-### Test errors
+### Test errors\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Test errors">edit</a> \| (./index.php.md)\]
+
 To assess the predictive power of your MLFF, start by generating a test
 set reflecting the conditions your force field will encounter. A good
 way to get test structures is to conduct a molecular dynamics (MD) run
@@ -723,8 +833,8 @@ increased number of MD steps and ab-initio calculations.
 
 For a comprehensive error analysis, compare ab-initio forces, stress,
 and energies with MLFF predictions. Below is a code snippet utilizing
-[py4vasp](https://vasp.at/py4vasp/latest/index.html) to guide your
-analysis:
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> to guide your analysis:
 
      from py4vasp import MLFFErrorAnalysis
      from py4vasp import plot
@@ -748,7 +858,11 @@ Consider properties like radial distribution functions, relaxed lattice
 parameters, phonons, elastic constants, relative energies of phases and
 defect formation energies, to name a few.
 
-### Monitoring MLFF run with blocked averages
+### Monitoring MLFF run with blocked averages\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Monitoring MLFF run with blocked averages">edit</a> \| (./index.php.md)\]
+
 In each application, it is essential to carefully control the ensemble
 conditions, such as temperature, pressure, and volume. Achieving a
 specific condition requires allowing the system sufficient time to
@@ -763,14 +877,19 @@ alternative way to monitor the convergence of the observables is via
 statistical methods. For that block averages are a very good method.
 Explaining the method here would go beyond the scope of this paragraph,
 but the theory and the implementation of the method are nicely explained
-in appendix D3 of Ref. ^([\[1\]](#cite_note-frenkel:book:1996-1)). At
-the moment the user has to implement this post-calculation analysis
+in appendix D3 of Ref.
+<sup>[\[1\]](#cite_note-frenkel:book:1996-1)</sup>.
+At the moment the user has to implement this post-calculation analysis
 himself, but we strongly advise to do so. The requirement of having
 properly relaxed structures is further intensified for [advanced
 molecular-dynamics sampling
 methods](../categories/Category-Advanced_molecular-dynamics_sampling.md).
 
-## Performance
+## Performance\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Performance">edit</a> \| (./index.php.md)\]
+
 The machine learning code is parallelized using MPI. It is most
 efficient if scaLAPACK is used since storing (and working on) large
 matrices, in particular the design matrix, will then be distributed over
@@ -783,7 +902,11 @@ due to the high memory demand, the LAPACK version is not feasible for
 |----|
 | **Warning:** When compiling with shared memory MPI support (-Duse_shmem), it is utterly important to pin the MPI ranks to the physical cores of the node. For guidance on how to understand the hardware topology of your system and how to correctly set up rank pinning accordingly, refer to [here](../tutorials/Optimizing_the_parallelization.md). |
 
-### Computational efficiency in production runs
+### Computational efficiency in production runs\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: Computational efficiency in production runs">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Tip:** The most important step towards efficient production runs is to apply [`ML_MODE`](../incar-tags/ML_MODE.md)` = refit` in order to obtain an [ML_FFN](../output-files/ML_FFN.md) force field file which supports the fast prediction mode (available as of VASP 6.4.0). Please have a look at step 4 in the [basic step-by-step instructions](Machine_learning_force_field_calculations-_Basics.md). Whether your force field file supports fast prediction can be checked in the [file header](../output-files/ML_FFN.md) (independent of running VASP) or in the [ML_LOGFILE](../output-files/ML_LOGFILE.md) (after starting [`ML_MODE`](../incar-tags/ML_MODE.md)` = run`). Speedups with respect to a force field file without support for fast prediction mode are typically of the order 20 to 100. |
@@ -823,7 +946,11 @@ frequency. The following flags can be used for that:
   this tag to 0 the calculation and output of the pair correlation
   function can be completely turned off.
 
-### Memory consumption
+### Memory consumption\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Memory consumption">edit</a> \| (./index.php.md)\]
+
 To achieve optimal performance, the code utilizes varied array
 distribution and parallelization strategies. Certain sections are
 optimized for scaLAPACK with a block-cyclic distribution, resulting in
@@ -934,7 +1061,11 @@ memory (precompiler option *use_shmem*).
 |----|
 | **Mind:** The most memory-consuming parts (design matrix, covariance matrix) are well distributed over multiple nodes. Hence if one runs out of memory one should try increasing the number of used nodes until the job fits into the combined memory of all nodes. |
 
-### Reduction of memory consumption in on-the-fly calculations
+### Reduction of memory consumption in on-the-fly calculations\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: Reduction of memory consumption in on-the-fly calculations">edit</a> \| (./index.php.md)\]
+
 On-the-fly learning can be a very memory-intensive task since both the
 machine learning and the ab-initio calculations have to share the
 available memory simultaneously. This is especially true for systems
@@ -981,7 +1112,11 @@ sampling:
 - Last as usual do the refit with
   [ML_MODE](../incar-tags/ML_MODE.md)=*refit*.
 
-### Descriptor reduction in production runs
+### Descriptor reduction in production runs\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: Descriptor reduction in production runs">edit</a> \| (./index.php.md)\]
+
 Since in production runs the computational efficiency is hugely
 determined by the calculation of descriptors and their derivatives, a
 reduction of the number of three-body descriptors is highly desired. A
@@ -1009,7 +1144,11 @@ file and used from there.
 |----|
 | **Mind:** We strongly advice to use the reduced descriptor ([ML_DESC_TYPE](../incar-tags/ML_DESC_TYPE.md)=1) in mult-component systems. |
 
-#### Reduced descriptors
+#### Reduced descriptors\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=22"
+class="mw-editsection-visualeditor"
+title="Edit section: Reduced descriptors">edit</a> \| (./index.php.md)\]
+
 The reduced descriptor is selected by specifying
 [ML_DESC_TYPE](../incar-tags/ML_DESC_TYPE.md)=1. The reduction is
 done over the number of element types. The standard three-body
@@ -1022,7 +1161,11 @@ that the structure is less likely to go onto trajectories that would
 descriptor results in a 5-20% reduced accuracy compared to the standard
 descriptor.
 
-#### Descriptor sparsification
+#### Descriptor sparsification\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=23"
+class="mw-editsection-visualeditor"
+title="Edit section: Descriptor sparsification">edit</a> \| (./index.php.md)\]
+
 Sparsification of the three-body descriptors is controlled mainly by the
 following tags:
 
@@ -1032,10 +1175,11 @@ following tags:
   tag controls the extent, by specifying the fraction of remaining
   descriptors after sparsification.
 
-In the following two figures, [Pareto
-fronts](https://en.wikipedia.org/wiki/Pareto_front) (accuracy of forces
-versus calculation time) for the molecules Ethanol and Azobenzene are
-shown. The points with increasing accuracy belong to fits with an
+In the following two figures,
+<a href="https://en.wikipedia.org/wiki/Pareto_front"
+class="external text" rel="nofollow">Pareto fronts</a> (accuracy of
+forces versus calculation time) for the molecules Ethanol and Azobenzene
+are shown. The points with increasing accuracy belong to fits with an
 increasing number of training structures. The following abbreviations
 are used:
 
@@ -1053,12 +1197,21 @@ are used:
 
 Pareto front for Ethanol:
 
-[![](https://vasp.at/wiki/images/thumb/e/ea/Pareto_Ethanol.png/500px-Pareto_Ethanol.png)](https://vasp.at/wiki/File:Pareto_Ethanol.png)
+<a href="/wiki/File:Pareto_Ethanol.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/ea/Pareto_Ethanol.png/500px-Pareto_Ethanol.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/ea/Pareto_Ethanol.png/750px-Pareto_Ethanol.png 1.5x, /wiki/images/thumb/e/ea/Pareto_Ethanol.png/1000px-Pareto_Ethanol.png 2x"
+width="500" height="375" /></a>
 
   
 Pareto front for Azobenzene:
 
-[![](https://vasp.at/wiki/images/thumb/8/8d/Pareto_Azobenzene.png/500px-Pareto_Azobenzene.png)](https://vasp.at/wiki/File:Pareto_Azobenzene.png)
+<a href="/wiki/File:Pareto_Azobenzene.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/8d/Pareto_Azobenzene.png/500px-Pareto_Azobenzene.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/8/8d/Pareto_Azobenzene.png/750px-Pareto_Azobenzene.png 1.5x, /wiki/images/thumb/8/8d/Pareto_Azobenzene.png/1000px-Pareto_Azobenzene.png 2x"
+width="500" height="375" /></a>
 
 For both molecules, there is almost no effect on the accuracy with
 [ML_RDES_SPARSDES](../incar-tags/ML_RDES_SPARSDES.md)=0.5 (50%
@@ -1083,7 +1236,11 @@ descriptor. This is to some extent also intuitive, since it is harder to
 throw away *insignificant* descriptors from an already reduced or
 *sparsified* pool of descriptors.
 
-## Example
+## Example\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=24"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
 Sample input for learning of liquid water in the [NpT
 ensemble](../misc/NpT_ensemble.md) at 0.001 kB using a
 temperature ramp.
@@ -1154,7 +1311,9 @@ temperature ramp.
 
 [POSCAR](../input-files/POSCAR.md):
 
+
 **Click to show POSCAR**
+
 
     H2O_liquid
        1.00000000000000
@@ -1354,7 +1513,12 @@ temperature ramp.
       0.8956869974284227 -0.0586980011006573  0.0867714766274296
       0.7097227556462733  0.9934862114531017  0.2391419679113634
 
-## Related articles
+
+## Related articles\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=25"
+class="mw-editsection-visualeditor"
+title="Edit section: Related articles">edit</a> \| (./index.php.md)\]
+
 [Machine-learned force
 fields](../categories/Category-Machine-learned_force_fields.md),
 [Ionic
@@ -1364,7 +1528,15 @@ dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics),
 [Machine learning force field calculations:
 Basics](Machine_learning_force_field_calculations-_Basics.md)
 
-## References
-1.  [↑](#cite_ref-frenkel:book:1996_1-0) [D. Frenkel and B. Smit,
-    Understanding Molecular Simulation (Academic Press, London,
-    1996).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)
+## References\[<a
+href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;veaction=edit&amp;section=26"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-frenkel:book:1996_1-0)
+    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
+    class="external text" rel="nofollow">D. Frenkel and B. Smit,
+    Understanding Molecular Simulation (Academic Press, London, 1996).</a>
+
+

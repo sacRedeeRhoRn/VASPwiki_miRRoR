@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PHON_TLIST
+
+
 PHON_TLIST = \[real array\]  
 Default: **PHON_TLIST** = none 
 
 Description: Provides the list of temperatures for that the
 electron-phonon interaction using the ZG
-configuration^([\[1\]](#cite_note-zacharias:prb:2016-1)) is evaluated.
+configuration<sup>[\[1\]](#cite_note-zacharias:prb:2016-1)</sup>
+is evaluated.
 
 ------------------------------------------------------------------------
 
@@ -15,11 +18,15 @@ For further usage of this tag see: [Electron-phonon interactions from
 Monte-Carlo
 sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md).
 
-|                                                       |
-|-------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This feature is available for VASP \>= 6.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PHON_TLIST&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Electron-phonon interactions from Monte-Carlo
 sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md),
 [PHON_LMC](PHON_LMC.md),
@@ -28,9 +35,18 @@ sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-PHON_TLIST-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-zacharias:prb:2016_1-0) [M. Zacharias and F. Giustino,
-    Phys. Rev. B **94**, 075125
-    (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
+## References\[<a
+href="/wiki/index.php?title=PHON_TLIST&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-zacharias:prb:2016_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
+    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
+    Rev. B <strong>94</strong>, 075125 (2016).</a>
+
 
 ------------------------------------------------------------------------
+
+

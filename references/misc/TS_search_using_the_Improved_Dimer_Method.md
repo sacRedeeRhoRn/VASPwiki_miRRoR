@@ -2,13 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # TS search using the Improved Dimer Method
+
+
 Description:
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = Ammonia flipping
     IBRION = 44
@@ -18,7 +20,7 @@ Description:
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -27,7 +29,7 @@ Description:
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     ammonia flipping
       1.00000000000000
@@ -47,14 +49,23 @@ Description:
     -0.000004   -0.000001    0.511988
      0.000000    0.000000   -0.111986
 
-## Download
-[ammonia_flipping.tgz, sub-folder
-improved_dimer](http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz)
+## Download\[<a
+href="/wiki/index.php?title=TS_search_using_the_Improved_Dimer_Method&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz"
+class="external text" rel="nofollow">ammonia_flipping.tgz, sub-folder
+improved_dimer</a>
 
 ------------------------------------------------------------------------
 
-[To the list of
-examples](https://vasp.at/wiki/index.php/index.php)")
-or to the [main page](The_VASP_Manual.md)
+<a
+href="/wiki/index.php?title=VASP_example_calculations&amp;action=edit&amp;redlink=1"
+class="new" title="VASP example calculations (page does not exist)">To
+the list of examples</a> or to the [main
+page](The_VASP_Manual.md)
 
   
+
+

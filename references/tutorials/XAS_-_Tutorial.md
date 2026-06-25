@@ -2,9 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # XAS - Tutorial
-Overview \> [XANES in
-Diamond](../misc/XANES_in_Diamond.md) \> [List of
-tutorials](../categories/Category-Tutorials.md)
+
+
+
+Overview \>
+[XANES in
+Diamond](../misc/XANES_in_Diamond.md) \>
+[List of tutorials](../categories/Category-Tutorials.md)
+
 
 This tutorial explains how to calculate the X-ray absorption spectrum
 (XAS) of a given compound in particular the edge and near edge region.
@@ -15,4 +20,7 @@ This tutorial requires VASP 6.0 or higher.
 
 The tutorial is made of the following parts:
 
+
 1.  [XANES in Diamond](../misc/XANES_in_Diamond.md)
+
+

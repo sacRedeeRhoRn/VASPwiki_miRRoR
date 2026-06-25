@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # TS search using the NEB Method
+
+
 Description: the Nudged Elastic Band Method generates an energy profile
 along a reaction path, using equidistant IMAGES along the path. The
 input geometries of the IMAGES are interpolated between the geometries
@@ -18,7 +20,7 @@ an integer multiple of the number of IMAGES.
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = Ammonia flipping
     IMAGES = 6
@@ -33,7 +35,7 @@ an integer multiple of the number of IMAGES.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -44,7 +46,7 @@ an integer multiple of the number of IMAGES.
 
 - [POSCAR](../input-files/POSCAR.md)\_if
 
-&nbsp;
+<!-- -->
 
     ammonia flipping
       1.00000000000000
@@ -69,14 +71,23 @@ an integer multiple of the number of IMAGES.
      0.363572  0.567457  0.4508355
      0.500000  0.500000  0.5000000
 
-## Download
-[ammonia_flipping.tgz, sub-folder
-NEB](http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz)
+## Download\[<a
+href="/wiki/index.php?title=TS_search_using_the_NEB_Method&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz"
+class="external text" rel="nofollow">ammonia_flipping.tgz, sub-folder
+NEB</a>
 
 ------------------------------------------------------------------------
 
-[To the list of
-examples](https://vasp.at/wiki/index.php/index.php)")
-or to the [main page](The_VASP_Manual.md)
+<a
+href="/wiki/index.php?title=VASP_example_calculations&amp;action=edit&amp;redlink=1"
+class="new" title="VASP example calculations (page does not exist)">To
+the list of examples</a> or to the [main
+page](The_VASP_Manual.md)
 
   
+
+

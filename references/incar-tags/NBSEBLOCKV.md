@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NBSEBLOCKV
+
+
 NBSEBLOCKV = \[integer\] 
 
 |                         |      |     |
 |-------------------------|------|-----|
 | Default: **NBSEBLOCKV** | = -1 |     |
 
-Description: NBSEBLOCKV specifies the blocking factor for the unoccupied
-states when setting up the BSE Hamiltonian.
+Description: NBSEBLOCKV
+specifies the blocking factor for the unoccupied states when setting up
+the BSE Hamiltonian.
 
 ------------------------------------------------------------------------
 
@@ -18,21 +21,19 @@ parallelized over **k**-points, such that each MPI rank can compute a
 pair of **k**-points. This way the BSE Hamiltonian setup can be
 parallelized with
 
-$\text{total
-ranks}=\mathrm{NKPTS\times(NKPTS+1)/2}$
+$\text{total ranks}=\mathrm{NKPTS\times(NKPTS+1)/2}$
 
 or for spin-polarized case
 
-$\text{total ranks}=\mathrm{NKPTS\times
-2\times(NKPTS\times 2+1)/2}$,
+$\text{total ranks}=\mathrm{NKPTS\times 2\times(NKPTS\times 2+1)/2}$,
 
-where $\mathrm{NKPTS}$ is the total
-number of **k**-points in the full Brillouin zone. However, if a large
-number of MPI ranks is used in a calculation with too few **k**-point,
-this leads to load imbalance, where some of the MPI ranks will have no
-data to compute. In such cases, it is recommended to use parallelization
-over bands. If the parallelization over bands is used, all occupied
-(unoccupied) bands are divided into
+where $\mathrm{NKPTS}$ is the total number of **k**-points in the full
+Brillouin zone. However, if a large number of MPI ranks is used in a
+calculation with too few **k**-point, this leads to load imbalance,
+where some of the MPI ranks will have no data to compute. In such cases,
+it is recommended to use parallelization over bands. If the
+parallelization over bands is used, all occupied (unoccupied) bands are
+divided into
 
 $\mathrm{NBLKO=NBANDSO/NBSEBLOCKO}$
 
@@ -45,34 +46,40 @@ blocks, respectively.
 Such a band blocking allows VASP to parallelize the setup of the matrix
 with
 
-$\text{total ranks}=\mathrm{NBLKO\times
-NBLKV\times NKPTS\times (NBLKO\times NBLKV\times NKPTS+1)/2}$
+$\text{total ranks}=\mathrm{NBLKO\times NBLKV\times NKPTS\times
+(NBLKO\times NBLKV\times NKPTS+1)/2}$
 
 or for spin-polarized case
 
-$\text{total ranks}=\mathrm{NBLKO\times
-NBLKV\times NKPTS\times 2\times (NBLKO\times NBLKV\times NKPTS\times
-2+1)/2}$
+$\text{total ranks}=\mathrm{NBLKO\times NBLKV\times NKPTS\times 2\times
+(NBLKO\times NBLKV\times NKPTS\times 2+1)/2}$
 
-If neither $\mathrm{NBSEBLOCKV}$ nor
-$\mathrm{NBSEBLOCKO}$ is specified, no
-paralliziation over bands is used and $\mathrm{NBLKO=1}$ and $\mathrm{NBLKV=1}$.
+If neither $\mathrm{NBSEBLOCKV}$ nor $\mathrm{NBSEBLOCKO}$ is specified, no paralliziation over bands is used and
+$\mathrm{NBLKO=1}$ and $\mathrm{NBLKV=1}$.
 
 |  |
 |----|
 | **Mind:** Parallelization over bands with NBSEBLOCKV does not work with the old BSE driver, i.e., [IBSE](IBSE.md)=0 |
 
 We recommend using parallelization over bands only if the number of MPI
-ranks in the calculation exceeds $\text{total
-ranks}$.
+ranks in the calculation exceeds $\text{total ranks}$.
 
 |  |
 |----|
 | **Mind:** The NBSEBLOCKV and [NBSEBLOCKO](NBSEBLOCKO.md) tags are available as of VASP.6.5.0 |
 
-## Related tags and sections
-[BSE](../redirects/BSE.md), [NBSEBLOCKO](NBSEBLOCKO.md),
-[BSE calculations](../redirects/BSE_calculations.md), [TDDFT
-calculations](../redirects/TDDFT_calculations.md)
+## Related tags and sections\[<a
+href="/wiki/index.php?title=NBSEBLOCKV&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/BSE" class="mw-redirect" title="BSE">BSE</a>,
+[NBSEBLOCKO](NBSEBLOCKO.md),
+<a href="/wiki/BSE_calculations" class="mw-redirect"
+title="BSE calculations">BSE calculations</a>,
+<a href="/wiki/TDDFT_calculations" class="mw-redirect"
+title="TDDFT calculations">TDDFT calculations</a>
 
 ------------------------------------------------------------------------
+
+

@@ -2,58 +2,78 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VASP workshop 2003
-### Lectures
-[Introduction to Computational
-Materials](http://cms.mpi.univie.ac.at/vasp-workshop/slides/comput_mat.pdf)
 
-[Introduction to
-DFT](http://cms.mpi.univie.ac.at/vasp-workshop/slides/dft_introd.pdf)
 
-[Pseudopotentials
-I](http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudopp1.pdf)
+### Lectures\[<a
+href="/wiki/index.php?title=VASP_workshop_2003&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Lectures">edit</a> \| (./index.php.md)\]
 
-[Pseudopotentials
-II](http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudopp2.pdf)
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/comput_mat.pdf"
+class="external text" rel="nofollow">Introduction to Computational
+Materials</a>
 
-[Sampling the Brillouin
-zone](http://cms.mpi.univie.ac.at/vasp-workshop/slides/k-points.pdf)
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/dft_introd.pdf"
+class="external text" rel="nofollow">Introduction to DFT</a>
 
-[Ionic relaxation
-methods](http://cms.mpi.univie.ac.at/vasp-workshop/slides/optionic.pdf)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudopp1.pdf"
+class="external text" rel="nofollow">Pseudopotentials I</a>
 
-[Electronic relaxation
-methods](http://cms.mpi.univie.ac.at/vasp-workshop/slides/optelectron.pdf)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudopp2.pdf"
+class="external text" rel="nofollow">Pseudopotentials II</a>
 
-[Computational
-Platforms](http://cms.mpi.univie.ac.at/vasp-workshop/slides/performance.pdf)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/k-points.pdf"
+class="external text" rel="nofollow">Sampling the Brillouin zone</a>
 
-[Accuracy and Validation of
-results](http://cms.mpi.univie.ac.at/vasp-workshop/slides/accuracy.pdf)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/optionic.pdf"
+class="external text" rel="nofollow">Ionic relaxation methods</a>
 
-[Pseudopotential Data
-Base](http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudoppdatabase.pdf)
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/optelectron.pdf"
+class="external text" rel="nofollow">Electronic relaxation methods</a>
 
-[DFT in
-depth](http://cms.mpi.univie.ac.at/vasp-workshop/slides/dft_depth.pdf)
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/performance.pdf"
+class="external text" rel="nofollow">Computational Platforms</a>
 
-[Unpaired electrons in
-DFT](http://cms.mpi.univie.ac.at/vasp-workshop/slides/magnetism.pdf)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/accuracy.pdf"
+class="external text" rel="nofollow">Accuracy and Validation of
+results</a>
 
-### Exercises
-[Hands-on session
-1](http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonI.pdf),[Example
-files](http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson1.tgz)
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/pseudoppdatabase.pdf"
+class="external text" rel="nofollow">Pseudopotential Data Base</a>
 
-[Hands-on session
-2](http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonII.pdf),[Example
-files](http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson2.tgz)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/dft_depth.pdf"
+class="external text" rel="nofollow">DFT in depth</a>
 
-[Hands-on session
-3](http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonIII.pdf),[Example
-files](http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson3.tgz)
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/magnetism.pdf"
+class="external text" rel="nofollow">Unpaired electrons in DFT</a>
 
-[Hands-on session
-4](http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonIV.pdf),[Example
-files](http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson4.tgz)
+### Exercises\[<a
+href="/wiki/index.php?title=VASP_workshop_2003&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Exercises">edit</a> \| (./index.php.md)\]
+
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonI.pdf"
+class="external text" rel="nofollow">Hands-on session 1</a>,<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson1.tgz"
+class="external text" rel="nofollow">Example files</a>
+
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonII.pdf"
+class="external text" rel="nofollow">Hands-on session 2</a>,<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson2.tgz"
+class="external text" rel="nofollow">Example files</a>
+
+<a
+href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonIII.pdf"
+class="external text" rel="nofollow">Hands-on session 3</a>,<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson3.tgz"
+class="external text" rel="nofollow">Example files</a>
+
+<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/handsonIV.pdf"
+class="external text" rel="nofollow">Hands-on session 4</a>,<a href="http://cms.mpi.univie.ac.at/vasp-workshop/slides/Handson4.tgz"
+class="external text" rel="nofollow">Example files</a>
 
 ------------------------------------------------------------------------
+
+

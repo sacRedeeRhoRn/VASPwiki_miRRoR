@@ -2,13 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LBLUEOUT
+
+
 LBLUEOUT = .TRUE.\|.FALSE.  
 Default: **LBLUEOUT** = .FALSE. 
 
-Description: for LBLUEOUT=.TRUE., VASP writes output for the free-energy
-gradient calculation to the [REPORT](../output-files/REPORT.md) file (in
-case VASP was compiled with
-[-Dtbdyn](../redirects/Precompiler_flags.md)).
+Description: for
+LBLUEOUT=.TRUE., VASP writes
+output for the free-energy gradient calculation to the
+[REPORT](../output-files/REPORT.md) file (in case VASP was compiled with
+<a href="/wiki/Precompiler_flags" class="mw-redirect"
+title="Precompiler flags">-Dtbdyn</a>).
 
 ------------------------------------------------------------------------
 
@@ -21,12 +25,17 @@ check the lines after the header:
            lambda         |z|^(-1/2)      GkT           |z|^(-1/2)*(lambda+GkT)
 
 For the theory of the blue-moon ensemble we refer to
-[here](../redirects/Blue-moon_ensemble.md).
+<a href="/wiki/Blue-moon_ensemble" class="mw-redirect"
+title="Blue-moon ensemble">here</a>.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LBLUEOUT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IBRION](IBRION.md), [MDALGO](MDALGO.md),
-[ICONST](../input-files/ICONST.md), [Blue-moon
-ensemble](../redirects/Blue-moon_ensemble.md), [Slow-growth
+[ICONST](../input-files/ICONST.md),
+<a href="/wiki/Blue-moon_ensemble" class="mw-redirect"
+title="Blue-moon ensemble">Blue-moon ensemble</a>, [Slow-growth
 approach](../theory/Slow-growth_approach.md)
 
 [Constrained molecular
@@ -36,3 +45,5 @@ dynamics](../theory/Constrained_molecular_dynamics.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-LBLUEOUT-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

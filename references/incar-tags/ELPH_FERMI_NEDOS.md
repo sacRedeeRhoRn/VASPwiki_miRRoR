@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_FERMI_NEDOS
-ELPH_FERMI_NEDOS = \[integer\]  
+
+
+ELPH_FERMI_NEDOS =
+\[integer\]  
 Default: **ELPH_FERMI_NEDOS** = 501 
 
 Description: Number of Gauss–Legendre integration points used to
@@ -10,8 +13,8 @@ evaluate the Fermi–Dirac distribution and determine the electronic Fermi
 level at finite temperature in the context of electron–phonon (el–ph)
 coupling calculations.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -32,10 +35,16 @@ strong temperature dependence in el–ph properties.
 For details of the numerical integration scheme, see
 [EFERMI_NEDOS](EFERMI_NEDOS.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_FERMI_NEDOS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [EFERMI_NEDOS](EFERMI_NEDOS.md)
 - [TRANSPORT_NEDOS](TRANSPORT_NEDOS.md)
 - [ISMEAR](ISMEAR.md)
 - [Transport coefficients including electron-phonon
   scattering](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Smearing technique](../tutorials/Smearing_technique.md)
+
+

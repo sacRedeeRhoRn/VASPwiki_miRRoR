@@ -2,31 +2,45 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Downsampling of the Hartree-Fock operator
+
+
+
 ## Contents
 
-- [1 Downsampling](#Downsampling)
-  - [1.1 Caveat: when one should not use
-    downsampling](#Caveat:_when_one_should_not_use_downsampling)
-- [2 Related tags and articles](#Related_tags_and_articles)
-- [3 References](#References)
 
-### Downsampling
+- [1
+  Downsampling](#Downsampling)
+  - [1.1 Caveat:
+    when one should not use
+    downsampling](#Caveat:_when_one_should_not_use_downsampling)
+- [2 Related tags
+  and articles](#Related_tags_and_articles)
+- [3
+  References](#References)
+
+
+### Downsampling\[<a
+href="/wiki/index.php?title=Downsampling_of_the_Hartree-Fock_operator&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Downsampling">edit</a> \| (./index.php.md)\]
+
 Consider the description of a certain bulk system, using a supercell
-made up of $N$ primitive cells, in such
-a way that, {**A** _(i)' }, the lattice vectors of the supercell are
-given by **A** _(i)' =*n* _(i)**A** _(i) (i=1,2,3), where {**A** _(i)}
-are the lattice vectors of the primitive cell. Let
-$R_{\rm max}=2/\mu$ be the distance for
-which
+made up of $N$ primitive
+cells, in such a way that, {**A** <sub>i</sub>' }, the lattice vectors
+of the supercell are given by **A** <sub>i</sub>' =*n* <sub>i</sub>**A**
+<sub>i</sub> (i=1,2,3), where {**A** <sub>i</sub>} are the lattice
+vectors of the primitive cell. Let $R_{\rm max}=2/\mu$ be the distance for which
+
+ 
 
 $\frac{\mathrm{erfc}\left(\mu|\mathbf{r}-\mathbf{r}'|\right)}{|\mathbf{r}-\mathbf{r}'|}
 \approx 0 \quad \mathrm{for}\quad
 {|\mathbf{r}-\mathbf{r}'|}>R_\mathrm{max}.$
 
 When the nearest neighbour distance between the periodically repeated
-images of the supercell $R_{NN}>2R_{\rm max}$ (i.e. $R_{NN}>4/\mu$), the
-short-range Hartree-Fock potential can be represented exactly, sampling
-the BZ at the $\Gamma$-point only, i.e.,
+images of the supercell $R_{NN}>2R_{\rm max}$ (i.e. $R_{NN}>4/\mu$), the short-range Hartree-Fock potential can be
+represented exactly, sampling the BZ at the $\Gamma$-point
+only, i.e.,
 
 $V^{\mathrm{SR}}_x\left(\mathbf{r},\mathbf{r}'\right)=
 -\frac{e^2}{2}\sum_m f_{m{\Gamma}}
@@ -38,6 +52,8 @@ This is equivalent to a representation of the bulk system using the
 primitive cell and a $n_{1}\times n_{2}\times
 n_{3}$ sampling of the BZ,
 
+ 
+
 $V^{\mathrm{SR}}_x\left(\mathbf{r},\mathbf{r}'\right)=
 -\frac{e^2}{2}\sum_{m'\mathbf{q}}f_{m'\mathbf{q}}
 e^{-i\mathbf{q}\cdot\mathbf{r}'}u_{m'\mathbf{q}}^{\*}(\mathbf{r}')
@@ -45,47 +61,47 @@ u_{m'\mathbf{q}}(\mathbf{r})e^{i\mathbf{q}\cdot\mathbf{r}}
 \times\frac{\mathrm{ erfc}(\mu|\mathbf{r}-\mathbf{r}'|)} {\vert
 \mathbf{r}-\mathbf{r}' \vert}$
 
-where the set of ${\mathbf{q}}$ vectors
-is given by
+where the set of ${\mathbf{q}}$
+vectors is given by
 
 $\\\mathbf{q}\\=\\i\mathbf{G}_1+j\mathbf{G}_2+k\mathbf{G}_3\\,$
 
-for *i* =1,..,*n* ₁, *j* =1,..,n ₂, and *k* =1,..,n ₃, with
-**G**_(1,2,3) being the reciprocal lattice vectors of the supercell.
+for *i* =1,..,*n* <sub>1</sub>, *j* =1,..,n <sub>2</sub>, and *k*
+=1,..,n <sub>3</sub>, with **G**<sub>1,2,3</sub> being the reciprocal
+lattice vectors of the supercell.
 
 In light of the above it is clear that the number of
-${\mathbf{q}}$-points needed to
-represent the short-range Hartree-Fock potential decreases with
-decreasing $R_{\rm max}$ (i.e., with
-increasing $\mu$). Furthermore, one
-should realize that the maximal range of the exchange interactions is
-not only limited by the ${\rm erfc}(\mu|{\bf
-r}-{\bf r}'|)/|{\bf r}-{\bf r}'|$ kernel, but depends on
-the extent of the spatial overlap of the orbitals as well (this can
-easily be shown for the Hartree-Fock exchange energy when one adopts a
-Wannier representation of the orbitals); $R_{\rm
-max}=2/\mu$; (as defined [above](#rmax)), therefore, provides
-an upper limit for the range of the exchange interactions, consistent
-with maximal spatial overlap of the orbitals.
+${\mathbf{q}}$-points needed to represent the
+short-range Hartree-Fock potential decreases with decreasing
+$R_{\rm max}$ (i.e., with increasing
+$\mu$). Furthermore, one should realize that the maximal
+range of the exchange interactions is not only limited by the
+${\rm erfc}(\mu|{\bf r}-{\bf r}'|)/|{\bf r}-{\bf r}'|$ kernel, but depends on the extent of the spatial
+overlap of the orbitals as well (this can easily be shown for the
+Hartree-Fock exchange energy when one adopts a Wannier representation of
+the orbitals); $R_{\rm max}=2/\mu$; (as defined [above](#rmax)), therefore, provides an
+upper limit for the range of the exchange interactions, consistent with
+maximal spatial overlap of the orbitals.
 
 It is thus well conceivable that the situation arises where the
 short-range Hartree-Fock potential may be represented on a considerably
 coarser mesh of points in the BZ than the other contributions to the
 Hamiltonian. To take advantage of this situation one may, for instance,
-restrict the sum over ${\bf q}$ in the
-short range exchange potential to a subset, {${\bf
-q_{k}}$}, of the full $N_{1}\times
-N_{2}\times N_{3}$ ${\bf k}$-point set, {${\bf k}$}, for
-which the following holds
+restrict the sum over ${\bf q}$ in
+the short range exchange potential to a subset,
+{${\bf q_{k}}$}, of the full $N_{1}\times N_{2}\times
+N_{3}$ ${\bf k}$-point set, {${\bf k}$},
+for which the following holds
 
-$\mathbf{q_k} = \mathbf{b}_1 \frac{n_1
-C_1}{N_1} + \mathbf{b}_2 \frac{n_2 C_2}{N_2} + \mathbf{b}_3 \frac{n_3
+$\mathbf{q_k} = \mathbf{b}_1 \frac{n_1 C_1}{N_1} + \mathbf{b}_2
+\frac{n_2 C_2}{N_2} + \mathbf{b}_3 \frac{n_3
 C_3}{N_3},\quad(n_i=0,..,N_i-1)$
 
-where **b**_(1,2,3) are the reciprocal lattice vectors of the primitive
-cell, and $C_{i}$ is the integer grid
-reduction factor along reciprocal lattice direction **b** _(i). This
-leads to a reduction in the computational workload by a factor:
+where **b**<sub>1,2,3</sub> are the reciprocal lattice vectors of the
+primitive cell, and $C_{i}$ is
+the integer grid reduction factor along reciprocal lattice direction
+**b** <sub>i</sub>. This leads to a reduction in the computational
+workload by a factor:
 
 $\frac{1}{C_1 C_2 C_3}$
 
@@ -95,17 +111,22 @@ range-separated functionals (e.g., HSE03/HSE06). It can be applied, for
 instance, in the PBE0 and pure HF cases as well, although from the above
 it might be clear that the range-separated functionals, in general, will
 allow for a larger reduction of the
-grid.^([\[1\]](#cite_note-paier:jcp:06-1))
+grid.<sup>[\[1\]](#cite_note-paier:jcp:06-1)</sup>
 
-#### Caveat: when one should not use downsampling
+
+#### Caveat: when one should not use downsampling\[<a
+href="/wiki/index.php?title=Downsampling_of_the_Hartree-Fock_operator&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveat: when one should not use downsampling">edit</a> \| (./index.php.md)\]
+
 In metallic systems, downsampling the exact exchange potential
 ([NKRED](../incar-tags/NKRED.md), [NKREDX](../incar-tags/NKREDX.md),
 [NKREDY](../incar-tags/NKREDY.md), and/or [NKREDZ](../incar-tags/NKREDZ.md)
 ≠ 1) must be used with great care, and results might be wrong, if
 downsampling is applied. Problematic cases include electron or hole
 doped semiconductors or insulators. If two electrons are added to a bulk
-TiO₂ cell containing 72 atoms, and calculations are performed using
-$2\times2\times2$ ${\bf k}$-points, the following results are obtained for the
+TiO<sub>2</sub> cell containing 72 atoms, and calculations are performed
+using $2\times2\times2$ ${\bf k}$-points, the following results are obtained for the
 one-electron energies and occupancies with and without
 [NKRED](../incar-tags/NKRED.md)=2
 ([LHFCALC](../incar-tags/LHFCALC.md)=.TRUE. ;
@@ -157,37 +178,37 @@ case the point). This result is an artifact of the approximation used
 for [NKRED](../incar-tags/NKRED.md)=2. The nonlocal exchange operator
 cancels the self-interaction present in the Hartree-potential. For
 [NKRED](../incar-tags/NKRED.md)=2 and $2\times2\times2$ ${\bf k}$-points, the nonlocal exchange operator at each
-${\bf k}$-point is evaluated using the
-one-electron orbitals at this ${\bf k}$-point only, e.g.:
+${\bf k}$-point is evaluated using the one-electron
+orbitals at this ${\bf k}$-point only, e.g.:
 
-$V_{\mathbf{k}}\left(
-\mathbf{G},\mathbf{G}'\right)= \langle \mathbf{k}+\mathbf{G} | V_x |
-\mathbf{k}+\mathbf{G}'\rangle = -\frac{4\pi e^2}{\Omega}
-f_{m\mathbf{k}}\sum_{\mathbf{G}''}
+$V_{\mathbf{k}}\left( \mathbf{G},\mathbf{G}'\right)= \langle
+\mathbf{k}+\mathbf{G} | V_x | \mathbf{k}+\mathbf{G}'\rangle =
+-\frac{4\pi e^2}{\Omega} f_{m\mathbf{k}}\sum_{\mathbf{G}''}
 \frac{C^\*_{m\mathbf{k}}(\mathbf{G}'-\mathbf{G}'')
 C_{m\mathbf{k}}(\mathbf{G}-\mathbf{G}'')} {|\mathbf{G}''|^2}$
 
-The sum over ${\bf q}$ in the
-Hartree-Fock exchange potential reduces to a single
-${\bf k}$-point. This reduces the
-self-interaction for states that originally have an occupancy larger
-than one, concomitantly pulling those states to lower energies.
-Initially, empty states (occupancy smaller one) are pushed up slightly.
-Since this is an artifact, [NKRED](../incar-tags/NKRED.md) must be used
-with utmost care for large supercells with coarse ${\bf k}$-point sampling. Please always check whether
+The sum over ${\bf q}$ in
+the Hartree-Fock exchange potential reduces to a single
+${\bf k}$-point. This reduces the self-interaction for
+states that originally have an occupancy larger than one, concomitantly
+pulling those states to lower energies. Initially, empty states
+(occupancy smaller one) are pushed up slightly. Since this is an
+artifact, [NKRED](../incar-tags/NKRED.md) must be used with utmost care for
+large supercells with coarse ${\bf k}$-point sampling. Please always check whether
 occupancies are similar at all ${\bf k}$
 points if this is not the case. The calculations should be
 double-checked without downsampling.
 
-Since HF type calculations using $2\times2\times2$ ${\bf k}$ points without
-[NKRED](../incar-tags/NKRED.md), are roughly 64 times more expensive than
-those using the $\Gamma$-point only, it
-might seem impossible to do anything but $\Gamma$-point only calculations. However, VASP allows to generate
-special ${\bf k}$ points using
-generating lattices.
+Since HF type calculations using $2\times2\times2$ ${\bf k}$
+points without [NKRED](../incar-tags/NKRED.md), are roughly 64 times more
+expensive than those using the $\Gamma$-point
+only, it might seem impossible to do anything but
+$\Gamma$-point only calculations. However, VASP allows
+to generate special ${\bf k}$
+points using generating lattices.
 
-The following ${\bf k}$-point sets are
-particularly useful for HF-type calculations:
+The following ${\bf k}$-point sets are particularly useful for HF-type
+calculations:
 
     k-point set generating a bcc like lattice in the BZ ->  2 k points in BZ
     0
@@ -198,14 +219,13 @@ particularly useful for HF-type calculations:
      0 0 0
 
 This [KPOINTS](../input-files/KPOINTS.md) file generates two 2
-${\bf k}$ points, one at the
-$\Gamma$-point and one along the space
-diagonal at the BZ boundary (*R* point).
+${\bf k}$ points, one at the $\Gamma$-point
+and one along the space diagonal at the BZ boundary (*R* point).
 
 The following [KPOINTS](../input-files/KPOINTS.md) file generates 4
-${\bf k}$ points, one at the
-$\Gamma$ point and three at the *S*
-points (the latter ones might be symmetry equivalent for cubic cells).
+${\bf k}$ points, one at the $\Gamma$ point
+and three at the *S* points (the latter ones might be symmetry
+equivalent for cubic cells).
 
     k-point set generating an fcc lattice ->  4 k points in BZ
     0
@@ -218,7 +238,7 @@ points (the latter ones might be symmetry equivalent for cubic cells).
 Using such grids, sensible and fairly rapidly converging results are
 obtained, e.g., for electron and hole doped materials, even if the
 conduction or valence band is partially occupied or depleted. For
-instance, the following energies are obtained for TiO₂:
+instance, the following energies are obtained for TiO<sub>2</sub>:
 
     Gamma only     TOTEN  =      -837.759900 eV
     2 k-points     TOTEN  =      -838.039157 eV
@@ -226,15 +246,28 @@ instance, the following energies are obtained for TiO₂:
     2x2x2          TOTEN  =      -838.104787 eV
     2x2x2 NKRED=2  TOTEN  =      -838.418681 eV
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Downsampling_of_the_Hartree-Fock_operator&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NKRED](../incar-tags/NKRED.md), [NKREDX](../incar-tags/NKREDX.md),
 [NKREDY](../incar-tags/NKREDY.md), [NKREDZ](../incar-tags/NKREDZ.md),
 [Hybrid functionals:
 formalism](Hybrid_functionals-_formalism.md)
 
-## References
-1.  [↑](#cite_ref-paier:jcp:06_1-0) [J. Paier, M. Marsman, K. Hummer, G.
-    Kresse, I.C. Gerber, and J.G. Ángyán, J. Chem. Phys. **124**, 154709
-    (2006).](https://doi.org/10.1063/1.2187006)
+## References\[<a
+href="/wiki/index.php?title=Downsampling_of_the_Hartree-Fock_operator&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-paier:jcp:06_1-0)
+    <a href="https://doi.org/10.1063/1.2187006" class="external text"
+    rel="nofollow">J. Paier, M. Marsman, K. Hummer, G. Kresse, I.C. Gerber,
+    and J.G. Ángyán, J. Chem. Phys. <strong>124</strong>, 154709 (2006).</a>
+
 
 ------------------------------------------------------------------------
+
+

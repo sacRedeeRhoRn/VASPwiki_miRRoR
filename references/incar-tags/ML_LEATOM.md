@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_LEATOM
+
+
 ML_LEATOM = \[logical\]  
 Default: **ML_LEATOM** = .FALSE. 
 
@@ -15,7 +17,11 @@ plus kinetic energy) for each MD step is written out to the
 [ML_EATOM](../output-files/ML_EATOM.md) file. It also writes the atomic
 positions and lattice parameters at every MD step to this file.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_LEATOM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_WTOTEN](ML_WTOTEN.md)
 
@@ -23,3 +29,5 @@ positions and lattice parameters at every MD step to this file.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LEATOM-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

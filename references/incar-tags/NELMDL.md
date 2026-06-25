@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NELMDL
+
+
 NELMDL = \[integer\] 
 
 |  |  |  |
@@ -10,8 +12,8 @@ NELMDL = \[integer\] 
 |  | = 0 | if [WAVECAR](../input-files/WAVECAR.md) is present |
 |  | = -5 | else |
 
-Description: NELMDL specifies the number of non-self-consistent steps at
-the beginning.
+Description: NELMDL specifies
+the number of non-self-consistent steps at the beginning.
 
 ------------------------------------------------------------------------
 
@@ -29,11 +31,12 @@ and problematic (e.g. for surfaces or metallic clusters, low dimensional
 system). Without a delay, VASP will most likely not converge, or at
 least the convergence speed is slowed significantly.
 
-NELMDL might be set to a positive or negative value. A negative value
-means that the delay is only performed in the first ionic step (usually
-the recommended option). A positive number means that a delay is
-employed after each ionic movement. This can improve the convergence
-speed in VASP.6 (see below) but is not recommended in VASP.5.
+NELMDL might be set to a
+positive or negative value. A negative value means that the delay is
+only performed in the first ionic step (usually the recommended option).
+A positive number means that a delay is employed after each ionic
+movement. This can improve the convergence speed in VASP.6 (see below)
+but is not recommended in VASP.5.
 
 For calculations using a direct minimization of the Hamiltonian
 ([ALGO](ALGO.md)=ALL or [ALGO](ALGO.md)=DAMPED), the
@@ -44,32 +47,43 @@ Special considerations for VASP.6:
 
 - For calculations using a direct minimization of the Hamiltonian
   ([ALGO](ALGO.md)=ALL or [ALGO](ALGO.md)=DAMPED):
-  if NELMDL is set, the Davidson algorithm is used in the first NELMDL
-  steps as described above. Using a positive NELMDL (i.e. delay in every
+  if NELMDL is set, the
+  Davidson algorithm is used in the first
+  NELMDL steps as described
+  above. Using a positive
+  NELMDL (i.e. delay in every
   ionic step) does not work reliably in VASP.5, due to issues in the
-  orbital and charge density prediction. In VASP.6, using NELMDL=1 (or
-  NELMDL=2) and direct minimization often improves the stability and
-  efficiency of molecular dynamics simulations or relaxations
-  ([ALGO](ALGO.md)=ALL or [ALGO](ALGO.md)=DAMPED).
-  Note, however, that this might require one to prepare a reasonable
-  [WAVECAR](../input-files/WAVECAR.md) file since NELMDL =1/2 might not
-  suffice to obtain a reasonable set of orbitals from the initial random
-  numbers.
+  orbital and charge density prediction. In VASP.6, using
+  NELMDL=1 (or
+  NELMDL=2) and direct
+  minimization often improves the stability and efficiency of molecular
+  dynamics simulations or relaxations ([ALGO](ALGO.md)=ALL or
+  [ALGO](ALGO.md)=DAMPED). Note, however, that this might
+  require one to prepare a reasonable [WAVECAR](../input-files/WAVECAR.md)
+  file since NELMDL =1/2 might
+  not suffice to obtain a reasonable set of orbitals from the initial
+  random numbers.
 
-&nbsp;
+<!-- -->
 
-- For HF-type calculations, if NELMDL is larger or equal to 3, VASP will
-  perform NELMDL non-selfconsistent steps using the Davidson algorithm,
-  and a local Hamiltonian is calculated using the semi-local DFT
-  functional corresponding to the chosen hybrid functional (i.e. PBE for
-  HSE and PBE0). This is expedient if the ions move by a large distance
-  between the ionic steps. Setting NELMDL =3 can thus improve the
-  stability and performance during relaxations using HF-type
-  Hamiltonians. Try to use [ALGO](ALGO.md)=All and NELMDL=3 if
-  you encounter convergence issues during relaxations using HF-type
-  Hamiltonians.
+- For HF-type calculations, if
+  NELMDL is larger or equal to
+  3, VASP will perform NELMDL
+  non-selfconsistent steps using the Davidson algorithm, and a local
+  Hamiltonian is calculated using the semi-local DFT functional
+  corresponding to the chosen hybrid functional (i.e. PBE for HSE and
+  PBE0). This is expedient if the ions move by a large distance between
+  the ionic steps. Setting
+  NELMDL =3 can thus improve
+  the stability and performance during relaxations using HF-type
+  Hamiltonians. Try to use [ALGO](ALGO.md)=All and
+  NELMDL=3 if you encounter
+  convergence issues during relaxations using HF-type Hamiltonians.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NELMDL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NELM](NELM.md), [NELMIN](NELMIN.md),
 [IALGO](IALGO.md)
 
@@ -77,3 +91,5 @@ Special considerations for VASP.6:
 tag](https://vasp.at/wiki/index.php/Special-Search/-NELMDL-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

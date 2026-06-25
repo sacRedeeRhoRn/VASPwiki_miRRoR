@@ -2,10 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # OFIELD_KAPPA
+
+
 OFIELD_KAPPA = \[real\] 
 
-Description: The tag OFIELD_KAPPA sets the strength of the bias
-potential in the [Interface
+Description: The tag
+OFIELD_KAPPA sets the strength
+of the bias potential in the [Interface
 pinning](../categories/Category-Interface_pinning.md)
 method.
 
@@ -15,14 +18,19 @@ The bias potential in the [Interface
 pinning](../categories/Category-Interface_pinning.md)
 method is written as
 
-$U_\text{bias}(\mathbf{R}) = \frac\kappa2
-\left(Q_6(\mathbf{R}) - A\right)^2$.
+$U_\text{bias}(\mathbf{R}) = \frac\kappa2 \left(Q_6(\mathbf{R}) -
+A\right)^2$.
 
-The tag OFIELD_KAPPA method sets the strength of the bias potential
-$\kappa$. The unit of
-$\kappa$ is $\textrm{eV}/(\textrm{unit} \\\\ \textrm{ of }\\\\ Q)^2$.
+The tag OFIELD_KAPPA method
+sets the strength of the bias potential $\kappa$. The
+unit of $\kappa$ is
+$\textrm{eV}/(\textrm{unit} \\\\ \textrm{ of }\\\\ Q)^2$.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=OFIELD_KAPPA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Interface
 pinning](../categories/Category-Interface_pinning.md),
 [OFIELD_Q6_NEAR](OFIELD_Q6_NEAR.md),
@@ -33,3 +41,5 @@ pinning](../categories/Category-Interface_pinning.md),
 tag](https://vasp.at/wiki/index.php/Special-Search/-OFIELD_KAPPA-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

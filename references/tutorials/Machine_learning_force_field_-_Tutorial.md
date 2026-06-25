@@ -2,10 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Machine learning force field - Tutorial
-Overview \> [Liquid Si -
-MLFF](../misc/Liquid_Si_-_MLFF.md) \> [List of
-tutorials](../categories/Category-Tutorials.md)
+
+
+
+Overview \>
+[Liquid Si -
+MLFF](../misc/Liquid_Si_-_MLFF.md) \>
+[List of tutorials](../categories/Category-Tutorials.md)
+
 
 The tutorial is made of the following parts:
 
+
 1.  [Liquid Si - MLFF](../misc/Liquid_Si_-_MLFF.md)
+
+

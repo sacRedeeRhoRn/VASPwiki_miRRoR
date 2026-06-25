@@ -2,19 +2,26 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # TILAMBDA
+
+
 TILAMBDA = real  
 Default: **TILAMBDA** = 0.0 
 
-Description: TILAMBDA defines the coupling parameter
-$\lambda$ used in [Thermodynamic
-integration using a Hessian
+Description: TILAMBDA defines
+the coupling parameter $\lambda$ used
+in [Thermodynamic integration using a Hessian
 reference](../theory/Thermodynamic_integration.md).
-The value of $\lambda$ must be from the
-inverval $\langle 0, 1 \rangle$.
+The value of $\lambda$ must
+be from the inverval $\langle 0, 1 \rangle$.
 
 How to run thermodynamic integration calculations is given
 [here](../tutorials/Thermodynamic_integration_calculations.md).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=TILAMBDA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [HESSEMAT](HESSEMAT.md), [ICONST](../input-files/ICONST.md),
 [REPORT](../output-files/REPORT.md)
+
+

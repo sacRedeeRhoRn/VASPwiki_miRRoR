@@ -2,23 +2,25 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NiO GGA+U
-Description: Antiferromagnetic (AFM) configuration for NiO in the
-GGA+U_(eff) (Dudarev's) approach ; PBE functional
 
-In the Dudarev method, a Hubbard effective parameter U_(eff) = U - J is
-used. Concretely, the J value is considered equal to 0, and U_(eff) = U.
-For more details read the page on the
+
+Description: Antiferromagnetic (AFM) configuration for NiO in the
+GGA+U<sub>eff</sub> (Dudarev's) approach ; PBE functional
+
+In the Dudarev method, a Hubbard effective parameter U<sub>eff</sub> =
+U - J is used. Concretely, the J value is considered equal to 0, and
+U<sub>eff</sub> = U. For more details read the page on the
 [LDAUTYPE](../incar-tags/LDAUTYPE.md)-tag .
 
   
-**Exercise :** Study the change of the magnetic moment of Ni atoms and
-the DOS by varying the U_(eff) value.
+*<u>Exercise :</u>* Study the change of the magnetic moment of Ni atoms
+and the DOS by varying the U<sub>eff</sub> value.
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO GGA+U AFM
       SYSTEM    = "NiO"
@@ -55,7 +57,7 @@ the DOS by varying the U_(eff) value.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -65,7 +67,7 @@ the DOS by varying the U_(eff) value.
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -83,10 +85,18 @@ the DOS by varying the U_(eff) value.
 
 To check the results obtained with this approach, they can be compared
 to those determined with a [hybrid](NiO_HSE06.md)
-approach. The magnetic moment for the Ni atoms and the E_(g) calculated
-using this approach are 1.67 μ_(B) and 3.97 eV respectively.
+approach. The magnetic moment for the Ni atoms and the E<sub>g</sub>
+calculated using this approach are 1.67 μ<sub>B</sub> and 3.97 eV
+respectively.
 
-## Download
-[nio_gga+u.tgz](https://vasp.at/wiki/images/e/e9/Nio_gga%2Bu.tgz "Nio gga+u.tgz")
+## Download\[<a
+href="/wiki/index.php?title=NiO_GGA%2BU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/e/e9/Nio_gga%2Bu.tgz" class="internal"
+title="Nio gga+u.tgz">nio_gga+u.tgz</a>
 
 ------------------------------------------------------------------------
+
+

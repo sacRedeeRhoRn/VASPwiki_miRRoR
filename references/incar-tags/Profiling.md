@@ -2,20 +2,33 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Profiling
+
+
 In the most recent version of VASP, profiling routines were added to all
 important routines in VASP. Using profiling will print at the end of the
 OUTCAR a list of all routines called during the specific run of VASP,
 its overall execution time, the number of times it was called and the
 level at which it was called.
 
+
 ## Contents
 
-- [1 Compilation](#Compilation)
-- [2 Support for new routines](#Support_for_new_routines)
-- [3 Output](#Output)
-- [4 INCAR Flags](#INCAR_Flags)
 
-## Compilation
+- [1
+  Compilation](#Compilation)
+- [2 Support for
+  new routines](#Support_for_new_routines)
+- [3
+  Output](#Output)
+- [4 INCAR
+  Flags](#INCAR_Flags)
+
+
+## Compilation\[<a
+href="/wiki/index.php?title=Profiling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Compilation">edit</a> \| (./index.php.md)\]
+
 To add support for profiling add `-DPROFILING` to the already existing
 preprocessor flags
 
@@ -26,7 +39,11 @@ Then you have to entirely recompile VASP by executing
      make clean
      make vasp
 
-## Support for new routines
+## Support for new routines\[<a
+href="/wiki/index.php?title=Profiling&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Support for new routines">edit</a> \| (./index.php.md)\]
+
 If you want to include newly developed routines to the profiling, you
 have to include the profiling module (if it is not already included in
 the enclosing module your routine is in) by adding
@@ -64,7 +81,11 @@ and `STOP_PROFILING`, e.g.:
       CALL STOP_PROFILING('dgemvn')
     #endif
 
-## Output
+## Output\[<a
+href="/wiki/index.php?title=Profiling&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 All the timings will be summarized at the end of the
 [OUTCAR](../output-files/OUTCAR.md) file.
 
@@ -125,7 +146,11 @@ routines called from inside this routine are subtraced. So we get the
 real execution time of this routine and can track down the most time
 consuming routines for this specific run.
 
-## [INCAR](../input-files/INCAR.md) Flags
+## [INCAR](../input-files/INCAR.md) Flags\[<a
+href="/wiki/index.php?title=Profiling&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR Flags">edit</a> \| (./index.php.md)\]
+
 In the [INCAR](../input-files/INCAR.md) the output of the profiling can be
 controlled by four different flag:
 
@@ -133,3 +158,5 @@ controlled by four different flag:
 - [PROUTINE](PROUTINE.md)
 - [PLEVEL](PLEVEL.md)
 - [PFLAT](PFLAT.md)
+
+

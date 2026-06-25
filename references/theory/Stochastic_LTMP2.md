@@ -2,35 +2,59 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Stochastic LTMP2
+
+
+
 [Overview](../tutorials/MP2_ground_state_calculation_-_Tutorial.md) \>
 [MP2](../incar-tags/MP2.md) \>
-[LTMP2](../tutorials/LTMP2_-_Tutorial.md) \> stochastic LTMP2
- \> [High energy contributions using stochastic
-LTMP2](https://vasp.at/wiki/index.php/index.php)") \>
+[LTMP2](../tutorials/LTMP2_-_Tutorial.md) \>
+stochastic LTMP2
+ \> <a
+href="/wiki/index.php?title=High_energy_contributions_using_stochastic_LTMP2&amp;action=edit&amp;redlink=1"
+class="new"
+title="High energy contributions using stochastic LTMP2 (page does not exist)">High
+energy contributions using stochastic LTMP2</a> \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 On this page, we explain how to perform a calculation using the
-**stochastic LTMP2**^([\[1\]](#cite_note-schaefer2018-1)) algorithm.
-Make sure you successfully completed the preparation steps [Hartree-Fock
-ground
-state](../redirects/MP2_ground_state_calculation.md)
-and [Hartree-Fock
-virtuals](../redirects/MP2_ground_state_calculation.md).
+**stochastic
+LTMP2**<sup>[\[1\]](#cite_note-schaefer2018-1)</sup>
+algorithm. Make sure you successfully completed the preparation steps <a
+href="/wiki/MP2_ground_state_calculation#Preparation:_the_Hartree-Fock_ground_state"
+class="mw-redirect" title="MP2 ground state calculation">Hartree-Fock
+ground state</a> and <a
+href="/wiki/MP2_ground_state_calculation#Calculating_the_unoccupied_Hartree-Fock_orbitals"
+class="mw-redirect" title="MP2 ground state calculation">Hartree-Fock
+virtuals</a>.
 
 **NOTE:** *If you use this algorithm, please cite reference
-^([\[1\]](#cite_note-schaefer2018-1)) in your publication in addition to
-the standard VASP reference.*
+<sup>[\[1\]](#cite_note-schaefer2018-1)</sup>
+in your publication in addition to the standard VASP reference.*
+
 
 ## Contents
 
-- [1 The INCAR file](#The_INCAR_file)
-  - [1.1 NOMEGA flag](#NOMEGA_flag)
-  - [1.2 ESTOP flag](#ESTOP_flag)
-  - [1.3 NSTORB flag](#NSTORB_flag)
-- [2 Parallelization](#Parallelization)
-- [3 References](#References)
 
-## The INCAR file
+- [1 The INCAR
+  file](#The_INCAR_file)
+  - [1.1 NOMEGA
+    flag](#NOMEGA_flag)
+  - [1.2 ESTOP
+    flag](#ESTOP_flag)
+  - [1.3 NSTORB
+    flag](#NSTORB_flag)
+- [2
+  Parallelization](#Parallelization)
+- [3
+  References](#References)
+
+
+## The INCAR file\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: The INCAR file">edit</a> \| (./index.php.md)\]
+
 The LTMP2 calculation can simply be performed using the following
 [INCAR](../input-files/INCAR.md) file
 
@@ -44,28 +68,38 @@ The LTMP2 calculation can simply be performed using the following
     LORBITALREAL = .TRUE.
     PRECFOCK = Fast
 
-Make sure that VASP reads the WAVECAR file from the [Hartree-Fock
-virtuals](../redirects/MP2_ground_state_calculation.md)
-step. The setting for [PRECFOCK](../incar-tags/PRECFOCK.md) is strongly
-recommended, since the code heavily relies on real space grid FFTs.
+Make sure that VASP reads the WAVECAR file from the <a
+href="/wiki/MP2_ground_state_calculation#Calculating_the_unoccupied_Hartree-Fock_orbitals"
+class="mw-redirect" title="MP2 ground state calculation">Hartree-Fock
+virtuals</a> step. The setting for [PRECFOCK](../incar-tags/PRECFOCK.md)
+is strongly recommended, since the code heavily relies on real space
+grid FFTs.
 
-#### NOMEGA flag
-The number of $\tau$-points is
-controlled by the NOMEGA flag. This is necessary to calculate the
+#### NOMEGA flag\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: NOMEGA flag">edit</a> \| (./index.php.md)\]
+
+The number of $\tau$-points
+is controlled by the NOMEGA flag. This is necessary to calculate the
 Laplace transformed energy denominator (see Ref
-^([\[1\]](#cite_note-schaefer2018-1)) for details),
+<sup>[\[1\]](#cite_note-schaefer2018-1)</sup>
+for details),
 
-$\frac{1}{\varepsilon_i + \varepsilon_j -
-\varepsilon_a -\varepsilon_b} = - \int_0^\infty \textrm
-e^{-(\varepsilon_i + \varepsilon_j - \varepsilon_a -\varepsilon_b)\tau}
-\\ \textrm d \tau \\.$
+$\frac{1}{\varepsilon_i + \varepsilon_j - \varepsilon_a -\varepsilon_b}
+= - \int_0^\infty \textrm e^{-(\varepsilon_i + \varepsilon_j -
+\varepsilon_a -\varepsilon_b)\tau} \\ \textrm d \tau \\.$
 
 Usually it is sufficient to set NOMEGA to 6. For materials with a small
 bandgap it is worth checking if the MP2 energy changes with increasing
 NOMEGA (e.g. 8 or 10). Note, that the MP2 energy diverges with
 1/bandgap, independent of NOMEGA.
 
-#### ESTOP flag
+#### ESTOP flag\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: ESTOP flag">edit</a> \| (./index.php.md)\]
+
 This flag defines the stop condition for the stochastic algorithm. It
 defines the energy accuracy in units of eV for each individual tau-point
 of the two individual MP2 energy contributions (direct MP2 term +
@@ -73,8 +107,7 @@ exchange MP2 term). Since the statistical errors of each contribution is
 independent, the standard deviation of the MP2 energy can be estimated
 as
 
-$\sigma = \texttt{ESTOP} \* \sqrt{2 \cdot
-\texttt{NOMEGA}} \\.$
+$\sigma = \texttt{ESTOP} \* \sqrt{2 \cdot \texttt{NOMEGA}} \\.$
 
 According to our experience, the error of the resulting MP2 energy can
 then be safely estimated by $\pm 2 \sigma$.
@@ -82,10 +115,14 @@ then be safely estimated by $\pm 2 \sigma$.
 Thus, if you require an MP2 energy with a maximum error of
 $\Delta$, you should set
 
-$\texttt{ESTOP} = \frac{\Delta}{2 \cdot \sqrt{2
-\cdot \texttt{NOMEGA}}} \\.$
+$\texttt{ESTOP} = \frac{\Delta}{2 \cdot \sqrt{2 \cdot \texttt{NOMEGA}}}
+\\.$
 
-#### NSTORB flag
+#### NSTORB flag\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: NSTORB flag">edit</a> \| (./index.php.md)\]
+
 This flag defines the number of stochastic orbitals per cycle, i.e. the
 number of stochastic orbitals that define one stochastic sample. If the
 sample is not large enough, the calculations is repeated until the
@@ -95,7 +132,11 @@ As a rule of thumb we recommend to set
 
 $\texttt{NSTORB} = \sqrt{\texttt{NBANDS}} \\.$
 
-## Parallelization
+## Parallelization\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Parallelization">edit</a> \| (./index.php.md)\]
+
 The stochastic LTMP2 algorithm supports parallelization with MPI and
 OpenMP (OMP). The optimal setting is to set the number of MPI ranks as
 well as the **KPAR** flag to the number of cores (#cores), i.e. start
@@ -131,11 +172,21 @@ core is too small, decreasing **KPAR** does not help or you don't want
 to set too small **KPAR** values. However, in general, it is recommended
 to solve memory issues with the **KPAR** flag first.
 
-## References
-1.  ↑ ^([a](#cite_ref-schaefer2018_1-0))
-    ^([b](#cite_ref-schaefer2018_1-1))
-    ^([c](#cite_ref-schaefer2018_1-2)) [T. Schäfer, B. Ramberger, and G.
-    Kresse, J. Chem. Phys. 148, 064103
-    (2018).](https://doi.org/10.1063/1.5016100)
+## References\[<a
+href="/wiki/index.php?title=Stochastic_LTMP2&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-schaefer2018_1-0)</sup>
+    <sup>[b](#cite_ref-schaefer2018_1-1)</sup>
+    <sup>[c](#cite_ref-schaefer2018_1-2)</sup>
+    <a href="https://doi.org/10.1063/1.5016100" class="external text"
+    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
+    148, 064103 (2018).</a>
+
 
 ------------------------------------------------------------------------
+
+

@@ -2,36 +2,68 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Fcc Si
+
+
+
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-fcc Si \> [fcc Si DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+fcc
+Si \> [fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
 [graphite MBD binding
 energy](Graphite_MBD_binding_energy.md)
  \> [graphite interlayer
 distance](Graphite_interlayer_distance.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Lattice constant optimization for fcc Si.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     fcc Si:
      3.9
      0.5 0.5 0.0
@@ -44,7 +76,10 @@ Lattice constant optimization for fcc Si.
 - Fcc Si lattice constant of 3.9 $\AA$.
 - 1 atom per unit cell.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     System = fcc Si
     ISTART = 0 ; ICHARG = 2
     ENCUT = 240
@@ -53,7 +88,10 @@ Lattice constant optimization for fcc Si.
 - Initial charge density form overlapping atoms.
 - Energy cutoff of 240 eV from [POTCAR](../input-files/POTCAR.md) file.
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     k-points
      0
     Monkhorst Pack
@@ -65,17 +103,20 @@ Lattice constant optimization for fcc Si.
   $\Gamma$ centered mesh.
 - 56 k points in IBZ.
 
-## Calculation
+## Calculation\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - Calculate energy for different lattice parameters.
 - Fit to some equation of states to obtain the equilibrium volume.
 
-&nbsp;
+<!-- -->
 
 - The bash-script `loop.sh` runs fcc Si at several different lattice
   constants (3.5-4.3 Å) and collects free energy versus lattice constant
   into the file SUMMARY.fcc
 
-&nbsp;
+<!-- -->
 
     #! /bin/bash
     BIN=/path/to/your/vasp/executable
@@ -111,7 +152,7 @@ this:
 
 - To make a quick plot of SUMMARY.fcc try:
 
-&nbsp;
+<!-- -->
 
     gnuplot
     gnuplot> plot "SUMMARY.fcc" using ($1):($4) w lp
@@ -120,35 +161,56 @@ this:
   your [POSCAR](../input-files/POSCAR.md) file to reflect this and rerun
   VASP.
 
-&nbsp;
+<!-- -->
 
 - Keep your [CHGCAR](../input-files/CHGCAR.md) file from this run. We will
   need it in the following examples.
 
-&nbsp;
+<!-- -->
 
 - A quick look at the results:
 
-[![](https://vasp.at/wiki/images/thumb/f/ff/Fig_Si_1.png/800px-Fig_Si_1.png)](https://vasp.at/wiki/File:Fig_Si_1.png)
+<a href="/wiki/File:Fig_Si_1.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/ff/Fig_Si_1.png/800px-Fig_Si_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/f/ff/Fig_Si_1.png/1200px-Fig_Si_1.png 1.5x, /wiki/images/f/ff/Fig_Si_1.png 2x"
+width="800" height="519" /></a>
 
 **Mind**: You will have to set the correct path to your VASP executable
 (i.e., `BIN`), and invoke VASP with the correct command (e.g., in the
 above: `mpirun -np 2`).
 
-## Download
-[fccSi.tgz](https://vasp.at/wiki/images/6/6a/FccSi.tgz "FccSi.tgz")
+## Download\[<a href="/wiki/index.php?title=Fcc_Si&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/6/6a/FccSi.tgz" class="internal"
+title="FccSi.tgz">fccSi.tgz</a>
+
 
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-fcc Si \> [fcc Si DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+fcc
+Si \> [fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
 [graphite MBD binding
 energy](Graphite_MBD_binding_energy.md)
  \> [graphite interlayer
 distance](Graphite_interlayer_distance.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

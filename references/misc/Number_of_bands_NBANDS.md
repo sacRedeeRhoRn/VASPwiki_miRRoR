@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Number of bands NBANDS
+
+
 NBANDS must be chosen in such that a considerable number of empty bands
 is included in the calculation. As a minimum, VASP requires one empty
 band, otherwise VASP will give a warning. Only for large gap insulators,
@@ -24,10 +26,12 @@ larger number of empty bands (up to *2\*NIONS*).
 To check this parameter perform several calculations for a fixed
 potential ([ICHARG](../incar-tags/ICHARG.md)=12) with an increasing number
 of bands (e.g. starting from *NELECT/2 + NIONS/2*). An accuracy of
-$10^{-6}$ should be obtained in 10-15
-iterations. Mind that the [RMM-DIIS](../theory/RMM-DIIS.md) scheme
+$10^{-6}$ should be obtained in 10-15 iterations. Mind
+that the [RMM-DIIS](../theory/RMM-DIIS.md) scheme
 ([ALGO](../incar-tags/ALGO.md)=Fast) is more sensitive to the number of
 bands than the default Davidson algorithm
 ([ALGO](../incar-tags/ALGO.md)=Normal).
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Calculation of atoms
+
+
 The following files are needed for the calculation of atoms
 
 - [INCAR](../input-files/INCAR.md)
@@ -17,9 +19,9 @@ the agreement between the atomic reference calculation and a calculation
 using VASP is normally better than 1 meV. Calculations for an atom are
 relatively fast and unproblematic in most cases.
 
-For the calculation only the $\Gamma$
-point should be used i.e. the [KPOINTS](../input-files/KPOINTS.md) file
-should have the following contents:
+For the calculation only the $\Gamma$ point
+should be used i.e. the [KPOINTS](../input-files/KPOINTS.md) file should
+have the following contents:
 
     Monkhorst Pack
     0
@@ -29,6 +31,7 @@ should have the following contents:
 
 The size of the cell depends on the element in question. Some values for
 reliable results are compiled in Tab. 1.
+
 
 Cellsize
 
@@ -102,28 +105,28 @@ additionally set [ISPIN](../incar-tags/ISPIN.md)=2 in the
 [INCAR](../input-files/INCAR.md) file.
 
 **Mind**: Look at the right value for the energy. It is **not**
-$F=E+ \sigma S$, which contains a
-"meaningless" entropy term, but the energy $E$. If [SIGMA](../incar-tags/SIGMA.md) is very small both values
-are the same, but for extremely small [SIGMA](../incar-tags/SIGMA.md)
-values VASP might have difficulties to converge to the correct atomic
-ground state.
+$F=E+ \sigma S$, which contains a "meaningless" entropy
+term, but the energy $E$. If
+[SIGMA](../incar-tags/SIGMA.md) is very small both values are the same, but
+for extremely small [SIGMA](../incar-tags/SIGMA.md) values VASP might have
+difficulties to converge to the correct atomic ground state.
 
 On the start of an atomic calculation it is useful to delay the charge
 mixing for a large number of steps (in the example
 [INCAR](../input-files/INCAR.md) file above 5 steps by specifying
-[NELMDL](../incar-tags/NELMDL.md)=5) because the initial charge density
-corresponds already to the atomic charge density for which the
-pseudopotential was generated. It is also convenient to perform a
-calculation for a fixed atomic charge density
+[NELMDL](../incar-tags/NELMDL.md)=5)
+because the initial charge density corresponds already to the atomic
+charge density for which the pseudopotential was generated. It is also
+convenient to perform a calculation for a fixed atomic charge density
 ([ICHARG](../incar-tags/ICHARG.md)=12) as a first test. In some rare cases
 the real LDA ground state might differ from the configuration for which
 the pseudopotential was generated. For the atomic all electron reference
 calculation the occupancies are set by hand (for Pd
-$s^1d^9$ was chosen to be the reference
-configuration, which is not the LDA ground state of the atom). In this
-case it is necessary to set the occupancies for VASP also by hand. This
-can be done by including the following lines in the
-[INCAR](../input-files/INCAR.md) file:
+$s^1d^9$ was chosen to be the reference configuration,
+which is not the LDA ground state of the atom). In this case it is
+necessary to set the occupancies for VASP also by hand. This can be done
+by including the following lines in the [INCAR](../input-files/INCAR.md)
+file:
 
      ISMEAR = -2
      FERWE  =  5*0.9  0.5
@@ -138,8 +141,9 @@ program. Also check the total energy, the differences should be smaller
 than 20 meV.
 
 '*Mind*:} We have found that the size of the cell can be reduced if one
-special point is used instead of the $\Gamma$ point, i.e. if the [KPOINTS](../input-files/KPOINTS.md) file
-has the following contents:
+special point is used instead of the $\Gamma$
+point, i.e. if the [KPOINTS](../input-files/KPOINTS.md) file has the
+following contents:
 
     Monkhorst Pack
     0
@@ -150,17 +154,24 @@ has the following contents:
 The reasons for this behaviour are: Due to the finite size of the cell a
 band dispersion exists i.e. the atomic eigenvalues split and form a band
 with finite width. To first order the center of the band lies exactly at
-the position of the atomic eigenvalues. Using the $\Gamma$-point the eigenvalues at the bottom of the band are
-obtained. If the special point (0.25,0.25,0.25) 2$\pi/a$ is used instead of the $\Gamma$-point, the energy of the center of the band is obtained.
-Nevertheless we recommend this setting only for absolute experts: in
-most cases the degeneracy of the p- and d-orbitals is removed and only
-the mean value of the eigenvalues remains physically significant. In
-this cases it is also necessary to increase [SIGMA](../incar-tags/SIGMA.md)
-or to set the partial occupancies by hand!
+the position of the atomic eigenvalues. Using the
+$\Gamma$-point the eigenvalues at the bottom of the band
+are obtained. If the special point (0.25,0.25,0.25)
+2$\pi/a$ is used instead of the
+$\Gamma$-point, the energy of the center of the band is
+obtained. Nevertheless we recommend this setting only for absolute
+experts: in most cases the degeneracy of the p- and d-orbitals is
+removed and only the mean value of the eigenvalues remains physically
+significant. In this cases it is also necessary to increase
+[SIGMA](../incar-tags/SIGMA.md) or to set the partial occupancies by hand!
 
   
 
-## Determining the groundstate energy of atoms
+## Determining the groundstate energy of atoms\[<a
+href="/wiki/index.php?title=Calculation_of_atoms&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Determining the groundstate energy of atoms">edit</a> \| (./index.php.md)\]
+
 The [POTCAR](../input-files/POTCAR.md) file contains information on the
 energy of the atom in the reference configuration (i.e. the
 configuration for which the pseudopotential was generated). Total
@@ -190,11 +201,11 @@ elements:
 Execute VASP twice to three times, consecutively with this input file
 until energies are converged. Furthermore, we recommend to use large
 slightly non-cubic cells, i.e. $12.000$
-$\AA$ $\times$ $12.001$
-$\AA$ $\times$ $12.002$
-$\AA$. In some cases, we also found it
-advantageously to use direct energy minimization instead of
-charge-density mixing
+$\AA$ $\times$
+$12.001$ $\AA$
+$\times$ $12.002$
+$\AA$. In some cases, we also found it advantageously to
+use direct energy minimization instead of charge-density mixing
 
     ALGO = D 
     LSUBROT = .FALSE. 

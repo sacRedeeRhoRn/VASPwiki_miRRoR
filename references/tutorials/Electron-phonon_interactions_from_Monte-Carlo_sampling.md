@@ -2,8 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Electron-phonon interactions from Monte-Carlo sampling
-|                                                                   |
-|-------------------------------------------------------------------|
+
+
+|  |
+|----|
 | **Mind:** This feature is only available from VASP 6.0 or higher. |
 
 For the theory on electron-phonon interactions from Monte-Carlo (MC)
@@ -11,28 +13,42 @@ sampling, see the [theory
 page](../theory/Electron-phonon_interactions_theory.md).
 
 First of all this method needs a sufficiently large supercell. It also
-involves phonon calculations for the $\Gamma$ point (see [Phonons from finite
+involves phonon calculations for the $\Gamma$ point
+(see [Phonons from finite
 differences](Phonons_from_finite_differences.md)).
 So many tags in the [INCAR](../input-files/INCAR.md) will be used from the
 phonon calculations.
 
 The first implementation of electron-phonon interactions from MC
 sampling in VASP is found in Ref.
-^([\[1\]](#cite_note-karsai:njp:2018-1)).
+<sup>[\[1\]](#cite_note-karsai:njp:2018-1)</sup>.
 
 The original publication of the ZG configuration (one-shot method) is
-found in Ref. ^([\[2\]](#cite_note-zacharias:prb:2016-2)).
+found in Ref.
+<sup>[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>.
+
 
 ## Contents
 
-- [1 Step-by-step instructions](#Step-by-step_instructions)
-- [2 ZG configuration (one-shot
-  sampling)](#ZG_configuration_(one-shot_sampling))
-- [3 Full MC sampling](#Full_MC_sampling)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## Step-by-step instructions
+- [1 Step-by-step
+  instructions](#Step-by-step_instructions)
+- [2 ZG
+  configuration (one-shot
+  sampling)](#ZG_configuration_(one-shot_sampling))
+- [3 Full MC
+  sampling](#Full_MC_sampling)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
 **Step 1**: Run a single calculation to create the
 [POSCAR](../input-files/POSCAR.md) file(s) with special positions either
 belonging to the ZG configuration method or MC sampling. To enable
@@ -63,9 +79,9 @@ where NUMBER runs from 1 to
 **Step 2**: Run calculation for the previously created
 [POSCAR](../input-files/POSCAR.md) files on the desired observable. These
 calculations can be anything that is suitable for an MC sum
-$\langle O(T)\rangle = \frac{1}{n}
-\sum\limits_{i=1}^{n} O(x_{T}^{\textrm{MC,i}})$, for
-example, band gap calculations, absorption spectra calculations, etc.
+$\langle O(T)\rangle = \frac{1}{n} \sum\limits_{i=1}^{n}
+O(x_{T}^{\textrm{MC,i}})$, for example, band gap
+calculations, absorption spectra calculations, etc.
 
 **Step 3 (optional)**: Calculate the desired observable for the original
 "pristine" supercell. This step can be necessary when changes to an
@@ -77,8 +93,13 @@ due to electron-phonon interactions.
 the number of structures created in step 1
 ([PHON_NSTRUCT](../incar-tags/PHON_NSTRUCT.md)).
 
-## ZG configuration (one-shot sampling)
-M. Zacharias and F. Giustino^([\[2\]](#cite_note-zacharias:prb:2016-2))
+## ZG configuration (one-shot sampling)\[<a
+href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: ZG configuration (one-shot sampling)">edit</a> \| (./index.php.md)")\]
+
+M. Zacharias and F.
+Giustino<sup>[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>
 introduced a one-shot method (named ZG configuration after the authors).
 This method is an approximation to full MC sampling. It only uses a
 single distorted structure and hence it is computationally much cheaper
@@ -86,9 +107,9 @@ than the full MC sampling. It retains an accuracy very close to the full
 MC sampling for converged supercell sizes. For example, we showed that
 for the zero-point renormalization of the band gap, the accuracy is
 within 5 meV between the ZG configurations and the full MC
-sampling^([\[1\]](#cite_note-karsai:njp:2018-1)). Hence we suggest using
-this method preferably, when convergence of the supercell size is hard
-to achieve or the 5 meV accuracy is enough.
+sampling<sup>[\[1\]](#cite_note-karsai:njp:2018-1)</sup>.
+Hence we suggest using this method preferably, when convergence of the
+supercell size is hard to achieve or the 5 meV accuracy is enough.
 
 To select the ZG configuration
 [PHON_NSTRUCT](../incar-tags/PHON_NSTRUCT.md)=0 has to be set in the
@@ -114,7 +135,11 @@ from 0-700 K (with step size of 100 K) is given as:
     PHON_NSTRUCT = 0
     PHON_LMC = .TRUE.
 
-## Full MC sampling
+## Full MC sampling\[<a
+href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Full MC sampling">edit</a> \| (./index.php.md)\]
+
 The tag [PHON_NSTRUCT](../incar-tags/PHON_NSTRUCT.md) sets the
 number of structures generated due to the MC sampling. Convergence of
 the observable with respect to this number should be monitored.
@@ -139,7 +164,11 @@ following:
     PHON_NSTRUCT = 100
     TEBEG = 0.0
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [PHON_LBOSE](../incar-tags/PHON_LBOSE.md)
 - [PHON_LMC](../incar-tags/PHON_LMC.md)
 - [PHON_NSTRUCT](../incar-tags/PHON_NSTRUCT.md)
@@ -151,14 +180,26 @@ following:
 - [Transport
   calculations](Transport_coefficients_including_electron-phonon_scattering.md)
 
-## References
-1.  ↑ ^([a](#cite_ref-karsai:njp:2018_1-0))
-    ^([b](#cite_ref-karsai:njp:2018_1-1)) [F. Karsai, M. Engel, E.
-    Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008
-    (2018).](https://doi.org/10.1088/1367-2630/aaf53f)
-2.  ↑ ^([a](#cite_ref-zacharias:prb:2016_2-0))
-    ^([b](#cite_ref-zacharias:prb:2016_2-1)) [M. Zacharias and F.
-    Giustino, Phys. Rev. B **94**, 075125
-    (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
+## References\[<a
+href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-karsai:njp:2018_1-0)</sup>
+    <sup>[b](#cite_ref-karsai:njp:2018_1-1)</sup>
+    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
+    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
+    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
+2.  ↑
+    <sup>[a](#cite_ref-zacharias:prb:2016_2-0)</sup>
+    <sup>[b](#cite_ref-zacharias:prb:2016_2-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
+    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
+    Rev. B <strong>94</strong>, 075125 (2016).</a>
+
 
 ------------------------------------------------------------------------
+
+

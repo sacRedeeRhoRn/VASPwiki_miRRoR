@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FFNCAR
+
+
+
 Redirect to:
 
-- [ML FFNCAR](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=ML_FFNCAR&amp;redirect=no"
+  class="mw-redirect" title="ML FFNCAR">ML FFNCAR</a>
+
+

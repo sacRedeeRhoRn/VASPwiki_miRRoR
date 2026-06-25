@@ -2,13 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # REPORT
-The output file REPORT contains information about the MD run such as
-list of parameters used in the simulation, the values of controlled
-geometric parameters, number of collision with the heat-bath (Andersen
-thermostat), quantities needed to compute the free-energy gradient, etc.
 
-## Related Tags and Sections
+
+The output file REPORT
+contains information about the MD run such as list of parameters used in
+the simulation, the values of controlled geometric parameters, number of
+collision with the heat-bath (Andersen thermostat), quantities needed to
+compute the free-energy gradient, etc.
+
+## Related Tags and Sections\[<a href="/wiki/index.php?title=REPORT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related Tags and Sections">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [MDALGO](../incar-tags/MDALGO.md),
 [ISIF](../incar-tags/ISIF.md)
 
 ------------------------------------------------------------------------
+
+

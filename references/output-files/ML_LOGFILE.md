@@ -2,45 +2,79 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_LOGFILE
+
+
 Every VASP run with activated machine learning
 ([INCAR](../input-files/INCAR.md) contains
 [ML_LMLFF](../incar-tags/ML_LMLFF.md) = .TRUE.) will generate a file
-called ML_LOGFILE. In this log file a summary of settings and the
-development of quantities related to machine learning are presented in a
-compact, yet human-readable and post-processing friendly way. It
-complements the usual ab initio log output in the
-[OUTCAR](OUTCAR.md) and [OSZICAR](OSZICAR.md)
-files for machine learning VASP runs.
+called ML_LOGFILE. In this log
+file a summary of settings and the development of quantities related to
+machine learning are presented in a compact, yet human-readable and
+post-processing friendly way. It complements the usual ab initio log
+output in the [OUTCAR](OUTCAR.md) and
+[OSZICAR](OSZICAR.md) files for machine learning VASP runs.
+
 
 ## Contents
 
-- [1 File layout](#File_layout)
-  - [1.1 Memory consumption estimation](#Memory_consumption_estimation)
-  - [1.2 Machine learning setup](#Machine_learning_setup)
-  - [1.3 Existing ab initio data](#Existing_ab_initio_data)
-  - [1.4 Main loop](#Main_loop)
-    - [1.4.1 Header](#Header)
-    - [1.4.2 Body](#Body)
-  - [1.5 Timing information](#Timing_information)
-- [2 Post-processing usage](#Post-processing_usage)
-- [3 Collected data](#Collected_data)
-  - [3.1 STDAB line](#STDAB_line)
-    - [3.1.1 Energies](#Energies)
-    - [3.1.2 Forces](#Forces)
-    - [3.1.3 Stress](#Stress)
-    - [3.1.4 Subset standard deviation](#Subset_standard_deviation)
-  - [3.2 ERR line](#ERR_line)
-    - [3.2.1 Energies](#Energies_2)
-    - [3.2.2 Forces](#Forces_2)
-    - [3.2.3 Stress](#Stress_2)
-  - [3.3 NORME line](#NORME_line)
-    - [3.3.1 Energies](#Energies_3)
-    - [3.3.2 Forces](#Forces_3)
-    - [3.3.3 Stress](#Stress_3)
-  - [3.4 Per-species quantities for
+
+- [1 File
+  layout](#File_layout)
+  - [1.1 Memory
+    consumption estimation](#Memory_consumption_estimation)
+  - [1.2 Machine
+    learning setup](#Machine_learning_setup)
+  - [1.3 Existing
+    ab initio data](#Existing_ab_initio_data)
+  - [1.4 Main
+    loop](#Main_loop)
+    - [1.4.1
+      Header](#Header)
+    - [1.4.2
+      Body](#Body)
+  - [1.5 Timing
+    information](#Timing_information)
+- [2
+  Post-processing
+  usage](#Post-processing_usage)
+- [3 Collected
+  data](#Collected_data)
+  - [3.1 STDAB
+    line](#STDAB_line)
+    - [3.1.1
+      Energies](#Energies)
+    - [3.1.2
+      Forces](#Forces)
+    - [3.1.3
+      Stress](#Stress)
+    - [3.1.4 Subset
+      standard deviation](#Subset_standard_deviation)
+  - [3.2 ERR
+    line](#ERR_line)
+    - [3.2.1
+      Energies](#Energies_2)
+    - [3.2.2
+      Forces](#Forces_2)
+    - [3.2.3
+      Stress](#Stress_2)
+  - [3.3 NORME
+    line](#NORME_line)
+    - [3.3.1
+      Energies](#Energies_3)
+    - [3.3.2
+      Forces](#Forces_3)
+    - [3.3.3
+      Stress](#Stress_3)
+  - [3.4
+    Per-species quantities for
     forces](#Per-species_quantities_for_forces)
 
-## File layout
+
+## File layout\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: File layout">edit</a> \| (./index.php.md)\]
+
 The machine learning log file is split into multiple sections, visually
 separated like this:
 
@@ -62,8 +96,13 @@ sections about actual memory consumption and timing statistics. The
 following chapters describe the contents of the log file sections in
 more detail:
 
-### Memory consumption estimation
-This is usually the first section of the ML_LOGFILE and contains an
+### Memory consumption estimation\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Memory consumption estimation">edit</a> \| (./index.php.md)\]
+
+This is usually the first section of the
+ML_LOGFILE and contains an
 **estimation** of memory requirements based on VASP files read on
 startup. In the simplest case
 ([`ML_MODE`](../incar-tags/ML_MODE.md)` = train`) it depends on the
@@ -149,7 +188,11 @@ usage are explained
 |----|
 | **Mind:** This is only an estimate, the actual memory requirement may be even higher. Moreover, this is only the usage for the machine learning part of VASP which in a training run adds up to the memory of the ab initio part. |
 
-### Machine learning setup
+### Machine learning setup\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Machine learning setup">edit</a> \| (./index.php.md)\]
+
 This section gives an overview of the most important
 [INCAR](../input-files/INCAR.md) tags concerning machine learning settings.
 The tags are grouped by topics and the tabular layout provides a short
@@ -198,7 +241,11 @@ section header for an explanation).
     Maximum angular momentum quantum number of spherical harmonics used to expand atomic distributions    :             4     ML_LMAX2
     ...
 
-### Existing ab initio data
+### Existing ab initio data\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Existing ab initio data">edit</a> \| (./index.php.md)\]
+
 This section will appear in continuation runs (e.g.
 [`ML_MODE`](../incar-tags/ML_MODE.md)` = train` with existing
 [ML_AB](../input-files/ML_AB.md)) and summarizes the ab initio data found in
@@ -214,20 +261,30 @@ the [ML_AB](../input-files/ML_AB.md) file.
 
     ********************************************************************************************************************************************
 
-### Main loop
-The central part of the ML_LOGFILE is the main loop: depending on the
-machine learning mode [ML_MODE](../incar-tags/ML_MODE.md) it contains
-data collected over all the time steps (or other iterative schemes)
-along the VASP run. The main loop layout is carefully designed to
-minimize the file size while at the same being self-descriptive. To
-achieve this, it is split into two parts: the description blocks in the
-main loop header explain the available data and present its arrangement
-in lines and columns. Then, the main loop body contains the actual data
-(mostly raw numbers) in the previously defined layout. The separation of
-data and its description avoids unnecessary repetition and simplifies
+### Main loop\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Main loop">edit</a> \| (./index.php.md)\]
+
+The central part of the
+ML_LOGFILE is the main loop:
+depending on the machine learning mode
+[ML_MODE](../incar-tags/ML_MODE.md) it contains data collected over all
+the time steps (or other iterative schemes) along the VASP run. The main
+loop layout is carefully designed to minimize the file size while at the
+same being self-descriptive. To achieve this, it is split into two
+parts: the description blocks in the main loop header explain the
+available data and present its arrangement in lines and columns. Then,
+the main loop body contains the actual data (mostly raw numbers) in the
+previously defined layout. The separation of data and its description
+avoids unnecessary repetition and simplifies
 [post-processing](#Post-processing_usage).
 
-#### Header
+#### Header\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Header">edit</a> \| (./index.php.md)\]
+
 The main loop header consists of multiple blocks each introducing one of
 the log lines appearing later in the loop body. In the example below the
 log line `STATUS` is described: there will be 8 columns (counting also
@@ -271,11 +328,15 @@ its 5 columns, and so on...
 
     ...
 
-|                                                                   |
-|-------------------------------------------------------------------|
+|  |
+|----|
 | **Tip:** The second column is **always** the current (time) step. |
 
-#### Body
+#### Body\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Body">edit</a> \| (./index.php.md)\]
+
 Right after the header the main loop body presents the time series of
 collected information from the VASP run. The chunks of data belonging to
 the same time step are fenced in dashed lines. The keywords, e.g.
@@ -327,7 +388,11 @@ error estimate was computed (`BEEF` line):
     --------------------------------------------------------------------------------
     ...
 
-### Timing information
+### Timing information\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Timing information">edit</a> \| (./index.php.md)\]
+
 This last section provides timings of different machine learning program
 parts (ab initio code parts are not considered). There are separate
 columns for system clock (wall time) and CPU time (summing all threads
@@ -347,14 +412,19 @@ of a process).
 
     ********************************************************************************************************************************************
 
-## Post-processing usage
+## Post-processing usage\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Post-processing usage">edit</a> \| (./index.php.md)\]
+
 Although the main loop design looks complicated at first glance it
 serves an important purpose: straightforward post-processing. The time
 series of a specific quantity can be easily constructed from the
-ML_LOGFILE, just by "searching" for the corresponding keyword. For
-example, the evolution of the prediction errors is generated by
-extracting all lines starting with the keyword `ERR`. In Linux, this can
-be done via the command line tool *grep*:
+ML_LOGFILE, just by
+"searching" for the corresponding keyword. For example, the evolution of
+the prediction errors is generated by extracting all lines starting with
+the keyword `ERR`. In Linux, this can be done via the command line tool
+*grep*:
 
     grep ERR ML_LOGFILE
 
@@ -399,8 +469,9 @@ following result:
 
 The output can be redirected to a file or piped into other
 post-processing tools. For example, the prediction error data can be
-directly plotted in [gnuplot](http://www.gnuplot.info): first, redirect
-the output to a file:
+directly plotted in
+<a href="http://www.gnuplot.info" class="external text"
+rel="nofollow">gnuplot</a>: first, redirect the output to a file:
 
     grep ERR ML_LOGFILE > err.dat
 
@@ -410,9 +481,14 @@ Then, start gnuplot and type:
 
 to show the force error along time steps.
 
-## Collected data
+## Collected data\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Collected data">edit</a> \| (./index.php.md)\]
+
 In this section we present additional in-depth information about the
-individual time series of data collected in the ML_LOGFILE. As mentioned
+individual time series of data collected in the
+ML_LOGFILE. As mentioned
 above, a short description is already provided directly in the file for
 each column of each keyword, e.g.
 
@@ -433,223 +509,272 @@ force RMSE (e.g. with/without individual weighing of structures with
 different numbers of atoms). Here, we collect this kind of background
 information which cannot be integrated directly into the log file.
 
-### `STDAB` line
+### `STDAB` line\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: STDAB line">edit</a> \| (./index.php.md)\]
+
 This time series displays the standard deviations of energies, forces
 and stress of the training data collected from ab initio simulations. It
 gets updated whenever new a new force field is generated during
 on-the-fly training (`STATUS` line indicates `learning` or `critical`).
 The training data itself is written to the
 [ML_ABN](ML_ABN.md) file. Assume that at a given time step
-there are $M$ structures with ab initio
-data (superscript $\mathsf{dft}$) in the
-training data. Also, we define:
+there are $M$ structures
+with ab initio data (superscript $\mathsf{dft}$) in the training data. Also, we define:
 
-- Atomic reference energies per type $\tau$: $\quad e^{\mathsf{ref}}_\tau$
-- Number of atoms in structure $i$ of
-  type $\tau$: $\quad N_{i,\tau}$
+- Atomic reference energies per type $\tau$:
+  $\quad e^{\mathsf{ref}}_\tau$
+- Number of atoms in structure $i$ of type
+  $\tau$: $\quad N_{i,\tau}$
 
-#### Energies
+#### Energies\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Energies">edit</a> \| (./index.php.md)\]
+
 Defining the sum of atomic reference energies in structure
 $i$
 
-$\quad E^{\mathsf{ref}}_{i} = \sum_{\tau}
-N_{i,\tau} e^{\mathsf{ref}}_\tau$
+$\quad E^{\mathsf{ref}}_{i} = \sum_{\tau} N_{i,\tau}
+e^{\mathsf{ref}}_\tau$
 
 we can write down the mean energy per atom
 
-$\overline{e^{\mathsf{dft}}} = \frac{1}{M}
-\sum_{i=1}^{M} \frac{E^{\mathsf{dft}}_{i} -
-E^{\mathsf{ref}}_{i}}{N_i}$
+$\overline{e^{\mathsf{dft}}} = \frac{1}{M} \sum_{i=1}^{M}
+\frac{E^{\mathsf{dft}}_{i} - E^{\mathsf{ref}}_{i}}{N_i}$
 
 and finally express the standard deviation of energies which is reported
 in the `STDAB` line:
 
-$\mathtt{STDAB}_E = \sigma_{E} =
-\sqrt{\frac{1}{M} \sum_{i=1}^{M} \left(\frac{E^{\mathsf{dft}}_{i} -
-E^{\mathsf{ref}}_{i}}{N_i} - \overline{e^{\mathsf{dft}}}\right)^2}$
+$\mathtt{STDAB}_E = \sigma_{E} = \sqrt{\frac{1}{M} \sum_{i=1}^{M}
+\left(\frac{E^{\mathsf{dft}}_{i} - E^{\mathsf{ref}}_{i}}{N_i} -
+\overline{e^{\mathsf{dft}}}\right)^2}$
 
-#### Forces
+#### Forces\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Forces">edit</a> \| (./index.php.md)\]
+
 Similarly, with the average reference force of component
 $\alpha$
 
-$\overline{F^{\mathsf{dft}}_{\alpha}} =
-\frac{1}{M} \sum_{i=1}^{M} \frac{1}{N_i} \sum_{j=1}^{N_i}
-F^{\mathsf{dft}}_{i,j,\alpha} \quad \mathrm{where} \quad \alpha \in
-\\x,y,z\\$
+$\overline{F^{\mathsf{dft}}_{\alpha}} = \frac{1}{M} \sum_{i=1}^{M}
+\frac{1}{N_i} \sum_{j=1}^{N_i} F^{\mathsf{dft}}_{i,j,\alpha} \quad
+\mathrm{where} \quad \alpha \in \\x,y,z\\$
 
 we can define per-component force standard deviations
 
-$\sigma_{F,\alpha} = \sqrt{\frac{1}{M}
-\sum_{i=1}^{M} \frac{1}{N_i} \sum_{j=1}^{N_i}
-\left(F^{\mathsf{dft}}_{i,j,\alpha} -
+$\sigma_{F,\alpha} = \sqrt{\frac{1}{M} \sum_{i=1}^{M} \frac{1}{N_i}
+\sum_{j=1}^{N_i} \left(F^{\mathsf{dft}}_{i,j,\alpha} -
 \overline{F^{\mathsf{dft}}_{\alpha}}\right)^2} \quad \mathrm{where}
 \quad \alpha \in \\x,y,z\\$
 
 and combine them via the root mean square to obtain the output in the
 `STDAB` line:
 
-$\mathtt{STDAB}_F = \sqrt{ \frac{1}{M}
-\sum_{i=1}^{M} \frac{1}{3N_i} \sum_{j=1}^{N_i}
-\sum_{\alpha\in\\x,y,z\} \left( F^{\mathsf{dft}}_{i,j,\alpha} -
+$\mathtt{STDAB}_F = \sqrt{ \frac{1}{M} \sum_{i=1}^{M} \frac{1}{3N_i}
+\sum_{j=1}^{N_i} \sum_{\alpha\in\\x,y,z\} \left(
+F^{\mathsf{dft}}_{i,j,\alpha} -
 \overline{F^{\mathsf{dft}}_{\alpha}}\right)^2 } = \sqrt{
 \frac{\sigma_{F,x}^2 + \sigma_{F,y}^2 + \sigma_{F,z}^2}{3} }$
 
-#### Stress
+#### Stress\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Stress">edit</a> \| (./index.php.md)\]
+
 Just like for the forces we define all quantities for the six stress
 components separately. First, the average stress
 
-$\overline{S^{\mathsf{dft}}_{\alpha\beta}} =
-\frac{1}{M} \sum_{i=1}^{M} S^{\mathsf{dft}}_{\alpha\beta} \quad
-\mathrm{where} \quad \alpha\beta \in \\xx,yy,zz,xy,xz,yz\\$
+$\overline{S^{\mathsf{dft}}_{\alpha\beta}} = \frac{1}{M} \sum_{i=1}^{M}
+S^{\mathsf{dft}}_{\alpha\beta} \quad \mathrm{where} \quad \alpha\beta
+\in \\xx,yy,zz,xy,xz,yz\\$
 
 and consequently the per-component standard deviation:
 
-$\sigma_{S,\alpha\beta} = \sqrt{\frac{1}{M}
-\sum_{i=1}^{M} \left(S^{\mathsf{dft}}_{\alpha\beta} -
+$\sigma_{S,\alpha\beta} = \sqrt{\frac{1}{M} \sum_{i=1}^{M}
+\left(S^{\mathsf{dft}}_{\alpha\beta} -
 \overline{S^{\mathsf{dft}}_{\alpha\beta}}\right)^2} \quad
 \mathrm{where} \quad \alpha\beta \in \\xx,yy,zz,xy,xz,yz\\$
 
 Finally, we obtain the combined (root mean square) stress standard
 deviation in the `STDAB` line:
 
-$\mathtt{STDAB}_S = \sqrt{\frac{1}{6M}
-\sum_{i=1}^{M} \sum_{\alpha\beta}
-\left(S^{\mathsf{dft}}_{\alpha\beta} -
+$\mathtt{STDAB}_S = \sqrt{\frac{1}{6M} \sum_{i=1}^{M}
+\sum_{\alpha\beta} \left(S^{\mathsf{dft}}_{\alpha\beta} -
 \overline{S^{\mathsf{dft}}_{\alpha\beta}}\right)^2} = \sqrt{
 \frac{\sigma_{S,xx}^2 + \sigma_{S,yy}^2 + \sigma_{S,zz}^2 +
 \sigma_{S,xy}^2 + \sigma_{S,xz}^2 + \sigma_{S,yz}^2}{6} }$
 
-#### Subset standard deviation
-Calculation of mean values $\overline{e^{\mathsf{dft}}}$, $\overline{F^{\mathsf{dft}}_{\alpha}}$, $\overline{S^{\mathsf{dft}}_{\alpha\beta}}$ and respective
-standard deviations $\sigma_{E}$,
-$\sigma_{F,\alpha}$,
-$\sigma_{S,\alpha\beta}$ are modified
-for [`ML_IWEIGHT`](../incar-tags/ML_IWEIGHT.md)` = 3` to account for
+#### Subset standard deviation\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Subset standard deviation">edit</a> \| (./index.php.md)\]
+
+Calculation of mean values $\overline{e^{\mathsf{dft}}}$, $\overline{F^{\mathsf{dft}}_{\alpha}}$,
+$\overline{S^{\mathsf{dft}}_{\alpha\beta}}$ and
+respective standard deviations $\sigma_{E}$,
+$\sigma_{F,\alpha}$, $\sigma_{S,\alpha\beta}$ are modified for
+[`ML_IWEIGHT`](../incar-tags/ML_IWEIGHT.md)` = 3` to account for
 potentially disconnected regions in the training data. For example,
 consider a training data set which contains structures from ab initio MD
 simulations of two different crystal structures (e.g. fcc and bcc). The
 corresponding potential energies may then be clustered around two mean
 values separated by an energy range not represented in the data set.
-Computing $\sigma_{E}$ directly from
-all energy data would then result in an overestimation of the desired
-measure for the data spread. Consequently, also the normalized root mean
-square error ($\mathtt{NORME}_E$) would
-result in unreasonably low values. It seems natural to split the
-calculation of the standard deviation along the clusters, compute
-separate values for each subset and finally average the standard
-deviations over both sets. In general, we adopt the following strategy
-for computing standard deviations for heterogeneous data sets: First,
-the training data is split into multiple subsets based on atom types,
-number of atoms per type and system names. For details about data set
-separation, see [ML_IWEIGHT](../incar-tags/ML_IWEIGHT.md) and
+Computing $\sigma_{E}$
+directly from all energy data would then result in an overestimation of
+the desired measure for the data spread. Consequently, also the
+normalized root mean square error ($\mathtt{NORME}_E$) would result in unreasonably low values. It seems
+natural to split the calculation of the standard deviation along the
+clusters, compute separate values for each subset and finally average
+the standard deviations over both sets. In general, we adopt the
+following strategy for computing standard deviations for heterogeneous
+data sets: First, the training data is split into multiple subsets based
+on atom types, number of atoms per type and system names. For details
+about data set separation, see
+[ML_IWEIGHT](../incar-tags/ML_IWEIGHT.md) and
 [ML_LUSE_NAMES](../incar-tags/ML_LUSE_NAMES.md). Let us assume we
-now have $R$ subsets, where set
-$r$ contains $M_r$ structures, i.e.,
+now have $R$ subsets,
+where set $r$ contains
+$M_r$ structures, i.e.,
 
 $\sum_{r=1}^{R} M_r = M.$
 
 Then, we can compute individual subset energy, force and stress means
 $\overline{e^{\mathsf{dft}}_r}$,
-$\overline{F^{\mathsf{dft}}_{\alpha,r}}$ and $\overline{S^{\mathsf{dft}}_{\alpha\beta,r}}$ by replacing
+$\overline{F^{\mathsf{dft}}_{\alpha,r}}$ and
+$\overline{S^{\mathsf{dft}}_{\alpha\beta,r}}$ by
+replacing
 
-$\frac{1}{M} \sum_{i=1}^{M} \quad \rightarrow
-\quad \frac{1}{M_r} \sum_{i \in \mathsf{set}_r}$
+$\frac{1}{M} \sum_{i=1}^{M} \quad \rightarrow \quad \frac{1}{M_r}
+\sum_{i \in \mathsf{set}_r}$
 
 With these per-subset means and using the same replacement in the
 formulae for standard deviations we obtain the per-subset standard
-deviations $\sigma_{E,r}$,
-$\sigma_{F,\alpha,r}$,
-$\sigma_{S,\alpha\beta,r}$. Finally, we
-take the root mean square (quadratic mean) to compute an overall
-standard deviation for energies, forces and stress:
+deviations $\sigma_{E,r}$, $\sigma_{F,\alpha,r}$, $\sigma_{S,\alpha\beta,r}$. Finally, we take the root mean square (quadratic
+mean) to compute an overall standard deviation for energies, forces and
+stress:
 
-$\sigma_{E} = \sqrt{ \frac{1}{R} \sum_{r=1}^{R}
-\sigma_{E,r}^2 }$
+$\sigma_{E} = \sqrt{ \frac{1}{R} \sum_{r=1}^{R} \sigma_{E,r}^2 }$
 
-$\sigma_{F,\alpha} = \sqrt{ \frac{1}{R}
-\sum_{r=1}^{R} \sigma_{F,\alpha,r}^2 }$
+$\sigma_{F,\alpha} = \sqrt{ \frac{1}{R} \sum_{r=1}^{R}
+\sigma_{F,\alpha,r}^2 }$
 
-$\sigma_{S,\alpha\beta} = \sqrt{ \frac{1}{R}
-\sum_{r=1}^{R} \sigma_{S,\alpha\beta,r}^2 }$
+$\sigma_{S,\alpha\beta} = \sqrt{ \frac{1}{R} \sum_{r=1}^{R}
+\sigma_{S,\alpha\beta,r}^2 }$
 
 These are the standard deviations which enter the computation of `ERR`
 and `NORME`.
 
-### `ERR` line
+### `ERR` line\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: ERR line">edit</a> \| (./index.php.md)\]
+
 The `ERR` lines list the root mean square error (RMSE) of energy, force
 and stress predictions with respect to the reference data in the
 training set. A side-by-side comparison of ab initio vs. predicted
 values can be found in the [ML_REG](ML_REG.md) file. In the
-following formulae we reuse definitions from the [`STDAB`](#STDAB_line)
-section. Furthermore, the superscript $\mathsf{ml}$ is used to denote values predicted by the machine-learned
-force field.
+following formulae we reuse definitions from the <a href="#STDAB_line"
+class="mw-selflink-fragment"><code>STDAB</code></a> section.
+Furthermore, the superscript $\mathsf{ml}$
+is used to denote values predicted by the machine-learned force field.
 
-#### Energies
-$\mathtt{ERR}_E = \sqrt{\frac{1}{M}
-\sum_{i=1}^{M} \left(\frac{E^{\mathsf{dft}}_{i} -
-E^{\mathsf{ml}}_{i}}{N_i}\right)^2}$
+#### Energies\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Energies">edit</a> \| (./index.php.md)\]
 
-#### Forces
-$\mathtt{ERR}_F = \sqrt{ \frac{1}{M}
-\sum_{i=1}^{M} \frac{1}{3N_i} \sum_{j=1}^{N_i}
-\sum_{\alpha\in\\x,y,z\} \left( F^{\mathsf{ml}}_{i,j,\alpha} -
-F^{\mathsf{dft}}_{i,j,\alpha} \right)^2 }$
+$\mathtt{ERR}_E = \sqrt{\frac{1}{M} \sum_{i=1}^{M}
+\left(\frac{E^{\mathsf{dft}}_{i} - E^{\mathsf{ml}}_{i}}{N_i}\right)^2}$
 
-#### Stress
-$\mathtt{ERR}_S = \sqrt{\frac{1}{6M}
-\sum_{i=1}^{M} \sum_{\alpha\beta}
+#### Forces\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: Forces">edit</a> \| (./index.php.md)\]
+
+$\mathtt{ERR}_F = \sqrt{ \frac{1}{M} \sum_{i=1}^{M} \frac{1}{3N_i}
+\sum_{j=1}^{N_i} \sum_{\alpha\in\\x,y,z\} \left(
+F^{\mathsf{ml}}_{i,j,\alpha} - F^{\mathsf{dft}}_{i,j,\alpha} \right)^2
+}$
+
+#### Stress\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Stress">edit</a> \| (./index.php.md)\]
+
+$\mathtt{ERR}_S = \sqrt{\frac{1}{6M} \sum_{i=1}^{M} \sum_{\alpha\beta}
 \left(S^{\mathsf{ml}}_{\alpha\beta} -
 S^{\mathsf{dft}}_{\alpha\beta}\right)^2}$
 
   
 
-### `NORME` line
-|                                      |
-|--------------------------------------|
+### `NORME` line\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: NORME line">edit</a> \| (./index.php.md)\]
+
+|  |
+|----|
 | **Mind:** Available as of VASP 6.6.0 |
 
 The log lines starting with the `NORME` keyword contain a normalized
 version of the RMSEs given in the `ERR` line. The "normalizer" used here
 is the standard deviation computed from the training data. This quantity
-is sometimes abbreviated
-NRMSE_($\sigma$) or RSR
-(RMSE-observations standard deviation ratio). Values in the `NORME` line
-are already multiplied with 100%, i.e., expressed in percent.
+is sometimes abbreviated NRMSE<sub>$\sigma$</sub>
+or RSR (RMSE-observations standard deviation ratio). Values in the
+`NORME` line are already multiplied with 100%, i.e., expressed in
+percent.
 
-#### Energies
-$\mathtt{NORME}_E = 100 \\ \cdot
-\sqrt{\frac{1}{M} \sum_{i=1}^{M}
+#### Energies\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: Energies">edit</a> \| (./index.php.md)\]
+
+$\mathtt{NORME}_E = 100 \\ \cdot \sqrt{\frac{1}{M} \sum_{i=1}^{M}
 \frac{\left(\frac{E^{\mathsf{dft}}_{i} -
 E^{\mathsf{ml}}_{i}}{N_i}\right)^2}{\sigma_E^2}} = 100 \\ \cdot
 \frac{\mathtt{ERR}_E}{\mathtt{STDAB}_E}$
 
-#### Forces
-$\mathtt{NORME}_F = 100 \\ \cdot \sqrt{
-\frac{1}{M} \sum_{i=1}^{M} \frac{1}{3N_i} \sum_{j=1}^{N_i}
-\sum_{\alpha\in\\x,y,z\} \frac{\left( F^{\mathsf{ml}}_{i,j,\alpha} -
-F^{\mathsf{dft}}_{i,j,\alpha} \right)^2}{\sigma_\mathtt{F,\alpha}^2}}$
+#### Forces\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=22"
+class="mw-editsection-visualeditor"
+title="Edit section: Forces">edit</a> \| (./index.php.md)\]
 
-#### Stress
-$\mathtt{NORME}_S = 100 \\ \cdot
-\sqrt{\frac{1}{6M} \sum_{i=1}^{M} \sum_{\alpha\beta}
-\frac{\left(S^{\mathsf{ml}}_{\alpha\beta} -
+$\mathtt{NORME}_F = 100 \\ \cdot \sqrt{ \frac{1}{M} \sum_{i=1}^{M}
+\frac{1}{3N_i} \sum_{j=1}^{N_i} \sum_{\alpha\in\\x,y,z\} \frac{\left(
+F^{\mathsf{ml}}_{i,j,\alpha} - F^{\mathsf{dft}}_{i,j,\alpha}
+\right)^2}{\sigma_\mathtt{F,\alpha}^2}}$
+
+#### Stress\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=23"
+class="mw-editsection-visualeditor"
+title="Edit section: Stress">edit</a> \| (./index.php.md)\]
+
+$\mathtt{NORME}_S = 100 \\ \cdot \sqrt{\frac{1}{6M} \sum_{i=1}^{M}
+\sum_{\alpha\beta} \frac{\left(S^{\mathsf{ml}}_{\alpha\beta} -
 S^{\mathsf{dft}}_{\alpha\beta}\right)^2}{\sigma_\mathtt{S,\alpha\beta}^2}}$
 
-### Per-species quantities for forces
-|                                      |
-|--------------------------------------|
+### Per-species quantities for forces\[<a
+href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=24"
+class="mw-editsection-visualeditor"
+title="Edit section: Per-species quantities for forces">edit</a> \| (./index.php.md)\]
+
+|  |
+|----|
 | **Mind:** Available as of VASP 6.6.0 |
 
 Some global quantities (global with respect to the training data set)
-given in the output lines of the ML_LOGFILE are also available as
-per-atomic-species quantities, i.e., type-resolved results are provided
-in additional log lines:
+given in the output lines of the
+ML_LOGFILE are also available
+as per-atomic-species quantities, i.e., type-resolved results are
+provided in additional log lines:
 
 - `ERPS`: per-species RMSE of forces, corresponds to global force RMSE
   in `ERR`
-- `NEPS`: per-species NRMSE_($\sigma$)
-  of forces, corresponds to global force
-  NRMSE_($\sigma$) in `NORME`
+- `NEPS`: per-species NRMSE<sub>$\sigma$</sub> of forces, corresponds to global force
+  NRMSE<sub>$\sigma$</sub> in `NORME`
 - `BEPS`,`BEFPS`: per-species Bayesian error estimate of forces,
   corresponds to global Bayesian error estimate of forces `BEE`,`BEEF`.
 - `SPFPS`,`SPFFPS`: per-species spilling factor of forces, corresponds
@@ -657,11 +782,14 @@ in additional log lines:
 
 Per-species quantities are computed by replacing in the formulae of the
 corresponding global quantities the sum over all atoms with a sum
-restricted to atoms of the same type, i.e., if $\mathsf{A}_{i,\tau}$ denotes the set of atom indices of
-structure $i$ with type
+restricted to atoms of the same type, i.e., if
+$\mathsf{A}_{i,\tau}$ denotes the set of atom indices
+of structure $i$ with type
 $\tau$:
 
-$\frac{1}{N_i} \sum_{j=1}^{N_i} \quad \rightarrow
-\quad \frac{1}{N_{i,\tau}} \sum_{j \in \mathsf{A}_{i,\tau}}.$
+$\frac{1}{N_i} \sum_{j=1}^{N_i} \quad \rightarrow \quad
+\frac{1}{N_{i,\tau}} \sum_{j \in \mathsf{A}_{i,\tau}}.$
 
 ------------------------------------------------------------------------
+
+

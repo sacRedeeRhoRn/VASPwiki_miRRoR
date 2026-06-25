@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # AGGAC
+
+
 AGGAC = \[real\] 
 
 |  |  |  |
@@ -9,17 +11,40 @@ AGGAC = \[real\] 
 | Default: **AGGAC** | = 1.0 | if [LHFCALC](LHFCALC.md)$=$.FALSE. or [AEXX](AEXX.md)$\neq$1.0 |
 |  | = 0.0 | if [LHFCALC](LHFCALC.md)$=$.TRUE. and [AEXX](AEXX.md)$=$1.0 |
 
-Description: AGGAC is a parameter that multiplies the gradient
-correction in the GGA correlation functional.
+Description: AGGAC is a
+parameter that multiplies the gradient correction in the GGA correlation
+functional.
 
 ------------------------------------------------------------------------
 
-AGGAC can be used as the fraction of gradient correction in the GGA
-correlation in a Hartree-Fock/DFT hybrid functional.
+AGGAC can be used as the
+fraction of gradient correction in the GGA correlation in a
+Hartree-Fock/DFT hybrid functional.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li><span class="mw-selflink selflink">AGGAC</span> is implemented for
+all functionals listed at <a href="/wiki/GGA" title="GGA">GGA</a> except
+AM05.</li>
+<li><span class="mw-selflink selflink">AGGAC</span> is implemented for
+the functionals from Libxc (see <a href="/wiki/LIBXC1"
+title="LIBXC1">LIBXC1</a> for details).</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=AGGAC&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [AEXX](AEXX.md), [ALDAX](ALDAX.md),
 [ALDAC](ALDAC.md), [AGGAX](AGGAX.md),
 [AMGGAX](AMGGAX.md), [AMGGAC](AMGGAC.md),
@@ -32,3 +57,5 @@ formalism](../methods/Hybrid_functionals-_formalism.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-AGGAC-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

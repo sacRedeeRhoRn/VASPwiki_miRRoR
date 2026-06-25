@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_ISCALE_TOTEN
-ML_ISCALE_TOTEN = \[integer\]  
+
+
+ML_ISCALE_TOTEN =
+\[integer\]  
 Default: **ML_ISCALE_TOTEN** = 2 
 
 Description: This tag specifies how to scale the energy data in the
@@ -12,13 +15,18 @@ machine learning force field method.
 
 The following cases are possible:
 
-- `ML_ISCALE_TOTEN`` = 1`: The total energy is scaled to the total
-  energy of the isolated atoms given by
-  [ML_EATOM_REF](ML_EATOM_REF.md).
-- `ML_ISCALE_TOTEN`` = 2`: The total energy is scaled to the average of
-  the training data. This is the default setting.
+- `ML_ISCALE_TOTEN`` = 1`: The
+  total energy is scaled to the total energy of the isolated atoms given
+  by [ML_EATOM_REF](ML_EATOM_REF.md).
+- `ML_ISCALE_TOTEN`` = 2`: The
+  total energy is scaled to the average of the training data. This is
+  the default setting.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_ISCALE_TOTEN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_EATOM_REF](ML_EATOM_REF.md)
 
@@ -26,3 +34,5 @@ The following cases are possible:
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_ISCALE_TOTEN-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Phonons from finite differences
+
+
 The phonon calculations using a [finite differences
 approach](../theory/Phonons-_Theory.md)
 are carried out by setting [**IBRION**=5 or
@@ -14,8 +16,8 @@ system are reported in the [OUTCAR](../output-files/OUTCAR.md) file. If
 [ISIF](../incar-tags/ISIF.md)\>=3, the internal strain tensors are computed
 as well.
 
-|                                                                  |
-|------------------------------------------------------------------|
+|  |
+|----|
 | **Mind:** Only zone-center (Γ-point) frequencies are calculated. |
 
 It is possible to [obtain the phonon dispersion at different **q**
@@ -24,15 +26,27 @@ by computing the second-order force constants on a sufficiently large
 supercell and Fourier interpolating the dynamical matrices in the unit
 cell.
 
+
 ## Contents
 
-- [1 Input](#Input)
-- [2 Output](#Output)
-- [3 Practical hints](#Practical_hints)
-- [4 Related tags and sections](#Related_tags_and_sections)
-- [5 References](#References)
 
-## Input
+- [1
+  Input](#Input)
+- [2
+  Output](#Output)
+- [3 Practical
+  hints](#Practical_hints)
+- [4 Related tags
+  and sections](#Related_tags_and_sections)
+- [5
+  References](#References)
+
+
+## Input\[<a
+href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
 There are two options to compute the second-order force constants using
 finite differences:
 
@@ -93,7 +107,11 @@ If [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. or
 [LCALCEPS](../incar-tags/LCALCEPS.md)=.TRUE., additional dielectric
 properties are computed.
 
-## Output
+## Output\[<a
+href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The phonon modes and frequencies are written to the
 [OUTCAR](../output-files/OUTCAR.md) file after the following lines:
 
@@ -129,27 +147,28 @@ The following table labeled by (*x,y,z,dx,dy,dz*) contains the Cartesian
 positions of the atoms and the normalized eigenvectors of the eigenmodes
 in Cartesian coordinates.
 
-There should be 3$N$ normal modes, where
-$N$ is the number of atoms in the
-supercell ([POSCAR](../input-files/POSCAR.md)). The modes are ordered in
-descending order with respect to the eigenfrequency. The last three
-modes are the translational modes (they are usually disregarded).
+There should be 3$N$ normal
+modes, where $N$ is the
+number of atoms in the supercell ([POSCAR](../input-files/POSCAR.md)). The
+modes are ordered in descending order with respect to the
+eigenfrequency. The last three modes are the translational modes (they
+are usually disregarded).
 
 Finally, [IBRION](../incar-tags/IBRION.md)=6 and
 [ISIF](../incar-tags/ISIF.md)≥3 allows to calculate the elastic constants.
 The elastic tensor is determined by performing six finite distortions of
 the lattice and deriving the elastic constants from the strain-stress
-relationship.^([\[1\]](#cite_note-lepage:prb:2002-1)) The elastic tensor
-is calculated both, for 'clamped' ions, as well, as allowing for
-relaxation of the ions. The elastic moduli for rigid ions are written
-after the line
+relationship.<sup>[\[1\]](#cite_note-lepage:prb:2002-1)</sup>
+The elastic tensor is calculated both, for 'clamped' ions, as well, as
+allowing for relaxation of the ions. The elastic moduli for rigid ions
+are written after the line
 
     SYMMETRIZED ELASTIC MODULI (kBar)
 
 The ionic contributions are determined by inverting the ionic Hessian
 matrix and multiplying with the internal strain
-tensor,^([\[2\]](#cite_note-wu:prb:2005-2)) and the corresponding
-contributions are written after the lines:
+tensor,<sup>[\[2\]](#cite_note-wu:prb:2005-2)</sup>
+and the corresponding contributions are written after the lines:
 
     ELASTIC MODULI CONTR FROM IONIC RELAXATION (kBar)
 
@@ -166,7 +185,11 @@ cutoff is increased by roughly 30%, but it is strongly recommended to
 increase the cutoff systematically, (e.g., in steps of 15%), until full
 convergence is achieved.
 
-## Practical hints
+## Practical hints\[<a
+href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Practical hints">edit</a> \| (./index.php.md)\]
+
 The computation of the second-order force constants requires accurate
 [forces](../methods/Category-Forces.md). Therefore, the tag
 [PREC](../incar-tags/PREC.md)=Accurate is recommended in the
@@ -196,13 +219,17 @@ frequencies at the Gamma point. When replicating the unit cell to a
 2x2x2 supercell, a 6x6x6 **k** point mesh will produce an equivalent
 sampling. For a 4x4x4 supercell, a 3x3x3 **k** point mesh will suffice.
 
-It is possible to use phonopy^([\[3\]](#cite_note-phonopy-3)) to
-post-process the results of a finite differences calculation done with
-VASP.^([\[4\]](#cite_note-phonopy_dfpt-4))
+It is possible to use
+phonopy<sup>[\[3\]](#cite_note-phonopy-3)</sup>
+to post-process the results of a finite differences calculation done
+with
+VASP.<sup>[\[4\]](#cite_note-phonopy_dfpt-4)</sup>
 
 |  |
 |----|
-| **Tip:** In contrast to [computing phonons within DFPT](Phonons_from_density-functional-perturbation_theory.md), the finite difference approach can be used in combination with any [Exchange-correlation functional](../redirects/Exchange-correlation_functional.md). |
+| **Tip:** In contrast to [computing phonons within DFPT](Phonons_from_density-functional-perturbation_theory.md), the finite difference approach can be used in combination with any <a href="/wiki/Exchange-correlation_functional" class="mw-redirect"
+title="Exchange-correlation functional">Exchange-correlation
+functional</a>. |
 
 [IBRION](../incar-tags/IBRION.md)=5, is available as of VASP.4.5,
 [IBRION](../incar-tags/IBRION.md)=6 starting from VASP.5.1. In some older
@@ -227,7 +254,11 @@ increasing the precision with the {TAG\|PREC}} tag, or the
 modes](How_to_handle_imaginary_phonon_modes.md)
 for a step-by-step guide to identifying and resolving soft modes.
 
-## Related tags and sections
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [ISIF](../incar-tags/ISIF.md),
 [POTIM](../incar-tags/POTIM.md),
 
@@ -240,16 +271,28 @@ DOS](Computing_the_phonon_dispersion_and_DOS.md),
 [How to handle imaginary phonon
 modes](How_to_handle_imaginary_phonon_modes.md)
 
-## References
-1.  [↑](#cite_ref-lepage:prb:2002_1-0) [Y. Le Page and P. Saxe, Phys.
-    Rev. B **65**, 104104
-    (2002).](http://doi.org/10.1103/PhysRevB.65.104104)
-2.  [↑](#cite_ref-wu:prb:2005_2-0) [X. Wu, D. Vanderbilt, and D. R.
-    Hamann, Phys. Rev. B **72**, 035105
-    (2005).](https://doi.org/10.1103/PhysRevB.72.035105)
+## References\[<a
+href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-lepage:prb:2002_1-0)
+    <a href="http://doi.org/10.1103/PhysRevB.65.104104"
+    class="external text" rel="nofollow">Y. Le Page and P. Saxe, Phys. Rev.
+    B <strong>65</strong>, 104104 (2002).</a>
+2.  [↑](#cite_ref-wu:prb:2005_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.72.035105"
+    class="external text" rel="nofollow">X. Wu, D. Vanderbilt, and D. R.
+    Hamann, Phys. Rev. B <strong>72</strong>, 035105 (2005).</a>
 3.  [↑](#cite_ref-phonopy_3-0)
-    [http://phonopy.github.io/phonopy/index.html
-    (2022).](http://phonopy.github.io/phonopy/index.html)
+    <a href="http://phonopy.github.io/phonopy/index.html"
+    class="external text"
+    rel="nofollow">http://phonopy.github.io/phonopy/index.html (2022).</a>
 4.  [↑](#cite_ref-phonopy_dfpt_4-0)
-    [http://phonopy.github.io/phonopy/vasp-dfpt.html
-    (2022).](http://phonopy.github.io/phonopy/vasp-dfpt.html)
+    <a href="http://phonopy.github.io/phonopy/vasp-dfpt.html"
+    class="external text"
+    rel="nofollow">http://phonopy.github.io/phonopy/vasp-dfpt.html
+    (2022).</a>
+
+

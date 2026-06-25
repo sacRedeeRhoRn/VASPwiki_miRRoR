@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ESF_CONV
+
+
 ESF_CONV = \[real\]  
 Default: **ESF_CONV** = 0.01 
 
@@ -12,11 +14,15 @@ the energy difference between two interpolations (in eV).
 ------------------------------------------------------------------------
 
 If the energy between two interpolated k-point grids is less than
-ESF_CONV the calculation is considered to be converged. If the threshold
-has not been reached within [ESF_NINTER](ESF_NINTER.md)
-iterations VASP will print a warning about insufficient convergence.
+ESF_CONV the calculation is
+considered to be converged. If the threshold has not been reached within
+[ESF_NINTER](ESF_NINTER.md) iterations VASP will print a
+warning about insufficient convergence.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ESF_CONV&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ESF_SPLINES](ESF_SPLINES.md),
 [ESF_NINTER](ESF_NINTER.md),
 [LOPTICS](../incar-tags/LOPTICS.md)
@@ -25,3 +31,5 @@ iterations VASP will print a warning about insufficient convergence.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ESF_SPLINES-_incategory-Examples)
 
   
+
+

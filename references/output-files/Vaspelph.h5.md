@@ -2,17 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # vaspelph.h5
+
+
   
-The vaspelph.h5 file contains electron-phonon matrix elements and
-related quantities. It is created when
-[`ELPH_DRIVER`](../incar-tags/ELPH_DRIVER.md)` = mels`.
+The vaspelph.h5 file contains
+electron-phonon matrix elements and related quantities. It is created
+when [`ELPH_DRIVER`](../incar-tags/ELPH_DRIVER.md)` = mels`.
 
 |  |
 |----|
 | **Important:** Within the [projector-augmented-wave method](../methods/Projector-augmented-wave_formalism.md), different definitions of the electron-phonon matrix element exist. In order to choose which one is used and written to vaspelph.h5, please use the [ELPH_DECOMPOSE](../incar-tags/ELPH_DECOMPOSE.md) tag. |
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 It is usually best to avoid writing the electron-phonon matrix elements
@@ -34,22 +36,36 @@ to disk. There are several reasons for this:
   which can give a significant performance boost. This advantage is lost
   when choosing to write the matrix elements to disk.
 
-However, the information in the vaspelph.h5 file is still useful in some
-situations. For example,
+However, the information in the
+vaspelph.h5 file is still
+useful in some situations. For example,
 [`ELPH_DRIVER`](../incar-tags/ELPH_DRIVER.md)` = mels` can be used to
 plot the electron-phonon matrix along high-symmetry lines or for
 specific combinations of bands, modes and k/q-points.
 
+
 ## Contents
 
-- [1 File Layout](#File_Layout)
-  - [1.1 Group: /kpoints](#Group:_/kpoints)
-    - [1.1.1 Datasets](#Datasets)
-  - [1.2 Group: /matrix_elements](#Group:_/matrix_elements)
-    - [1.2.1 Datasets](#Datasets_2)
-- [2 Related tags and articles](#Related_tags_and_articles)
 
-## File Layout
+- [1 File
+  Layout](#File_Layout)
+  - [1.1 Group:
+    /kpoints](#Group:_/kpoints)
+    - [1.1.1
+      Datasets](#Datasets)
+  - [1.2 Group:
+    /matrix_elements](#Group:_/matrix_elements)
+    - [1.2.1
+      Datasets](#Datasets_2)
+- [2 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## File Layout\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: File Layout">edit</a> \| (./index.php.md)\]
+
 This section describes the structure of the HDF5 file used to store
 electron-phonon matrix elements, electronic eigenvalues, phonon
 frequencies, and associated metadata (e.g., array sizes, k-point
@@ -66,11 +82,19 @@ and **matrix_elements**.
 
 Each group is described in detail below.
 
-### Group: /kpoints
+### Group: /kpoints\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Group: /kpoints">edit</a> \| (./index.php.md)\]
+
 This group contains datasets related to the k-point grid and symmetry
 mapping.
 
-#### Datasets
+#### Datasets\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Datasets">edit</a> \| (./index.php.md)\]
+
 nrotk  
 *Shape:* Scalar
 
@@ -80,8 +104,9 @@ igrpop
 *Shape:* {nrotk, 3, 3}
 
 *Description:* Stores symmetry operation matrices. Each
-$3 \times 3$ matrix is associated with
-one symmetry operation.
+$3
+\times 3$ matrix is associated with one symmetry
+operation.
 
 indx_fbz2ibz  
 *Shape:* {nkpts_kp}
@@ -111,11 +136,19 @@ wtkpt_k
 *Description:* Weights corresponding to each IBZ k-point. These are used
 for Brillouin zone integrations.
 
-### Group: /matrix_elements
+### Group: /matrix_elements\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Group: /matrix_elements">edit</a> \| (./index.php.md)\]
+
 This group contains datasets for the electron–phonon coupling as well as
 related electronic and phononic properties.
 
-#### Datasets
+#### Datasets\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Datasets">edit</a> \| (./index.php.md)\]
+
 nspin  
 *Shape:* Scalar
 
@@ -188,7 +221,13 @@ phonon_eigenvalues
 *Description:* Phonon eigenvalues (frequencies) computed at each
 k-point.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Vaspelph.h5&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ELPH_DRIVER](../incar-tags/ELPH_DRIVER.md),
 [ELPH_RUN](../incar-tags/ELPH_RUN.md), [Electron-phonon potential from
 supercells](../tutorials/Electron-phonon_potential_from_supercells.md)
+
+

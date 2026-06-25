@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ICAMM Rennes 2019 HOWTO
+
+
 Here is a brief tutorial on how to run a calculation and how to run
 post-treatment tools during the VASP training school in Rennes.
 
@@ -115,8 +117,9 @@ To use it, enter the following command on a terminal
 
 `gnuplot`
 
-For more infos about gnuplot, visit the [following
-website](http://www.gnuplot.info)
+For more infos about gnuplot, visit the
+<a href="http://www.gnuplot.info" class="external text"
+rel="nofollow">following website</a>
 
 - **p4vasp**:
 
@@ -135,3 +138,5 @@ To use the VESTA visualization software, use the following command:
 To use the vmd visualization software, use the following command:
 
 `VMD`
+
+

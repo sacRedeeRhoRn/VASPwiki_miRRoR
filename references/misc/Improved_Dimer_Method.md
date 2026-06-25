@@ -2,45 +2,55 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Improved Dimer Method
-The dimer method^([\[1\]](#cite_note-henkelman:jpc:1999-1)) is a
-technique for the optimization of transition states. In VASP, the
+
+
+The dimer
+method<sup>[\[1\]](#cite_note-henkelman:jpc:1999-1)</sup>
+is a technique for the optimization of transition states. In VASP, the
 improved dimer method (IDM) by Heyden et al. is implemented, and a
 detailed presentation of the method can be found in their
-paper^([\[2\]](#cite_note-heyden:jpc:2005-2)).
+paper<sup>[\[2\]](#cite_note-heyden:jpc:2005-2)</sup>.
 
 The initial curvature along the dimer axis is computed using finite
 differences. The initial dimer direction must be provided (see below).
 The IDM procedure shown in Figure 1 is described in four steps with
 [FINDIFF](../incar-tags/FINDIFF.md) = 1:
 
-[![](https://vasp.at/wiki/images/thumb/2/25/IDM.png/800px-IDM.png)](https://vasp.at/wiki/File:IDM.png)
+<figure class="mw-halign-left" typeof="mw:File/Thumb">
+<a href="/wiki/File:IDM.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/2/25/IDM.png/800px-IDM.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/2/25/IDM.png/1200px-IDM.png 1.5x, /wiki/images/thumb/2/25/IDM.png/1600px-IDM.png 2x"
+width="800" height="157" /></a>
+<figcaption>Figure 1. The IDM is relaxed on the potential energy surface
+(PES) in four ionic steps. Solid arrows show the dimer axis
+<strong>u</strong><sub>ξ</sub> and solid circles the structure for which
+the forces are calculated in the step. The empty circles and dashed
+lines indicate the structures and dimer axes from the previous steps.
+The dotted arrow in <strong>(d)</strong> represents the dimer axis on
+rotation by φ<sub>min</sub>.</figcaption>
+</figure>
 
-Figure 1. The IDM is relaxed on the potential energy surface (PES) in
-four ionic steps. Solid arrows show the dimer axis **u**_(ξ) and solid
-circles the structure for which the forces are calculated in the step.
-The empty circles and dashed lines indicate the structures and dimer
-axes from the previous steps. The dotted arrow in **(d)** represents the
-dimer axis on rotation by φ_(min).
 
-**a)** An initial direction **u**_(ξ) is taken from the most negative
-vibrational mode of the trial structure. The trial structure is the
-first point **q**.
+**a)** An initial direction **u**<sub>ξ</sub> is taken from the most
+negative vibrational mode of the trial structure. The trial structure is
+the first point **q**.
 
 **b)** An additional point on the potential energy surface (PES) forward
-along the trial direction is defined **q** + δ**u**_(ξ). The first and
-second points together define the dimer.
+along the trial direction is defined **q** + δ**u**<sub>ξ</sub>. The
+first and second points together define the dimer.
 
-**c)** The dimer is then rotated on the PES about **q** by angle φ₁ to
-**q̃** such that its axis is parallel to the direction of maximal
-negative curvature.
+**c)** The dimer is then rotated on the PES about **q** by angle
+φ<sub>1</sub> to **q̃** such that its axis is parallel to the direction
+of maximal negative curvature.
 
-**d)** A new direction is defined by rotating **u**_(ξ) by φ_(min) to
-minimize the negative curvature of the PES λ. A search direction N̅ is
-defined using a minimization algorithm, then a translation (optimization
-step) is taken in the unstable direction of N̅ to **q** + εN̅, where ε is
-a step distance. The potential energy is is maximized along the unstable
-direction, (i.e., dimer axis) while it is minimized in all other
-directions.
+**d)** A new direction is defined by rotating **u**<sub>ξ</sub> by
+φ<sub>min</sub> to minimize the negative curvature of the PES λ. A
+search direction N̅ is defined using a minimization algorithm, then a
+translation (optimization step) is taken in the unstable direction of N̅
+to **q** + εN̅, where ε is a step distance. The potential energy is is
+maximized along the unstable direction, (i.e., dimer axis) while it is
+minimized in all other directions.
 
 Rotation followed by translation is followed iteratively until
 convergence, i.e. the saddle point, is reached.
@@ -50,12 +60,13 @@ The method is invoked by setting [IBRION](../incar-tags/IBRION.md)=44 in
 the [INCAR](../input-files/INCAR.md) file.
 
 Furthermore, the user must specify the direction of the unstable mode.
-The corresponding $3N$ dimensional
-vector is defined in the [POSCAR](../input-files/POSCAR.md) file after the
-lines with atomic coordinates and a separating blank line. Note that the
-dimer direction is automatically normalized, i.e., the norm of the dimer
-axis is irrelevant. An example of a [POSCAR](../input-files/POSCAR.md) file
-for a simulation with the dimer method is given in the following:
+The corresponding $3N$
+dimensional vector is defined in the [POSCAR](../input-files/POSCAR.md)
+file after the lines with atomic coordinates and a separating blank
+line. Note that the dimer direction is automatically normalized, i.e.,
+the norm of the dimer axis is irrelevant. An example of a
+[POSCAR](../input-files/POSCAR.md) file for a simulation with the dimer
+method is given in the following:
 
     ammonia flipping
     1.
@@ -110,14 +121,25 @@ to the correct transition state).
 |----|
 | **Mind:** The current implementation does not support lattice optimizations ([ISIF](../incar-tags/ISIF.md)\>2) and can be used only for the relaxation of atomic positions. |
 
+
 ## Contents
 
-- [1 Initial dimer axis](#Initial_dimer_axis)
-- [2 Practical example](#Practical_example)
-- [3 Related tags and articles](#Related_tags_and_articles)
-- [4 References](#References)
 
-## Initial dimer axis
+- [1 Initial dimer
+  axis](#Initial_dimer_axis)
+- [2 Practical
+  example](#Practical_example)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+- [4
+  References](#References)
+
+
+## Initial dimer axis\[<a
+href="/wiki/index.php?title=Improved_dimer_method&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Initial dimer axis">edit</a> \| (./index.php.md)\]
+
 The direction of an unstable vibrational mode can be obtained by
 performing the vibrational analysis ([IBRION](../incar-tags/IBRION.md)=5)
 and taking the x-, y-, and z- components of the imaginary vibrational
@@ -126,7 +148,11 @@ parallel with the reaction coordinate. Note that in order to plot
 "Eigenvectors after division by SQRT(mass)",
 [NWRITE](../incar-tags/NWRITE.md)=3 should be used.
 
-## Practical example
+## Practical example\[<a
+href="/wiki/index.php?title=Improved_dimer_method&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Practical example">edit</a> \| (./index.php.md)\]
+
 In this example, the transition state for the ammonia flipping is
 computed. All calculations discussed here were performed using the PBE
 functional, Brillouin zone sampling was restricted to the gamma point.
@@ -208,7 +234,26 @@ frequency).
 
   
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<p>If you perform a frequency calculation on this optimized structure,
+take care to consider the translational modes that are present. These
+will appear as small imaginary frequencies, less than 5 cm-1 in the
+OUTCAR file and may be recognized by the "dx" terms for each atom being
+large, while the remaining "dy" and "dz" terms are near zero (for x
+translation). This will result in multiple imaginary frequencies. The
+goal is to have one "large" imaginary frequency, and then these small
+translational modes should be set to zero for calculating thermodynamic
+properties.</p></td>
+</tr>
+</tbody>
+</table>
 
 For example, the x-translation is shown below:
 
@@ -219,22 +264,36 @@ For example, the x-translation is shown below:
          0.872954  0.000000  7.496000    -0.247322    0.000340   -0.008357
          0.000000  0.000000  0.000000    -0.242501    0.000341   -0.000041
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Improved_dimer_method&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [FINDIFF](../incar-tags/FINDIFF.md),
 [DIMER_DIST](../incar-tags/DIMER_DIST.md),
 [MINROT](../incar-tags/MINROT.md),
 [STEP_SIZE](../incar-tags/STEP_SIZE.md),
 [STEP_MAX](../incar-tags/STEP_MAX.md)
 
-## References
+## References\[<a
+href="/wiki/index.php?title=Improved_dimer_method&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
-1.  [↑](#cite_ref-henkelman:jpc:1999_1-0) [G. Henkelman and H. Jónsson,
-    *A dimer method for finding saddle points on high dimensional
-    potential surfaces using only first derivatives*, J. Chem. Phys.
-    **111**, 7010–7022 (1999).](https://doi.org/10.1063/1.480097)
-2.  [↑](#cite_ref-heyden:jpc:2005_2-0) [A. Heyden, A. T. Bell, and F. J.
-    Keil, *Efficient methods for finding transition states in chemical
-    reactions: Comparison of improved dimer method and partitioned
-    rational function optimization method*, J. Chem. Phys. **123**,
-    224101 (2005).](https://doi.org/10.1063/1.2104507)
+
+1.  [↑](#cite_ref-henkelman:jpc:1999_1-0)
+    <a href="https://doi.org/10.1063/1.480097" class="external text"
+    rel="nofollow">G. Henkelman and H. Jónsson, <em>A dimer method for
+    finding saddle points on high dimensional potential surfaces using only
+    first derivatives</em>, J. Chem. Phys. <strong>111</strong>, 7010–7022
+    (1999).</a>
+2.  [↑](#cite_ref-heyden:jpc:2005_2-0)
+    <a href="https://doi.org/10.1063/1.2104507" class="external text"
+    rel="nofollow">A. Heyden, A. T. Bell, and F. J. Keil, <em>Efficient
+    methods for finding transition states in chemical reactions: Comparison
+    of improved dimer method and partitioned rational function optimization
+    method</em>, J. Chem. Phys. <strong>123</strong>, 224101 (2005).</a>
+
+

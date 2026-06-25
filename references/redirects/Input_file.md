@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Input file
+
+
+
 Redirect to:
 
 - [Category:Input
   files](../categories/Category-Input_files.md)
+
+

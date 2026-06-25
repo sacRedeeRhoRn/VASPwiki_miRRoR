@@ -2,26 +2,35 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation
+
+
+
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-[STM of graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation  \>
-[List of tutorials](../categories/Category-Tutorials.md)
+[STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+collective jumps of a Pt adatom on
+fcc-Pt (001): Nudged Elastic Band Calculation
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
   
 **Description**: calculate the energy barrier for the self-diffusion (of
@@ -31,11 +40,13 @@ the adatom from h to the neighboring h site include two diffusion paths:
 hollow-top-hollow (hth, eg along \[1-10\]) or hollow-bridge-hollow (hbh,
 eg along \[100\]). A collective jump mechanism involving 2 Pt atoms
 diffusing along \[1-10\] is proposed to be the diffusion mechanism with
-the lowest energy barrier ^([\[1\]](#cite_note-kellog:prl64:3143-1))
+the lowest energy barrier
+<sup>[\[1\]](#cite_note-kellog:prl64:3143-1)</sup>
 
 The calculation of the barrier heights involves the following steps:
 
-1\. calculation of the bulk a₀ of Pt for the chosen functional
+1\. calculation of the bulk a<sub>0</sub> of Pt for the chosen
+functional
 
 2\. a clean Pt (001) surface, with a 2D supercell of -at minimum- (2x2)
 reconstruction
@@ -45,8 +56,9 @@ position
 
 4\. a [Nudged Elastic
 Bands](../tutorials/Nudged_elastic_bands.md) (NEB)
-calculation ^([\[2\]](#cite_note-NEB-2)) for the proposed collective
-jump mechanism
+calculation
+<sup>[\[2\]](#cite_note-NEB-2)</sup>
+for the proposed collective jump mechanism
 
 steps 1-3 are straightforward
 
@@ -76,7 +88,7 @@ System: fcc Pt (001), 3layers
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     K-Points
      0
@@ -86,7 +98,7 @@ System: fcc Pt (001), 3layers
 
 - [POSCAR](../input-files/POSCAR.md) (clean surface)
 
-&nbsp;
+<!-- -->
 
     fcc Pt, paw-PBE
     5.62024
@@ -112,7 +124,7 @@ System: fcc Pt (001), 3layers
 
 - [POSCAR](../input-files/POSCAR.md) (Pt@Pt(001), hollow)
 
-&nbsp;
+<!-- -->
 
      fcc Pt, paw-PBE
        5.62024000000000
@@ -139,7 +151,7 @@ System: fcc Pt (001), 3layers
 
 - [POSCAR](../input-files/POSCAR.md) (Pt@Pt(001), bridge)
 
-&nbsp;
+<!-- -->
 
      fcc Pt, paw-PBE
        5.62024000000000
@@ -166,7 +178,7 @@ System: fcc Pt (001), 3layers
 
 - [POSCAR](../input-files/POSCAR.md) (Pt@Pt(001), top)
 
-&nbsp;
+<!-- -->
 
      fcc Pt, paw-PBE
        5.62024000000000
@@ -208,21 +220,23 @@ between the initial and the final state of the jump in
 (containing the [POSCAR](../input-files/POSCAR.md) of the final geometry f
 of the jump). The [POSCAR](../input-files/POSCAR.md) files of the
 intermediate steps, to be interpolated between
-[POSCAR](../input-files/POSCAR.md)_(i) and
-[POSCAR](../input-files/POSCAR.md)_(f) are stored in the directories 01 ..
-0N. Calculations are **only** done for these intermediate steps, the
-optimization of the geometries is done under the constraint that the
-relaxing atoms remain on a plane perpendicular to the hypertangent of
-the diffusion path. All all output files
+[POSCAR](../input-files/POSCAR.md)<sub>i</sub> and
+[POSCAR](../input-files/POSCAR.md)<sub>f</sub> are stored in the
+directories 01 .. 0N. Calculations are **only** done for these
+intermediate steps, the optimization of the geometries is done under the
+constraint that the relaxing atoms remain on a plane perpendicular to
+the hypertangent of the diffusion path. All all output files
 [OUTCAR](../output-files/OUTCAR.md), [CONTCAR](../output-files/CONTCAR.md),
 [OSZICAR](../output-files/OSZICAR.md) .. of the NEB-steps run are written
 to these subdirectories.
 
 in the present excercise, the required precision,... is reduced to a
 minimum (the files are found in
-[Pt_NEB_fast.tgz](http://www.vasp.at/vasp-workshop/example/Pt_NEB_fast.tgz))
-to save computing time, a more reliable setup is saved in
-[Pt_NEB.tgz](http://www.vasp.at/vasp-workshop/examples/Pt_NEB.tgz))
+<a href="http://www.vasp.at/vasp-workshop/example/Pt_NEB_fast.tgz"
+class="external text" rel="nofollow">Pt_NEB_fast.tgz</a>) to save
+computing time, a more reliable setup is saved in
+<a href="http://www.vasp.at/vasp-workshop/examples/Pt_NEB.tgz"
+class="external text" rel="nofollow">Pt_NEB.tgz</a>)
 
 - [INCAR](../input-files/INCAR.md)
 
@@ -243,7 +257,7 @@ System: fcc Pt (001), 3layers
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     K-Points
      0
@@ -254,7 +268,7 @@ System: fcc Pt (001), 3layers
 - [POSCAR](../input-files/POSCAR.md) (of the initial state, in directory
   00)
 
-&nbsp;
+<!-- -->
 
      fcc Pt, paw-PBE
         5.62024000000000 
@@ -279,7 +293,7 @@ System: fcc Pt (001), 3layers
 
 - [POSCAR](../input-files/POSCAR.md) (of the final state, in directory 03)
 
-&nbsp;
+<!-- -->
 
 
      fcc Pt, paw-PBE
@@ -304,9 +318,10 @@ System: fcc Pt (001), 3layers
        0.243619    0.256381   0.347171
 
 4\. concatenate the [POSCAR](../input-files/POSCAR.md) files of i and f to
-the file
-[POSCAR1_POSCAR2](https://vasp.at/wiki/index.php/index.php)")
-MIND:
+the file <a
+href="/wiki/index.php?title=POSCAR1_POSCAR2&amp;action=edit&amp;redlink=1"
+class="new"
+title="POSCAR1 POSCAR2 (page does not exist)">POSCAR1_POSCAR2</a> MIND:
 
 -- these files must not include the lines with the names of the atoms
 (vasp.5.2 only) and 'Selective Dynamics',
@@ -315,26 +330,29 @@ MIND:
 
 -- the block with the velocities of the atoms must be deleted
 
--- be careful to check that in [POSCAR](../input-files/POSCAR.md)_(i) and
-[POSCAR](../input-files/POSCAR.md)_(j) all atoms are on the same side of
-the supercell to avoid that an atom that actually jumps across the
-origin of the cell is dragged through the cell by the interpolation of
-the positions.
+-- be careful to check that in
+[POSCAR](../input-files/POSCAR.md)<sub>i</sub> and
+[POSCAR](../input-files/POSCAR.md)<sub>j</sub> all atoms are on the same
+side of the supercell to avoid that an atom that actually jumps across
+the origin of the cell is dragged through the cell by the interpolation
+of the positions.
 
 5\. interpolate the starting geometries of the
 [IMAGES](../incar-tags/IMAGES.md), this can be done by using the following
 script
 
-interpolatePOSCAR
-[POSCAR1_POSCAR2](https://vasp.at/wiki/index.php/index.php)"),
-the interpolated files are written into the respective subdirectories 00
-... 0(N+1)
+interpolatePOSCAR <a
+href="/wiki/index.php?title=POSCAR1_POSCAR2&amp;action=edit&amp;redlink=1"
+class="new"
+title="POSCAR1 POSCAR2 (page does not exist)">POSCAR1_POSCAR2</a>, the
+interpolated files are written into the respective subdirectories 00 ...
+0(N+1)
 
   
 
 - interpolatePOSCAR
 
-&nbsp;
+<!-- -->
 
     file=$1
     if [ ! -x $file ]
@@ -429,39 +447,61 @@ follow-up run.
 9: obtain the barrier along diffusion path 00-03 by interpolation
 (spline)
 
-## Downloads
-[Pt_NEB.tgz](https://vasp.at/wiki/images/a/ad/Pt_NEB.tgz "Pt NEB.tgz"),
-[Pt_NEB_fast.tgz](https://vasp.at/wiki/images/1/1c/Pt_NEB_fast.tgz "Pt NEB fast.tgz")
+## Downloads\[<a
+href="/wiki/index.php?title=Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Downloads">edit</a> \| (./index.php.md):_Nudged_Elastic_Band_Calculation&action=edit&section=1 "Edit section's source code: Downloads")\]
 
-## References
-1.  [↑](#cite_ref-kellog:prl64:3143_1-0) G.L.Kellogg and Peter
-    J.Feibelman, Phys. Rev. Lett. **64** (26), 3143 (1990)
-2.  [↑](#cite_ref-NEB_2-0) G. Mills, H. Jonsson and G. K. Schenter,
-    Surface Science, **324**, 305 (1995); H. Jonsson, G. Mills and K. W.
-    Jacobsen, \`Nudged Elastic Band Method for Finding Minimum Energy
-    Paths of Transitions', in \`Classical and Quantum Dynamics in
+<a href="/wiki/images/a/ad/Pt_NEB.tgz" class="internal"
+title="Pt NEB.tgz">Pt_NEB.tgz</a>,
+<a href="/wiki/images/1/1c/Pt_NEB_fast.tgz" class="internal"
+title="Pt NEB fast.tgz">Pt_NEB_fast.tgz</a>
+
+## References\[<a
+href="/wiki/index.php?title=Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md):_Nudged_Elastic_Band_Calculation&action=edit&section=2 "Edit section's source code: References")\]
+
+
+1.  [↑](#cite_ref-kellog:prl64:3143_1-0)
+     G.L.Kellogg and Peter J.Feibelman,
+    Phys. Rev. Lett. **64** (26), 3143 (1990) 
+2.  [↑](#cite_ref-NEB_2-0)
+    G. Mills, H. Jonsson and G. K.
+    Schenter, Surface Science, **324**, 305 (1995); H. Jonsson, G. Mills
+    and K. W. Jacobsen, \`Nudged Elastic Band Method for Finding Minimum
+    Energy Paths of Transitions', in \`Classical and Quantum Dynamics in
     Condensed Phase Simulations', ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998)
+    Coker (World Scientific, 1998) 
+
 
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-[STM of graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation  \>
-[List of tutorials](../categories/Category-Tutorials.md)
+[STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+collective jumps of a Pt adatom on
+fcc-Pt (001): Nudged Elastic Band Calculation
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 Back to the [main page](The_VASP_Manual.md).
+
+

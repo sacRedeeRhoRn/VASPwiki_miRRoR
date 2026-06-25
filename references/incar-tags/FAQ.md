@@ -2,32 +2,49 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FAQ
+
+
+
 ## Contents
 
-- [1 I can not compile the parallel version of VASP under
+
+- [1 I can not
+  compile the parallel version of VASP under
   LINUX?](#I_can_not_compile_the_parallel_version_of_VASP_under_LINUX?)
-- [2 Why is the cohesive energy much larger than reported in other
+- [2 Why is the
+  cohesive energy much larger than reported in other
   papers?](#Why_is_the_cohesive_energy_much_larger_than_reported_in_other_papers?)
-- [3 Which k-points should I use?](#Which_k-points_should_I_use?)
-- [4 Question Why is convergence to the ionic groundstate so
+- [3 Which k-points
+  should I use?](#Which_k-points_should_I_use?)
+- [4 Question Why
+  is convergence to the ionic groundstate so
   slow?](#Question_Why_is_convergence_to_the_ionic_groundstate_so_slow?)
-- [5 I am running molecular dynamics and observe a large drift in the
-  total energy, that should be
+- [5 I am running
+  molecular dynamics and observe a large drift in the total energy, that
+  should be
   conserved.](#I_am_running_molecular_dynamics_and_observe_a_large_drift_in_the_total_energy,_that_should_be_conserved.)
-- [6 I am running VASP on a SGI Origin, and the simple
+- [6 I am running
+  VASP on a SGI Origin, and the simple
   benchmark.](#I_am_running_VASP_on_a_SGI_Origin,_and_the_simple_benchmark.)
-- [7 The parallel performance of VASP is not as good as
+- [7 The parallel
+  performance of VASP is not as good as
   expected.](#The_parallel_performance_of_VASP_is_not_as_good_as_expected.)
-- [8 Why is the VASP performance so bad on a dual processor
+- [8 Why is the
+  VASP performance so bad on a dual processor
   machine?](#Why_is_the_VASP_performance_so_bad_on_a_dual_processor_machine?)
-- [9 We are using the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP
-  fails to
+- [9 We are using
+  the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP fails to
   run.](#We_are_using_the_LINUX_kernel_X.X.X_and_LAM/MPICH_X.X.X_but_VASP_fails_to_run.)
-- [10 How to evaluate the total energy properly for and adsorbed ionic
-  species on insulating
+- [10 How to
+  evaluate the total energy properly for and adsorbed ionic species on
+  insulating
   surface](#How_to_evaluate_the_total_energy_properly_for_and_adsorbed_ionic_species_on_insulating_surface)
 
-## I can not compile the parallel version of VASP under LINUX?
+
+## I can not compile the parallel version of VASP under LINUX?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: I can not compile the parallel version of VASP under LINUX?">edit</a> \| (./index.php.md)\]
+
 Mind that VASP will generally not link correctly to mpi versions
 compiled with g77/f77, since g77/f77 append two underscores to external
 symbols already containing one underscore (i.e. MPI_SEND becomes
@@ -40,7 +57,10 @@ look at our makefiles). If the compilation of mpich and/or lam fails,
 VASP will almost certainly not work in parallel on your machine, and we
 strongly urge you to reinstall LINUX.
 
-## Why is the cohesive energy much larger than reported in other papers?
+## Why is the cohesive energy much larger than reported in other papers?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Why is the cohesive energy much larger than reported in other papers?">edit</a> \| (./index.php.md)\]
+
 Several reasons can be responsible for this:
 
 First, VASP calculates the cohesive energy with respect to a spherical
@@ -55,24 +75,27 @@ since basis sets were often insufficient. It is now well accepted that
 the local density approximation overestimates the cohesive energy
 significantly in many cases.
 
-## Which k-points should I use?
+## Which k-points should I use?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Which k-points should I use?">edit</a> \| (./index.php.md)\]
+
 For metallic system, k-point convergence is usually a critical issue.
 There are a few general hints which might be helpfull:
 
 - For hexagonal cells, Gamma centered k-point grids converge much faster
   than other grids. In fact, most meshes that do not include the
-  $\Gamma$ point break the symmetry of
-  the hexagonal lattice! Even with increasing grid densities the wrong
-  results might be obtained.
+  $\Gamma$ point break the symmetry of the hexagonal
+  lattice! Even with increasing grid densities the wrong results might
+  be obtained.
 
-&nbsp;
+<!-- -->
 
-- Up to divisions of 8 (i.e. $8\times8\times1$ for a surface) even Monkhorst Pack grids which do not
-  contain the Gamma point, perform better than odd Monkhorst Pack grids
-  (this does not apply to hexagonal cells, see above). In other words
-  one obtains better converged results with even grids.
+- Up to divisions of 8 (i.e. $8\times8\times1$ for a surface) even Monkhorst Pack grids which do
+  not contain the Gamma point, perform better than odd Monkhorst Pack
+  grids (this does not apply to hexagonal cells, see above). In other
+  words one obtains better converged results with even grids.
 
-&nbsp;
+<!-- -->
 
 - For adsorbates on surfaces, it is sometimes feasable to use only the
   k-points of the high symmetry Brillouin zone, even if the adsorbate
@@ -82,7 +105,7 @@ There are a few general hints which might be helpfull:
   be copied to [KPOINTS](../input-files/KPOINTS.md). For convenicene, the
   following k-point grids can be used for hexagonal cells:
 
-&nbsp;
+<!-- -->
 
     Gamma centered 2x2
     Automatically generated mesh
@@ -167,13 +190,16 @@ For cubic surface cells, the following k-points can be used:
         0.43750000000000    0.31250000000000    0.00000000000000             8
         0.43750000000000    0.43750000000000    0.00000000000000             4 
 
-## Question Why is convergence to the ionic groundstate so slow?
+## Question Why is convergence to the ionic groundstate so slow?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Question Why is convergence to the ionic groundstate so slow?">edit</a> \| (./index.php.md)\]
+
 In general convergence depends on the eigenvalue spectrum of the Hessian
 matrix (second derivative of the energy with respect to positions).
 Roughly speaking the number of steps equals
 
-$N = \sqrt{ \frac{ \epsilon_{\rm max}}{
-\epsilon_{\rm min}}}$
+$N
+= \sqrt{ \frac{ \epsilon_{\rm max}}{ \epsilon_{\rm min}}}$
 
 if a conjugate gradient, or Quasi-Newton algorithm is chosen. If a good
 structural start guess exists, the best convergence can be obtained with
@@ -229,11 +255,15 @@ issues:
   compiling the VASP code. Total energies might however change by a
   fraction of a meV.
 
-## I am running molecular dynamics and observe a large drift in the total energy, that should be conserved.
+## I am running molecular dynamics and observe a large drift in the total energy, that should be conserved.\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: I am running molecular dynamics and observe a large drift in the total energy, that should be conserved.">edit</a> \| (./index.php.md)\]
+
 Three reasons can hamper the energy conservation in VASP.
 
 - First the electronic convergence might not be sufficiently tight. It
-  is often necessary to decrease the tolerance to $10^{-6}$ or $10^{-7}$ to
+  is often necessary to decrease the tolerance to
+  $10^{-6}$ or $10^{-7}$ to
   obtain excellent energy conservation. Alternatively NELMIN can be set
   to values around 6.
 - The second reason is an insufficiently accurate real space projection.
@@ -250,9 +280,16 @@ system for various settings. Please mind, that reducing
 ([LREAL](LREAL.md)=*.A.*) had the same effect as using
 [LREAL](LREAL.md)=*.FALSE.*
 
-[![](https://vasp.at/wiki/images/thumb/d/d5/Econs.png/400px-Econs.png)](https://vasp.at/wiki/File:Econs.png)
+<a href="/wiki/File:Econs.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/d/d5/Econs.png/400px-Econs.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/d/d5/Econs.png/600px-Econs.png 1.5x, /wiki/images/thumb/d/d5/Econs.png/800px-Econs.png 2x"
+width="400" height="272" /></a>
 
-## I am running VASP on a SGI Origin, and the simple benchmark.
+## I am running VASP on a SGI Origin, and the simple benchmark.\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: I am running VASP on a SGI Origin, and the simple benchmark.">edit</a> \| (./index.php.md)\]
+
 This issue appears for the benchmark (benchmark.tar.gz) usually with the
 following message:
 
@@ -272,7 +309,10 @@ temporary scratch file ([TMPCAR](../output-files/TMPCAR.md)) is used
 uses a temporary scratch file does not compile correctly, and hence the
 user has to set [IWAVPR](IWAVPR.md) to 10.
 
-## The parallel performance of VASP is not as good as expected.
+## The parallel performance of VASP is not as good as expected.\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: The parallel performance of VASP is not as good as expected.">edit</a> \| (./index.php.md)\]
+
 What does one mean by performance was not as expected ? Matter of fact,
 one can never obtain the same scaling on a P3/P4/Athlon XP based
 workstation cluster as on the T3D. The T3D was a very very slow machine
@@ -286,7 +326,10 @@ VASP was hot-spot optimized carefully on the T3D.
 Altogether VASP will run reasonable efficient on up to 8-16 P4/Athlon XP
 type nodes (until k-point parallelization is implemented)!
 
-## Why is the VASP performance so bad on a dual processor machine?
+## Why is the VASP performance so bad on a dual processor machine?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Why is the VASP performance so bad on a dual processor machine?">edit</a> \| (./index.php.md)\]
+
 It is a bad idea to run vasp on dual processor P3/P4/Athlon machines,
 since two CPU's with small cache have to share the small memory
 bandwidth (P4 RD-RAMS RIMM based machines are an exception). If you run
@@ -298,7 +341,10 @@ two CPUs can exchange data faster, is
     irrelevant, since most of the data exchange is not between the two local
     CPU's).
 
-## We are using the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP fails to run.
+## We are using the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP fails to run.\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: We are using the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP fails to run.">edit</a> \| (./index.php.md)\]
+
 First, it must be emphasized that we do NOT SUPPORT VASP on parallel
 machines (in particular LINUX clusters). This is clearly spelled out in
 the manual. One reason for this policy is that LINUX systems are too
@@ -346,18 +392,23 @@ determine which front-end you are using.
   or seek professional support from a company distributing or
   maintaining parallel LINUX clusters.
 
-## How to evaluate the total energy properly for and adsorbed ionic species on insulating surface
-I adsorb, an ionic species e.g. O$^-$ on
-an insulating surface. To select a specific charge state, I have
-increased the number of electrons by one compared to the neutral system.
-Now, I have no clue how to evalute the total energy properly (i.e. are
-there convergence corrections).
+## How to evaluate the total energy properly for and adsorbed ionic species on insulating surface\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: How to evaluate the total energy properly for and adsorbed ionic species on insulating surface">edit</a> \| (./index.php.md)\]
+
+I adsorb, an ionic species e.g. O$^-$ on an
+insulating surface. To select a specific charge state, I have increased
+the number of electrons by one compared to the neutral system. Now, I
+have no clue how to evalute the total energy properly (i.e. are there
+convergence corrections).
 
 Actually, you MUST NOT set the number of electrons manually for a slab
-calculation. I.e., when you calculate the slab-O$^-$ system you are not allowed to select a specific charge
-state for the oxygen ion, by increasing the number of electrons
-manually. Specific charge state calculations make sense only in 3D
-systems and for cluster calculations.
+calculation. I.e., when you calculate the
+slab-O$^-$ system
+you are not allowed to select a specific charge state for the oxygen
+ion, by increasing the number of electrons manually. Specific charge
+state calculations make sense only in 3D systems and for cluster
+calculations.
 
 If you conduct the calculations properly, i.e. if your slab is large
 enough and the lateral dimension (x,y) of your surface is large enough
@@ -377,16 +428,18 @@ vacuum width.
 
 Well, there is maybe one method that can surmount the aforementioned
 problem. You can charge the slab and increase systematically the
-distance between the O$^-$ species (by
-increasing the lateral dimensions of your super cell) at a fixed vacuum
-width, and finally extrapolate the energies towards infinite lateral
-distances. The energy should converge towards the correct value as
-$1/d$, where $d$ is the distance between the adsorbed species. This might
-yield a converged value. The point is that, as I mentioned above, the
-electrostatic energy is only conditionally convergent for the case of a
-charged slab/system, and results depend on how you evaluate the limit
-towards infinity. However, to the best of my knowledge, this has not
-been done or attempted hereto (and therefore we can not assist you on
-that issue).
+distance between the O$^-$ species
+(by increasing the lateral dimensions of your super cell) at a fixed
+vacuum width, and finally extrapolate the energies towards infinite
+lateral distances. The energy should converge towards the correct value
+as $1/d$, where $d$ is the
+distance between the adsorbed species. This might yield a converged
+value. The point is that, as I mentioned above, the electrostatic energy
+is only conditionally convergent for the case of a charged slab/system,
+and results depend on how you evaluate the limit towards infinity.
+However, to the best of my knowledge, this has not been done or
+attempted hereto (and therefore we can not assist you on that issue).
 
 ------------------------------------------------------------------------
+
+

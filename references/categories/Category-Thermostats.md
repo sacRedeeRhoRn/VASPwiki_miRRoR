@@ -2,8 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Thermostats
-**Thermostats** are used in [molecular-dynamics
-calculations](../redirects/MD.md) within the [NVT
+
+
+**Thermostats** are used in
+<a href="/wiki/MD" class="mw-redirect" title="MD">molecular-dynamics
+calculations</a> within the [NVT
 ensemble](../misc/NVT_ensemble.md) and [NpT
 ensemble](../misc/NpT_ensemble.md) in order to apply a certain
 temperature to the ionic degrees of freedom.
@@ -26,7 +29,8 @@ and deterministic **thermostats**:
 | **Mind:** All **thermostats** are available in the [NVT ensemble](../misc/NVT_ensemble.md) but currently only the [Langevin thermostat](../tutorials/Langevin_thermostat.md) is available for the [NpT ensemble](../misc/NpT_ensemble.md). |
 
 The following table gives an overview of the possible combination of
-[ensembles](../redirects/Ensembles.md) and **thermostats** in VASP:
+<a href="/wiki/Ensembles" class="mw-redirect"
+title="Ensembles">ensembles</a> and **thermostats** in VASP:
 
 |  |  |  |  |  |  |  |
 |----|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -38,3 +42,5 @@ The following table gives an overview of the possible combination of
 | [Isobaric-isothermal (NpT)](../misc/NpT_ensemble.md) | not available | not available | [MDALGO](../incar-tags/MDALGO.md)=3 | not available | not available | not available |
 |  |  |  | [ISIF](../incar-tags/ISIF.md)=3 |  |  |  |
 | [Isoenthalpic-isobaric (NpH)](../misc/NpH_ensemble.md) | [MDALGO](../incar-tags/MDALGO.md)=3, [ISIF](../incar-tags/ISIF.md)=3, [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md)=[LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md)=0.0 |  |  |  |  |  |
+
+

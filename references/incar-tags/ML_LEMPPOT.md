@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_LEMPPOT
+
+
 ML_LEMPPOT = \[logical\]  
 Default: **ML_LEMPPOT** = .FALSE. 
 
@@ -11,7 +13,8 @@ thermodynamic integration using
 
 ------------------------------------------------------------------------
 
-ML_LEMPPOT=.TRUE. sets the following defaults:
+ML_LEMPPOT=.TRUE. sets the
+following defaults:
 
 - [ML_LCOUPLE](ML_LCOUPLE.md)=.TRUE.
 - [ML_RCOUPLE](ML_RCOUPLE.md)=0.0
@@ -20,7 +23,11 @@ ML_LEMPPOT=.TRUE. requires
 [ML_LCOUPLE](ML_LCOUPLE.md)=.TRUE., so no other values
 for [ML_LCOUPLE](ML_LCOUPLE.md) are permitted.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_LEMPPOT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LCOUPLE](ML_LCOUPLE.md),
 [ML_ICOUPLE](ML_ICOUPLE.md),
@@ -40,3 +47,5 @@ for [ML_LCOUPLE](ML_LCOUPLE.md) are permitted.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

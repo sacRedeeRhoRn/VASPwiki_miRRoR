@@ -2,10 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Performance
-The performance of VASP depends on multiple factors that the user can
-influence. First of all, state-of-the-art computer architecture, proper
-use of libraries, and compilation are prerequisites for good
-performance; see the [instructions on
+
+
+The performance of VASP
+depends on multiple factors that the user can influence. First of all,
+state-of-the-art computer architecture, proper use of libraries, and
+compilation are prerequisites for good performance; see the
+[instructions on
 installation](Category-Installation.md).
 
 Then, there are many features and algorithms implemented in VASP.
@@ -19,3 +22,5 @@ compute time. These are discussed in detail on the following pages:
 
 - [Memory](Category-Memory.md)
 - [Parallelization](Category-Parallelization.md)
+
+

@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Hybrid functionals theory
+
+
+
 Redirect to:
 
 - [Hybrid functionals:
   formalism](../methods/Hybrid_functionals-_formalism.md)
+
+

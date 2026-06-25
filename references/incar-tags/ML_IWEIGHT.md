@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_IWEIGHT
+
+
 ML_IWEIGHT = \[integer\]  
 Default: **ML_IWEIGHT** = 3 
 
@@ -16,26 +18,28 @@ data. Furthermore, sometimes it may be desired to emphasize some
 training quantities over others, e.g. one might want excellent force
 predictions, even at the cost of sacrificing some energy and stress
 accuracy. How normalizing and weighting are performed can be controlled
-with the ML_IWEIGHT together with weighting parameters
-[ML_WTOTEN](ML_WTOTEN.md),
+with the ML_IWEIGHT together
+with weighting parameters [ML_WTOTEN](ML_WTOTEN.md),
 [ML_WTIFOR](ML_WTIFOR.md) and
 [ML_WTSIF](ML_WTSIF.md) for energies, forces, and
 stresses, respectively. The following procedures can be selected via
 ML_IWEIGHT:
 
-- ML_IWEIGHT = 1: Manual control over normalization/weighting: the
-  unnormalized energies, forces, and stress tensor training data are
-  divided by the weights determined by the flags
-  [ML_WTOTEN](ML_WTOTEN.md) (eV/atom),
-  [ML_WTIFOR](ML_WTIFOR.md) (eV/$\AA$) and [ML_WTSIF](ML_WTSIF.md) (kBar),
-  respectively.
+- ML_IWEIGHT = 1: Manual
+  control over normalization/weighting: the unnormalized energies,
+  forces, and stress tensor training data are divided by the weights
+  determined by the flags [ML_WTOTEN](ML_WTOTEN.md)
+  (eV/atom), [ML_WTIFOR](ML_WTIFOR.md)
+  (eV/$\AA$) and
+  [ML_WTSIF](ML_WTSIF.md) (kBar), respectively.
 
-&nbsp;
+<!-- -->
 
-- ML_IWEIGHT = 2: Normalization via global standard deviations: The
-  energies, forces, and stresses are normalized by their respective
-  standard deviation over the entire training data. Then, the normalized
-  quantities are weighted by [ML_WTOTEN](ML_WTOTEN.md),
+- ML_IWEIGHT = 2:
+  Normalization via global standard deviations: The energies, forces,
+  and stresses are normalized by their respective standard deviation
+  over the entire training data. Then, the normalized quantities are
+  weighted by [ML_WTOTEN](ML_WTOTEN.md),
   [ML_WTIFOR](ML_WTIFOR.md) and
   [ML_WTSIF](ML_WTSIF.md) when they are processed for
   learning in the design matrix $\mathbf{\Phi}$ (see [this
@@ -44,17 +48,20 @@ ML_IWEIGHT:
   [ML_WTIFOR](ML_WTIFOR.md) and
   [ML_WTSIF](ML_WTSIF.md) are unitless quantities.
 
-&nbsp;
+<!-- -->
 
-- ML_IWEIGHT = 3: Normalization via averages over subset standard
-  deviations: Same as ML_IWEIGHT = 2 but the training data is divided
-  into individual subsets. For each subset, the standard deviations are
-  calculated separately. Then, the energies, forces, and stresses are
-  normalized using the average of the standard deviations of all subsets
-  (see also [this
+- ML_IWEIGHT = 3:
+  Normalization via averages over subset standard deviations: Same as
+  ML_IWEIGHT = 2 but the
+  training data is divided into individual subsets. For each subset, the
+  standard deviations are calculated separately. Then, the energies,
+  forces, and stresses are normalized using the average of the standard
+  deviations of all subsets (see also [this
   section](../output-files/ML_LOGFILE.md) for
-  details). Finally, as for ML_IWEIGHT = 2 the normalized quantities are
-  multiplied by [ML_WTOTEN](ML_WTOTEN.md),
+  details). Finally, as for
+  ML_IWEIGHT = 2 the
+  normalized quantities are multiplied by
+  [ML_WTOTEN](ML_WTOTEN.md),
   [ML_WTIFOR](ML_WTIFOR.md) and
   [ML_WTSIF](ML_WTSIF.md) for learning purposes. By
   default
@@ -71,13 +78,14 @@ ML_IWEIGHT:
   assignment, the overall energy standard deviation might become large,
   reducing the weight of the energies too much of given subsets.
 
-For ML_IWEIGHT = 2, 3 the weights are unitless quantities used to
-multiply the data, whereas for ML_IWEIGHT = 1 they have a unit. All
-three methods provide unitless energies, forces, and stress tensors,
-which are then passed to the learning algorithm. Although the defaults
-are usually rather sensible, it can be useful to explore different
-weights. For instance, if vibrational frequencies are supposed to be
-reproduced accurately, we found it helpful to increase
+For ML_IWEIGHT = 2, 3 the
+weights are unitless quantities used to multiply the data, whereas for
+ML_IWEIGHT = 1 they have a
+unit. All three methods provide unitless energies, forces, and stress
+tensors, which are then passed to the learning algorithm. Although the
+defaults are usually rather sensible, it can be useful to explore
+different weights. For instance, if vibrational frequencies are supposed
+to be reproduced accurately, we found it helpful to increase
 [ML_WTIFOR](ML_WTIFOR.md) to 10-100. On the other hand,
 if the energy difference between different phases needs to be described
 accurately by the force field, it might be useful to increase
@@ -87,7 +95,11 @@ accurately by the force field, it might be useful to increase
 |----|
 | **Tip:** On-the-fly learning implies that training structures accumulate along the running MD trajectory. Hence, also the standard deviations of energies, forces, and stresses change over time and will be recalculated whenever a learning step is triggered. We highly recommend using ML_IWEIGHT = 3 because this ensures that at any time learning is performed on an adequately normalized set. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_IWEIGHT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_WTOTEN](ML_WTOTEN.md),
 [ML_WTIFOR](ML_WTIFOR.md),
@@ -98,3 +110,5 @@ accurately by the force field, it might be useful to increase
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_IWEIGHT-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

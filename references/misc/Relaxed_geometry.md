@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Relaxed geometry
+
+
 Description: calculate the relaxed geometry of NH3: the total energy is
 the energy of the initial state of the flipping reaction
 
@@ -9,7 +11,7 @@ the energy of the initial state of the flipping reaction
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = Ammonia flipping
     IBRION = 2
@@ -22,7 +24,7 @@ the energy of the initial state of the flipping reaction
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -33,7 +35,7 @@ the energy of the initial state of the flipping reaction
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     ammonia flipping
       1.00000000000000
@@ -49,14 +51,23 @@ the energy of the initial state of the flipping reaction
     0.363571  0.567446  0.549205   T   T   T
     0.500000  0.500000  0.500000   F   F   F
 
-## Download
-[ammonia_flipping.tgz, sub-folder
-scf](http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz)
+## Download\[<a
+href="/wiki/index.php?title=Relaxed_geometry&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="http://www.vasp.at/vasp-workshop/examples/ammonia_flipping.tgz"
+class="external text" rel="nofollow">ammonia_flipping.tgz, sub-folder
+scf</a>
 
 ------------------------------------------------------------------------
 
-[To the list of
-examples](https://vasp.at/wiki/index.php/index.php)")
-or to the [main page](The_VASP_Manual.md)
+<a
+href="/wiki/index.php?title=VASP_example_calculations&amp;action=edit&amp;redlink=1"
+class="new" title="VASP example calculations (page does not exist)">To
+the list of examples</a> or to the [main
+page](The_VASP_Manual.md)
 
   
+
+

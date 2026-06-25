@@ -2,18 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # MAXMEM
+
+
 MAXMEM = \[integer\]  
 Default: **MAXMEM** = 2800 (VASP.5.4.4. and older), automatically set as
 of VASP.6 
 
-Description: MAXMEM specifies the maximum memory one MPI rank will
-attempt to allocate (in MByte). Since, the default varies somewhat
-between VASP versions, it is safer to set this flag manually. Currently
-the flag is only inspected in few selected routines, such as the GW or
-RPA routines that can use excessive amounts of memory. It is recommended
-to set MAXMEM to the available memory per core minus 200 Mbyte. For
-instance, if one node is equipped with 12 Gbyte, and 6 MPI ranks share
-this memory, the recommended setting is 12\*1024/6-200 = 1848.
+Description: MAXMEM specifies
+the maximum memory one MPI rank will attempt to allocate (in MByte).
+Since, the default varies somewhat between VASP versions, it is safer to
+set this flag manually. Currently the flag is only inspected in few
+selected routines, such as the GW or RPA routines that can use excessive
+amounts of memory. It is recommended to set MAXMEM to the available
+memory per core minus 200 Mbyte. For instance, if one node is equipped
+with 12 Gbyte, and 6 MPI ranks share this memory, the recommended
+setting is 12\*1024/6-200 = 1848.
 
 ------------------------------------------------------------------------
 
@@ -27,12 +30,19 @@ is set to 2800.
 
 ------------------------------------------------------------------------
 
-## Related tags and articles
-[GW calculations](../redirects/GW_calculations.md), [ACFDT
-calculations](../redirects/ACFDT_calculations.md),
+## Related tags and articles\[<a href="/wiki/index.php?title=MAXMEM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/GW_calculations" class="mw-redirect"
+title="GW calculations">GW calculations</a>,
+<a href="/wiki/ACFDT_calculations" class="mw-redirect"
+title="ACFDT calculations">ACFDT calculations</a>,
 [NTAUPAR](NTAUPAR.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-MAXMEM-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

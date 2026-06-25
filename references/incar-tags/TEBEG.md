@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # TEBEG
+
+
 TEBEG = \[real\]  
 Default: **TEBEG** = 0 
 
-Description: TEBEG sets the starting temperature (in K) for an ab-initio
-molecular dynamics run ([IBRION](IBRION.md)=0) and other
-routines (e.g. [Electron-phonon interactions from Monte-Carlo
+Description: TEBEG sets the
+starting temperature (in K) for an ab-initio molecular dynamics run
+([IBRION](IBRION.md)=0) and other routines (e.g.
+[Electron-phonon interactions from Monte-Carlo
 sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md)).
 
 ------------------------------------------------------------------------
@@ -15,14 +18,15 @@ sampling](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md
 If no initial velocities are supplied on the
 [POSCAR](../input-files/POSCAR.md) file, the velocities are set randomly
 according to a Maxwell-Boltzmann distribution at the initial temperature
-TEBEG. Velocities are only used for molecular dynamics
-([IBRION](IBRION.md)=0).
+TEBEG. Velocities are only
+used for molecular dynamics ([IBRION](IBRION.md)=0).
 
 **Mind**: If [MDALGO](MDALGO.md)\>0 is used VASP defines the
 temperature as
 
-$T= \frac{1}{ k_B T 3 (N_{\rm ions}-N_{\rm
-constraints})} \sum\limits_{n}^{N_{\rm ions}} M_n | \vec v_n |^2.$
+$T=
+\frac{1}{ k_B T 3 (N_{\rm ions}-N_{\rm constraints})}
+\sum\limits_{n}^{N_{\rm ions}} M_n | \vec v_n |^2.$
 
 This temperature is written to the [OUTCAR](../output-files/OUTCAR.md) file.
 Depending on the type of thermostat this temperature has to be rescaled
@@ -58,7 +62,10 @@ thermostat](../tutorials/Nosé-Hoover_thermostat.md)
 and the [Andersen
 thermostat](../tutorials/Andersen_thermostat.md).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=TEBEG&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [TEEND](TEEND.md), [IBRION](IBRION.md),
 [SMASS](SMASS.md)
 
@@ -66,3 +73,5 @@ thermostat](../tutorials/Andersen_thermostat.md).
 tag](https://vasp.at/wiki/index.php/Special-Search/-TEBEG-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

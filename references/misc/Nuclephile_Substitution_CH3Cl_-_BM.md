@@ -2,10 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Nuclephile Substitution CH3Cl - BM
+
+
+
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
@@ -16,34 +20,63 @@ mMD2](Nuclephile_Substitution_CH3Cl_-_mMD2.md) \>
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
 [Nuclephile Substitution CH3Cl -
 SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
-Nuclephile Substitution CH3Cl - BM \> [List of
+Nuclephile Substitution CH3Cl -
+BM \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-  - [2.3 INCAR](#INCAR)
-- [3 Calculation](#Calculation)
-  - [3.1 Running the calculation](#Running_the_calculation)
-  - [3.2 Free-energy profile](#Free-energy_profile)
-- [4 Download](#Download)
 
-## Task
-In this example the nucleophile substitution of a Cl⁻ by another Cl⁻ in
-CH₃Cl is simulated using [blue-moon
-sampling](../redirects/Blue-moon_ensemble.md).
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+  - [2.3
+    INCAR](#INCAR)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Running
+    the calculation](#Running_the_calculation)
+  - [3.2
+    Free-energy
+    profile](#Free-energy_profile)
+- [4
+  Download](#Download)
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
-In the [blue-moon
-sampling](../redirects/Blue-moon_ensemble.md) method several
+
+## Task\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
+In this example the nucleophile substitution of a Cl<sup>-</sup> by
+another Cl<sup>-</sup> in CH<sub>3</sub>Cl is simulated using
+<a href="/wiki/Blue-moon_ensemble" class="mw-redirect"
+title="Blue-moon ensemble">blue-moon sampling</a>.
+
+## Input\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
+In the <a href="/wiki/Blue-moon_ensemble" class="mw-redirect"
+title="Blue-moon ensemble">blue-moon sampling</a> method several
 [POSCAR](../input-files/POSCAR.md) files are used for different values of
 the collective variable.
 
+
 **Click to show/POSCARs**
+
 
     BM - POSCAR1
      1.0
@@ -156,7 +189,12 @@ the collective variable.
     0.65618532162250798 0.69708568471255838 0.57638613391759708
     0.4941301997900921 0.39162943895117058 0.81804495871532179
 
-### [KPOINTS](../input-files/KPOINTS.md)
+
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Automatic
      0
     Gamma
@@ -167,7 +205,11 @@ the collective variable.
   are negligible (in sufficiently large cells) hence no Brillouin zone
   sampling is necessary.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     PREC=Low
     EDIFF=1e-6
     LWAVE=.FALSE.
@@ -196,17 +238,25 @@ the collective variable.
   to write out the information needed for the computation of free
   energies.
 
-## Calculation
-In the [blue-moon
-sampling](../redirects/Blue-moon_ensemble.md), the free
-energy difference is computed by integration of the free energy
-gradients computed for several points differing in the value of the
-collective variable distributed between known inital and final states.
-The gradients for each point are computed within a constrained molecular
+## Calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
+In the <a href="/wiki/Blue-moon_ensemble" class="mw-redirect"
+title="Blue-moon ensemble">blue-moon sampling</a>, the free energy
+difference is computed by integration of the free energy gradients
+computed for several points differing in the value of the collective
+variable distributed between known inital and final states. The
+gradients for each point are computed within a constrained molecular
 dynamics simulation (note the value of *STATUS*=0 for the collective
 variable defined in the [ICONST](../input-files/ICONST.md) file).
 
-### Running the calculation
+### Running the calculation\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Running the calculation">edit</a> \| (./index.php.md)\]
+
 The mass for hydrogen in this example is set 3.016 a.u. corresponding to
 the tritium isotope. This way larger timesteps can be chosen for the MD
 (note that the free energy is independent of the masses of atoms). The
@@ -266,14 +316,20 @@ script *run* which looks as follows:
       done
     done
 
-### Free-energy profile
+### Free-energy profile\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Free-energy profile">edit</a> | (./index.php.md)\]
+
 The free energy gradient is obtained as a ratio of two averages (see
 [Constrained molecular
 dynamics](../theory/Constrained_molecular_dynamics.md)).
 This is done by the script *fgradBM.sh*, which writes the free energy
 gradient vs. the collective variable to the file *grad.dat*:
 
+
 **Click to show/fgradBM.sh**
+
 
     #!/bin/bash
 
@@ -320,6 +376,7 @@ gradient vs. the collective variable to the file *grad.dat*:
 
     done
 
+
 To execute that script type:
 
     bash ./fgradBM.sh
@@ -330,7 +387,9 @@ integration schemes should be considered. The free energy vs. collective
 variable is obtained by forward integration using the script
 *integrateForward.py*:
 
+
 **Click to show/integrateForward.py**
+
 
     #!/usr/bin/python
 
@@ -360,6 +419,7 @@ variable is obtained by forward integration using the script
       tg+=gg
       print r[i],tg
 
+
 To execute that script type and write to the file *free_energy.dat*:
 
     python integrateForward.py grad.dat > free_energy.dat
@@ -370,19 +430,31 @@ Finally to plot that file type:
 
 The free energy profile should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/b/b4/Free_energy_CH3Cl_BM.jpg/500px-Free_energy_CH3Cl_BM.jpg)](https://vasp.at/wiki/File:Free_energy_CH3Cl_BM.jpg)
+<a href="/wiki/File:Free_energy_CH3Cl_BM.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/b/b4/Free_energy_CH3Cl_BM.jpg/500px-Free_energy_CH3Cl_BM.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/b/b4/Free_energy_CH3Cl_BM.jpg 1.5x" width="500"
+height="375" /></a>
 
 Note that much longer simulations should be performed (typically a few
 tens or hundreds of ps) in order to achieve well converged averages
 needed in accurate calculations.
 
-## Download
-[CH3Cl_BM.tgz](https://vasp.at/wiki/images/6/65/CH3Cl_BM.tgz "CH3Cl BM.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_BM&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/6/65/CH3Cl_BM.tgz" class="internal"
+title="CH3Cl BM.tgz">CH3Cl_BM.tgz</a>
+
 
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> [Liquid
-Si - Freezing](Liquid_Si_-_Freezing.md) \>
+MD](Liquid_Si_-_Standard_MD.md) \>
+[Liquid Si -
+Freezing](Liquid_Si_-_Freezing.md) \>
 [Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
@@ -393,5 +465,8 @@ mMD2](Nuclephile_Substitution_CH3Cl_-_mMD2.md) \>
 mMD3](Nuclephile_Substitution_CH3Cl_-_mMD3.md) \>
 [Nuclephile Substitution CH3Cl -
 SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
-Nuclephile Substitution CH3Cl - BM \> [List of
+Nuclephile Substitution CH3Cl -
+BM \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

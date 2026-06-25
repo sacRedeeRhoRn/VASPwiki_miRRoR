@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include.fujitsu_a64fx
+
+
     # Default precompiler options
     CPP_OPTIONS = -DHOST=\"FJ-A64FX\" \
                   -DMPI -DMPI_BLOCK=8000 -Duse_collective \
@@ -86,3 +88,5 @@
     #CXX_FLAGS   = $(shell python3 -m pybind11 --includes) -std=c++11 -stdlib=libc++
 
 ------------------------------------------------------------------------
+
+

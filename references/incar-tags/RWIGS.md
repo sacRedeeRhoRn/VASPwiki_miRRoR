@@ -2,57 +2,65 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # RWIGS
+
+
 RWIGS = \[real array\]  
 Default: **RWIGS** = -1 
 
-Description: RWIGS specifies the Wigner-Seitz radius (in
-$\AA$) for each atom type.
+Description: RWIGS specifies
+the Wigner-Seitz radius (in $\AA$) for
+each atom type.
 
 ------------------------------------------------------------------------
 
-- RWIGS *has* to be supplied for each atom type if
-  [LORBIT](LORBIT.md) is set to \<10. In this case, the
-  *spd*- and site projected wave function character of each band is
-  evaluated, and the local partial DOS (see sections
+- RWIGS *has* to be supplied
+  for each atom type if [LORBIT](LORBIT.md) is set to \<10.
+  In this case, the *spd*- and site projected wave function character of
+  each band is evaluated, and the local partial DOS (see sections
   [PROCAR](../output-files/PROCAR.md) and [DOSCAR](../output-files/DOSCAR.md))
   and local magnetic moments are calculated.
 
-&nbsp;
+<!-- -->
 
-- If [LORBIT](LORBIT.md) \>= 10, RWIGS is ignored
+- If [LORBIT](LORBIT.md) \>= 10,
+  RWIGS is ignored
 
-&nbsp;
+<!-- -->
 
-- RWIGS *must* be set in calculations with constraining the local
-  magnetic moments (see
+- RWIGS *must* be set in
+  calculations with constraining the local magnetic moments (see
   [I_CONSTRAINED_M](I_CONSTRAINED_M.md))
 
-For **mono-atomic systems** RWIGS can be defined unambiguously. The sum
-of the volume of the spheres around each atom should be the same as the
-total volume of the cell (assuming that you do not have a vacuum region
-within your cell). This is in the spirit of atomic sphere calculations.
-VASP writes a line
+For **mono-atomic systems**
+RWIGS can be defined
+unambiguously. The sum of the volume of the spheres around each atom
+should be the same as the total volume of the cell (assuming that you do
+not have a vacuum region within your cell). This is in the spirit of
+atomic sphere calculations. VASP writes a line
 
     Volume of Typ   1:     98.5 %
 
-to the [OUTCAR](../output-files/OUTCAR.md) file. You should use a RWIGS
-value which yields a volume of approximately 100%.
+to the [OUTCAR](../output-files/OUTCAR.md) file. You should use a
+RWIGS value which yields a
+volume of approximately 100%.
 
 For systems consisting of **more than one atom type**, there is no
-unambiguous way to define RWIGS and several choices are possible. In all
-cases, the sum of the volume of the spheres should be close to the total
-volume of the cell (i.e the sum of the values given by VASP should be
-around 100%).
+unambiguous way to define
+RWIGS and several choices are
+possible. In all cases, the sum of the volume of the spheres should be
+close to the total volume of the cell (i.e the sum of the values given
+by VASP should be around 100%).
 
-- One possible choice is to set RWIGS such that the overlap between the
-  spheres is minimized.
+- One possible choice is to set
+  RWIGS such that the overlap
+  between the spheres is minimized.
 
-&nbsp;
+<!-- -->
 
 - a more elaborate way is to apply a Bader-type charge analysis to
   estimate the radius of an atom in a specific compound.
 
-&nbsp;
+<!-- -->
 
 - in most cases, it is simplest to choose the radius of each sphere such
   that they are close to the covalent radius as tabulated in most
@@ -67,10 +75,15 @@ derived from the partial DOS is the typical character of a peak in a
 DOS. Quantitative results can be obtained only by careful comparison
 with a reference system (e.g. bulk versus surface).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=RWIGS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LORBIT](LORBIT.md),
 [I_CONSTRAINED_M](I_CONSTRAINED_M.md), [Spin
 spirals](../theory/Spin_spirals.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-RWIGS-_incategory-Examples)
+
+

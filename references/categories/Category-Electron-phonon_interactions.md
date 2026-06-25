@@ -2,16 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Electron-phonon interactions
+
+
 In many systems, it suffices to treat the
-[electronic](../redirects/Electronic_minimization.md)
-and [vibrational degrees of freedom](../redirects/Phonons.md) (phonons)
-separately, because electrons are much faster than the motion of nuclei.
-This treatment is approximate and can be corrected by including
-**electron-phonon coupling**. This entails the coupling of the two
-systems while still treating the two systems separately. In fact,
-electron-phonon scattering is the prevalent effect in a wide range of
-applications, such as the mobility of semiconductors or the conductivity
-of metals at room temperature.
+<a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic</a> and
+<a href="/wiki/Phonons" class="mw-redirect" title="Phonons">vibrational
+degrees of freedom</a> (phonons) separately, because electrons are much
+faster than the motion of nuclei. This treatment is approximate and can
+be corrected by including **electron-phonon coupling**. This entails the
+coupling of the two systems while still treating the two systems
+separately. In fact, electron-phonon scattering is the prevalent effect
+in a wide range of applications, such as the mobility of semiconductors
+or the conductivity of metals at room temperature.
 
 The inclusion of the effects of the ionic degrees of freedom in the
 electronic structure is important in the determination of many physical
@@ -21,62 +24,99 @@ spectral functions, [electronic
 conductivity](Category-Dielectric_properties.md),
 Seebeck coefficient or electronic thermal conductivity, to name a few.
 
+
 ## Contents
 
-- [1 Stochastic displacements
-  approach](#Stochastic_displacements_approach)
-- [2 Many-body perturbation theory](#Many-body_perturbation_theory)
-  - [2.1 Electron-phonon potential from
+
+- [1 Stochastic
+  displacements approach](#Stochastic_displacements_approach)
+- [2 Many-body
+  perturbation theory](#Many-body_perturbation_theory)
+  - [2.1
+    Electron-phonon potential from
     supercells](#Electron-phonon_potential_from_supercells)
-  - [2.2 Physical observables (or electron-phonon matrix
+  - [2.2 Physical
+    observables (or electron-phonon matrix
     elements)](#Physical_observables_(or_electron-phonon_matrix_elements))
-- [3 Choosing the right approach](#Choosing_the_right_approach)
-- [4 Additional resources](#Additional_resources)
-  - [4.1 Tutorials](#Tutorials)
-- [5 References](#References)
+- [3 Choosing the
+  right approach](#Choosing_the_right_approach)
+- [4 Additional
+  resources](#Additional_resources)
+  - [4.1
+    Tutorials](#Tutorials)
+- [5
+  References](#References)
 
-## Stochastic displacements approach
-[![](https://vasp.at/wiki/images/thumb/6/65/Monte_carlo_on-shot.png/400px-Monte_carlo_on-shot.png)](https://vasp.at/wiki/File:Monte_carlo_on-shot.png)
 
-The equilbrium structure is split into a series of Monte Carlo (MC)
-structures to model the electron-phonon interactions. The one-shot
-method approximates the full MC approach using a single supercell.
+## Stochastic displacements approach\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Stochastic displacements approach">edit</a> \| (./index.php.md)\]
+
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:Monte_carlo_on-shot.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/6/65/Monte_carlo_on-shot.png/400px-Monte_carlo_on-shot.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/6/65/Monte_carlo_on-shot.png/600px-Monte_carlo_on-shot.png 1.5x, /wiki/images/thumb/6/65/Monte_carlo_on-shot.png/800px-Monte_carlo_on-shot.png 2x"
+width="400" height="251" /></a>
+<figcaption>The equilbrium structure is split into a series of Monte
+Carlo (MC) structures to model the electron-phonon interactions. The
+one-shot method approximates the full MC approach using a single
+supercell.</figcaption>
+</figure>
 
 The stochastic approach allows obtaining the bandgap renormalization and
 an approximation of the electronic spectral function due to the ionic
 degrees of freedom under the static approximation using a supercell
 approach. This has the advantage that it can be easily implemented and
 used with different levels of theory to describe the electronic states,
-such as different [exchange-correlation
-functionals](../redirects/Exchange-correlation_functionals.md)
-or even the [GW approximation](../theory/Category-GW.md). The
-disadvantage is that the approach does not include time-dependent or
-dynamical effects of the phonons (static approximation) and, hence, it
-does not provide transport properties (see [perturbation
-theory](#Many-body_perturbation_theory)).
+such as different
+<a href="/wiki/Exchange-correlation_functionals" class="mw-redirect"
+title="Exchange-correlation functionals">exchange-correlation
+functionals</a> or even the [GW
+approximation](../theory/Category-GW.md). The disadvantage is
+that the approach does not include time-dependent or dynamical effects
+of the phonons (static approximation) and, hence, it does not provide
+transport properties (see <a href="#Many-body_perturbation_theory"
+class="mw-selflink-fragment">perturbation theory</a>).
 
 To displace the atoms along a set of random or a single specially chosen
-direction ^([\[1\]](#cite_note-zacharias:prb:2016-1)), this approach
-requires the knowledge of the [phonons](../redirects/Phonons.md) on a
-supercell. The displacement length is determined by the temperature of
-the ionic system. The desired can be directly obtained by averaging over
-the set of randomly displaced supercells, or from the aforementioned
-special displacement pattern.
+direction
+<sup>[\[1\]](#cite_note-zacharias:prb:2016-1)</sup>,
+this approach requires the knowledge of the
+<a href="/wiki/Phonons" class="mw-redirect" title="Phonons">phonons</a>
+on a supercell. The displacement length is determined by the temperature
+of the ionic system. The desired can be directly obtained by averaging
+over the set of randomly displaced supercells, or from the
+aforementioned special displacement pattern.
 
 The theory of [electron-phonon interactions from statistical
 sampling](../theory/Electron-phonon_interactions_theory.md)
 is covered elsewhere, as is [a how
 to](../tutorials/Electron-phonon_interactions_from_Monte-Carlo_sampling.md).
 
-## Many-body perturbation theory
-[![](https://vasp.at/wiki/images/thumb/4/43/FM_DW_diagrams.png/400px-FM_DW_diagrams.png)](https://vasp.at/wiki/File:FM_DW_diagrams.png)
 
-In many-body perturbation theory, the two lowest order contributions to
-the [electron
-self-energy](../theory/Electron-phonon_interactions_theory.md)
-are the [Fan-Migdal](../incar-tags/ELPH_SELFEN_FAN.md) and
-[Debye-Waller](../incar-tags/ELPH_SELFEN_DW.md) contributions in
-the Feynman diagram representation.
+## Many-body perturbation theory\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Many-body perturbation theory">edit</a> \| (./index.php.md)\]
+
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:FM_DW_diagrams.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/43/FM_DW_diagrams.png/400px-FM_DW_diagrams.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/4/43/FM_DW_diagrams.png/600px-FM_DW_diagrams.png 1.5x, /wiki/images/thumb/4/43/FM_DW_diagrams.png/800px-FM_DW_diagrams.png 2x"
+width="400" height="220" /></a>
+<figcaption>In many-body perturbation theory, the two lowest order
+contributions to the <a
+href="/wiki/Electron-phonon_interactions_theory#Electron_self-energy"
+title="Electron-phonon interactions theory">electron self-energy</a> are
+the <a href="/wiki/ELPH_SELFEN_FAN"
+title="ELPH SELFEN FAN">Fan-Migdal</a> and <a
+href="/wiki/ELPH_SELFEN_DW" title="ELPH SELFEN DW">Debye-Waller</a>
+contributions in the Feynman diagram representation.</figcaption>
+</figure>
 
 Another approach to include **electron-phonon coupling** employs the
 methods and language of many-body perturbation theory, where the
@@ -104,27 +144,42 @@ states. The electron-phonon potential must be generated from a supercell
 calculation, which is then used to calculate the phonon-induced electron
 self-energy and, thereby, the physical observables.
 
-### [Electron-phonon potential from supercells](../tutorials/Electron-phonon_potential_from_supercells.md)
+### [Electron-phonon potential from supercells](../tutorials/Electron-phonon_potential_from_supercells.md)\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Electron-phonon potential from supercells">edit</a> \| (./index.php.md)\]
+
 We obtain the derivatives of the Kohn-Sham potential with respect to the
 ionic displacements
 
-$\partial_{I \alpha} V (\mathbf{r}) =
-\frac{\partial V(r)}{\partial R_{I\alpha}}$
+$\partial_{I \alpha} V (\mathbf{r}) = \frac{\partial V(r)}{\partial
+R_{I\alpha}}$
 
-with $I$ the ion index and
-$\alpha$ denoting the Cartesian
-direction in which it is displaced. The main output file is
+with $I$ the ion
+index and $\alpha$
+denoting the Cartesian direction in which it is displaced. The main
+output file is
 [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md),
 which is required for computing the matrix elements in the next step.
 
 - How to compute the [electron-phonon potential from
   supercells](../tutorials/Electron-phonon_potential_from_supercells.md)
 
-### Physical observables (or electron-phonon matrix elements)
-[![](https://vasp.at/wiki/images/thumb/4/44/Elphon-workflow.png/400px-Elphon-workflow.png)](https://vasp.at/wiki/File:Elphon-workflow.png)
+### Physical observables (or electron-phonon matrix elements)\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Physical observables (or electron-phonon matrix elements)">edit</a> \| (./index.php.md)")\]
 
-General workflow when running electron-phonon calculations using
-perturbation theory.
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:Elphon-workflow.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/44/Elphon-workflow.png/400px-Elphon-workflow.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/4/44/Elphon-workflow.png/600px-Elphon-workflow.png 1.5x, /wiki/images/thumb/4/44/Elphon-workflow.png/800px-Elphon-workflow.png 2x"
+width="400" height="192" /></a>
+<figcaption>General workflow when running electron-phonon calculations
+using perturbation theory.</figcaption>
+</figure>
 
 These physical observables include the [zero-point renormalization
 (ZPR)](../theory/Electron-phonon_interactions_theory.md),
@@ -148,9 +203,9 @@ provides convenient defaults depending on the observable of interest is
 [ELPH_MODE](../incar-tags/ELPH_MODE.md). The computation of the
 self-energy requires evaluating the electron-phonon matrix elements
 
-$g_{mn \mathbf{k}, \nu \mathbf{q}} \equiv \langle
-\psi_{m \mathbf{k} - \mathbf{q}} | \partial_{\nu \mathbf{q}} V |
-\psi_{n \mathbf{k}} \rangle.$
+$g_{mn \mathbf{k}, \nu \mathbf{q}} \equiv \langle \psi_{m \mathbf{k} -
+\mathbf{q}} | \partial_{\nu \mathbf{q}} V | \psi_{n \mathbf{k}}
+\rangle.$
 
 By default, we avoid writing the matrix elements, because it is a huge
 data set which is distributed for optimal use of the computational
@@ -176,14 +231,19 @@ section on the
 [accumulators](../misc/Electron-phonon_accumulators.md)
 page.
 
-## Choosing the right approach
-Both the [stochastic approach](#Stochastic_displacements_approach) (SA)
-as well as the [perturbative approach](#Many-body_perturbation_theory)
-(PA) have advantages and limitations. Depending on the application,
-there is often one approach that is much more suitable than the other.
-This section is dedicated to highlighting the differences and respective
-advantages between SA and PA so that choosing the correct approach
-becomes easier.
+## Choosing the right approach\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Choosing the right approach">edit</a> \| (./index.php.md)\]
+
+Both the <a href="#Stochastic_displacements_approach"
+class="mw-selflink-fragment">stochastic approach</a> (SA) as well as the
+<a href="#Many-body_perturbation_theory"
+class="mw-selflink-fragment">perturbative approach</a> (PA) have
+advantages and limitations. Depending on the application, there is often
+one approach that is much more suitable than the other. This section is
+dedicated to highlighting the differences and respective advantages
+between SA and PA so that choosing the correct approach becomes easier.
 
 Likely the biggest deciding factor between SA and PA are the observables
 that can be calculated:
@@ -193,10 +253,12 @@ that can be calculated:
   the PA is the only possible choice. Transport calculations need to
   include time-dependent, i.e. dynamical, effects of the phonons. These
   effectively yield electronic quasiparticle lifetimes that influence
-  properties such as the electronic conductivity $\sigma$, the Seebeck coefficient $S$ and the electronic contribution to the thermal conductivity
-  $\kappa_e$.
+  properties such as the electronic conductivity
+  $\sigma$, the Seebeck coefficient
+  $S$ and the electronic contribution to the thermal
+  conductivity $\kappa_e$.
 
-&nbsp;
+<!-- -->
 
 - The SA can calculate the renormalization of the fundamental bandgap of
   semiconductors and insulators, but not for metallic systems.
@@ -221,9 +283,9 @@ in the displaced geometry and is hence not limited to the harmonic
 approximation of phonons.
 
 Furthermore, the SA can directly utilize higher-level
-[exchange-correlation
-functionals](../redirects/Exchange-correlation_functionals.md)
-such as [METAGGA](../incar-tags/METAGGA.md), [hybrid
+<a href="/wiki/Exchange-correlation_functionals" class="mw-redirect"
+title="Exchange-correlation functionals">exchange-correlation
+functionals</a> such as [METAGGA](../incar-tags/METAGGA.md), [hybrid
 functionals](../methods/Category-Hybrid_functionals.md)
 and [beyond-DFT
 methods](Category-Many-body_perturbation_theory.md)
@@ -233,7 +295,7 @@ PA, this is currently not supported. Therefore, when the quasiparticle
 shifts due to electron-electron interactions become important, it is
 possible to use the PA method in combination with the [GW
 approximation](../theory/Category-GW.md)
-^([\[2\]](#cite_note-karsai:njp:2018-2)).
+<sup>[\[2\]](#cite_note-karsai:njp:2018-2)</sup>.
 
 Another key difference is how PA and SA handle polar materials: In polar
 materials, longitudinal optical phonons can induce [long-range
@@ -249,31 +311,59 @@ detrimental for strongly polar materials. In this case, one can only try
 to keep increasing the supercell size in hopes of arriving at a
 physically meaningful result.
 
-## Additional resources
-### Tutorials
-- Tutorials for [bandgap renormalization from perturbation
-  theory](https://www.vasp.at/tutorials/latest/electron-phonon/part1/).
-- Tutorials for [bandgap renormalization from stochastic
-  displacements](https://www.vasp.at/tutorials/latest/electron-phonon/part2/).
-- Tutorials for [plotting the electron-phonon matrix elements and using
-  VASP+phelel](https://www.vasp.at/tutorials/latest/electron-phonon/part3/).
-- Tutorials for [transport properties:
-  conductivity](https://www.vasp.at/tutorials/latest/electron-phonon/part4/).
+## Additional resources\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Additional resources">edit</a> \| (./index.php.md)\]
+
+### Tutorials\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Tutorials">edit</a> \| (./index.php.md)\]
+
+- Tutorials for
+  <a href="https://www.vasp.at/tutorials/latest/electron-phonon/part1/"
+  class="external text" rel="nofollow">bandgap renormalization from
+  perturbation theory</a>.
+- Tutorials for
+  <a href="https://www.vasp.at/tutorials/latest/electron-phonon/part2/"
+  class="external text" rel="nofollow">bandgap renormalization from
+  stochastic displacements</a>.
+- Tutorials for
+  <a href="https://www.vasp.at/tutorials/latest/electron-phonon/part3/"
+  class="external text" rel="nofollow">plotting the electron-phonon matrix
+  elements and using VASP+phelel</a>.
+- Tutorials for
+  <a href="https://www.vasp.at/tutorials/latest/electron-phonon/part4/"
+  class="external text" rel="nofollow">transport properties:
+  conductivity</a>.
 
 **NB** There was a [known
 issue](../misc/Known_issues.md) for
 electron-phonon calculations using [`ISPIN`](../incar-tags/ISPIN.md)` = 2`
-for VASP 6.5.0 and 6.5.1 that was fixed in VASP 6.6.0 (see [this forum
-post](https://vasp.at/forum/viewtopic.php?t=20541#p33020)), which is
+for VASP 6.5.0 and 6.5.1 that was fixed in VASP 6.6.0 (see
+<a href="https://vasp.at/forum/viewtopic.php?t=20541#p33020"
+class="external text" rel="nofollow">this forum post</a>), which is
 relevant for Fe bulk in this tutorial.
 
-- Tutorials for [transport properties: mobility and ZT figure of
-  merit](https://www.vasp.at/tutorials/latest/electron-phonon/part5/).
+- Tutorials for
+  <a href="https://www.vasp.at/tutorials/latest/electron-phonon/part5/"
+  class="external text" rel="nofollow">transport properties: mobility and
+  ZT figure of merit</a>.
 
-## References
-1.  [↑](#cite_ref-zacharias:prb:2016_1-0) [M. Zacharias and F. Giustino,
-    Phys. Rev. B **94**, 075125
-    (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
-2.  [↑](#cite_ref-karsai:njp:2018_2-0) [F. Karsai, M. Engel, E.
-    Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008
-    (2018).](https://doi.org/10.1088/1367-2630/aaf53f)
+## References\[<a
+href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-zacharias:prb:2016_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
+    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
+    Rev. B <strong>94</strong>, 075125 (2016).</a>
+2.  [↑](#cite_ref-karsai:njp:2018_2-0)
+    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
+    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
+    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
+
+

@@ -2,18 +2,25 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PLUGINS/FORCE AND STRESS
-PLUGINS/FORCE_AND_STRESS = .True. \| .False.  
+
+
+PLUGINS/FORCE_AND_STRESS =
+.True. \| .False.  
 Default: **PLUGINS/FORCE_AND_STRESS** = .False. 
 
-Description: PLUGINS/FORCE_AND_STRESS calls the Python plugin for the
-force and stress interface for each ionic relaxation step
+Description:
+PLUGINS/FORCE_AND_STRESS calls
+the Python plugin for the force and stress interface for each ionic
+relaxation step
 
 ------------------------------------------------------------------------
 
-When PLUGINS/FORCE_AND_STRESS=.TRUE., VASP calls the `force_and_stress`
-Python function at the end of each ionic relaxation step. You can use
-this tag to modify forces and the stress tensor to be consistent with
-modifications to the potential performed with
+When
+PLUGINS/FORCE_AND_STRESS=.TRUE.,
+VASP calls the `force_and_stress` Python function at the end of each
+ionic relaxation step. You can use this tag to modify forces and the
+stress tensor to be consistent with modifications to the potential
+performed with
 [PLUGINS/LOCAL_POTENTIAL](PLUGINS__LOCAL_POTENTIAL.md).
 Furthermore, you could implement new force corrections like
 van-der-Waals functionals or use it to run a machine-learned interatomic
@@ -22,17 +29,26 @@ added to ones obtained by VASP, but you can set
 [PLUGINS/ML_MODE](PLUGINS__ML_MODE.md) to overwrite
 them instead.
 
-## Expected inputs
+## Expected inputs\[<a
+href="/wiki/index.php?title=PLUGINS/FORCE_AND_STRESS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Expected inputs">edit</a> \| (./index.php.md)\]
+
 The `force_and_stress` Python function expects the following inputs,
+
 
     def force_and_stress(constants, additions):
         ...
 
-where `constants` and `additions` and [Python
-dataclasses](https://docs.python.org/3/library/dataclasses.html). The
+
+where `constants` and `additions` and
+<a href="https://docs.python.org/3/library/dataclasses.html"
+class="external text" rel="nofollow">Python dataclasses</a>. The
 `constants` dataclass consists of the following inputs, listed here with
 their associated
-[datatypes](https://numpy.org/doc/stable/user/basics.types.html)
+<a href="https://numpy.org/doc/stable/user/basics.types.html"
+class="external text" rel="nofollow">datatypes</a>
+
 
     @dataclass(frozen=True)
     class ConstantsForceAndStress:
@@ -52,6 +68,7 @@ their associated
         charge_density: Optional[DoubleArray] = None
         neighbor_list: List[Neighbors] = field(default_factory=list)
 
+
 Note that the [INCAR](../input-files/INCAR.md) tags are capitalized.
 `shape_grid` is a three dimensional integer array which stores the shape
 of the real space grid, [NGXF](NGXF.md),
@@ -70,19 +87,27 @@ of all neighbors near an atom up to a cutoff
 
 The `additions` dataclass consists of the following modifiable outputs
 
+
     @dataclass
     class AdditionsForceAndStress:
         total_energy: float
         forces: DoubleArray
         stress: DoubleArray
 
-## Modifying quantities
+
+## Modifying quantities\[<a
+href="/wiki/index.php?title=PLUGINS/FORCE_AND_STRESS&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Modifying quantities">edit</a> \| (./index.php.md)\]
+
 Modify the quantities listed in additions by adding to them. For
 example, if you wanted to add one to the forces
+
 
     import numpy as np
     def force_and_stress(constants, additions)
         additions.forces += np.ones((constants.number_ions,3))
+
 
 |  |
 |----|
@@ -91,6 +116,7 @@ example, if you wanted to add one to the forces
 We provide a special helper class if you want to interface ASE
 calculators with VASP. This class makes these use cases almost trivial
 
+
     from vasp.force_field import AseForceField
 
     def force_and_stress(constants, additions):
@@ -98,7 +124,12 @@ calculators with VASP. This class makes these use cases almost trivial
         force_field = AseForceField(calculator)
         force_field.force_and_stress(constants, additions)
 
-## Related tags and articles
+
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PLUGINS/FORCE_AND_STRESS&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Plugins](../tutorials/Plugins.md),
 [PLUGINS/LOCAL_POTENTIAL](PLUGINS__LOCAL_POTENTIAL.md),
 [PLUGINS/OCCUPANCIES](PLUGINS__OCCUPANCIES.md),
@@ -108,3 +139,5 @@ calculators with VASP. This class makes these use cases almost trivial
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-PLUGINS/FORCE_AND_STRESS-_incategory-Examples)
+
+

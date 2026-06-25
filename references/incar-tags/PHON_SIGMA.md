@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PHON_SIGMA
+
+
 PHON_SIGMA = \[real\] 
 
 |                         |             |     |
@@ -13,18 +15,21 @@ phonon density of states.
 
 ------------------------------------------------------------------------
 
-The density of states is computed between $\[\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma\]$
-with $\omega_{\text{min}}$ and
-$\omega_{\text{max}}$ the lowest and
-highest phonon frequency and $\sigma$
-the broadening PHON_SIGMA. The number of energy points in this interval
-is set by [PHON_NEDOS](PHON_NEDOS.md).
+The density of states is computed between $\[\omega_{\text{min}}-5\sigma,\omega_{\text{max}}+5\sigma\]$ with $\omega_{\text{min}}$ and $\omega_{\text{max}}$ the lowest and highest phonon frequency and
+$\sigma$ the broadening
+PHON_SIGMA. The number of
+energy points in this interval is set by
+[PHON_NEDOS](PHON_NEDOS.md).
 
-|                                            |
-|--------------------------------------------|
+|  |
+|----|
 | **Mind:** Only available as of VASP 6.4.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PHON_SIGMA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [QPOINTS](../input-files/QPOINTS.md),
 [PHON_NWRITE](PHON_NWRITE.md),
 [LPHON_POLAR](LPHON_POLAR.md),
@@ -34,3 +39,5 @@ is set by [PHON_NEDOS](PHON_NEDOS.md).
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LPHON_DISPERSION-_incategory-Examples)
+
+

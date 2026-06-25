@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Prepare a POTCAR
+
+
+
 Redirect to:
 
 - [Preparing a POTCAR](../tutorials/Preparing_a_POTCAR.md)
+
+

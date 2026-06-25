@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_AB
-This file is used as input (with file name ML_AB) and output
+
+
+This file is used as input (with file name
+ML_AB) and output
 ([ML_ABN](../output-files/ML_ABN.md)) within the machine learning force
 field method. It contains the collection of ab initio data from previous
 calculations: Bravais matrices, atom positions, energies, forces, and
@@ -18,15 +21,18 @@ following ways:
   `critical`).
 - **[`ML_MODE`](../incar-tags/ML_MODE.md)` = train`, continuation run:**
   Same [ML_ABN](../output-files/ML_ABN.md) output as above. In addition,
-  upon start-up, the user-provided ML_AB file is read and an initial
-  machine-learned force field is generated from the contained data.
+  upon start-up, the user-provided
+  ML_AB file is read and an
+  initial machine-learned force field is generated from the contained
+  data.
 - **[`ML_MODE`](../incar-tags/ML_MODE.md)` = select`, reselection of
   local reference configurations:** Same [ML_ABN](../output-files/ML_ABN.md)
   output as for [`ML_MODE`](../incar-tags/ML_MODE.md)` = train`. The
-  ML_AB file is read and the contained structures are fed sequentially
-  to the on-the-fly training algorithm. The list of local reference
-  configurations in the ML_AB file is ignored, however, a dummy section
-  must still be present (see below).
+  ML_AB file is read and the
+  contained structures are fed sequentially to the on-the-fly training
+  algorithm. The list of local reference configurations in the
+  ML_AB file is ignored,
+  however, a dummy section must still be present (see below).
 
 |  |
 |----|
@@ -38,16 +44,28 @@ reused as input for
 [`ML_MODE`](../incar-tags/ML_MODE.md)` = train, select` by just renaming
 (copying) it to ML_AB.
 
+
 ## Contents
 
-- [1 Example](#Example)
-- [2 General format remarks](#General_format_remarks)
-- [3 Header specification](#Header_specification)
-- [4 Training structure data format](#Training_structure_data_format)
-- [5 Merging different ML_AB files](#Merging_different_ML_AB_files)
 
-## Example
-As an example, here is a shortened version of an actual ML_AB file:
+- [1
+  Example](#Example)
+- [2 General format
+  remarks](#General_format_remarks)
+- [3 Header
+  specification](#Header_specification)
+- [4 Training
+  structure data format](#Training_structure_data_format)
+- [5 Merging
+  different ML_AB files](#Merging_different_ML_AB_files)
+
+
+## Example\[<a href="/wiki/index.php?title=ML_AB&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
+As an example, here is a shortened version of an actual
+ML_AB file:
 
      1.0 Version
     **************************************************
@@ -235,7 +253,10 @@ As an example, here is a shortened version of an actual ML_AB file:
      ...
      ...
 
-## General format remarks
+## General format remarks\[<a href="/wiki/index.php?title=ML_AB&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: General format remarks">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Important:** All element-dependent quantities must follow the order of the element entries given in the header entry named `The atom types in the data file`. |
@@ -247,18 +268,22 @@ As an example, here is a shortened version of an actual ML_AB file:
 - The ledger lines cannot be omitted. `*****` and `-----` lines for the
   header. `*****`, `-----` and `=====` lines for the data.
 
-## Header specification
+## Header specification\[<a href="/wiki/index.php?title=ML_AB&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Header specification">edit</a> \| (./index.php.md)\]
+
 - `1.0 Version`: In the very beginning of the header this entry
-  specifies to the version of the ML_AB file. If in the future the
-  contents of the file will be changed or extended the version number
-  will ensure I/O compatibility. If not stated otherwise use
+  specifies to the version of the
+  ML_AB file. If in the future
+  the contents of the file will be changed or extended the version
+  number will ensure I/O compatibility. If not stated otherwise use
   `1.0 Version`.
 - `The number of configurations`: Total number of training structures
   stored in this ML_AB file.
 - `The maximum number of atom type`: Total number of unique types listed
   in all structures (e.g. if the file contains some ab initio data for
-  H₂O, some data for MgO and some data for NaCl, then the total number
-  of types is 5).
+  H<sub>2</sub>O, some data for MgO and some data for NaCl, then the
+  total number of types is 5).
 - `The atom types in the data file`: Listing of all atom types (two
   characters for each type as in VASP) appearing in all structures.
   Multiple lines for more than 3 element types. Maximum 3 entries per
@@ -288,15 +313,19 @@ As an example, here is a shortened version of an actual ML_AB file:
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = select` this section is
   ignored and a new list of local reference configurations will be
   written to [ML_ABN](../output-files/ML_ABN.md). However, upon reading in
-  the ML_AB file a dummy line (e.g. only one line with `1 1`) for each
-  type still needs to be present (also set
-  `The numbers of basis sets per atom type` to 1 in this case).
+  the ML_AB file a dummy line
+  (e.g. only one line with `1 1`) for each type still needs to be
+  present (also set `The numbers of basis sets per atom type` to 1 in
+  this case).
 
 |  |
 |----|
 | **Warning:** The maximum number of the training structures [ML_MCONF](../incar-tags/ML_MCONF.md) and the maximum number of the local reference configurations [ML_MB](../incar-tags/ML_MB.md) in the [INCAR](INCAR.md) file have to be set larger than the entries `The number of configurations` and `The numbers of basis sets per atom type` in the ML_AB file, respectively. |
 
-## Training structure data format
+## Training structure data format\[<a href="/wiki/index.php?title=ML_AB&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Training structure data format">edit</a> \| (./index.php.md)\]
+
 - `Configuration num. n`: Denotes the beginning of a structure in the
   training data. Training structures have to be numbered consecutively
   starting with 1.
@@ -308,9 +337,9 @@ As an example, here is a shortened version of an actual ML_AB file:
   names is limited to 40 characters.
 - `The number of atom types`: The number of atom types in the structure.
   Because the list of types in this structure has to be a subset of all
-  types appearing in the ML_AB this number must be smaller or equal to
-  the number given in the header section
-  `The atom types in the data file`.
+  types appearing in the ML_AB
+  this number must be smaller or equal to the number given in the header
+  section `The atom types in the data file`.
 - `The number of atoms`: Number of atoms in the structure.
 - `Atom types and atom numbers`: Atom types and the number of atoms per
   type in the structure. Each type is written on a separate line.
@@ -324,8 +353,9 @@ As an example, here is a shortened version of an actual ML_AB file:
   continuation and re-selection runs with
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = train, select` will write out
   current `CTIFOR` values in [ML_ABN](../output-files/ML_ABN.md) files. On
-  the other hand, if ML_AB files are created from external training data
-  this section may be omitted. In this case
+  the other hand, if ML_AB
+  files are created from external training data this section may be
+  omitted. In this case
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = train, select` runs will also
   not include `CTIFOR` sections.
 
@@ -345,9 +375,12 @@ As an example, here is a shortened version of an actual ML_AB file:
 - `Stress (kbar)`: 6 entries for the stress tensor (in kb) of the
   structure.
 
-## Merging different ML_AB files
-Multiple ML_AB files may be merged by hand, keeping the following
-restrictions and tips in mind:
+## Merging different ML_AB files\[<a href="/wiki/index.php?title=ML_AB&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Merging different ML_AB files">edit</a> \| (./index.php.md)\]
+
+Multiple ML_AB files may be
+merged by hand, keeping the following restrictions and tips in mind:
 
 - The training structure data can be simply concatenated, i.e., by just
   adding more structure sections starting with `Configuration num. n` at
@@ -358,7 +391,8 @@ restrictions and tips in mind:
   elements and atoms per element in the training data together,
   otherwise the code will automatically reorder the data, such that
   those are sticking together. If one relies on the automatic reordering
-  it will not be possible to easily "diff" the input ML_AB file and its
+  it will not be possible to easily "diff" the input
+  ML_AB file and its
   corresponding [ML_ABN](../output-files/ML_ABN.md) output file.
 - The header must be adjusted to reflect the combined number of element
   types, the maximum number of atoms, etc.
@@ -366,10 +400,10 @@ restrictions and tips in mind:
   (renumbering would be required). Instead, it is recommended to
   recalculate them using
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = select`. However, to start
-  with a valid ML_AB file first manually set
-  `The numbers of basis sets per atom type` to 1 for each species. Also,
-  set the block `Basis set for X` with dummy value `1 1` for each
-  species. After running with
+  with a valid ML_AB file
+  first manually set `The numbers of basis sets per atom type` to 1 for
+  each species. Also, set the block `Basis set for X` with dummy value
+  `1 1` for each species. After running with
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = select` the output
   [ML_ABN](../output-files/ML_ABN.md) will contain the selected new local
   reference configurations for the combined training data.
@@ -379,3 +413,5 @@ restrictions and tips in mind:
 | **Tip:** If calculations for [`ML_MODE`](../incar-tags/ML_MODE.md)` = select` are too time consuming using the default settings it is useful to increase [ML_MCONF_NEW](../incar-tags/ML_MCONF_NEW.md) to values around 10-16 and set [`ML_CDOUB`](../incar-tags/ML_CDOUB.md)` = 4`. This often accelerates the calculations by a factor of 2-4. |
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constrained MD using a canonical ensemble
+
+
 **Description**: Compare adsoption of H2O on TiO2\[110\] using a simple
 model structure: the model surface consists of 2 layers TiO2, (1x1)
 
@@ -19,7 +21,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 
 - [INCAR](../input-files/INCAR.md) for standard relaxation
 
-&nbsp;
+<!-- -->
 
     SYSTEM = H2O_TiO2
     ENMAX = 400
@@ -36,7 +38,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 - [INCAR](../input-files/INCAR.md) for constrained MD using a microcanonical
   ensemble
 
-&nbsp;
+<!-- -->
 
     SYSTEM = H2O_TiO2
     ENMAX = 400
@@ -54,7 +56,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 - [ICONST](../input-files/ICONST.md) for constrained MD using a
   microcanonical ensemble
 
-&nbsp;
+<!-- -->
 
     R 7 8 0
     R 7 9 0
@@ -65,7 +67,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 - [INCAR](../input-files/INCAR.md) for constrained MD using a canonical
   ensemble
 
-&nbsp;
+<!-- -->
 
     SYSTEM = H2O_TiO2
     ENMAX = 400
@@ -84,7 +86,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 - [ICONST](../input-files/ICONST.md) for constrained MD using a canonical
   ensemble
 
-&nbsp;
+<!-- -->
 
     R 7 8 0
     R 7 9 0
@@ -94,7 +96,7 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     TiO2+H2O                                    
        1.00000000000000     
@@ -119,21 +121,30 @@ limited to 100 (100 fs) which implies that the MD is NOT CONVERGED.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     Automatically generated mesh
            0
     Gamma
      5 5 1
 
-## Download
-[h2o_on_tio2.tgz, sub-folder
-constrMD_canonical](http://www.vasp.at/vasp-workshop/examples/h2o_on_tio2.tgz)
+## Download\[<a
+href="/wiki/index.php?title=Constrained_MD_using_a_canonical_ensemble&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="http://www.vasp.at/vasp-workshop/examples/h2o_on_tio2.tgz"
+class="external text" rel="nofollow">h2o_on_tio2.tgz, sub-folder
+constrMD_canonical</a>
 
 ------------------------------------------------------------------------
 
-[To the list of
-examples](https://vasp.at/wiki/index.php/index.php)")
-or to the [main page](The_VASP_Manual.md)
+<a
+href="/wiki/index.php?title=VASP_example_calculations&amp;action=edit&amp;redlink=1"
+class="new" title="VASP example calculations (page does not exist)">To
+the list of examples</a> or to the [main
+page](The_VASP_Manual.md)
 
   
+
+

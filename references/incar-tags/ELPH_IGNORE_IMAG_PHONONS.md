@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_IGNORE_IMAG_PHONONS
-ELPH_IGNORE_IMAG_PHONONS = \[logical\]  
+
+
+ELPH_IGNORE_IMAG_PHONONS =
+\[logical\]  
 Default: **ELPH_IGNORE_IMAG_PHONONS** = .FALSE. 
 
 Description: If enabled, VASP ignores imaginary phonon frequencies
 during electron-phonon calculations.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -25,14 +28,20 @@ In this case, the system should first be properly converged until stable
 
 If imaginary phonon frequencies are encountered during an
 electron-phonon calculation, VASP simply stops. If
-`ELPH_IGNORE_IMAG_PHONONS`` = True`, VASP instead skips the q-points at
-which the phonon frequencies are imaginary. This can be useful since
-even a stable system can sometimes exhibit small imaginary phonon
-frequencies around the $\Gamma$-point
-due to numerical inaccuracies.
+`ELPH_IGNORE_IMAG_PHONONS`` = True`,
+VASP instead skips the q-points at which the phonon frequencies are
+imaginary. This can be useful since even a stable system can sometimes
+exhibit small imaginary phonon frequencies around the
+$\Gamma$-point due to numerical inaccuracies.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_IGNORE_IMAG_PHONONS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_RUN](ELPH_RUN.md)
 - [IFC_ASR](IFC_ASR.md)
 - [ELPH_SELFEN_FAN](ELPH_SELFEN_FAN.md)
 - [ELPH_SELFEN_DW](ELPH_SELFEN_DW.md)
+
+

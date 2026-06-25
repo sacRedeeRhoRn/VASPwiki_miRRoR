@@ -2,7 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Blue-moon ensemble
+
+
+
 Redirect to:
 
-- [Category:Blue-moon
-  ensemble](https://vasp.at/wiki/index.php/index.php)
+- <a
+  href="/wiki/index.php?title=Category:Blue-moon_ensemble&amp;redirect=no"
+  class="mw-redirect"
+  title="Category:Blue-moon ensemble">Category:Blue-moon ensemble</a>
+
+

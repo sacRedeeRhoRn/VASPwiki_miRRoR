@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # APACO
+
+
 APACO = \[real\]  
 Default: **APACO** = 10 
 
-Description: APACO sets the maximum distance in the evaluation of the
-pair-correlation function (in Å).
+Description: APACO sets the
+maximum distance in the evaluation of the pair-correlation function (in
+Å).
 
 ------------------------------------------------------------------------
 
@@ -15,7 +18,10 @@ VASP evaluates the pair-correlation function each
 [NBLOCK](NBLOCK.md)×[KBLOCK](KBLOCK.md) steps to
 the [PCDAT](../output-files/PCDAT.md) file.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=APACO&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NPACO](NPACO.md), [NBLOCK](NBLOCK.md),
 [KBLOCK](KBLOCK.md), [PCDAT](../output-files/PCDAT.md)
 
@@ -23,3 +29,5 @@ the [PCDAT](../output-files/PCDAT.md) file.
 tag](https://vasp.at/wiki/index.php/Special-Search/-APACO-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

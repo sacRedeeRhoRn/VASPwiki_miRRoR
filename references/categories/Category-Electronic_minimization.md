@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Electronic minimization
+
+
 By **electronic minimization** we denote the process of determining the
 electronic ground state. This is an integral part of the vast majority
 of VASP calculations. The **electronic minimization** in VASP is highly
@@ -18,33 +20,39 @@ how-to pages:
   minimization](../tutorials/Setting_up_an_electronic_minimization.md)
 - [Troubleshooting electronic
   convergence](../tutorials/Troubleshooting_electronic_convergence.md)
-- [Lecture on electronic optimization](https://youtu.be/WlYykovzyiA)
+- <a href="https://youtu.be/WlYykovzyiA" class="external text"
+  rel="nofollow">Lecture on electronic optimization</a>
 
-## Theoretical background
+## Theoretical background\[<a
+href="/wiki/index.php?title=Category:Electronic_minimization&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theoretical background">edit</a> \| (./index.php.md)\]
+
 Within the context of Hohenberg-Kohn-Sham density functional theory, the
 ground state is that state of the system that minimizes the Kohn-Sham
 free energy:
 
-$F = \sum_n f_n \epsilon_n -E_{\rm H}\left\[ \rho
-\right\] + E_{\rm xc} \left\[ \rho \right\] -\int V_{\rm xc}({\bf
-r})\rho({\bf r})d{\bf r} - \sum_n \sigma S \left( \frac{\epsilon_n -
-\mu}{\sigma} \right)$
+ 
+
+$F
+= \sum_n f_n \epsilon_n -E_{\rm H}\left\[ \rho \right\] + E_{\rm xc}
+\left\[ \rho \right\] -\int V_{\rm xc}({\bf r})\rho({\bf r})d{\bf r} -
+\sum_n \sigma S \left( \frac{\epsilon_n - \mu}{\sigma} \right)$
 
 where the electronic density is given by:
 
-$\rho({\bf r})= \sum_n f_{n} |\psi_{n}({\bf
-r})|^2$
+$\rho({\bf r})= \sum_n f_{n} |\psi_{n}({\bf r})|^2$
 
-and the Kohn-Sham orbitals and eigenenergies, $\\\psi_n, \epsilon_n \\$ are solutions to the Kohn-Sham
+and the Kohn-Sham orbitals and eigenenergies,
+$\\\psi_n, \epsilon_n \\$ are solutions to the Kohn-Sham
 equations:
 
-$H \left\[ \rho \right\] | \psi_n \rangle =
-\epsilon_n S | \psi_n \rangle$
+$H
+\left\[ \rho \right\] | \psi_n \rangle = \epsilon_n S | \psi_n \rangle$
 
 under the constraint that the orbitals are *S*-orthonormal:
 
-$\langle \psi_m | S | \psi_n \rangle =
-\delta_{mn}$
+$\langle \psi_m | S | \psi_n \rangle = \delta_{mn}$
 
 The various algorithms for **electronic minimization** VASP offers can
 be roughly divided into two categories:
@@ -59,7 +67,11 @@ Selecting a particular method of **electronic minimization** is done by
 means of the [ALGO](../incar-tags/ALGO.md) (or [IALGO](../incar-tags/IALGO.md))
 tag.
 
-## Self-consistency cycle
+## Self-consistency cycle\[<a
+href="/wiki/index.php?title=Category:Electronic_minimization&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Self-consistency cycle">edit</a> \| (./index.php.md)\]
+
 1.  The SCC starts with an initial guess for the electronic density of
     the system. In particular, VASP uses the approximation of
     overlapping atomic charge densities. This density defines the
@@ -98,7 +110,11 @@ before they are used to construct a new charge density.
 For a more detailed description of the SCC, see [self-consistency
 cycle](../theory/Self-consistency_cycle.md).
 
-## Direct optimization
+## Direct optimization\[<a
+href="/wiki/index.php?title=Category:Electronic_minimization&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Direct optimization">edit</a> \| (./index.php.md)\]
+
 Similar to the SCC procedure described above, when starting from scratch
 ([`ISTART`](../incar-tags/ISTART.md)` = 0`), the direct optimization
 procedures in VASP always begin with several
@@ -128,3 +144,5 @@ stops when the change of the total energy drops below
 For more details on the direct optimization algorithms, see [direct
 optimization of the
 orbitals](../theory/Direct_optimization_of_the_orbitals.md).
+
+

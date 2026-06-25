@@ -2,10 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FERWE
+
+
 FERWE = \[real array\] 
 
-Description: FERWE sets the occupancies of the states for
-[ISMEAR](ISMEAR.md)=-2.
+Description: FERWE sets the
+occupancies of the states for [ISMEAR](ISMEAR.md)=-2.
 
 ------------------------------------------------------------------------
 
@@ -16,9 +18,10 @@ To set the occupancies, specify
 The occupancies must be specified for all bands and k points. The band
 index runs fastest. The occupancies must be between 0 and 1. In the case
 of spin-polarized calculations ([`ISPIN`](ISPIN.md)` = 2`),
-FERWE sets the occupancies of the states in the up-spin channel. Specify
-the occupancies of the states in the down-spin channel by means of the
-[FERDO](FERDO.md) tag.
+FERWE sets the occupancies of
+the states in the up-spin channel. Specify the occupancies of the states
+in the down-spin channel by means of the [FERDO](FERDO.md)
+tag.
 
 Note that the partial occupancies are also written to the
 [OUTCAR](../output-files/OUTCAR.md) file
@@ -40,29 +43,36 @@ Note that the partial occupancies are also written to the
 
 Keep in mind that for systems without spin-polarization the occupations
 are twice as large in the [OUTCAR](../output-files/OUTCAR.md) file than what
-you should provide for FERWE because of spin degeneracy.
+you should provide for FERWE
+because of spin degeneracy.
 
 |  |
 |----|
 | **Mind:** VASP changes the number of bands [NBANDS](NBANDS.md) to accommodate your parallel setup. If [NBANDS](NBANDS.md) is inconsistent with the number of elements you provide with FERWE VASP will exit with an error message. The used [NBANDS](NBANDS.md) is indicated in the error message. Adjust the occupancies provided to FERWE to this new value. Alternatively, you can choose an [NBANDS](NBANDS.md) as the common factor of all your parallel setups to avoid changes in the number of bands (see [here](NBANDS.md)). |
 
-You can use FERWE to keep occupancies fixed during ionic relaxations or
-molecular dynamics simulations. However, keeping the orbital occupancies
-fixed, requires that the orbital order does not change during the
-self-consistency cycle or during the optimization of the orbitals.
-Imagine, for instance, that the eigenenergy of the 65th orbital moves
-below the orbital energy of the 64th orbital. By default, VASP will
-order the eigenenergies so that enforcing FERWE will move the electrons
-to the originally unoccupied 65th orbital because it has now the lower
-energy. This problem can be often circumvented by specifying
+You can use FERWE to keep
+occupancies fixed during ionic relaxations or molecular dynamics
+simulations. However, keeping the orbital occupancies fixed, requires
+that the orbital order does not change during the self-consistency cycle
+or during the optimization of the orbitals. Imagine, for instance, that
+the eigenenergy of the 65th orbital moves below the orbital energy of
+the 64th orbital. By default, VASP will order the eigenenergies so that
+enforcing FERWE will move the
+electrons to the originally unoccupied 65th orbital because it has now
+the lower energy. This problem can be often circumvented by specifying
 [`LDIAG`](LDIAG.md)` = .FALSE.` in the
 [INCAR](../input-files/INCAR.md) file.
 
   
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=FERWE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [FERDO](FERDO.md), [ISMEAR](ISMEAR.md),
 [NBANDS](NBANDS.md), [LDIAG](LDIAG.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-FERWE-_incategory-Examples)
+
+

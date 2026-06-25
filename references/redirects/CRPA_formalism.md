@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CRPA formalism
+
+
+
 Redirect to:
 
 - [Constrained–random-phase–approximation
   formalism](../theory/Constrained–random-phase–approximation_formalism.md)
+
+

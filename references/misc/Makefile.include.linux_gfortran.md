@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Makefile.include.linux gfortran
+
+
     # Precompiler options
     CPP_OPTIONS= -DMPI -DHOST=\"IFC91_ompi\" -DIFC \
                  -DCACHE_SIZE=4000 -Davoidalloc \
@@ -49,3 +51,5 @@
     # Normally no need to change this
     SRCDIR     = ../../src
     BINDIR     = ../../bin
+
+

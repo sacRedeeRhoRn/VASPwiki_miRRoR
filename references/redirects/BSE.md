@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BSE
+
+
+
 Redirect to:
 
 - [Category:Bethe-Salpeter
   equations](../theory/Category-Bethe-Salpeter_equations.md)
+
+

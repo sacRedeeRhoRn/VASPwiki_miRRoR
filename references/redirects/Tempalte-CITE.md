@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Tempalte:CITE
+
+
+
 Redirect to:
 
-- [Template:CITE](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=Template:CITE&amp;redirect=no"
+  class="mw-redirect" title="Template:CITE">Template:CITE</a>
+
+

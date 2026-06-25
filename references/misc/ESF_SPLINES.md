@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ESF_SPLINES
-ESF_SPLINES = .FALSE. \| .TRUE.  
+
+
+ESF_SPLINES = .FALSE. \|
+.TRUE.  
 Default: **ESF_SPLINES** = .FALSE. 
 
 Description: Enable k-point interpolation of the electronic structure
@@ -11,9 +14,9 @@ calculations](../methods/ACFDT__RPA_calculations.md).
 
 ------------------------------------------------------------------------
 
-With ESF_SPLINES =T, the electronic structure factor (ESF) is
-interpolated using tricubic splines to accelerate k-point convergence of
-the [RPA-correlation
+With ESF_SPLINES =T, the
+electronic structure factor (ESF) is interpolated using tricubic splines
+to accelerate k-point convergence of the [RPA-correlation
 energy](../methods/RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md)
 in [ACFDT/RPA
 calculations](../methods/ACFDT__RPA_calculations.md).
@@ -26,19 +29,32 @@ convergence compared to the k-p perturbation theory approach.
 |----|
 | **Tip:** By means of ESF interpolation, one can obtain the RPA-correlation energy for metals and insulators, in contrast to the k-p method that fails for metals. |
 
+
 ## Contents
 
-- [1 Algorithm](#Algorithm)
-- [2 ESF-interpolation method vs k-p perturbation
-  theory](#ESF-interpolation_method_vs_k-p_perturbation_theory)
-- [3 Output](#Output)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## Algorithm
+- [1
+  Algorithm](#Algorithm)
+- [2
+  ESF-interpolation method vs k-p perturbation
+  theory](#ESF-interpolation_method_vs_k-p_perturbation_theory)
+- [3
+  Output](#Output)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## Algorithm\[<a
+href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Algorithm">edit</a> \| (./index.php.md)\]
+
 This feature follows the same idea as in coupled cluster
-calculations.^([\[1\]](#cite_note-liao:jcp:2016-1)) To compute the
-RPA-correlation energy, the electronic structure factor in the RPA
+calculations.<sup>[\[1\]](#cite_note-liao:jcp:2016-1)</sup>
+To compute the RPA-correlation energy, the electronic structure factor
+in the RPA
 
 $S({\bf q}+{\bf G}) =\int {\rm d}\omega
 \left\\(\mathrm{ln}\[1-\tilde\chi^0({\mathbf{q}},\mathrm{i}\omega)V({\mathbf{q}})\])_{{\mathbf{G,G}}}
@@ -47,15 +63,20 @@ $S({\bf q}+{\bf G}) =\int {\rm d}\omega
 
 is evaluated on the k-point grid defined in
 [KPOINTS](../input-files/KPOINTS.md) and the correlation energy (as its
-trace) is stored.^([\[2\]](#cite_note-gelbenegger:thesis2018-2)) To
-obtain the correlation energy on a finer k-point grid, more q-points are
-added using tricubic spline interpolation. The resulting energy is
+trace) is
+stored.<sup>[\[2\]](#cite_note-gelbenegger:thesis2018-2)</sup>
+To obtain the correlation energy on a finer k-point grid, more q-points
+are added using tricubic spline interpolation. The resulting energy is
 compared to the previous correlation energy. This procedure is repeated
 [ESF_NINTER](ESF_NINTER.md) times or until the
 difference in energy between the interpolation steps is less than
 [ESF_CONV](ESF_CONV.md).
 
-## ESF-interpolation method vs k-p perturbation theory
+## ESF-interpolation method vs k-p perturbation theory\[<a
+href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: ESF-interpolation method vs k-p perturbation theory">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Warning:** Remove [WAVEDER](../input-files/WAVEDER.md) and avoid setting [LOPTICS](../incar-tags/LOPTICS.md)=T when running a job with ESF_SPLINES=T. |
@@ -63,8 +84,8 @@ difference in energy between the interpolation steps is less than
 Note that the ESF-interpolation method is incompatible with k-p
 perturbation theory, where the largest q-point integration error
 
-$\lim_{\bf q\to 0} \tilde\chi^0_{{\bf G
-G}'}({\bf q},{\rm i}\omega) \cdot {\bf V}_{\bf G G'}({\bf q})$
+$\lim_{\bf q\to 0} \tilde\chi^0_{{\bf G G}'}({\bf q},{\rm i}\omega)
+\cdot {\bf V}_{\bf G G'}({\bf q})$
 
 is added explicitly to the RPA integral. The long-wave limit is
 ill-defined for metallic systems; hence, the k-p method fails for
@@ -72,7 +93,11 @@ metals. For the k-p method, the long-wave contribution is stored in the
 [WAVEDER](../input-files/WAVEDER.md) file, and VASP assumes you want to
 add this term if the file is present in the working directory.
 
-## Output
+## Output\[<a
+href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The result of the ESF interpolation is reported to the
 [OUTCAR](../output-files/OUTCAR.md) file in the following format
 
@@ -92,11 +117,15 @@ The result of the ESF interpolation is reported to the
 The last column contains the result from the spline interpolation for
 the selected energy cutoffs reported in the first column.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP.6.5.0 |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ESF_CONV](ESF_CONV.md),
 [ESF_NINTER](ESF_NINTER.md),
 [LOPTICS](../incar-tags/LOPTICS.md)
@@ -104,9 +133,19 @@ the selected energy cutoffs reported in the first column.
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ESF_SPLINES-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-liao:jcp:2016_1-0) [K. Liao and A. Grueneis, J. Chem.
-    Phys. **145**, 141102 (2016).](https://doi.org/10.1063/1.4964307)
-2.  [↑](#cite_ref-gelbenegger:thesis2018_2-0) [K. Gelbenegger, Thesis:
-    Finite size corrections in the RPA
-    (2018).](https://utheses.univie.ac.at/detail/47275#)
+## References\[<a
+href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-liao:jcp:2016_1-0)
+    <a href="https://doi.org/10.1063/1.4964307" class="external text"
+    rel="nofollow">K. Liao and A. Grueneis, J. Chem. Phys.
+    <strong>145</strong>, 141102 (2016).</a>
+2.  [↑](#cite_ref-gelbenegger:thesis2018_2-0)
+    <a href="https://utheses.univie.ac.at/detail/47275#"
+    class="external text" rel="nofollow">K. Gelbenegger, Thesis: Finite size
+    corrections in the RPA (2018).</a>
+
+

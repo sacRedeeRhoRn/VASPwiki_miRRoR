@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Calculating the hyperfine coupling constant
+
+
+
 Redirect to:
 
 - [Calculating the hyperfine-coupling
   constant](../tutorials/Calculating_the_hyperfine-coupling_constant.md)
+
+

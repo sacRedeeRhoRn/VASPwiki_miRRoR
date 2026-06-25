@@ -2,32 +2,63 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # XANES in Diamond
+
+
 Important: This feature will be only available from VASP 6.0.
 
-[Overview](../tutorials/XAS_-_Tutorial.md) \> XANES in Diamond \>
-[List of tutorials](../categories/Category-Tutorials.md)
+
+[Overview](../tutorials/XAS_-_Tutorial.md) \>
+XANES in
+Diamond \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-- [3 Calculation](#Calculation)
-  - [3.1 Step 1 build a supercell](#Step_1_build_a_supercell)
-  - [3.2 Step 2 Prepare input files](#Step_2_Prepare_input_files)
-  - [3.3 Step 3 Running Calculation](#Step_3_Running_Calculation)
-  - [3.4 Step 4 Extraction of XAS
-    Spectrum](#Step_4_Extraction_of_XAS_Spectrum)
-- [4 Download](#Download)
-- [5 References](#References)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Step 1
+    build a supercell](#Step_1_build_a_supercell)
+  - [3.2 Step 2
+    Prepare input files](#Step_2_Prepare_input_files)
+  - [3.3 Step 3
+    Running Calculation](#Step_3_Running_Calculation)
+  - [3.4 Step 4
+    Extraction of XAS
+    Spectrum](#Step_4_Extraction_of_XAS_Spectrum)
+- [4
+  Download](#Download)
+- [5
+  References](#References)
+
+
+## Task\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the XANES K-edge in diamond using the supercell core-hole
 method.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     cubic diamond
      3.567
     0.5 0.5 0.0
@@ -41,11 +72,13 @@ method.
 Above, we show the [POSCAR](../input-files/POSCAR.md) file for the
 primitive unit cell of diamond. Note that we will not use this structure
 as input for the calculation. Instead, we use it to construct a
-[POSCAR](../input-files/POSCAR.md) file for a $3
-\times 3 \times 3$ super cell actually used in the
-calculation.
+[POSCAR](../input-files/POSCAR.md) file for a $3 \times 3 \times 3$ super cell actually used in the calculation.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     System = DIAMOND
     ALGO = FAST
     ISMEAR = 0; SIGMA = 0.1;
@@ -84,17 +117,24 @@ calculation.
 - Since super cells are used the calculation of the projection operators
   in real space ([LREAL](../incar-tags/LREAL.md)=*A*) is much faster.
 
-## Calculation
-### Step 1 build a supercell
+## Calculation\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
+### Step 1 build a supercell\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1 build a supercell">edit</a> \| (./index.php.md)\]
+
 In the periodic boundary conditions of VASP, the core-hole interacts
 with its periodic replica so that we need sufficiently large super cells
 to reduce this spurious interaction. To this end, we employ successively
 large cells until the spectrum shows no significant changes. For this
 tutorial, we illustrate the calculation of a core-hole using a
-$3\times3\times3$ cell to allow for a
-reasonably fast calculation. However, for converged values one should
-use at least $4\times4\times4$ super
-cell.
+$3\times3\times3$ cell to allow for a reasonably fast
+calculation. However, for converged values one should use at least
+$4\times4\times4$ super cell.
 
 The super cell can be obtained by either taking the file POSCAR.3x3x3
 provided with this tutorial or constructing the
@@ -104,18 +144,34 @@ p4vasp, which is demonstrated below:
 - Open p4vasp by typing *p4v* on the terminal.
 - Load the primitive cell by clicking on **File**→**Load system**:
 
-[![](https://vasp.at/wiki/images/thumb/7/75/Fig_XAS_1.png/200px-Fig_XAS_1.png)](https://vasp.at/wiki/File:Fig_XAS_1.png)
+<a href="/wiki/File:Fig_XAS_1.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/75/Fig_XAS_1.png/200px-Fig_XAS_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/7/75/Fig_XAS_1.png/300px-Fig_XAS_1.png 1.5x, /wiki/images/thumb/7/75/Fig_XAS_1.png/400px-Fig_XAS_1.png 2x"
+width="200" height="219" /></a>
 
 - Multiply cell in each direction (enter 3 for each direction) by
   clicking on **Edit**→**Multiply Cell**:
 
-[![](https://vasp.at/wiki/images/thumb/6/67/Fig_XAS_2.png/250px-Fig_XAS_2.png)](https://vasp.at/wiki/File:Fig_XAS_2.png)
+<a href="/wiki/File:Fig_XAS_2.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/6/67/Fig_XAS_2.png/250px-Fig_XAS_2.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/6/67/Fig_XAS_2.png/375px-Fig_XAS_2.png 1.5x, /wiki/images/thumb/6/67/Fig_XAS_2.png/500px-Fig_XAS_2.png 2x"
+width="250" height="215" /></a>
 
 - Save new system by clicking on **File**→**Save system as**:
 
-[![](https://vasp.at/wiki/images/thumb/d/df/Fig_XAS_3.png/250px-Fig_XAS_3.png)](https://vasp.at/wiki/File:Fig_XAS_3.png)
+<a href="/wiki/File:Fig_XAS_3.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/d/df/Fig_XAS_3.png/250px-Fig_XAS_3.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/d/df/Fig_XAS_3.png/375px-Fig_XAS_3.png 1.5x, /wiki/images/thumb/d/df/Fig_XAS_3.png/500px-Fig_XAS_3.png 2x"
+width="250" height="216" /></a>
 
-### Step 2 Prepare input files
+### Step 2 Prepare input files\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2 Prepare input files">edit</a> \| (./index.php.md)\]
+
 The first few lines of the generated [POSCAR](../input-files/POSCAR.md)
 file for the super cell should look like the following
 
@@ -150,8 +206,9 @@ line with 1 and 53 and obtain the following
      ...
 
 In the [INCAR](../input-files/INCAR.md) file, we specify that the first
-species carries the core-hole by setting [CLNT](../incar-tags/CLNT.md)=1. We
-create a [POTCAR](../input-files/POTCAR.md) file with the PAW/PS
+species carries the core-hole by setting
+[CLNT](../incar-tags/CLNT.md)=1.
+We create a [POTCAR](../input-files/POTCAR.md) file with the PAW/PS
 information for both species. Since both species are carbon this amounts
 simply to the concatenation of the [POTCAR](../input-files/POTCAR.md) file
 for carbon
@@ -176,14 +233,19 @@ described above.
 
 **Mind**: The multiplicity of the species carrying the core-hole has to
 be 1 otherwise the code will not work. Also mind that the selected
-species ([CLNT](../incar-tags/CLNT.md) in the [INCAR](../input-files/INCAR.md)
-file) is consistent with the order of the species specified in the
-[POSCAR](../input-files/POSCAR.md) and [POTCAR](../input-files/POTCAR.md)
-files.
+species
+([CLNT](../incar-tags/CLNT.md)
+in the [INCAR](../input-files/INCAR.md) file) is consistent with the order
+of the species specified in the [POSCAR](../input-files/POSCAR.md) and
+[POTCAR](../input-files/POTCAR.md) files.
 
   
 
-### Step 3 Running Calculation
+### Step 3 Running Calculation\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3 Running Calculation">edit</a> \| (./index.php.md)\]
+
 Both the SCF calculation with the core-hole and the subsequent
 calculation of the dielectric matrix (spectrum) are done in a run of
 VASP. To minimize the spurious interaction between core-holes in
@@ -194,13 +256,17 @@ computational time it is advisable to run a parallel VASP calculation
 
 Here, *\$np* corresponds to the number of processes and the *\_version*
 in the executable stands for *std*, *gam*, and *ncl*: the standard,
-$\Gamma$-point only, and non-collinear
-version, respectively. The $3\times3\times3$ cell used in this tutorial gives qualitatively correct
+$\Gamma$-point only, and non-collinear version,
+respectively. The $3\times3\times3$ cell used in this tutorial gives qualitatively correct
 results and can be completed even with a small number of processes. You
-can verify the spectrum on the larger $4\times4\times4$ cell, which we provide in the tar file of
-this tutorial.
+can verify the spectrum on the larger $4\times4\times4$ cell, which we provide in the tar file of this
+tutorial.
 
-### Step 4 Extraction of XAS Spectrum
+### Step 4 Extraction of XAS Spectrum\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4 Extraction of XAS Spectrum">edit</a> \| (./index.php.md)\]
+
 The XAS spectrum is proportional to the imaginary part of the
 frequency-dependent dielectric function, which is written in the
 [OUTCAR](../output-files/OUTCAR.md) file
@@ -217,7 +283,9 @@ Usually we are interested in the sum of all components of the dielectric
 matrix. You can obtain this by the script provided in this tutorial
 *plot_core_imdiel.sh*
 
+
 **Click to show/*plot_core_imdiel.sh***
+
 
     #!/bin/bash
 
@@ -312,6 +380,7 @@ matrix. You can obtain this by the script provided in this tutorial
     fi
     rm helpscript.perl
 
+
 To use it type:
 
     bash ./plot_core_imdiel.sh
@@ -326,16 +395,19 @@ literature to look at the relative peak positions in the spectra and
 their relative intensity.
 
 We compare the results obtained with VASP to
-experimental^([\[1\]](#cite_note-Ma.PRL-1)) and
-theoretical^([\[2\]](#cite_note-Tallefumier.PRB-2)) XAS spectra from
-literature provided in the files *C_XAS_aligned_to_VASP.dat* and
-*C_PARATEC_aligned_to_VASP.dat*, respectively. The theoretical reference
-calculation was obtained using the PARATEC code and relies on
-PAW/Pseudopotential similar to VASP. We provide a script with this
-tutorial to compare these literature results to the spectrum obtained
-with VASP:
+experimental<sup>[\[1\]](#cite_note-Ma.PRL-1)</sup>
+and
+theoretical<sup>[\[2\]](#cite_note-Tallefumier.PRB-2)</sup>
+XAS spectra from literature provided in the files
+*C_XAS_aligned_to_VASP.dat* and *C_PARATEC_aligned_to_VASP.dat*,
+respectively. The theoretical reference calculation was obtained using
+the PARATEC code and relies on PAW/Pseudopotential similar to VASP. We
+provide a script with this tutorial to compare these literature results
+to the spectrum obtained with VASP:
+
 
 **Click to show/*gnuplot_XANES_C.script***
+
 
     unset ytics
     set xrange [280:310]
@@ -346,13 +418,18 @@ with VASP:
          "C_XAS_aligned_to_VASP.dat" using 1:2 with lines ti "Exp"
      pause -1
 
+
 To use that script type:
 
      gnuplot gnuplot_XANES_C.script
 
 The file *plot.sh* constitutes a convenient wrapper around these post
 processing steps. The resulting spectra should look like this:  
-[![](https://vasp.at/wiki/images/thumb/a/a2/Fig_XAS_4.png/600px-Fig_XAS_4.png)](https://vasp.at/wiki/File:Fig_XAS_4.png)
+<a href="/wiki/File:Fig_XAS_4.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/a/a2/Fig_XAS_4.png/600px-Fig_XAS_4.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/a/a2/Fig_XAS_4.png/900px-Fig_XAS_4.png 1.5x, /wiki/images/thumb/a/a2/Fig_XAS_4.png/1200px-Fig_XAS_4.png 2x"
+width="600" height="352" /></a>
 
 Because DFT cannot reproduce the absolute position (see above), we have
 shifted both spectra so that the position of the first peak coincides
@@ -382,22 +459,42 @@ post-processing.
 
 Apart from the lower broadening width, we get a quite reasonable
 agreement with the theoretical literature calculation. We stress again
-that the $3\times3\times3$ super cell in
-this example are not fully converged. The interested user can repeat the
-calculations for a larger $4\times4\times4$ super cell. The files for this example are also given in the
-tar file. Be aware that the larger number of atoms in the bigger super
-cell requires an adjustment of the [NBANDS](../incar-tags/NBANDS.md)
-variable..
+that the $3\times3\times3$ super cell in this example are not fully converged.
+The interested user can repeat the calculations for a larger
+$4\times4\times4$ super cell. The files for this example
+are also given in the tar file. Be aware that the larger number of atoms
+in the bigger super cell requires an adjustment of the
+[NBANDS](../incar-tags/NBANDS.md) variable..
 
-## Download
-[XANES_Diamond.tgz](https://vasp.at/wiki/images/1/19/XANES_Diamond.tgz "XANES Diamond.tgz")
+## Download\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-## References
-1.  [↑](#cite_ref-Ma.PRL_1-0) [Y.Ma et al., Phys. Rev. Lett 69, 2598
-    (1992).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.69.2598)
-2.  [↑](#cite_ref-Tallefumier.PRB_2-0) [M.Tallefumier et al., Phys. Rev.
-    B 66, 195107
-    (2002).](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.195107)
+<a href="/wiki/images/1/19/XANES_Diamond.tgz" class="internal"
+title="XANES Diamond.tgz">XANES_Diamond.tgz</a>
 
-[Overview](../tutorials/XAS_-_Tutorial.md) \> XANES in Diamond \>
-[List of tutorials](../categories/Category-Tutorials.md)
+## References\[<a
+href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-Ma.PRL_1-0)
+    <a
+    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.69.2598"
+    class="external text" rel="nofollow">Y.Ma et al., Phys. Rev. Lett 69,
+    2598 (1992).</a>
+2.  [↑](#cite_ref-Tallefumier.PRB_2-0)
+    <a
+    href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.195107"
+    class="external text" rel="nofollow">M.Tallefumier et al., Phys. Rev. B
+    66, 195107 (2002).</a>
+
+
+[Overview](../tutorials/XAS_-_Tutorial.md) \>
+XANES in
+Diamond \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

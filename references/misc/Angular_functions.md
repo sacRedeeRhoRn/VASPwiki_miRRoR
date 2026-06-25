@@ -2,9 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Angular functions
+
+
 |  |  |  |  |
 |:---|:---|:---|:---|
-| *l* | *m* | Name | *Y_(lm)* |
+| *l* | *m* | Name | *Y<sub>lm</sub>* |
 |  |  |  |  |
 | 0 | 1 | s | $\frac{1}{\sqrt{4\pi}}$ |
 |  |  |  |  |
@@ -59,3 +61,5 @@ real spherical harmonics
 |  | sp3d2-6 | $\frac{1}{\sqrt 6}\rm s+\frac{1}{\sqrt 2}\rm p_z+\frac{1}{\sqrt 3}\rm d_{z^2}$ |  |
 
 hybrid angular functions
+
+

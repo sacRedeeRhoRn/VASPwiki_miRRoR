@@ -2,32 +2,60 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Graphite interlayer distance
+
+
+
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-[fcc Si](Fcc_Si.md) \> [fcc Si
-DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+[fcc
+Si](Fcc_Si.md) \>
+[fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
 [graphite MBD binding
 energy](Graphite_MBD_binding_energy.md)
- \> graphite interlayer distance  \> [List of
+ \>
+graphite interlayer distance
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Running this example](#Running_this_example)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3 Running this
+  example](#Running_this_example)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 In this example you will determine the interlayer distance of graphite
 in the stacking direction using the method of Tchatchenko and Scheffler
 to account for van der Waals interactions.
@@ -40,8 +68,16 @@ In this example, the [dispersion correction method of Tchatchenko and
 Scheffler](../methods/Tkatchenko-Scheffler_method.md)
 is used to cope with this problem.
 
-## Input
-### POSCAR
+## Input\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### POSCAR\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     graphite
     1.0
     1.22800000 -2.12695839  0.00000000
@@ -54,7 +90,11 @@ is used to cope with this problem.
        0.33333333  0.66666667  0.25000000
        0.66666667  0.33333333  0.75000000
 
-### INCAR
+### INCAR\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     IVDW = 20           
     LVDW_EWALD =.TRUE. 
     NSW = 1 
@@ -70,14 +110,22 @@ is used to cope with this problem.
     ALGO = Fast
     NPAR = 2
 
-### KPOINTS
+### KPOINTS\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Monkhorst Pack
     0
     gamma
     16 16 8
     0 0 0
 
-## Running this example
+## Running this example\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Running this example">edit</a> \| (./index.php.md)\]
+
 To run this example, execute the `run.sh` bash-script:
 
     #
@@ -144,20 +192,39 @@ This should yield:
 
 The computed value of 6.66 Å agrees well with experiment (6.71 Å).
 
-## Download
-[graphiteDistance_ts.tgz](https://vasp.at/wiki/images/6/65/GraphiteDistance_ts.tgz "GraphiteDistance ts.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Graphite_interlayer_distance&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/6/65/GraphiteDistance_ts.tgz" class="internal"
+title="GraphiteDistance ts.tgz">graphiteDistance_ts.tgz</a>
+
 
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-[fcc Si](Fcc_Si.md) \> [fcc Si
-DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+[fcc
+Si](Fcc_Si.md) \>
+[fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
 [graphite MBD binding
 energy](Graphite_MBD_binding_energy.md)
- \> graphite interlayer distance  \> [List of
+ \>
+graphite interlayer distance
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

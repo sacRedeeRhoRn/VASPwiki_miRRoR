@@ -2,13 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # SPRING_K
+
+
 SPRING_K = \[real (array)\] 
 
 Description: Force constant for harmonic bias potential.
 
 ------------------------------------------------------------------------
 
-The parameter SPRING_K defines force constants ($\kappa_{\mu}$) for the harmonic bias of the following form:
+The parameter SPRING_K defines
+force constants ($\kappa_{\mu}$) for the harmonic bias of the following form:
 
 $\tilde{V}(\xi_1,\dots,\xi_{M_8}) =
 \sum_{\mu=1}^{M}\frac{1}{2}\kappa_{\mu} (\xi_{\mu}(q)-\xi_{0\mu})^2
@@ -17,17 +20,24 @@ $\tilde{V}(\xi_1,\dots,\xi_{M_8}) =
 where the sum runs over all ($M_8$)
 coordinates the potential acts upon ($\xi_{\mu}(q)$), which are defined in the
 [ICONST](../input-files/ICONST.md) file by setting the `status` to 8. The
-units of $\kappa_{\mu}$ are
-$eV/uc$ where $uc$ units of coordinate the potential acts upon (e.g.,
+units of $\kappa_{\mu}$ are $eV/uc$ where
+$uc$ units of coordinate the potential acts upon (e.g.,
 ${\AA}$ for coordinates with `flag` R,
-$rad.$ for coordinates with `flag` A,
-dimensionless for coordinates with `flag` W, etc...) The number of items
-defined via SPRING_K must be equal to $M_8$, otherwise the calculation terminates with an error message.
+$rad.$ for coordinates with `flag` A, dimensionless for
+coordinates with `flag` W, etc...) The number of items defined via
+SPRING_K must be equal to
+$M_8$, otherwise the calculation terminates with an
+error message.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=SPRING_K&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [SPRING_R0](SPRING_R0.md),
 [SPRING_V0](SPRING_V0.md),
 [ICONST](../input-files/ICONST.md), [Biased molecular
 dynamics](../theory/Biased_molecular_dynamics.md)
 
 ------------------------------------------------------------------------
+
+

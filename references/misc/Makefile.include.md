@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include
+
+
   
 Writing a `makefile.include` file from scratch is not easy, so we
 suggest taking one of [archetypical files](#Archetypical_files) that
@@ -15,36 +17,62 @@ support.
 |----|
 | **Mind:** Always use `makefile.include` files released together with the version of VASP that you are compiling. Old [archetypical files](#Archetypical_files) may not work for newer releases and vice versa. |
 
+
 ## Contents
 
-- [1 Archetypical files](#Archetypical_files)
-  - [1.1 Intel Composer suite and oneAPI HPC toolkit for CPU and
-    GPU](#Intel_Composer_suite_and_oneAPI_HPC_toolkit_for_CPU_and_GPU)
-  - [1.2 GNU compilers for CPUs](#GNU_compilers_for_CPUs)
-  - [1.3 NVIDIA HPC-SDK for CPU and
-    GPU](#NVIDIA_HPC-SDK_for_CPU_and_GPU)
-  - [1.4 Cray compiler environment (CCE) for CPU and
-    GPU](#Cray_compiler_environment_(CCE)_for_CPU_and_GPU)
-  - [1.5 Others](#Others)
-- [2 Customize](#Customize)
-  - [2.1 HDF5 support (strongly recommended, and mandatory for some
-    features)](#HDF5_support_(strongly_recommended,_and_mandatory_for_some_features))
-  - [2.2 fftlib (recommended when using
-    OpenMP)](#fftlib_(recommended_when_using_OpenMP))
-  - [2.3 Wannier90 (optional)](#Wannier90_(optional))
-  - [2.4 Libxc (optional)](#Libxc_(optional))
-  - [2.5 Libbeef (optional)](#Libbeef_(optional))
-  - [2.6 DFT-D4 and simple-DFT-D3
-    (optional)](#DFT-D4_and_simple-DFT-D3_(optional))
-  - [2.7 ELPA (optional)](#ELPA_(optional))
-  - [2.8 libMBD (optional)](#libMBD_(optional))
-  - [2.9 Plugins (optional)](#Plugins_(optional))
-  - [2.10 SCPC (optional)](#SCPC_(optional))
-  - [2.11 VASPml (experimental)](#VASPml_(experimental))
-    - [2.11.1 GRACE support](#GRACE_support)
-- [3 Related articles](#Related_articles)
 
-## Archetypical files
+- [1 Archetypical
+  files](#Archetypical_files)
+  - [1.1 Intel
+    Composer suite and oneAPI HPC toolkit for CPU and
+    GPU](#Intel_Composer_suite_and_oneAPI_HPC_toolkit_for_CPU_and_GPU)
+  - [1.2 GNU
+    compilers for CPUs](#GNU_compilers_for_CPUs)
+  - [1.3 NVIDIA
+    HPC-SDK for CPU and GPU](#NVIDIA_HPC-SDK_for_CPU_and_GPU)
+  - [1.4 Cray
+    compiler environment (CCE) for CPU and
+    GPU](#Cray_compiler_environment_(CCE)_for_CPU_and_GPU)
+  - [1.5
+    Others](#Others)
+- [2
+  Customize](#Customize)
+  - [2.1 HDF5
+    support (strongly recommended, and mandatory for some
+    features)](#HDF5_support_(strongly_recommended,_and_mandatory_for_some_features))
+  - [2.2 fftlib
+    (recommended when using
+    OpenMP)](#fftlib_(recommended_when_using_OpenMP))
+  - [2.3 Wannier90
+    (optional)](#Wannier90_(optional))
+  - [2.4 Libxc
+    (optional)](#Libxc_(optional))
+  - [2.5 Libbeef
+    (optional)](#Libbeef_(optional))
+  - [2.6 DFT-D4 and
+    simple-DFT-D3
+    (optional)](#DFT-D4_and_simple-DFT-D3_(optional))
+  - [2.7 ELPA
+    (optional)](#ELPA_(optional))
+  - [2.8 libMBD
+    (optional)](#libMBD_(optional))
+  - [2.9 Plugins
+    (optional)](#Plugins_(optional))
+  - [2.10 SCPC
+    (optional)](#SCPC_(optional))
+  - [2.11 VASPml
+    (experimental)](#VASPml_(experimental))
+    - [2.11.1 GRACE
+      support](#GRACE_support)
+- [3 Related
+  articles](#Related_articles)
+
+
+## Archetypical files\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Archetypical files">edit</a> \| (./index.php.md)\]
+
 The templates contain information such as [precompiler
 options](Precompiler_options.md), [compiler
 options](Compiler_options.md), and [how to link
@@ -52,7 +80,13 @@ libraries](Linking_to_libraries.md). Choose
 the template based on the compiler, parallelization etc. from the list
 below and mind the description:
 
-### Intel Composer suite and [oneAPI HPC toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/all-toolkits.html) for CPU and GPU
+### Intel Composer suite and <a
+href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/all-toolkits.html"
+class="external text" rel="nofollow">oneAPI HPC toolkit</a> for CPU and GPU\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Intel Composer suite and oneAPI HPC toolkit for CPU and GPU">edit</a> \| (./index.php.md)\]
+
 - [makefile.include.oneapi](Makefile.include.oneapi.md):
   Parallelized using MPI, combined with MKL using the newer IFX
   compiler.
@@ -75,7 +109,11 @@ below and mind the description:
   Not parallelized, strongly reduced feature-set, i.e., not suitable for
   production.
 
-### GNU compilers for CPUs
+### GNU compilers for CPUs\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: GNU compilers for CPUs">edit</a> \| (./index.php.md)\]
+
 - [makefile.include.gnu](Makefile.include.gnu.md):
   Parallelized using MPI, Free and Open-Source Software (FOSS) stack.
 - [makefile.include.gnu_omp](Makefile.include.gnu_omp.md):
@@ -88,7 +126,12 @@ below and mind the description:
 - [makefile.include.gnu_ompi_aocl_omp](Makefile.include.gnu_ompi_aocl_omp.md):
   Parallelized using OpenMPI + OpenMP, combined with AOCL.
 
-### [NVIDIA HPC-SDK](https://developer.nvidia.com/hpc-sdk) for CPU and GPU
+### <a href="https://developer.nvidia.com/hpc-sdk" class="external text"
+rel="nofollow">NVIDIA HPC-SDK</a> for CPU and GPU\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: NVIDIA HPC-SDK for CPU and GPU">edit</a> \| (./index.php.md)\]
+
 - [makefile.include.nvhpc](Makefile.include.nvhpc.md):
   CPU version parallelized using MPI.
 - [makefile.include.nvhpc_omp](Makefile.include.nvhpc_omp.md):
@@ -108,7 +151,11 @@ below and mind the description:
   [OpenACC](GPU_ports_of_VASP.md), parallelized
   using OpenMPI + OpenMP, combined with MKL.
 
-### Cray compiler environment (CCE) for CPU and GPU
+### Cray compiler environment (CCE) for CPU and GPU\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Cray compiler environment (CCE) for CPU and GPU">edit</a> \| (./index.php.md) for CPU and GPU")\]
+
 - [makefile.include.cray](Makefile.include.cray.md):
   Parallelized using MPI for CPU
 - [makefile.include.cray_omp](Makefile.include.cray_omp.md):
@@ -117,10 +164,14 @@ below and mind the description:
   [OpenMP offloading](GPU_ports_of_VASP.md) port
   for AMD datacenter GPUs.
 
-### Others
+### Others\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Others">edit</a> \| (./index.php.md)\]
+
 - [makefile.include.nec_aurora](Makefile.include.nec_aurora.md)
 
-&nbsp;
+<!-- -->
 
 - [makefile.include.fujitsu_a64fx](Makefile.include.fujitsu_a64fx.md)
 - [makefile.include.fujitsu_a64fx_omp](Makefile.include.fujitsu_a64fx_omp.md)
@@ -135,22 +186,31 @@ options](Precompiler_options.md), [compiler
 options](Compiler_options.md), and [how to link
 libraries](Linking_to_libraries.md).
 
-## Customize
+## Customize\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Customize">edit</a> \| (./index.php.md)\]
+
 Open the selected template of the [archetypical
 files](#Archetypical_files) and add the required information as
 explained in the comments towards the end of the file. Then, add any
 optional feature as listed below. For more details see the [list of
 precompiler options](Precompiler_options.md).
 
-### HDF5 support (strongly recommended, and mandatory for some features)
+### HDF5 support (strongly recommended, and mandatory for some features)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: HDF5 support (strongly recommended, and mandatory for some features)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 The HDF5 library is is needed for reading and writing HDF5 files such as
 [vaspin.h5](../input-files/Vaspin.h5.md),
 [vaspout.h5](../output-files/Vaspout.h5.md) and
 [vaspwave.h5](../output-files/Vaspwave.h5.md). The library is available
-for download on the [HDF5 official
-website](https://www.hdfgroup.org/solutions/hdf5/). To activate [HDF5
+for download on the
+<a href="https://www.hdfgroup.org/solutions/hdf5/" class="external text"
+rel="nofollow">HDF5 official website</a>. To activate [HDF5
 support](../categories/Category-HDF5_support.md) add the
 following in the VASP `makefile.include`
 
@@ -169,7 +229,11 @@ Available for VASP \>= 6.2.0.
 |----|
 | **Warning:** This is required to perform some features of VASP, e.g. [electron-phonon coupling](../categories/Category-Electron-phonon_interactions.md), and is required for py4vasp. |
 
-### fftlib (recommended when using OpenMP)
+### fftlib (recommended when using OpenMP)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: fftlib (recommended when using OpenMP)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 When you plan to [run VASP on multiple OpenMP
@@ -189,11 +253,16 @@ for instance, that would be:
     LIBS       += fftlib
     LLIBS      += -ldl
 
-### Wannier90 (optional)
+### Wannier90 (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Wannier90 (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
-To include the Wannier90 program, download the library from [the
-source](http://www.wannier.org) and compile `libwannier.a`.
+To include the Wannier90 program, download the library from
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">the source</a> and compile `libwannier.a`.
 
 |  |
 |----|
@@ -210,18 +279,24 @@ this feature set the following:
 |----|
 | **Mind:** VASP version \<= 6.1.x are compatible with Wannier90 \<= 1.2. To interface VASP 6.1.x with Wannier90 2.x, set [-DVASP2WANNIER90v2](Precompiler_options.md) instead. As of VASP 6.2.x only Wannier90 2.x and 3.x are supported. |
 
-### Libxc (optional)
+### Libxc (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Libxc (optional)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 To include the Libxc library of exchange-correlation functionals,
-install the library from [the source](https://libxc.gitlab.io/download/)
-and install it. Note that to get correct results with meta-GGA
-functionals (see discussion at
+install the library from
+<a href="https://libxc.gitlab.io/download/" class="external text"
+rel="nofollow">the source</a> and install it. Note that to get correct
+results with meta-GGA functionals (see discussion at
 [LTBOUNDLIBXC](../incar-tags/LTBOUNDLIBXC.md)), it is necessary to
 use Libxc from version 5.2.0 onwards (or the master version from
-[gitlab](https://gitlab.com/libxc/libxc) for the latest implemented
-functionals) and to compile it with the option `--disable-fhc`. For
-instance, with GNU Autotools the steps to compile Libxc are
+<a href="https://gitlab.com/libxc/libxc" class="external text"
+rel="nofollow">gitlab</a> for the latest implemented functionals) and to
+compile it with the option `--disable-fhc`. For instance, with GNU
+Autotools the steps to compile Libxc are
 
     autoreconf -i (necessary is the executable configure is not already present)
     ./configure --prefix=PATH/TO/LIBXC --disable-fhc
@@ -235,18 +310,27 @@ Then, add the following in the VASP `makefile.include`
     LLIBS       += -L$(LIBXC_ROOT)/lib -lxcf03 -lxc
     INCS        += -I$(LIBXC_ROOT)/include
 
-### Libbeef (optional)
+### Libbeef (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Libbeef (optional)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 To include the BEEF van der Waals functionals, install the library from
-[the source on GitHub](https://github.com/vossjo/libbeef) and add the
-following in the VASP `makefile.include`
+<a href="https://github.com/vossjo/libbeef" class="external text"
+rel="nofollow">the source on GitHub</a> and add the following in the
+VASP `makefile.include`
 
     CPP_OPTIONS  += -Dlibbeef
     LIBBEEF_ROOT ?= /path/to/your/libbeef/installation
     LLIBS        += -L$(LIBBEEF_ROOT)/lib -lbeef
 
-### DFT-D4 and simple-DFT-D3 (optional)
+### DFT-D4 and simple-DFT-D3 (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: DFT-D4 and simple-DFT-D3 (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 To link to the [DFT-D4](../methods/DFT-D4.md) and/or
@@ -254,15 +338,18 @@ To link to the [DFT-D4](../methods/DFT-D4.md) and/or
 Waals methods, install
 
 - the modular computation tool chain library (mctc-lib) from
-  [https://github.com/grimme-lab/mctc-lib](https://github.com/grimme-lab/mctc-lib)
-  (must be installed before [DFT-D4](../methods/DFT-D4.md) and
+  <a href="https://github.com/grimme-lab/mctc-lib" class="external free"
+  rel="nofollow">https://github.com/grimme-lab/mctc-lib</a> (must be
+  installed before [DFT-D4](../methods/DFT-D4.md) and
   [simple-DFT-D3](../methods/Simple-DFT-D3.md))
 - the [DFT-D4](../methods/DFT-D4.md) package from
-  [https://github.com/dftd4/dftd4](https://github.com/dftd4/dftd4),
-  which should in principle find the mctc-lib pre-installation
+  <a href="https://github.com/dftd4/dftd4" class="external free"
+  rel="nofollow">https://github.com/dftd4/dftd4</a>, which should in
+  principle find the mctc-lib pre-installation
 - the [simple-DFT-D3](../methods/Simple-DFT-D3.md) package from
-  [https://github.com/dftd3/simple-dftd3](https://github.com/dftd3/simple-dftd3),
-  which should in principle find the mctc-lib pre-installation
+  <a href="https://github.com/dftd3/simple-dftd3" class="external free"
+  rel="nofollow">https://github.com/dftd3/simple-dftd3</a>, which should
+  in principle find the mctc-lib pre-installation
 
 Then, the VASP `makefile.include` should include the following lines:
 
@@ -281,14 +368,46 @@ Then, the VASP `makefile.include` should include the following lines:
     LLIBS       += -L$(MCTC_ROOT)/lib64 -lmctc-lib
     INCS        += -I$(MCTC_ROOT)/include
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li>The API of DFT-D4 has been modified starting with version 4.0.0. The
+adaptation has been made in VASP.6.6.0. Versions of DFT-D4 with the old
+API (v3.7.0 and older) can still be compiled with VASP.6.6.0 by using <a
+href="/wiki/Precompiler_options#-DDFTD4_API_V3"
+title="Precompiler options">-DDFTD4_API_V3</a> instead of <a
+href="/wiki/Precompiler_options#-DDFTD4"
+title="Precompiler options">-DDFTD4</a>.</li>
+<li>The pre-installation of mctc-lib is not strictly required. If it is
+not the case, then it will be installed automatically during the
+installation of <a href="/wiki/DFT-D4" title="DFT-D4">DFT-D4</a> and <a
+href="/wiki/Simple-DFT-D3" title="Simple-DFT-D3">simple-DFT-D3</a>.
+However, it is strongly recommended to pre-install mctc-lib, otherwise
+problems with the GNU compiler may occur if both <a href="/wiki/DFT-D4"
+title="DFT-D4">DFT-D4</a> and <a href="/wiki/Simple-DFT-D3"
+title="Simple-DFT-D3">simple-DFT-D3</a> are installed.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
-### ELPA (optional)
+### ELPA (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: ELPA (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
-To include the ELPA eigenvalue solvers, install the library from [the
-source on GitLab](https://gitlab.mpcdf.mpg.de/elpa/elpa) and add the
-following in the VASP `makefile.include`
+To include the ELPA eigenvalue solvers, install the library from
+<a href="https://gitlab.mpcdf.mpg.de/elpa/elpa" class="external text"
+rel="nofollow">the source on GitLab</a> and add the following in the
+VASP `makefile.include`
 
     CPP_OPTIONS += -DELPA
     ELPA_ROOT   ?= /path/to/your/elpa/installation
@@ -300,12 +419,17 @@ following in the VASP `makefile.include`
 |----|
 | **Mind:** In the above you need to replace `<version>` by the correct designation of your ELPA version. |
 
-### libMBD (optional)
+### libMBD (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: libMBD (optional)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 To include the library libMBD of many-body dispersion methods, install
-the library from [the source on
-GitHub](https://github.com/libmbd/libmbd) and add the following in the
+the library from
+<a href="https://github.com/libmbd/libmbd" class="external text"
+rel="nofollow">the source on GitHub</a> and add the following in the
 VASP `makefile.include`
 
     CPP_OPTIONS += -DLIBMBD 
@@ -321,13 +445,17 @@ VASP `makefile.include`
 |----|
 | **Important:** It is recommended to compile libMBD without ScaLAPACK/MPI using `cmake -DENABLE_SCALAPACK_MPI=OFF`, otherwise nudged elastic bands (NEB) calculations will not run properly and produce wrong results. |
 
-### Plugins (optional)
+### Plugins (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Plugins (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
-Create a new
-[conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
-environment. Alternative environment creation packages should work, but
-we have not tested them.
+Create a new <a
+href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html"
+class="external text" rel="nofollow">conda</a> environment. Alternative
+environment creation packages should work, but we have not tested them.
 
        conda create -n vasp_plugin python=3.10
 
@@ -340,7 +468,8 @@ Navigate to the `plugins` directory within VASP source code,
        cd </path/to/vasp/source/code>/src/plugins
 
 Install the VASP Python package through
-[pip](https://pip.pypa.io/en/stable/installation)
+<a href="https://pip.pypa.io/en/stable/installation"
+class="external text" rel="nofollow">pip</a>
 
        pip install .
 
@@ -358,7 +487,11 @@ Add the following lines to your `makefile.include`
 |----|
 | **Mind:** When running VASP with the Python interface you will need to add the lib directory of your Python to LD_LIBRARY_PATH. You can do this by running `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(python3-config --prefix)/lib` |
 
-### SCPC (optional)
+### SCPC (optional)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: SCPC (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 The [Self-Consistent Potential
@@ -366,15 +499,18 @@ Correction](Self-Consistent_Potential_Correction.md)
 (SCPC) method is implemented in VASP version 6.2 and later. A patch to
 add SCPC functionality to VASP 5.4.4, along with various bug fixes for
 the implementation in VASP 6, can be obtained from the
-[authors](https://github.com/aradi/SCPC-Method).
+<a href="https://github.com/aradi/SCPC-Method" class="external text"
+rel="nofollow">authors</a>.
 
 To compile the VASP with SCPC support, you need the
-[DL_MG](https://bitbucket.org/dlmgteam/dl_mg_code_public/downloads/) and
-[PSPFFT](https://code.ornl.gov/reubendb/pspfft) libraries to solve the
-Poisson equations and handle isolated potentials. After downloading and
-compiling these libraries, activate SCPC support during VASP compilation
-by adding the following snippet to the end of the `makefile.include`
-file, adjusting the paths to match your DL_MG and PSPFFT installation:
+<a href="https://bitbucket.org/dlmgteam/dl_mg_code_public/downloads/"
+class="external text" rel="nofollow">DL_MG</a> and
+<a href="https://code.ornl.gov/reubendb/pspfft" class="external text"
+rel="nofollow">PSPFFT</a> libraries to solve the Poisson equations and
+handle isolated potentials. After downloading and compiling these
+libraries, activate SCPC support during VASP compilation by adding the
+following snippet to the end of the `makefile.include` file, adjusting
+the paths to match your DL_MG and PSPFFT installation:
 
      # SCPC METHOD
      CPP_OPTIONS += -DSCPC
@@ -386,7 +522,11 @@ file, adjusting the paths to match your DL_MG and PSPFFT installation:
      LLIBS     += -L$(DLMGROOT)/lib -ldlmg 
      LLIBS     += -L$(PSPFFTROOT)/lib -lpspfft
 
-### VASPml (experimental)
+### VASPml (experimental)\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: VASPml (experimental)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 The [VASPml library](../methods/VASPml_library.md) is a
@@ -396,12 +536,14 @@ fields](../categories/Category-Machine-learned_force_fields.md).
 The VASPml library is automatically built alongside VASP if
 `-Dlibvaspml` is added to the `CPP_OPTIONS` [precompiler
 options](Precompiler_options.md)
-in the makefile.include file. In addition, a few more compiler settings
-regarding the C++ compiler, include paths and VASPml options may be
-required. The [makefile.include templates](#Archetypical_files) provided
-in VASP's `arch` directory contain pre-filled blocks corresponding to
-the VASPml build. Uncomment the VASPml-related lines and fill with
-values according to your [toolchain](Toolchains.md). For
+in the makefile.include file.
+In addition, a few more compiler settings regarding the C++ compiler,
+include paths and VASPml options may be required. The
+<a href="#Archetypical_files"
+class="mw-selflink-fragment">makefile.include templates</a> provided in
+VASP's `arch` directory contain pre-filled blocks corresponding to the
+VASPml build. Uncomment the VASPml-related lines and fill with values
+according to your [toolchain](Toolchains.md). For
 example, when using the GCC toolchain with OpenBLAS the makefile.include
 section may look like this:
 
@@ -426,7 +568,26 @@ VASPml requires to set its own compiler, flags and include path:
 - `INCLUDE_ML`: Include flags for the required dependencies should be
   added here.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vblue); --box-emph-color: var(--vblue); padding: 5px; color: var(--vdefault-text-nb); background: var(--vblue-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vblue);">Tip:</span></strong> For
+some <a href="/wiki/Toolchains" title="Toolchains">toolchains</a> it is
+not necessary to explicitly add paths here because the compilers
+automatically include the correct directories (e.g. Intel oneAPI,
+NVHPC). In other cases (e.g. GNU compiler with openBLAS) the given path
+must contain the desired C++ headers of the dependencies:
+<ul>
+<li>CBLAS: <code>cblas.h</code></li>
+<li>LAPACKE: <code>lapacke.h</code></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 The VASPml project (source code and related files) is located within the
 `src/vaspml` directory relative to the VASP root folder. Upon
@@ -437,45 +598,79 @@ in `build/std/vaspml/lib/` (similarly for the `gam` and `ncl` versions).
 However, it is usually not necessary to check its presence because the
 VASP build will handle this (and fail if VASPml cannot be built).
 
-#### GRACE support
+#### GRACE support\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: GRACE support">edit</a> \| (./index.php.md)\]
+
 Optionally, VASPml may be compiled with support for [GRACE
 machine-learned force
 fields](../methods/Running_GRACE_force_fields_in_VASP.md).
 However, there are two additional dependencies to third-party software
-([libtensorflow](https://www.tensorflow.org/install/lang_c) and
-[cppflow](https://github.com/serizba/cppflow)) which must be installed
-beforehand:
+(<a href="https://www.tensorflow.org/install/lang_c"
+class="external text" rel="nofollow">libtensorflow</a> and
+<a href="https://github.com/serizba/cppflow" class="external text"
+rel="nofollow">cppflow</a>) which must be installed beforehand:
 
-- **[libtensorflow](https://www.tensorflow.org/install/lang_c)**: This
-  is a pre-compiled C library which runs TensorFlow models. Its website
+- **<a href="https://www.tensorflow.org/install/lang_c"
+  class="external text" rel="nofollow">libtensorflow</a>**: This is a
+  pre-compiled C library which runs TensorFlow models. Its website
   provides downloadable archives but we actually recommend a simpler way
-  of installing it (and all of its dependencies) via
-  [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
-  and `pip`:
+  of installing it (and all of its dependencies) via <a
+  href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html"
+  class="external text" rel="nofollow">conda</a> and `pip`:
 
-[TABLE]
+<table
+style="width:100%; table-layout: fixed; border-spacing: 0; padding: 0; margin: 0; background-color: var(--vCB-bg); color: var(--vdefault-text); border-width: 1px; border-style: solid; border-color: var(--vCB-border);">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre
+style="margin: 0; padding: 1em; background: none; border: none; white-space: pre; overflow-x: auto; font-family: monospace;"><code>conda create -n tf python=3.12
+conda activate tf
+pip install --upgrade pip
+pip install tensorflow[and-cuda]</code></pre></td>
+</tr>
+</tbody>
+</table>
 
 This will install all necessary libraries and header files into a
 directory which can be identified by running
 
-[TABLE]
+<table
+style="width:100%; table-layout: fixed; border-spacing: 0; padding: 0; margin: 0; background-color: var(--vCB-bg); color: var(--vdefault-text); border-width: 1px; border-style: solid; border-color: var(--vCB-border);">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre
+style="margin: 0; padding: 1em; background: none; border: none; white-space: pre; overflow-x: auto; font-family: monospace;"><code>dirname $(python -c &#39;import tensorflow as tf; print(tf.__file__)&#39; 2&gt;/dev/null)</code></pre></td>
+</tr>
+</tbody>
+</table>
 
 in a shell while the conda environment is still active. This path is
 required below in the `TENSORFLOW_ROOT` variable.
 
-- **[cppflow](https://github.com/serizba/cppflow)**: This is a C++
-  library which simplifies loading of TensorFlow models. Because it is a
-  header-only library, no separate build process and linking is required
-  to use it. To prepare its use for VASPml, just download it from its
-  website and save it to a directory of your preference. For example,
-  use `git clone git@github.com:serizba/cppflow.git` or download and
-  unpack an archive from
-  [here](https://github.com/serizba/cppflow/releases/tag/v2.0.0).
+- **<a href="https://github.com/serizba/cppflow" class="external text"
+  rel="nofollow">cppflow</a>**: This is a C++ library which simplifies
+  loading of TensorFlow models. Because it is a header-only library, no
+  separate build process and linking is required to use it. To prepare
+  its use for VASPml, just download it from its website and save it to a
+  directory of your preference. For example, use
+  `git clone git@github.com:serizba/cppflow.git` or download and unpack
+  an archive from
+  <a href="https://github.com/serizba/cppflow/releases/tag/v2.0.0"
+  class="external text" rel="nofollow">here</a>.
 
 Finally, with the mandatory dependencies installed, extra lines need to
-be added in the makefile.include to build VASP with GRACE support. As of
-VASP 6.6.0 the `makefile.include.gnu` contains an example block, similar
-to this:
+be added in the
+makefile.include to build VASP
+with GRACE support. As of VASP 6.6.0 the `makefile.include.gnu` contains
+an example block, similar to this:
 
     ...
     # Support for GRACE force fields (requires VASPml, experimental)
@@ -491,7 +686,11 @@ to this:
 |----|
 | **Tip:** The conda environment created for downloading the libtensorflow library is neither required for compiling nor for running VASP! With the line `LLIBS += -Wl,-rpath,$(TENSORFLOW_ROOT)` the path to the Tensorflow library is imprinted into the VASP binary and hence no environment is required to load it at runtime. |
 
-## Related articles
+## Related articles\[<a
+href="/wiki/index.php?title=Makefile.include&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: Related articles">edit</a> \| (./index.php.md)\]
+
 [Installing
 VASP.6.X.X](Installing_VASP.6.X.X.md),
 [Compiler options](Compiler_options.md),
@@ -505,3 +704,5 @@ tests](Validation_tests.md), [Known
 issues](Known_issues.md)
 
 ------------------------------------------------------------------------
+
+

@@ -2,31 +2,51 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ICONST
-In the ICONST file, geometric parameters are defined, which are then
-monitored or controlled in a molecular-dynamics simulation. For
-instance, the distance between two sites can be constrained or affected
-by the action of a bias potential. Finally, VASP writes the output to
-the [REPORT](../output-files/REPORT.md) file.
+
+
+In the ICONST file, geometric
+parameters are defined, which are then monitored or controlled in a
+molecular-dynamics simulation. For instance, the distance between two
+sites can be constrained or affected by the action of a bias potential.
+Finally, VASP writes the output to the [REPORT](../output-files/REPORT.md)
+file.
+
 
 ## Contents
 
-- [1 Overview](#Overview)
-- [2 Settings for flag](#Settings_for_flag)
-  - [2.1 In case of primitive
-    coordinates](#In_case_of_primitive_coordinates)
-  - [2.2 In case of complex
-    coordinates](#In_case_of_complex_coordinates)
-- [3 Settings for item(i)](#Settings_for_item(i))
-- [4 Settings for status](#Settings_for_status)
-- [5 Use cases and examples](#Use_cases_and_examples)
-  - [5.1 Define two constraints](#Define_two_constraints)
-  - [5.2 Use complex coordinates](#Use_complex_coordinates)
-  - [5.3 Restrictions on the volume and/or shape of the simulation
-    cell](#Restrictions_on_the_volume_and/or_shape_of_the_simulation_cell)
-- [6 Related tags and articles](#Related_tags_and_articles)
-- [7 References](#References)
 
-## Overview
+- [1
+  Overview](#Overview)
+- [2 Settings for
+  flag](#Settings_for_flag)
+  - [2.1 In case of
+    primitive coordinates](#In_case_of_primitive_coordinates)
+  - [2.2 In case of
+    complex coordinates](#In_case_of_complex_coordinates)
+- [3 Settings for
+  item(i)](#Settings_for_item(i))
+- [4 Settings for
+  status](#Settings_for_status)
+- [5 Use cases and
+  examples](#Use_cases_and_examples)
+  - [5.1 Define two
+    constraints](#Define_two_constraints)
+  - [5.2 Use
+    complex coordinates](#Use_complex_coordinates)
+  - [5.3
+    Restrictions on the volume and/or shape of the
+    simulation
+    cell](#Restrictions_on_the_volume_and/or_shape_of_the_simulation_cell)
+- [6 Related tags
+  and articles](#Related_tags_and_articles)
+- [7
+  References](#References)
+
+
+## Overview\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Overview">edit</a> \| (./index.php.md)\]
+
 Two kinds of geometric parameters can be defined: primitive parameters
 (e.g., bond lengths or angles), and complex parameters (i.e., linear
 combinations of primitive coordinates). Each line defines one
@@ -44,26 +64,35 @@ specifies the ions enumerated in the order they appear in the
 [POSCAR](POSCAR.md) file (starting at 1), and `status` is an
 integer that sets the status, e.g., constrained or monitored. Here, the
 first line defines the syntax of a primitive coordinates
-$q_i$. Assuming that
-$M$ primitive coordinates were specified
-on the first $M$ lines of the ICONST
-file, the last line defines a complex coordinate, where `c_1 ... c_M` is
-a space-separated list of the coefficients $c_i$ for the primitive coordinate defined in line
-$i$.
+$q_i$. Assuming that $M$ primitive
+coordinates were specified on the first $M$ lines of
+the ICONST file, the last line
+defines a complex coordinate, where `c_1 ... c_M` is a space-separated
+list of the coefficients $c_i$ for the
+primitive coordinate defined in line $i$.
 
-For instance, the following ICONST file defines two primitive
-coordinates and one complex coordinate.
+For instance, the following
+ICONST file defines two
+primitive coordinates and one complex coordinate.
 
     R 1 6 0
     R 1 5 0
     S 1 -1 0
 
-The first two lines define the bonds between atom $1$ and atom $6$, and between
-atom $1$ and $5$. The complex coordinate is the difference between the two
-bond lengths, which is defined on the third line.
+The first two lines define the bonds between atom
+$1$ and atom $6$, and
+between atom $1$ and
+$5$. The complex coordinate is the difference between the
+two bond lengths, which is defined on the third line.
 
-## Settings for `flag`
-### In case of primitive coordinates
+## Settings for `flag`\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Settings for flag">edit</a> \| (./index.php.md)\]
+
+### In case of primitive coordinates\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: In case of primitive coordinates">edit</a> \| (./index.php.md)\]
+
 - `flag` = R: interatomic distance between atoms `item(1)` and
   `item(2)`.
 - `flag` = A: angle defined by atoms `item(1)`, `item(2)` and `item(3)`
@@ -78,55 +107,63 @@ bond lengths, which is defined on the third line.
 - `flag` = P: ratio of length of the bond between atoms `item(1)` and
   `item(2)` and the length of the bond between atoms `item(3)` and
   `item(4)`
-- `flag` = W: function $\frac{1-\left(R/c\right)^M}{1-\left(R/c\right)^{N}}$ with
-  $R$ being the bond length (in
-  $\AA$) between the atoms `item(1)` and
-  `item(2)`, $c$ is the reference bond
-  length specified as `item(3)`, and the exponents
-  $M$ and $N$ are defined as `item(4)` and `item(5)`, respectively.
+- `flag` = W: function $\frac{1-\left(R/c\right)^M}{1-\left(R/c\right)^{N}}$
+  with $R$ being
+  the bond length (in $\AA$)
+  between the atoms `item(1)` and `item(2)`, $c$ is the
+  reference bond length specified as `item(3)`, and the exponents
+  $M$ and $N$ are
+  defined as `item(4)` and `item(5)`, respectively.
 - `flag` = X, Y, and Z: fractional (direct) coordinate of atom `item(1)`
-  associated with the lattice vectors $a$, $b$, and
-  $c$.
+  associated with the lattice vectors $a$,
+  $b$, and $c$.
 - `flag` = cX, cY, and cZ: Cartesian coordinate of atom `item(1)` in the
   Cartesian directions $x$,
-  $y$, and $z$, respectively.
+  $y$, and $z$,
+  respectively.
 - `flag` = LR: length of lattice vector `item(1)`
 - `flag` = LA: angle between lattice vectors `item(1)` and `item(2)`
 - `flag` = LV: cell volume (no `item(i)` is defined in this case)
 
-### In case of complex coordinates
+### In case of complex coordinates\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: In case of complex coordinates">edit</a> \| (./index.php.md)\]
+
 - `flag` = S: simple linear combination of primitive coordinates, i.e.,
   $\left ( \xi=\sum_{i=1}^{M} c_i\\q_i \right)$.
 - `flag` = C: norm of the vector of primitive coordinates, which reads
-  $\left( \xi=\sqrt{\sum_{i=1}^{M}
-  \\(c_i\\q_i)^2} \right)$.
-- `flag` = D: coordination number^([\[1\]](#cite_note-1)), i.e.,
-  $\left( \xi=\sum_{i=1}^{M}
+  $\left( \xi=\sqrt{\sum_{i=1}^{M} \\(c_i\\q_i)^2} \right)$.
+- `flag` = D: coordination
+  number<sup>[\[1\]](#cite_note-1)</sup>,
+  i.e., $\left( \xi=\sum_{i=1}^{M}
   \frac{1-\left(q_{i}/c_{i}\right)^9}{1-\left(q_{i}/c_{i}\right)^{14}}
   \right)$.
 - `flag` = IS: path-based
-  coordinate^([\[2\]](#cite_note-branduardi:jcp:07-2)) measuring
-  progress along discretized path represented by $N$ points $\tilde{q}(j)$
-  predefined in file [IRCCAR](IRCCAR.md), i.e.,
-  $\xi=\frac{1}{N-1}\frac{\sum_{i=1}^{N}(i-1)\exp\left(-\sum_{j=1}^{M}c_{j}(q_{j}-\tilde{q}_{j}(i))^2
+  coordinate<sup>[\[2\]](#cite_note-branduardi:jcp:07-2)</sup>
+  measuring progress along discretized path represented by
+  $N$ points $\tilde{q}(j)$ predefined in file [IRCCAR](IRCCAR.md),
+  i.e., $\xi=\frac{1}{N-1}\frac{\sum_{i=1}^{N}(i-1)\exp\left(-\sum_{j=1}^{M}c_{j}(q_{j}-\tilde{q}_{j}(i))^2
   \right) }{\sum_{i=1}^{N}
   \exp\left(-\sum_{j=1}^{M}c_{j}(q_{j}-\tilde{q}_{j}(i))^2 \right)}$
 - `flag` = IZ: path-based
-  coordinate^([\[2\]](#cite_note-branduardi:jcp:07-2)) measuring
-  orthogonal distance from the path $\tilde{q}$ predefined in file [IRCCAR](IRCCAR.md), i.e.,
-  $\xi=-\frac{1}{c_1} \log
+  coordinate<sup>[\[2\]](#cite_note-branduardi:jcp:07-2)</sup>
+  measuring orthogonal distance from the path
+  $\tilde{q}$ predefined in file
+  [IRCCAR](IRCCAR.md), i.e., $\xi=-\frac{1}{c_1} \log
   \sum_{i=1}^{N}\exp\left(-\sum_{j=1}^{M}c_{j}(q-\tilde{q}(i))^2
   \right)$ with
 
-$N$ as defined above The complex
-coordinates are functions defined in the space spanned by the primitive
-coordinates.
+$N$ as defined above The complex coordinates are functions
+defined in the space spanned by the primitive coordinates.
 
 |  |
 |----|
 | **Mind:** All complex coordinates must be defined after the last primitive coordinate. Whenever complex coordinates are defined, the primitive coordinates are only the basis for their definition, and their status is ignored. |
 
-## Settings for `item(i)`
+## Settings for `item(i)`\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Settings for item(i)">edit</a> \| (./index.php.md)")\]
+
 It depends on the setting of `flag`. In most cases, `item(i)` is an
 integer specifying either the position of the atom or the lattice vector
 in the [POSCAR](POSCAR.md) file. Mind that two atoms are
@@ -136,7 +173,10 @@ parameters, i.e., the reference bond length (generally a floating-point
 number) and exponents used in the definition (integers) are defined via
 `item(i)`. See the description of the corresponding `flag`.
 
-## Settings for `status`
+## Settings for `status`\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Settings for status">edit</a> \| (./index.php.md)\]
+
 - `status` = 0: the coordinate is constrained.
 - `status` = 3: Harmonic forcefield via
   [HESSEMAT](../incar-tags/HESSEMAT.md)
@@ -152,32 +192,44 @@ number) and exponents used in the definition (integers) are defined via
   ([SPRING_R0](../incar-tags/SPRING_R0.md),
   [SPRING_K](../incar-tags/SPRING_K.md))
 
-## Use cases and examples
-### Define two constraints
+## Use cases and examples\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Use cases and examples">edit</a> \| (./index.php.md)\]
+
+### Define two constraints\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Define two constraints">edit</a> \| (./index.php.md)\]
+
 The following constrains the bond lengths between atoms 1 and 5, and
 between atoms 1 and 6.
 
      R 1 5 0
      R 1 6 0 
 
-### Use complex coordinates
-Consider, for instance, the ICONST file with the following lines:
+### Use complex coordinates\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Use complex coordinates">edit</a> \| (./index.php.md)\]
+
+Consider, for instance, the
+ICONST file with the following
+lines:
 
     R 1 6 0
     R 1 5 0
     S 1 -1 0
 
 The first two lines define two primitive coordinates - bonds between the
-atoms $1$ and $6$, and between the atoms $1$
-and $5$. The complex coordinate is the
-difference between the two bond lengths which is defined on the third
-line. Mind that whenever complex coordinates are defined, the primitives
-are used only as a basis for their definition. Consequently, the two
-primitive coordinates are not constrained in the simulation (despite
-`status`=0). Thus, the only controlled parameter is the complex
-coordinate. Therefore, to fix the first bond length and the complex
-coordinate at the same time, the ICONST file should be modified as
-follows:
+atoms $1$ and
+$6$, and between the atoms $1$ and
+$5$. The complex coordinate is the difference between the
+two bond lengths which is defined on the third line. Mind that whenever
+complex coordinates are defined, the primitives are used only as a basis
+for their definition. Consequently, the two primitive coordinates are
+not constrained in the simulation (despite `status`=0). Thus, the only
+controlled parameter is the complex coordinate. Therefore, to fix the
+first bond length and the complex coordinate at the same time, the
+ICONST file should be modified
+as follows:
 
     R 1 6 0
     R 1 5 0
@@ -186,11 +238,10 @@ follows:
 
 Consider the same system as discussed above and assume that the
 reference distance for the bond between atoms 1 and 6 is 1.1
-$\AA$, while that for the bond between 1
-and 5 is 1.5 $\AA$. The coordination
-number can be fixed in two equivalent ways. The first definition makes
-use of the complex type D, in which case the corresponding ICONST would
-be written like this:
+$\AA$, while that for the bond between 1 and 5 is 1.5
+$\AA$. The coordination number can be fixed in two
+equivalent ways. The first definition makes use of the complex type D,
+in which case the corresponding ICONST would be written like this:
 
     R 1 6 0
     R 1 5 0
@@ -213,12 +264,17 @@ of (and/or differences between) multiple coordination numbers - simply
 via a suitable choice of coefficients linked with S, which can be
 positive, negative, or zero.
 
-### Restrictions on the volume and/or shape of the simulation cell
-In the context of a [molecular dynamics simulation in NpT
-ensemble](https://www.vasp.at/wiki/index.php/MDALGO#NpT-simulation_with_Langevin_thermostat),
-the ICONST file can be used to impose restrictions on the volume and/or
-shape of the simulation cell. The following examples cover some of the
-most important scenarios:
+### Restrictions on the volume and/or shape of the simulation cell\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Restrictions on the volume and/or shape of the simulation cell">edit</a> \| (./index.php.md)\]
+
+In the context of a <a
+href="https://www.vasp.at/wiki/index.php/MDALGO#NpT-simulation_with_Langevin_thermostat"
+class="external text" rel="nofollow">molecular dynamics simulation in
+NpT ensemble</a>, the ICONST
+file can be used to impose restrictions on the volume and/or shape of
+the simulation cell. The following examples cover some of the most
+important scenarios:
 
 1.) Simulation with a constant cell volume and variable shape.
 
@@ -232,9 +288,8 @@ most important scenarios:
 
 3.) A cubic cell with variable volume but fixed shape. Note that the S
 type constraints involving the lengths of the lattice vectors
-($a_i - a_j = 0$) are chosen so as to
-preserve ratios $a_1:a_2:a_3=1:1:1$, as
-required by the cubic shape.
+($a_i - a_j = 0$) are chosen so as to preserve ratios
+$a_1:a_2:a_3=1:1:1$, as required by the cubic shape.
 
     LA 1 2 0
     LA 1 3 0
@@ -251,9 +306,11 @@ required by the cubic shape.
 
 4.) An orthorhombic cell with variable volume but fixed shape. Here, in
 order to fix ratios between the lengths of the lattice vectors
-($a_1:a_2:a_3$), we define the
-constraints of the form $c_i\*a_i + c_j\*a_j = 0$. For instance, if the cell vectors are such that the relative
-proportions of their lengths are $a_1:a_2:a_3=1:1.5:2$, the following ICONST can be used:
+($a_1:a_2:a_3$), we define the constraints of the form
+$c_i\*a_i + c_j\*a_j = 0$. For instance, if the cell
+vectors are such that the relative proportions of their lengths are
+$a_1:a_2:a_3=1:1.5:2$, the following
+ICONST can be used:
 
     LA 1 2 0
     LA 1 3 0
@@ -272,16 +329,29 @@ proportions of their lengths are $a_1:a_2:a_3=1:1.5:2$, the following ICONST can
 |----|
 | **Mind:** Note that ICONST can only be used in molecular dynamics simulations [`IBRION`](../incar-tags/IBRION.md)` = 0`. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [SHAKETOL](../incar-tags/SHAKETOL.md),
 [SHAKEMAXITER](../incar-tags/SHAKEMAXITER.md),
 [MDALGO](../incar-tags/MDALGO.md), [REPORT](../output-files/REPORT.md)
 
-## References
-1.  [↑](#cite_ref-1) [M. Iannuzzi, A. Laio, M. Parrinello, Phys. Rev.
-    Lett. 90, 238302
-    (2003)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.238302)
-2.  ↑ ^([a](#cite_ref-branduardi:jcp:07_2-0))
-    ^([b](#cite_ref-branduardi:jcp:07_2-1)) [D. Branduardi, F. L.
-    Gervasio, M. Parinello, J. Chem. Phys. 126, 54103
-    (2007)](https://aip.scitation.org/doi/abs/10.1063/1.2432340)
+## References\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-1)
+    <a
+    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.238302"
+    class="external text" rel="nofollow">M. Iannuzzi, A. Laio, M.
+    Parrinello, Phys. Rev. Lett. 90, 238302 (2003)</a>
+2.  ↑
+    <sup>[a](#cite_ref-branduardi:jcp:07_2-0)</sup>
+    <sup>[b](#cite_ref-branduardi:jcp:07_2-1)</sup>
+    <a href="https://aip.scitation.org/doi/abs/10.1063/1.2432340"
+    class="external text" rel="nofollow">D. Branduardi, F. L. Gervasio, M.
+    Parinello, J. Chem. Phys. 126, 54103 (2007)</a>
+
+

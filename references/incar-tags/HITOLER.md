@@ -2,15 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # HITOLER
+
+
 HITOLER = \[real\]  
 Default: **HITOLER** = $5\times10^{-5}$ 
 
-Description: HITOLER specifies the convergence parameter for the
-iterative Hirschfeld partitioning in the Tkatchenko-Scheffler method.
+Description: HITOLER specifies
+the convergence parameter for the iterative Hirschfeld partitioning in
+the Tkatchenko-Scheffler method.
 
 ------------------------------------------------------------------------
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=HITOLER&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IVDW](IVDW.md), [DFT-D2](../methods/DFT-D2.md),
 [DFT-D3](../methods/DFT-D3.md), [Tkatchenko-Scheffler
 method](../methods/Tkatchenko-Scheffler_method.md),
@@ -25,3 +31,5 @@ correction](../methods/DDsC_dispersion_correction.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-HITOLER-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

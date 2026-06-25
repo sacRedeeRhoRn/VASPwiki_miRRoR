@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # EFIELD_PEAD
+
+
 EFIELD_PEAD = \[real array\] 
 
 |  |  |  |
@@ -9,11 +11,13 @@ EFIELD_PEAD = \[real array\] 
 | Default: **EFIELD_PEAD** | = 3\*0.01 | if [LCALCEPS](LCALCEPS.md)=.TRUE. |
 |  | = 3\*0.0 | else |
 
-Description: EFIELD_PEAD specifies the homogeneous electric force field
-in the electric enthalpy functional used to compute the [self-consistent
-response to finite electric
+Description: EFIELD_PEAD
+specifies the homogeneous electric force field in the electric enthalpy
+functional used to compute the [self-consistent response to finite
+electric
 fields](../theory/Berry_phases_and_finite_electric_fields.md).
-EFIELD_PEAD is specified in units of eV/Å.
+EFIELD_PEAD is specified in
+units of eV/Å.
 
 |  |
 |----|
@@ -25,18 +29,18 @@ If
 
     EFIELD_PEAD=εx εy εz 
 
-is set, with \|*ε*\|\>0, VASP will first determine the zero-field
-groundstate of the system, and subsequently switch on the electric field
-and compute the field-polarized groundstate orbitals.
+is set, with \|*ε*\|\>0, VASP will
+first determine the zero-field groundstate of the system, and
+subsequently switch on the electric field and compute the
+field-polarized groundstate orbitals.
 
 Additionally, from the change in the macroscopic electronic polarization
 due to the applied electric field, VASP calculates (part of) the
 components on the diagonal of the ion-clamped static dielectric tensor
-(ε_(∞)), in accordance with:
+(ε<sub>∞</sub>), in accordance with:
 
-$\epsilon^\infty_{ii}=1+
-\frac{4\pi}{\epsilon_0}\frac{\partial P_i}{\partial \mathcal{E}_i},
-\qquad {i=x,y,z}$
+$\epsilon^\infty_{ii}=1+ \frac{4\pi}{\epsilon_0}\frac{\partial
+P_i}{\partial \mathcal{E}_i}, \qquad {i=x,y,z}$
 
 Beware: this option is only useful if one is interested in selected
 components on the diagonal of the ion-clamped dielectric tensor (for
@@ -55,24 +59,28 @@ from field-polarized calculations, use
 | **Important:** One should be aware that when the electric field is chosen to be too large, the electric enthalpy functional will lose its minima, and VASP will not be able to find a stationary solution for the field-polarized orbitals. |
 
 This is discussed in some detail by Souza *et
-al.*.^([\[1\]](#cite_note-souza:prl:02-1)) VASP will produce a warning
-if:
+al.*.<sup>[\[1\]](#cite_note-souza:prl:02-1)</sup>
+VASP will produce a warning if:
 
-$e|\mathcal{E}\cdot
-\mathbf{a}_i|>\frac{1}{10}E_{\mathrm{gap}}/N_i,$
+$e|\mathcal{E}\cdot \mathbf{a}_i|>\frac{1}{10}E_{\mathrm{gap}}/N_i,$
 
-where *E*_(gap) is the bandgap, **a**_(i) are the lattice vectors, and
-*N*_(i) is the number of **k**-points along the reciprocal lattice
-vector *i*, in the regular (*N*₁×*N*₂×*N*₃) **k**-mesh. The factor 1/10
-is chosen to be on the safe side. If one does not include unoccupied
-bands, VASP is obviously not able to determine the bandgap and can not
-check whether the electric field might be too large. This will also
-produce a warning message.
+where *E*<sub>gap</sub> is the bandgap, **a**<sub>i</sub> are the
+lattice vectors, and *N*<sub>i</sub> is the number of **k**-points along
+the reciprocal lattice vector *i*, in the regular
+(*N*<sub>1</sub>×*N*<sub>2</sub>×*N*<sub>3</sub>) **k**-mesh. The factor
+1/10 is chosen to be on the safe side. If one does not include
+unoccupied bands, VASP is obviously not able to determine the bandgap
+and can not check whether the electric field might be too large. This
+will also produce a warning message.
 
-### An example: ε_(∞) in NaF
+### An example: ε<sub>∞</sub> in NaF\[<a
+href="/wiki/index.php?title=EFIELD_PEAD&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: An example: ε∞ in NaF">edit</a> \| (./index.php.md)\]
+
 - Using the following [INCAR](../input-files/INCAR.md) file:
 
-&nbsp;
+<!-- -->
 
     PREC = Med
     EDIFF= 1E-6
@@ -91,7 +99,7 @@ convergence may be very costly and in rare cases even impossible.
 
 - [KPOINTS](../input-files/KPOINTS.md) file:
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -105,7 +113,7 @@ convergence may be very costly and in rare cases even impossible.
 
 - [POSCAR](../input-files/POSCAR.md) file:
 
-&nbsp;
+<!-- -->
 
     NaF
      4.5102
@@ -188,7 +196,8 @@ file and on `stdout`:
 
 To speed up the computation of the field-polarized groundstate one may
 set
-[SKIP_EDOTP](https://vasp.at/wiki/index.php/index.php)")=.TRUE.
+<a href="/wiki/index.php?title=SKIP_EDOTP&amp;action=edit&amp;redlink=1"
+class="new" title="SKIP EDOTP (page does not exist)">SKIP_EDOTP</a>=.TRUE.
 to avoid the recalculation of the [electronic
 polarization](../theory/Berry_phases_and_finite_electric_fields.md)
 at each iteration during the SCF procedure. However, the additional term
@@ -217,8 +226,13 @@ will stop. In the case of the previous example this will lead to:
     dp_tot=( -0.313E-07 -0.313E-07  0.117E-02 )  diag[e(oo)]=(    ---      ---    1.92478 )
        1 F= -.29571844E+03 E0= -.29571844E+03  d E =-.223448E-12
 
-## Related tags and articles
-[SKIP_EDOTP](https://vasp.at/wiki/index.php/index.php)"),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=EFIELD_PEAD&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/index.php?title=SKIP_EDOTP&amp;action=edit&amp;redlink=1"
+class="new" title="SKIP EDOTP (page does not exist)">SKIP_EDOTP</a>,
 [LCALCPOL](LCALCPOL.md),
 [LCALCEPS](LCALCEPS.md), [LPEAD](LPEAD.md),
 [IPEAD](IPEAD.md), [LBERRY](LBERRY.md),
@@ -229,7 +243,15 @@ fields](../theory/Berry_phases_and_finite_electric_fields.md)
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-EFIELD_PEAD-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-souza:prl:02_1-0) [I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. **89**, 117602
-    (2002).](https://doi.org/10.1103/PhysRevLett.89.117602)
+## References\[<a
+href="/wiki/index.php?title=EFIELD_PEAD&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-souza:prl:02_1-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.89.117602"
+    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
+    Vanderbilt, Phys. Rev. Lett. <strong>89</strong>, 117602 (2002).</a>
+
+

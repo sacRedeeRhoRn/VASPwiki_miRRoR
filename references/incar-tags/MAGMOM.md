@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # MAGMOM
+
+
 MAGMOM = \[real array\] 
 
 |  |  |  |
@@ -15,29 +17,34 @@ density is present. Considered when symmetry is determined.
 ------------------------------------------------------------------------
 
 - For a **magnetic calculation from scratch**
-  ([ISTART](ISTART.md)=0), MAGMOM specifies (i) the initial
-  on-site magnetic moment for each atom, and (ii) lowers the symmetry of
-  the system (as of VASP.4.4.4). A magnetic calculation could be either
-  a spin-polarized calculation ([ISPIN](ISPIN.md)=2) or
-  noncollinear calculation
+  ([ISTART](ISTART.md)=0),
+  MAGMOM specifies (i) the
+  initial on-site magnetic moment for each atom, and (ii) lowers the
+  symmetry of the system (as of VASP.4.4.4). A magnetic calculation
+  could be either a spin-polarized calculation
+  ([ISPIN](ISPIN.md)=2) or noncollinear calculation
   ([LNONCOLLINEAR](LNONCOLLINEAR.md)=T). If the
-  MAGMOM line breaks a symmetry of the crystal, the corresponding
-  symmetry operation is removed and not applied during the
-  symmetrization of, e.g., charges and forces.
+  MAGMOM line breaks a
+  symmetry of the crystal, the corresponding symmetry operation is
+  removed and not applied during the symmetrization of, e.g., charges
+  and forces.
 
-&nbsp;
+<!-- -->
 
-- When **restarting a magnetic calculation**, MAGMOM is only used to
+- When **restarting a magnetic calculation**,
+  MAGMOM is only used to
   determine the symmetry of the system and not to set the on-site
-  magnetic moment. Therefore, if you remove the MAGMOM tag before
-  restarting from a converged [WAVECAR](../input-files/WAVECAR.md) or
+  magnetic moment. Therefore, if you remove the
+  MAGMOM tag before restarting
+  from a converged [WAVECAR](../input-files/WAVECAR.md) or
   [CHGCAR](../input-files/CHGCAR.md), the magnetization is likely to be
   symmetrized away.
 
-&nbsp;
+<!-- -->
 
-- MAGMOM also specifies the initial on-site magnetic moments when a
-  **magnetic calculation** ([ISPIN](ISPIN.md)=2 or
+- MAGMOM also specifies the
+  initial on-site magnetic moments when a **magnetic calculation**
+  ([ISPIN](ISPIN.md)=2 or
   [LNONCOLLINEAR](LNONCOLLINEAR.md)=T) is **started
   from a non-spin-polarized calculation**
   ([ISPIN](ISPIN.md)=1 and
@@ -52,20 +59,24 @@ constrain the on-site magnetic moments.
 
 |  |
 |----|
-| **Tip:** To converge to the magnetic ground state, we recommend setting the magnetic moments slightly larger than the expected values, e.g., using the experimental magnetic moment multiplied by 1.2-1.5. A growing collection of experimental data is available at the Bilbao crystallographic server.^([\[1\]](#cite_note-bilbao.crystal.server-1)) If no experimental data is available, MAGMOM can be defined according to the procedure outlined in the Huebsch et al. 2021.^([\[2\]](#cite_note-huebsch:prx:11-2)) |
+| **Tip:** To converge to the magnetic ground state, we recommend setting the magnetic moments slightly larger than the expected values, e.g., using the experimental magnetic moment multiplied by 1.2-1.5. A growing collection of experimental data is available at the Bilbao crystallographic server.<sup>[\[1\]](#cite_note-bilbao.crystal.server-1)</sup> If no experimental data is available, MAGMOM can be defined according to the procedure outlined in the Huebsch et al. 2021.<sup>[\[2\]](#cite_note-huebsch:prx:11-2)</sup> |
 
 |  |
 |----|
-| **Important:** The final magnetic state strongly depends on the initial values for MAGMOM.^([\[2\]](#cite_note-huebsch:prx:11-2)) This is true even if no symmetry is used ([ISYM](ISYM.md)=-1), because of the many local minima that most exchange-correlation functionals have within spin-density-functional theory. |
+| **Important:** The final magnetic state strongly depends on the initial values for MAGMOM.<sup>[\[2\]](#cite_note-huebsch:prx:11-2)</sup> This is true even if no symmetry is used ([ISYM](ISYM.md)=-1), because of the many local minima that most exchange-correlation functionals have within spin-density-functional theory. |
 
-## Format and basis
+## Format and basis\[<a href="/wiki/index.php?title=MAGMOM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Format and basis">edit</a> \| (./index.php.md)\]
+
 - For a spin-polarized calculation ([ISPIN](ISPIN.md)=2),
-  MAGMOM is a list of NIONS positive or negative values that specify the
-  magnitude and relative orientation of the magnetization on each ion.
-  The on-site magnetic moments have no direction in real space, i.e., no
-  orientation in the lattice.
+  MAGMOM is a list of NIONS
+  positive or negative values that specify the magnitude and relative
+  orientation of the magnetization on each ion. The on-site magnetic
+  moments have no direction in real space, i.e., no orientation in the
+  lattice.
 
-&nbsp;
+<!-- -->
 
 - For noncollinear calculation
   ([LNONCOLLINEAR](LNONCOLLINEAR.md)=T), the on-site
@@ -76,19 +87,22 @@ constrain the on-site magnetic moments.
   in Cartesian coordinates without considering how the lattice matrix or
   [SAXIS](SAXIS.md) is defined.
 
-&nbsp;
+<!-- -->
 
 - With spin-orbit coupling ([LSORBIT](LSORBIT.md)=True),
   the three components must be specified in the basis of spinor space
   that is defined by [SAXIS](SAXIS.md). The default is
-  $\sigma_1=\hat x$,
-  $\sigma_2 =\hat y$,
-  $\sigma_3 = \hat z$, such that MAGMOM
-  can be given in Cartesian coordinates. The orientation of MAGMOM with
-  respect to the lattice only matters if spin-orbit coupling is included
+  $\sigma_1=\hat x$, $\sigma_2 =\hat y$, $\sigma_3 = \hat z$, such that
+  MAGMOM can be given in
+  Cartesian coordinates. The orientation of
+  MAGMOM with respect to the
+  lattice only matters if spin-orbit coupling is included
   ([LSORBIT](LSORBIT.md)).
 
-## Examples
+## Examples\[<a href="/wiki/index.php?title=MAGMOM&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Examples">edit</a> \| (./index.php.md)\]
+
 - The most simple input for a bcc cell with antiferromagnetic (AFM) spin
   alignment would be the following.
 
@@ -124,7 +138,7 @@ tag in addition) in the [INCAR](../input-files/INCAR.md) file.
   on-site magnetic moments, you need to set the following in the
   [INCAR](../input-files/INCAR.md) file:
 
-&nbsp;
+<!-- -->
 
     ICHARG = 1 
     ISPIN = 2 
@@ -136,15 +150,16 @@ or for a noncollinear
     LNONCOLLINEAR = T
     MAGMOM = 0 0 m  0 0 -m
 
-- For systems containing many atoms, MAGMOM input on a single line can
-  be hard to read, especially in the noncollinear case. It is possible
-  to provide [INCAR](../input-files/INCAR.md) input on [multiple
+- For systems containing many atoms,
+  MAGMOM input on a single
+  line can be hard to read, especially in the noncollinear case. It is
+  possible to provide [INCAR](../input-files/INCAR.md) input on [multiple
   lines](../input-files/INCAR.md) using backslashes (**\\**) as
   linebreaks. E.g. for a noncollinear system with AFM alignment and 16
   atoms (the first 8 of them magnetic), the multi-line input could look
   like this:
 
-&nbsp;
+<!-- -->
 
     MAGMOM =  3.0  2.0  1.0 \
              -3.0 -2.0 -1.0 \
@@ -156,7 +171,10 @@ or for a noncollinear
              -3.0 -2.0 -1.0 \
               24*0.0
 
-## Related Tags and Sections
+## Related Tags and Sections\[<a href="/wiki/index.php?title=MAGMOM&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related Tags and Sections">edit</a> \| (./index.php.md)\]
+
 [ISPIN](ISPIN.md),
 [LNONCOLLINEAR](LNONCOLLINEAR.md),
 [LSORBIT](LSORBIT.md), [SAXIS](SAXIS.md),
@@ -169,11 +187,18 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-MAGMOM-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-1.  [↑](#cite_ref-bilbao.crystal.server_1-0) [MAGNDATA, Bilbao
-    crystallographic
-    server](https://www.cryst.ehu.es/magndata/search.php?show_db=1)
-2.  ↑ ^([a](#cite_ref-huebsch:prx:11_2-0))
-    ^([b](#cite_ref-huebsch:prx:11_2-1)) [Huebsch, M-T and Nomoto, T and
-    Suzuki, M-T and Arita, R,*Benchmark for ab initio prediction of
-    magnetic structures based on cluster-multipole theory*, Phys. Rev. X
-    **11**, 011031 (2021).](http://doi.org/10.1103/PhysRevX.11.011031)
+
+1.  [↑](#cite_ref-bilbao.crystal.server_1-0)
+    <a href="https://www.cryst.ehu.es/magndata/search.php?show_db=1"
+    class="external text" rel="nofollow">MAGNDATA, Bilbao crystallographic
+    server</a>
+2.  ↑
+    <sup>[a](#cite_ref-huebsch:prx:11_2-0)</sup>
+    <sup>[b](#cite_ref-huebsch:prx:11_2-1)</sup>
+    <a href="http://doi.org/10.1103/PhysRevX.11.011031"
+    class="external text" rel="nofollow">Huebsch, M-T and Nomoto, T and
+    Suzuki, M-T and Arita, R,<em>Benchmark for ab initio prediction of
+    magnetic structures based on cluster-multipole theory</em>, Phys. Rev. X
+    <strong>11</strong>, 011031 (2021).</a>
+
+

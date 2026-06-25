@@ -2,35 +2,69 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NiO LSDA+U
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
-[NiO](NiO.md) \> NiO LSDA+U \> [Spin-orbit coupling in a Ni
+[NiO](NiO.md) \>
+NiO
+LSDA+U \> [Spin-orbit
+coupling in a Ni
 monolayer](Spin-orbit_coupling_in_a_Ni_monolayer.md) \>
 [Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>[constraining
 local magnetic
 moments](Constraining_local_magnetic_moments.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-  - [3.1 On site occupancies](#On_site_occupancies)
-  - [3.2 Magnetic moments](#Magnetic_moments)
-  - [3.3 DOS](#DOS)
-  - [3.4 Total energy](#Total_energy)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+  - [3.1 On site
+    occupancies](#On_site_occupancies)
+  - [3.2 Magnetic
+    moments](#Magnetic_moments)
+  - [3.3
+    DOS](#DOS)
+  - [3.4 Total
+    energy](#Total_energy)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of antiferromagnetic NiO in the DFT+U (Dudarev's approach).
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     AFM  NiO
      4.17
      1.0 0.5 0.5
@@ -43,7 +77,11 @@ Calculation of antiferromagnetic NiO in the DFT+U (Dudarev's approach).
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM   = NiO
         
     ISTART   = 0
@@ -81,21 +119,33 @@ Calculation of antiferromagnetic NiO in the DFT+U (Dudarev's approach).
   ([LDAUPRINT](../incar-tags/LDAUPRINT.md)=1).
 - L, U, and J must be specified for all atomic types!
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     k-points
      0
     gamma
      4  4  4 
      0  0  0
 
-## Calculation
-### On site occupancies
+## Calculation\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
+### On site occupancies\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: On site occupancies">edit</a> \| (./index.php.md)\]
+
 - The sample output for the on site occupancies in the
   [OUTCAR](../output-files/OUTCAR.md) file should look like the following
   (the meaning of the columns after the second equality sign is given
   below):
 
-&nbsp;
+<!-- -->
 
     atom =    1  type =  1  1 = 2
       
@@ -117,17 +167,17 @@ Calculation of antiferromagnetic NiO in the DFT+U (Dudarev's approach).
     o = 1.0248 v = -0.0032  0.0016 -1.0000  0.0016  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
     o = 1.0248 v =  0.0000  0.0027  0.0000 -0.0027  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
 
-$\qquad \qquad \qquad \qquad \qquad \qquad
-d_{xy}^{\uparrow} \qquad d_{yz}^{\uparrow} \qquad \quad
-d_{z^{2}-r^{2}}^{\uparrow} \qquad d_{xz}^{\uparrow} \qquad
-d_{z^{2}-y^{2}}^{\uparrow} \qquad d_{xy}^{\downarrow} \qquad \quad
-d_{yz}^{\downarrow} \qquad \quad d_{z^{2}-r^{2}}^{\downarrow} \qquad
-d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
+$\qquad \qquad \qquad \qquad \qquad \qquad d_{xy}^{\uparrow} \qquad
+d_{yz}^{\uparrow} \qquad \quad d_{z^{2}-r^{2}}^{\uparrow} \qquad
+d_{xz}^{\uparrow} \qquad d_{z^{2}-y^{2}}^{\uparrow} \qquad
+d_{xy}^{\downarrow} \qquad \quad d_{yz}^{\downarrow} \qquad \quad
+d_{z^{2}-r^{2}}^{\downarrow} \qquad d_{xz}^{\downarrow} \qquad
+d_{z^{2}-y^{2}}^{\downarrow}$
 
 - Just for comparison when U=0 and J=0 (i.e. just LSDA) the on site
   occupancies are as follows:
 
-&nbsp;
+<!-- -->
 
     o = 0.3462 v =  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0048  0.0028  0.9951  0.0020 -0.0986
     o = 0.3462 v =  0.0000  0.0000  0.0000  0.0000  0.0000  0.0005  0.0039 -0.0986 -0.0044 -0.9951
@@ -140,18 +190,22 @@ d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
     o = 0.9599 v = -0.1186  0.7577  0.0085 -0.6391 -0.0579  0.0000  0.0000  0.0000  0.0000  0.0000
     o = 0.9599 v =  0.8064 -0.3005 -0.0570 -0.5059 -0.0085  0.0000  0.0000  0.0000  0.0000  0.0000
 
-$\qquad \qquad \qquad \qquad \qquad \qquad
-d_{xy}^{\uparrow} \qquad d_{yz}^{\uparrow} \qquad \quad
-d_{z^{2}-r^{2}}^{\uparrow} \qquad d_{xz}^{\uparrow} \qquad
-d_{z^{2}-y^{2}}^{\uparrow} \qquad d_{xy}^{\downarrow} \qquad \quad
-d_{yz}^{\downarrow} \qquad \quad d_{z^{2}-r^{2}}^{\downarrow} \qquad
-d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
+$\qquad \qquad \qquad \qquad \qquad \qquad d_{xy}^{\uparrow} \qquad
+d_{yz}^{\uparrow} \qquad \quad d_{z^{2}-r^{2}}^{\uparrow} \qquad
+d_{xz}^{\uparrow} \qquad d_{z^{2}-y^{2}}^{\uparrow} \qquad
+d_{xy}^{\downarrow} \qquad \quad d_{yz}^{\downarrow} \qquad \quad
+d_{z^{2}-r^{2}}^{\downarrow} \qquad d_{xz}^{\downarrow} \qquad
+d_{z^{2}-y^{2}}^{\downarrow}$
 
-### Magnetic moments
+### Magnetic moments\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Magnetic moments">edit</a> \| (./index.php.md)\]
+
 - The sample output for the l dependent local magnetic moments is given
   in the [OUTCAR](../output-files/OUTCAR.md) file:
 
-&nbsp;
+<!-- -->
 
      magnetization (x)
       
@@ -165,20 +219,33 @@ d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
     ------------------------------------------------
     tot        0.000  -0.002   0.002   0.000
 
-### DOS
+### DOS\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: DOS">edit</a> \| (./index.php.md)\]
+
 - The Ni lm decomposed DOS for the d states should look like the
   following:
 
-[![](https://vasp.at/wiki/images/thumb/0/0c/Fig_NiO_LSDA_U_1.png/900px-Fig_NiO_LSDA_U_1.png)](https://vasp.at/wiki/File:Fig_NiO_LSDA_U_1.png)
+<a href="/wiki/File:Fig_NiO_LSDA_U_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/0/0c/Fig_NiO_LSDA_U_1.png/900px-Fig_NiO_LSDA_U_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/0/0c/Fig_NiO_LSDA_U_1.png/1350px-Fig_NiO_LSDA_U_1.png 1.5x, /wiki/images/thumb/0/0c/Fig_NiO_LSDA_U_1.png/1800px-Fig_NiO_LSDA_U_1.png 2x"
+width="900" height="307" /></a>
 
-### Total energy
+### Total energy\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Total energy">edit</a> \| (./index.php.md)\]
+
 - The on site occupany matrix is not idempotent, hence the total energy
   contains a penalty contribution.
 - The sample output for the total energy in the
   [OSZICAR](../output-files/OSZICAR.md) file should look like the
   following:
 
-&nbsp;
+<!-- -->
 
     ...
     DAV:  15    -0.229633055256E+02   -0.11057E-03   -0.50020E-05   520   0.104E-01    0.118E-02
@@ -187,7 +254,7 @@ d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
 
 - The sample output for a calculation using just LSDA is given below:
 
-&nbsp;
+<!-- -->
 
     ...
     DAV:  13    -0.267936242334E+02    0.12794E-03   -0.12638E-04   552   0.298E-01    0.169E-02
@@ -198,17 +265,31 @@ d_{xz}^{\downarrow} \qquad d_{z^{2}-y^{2}}^{\downarrow}$
 - Comparing the total energies from calculations with different (U-J) is
   meaningless!
 
-## Download
-[4_3_NiO_LSDA+U.tgz](https://vasp.at/wiki/images/a/ac/4_3_NiO_LSDA%2BU.tgz "4 3 NiO LSDA+U.tgz")
+## Download\[<a
+href="/wiki/index.php?title=NiO_LSDA%2BU&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+<a href="/wiki/images/a/ac/4_3_NiO_LSDA%2BU.tgz" class="internal"
+title="4 3 NiO LSDA+U.tgz">4_3_NiO_LSDA+U.tgz</a>
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
-[NiO](NiO.md) \> NiO LSDA+U \> [Spin-orbit coupling in a Ni
+[NiO](NiO.md) \>
+NiO
+LSDA+U \> [Spin-orbit
+coupling in a Ni
 monolayer](Spin-orbit_coupling_in_a_Ni_monolayer.md) \>
 [Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>[constraining
 local magnetic
 moments](Constraining_local_magnetic_moments.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 Back to the [main page](The_VASP_Manual.md).
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # FMP_PERIOD
+
+
 FMP_PERIOD = integer  
 Default: **FMP_PERIOD** = 10 
 
@@ -15,14 +17,20 @@ This tag defines how many MD steps are done between two consecutive
 velocity-swapping events. The period is counted in MD steps and not in
 simulation time.
 
-|                                                           |
-|-----------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This tag will only be available from VASP 6.4.4 |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=FMP_PERIOD&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Müller-Plathe
 method](../tutorials/Müller-Plathe_method.md),
 [FMP_ACTIVE](FMP_ACTIVE.md),
 [FMP_DIRECTION](FMP_DIRECTION.md),
 [FMP_SNUMBER](FMP_SNUMBER.md),
 [FMP_SWAPNUM](FMP_SWAPNUM.md)
+
+

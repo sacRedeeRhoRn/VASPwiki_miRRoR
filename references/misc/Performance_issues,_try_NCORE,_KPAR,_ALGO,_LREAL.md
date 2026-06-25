@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Performance issues, try NCORE, KPAR, ALGO, LREAL
+
+
 Many user have difficulties to make good choices for various
 computational and technical parameters, resulting in suboptimal
 performance. Here is a very brief outline which tags can make a
@@ -70,3 +72,5 @@ setting for [LREAL](../incar-tags/LREAL.md).
   
 
 ------------------------------------------------------------------------
+
+

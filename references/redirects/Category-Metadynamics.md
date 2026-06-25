@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Metadynamics
+
+
+
 Redirect to:
 
 - [Metadynamics](../theory/Metadynamics.md)
+
+

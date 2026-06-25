@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PAW
+
+
+
 Redirect to:
 
 - [Category:Projector-augmented-wave
   method](../categories/Category-Projector-augmented-wave_method.md)
+
+

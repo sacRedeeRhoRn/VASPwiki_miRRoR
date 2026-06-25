@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VASPml library
+
+
 VASPml is a C++ library accompanying VASP 6.5.0 and above, providing
 functionality related to [machine-learned force
 fields](../categories/Category-Machine-learned_force_fields.md).
@@ -10,30 +12,46 @@ machine learning code inside VASP. Currently, it does not yet offer any
 training capabilities but rather focuses on inference. At this point
 VASPml is in a beta-testing stage and provides its first application, an
 interface to the popular molecular dynamics (MD) software
-[LAMMPS](https://www.lammps.org). This allows users to combine
-VASP-generated machine-learned force fields with the large amount of
-MD-related features provided by LAMMPS, some of which may not be offered
-in VASP directly.
+<a href="https://www.lammps.org" class="external text"
+rel="nofollow">LAMMPS</a>. This allows users to combine VASP-generated
+machine-learned force fields with the large amount of MD-related
+features provided by LAMMPS, some of which may not be offered in VASP
+directly.
 
 |  |
 |----|
 | **Warning:** As of VASP 6.5.0 the VASPml library is experimental and results should be carefully checked against the standard Fortran code (compile without `-Dlibvaspml` or set [`ML_LIB`](../incar-tags/ML_LIB.md)` = .FALSE.`). |
 
+
 ## Contents
 
-- [1 Supported features](#Supported_features)
-- [2 Restrictions](#Restrictions)
-- [3 Dependencies](#Dependencies)
-- [4 Build instructions](#Build_instructions)
-- [5 Standalone build instructions](#Standalone_build_instructions)
-  - [5.1 Step 1: Separate VASPml
-    directory](#Step_1:_Separate_VASPml_directory)
-  - [5.2 Step 2: Modify
-    makefile.include](#Step_2:_Modify_makefile.include)
-  - [5.3 Step 3: Build](#Step_3:_Build)
-- [6 Internal validation tests](#Internal_validation_tests)
 
-# Supported features
+- [1 Supported
+  features](#Supported_features)
+- [2
+  Restrictions](#Restrictions)
+- [3
+  Dependencies](#Dependencies)
+- [4 Build
+  instructions](#Build_instructions)
+- [5 Standalone
+  build instructions](#Standalone_build_instructions)
+  - [5.1 Step 1:
+    Separate VASPml
+    directory](#Step_1:_Separate_VASPml_directory)
+  - [5.2 Step 2:
+    Modify makefile.include](#Step_2:_Modify_makefile.include)
+  - [5.3 Step 3:
+    Build](#Step_3:_Build)
+- [6 Internal
+  validation tests](#Internal_validation_tests)
+
+
+# Supported features\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Supported features">edit</a> \| (./index.php.md)\]
+
 - [Running machine-learned force fields in
   LAMMPS](Running_machine-learned_force_fields_in_LAMMPS.md)
 - Fast prediction-only mode in VASP
@@ -46,7 +64,11 @@ override this behavior and explicitly avoid the use of the VASPml
 library set [`ML_LIB`](../incar-tags/ML_LIB.md)` = .FALSE.` in the
 [INCAR](../input-files/INCAR.md) file.
 
-# Restrictions
+# Restrictions\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Restrictions">edit</a> \| (./index.php.md)\]
+
 Since the VASPml library is still under development some features of the
 original Fortran code are not yet available:
 
@@ -74,7 +96,18 @@ identified bugs and workarounds will be collected here:
   line 169 increase the maximum allowed [ML_FF](../input-files/ML_FF.md)
   version to 0.2.4:
 
-[TABLE]
+<table
+style="width:100%; table-layout: fixed; border-spacing: 0; padding: 0; margin: 0; background-color: var(--vCB-bg); color: var(--vdefault-text); border-width: 1px; border-style: solid; border-color: var(--vCB-border);">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre
+style="margin: 0; padding: 0.5em; background: none; border: none; white-space: pre; overflow-x: auto; font-family: monospace;"><code>    const SemanticVersion versionMax = SemanticVersion(0, 2, 4);</code></pre></td>
+</tr>
+</tbody>
+</table>
 
 After complete recompilation of VASP the newer force fields should also
 be accepted. This bug and workaround also apply to the LAMMPS interface.
@@ -87,7 +120,11 @@ In case the workaround is applied please also recompile LAMMPS.
   fixed in VASP 6.5.1. Updated tests for
   [`ML_MODE`](../incar-tags/ML_MODE.md)` = run` are work in progress.
 
-# Dependencies
+# Dependencies\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Dependencies">edit</a> \| (./index.php.md)\]
+
 The VASPml library depends on the following compilers and external
 libraries:
 
@@ -102,9 +139,14 @@ Additionally, for compiling the optional [internal validation
 tests](#Internal_validation_tests) the following external library is
 required:
 
-- [Boost.test](http://boost.org/libs/test)
+- <a href="http://boost.org/libs/test" class="external text"
+  rel="nofollow">Boost.test</a>
 
-# Build instructions
+# Build instructions\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Build instructions">edit</a> \| (./index.php.md)\]
+
 The VASPml library is automatically built alongside VASP if
 `-Dlibvaspml` is added to the `CPP_OPTIONS` [precompiler
 option](../misc/Precompiler_options.md) in the
@@ -158,7 +200,26 @@ path:
 - `INCLUDE_ML`: Include flags for the required dependencies should be
   added here.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vblue); --box-emph-color: var(--vblue); padding: 5px; color: var(--vdefault-text-nb); background: var(--vblue-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vblue);">Tip:</span></strong> For
+some <a href="/wiki/Toolchains" title="Toolchains">toolchains</a> it is
+not necessary to explicitly add paths here because the compilers
+automatically include the correct directories (e.g. Intel oneAPI,
+NVHPC). In other cases (e.g. GNU compiler with openBLAS) the given path
+must contain the desired C++ headers of the dependencies:
+<ul>
+<li>CBLAS: <code>cblas.h</code></li>
+<li>LAPACKE: <code>lapacke.h</code></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 The VASPml project (source code and related files) is located within the
 `src/vaspml` directory relative to the VASP root folder. Upon
@@ -169,7 +230,11 @@ in `build/std/vaspml/lib/` (similarly for the `gam` and `ncl` versions).
 However, it is usually not necessary to check its presence because the
 VASP build will handle this (and fail if VASPml cannot be built).
 
-# Standalone build instructions
+# Standalone build instructions\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Standalone build instructions">edit</a> \| (./index.php.md)\]
+
 Although VASPml is typically part of the VASP build process as described
 above it is also possible to compile it independently. This can be
 useful, for example, if VASP is deliberately compiled without VASPml but
@@ -177,7 +242,11 @@ the `libvaspml` library is still necessary to build [LAMMPS with VASPml
 patch](Running_machine-learned_force_fields_in_LAMMPS.md).
 For a standalone build of VASPml follow these steps:
 
-### Step 1: Separate VASPml directory
+### Step 1: Separate VASPml directory\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Separate VASPml directory">edit</a> \| (./index.php.md)\]
+
 First, copy the entire `vaspml` subdirectory to a separate location and
 move into the new `vaspml` directory:
 
@@ -195,7 +264,11 @@ template files for typical compiler toolchains.
 |----|
 | **Mind:** The `makefile.include` files inside VASPml's `arch` directory are only required for the standalone build described here. For a regular VASP build they must not be used because then compilers and flags are taken from VASP's `makefile.include` (for this purpose, the special file `makefile.include.vasp` is used **automatically**). |
 
-### Step 2: Modify `makefile.include`
+### Step 2: Modify `makefile.include`\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Modify makefile.include">edit</a> \| (./index.php.md)\]
+
 Pick one of the `makefile.include` files in the `arch` folder which is
 closest to your toolchain and copy it to the base directory, e.g.
 
@@ -260,7 +333,11 @@ For example, to disable both the color output and the logo use:
 - `VERBOSE`: Setting this to any value, e.g. `VERBOSE=1`, will echo all
   executed commands to the screen.
 
-### Step 3: Build
+### Step 3: Build\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Build">edit</a> \| (./index.php.md)\]
+
 After modifying the `makefile.include` file we can finally build the
 VASPml library by executing
 
@@ -270,7 +347,11 @@ In order to parallelize the build process it is possible to add the `-j`
 flag. The library will be located in `lib/libvaspml.a`. To completely
 remove all compiled files and build folders you may use `make clean`.
 
-# Internal validation tests
+# Internal validation tests\[<a
+href="/wiki/index.php?title=VASPml_library&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Internal validation tests">edit</a> \| (./index.php.md)\]
+
 VASPml comes with its own set of tests (unit tests, integration tests,
 regression tests) to validate the correctness of the build. They are
 located in the `test` subfolder relative to the base directory.
@@ -281,8 +362,9 @@ located in the `test` subfolder relative to the base directory.
 
 In addition to the regular dependencies of VASPml (CBLAS, LAPACKE) the
 tests require the external library
-[Boost.test](http://boost.org/libs/test) to be present on your system.
-The corresponding include and linking flags must be added to the
+<a href="http://boost.org/libs/test" class="external text"
+rel="nofollow">Boost.test</a> to be present on your system. The
+corresponding include and linking flags must be added to the
 `BOOST_INCLUDE` and `BOOST_LIB` variables in the `makefile.include` file
 (see [step 2](#Step_2:_Modify_makefile.include) above). Before
 continuing please make sure the VASPml library was correctly built. To
@@ -310,9 +392,14 @@ is summarized on the screen like this:
 
     *** No errors detected
 
-The message **`*** No errors detected`** should be present for all test
-binaries. If this is not the case, please file a bug report with the
-error message, your `makefile.include` and a description of your
-toolchain to the [VASP forum](https://www.vasp.at/forum/), thank you!
-The `test` directory can be cleaned up from binaries and build folders
-with the `make clean` command.
+The message
+**`*** No errors detected`** should
+be present for all test binaries. If this is not the case, please file a
+bug report with the error message, your `makefile.include` and a
+description of your toolchain to the
+<a href="https://www.vasp.at/forum/" class="external text"
+rel="nofollow">VASP forum</a>, thank you! The `test` directory can be
+cleaned up from binaries and build folders with the `make clean`
+command.
+
+

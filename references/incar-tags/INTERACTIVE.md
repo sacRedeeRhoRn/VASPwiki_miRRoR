@@ -2,17 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # INTERACTIVE
+
+
 INTERACTIVE = \[logical\]  
 Default: **INTERACTIVE** = .FALSE. 
 
-Description: INTERACTIVE enables an interactive mode in which a series
-of structures is piped into VASP via `stdin`.
+Description: INTERACTIVE
+enables an interactive mode in which a series of structures is piped
+into VASP via `stdin`.
 
 ------------------------------------------------------------------------
 
-`INTERACTIVE`` = .TRUE.` enables the interactive mode. The interactive
-mode ([`IBRION`](IBRION.md)` = 11`) is executed by inputting
-a series of structures into the VASP executable, i.e.:
+`INTERACTIVE`` = .TRUE.`
+enables the interactive mode. The interactive mode
+([`IBRION`](IBRION.md)` = 11`) is executed by inputting a
+series of structures into the VASP executable, i.e.:
 
     vasp_std < POSCAR.interactive
 
@@ -29,7 +33,11 @@ normal.
 |----|
 | **Important:** The corresponding [POSCAR](../input-files/POSCAR.md) file is required. The first set of positions comes from it, and the calculation will not run without it. After the [POSCAR](../input-files/POSCAR.md) structure, the `POSCAR.interactive` structures will be read. |
 
-## Fixed lattice (ISIF \< 3)
+## Fixed lattice (ISIF \< 3)\[<a
+href="/wiki/index.php?title=INTERACTIVE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Fixed lattice (ISIF &lt; 3)">edit</a> \| (./index.php.md)")\]
+
 |  |
 |----|
 | **Important:** The coordinates of the ions for each structure must be given in fractional/ direct coordinates (Cartesian coordinates are not supported). |
@@ -69,7 +77,11 @@ following will be printed to the `stdout`:
 
     POSITIONS: read from stdin
 
-## Variable lattice (ISIF ≥ 3)
+## Variable lattice (ISIF ≥ 3)\[<a
+href="/wiki/index.php?title=INTERACTIVE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Variable lattice (ISIF ≥ 3)">edit</a> \| (./index.php.md)")\]
+
 When the lattice is not fixed [`ISIF`](ISIF.md)` ≥ 3`, the
 input structure (direct or Cartesian) requires that the lattice also be
 defined, i.e., `POSCAR.interactive` is a list of
@@ -119,7 +131,11 @@ As each structure is read in, the following will be printed to `stdout`:
 |----|
 | **Tip:** We suggest using the interactive mode to systematically improve [machine-learned force fields](../categories/Category-Machine-learned_force_fields.md) (MLFF) by selecting all structures for which the MLFF shows larger errors, and continue to train the MLFF with those structures. For instance, one can select structures where the maximum spilling factor is significantly larger than the average. Preferably, individual thresholds are set for each species (cf. [ML_ESTBLOCK](ML_ESTBLOCK.md) to evaluate the spilling factor). |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=INTERACTIVE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 Tags: [IBRION](IBRION.md), [ISIF](ISIF.md),
 [NSW](NSW.md)
 
@@ -131,3 +147,5 @@ field](../methods/Using_metadynamics_to_train_a_machine-learned_force_field.md)
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-INTERACTIVE-_incategory-Howto)
+
+

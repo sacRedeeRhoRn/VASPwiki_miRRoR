@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Magnetism
+
+
+
 Redirect to:
 
 - [Magnetism -
   Tutorial](../tutorials/Magnetism_-_Tutorial.md)
+
+

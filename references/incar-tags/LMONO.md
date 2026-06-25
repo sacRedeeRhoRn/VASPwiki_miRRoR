@@ -2,11 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LMONO
+
+
 LMONO = .TRUE. \| .FALSE.  
 Default: **LMONO** = .FALSE. 
 
-Description: LMONO switches on monopole-monopole corrections for the
-total energy.
+Description: LMONO switches on
+monopole-monopole corrections for the total energy.
 
 ------------------------------------------------------------------------
 
@@ -28,14 +30,21 @@ to determine the dipole at the defect site accurately, whereas for 0D
 systems (i.e. atoms and molecules) the dipole can be determined
 accurately.
 
-## Related tags and articles
-[Monopole Dipole and Quadrupole
-corrections](https://vasp.at/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections),
-[NELECT](NELECT.md), [EPSILON](EPSILON.md),
-[IDIPOL](IDIPOL.md), [DIPOL](DIPOL.md),
-[LDIPOL](LDIPOL.md), [EFIELD](EFIELD.md)
+## Related tags and articles\[<a href="/wiki/index.php?title=LMONO&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Monopole_Dipole_and_Quadrupole_corrections"
+class="mw-redirect"
+title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and
+Quadrupole corrections</a>, [NELECT](NELECT.md),
+[EPSILON](EPSILON.md), [IDIPOL](IDIPOL.md),
+[DIPOL](DIPOL.md), [LDIPOL](LDIPOL.md),
+[EFIELD](EFIELD.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LMONO-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

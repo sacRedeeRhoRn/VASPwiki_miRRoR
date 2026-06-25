@@ -2,18 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # INCAR
-The INCAR file is the central input file of VASP, which determines *what
-to do and how to do it*. The [INCAR
-tags](../redirects/Category-INCAR.md) specified in the INCAR file
-select the algorithms and set the parameters that VASP uses during the
-calculation. VASP will use reasonable default values, which we recommend
-using when unsure. Yet, the settings in the INCAR file are the main
-source of errors and false results, so we suggest carefully checking the
-meaning of the set [INCAR tags](../redirects/Category-INCAR.md).
-Regarding the format, each statement consists of the name of a tag, the
-equal sign **=**, and the values assigned to the tag (tag = values). For
-instance, an INCAR file for a density-functional-theory calculation
-might read
+
+
+The INCAR file is the central
+input file of VASP, which determines *what to do and how to do it*. The
+<a href="/wiki/Category:INCAR" class="mw-redirect"
+title="Category:INCAR">INCAR tags</a> specified in the
+INCAR file select the
+algorithms and set the parameters that VASP uses during the calculation.
+VASP will use reasonable default values, which we recommend using when
+unsure. Yet, the settings in the
+INCAR file are the main source
+of errors and false results, so we suggest carefully checking the
+meaning of the set <a href="/wiki/Category:INCAR" class="mw-redirect"
+title="Category:INCAR">INCAR tags</a>. Regarding the format, each
+statement consists of the name of a tag, the equal sign **=**, and the
+values assigned to the tag (tag = values). For instance, an
+INCAR file for a
+density-functional-theory calculation might read
 
       ALGO  = Normal # alorithm for electron optimization
       ISMEAR= -1     # Fermi smearing
@@ -23,11 +29,15 @@ might read
 |----|
 | **Tip:** VASP writes its interpretation of the data in the INCAR file to the [OUTCAR](../output-files/OUTCAR.md) file. Please verify that it agrees with the intended setup. |
 
-## Format
-The INCAR file is a tagged format free-ASCII file. That is, each
-statement follows a *tag = values* syntax. Typically, each line contains
-a single statement, but it is possible to combine multiple statements on
-a single line, separating them by a semicolon **;**, e.g.,
+## Format\[<a href="/wiki/index.php?title=INCAR&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Format">edit</a> \| (./index.php.md)\]
+
+The INCAR file is a tagged
+format free-ASCII file. That is, each statement follows a *tag = values*
+syntax. Typically, each line contains a single statement, but it is
+possible to combine multiple statements on a single line, separating
+them by a semicolon **;**, e.g.,
 
       ISMEAR= -1 ;  SIGMA = 0.05
 
@@ -71,15 +81,17 @@ This syntax is also used to set specific tags on specific
 [IMAGES](../incar-tags/IMAGES.md).
 
 For comments, VASP ignores any text after a hashtag **\#** or
-exclamation mark **!**. Use this to add comments anywhere to the INCAR
-file. A comment prefix (#!) is often unnecessary because VASP ignores
-all text that does not fit the statement format (tag = values). In this
-case, do not use any syntax relevant character (=;") because it may
-break the parsing of the INCAR file. VASP generally ignores empty lines,
-but we have encountered issues due to lines with tabs for some
-compilers.
+exclamation mark **!**. Use this to add comments anywhere to the
+INCAR file. A comment prefix
+(#!) is often unnecessary because VASP ignores all text that does not
+fit the statement format (tag = values). In this case, do not use any
+syntax relevant character (=;") because it may break the parsing of the
+INCAR file. VASP generally
+ignores empty lines, but we have encountered issues due to lines with
+tabs for some compilers.
 
-A typical (relatively complex) INCAR:
+A typical (relatively complex)
+INCAR:
 
     SYSTEM = Rhodium surface calculation
 
@@ -105,7 +117,10 @@ A typical (relatively complex) INCAR:
       NCORE  =    4      # one orbital handled by 4 cores 
       LREAL  =    A      # real space projection; slightly less accurate but faster
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=INCAR&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [A comprehensive list of all **INCAR** tags and related
   articles](../categories/Category-INCAR_tag.md).
 - Other important [input
@@ -114,3 +129,5 @@ A typical (relatively complex) INCAR:
   and [POTCAR](POTCAR.md)
 
 ------------------------------------------------------------------------
+
+

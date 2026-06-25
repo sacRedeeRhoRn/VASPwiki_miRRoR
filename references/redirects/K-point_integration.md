@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # K-point integration
+
+
+
 Redirect to:
 
 - [Integrating over all
   orbitals](../theory/Integrating_over_all_orbitals.md)
+
+

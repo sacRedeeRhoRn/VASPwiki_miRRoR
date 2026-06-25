@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Mueller-Plathe method
+
+
+
 Redirect to:
 
 - [Müller-Plathe
   method](../tutorials/Müller-Plathe_method.md)
+
+

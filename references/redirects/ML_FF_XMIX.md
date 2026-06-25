@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML FF XMIX
+
+
+
 Redirect to:
 
-- [ML XMIX](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=ML_XMIX&amp;redirect=no"
+  class="mw-redirect" title="ML XMIX">ML XMIX</a>
+
+

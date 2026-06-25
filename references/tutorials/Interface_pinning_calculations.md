@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Interface pinning calculations
+
+
 **Interface pinning** uses the $Np_zT$
-ensemble where the barostat only acts along the $z$ direction. This ensemble uses a Langevin thermostat and a
-Parrinello-Rahman barostat with lattice constraints in the remaining two
-dimensions. The solid-liquid interface must be in the
-$x$-$y$
-plane perpendicular to the action of the barostat.
+ensemble where the barostat only acts along the
+$z$ direction. This ensemble uses a Langevin thermostat
+and a Parrinello-Rahman barostat with lattice constraints in the
+remaining two dimensions. The solid-liquid interface must be in the
+$x$-$y$ plane
+perpendicular to the action of the barostat.
 
 Set the following tags for the **interface pinning** method:
 
@@ -18,14 +21,16 @@ Defines the near-fading distance $n$.
 Defines the far-fading distance $f$.
 
 [OFIELD_KAPPA](../incar-tags/OFIELD_KAPPA.md)  
-Defines the coupling strength $\kappa$
-of the bias potential.
+Defines the coupling strength $\kappa$ of
+the bias potential.
 
 [OFIELD_A](../incar-tags/OFIELD_A.md)  
-Defines the desired value of the order parameter $A$.
+Defines the desired value of the order parameter
+$A$.
 
 The following example [INCAR](../input-files/INCAR.md) file calculates the
-interface pinning in sodium^([\[1\]](#cite_note-pedersen:prb:13-1)):
+interface pinning in
+sodium<sup>[\[1\]](#cite_note-pedersen:prb:13-1)</sup>:
 
     TEBEG = 400                   # temperature in K
     POTIM = 4                     # timestep in fs
@@ -41,7 +46,11 @@ interface pinning in sodium^([\[1\]](#cite_note-pedersen:prb:13-1)):
     OFIELD_KAPPA = 500            # strength of bias potential in eV/(unit of Q)^2
     OFIELD_A = 0.15               # desired value of the Q6 order parameter
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Interface_pinning_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md),
 [OFIELD_Q6_NEAR](../incar-tags/OFIELD_Q6_NEAR.md),
 [OFIELD_Q6_FAR](../incar-tags/OFIELD_Q6_FAR.md),
@@ -50,11 +59,21 @@ interface pinning in sodium^([\[1\]](#cite_note-pedersen:prb:13-1)):
 
 [Interface pinning](../theory/Interface_pinning.md)
 
-## References
-1.  [↑](#cite_ref-pedersen:prb:13_1-0) [U. R. Pedersen, F. Hummel, G.
-    Kresse, G. Kahl, and C. Dellago, Phys. Rev. B **88**, 094101
-    (2013).](https://doi.org/10.1103/PhysRevB.88.094101)
+## References\[<a
+href="/wiki/index.php?title=Interface_pinning_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-pedersen:prb:13_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.88.094101"
+    class="external text" rel="nofollow">U. R. Pedersen, F. Hummel, G.
+    Kresse, G. Kahl, and C. Dellago, Phys. Rev. B <strong>88</strong>,
+    094101 (2013).</a>
+
 
   
 
 ------------------------------------------------------------------------
+
+

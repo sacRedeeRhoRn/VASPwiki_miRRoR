@@ -2,6 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # POTCAR tag
+
+
+
 Redirect to:
 
 - [Category:POTCAR tag](../categories/Category-POTCAR_tag.md)
+
+

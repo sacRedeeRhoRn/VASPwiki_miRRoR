@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_CARRIER_DEN
-ELPH_SELFEN_CARRIER_DEN = \[real array\]  
+
+
+ELPH_SELFEN_CARRIER_DEN =
+\[real array\]  
 Default: **ELPH_SELFEN_CARRIER_DEN** = 0.0 
 
 Description: List of additional carrier densities in units of
-$cm^{-3}$ at which to compute the
-phonon-mediated electron self-energy and transport coefficients.
+$cm^{-3}$ at which to compute the phonon-mediated
+electron self-energy and transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -25,9 +28,10 @@ computed for the list of temperatures specified by
 |----|
 | **Important:** The ELPH_SELFEN_CARRIER_DEN adds electrons when positive, i.e., *n*-doping; when negative, ELPH_SELFEN_CARRIER_DEN removes electrons from the system, i.e., *p*-doping. |
 
-For example, if `ELPH_SELFEN_CARRIER_DEN`` = 1e+16 1e+17 1e+18` the
-`Chemical potential` section in the [OUTCAR](../output-files/OUTCAR.md) file
-might show something like
+For example, if
+`ELPH_SELFEN_CARRIER_DEN`` = 1e+16 1e+17 1e+18`
+the `Chemical potential` section in the [OUTCAR](../output-files/OUTCAR.md)
+file might show something like
 
                       Number of electrons per cell
                       ----------------------------
@@ -48,11 +52,13 @@ might show something like
     T=    500.00000000     3.58994519     3.59815865     3.66491104
                       ----------------------------
 
-In the above tables, the number of elements in ELPH_SELFEN_CARRIER_DEN
+In the above tables, the number of elements in
+ELPH_SELFEN_CARRIER_DEN
 determines the number of columns, while the number of elements in
 [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md)
 determines the number of rows. Specifying more than one carrier density
-in ELPH_SELFEN_CARRIER_DEN creates additional [electron-phonon
+in ELPH_SELFEN_CARRIER_DEN
+creates additional [electron-phonon
 accumulators](../misc/Electron-phonon_accumulators.md).
 
 Instead of specifying a carrier density, it is possible to explicitly
@@ -66,7 +72,11 @@ The information related to the chemical potential calculation can be
 found under the `Chemical potential calculation` section in the
 [OUTCAR](../output-files/OUTCAR.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_CARRIER_DEN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon
@@ -81,3 +91,5 @@ found under the `Chemical potential calculation` section in the
 - [ELPH_SELFEN_MU](ELPH_SELFEN_MU.md)
 - [ELPH_SELFEN_MU_RANGE](ELPH_SELFEN_MU_RANGE.md)
 - [NELECT](NELECT.md)
+
+

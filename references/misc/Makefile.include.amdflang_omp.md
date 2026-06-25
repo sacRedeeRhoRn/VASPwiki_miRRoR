@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include.amdflang_omp
+
+
     # Default precompiler options
     CPP_OPTIONS = -DHOST=\"LinuxGNU\" \
                   -DMPI -DMPI_BLOCK=8000 -Duse_collective \
@@ -94,3 +96,5 @@
 ------------------------------------------------------------------------
 
 [makefile.include](Makefile.include.md)
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LKPROJ
+
+
 LKPROJ = .TRUE. \| .FALSE.  
 Default: **LKPROJ** = .FALSE. 
 
@@ -9,9 +11,10 @@ Description: switches on the **k**-point projection scheme.
 
 ------------------------------------------------------------------------
 
-For LKPROJ=.TRUE., VASP will project the orbitals onto the reciprocal
-space of an alternative unit cell. This unit cell has to be supplied in
-the file [POSCAR.prim](../misc/POSCAR.prim.md), in the usual
+For LKPROJ=.TRUE., VASP will
+project the orbitals onto the reciprocal space of an alternative unit
+cell. This unit cell has to be supplied in the file
+[POSCAR.prim](../misc/POSCAR.prim.md), in the usual
 [POSCAR](../input-files/POSCAR.md) format.
 
 As a first step, the **k**-projection scheme determines the set
@@ -19,8 +22,7 @@ As a first step, the **k**-projection scheme determines the set
 zone of the structure given in
 [POSCAR.prim](../misc/POSCAR.prim.md), for which
 
-$\langle \mathbf{k}'+\mathbf{G}' |
-\mathbf{k}+\mathbf{G}\rangle \neq 0$
+$\langle \mathbf{k}'+\mathbf{G}' | \mathbf{k}+\mathbf{G}\rangle \neq 0$
 
 where **G** and **G′** are reciprocal space vectors in the reciprocal
 spaces of the structures specified in [POSCAR](../input-files/POSCAR.md)
@@ -40,9 +42,9 @@ $\Kappa_{n\mathbf{k}\sigma\mathbf{k}'}=\sum_{\mathbf{GG}'} |\langle
 and writes this information onto the [PRJCAR](../output-files/PRJCAR.md) and
 [vasprun.xml](../output-files/Vasprun.xml.md) files.
 
-K_(n**k**σ**k′**) provides a measure of how strongly the orbital
-$\Psi$_(n**k**σ) contributes at the
-point **k′** in the reciprocal space of structure
+K<sub>n**k**σ**k′**</sub> provides a measure of how strongly the orbital
+$\Psi$<sub>n**k**σ</sub> contributes at the point **k′**
+in the reciprocal space of structure
 [POSCAR.prim](../misc/POSCAR.prim.md).
 
 One may, for instance, use this scheme to project the orbitals of a
@@ -52,12 +54,17 @@ supercell onto the reciprocal space of a generating primitive cell.
 |----|
 | **Warning:** At the moment the **k**-point projection only works with [NPAR](NPAR.md)=1. |
 
-|                                               |
-|-----------------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP version 6.0.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LKPROJ&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [PRJCAR](../output-files/PRJCAR.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LKPROJ-_incategory-Examples)
+
+

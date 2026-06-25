@@ -2,7 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Band decomposed charge densities
+
+
+
 Redirect to:
 
-- [Band-decomposed charge
-  densities](https://vasp.at/wiki/index.php/index.php)
+- <a
+  href="/wiki/index.php?title=Band-decomposed_charge_densities&amp;redirect=no"
+  class="mw-redirect"
+  title="Band-decomposed charge densities">Band-decomposed charge
+  densities</a>
+
+

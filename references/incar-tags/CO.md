@@ -2,35 +2,67 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CO
+
+
+
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](../misc/O_atom.md) \> [O atom
-spinpolarized](../misc/O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+[O
+atom](../misc/O_atom.md) \>
+[O atom
+spinpolarized](../misc/O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](../misc/O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](../misc/O_dimer.md) \> CO \> [CO
-vibration](../misc/CO_vibration.md) \> [CO partial
-DOS](../misc/CO_partial_DOS.md) \> [H2O](H2O.md) \>
-[H2O vibration](../misc/H2O_vibration.md) \> [H2O molecular
+[O
+dimer](../misc/O_dimer.md) \>
+CO \>
+[CO
+vibration](../misc/CO_vibration.md) \>
+[CO partial
+DOS](../misc/CO_partial_DOS.md) \>
+[H2O](H2O.md) \> [H2O
+vibration](../misc/H2O_vibration.md) \>
+[H2O molecular
 dynamics](../misc/H2O_molecular_dynamics.md) \>
 [Further things to try](../misc/At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-  - [2.4 POTCAR](#POTCAR)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+  - [2.4
+    POTCAR](#POTCAR)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Relaxation of the bond length in a CO molecule.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     CO molecule in a box
      1.0          ! universal scaling parameters
      8.0 0.0 0.0  ! lattice vector  a(1)
@@ -41,34 +73,46 @@ Relaxation of the bond length in a CO molecule.
      0 0 0        ! first atom
      0 0 1.12     ! second atom
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM = CO molecule in a box
     ISMEAR = 0 ! Gaussian smearing
     NSW = 5    ! 5 ionic steps
     IBRION = 2 ! use the conjugate gradient algorithm
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Gamma-point only
      0
     Monkhorst Pack
      1 1 1
      0 0 0
 
-### [POTCAR](../input-files/POTCAR.md)
+### [POTCAR](../input-files/POTCAR.md)\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: POTCAR">edit</a> \| (./index.php.md)\]
+
 The [POTCAR](../input-files/POTCAR.md) file is created by the concatenation
 of two individual [POTCAR](../input-files/POTCAR.md) files corresponding to
 O and C, e.g.:
 
     cat  .../O/POTCAR  .../C POTCAR  > POTCAR
 
-## Calculation
+## Calculation\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - A similar relaxation as in the previous case
   ([O_dimer](../misc/O_dimer.md)) is performed but in this case
   more steps are required, since the first estimate for the minimum is
   not very accurate. The trial steps are much too long
   ([POTIM](POTIM.md) parameter).
 
-&nbsp;
+<!-- -->
 
        1 F= -.14764064E+02 E0= -.14764064E+02  d E =-.147641E+02
      curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
@@ -99,18 +143,34 @@ O and C, e.g.:
      search vector abs. value=  0.814E-02
      reached required accuracy - stopping structural energy minimisation
 
-## Download
-[CO.tgz](https://vasp.at/wiki/images/a/a3/CO.tgz "CO.tgz")
+## Download\[<a href="/wiki/index.php?title=CO&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/a/a3/CO.tgz" class="internal"
+title="CO.tgz">CO.tgz</a>
+
 
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](../misc/O_atom.md) \> [O atom
-spinpolarized](../misc/O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+[O
+atom](../misc/O_atom.md) \>
+[O atom
+spinpolarized](../misc/O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](../misc/O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](../misc/O_dimer.md) \> CO \> [CO
-vibration](../misc/CO_vibration.md) \> [CO partial
-DOS](../misc/CO_partial_DOS.md) \> [H2O](H2O.md) \>
-[H2O vibration](../misc/H2O_vibration.md) \> [H2O molecular
+[O
+dimer](../misc/O_dimer.md) \>
+CO \>
+[CO
+vibration](../misc/CO_vibration.md) \>
+[CO partial
+DOS](../misc/CO_partial_DOS.md) \>
+[H2O](H2O.md) \> [H2O
+vibration](../misc/H2O_vibration.md) \>
+[H2O molecular
 dynamics](../misc/H2O_molecular_dynamics.md) \>
 [Further things to try](../misc/At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

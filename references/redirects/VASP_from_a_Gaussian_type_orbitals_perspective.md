@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VASP from a Gaussian type orbitals perspective
+
+
+
 Redirect to:
 
 - [VASP from a Gaussian-type orbitals
   perspective](../theory/VASP_from_a_Gaussian-type_orbitals_perspective.md)
+
+

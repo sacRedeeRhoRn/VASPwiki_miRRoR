@@ -2,18 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PAW control tags
+
+
 There are a few tags that control the behavior of the PAW
 implementation. The first one is [LMAXPAW](../incar-tags/LMAXPAW.md)=*l*.
 This flag sets the maximum *l*-quantum number for the evaluation of the
 on-site terms on the radial support grids in the PAW method. The default
-for [LMAXPAW](../incar-tags/LMAXPAW.md) is $2\*l_{max}$, where $l_{max}$
-is the maximum angular quantum number of the partial waves. A useful
+for [LMAXPAW](../incar-tags/LMAXPAW.md) is $2\*l_{max}$,
+where $l_{max}$ is
+the maximum angular quantum number of the partial waves. A useful
 setting for this tag is for instance
 [LMAXPAW](../incar-tags/LMAXPAW.md)=0. In this case, only spherical terms
 are evaluated on the radial grid. This does not mean that a-spherical
 terms are totally neglected, because the compensation charges are always
-expanded up to $2\*l_{max}$ on the
-plane wave grid.
+expanded up to $2\*l_{max}$
+on the plane wave grid.
 
 For [LMAXPAW](../incar-tags/LMAXPAW.md)=-1, no on-site correction terms
 are evaluated on the radial support grid, which effectively means that
@@ -71,3 +74,5 @@ achieved by setting [ENAUG](../incar-tags/ENAUG.md) = 1 and
 [ADDGRID](../incar-tags/ADDGRID.md)=*.TRUE.* in the
 [INCAR](../input-files/INCAR.md) file. The flag can also be used for US-PPs,
 in particular, to reduce the noise in the forces.
+
+

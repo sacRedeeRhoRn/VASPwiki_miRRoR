@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Band structure
+
+
+
 Redirect to:
 
 - [Category:Band
   structure](../categories/Category-Band_structure.md)
+
+

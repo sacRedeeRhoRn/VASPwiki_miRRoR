@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ACFDT calculations
+
+
+
 Redirect to:
 
 - [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md)
+
+

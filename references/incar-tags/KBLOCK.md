@@ -2,18 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # KBLOCK
+
+
 KBLOCK = \[integer\]  
 Default: **KBLOCK** = [NSW](NSW.md) 
 
-Description: After `KBLOCK`` * `[`NBLOCK`](NBLOCK.md) ionic
-steps the averaged pair-correlation function and DOS are written to the
-files [PCDAT](../output-files/PCDAT.md) and [DOSCAR](../output-files/DOSCAR.md).
-More details can be found on the page describing the tag
-[NBLOCK](NBLOCK.md).
+Description: After
+`KBLOCK`` * `[`NBLOCK`](NBLOCK.md)
+ionic steps the averaged pair-correlation function and DOS are written
+to the files [PCDAT](../output-files/PCDAT.md) and
+[DOSCAR](../output-files/DOSCAR.md). More details can be found on the page
+describing the tag [NBLOCK](NBLOCK.md).
 
 ------------------------------------------------------------------------
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=KBLOCK&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NBLOCK](NBLOCK.md), [PCDAT](../output-files/PCDAT.md),
 [DOSCAR](../output-files/DOSCAR.md)
 
@@ -21,3 +27,5 @@ More details can be found on the page describing the tag
 tag](https://vasp.at/wiki/index.php/Special-Search/-KBLOCK-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IMAGES
+
+
 IMAGES = \[integer\]  
 Default: **IMAGES** = 0 
 
@@ -13,21 +15,25 @@ integration](VCAIMAGES.md).
 
 ------------------------------------------------------------------------
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.2.0 |
 
-IMAGES sets the number of independent VASP calculations in separate
-directories. The primary [INCAR](../input-files/INCAR.md) file should be
-located in the root directory. Other files such as
-[KPOINTS](../input-files/KPOINTS.md), [POTCAR](../input-files/POTCAR.md), and
-[POSCAR](../input-files/POSCAR.md) can be placed in subdirectories, e.g.,
-01, 02, 03, etc., or in the root directory. Files in subdirectories take
-precedence over those in the root directory.
+IMAGES sets the number of
+independent VASP calculations in separate directories. The primary
+[INCAR](../input-files/INCAR.md) file should be located in the root
+directory. Other files such as [KPOINTS](../input-files/KPOINTS.md),
+[POTCAR](../input-files/POTCAR.md), and [POSCAR](../input-files/POSCAR.md) can
+be placed in subdirectories, e.g., 01, 02, 03, etc., or in the root
+directory. Files in subdirectories take precedence over those in the
+root directory.
 
 See [use cases](#Use_cases) described below.
 
-## File handling
+## File handling\[<a href="/wiki/index.php?title=IMAGES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: File handling">edit</a> \| (./index.php.md)\]
+
 When VASP starts, it reads the file [INCAR](../input-files/INCAR.md) in the
 root directory. Subsequently, VASP splits the MPI communicator into
 subgroups for each image. If an [INCAR](../input-files/INCAR.md) file is
@@ -61,7 +67,8 @@ files](https://vasp.at/wiki/index.php/Category:Output_files) (including
 [OUTCAR](../output-files/OUTCAR.md) and [OSZICAR](../output-files/OSZICAR.md))
 are always written to the subdirectories.
 
-To summarize, to run a calculation with IMAGES, you provide:
+To summarize, to run a calculation with
+IMAGES, you provide:
 
 - an [INCAR](../input-files/INCAR.md) file in the root directory
 - optionally an overwriting [INCAR](../input-files/INCAR.md) file in the
@@ -70,30 +77,34 @@ To summarize, to run a calculation with IMAGES, you provide:
 - [KPOINTS](../input-files/KPOINTS.md) and [POTCAR](../input-files/POTCAR.md)
   either in the root or in the subdirectories
 
-## Use cases
+## Use cases\[<a href="/wiki/index.php?title=IMAGES&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Use cases">edit</a> \| (./index.php.md)\]
+
 Nudged elastic bands  
-If IMAGES is set without any other tag, an elastic-band calculation is
-performed. This defaults to the recommended nudged-elastic-band method,
-but other options are available by modifying the
-[SPRING](SPRING.md) tag. Please consider the
-[nudged-elastic-bands
+If IMAGES is set without any
+other tag, an elastic-band calculation is performed. This defaults to
+the recommended nudged-elastic-band method, but other options are
+available by modifying the [SPRING](SPRING.md) tag. Please
+consider the [nudged-elastic-bands
 how-to](../tutorials/Nudged_elastic_bands.md) and the
 [SPRING](SPRING.md) tag for more information.
 
-&nbsp;
+<!-- -->
 
 Thermodynamic coupling-constant integrations  
 When [VCAIMAGES](VCAIMAGES.md) is set in the
 [INCAR](../input-files/INCAR.md) file, VASP computes a thermodynamic
-coupling-constant integration. This, in turn, sets IMAGES=2, running two
-VASP calculations in the subdirectories 01 and 02. Since this is a
-special case where the two calculations may have different computational
-costs, [NCORE_IN_IMAGE1](NCORE_IN_IMAGE1.md) can be
-set to force an unequal split of the processes across the two images.
-The tag [VCAIMAGES](VCAIMAGES.md) describes in more
-detail how to set up these calculations.
+coupling-constant integration. This, in turn, sets
+IMAGES=2, running two VASP
+calculations in the subdirectories 01 and 02. Since this is a special
+case where the two calculations may have different computational costs,
+[NCORE_IN_IMAGE1](NCORE_IN_IMAGE1.md) can be set to
+force an unequal split of the processes across the two images. The tag
+[VCAIMAGES](VCAIMAGES.md) describes in more detail how to
+set up these calculations.
 
-&nbsp;
+<!-- -->
 
 Parallel tempering/replica-exchange method and performing independent calculations  
 If the tag [LTEMPER](LTEMPER.md)=.TRUE. is set in the
@@ -110,7 +121,10 @@ combination [LTEMPER](LTEMPER.md)=.TRUE. and
 independent calculations in the individual subdirectories. This might be
 helpful to make better use of nodes with many cores.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=IMAGES&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [VCAIMAGES](VCAIMAGES.md),
 [LTEMPER](LTEMPER.md), [nudged-elastic-bands
 how-to](../tutorials/Nudged_elastic_bands.md),
@@ -120,3 +134,5 @@ how-to](../tutorials/Nudged_elastic_bands.md),
 tag](https://vasp.at/wiki/index.php/Special-Search/-IMAGES-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NWRITE
-NWRITE = 0 \| 1 \| 2 \| 3 \| 4  
+
+
+NWRITE = 0 \| 1 \| 2 \| 3 \|
+4  
 Default: **NWRITE** = 2 
 
 Description: This tag determines how much will be written to the file
@@ -10,7 +13,8 @@ Description: This tag determines how much will be written to the file
 
 ------------------------------------------------------------------------
 
-The options for NWRITE are given in detail as
+The options for NWRITE are
+given in detail as
 
 |  |  |  |  |  |
 |:--:|:--:|:--:|:--:|:--:|
@@ -44,11 +48,14 @@ where the following abbreviations have been used
 |----|
 | **Tip:** For long molecular-dynamics runs, use `NWRITE`` = 0` or `NWRITE`` = 1`. For short runs use `NWRITE`` = 2`. `NWRITE`` = 3` might give information if something goes wrong. |
 
-|                                                      |
-|------------------------------------------------------|
+|  |
+|----|
 | **Important:** `NWRITE`` = 4` is for debugging only. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NWRITE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [OUTCAR](../output-files/OUTCAR.md), [IALGO](IALGO.md),
 [IBRION](IBRION.md), [MDALGO](MDALGO.md),
 [ISIF](ISIF.md), [ISYM](ISYM.md),
@@ -58,3 +65,5 @@ convergence](../tutorials/Troubleshooting_electronic_convergence.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NWRITE-_incategory-Examples)
+
+

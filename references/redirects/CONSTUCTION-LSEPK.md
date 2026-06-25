@@ -2,6 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CONSTUCTION:LSEPK
+
+
+
 Redirect to:
 
-- [Construction:LSEPK](https://vasp.at/wiki/index.php/index.php)")
+- <a
+  href="/wiki/index.php?title=Construction:LSEPK&amp;action=edit&amp;redlink=1"
+  class="new"
+  title="Construction:LSEPK (page does not exist)">Construction:LSEPK</a>
+
+

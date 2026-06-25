@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Harris Foulkes functional
+
+
+
 Redirect to:
 
 - [Harris-Foulkes
   functional](../methods/Harris-Foulkes_functional.md)
+
+

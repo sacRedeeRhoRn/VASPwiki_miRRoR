@@ -2,26 +2,43 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Troubleshooting electronic convergence
+
+
 There can be many reasons why convergence to the electronic ground state
 fails. Below you find some general strategies to overcome convergence
 issues in the [electronic
 minimization](../categories/Category-Electronic_minimization.md)
 and some recommendations for specific cases, e.g., charged systems or
-magnetic systems. This [lecture covers electronic convergence in
-VASP](https://youtu.be/v7gc98lG6Wo).
+magnetic systems. This
+<a href="https://youtu.be/v7gc98lG6Wo" class="external text"
+rel="nofollow">lecture covers electronic convergence in VASP</a>.
+
 
 ## Contents
 
-- [1 Step-by-step instructions](#Step-by-step_instructions)
-- [2 Method-specific recommendations](#Method-specific_recommendations)
-  - [2.1 Magnetic calculation with
-    LDA+U](#Magnetic_calculation_with_LDA+U)
-  - [2.2 MBJ calculation](#MBJ_calculation)
-  - [2.3 Dipole Correction](#Dipole_Correction)
-  - [2.4 Magnetic calculations](#Magnetic_calculations)
-- [3 Related tags and articles](#Related_tags_and_articles)
 
-## Step-by-step instructions
+- [1 Step-by-step
+  instructions](#Step-by-step_instructions)
+- [2
+  Method-specific
+  recommendations](#Method-specific_recommendations)
+  - [2.1 Magnetic
+    calculation with LDA+U](#Magnetic_calculation_with_LDA+U)
+  - [2.2 MBJ
+    calculation](#MBJ_calculation)
+  - [2.3 Dipole
+    Correction](#Dipole_Correction)
+  - [2.4 Magnetic
+    calculations](#Magnetic_calculations)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
 **Step 1:** Simplify the calculation and reduce time-to-solution. Try to
 create a minimal [INCAR](../input-files/INCAR.md) file with as few tags as
 possible. If the calculation converges, then gradually add them back
@@ -55,12 +72,20 @@ with f-orbitals or calculations with meta-GGA's.
 |----|
 | **Tip:** You can get information at each electronic step using [`NWRITE`](../incar-tags/NWRITE.md)` = 2,3`. |
 
-## Method-specific recommendations
+## Method-specific recommendations\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Method-specific recommendations">edit</a> \| (./index.php.md)\]
+
 In the following, we will describe a few recipes that work for
 particular systems. Some of these recipes might be transferable even to
 other methods.
 
-### Magnetic calculation with LDA+U
+### Magnetic calculation with LDA+U\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Magnetic calculation with LDA+U">edit</a> \| (./index.php.md)\]
+
 Magnetic calculations present a lot of challenges, in particular when
 the energy differences between different magnetic configurations are
 small. Our recommendation is to split the calculation into multiple
@@ -83,7 +108,11 @@ smaller [ENCUT](../incar-tags/ENCUT.md) and then restarting the calculation
 from the [WAVECAR](../input-files/WAVECAR.md) with the desired
 [ENCUT](../incar-tags/ENCUT.md).
 
-### MBJ calculation
+### MBJ calculation\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: MBJ calculation">edit</a> \| (./index.php.md)\]
+
 This exchange-correlation functional is not particularly easy to
 converge in some systems. For these systems, we recommend that you split
 the calculation into multiple steps that successively bring you closer
@@ -103,14 +132,22 @@ LDA+U](#Magnetic_calculation_with_LDA+U), it might be helpful to run
 steps 1. to 3. with a low [ENCUT](../incar-tags/ENCUT.md) and then perform
 step 3. again with the desired [ENCUT](../incar-tags/ENCUT.md).
 
-### Dipole Correction
+### Dipole Correction\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Dipole Correction">edit</a> \| (./index.php.md)\]
+
 1.  First, converge the calculation with
     [LDIPOL](../incar-tags/LDIPOL.md)=.FALSE. Store the
     [WAVECAR](../input-files/WAVECAR.md) in the same folder.
 2.  Use the [WAVECAR](../input-files/WAVECAR.md) to restart the
     calculation with [LDIPOL](../incar-tags/LDIPOL.md)=.TRUE.
 
-### Magnetic calculations
+### Magnetic calculations\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Magnetic calculations">edit</a> \| (./index.php.md)\]
+
 What can one do when convergence is bad:
 
 - Start from charge density of non-spin-polarized calculation using
@@ -128,5 +165,11 @@ What can one do when convergence is bad:
   file).
 - Use constraints to stabilize the magnetic configuration.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Troubleshooting_electronic_convergence&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NWRITE](../incar-tags/NWRITE.md)
+
+

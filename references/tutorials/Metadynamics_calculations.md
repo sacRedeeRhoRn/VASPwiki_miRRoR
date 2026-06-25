@@ -2,7 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Metadynamics calculations
-### Anderson thermostat
+
+
+### Anderson thermostat\[<a
+href="/wiki/index.php?title=Metadynamics_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Anderson thermostat">edit</a> \| (./index.php.md)\]
+
 - For a metadynamics run with Andersen thermostat, one has to:
 
 1.  Set the standard MD-related tags: [IBRION](../incar-tags/IBRION.md)=0,
@@ -32,7 +38,11 @@ collective variables for each MD step are listed in
 [REPORT](../output-files/REPORT.md)-file, check the lines after the string
 [`Metadynamics`](../theory/Metadynamics.md).
 
-### Nose-Hoover thermostat
+### Nose-Hoover thermostat\[<a
+href="/wiki/index.php?title=Metadynamics_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Nose-Hoover thermostat">edit</a> \| (./index.php.md)\]
+
 - For a metadynamics run with Nose-Hoover thermostat, one has to:
 
 1.  Set the standard MD-related tags: [IBRION](../incar-tags/IBRION.md)=0,
@@ -61,7 +71,12 @@ collective variables for each MD step are listed in
 [REPORT](../output-files/REPORT.md)-file, check the lines after the string
 `Metadynamics`.
 
-## Related tags and sections
+
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Metadynamics_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md), [HILLS_H](../incar-tags/HILLS_H.md),
 [HILLS_W](../incar-tags/HILLS_W.md),
 [HILLS_BIN](../incar-tags/HILLS_BIN.md),
@@ -77,3 +92,5 @@ metadynamics](../misc/Nuclephile_Substitution_CH3Cl_-_mMD3.md)
   
 
 ------------------------------------------------------------------------
+
+

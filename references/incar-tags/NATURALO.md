@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NATURALO
+
+
 NATURALO = \[integer\]  
 Default: **NATURALO** = 0; for low scaling GW type calculations the
 default is 4 
@@ -18,22 +20,25 @@ the [WAVECAR](../input-files/WAVECAR.md) file can also be updated to the
 eigenvalues of the RPA density matrix. For [ALGO](ALGO.md) =
 G0W0R, the interacting Green's function is approximated as
 
-$G = G_0 + G_0 \Sigma G_0$
+$G
+= G_0 + G_0 \Sigma G_0$
 
 whereas for [ALGO](ALGO.md) = scGW0R the Dyson equation is
 solved
 
-$G = G_0 + G \Sigma G_0.$
+$G
+= G_0 + G \Sigma G_0.$
 
 In both cases, the RPA density matrix is determined as
-$\gamma= \lim_{\tau \to 0^-} G(\tau)$.
-More details on the use of RPA natural orbitals can be found in Ref.
-^([\[1\]](#cite_note-ramberger2019rpa-1)).
+$\gamma= \lim_{\tau \to 0^-} G(\tau)$. More details on
+the use of RPA natural orbitals can be found in Ref.
+<sup>[\[1\]](#cite_note-ramberger2019rpa-1)</sup>.
 
 The following settings are currently supported
 
-- NATURALO=0 calculate the density matrix, diagonalize the matrix and
-  write the natural orbitals and eigenvalues of the density matrix to
+- NATURALO=0 calculate the
+  density matrix, diagonalize the matrix and write the natural orbitals
+  and eigenvalues of the density matrix to
   [WAVECAR](../input-files/WAVECAR.md). The eigenvalues of the density
   matrix are stored in the occupancy entries of the
   [WAVECAR](../input-files/WAVECAR.md) file, whereas the one-electron DFT
@@ -43,53 +48,62 @@ The following settings are currently supported
   [LFINITE_TEMPERATURE](LFINITE_TEMPERATURE.md)
   should not be combined with this setting.
 
-&nbsp;
+<!-- -->
 
-- NATURALO=1 calculate the density matrix, diagonalize the matrix only
-  in the sub-block of unoccupied states, and write the occupied Kohn
-  Sham orbitals, as well as the natural orbitals corresponding to
-  unoccupied states to the file [WAVECAR](../input-files/WAVECAR.md). The
-  unoccupied orbitals are ordered according to their occupancies in the
-  RPA density matrix. The one-electron occupancies and KS-DFT
-  eigenvalues are not updated from their KS values (the occupancies will
-  remain 1 for occupied Kohn-Sham orbitals and 0 for natural orbitals
-  representing the virtual manifold). This setting has been used in Ref.
-  ^([\[1\]](#cite_note-ramberger2019rpa-1)). See also Ref.
-  ^([\[2\]](#cite_note-GruneisNO-2)) for further information. Note that
-  all orbitals- even those with a tiny fractional occupancy -are treated
-  as occupied orbitals and not updated: the algorithm should hence even
-  work for metallic systems.
+- NATURALO=1 calculate the
+  density matrix, diagonalize the matrix only in the sub-block of
+  unoccupied states, and write the occupied Kohn Sham orbitals, as well
+  as the natural orbitals corresponding to unoccupied states to the file
+  [WAVECAR](../input-files/WAVECAR.md). The unoccupied orbitals are
+  ordered according to their occupancies in the RPA density matrix. The
+  one-electron occupancies and KS-DFT eigenvalues are not updated from
+  their KS values (the occupancies will remain 1 for occupied Kohn-Sham
+  orbitals and 0 for natural orbitals representing the virtual
+  manifold). This setting has been used in Ref.
+  <sup>[\[1\]](#cite_note-ramberger2019rpa-1)</sup>.
+  See also Ref.
+  <sup>[\[2\]](#cite_note-GruneisNO-2)</sup>
+  for further information. Note that all orbitals- even those with a
+  tiny fractional occupancy -are treated as occupied orbitals and not
+  updated: the algorithm should hence even work for metallic systems.
 
-&nbsp;
+<!-- -->
 
-- NATURALO\<0. Similar to NATURALO=1 but additionally conserves
-  ABS\|NATURALO\| unoccupied Kohn-Sham states. This is expedient, for
-  subsequent GW and BSE calculations to conserve few unoccupied orbitals
-  to their Kohn-Sham states.
+- NATURALO\<0. Similar to
+  NATURALO=1 but additionally
+  conserves ABS\|NATURALO\|
+  unoccupied Kohn-Sham states. This is expedient, for subsequent GW and
+  BSE calculations to conserve few unoccupied orbitals to their
+  Kohn-Sham states.
 
-&nbsp;
+<!-- -->
 
-- If 10 is added (e.g. NATURALO=10, NATURALO=11) the density matrix is
-  diagonalizes using a perturbative Loewdin algorithm that attempts to
-  keep the orbital order strictly conserved: E.g. the natural orbital
-  matching closest to each Kohn-Sham orbital will be determined and
-  stored. Use this tag for metals.
+- If 10 is added (e.g.
+  NATURALO=10,
+  NATURALO=11) the density
+  matrix is diagonalizes using a perturbative Loewdin algorithm that
+  attempts to keep the orbital order strictly conserved: E.g. the
+  natural orbital matching closest to each Kohn-Sham orbital will be
+  determined and stored. Use this tag for metals.
 
-&nbsp;
+<!-- -->
 
-- NATURALO=2 (or 12) is similar to 0, but the one-electron occupancies
-  are not updated. In rare cases this might lead to inconsistencies, if
-  the orbital order changes between DFT and the RPA density matrix (i.e.
-  a previously occupied DFT orbitals posses a smaller occupation in the
-  RPA density matrix than some unoccupied Kohn-Sham orbitals and are
-  moved into the unoccupied block). This problem can be reduced using
-  NATURALO=12, as described above. This flag, in combination with
-  [ALGO](ALGO.md) = scGW0R, can be used to evaluate the
-  GW-singles contribution to the correlation
-  energy.^([\[3\]](#cite_note-Klimessingles-3)) One can deduct the HF
-  singles and the GW singles energies from the energies after
+- NATURALO=2 (or 12) is
+  similar to 0, but the one-electron occupancies are not updated. In
+  rare cases this might lead to inconsistencies, if the orbital order
+  changes between DFT and the RPA density matrix (i.e. a previously
+  occupied DFT orbitals posses a smaller occupation in the RPA density
+  matrix than some unoccupied Kohn-Sham orbitals and are moved into the
+  unoccupied block). This problem can be reduced using
+  NATURALO=12, as described
+  above. This flag, in combination with [ALGO](ALGO.md) =
+  scGW0R, can be used to evaluate the GW-singles contribution to the
+  correlation
+  energy.<sup>[\[3\]](#cite_note-Klimessingles-3)</sup>
+  One can deduct the HF singles and the GW singles energies from the
+  energies after
 
-&nbsp;
+<!-- -->
 
         Energies after diagonalization of HF Hamiltonian (single shot)
         Hartree-Fock free energy of the ion-electron system (eV)
@@ -116,32 +130,52 @@ in the stdout and OUTCAR file shows values close to zero (for
 acceptable and the value decreases as [NOMEGA](NOMEGA.md)
 increases.
 
-- NATURALO=4 preserves original (DFT) orbitals but updates the
-  eigenvalues in the [WAVECAR](../input-files/WAVECAR.md) file to the QP
-  energies. This mode is useful if only quasi-particle energies are
-  corrected with the GW method, for instance when selecting
-  [ALGO](ALGO.md)=[EVGW0R](../redirects/GW_calculations.md).
+- NATURALO=4 preserves
+  original (DFT) orbitals but updates the eigenvalues in the
+  [WAVECAR](../input-files/WAVECAR.md) file to the QP energies. This mode
+  is useful if only quasi-particle energies are corrected with the GW
+  method, for instance when selecting
+  [ALGO](ALGO.md)=<a href="/wiki/GW_calculations#gw0" class="mw-redirect"
+  title="GW calculations">EVGW0R</a>.
 
-|                                     |
-|-------------------------------------|
+|  |
+|----|
 | **Mind:** available as of VASP.6.4: |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NATURALO&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ALGO](ALGO.md) for response functions and *RPA*
   calculations
 - for an overview on total energies using the [ACFDT/RPA
   formalism](../methods/ACFDT__RPA_calculations.md)
-- for a practical guide to [GW
-  calculations](../redirects/GW_calculations.md)
+- for a practical guide to
+  <a href="/wiki/GW_calculations" class="mw-redirect"
+  title="GW calculations">GW calculations</a>
 
-## References
-1.  ↑ ^([a](#cite_ref-ramberger2019rpa_1-0))
-    ^([b](#cite_ref-ramberger2019rpa_1-1)) [B. Ramberger, Z. Sukurma, T.
-    Schäfer, G. Kresse, J. Chem. Phys. 151, 214106
-    (2019).](https://doi.org/10.1063/1.5128415)
-2.  [↑](#cite_ref-GruneisNO_2-0) [A. Grüneis et al. J. Chem. Theory
-    Comput. 7, 2780 (2011).](https://doi.org/10.1021/ct200263g)
-3.  [↑](#cite_ref-Klimessingles_3-0) [Jiří Klimeš et al., J. Chem. Phys.
-    143, 102816 (2015).](https://doi.org/10.1063/1.4929346)
+## References\[<a href="/wiki/index.php?title=NATURALO&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-ramberger2019rpa_1-0)</sup>
+    <sup>[b](#cite_ref-ramberger2019rpa_1-1)</sup>
+    <a href="https://doi.org/10.1063/1.5128415" class="external text"
+    rel="nofollow">B. Ramberger, Z. Sukurma, T. Schäfer, G. Kresse, J. Chem.
+    Phys. 151, 214106 (2019).</a>
+2.  [↑](#cite_ref-GruneisNO_2-0)
+    
+    <a href="https://doi.org/10.1021/ct200263g" class="external text"
+    rel="nofollow">A. Grüneis et al. J. Chem. Theory Comput. 7, 2780
+    (2011).</a> 
+3.  [↑](#cite_ref-Klimessingles_3-0)
+    <a href="https://doi.org/10.1063/1.4929346" class="external text"
+    rel="nofollow">Jiří Klimeš et al., J. Chem. Phys. 143, 102816
+    (2015).</a>
+
 
 ------------------------------------------------------------------------
+
+

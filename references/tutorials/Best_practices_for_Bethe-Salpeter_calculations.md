@@ -2,20 +2,37 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Best practices for Bethe-Salpeter calculations
+
+
+
 ## Contents
 
-- [1 Optimizing performance](#Optimizing_performance)
-  - [1.1 Small cells](#Small_cells)
-  - [1.2 Large cells](#Large_cells)
-- [2 Related articles](#Related_articles)
 
-## Optimizing performance
+- [1 Optimizing
+  performance](#Optimizing_performance)
+  - [1.1 Small
+    cells](#Small_cells)
+  - [1.2 Large
+    cells](#Large_cells)
+- [2 Related
+  articles](#Related_articles)
+
+
+## Optimizing performance\[<a
+href="/wiki/index.php?title=Best_practices_for_Bethe-Salpeter_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Optimizing performance">edit</a> \| (./index.php.md)\]
+
 Due to the steep scaling of the BSE method with the system size, it is
 important to optimize the parameters of the calculation. Here we provide
 recommendations that can significantly speed up the BSE calculations in
 VASP. Below we consider two limiting cases: small cells and large cells.
 
-### Small cells
+### Small cells\[<a
+href="/wiki/index.php?title=Best_practices_for_Bethe-Salpeter_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Small cells">edit</a> \| (./index.php.md)\]
+
 We consider that small cells are the cells where the number of atoms
 doesn't exceed *eight*. For such cells, it is typical that a large
 number of k-points is required to obtain a converged spectrum. Hence,
@@ -50,7 +67,11 @@ the following optimizations should be considered.
   precision, which gives a factor of two in performance and halves the
   memory required to store the matrix.
 
-### Large cells
+### Large cells\[<a
+href="/wiki/index.php?title=Best_practices_for_Bethe-Salpeter_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Large cells">edit</a> \| (./index.php.md)\]
+
 The following optimizations should be relevant for cells where the
 number of atoms is larger than *eight*.
 
@@ -91,10 +112,16 @@ number of atoms is larger than *eight*.
   [PRECFOCK](../incar-tags/PRECFOCK.md) must be investigated for each
   system.
 
-## Related articles
+## Related articles\[<a
+href="/wiki/index.php?title=Best_practices_for_Bethe-Salpeter_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](../incar-tags/ALGO.md), [LADDER](../incar-tags/LADDER.md),
 [LHARTREE](../incar-tags/LHARTREE.md),
 [NBANDSV](../incar-tags/NBANDSV.md), [NBANDSO](../incar-tags/NBANDSO.md),
 [NBSEBLOCKV](../incar-tags/NBSEBLOCKV.md),
 [NBSEBLOCKO](../incar-tags/NBSEBLOCKO.md),
 [OMEGAMAX](../incar-tags/OMEGAMAX.md)
+
+

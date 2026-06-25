@@ -2,23 +2,27 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NVE ensemble
-The NVE ensemble (micro-canonical ensemble) is a [statistical
+
+
+The NVE ensemble
+(micro-canonical ensemble) is a [statistical
 ensemble](../categories/Category-Ensembles.md) that is used to
 study material properties under the conditions of a constant particle
 number N, constant volume V and a conserved internal energy E (up to
 numerical inaccuracies). This page describes how to sample the NVE
 ensemble from a
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run.
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run.
 
 **Instructions for setting up a NVE ensemble**
 
 There are multiple ways to set up a
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run which samples from the NVE ensemble in VASP. All options have in
-common that one of the available thermostats is selected but effectively
-disabled via their respective coupling parameters. The simplest and
-recommended way is to use the [Andersen
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run which
+samples from the NVE ensemble in VASP. All options have in common that
+one of the available thermostats is selected but effectively disabled
+via their respective coupling parameters. The simplest and recommended
+way is to use the [Andersen
 thermostat](../tutorials/Andersen_thermostat.md) and setting
 the collision probability
 ([ANDERSEN_PROB](../incar-tags/ANDERSEN_PROB.md)) with the
@@ -30,8 +34,8 @@ freedom ([SMASS](../incar-tags/SMASS.md)). Both presented options will
 switch the thermostat off, such that the velocities are determined by
 the [Hellmann-Feynman
 forces](../theory/Hellmann-Feynman_forces.md) or
-[Machine-learned force
-fields](../redirects/Machine-learned_force_fields.md)
+<a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">Machine-learned force fields</a>
 only. See the following table for the corresponding
 [MDALGO](../incar-tags/MDALGO.md) setting and related tags.
 
@@ -64,8 +68,8 @@ include non-MD algorithms, like structure and volume optimization with
 [`IBRION`](../incar-tags/IBRION.md)` = 1 or 2` and setting
 [`ISIF`](../incar-tags/ISIF.md)` > 2`. A general guide for
 molecular-dynamics simulations can be found on the
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-page.
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> page.
 
 *An example [INCAR](../input-files/INCAR.md) file for the [Andersen
 thermostat](../tutorials/Andersen_thermostat.md)*
@@ -81,10 +85,19 @@ thermostat](../tutorials/Andersen_thermostat.md)*
 
 |  |
 |----|
-| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The [electronic minimization](../redirects/Electronic_minimization.md) or the [machine learning](../redirects/Machine-learned_force_fields.md) tags have to be added. |
+| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The <a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a> or the <a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">machine learning</a> tags have to be added. |
 
-## Related tags and articles
-[Molecular-dynamics
-calculations](../redirects/Molecular_dynamics_calculations.md),
-[ISIF](../incar-tags/ISIF.md), [MDALGO](../incar-tags/MDALGO.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NVE_ensemble&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">Molecular-dynamics
+calculations</a>, [ISIF](../incar-tags/ISIF.md),
+[MDALGO](../incar-tags/MDALGO.md),
 [Ensembles](../categories/Category-Ensembles.md)
+
+

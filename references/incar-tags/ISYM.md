@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ISYM
+
+
 ISYM = -1 \| 0 \| 1 \| 2 \| 3 
 
 |                   |     |                                              |
@@ -10,29 +12,36 @@ ISYM = -1 \| 0 \| 1 \| 2 \| 3 
 |                   | = 3 | if [LHFCALC](LHFCALC.md)=.TRUE. |
 |                   | = 2 | else                                         |
 
-Description: ISYM determines the way VASP treats symmetry.
+Description: ISYM determines
+the way VASP treats symmetry.
 
 ------------------------------------------------------------------------
 
-ISYM=1 \| 2 \| 3, switches on the use of symmetry. For ISYM=-1 \| 0, the
-use of symmetry is switched off.
+ISYM=1 \| 2 \| 3, switches on
+the use of symmetry. For
+ISYM=-1 \| 0, the use of
+symmetry is switched off.
 
-For ISYM=2 a more efficient, memory conserving symmetrization of the
-charge density is used (than for ISYM=1). This reduces memory
+For ISYM=2 a more efficient,
+memory conserving symmetrization of the charge density is used (than for
+ISYM=1). This reduces memory
 requirements in particular for the parallel version.
 
-For ISYM=3, VASP does not directly symmetrize the charge density.
-Instead, the charge density is constructed by applying the relevant
-symmetry operations to the orbitals at the **k**-points in the
-irreducible part of the Brillouin zone. This method of symmetrization is
-used when [LHFCALC](LHFCALC.md)=.TRUE.
+For ISYM=3, VASP does not
+directly symmetrize the charge density. Instead, the charge density is
+constructed by applying the relevant symmetry operations to the orbitals
+at the **k**-points in the irreducible part of the Brillouin zone. This
+method of symmetrization is used when
+[LHFCALC](LHFCALC.md)=.TRUE.
 
-For ISYM=0, VASP does not use symmetry, but it will assume that
-Ψ_(**k**)=Ψ^(\*)_(**-k**) and reduces the sampling of the Brillouin zone
-accordingly. This value should be set for molecular dynamics, i.e.
-[IBRION](IBRION.md)=0.
+For ISYM=0, VASP does not use
+symmetry, but it will assume that
+Ψ<sub>**k**</sub>=Ψ<sup>\*</sup><sub>**-k**</sub> and reduces the
+sampling of the Brillouin zone accordingly. This value should be set for
+molecular dynamics, i.e. [IBRION](IBRION.md)=0.
 
-For ISYM=-1 the use of symmetry is switched off completely.
+For ISYM=-1 the use of
+symmetry is switched off completely.
 
 When the use of symmetry is switched on, VASP determines the point group
 symmetry and the space group consistent with the structure and initial
@@ -44,7 +53,7 @@ moments specified through the [MAGMOM](MAGMOM.md) tag in the
 [SYMPREC](SYMPREC.md)-tag (VASP.4.4.4 and newer versions)
 determines by how much atomic positions may differ and still be judged
 to be equivalent by the symmetry detection algorithms. The default is
-10⁻⁵, which is usually sufficiently large even if the
+10<sup>-5</sup>, which is usually sufficiently large even if the
 [POSCAR](../input-files/POSCAR.md) file has been generated with a single
 precision program. Increasing the [SYMPREC](SYMPREC.md) tag
 means, that the positions in the [POSCAR](../input-files/POSCAR.md) file
@@ -118,10 +127,15 @@ of the primitive cell.
 |----|
 | **Tip:** If symmetry is switched on then [NWRITE](NWRITE.md)=3 writes out the symmetry operations to the [OUTCAR](../output-files/OUTCAR.md) file. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ISYM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [OUTCAR](../output-files/OUTCAR.md), [IALGO](IALGO.md),
 [IBRION](IBRION.md), [MDALGO](MDALGO.md),
 [ISIF](ISIF.md), [NWRITE](NWRITE.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ISYM-_incategory-Examples)
+
+

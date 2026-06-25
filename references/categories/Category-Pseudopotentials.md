@@ -2,15 +2,26 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Pseudopotentials
-[![Sketch of a pseudopotential and
-pseudowavefunction](https://vasp.at/wiki/images/thumb/f/fb/Sketch_Pseudopotentials.png/300px-Sketch_Pseudopotentials.png)](https://vasp.at/wiki/File:Sketch_Pseudopotentials.png "Sketch of a pseudopotential and pseudowavefunction")
 
-Sketch of a pseudopotential and pseudowavefunction
+
+<figure class="mw-halign-right" typeof="mw:File">
+<a href="/wiki/File:Sketch_Pseudopotentials.png"
+class="mw-file-description"
+title="Sketch of a pseudopotential and pseudowavefunction"><img
+src="https://vasp.at/wiki/images/thumb/f/fb/Sketch_Pseudopotentials.png/300px-Sketch_Pseudopotentials.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/f/fb/Sketch_Pseudopotentials.png 1.5x" width="300"
+height="342"
+alt="Sketch of a pseudopotential and pseudowavefunction" /></a>
+<figcaption>Sketch of a pseudopotential and
+pseudowavefunction</figcaption>
+</figure>
 
 **Pseudopotentials**, or effective ionic potentials, are well-behaved
 potentials that replace the diverging ionic potentials. As a result, the
-pseudopotential approach significantly speeds up [electronic structure
-calculations](../redirects/Electronic_minimization.md)
+pseudopotential approach significantly speeds up
+<a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic structure calculations</a>
 and makes the simulation of a wider range of materials feasible.
 
 In a nutshell:
@@ -18,23 +29,27 @@ In a nutshell:
 - The pseudopotential and associated information required for a
   calculation must be present in a [POTCAR](../input-files/POTCAR.md) file.
 
-&nbsp;
+<!-- -->
 
 - Simple instructions to set up a [POTCAR](../input-files/POTCAR.md) file
   with the correct format: [Preparing a
   POTCAR](../tutorials/Preparing_a_POTCAR.md).
 
-&nbsp;
+<!-- -->
 
 - Recommendations on selecting potentials: [Choosing
   pseudopotentials](../tutorials/Choosing_pseudopotentials.md).
 
-&nbsp;
+<!-- -->
 
 - Overview of all versions and nomenclature: [Available
   pseudopotentials](../input-files/Available_pseudopotentials.md)
 
-## Theory
+## Theory\[<a
+href="/wiki/index.php?title=Category:Pseudopotentials&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory">edit</a> \| (./index.php.md)\]
+
 VASP employs the [projector-augmented-wave (PAW)
 method](../methods/Projector-augmented-wave_formalism.md)
 that uses a plane-wave basis. A plane-wave basis is most convenient for
@@ -64,8 +79,8 @@ that vary in terms of core radius, the number of valence electrons,
 their ability to describe excited states, etc.
 
 The plane-wave coefficients of the pseudo orbitals are associated with
-reciprocal vectors $\mathbf{G}$ in
-Fourier space. The number of Fourier components determines the
+reciprocal vectors $\mathbf{G}$
+in Fourier space. The number of Fourier components determines the
 computational cost and can be controlled by the cutoff energy
 ([ENCUT](../incar-tags/ENCUT.md)). The appropriate value depends on the
 pseudopotential and other factors. A potential is considered
@@ -75,3 +90,5 @@ representation, and
 [*hard*](../input-files/Available_pseudopotentials.md)
 otherwise. It is advised to perform a convergence study on
 [ENCUT](../incar-tags/ENCUT.md) with respect to the quantity of interest.
+
+

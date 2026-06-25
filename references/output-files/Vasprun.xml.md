@@ -2,45 +2,77 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # vasprun.xml
-The vasprun.xml is written in xml format and contains both, general
-output that is written for any calculation and specific output depending
-on the method or quantity that is being computed. Below you see details
-regarding the general output, while the specific output, e.g. the
-dielectric function ([LOPTICS](../incar-tags/LOPTICS.md)), partial
-density of states ([LORBIT](../incar-tags/LORBIT.md)), the electronic
-self-energy ([LSELFENERGY](../incar-tags/LSELFENERGY.md)) etc., are
-detailed on the corresponding tag documentation. Mind that newer
-features tend to write to [vaspout.h5](Vaspout.h5.md).
-The [vaspout.h5](Vaspout.h5.md) should generally be
+
+
+The vasprun.xml is written in
+xml format and contains both, general output that is written for any
+calculation and specific output depending on the method or quantity that
+is being computed. Below you see details regarding the general output,
+while the specific output, e.g. the dielectric function
+([LOPTICS](../incar-tags/LOPTICS.md)), partial density of states
+([LORBIT](../incar-tags/LORBIT.md)), the electronic self-energy
+([LSELFENERGY](../incar-tags/LSELFENERGY.md)) etc., are detailed on
+the corresponding tag documentation. Mind that newer features tend to
+write to [vaspout.h5](Vaspout.h5.md). The
+[vaspout.h5](Vaspout.h5.md) should generally be
 preferred for reading large datasets.
+
 
 ## Contents
 
-- [1 File format](#File_format)
-- [2 Sections](#Sections)
-  - [2.1 Generator](#Generator)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 Primitive cell](#Primitive_cell)
-  - [2.4 k points](#k_points)
-  - [2.5 Parameters](#Parameters)
-  - [2.6 Atom info](#Atom_info)
-  - [2.7 Initial structure](#Initial_structure)
-  - [2.8 Ionic steps](#Ionic_steps)
-  - [2.9 Electronic-structure calculation
-    block](#Electronic-structure_calculation_block)
-  - [2.10 Final structure](#Final_structure)
-- [3 Reading vasprun.xml](#Reading_vasprun.xml)
-  - [3.1 pymatgen](#pymatgen)
-  - [3.2 ASE](#ASE)
-  - [3.3 Direct XML parsing](#Direct_XML_parsing)
-    - [3.3.1 ElementTree](#ElementTree)
-    - [3.3.2 lxml](#lxml)
-  - [3.4 Terminal commands](#Terminal_commands)
-    - [3.4.1 xmllint](#xmllint)
-    - [3.4.2 xmlstarlet](#xmlstarlet)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## File format
+- [1 File
+  format](#File_format)
+- [2
+  Sections](#Sections)
+  - [2.1
+    Generator](#Generator)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3 Primitive
+    cell](#Primitive_cell)
+  - [2.4 k
+    points](#k_points)
+  - [2.5
+    Parameters](#Parameters)
+  - [2.6 Atom
+    info](#Atom_info)
+  - [2.7 Initial
+    structure](#Initial_structure)
+  - [2.8 Ionic
+    steps](#Ionic_steps)
+  - [2.9
+    Electronic-structure calculation
+    block](#Electronic-structure_calculation_block)
+  - [2.10 Final
+    structure](#Final_structure)
+- [3 Reading
+  vasprun.xml](#Reading_vasprun.xml)
+  - [3.1
+    pymatgen](#pymatgen)
+  - [3.2
+    ASE](#ASE)
+  - [3.3 Direct XML
+    parsing](#Direct_XML_parsing)
+    - [3.3.1
+      ElementTree](#ElementTree)
+    - [3.3.2
+      lxml](#lxml)
+  - [3.4 Terminal
+    commands](#Terminal_commands)
+    - [3.4.1
+      xmllint](#xmllint)
+    - [3.4.2
+      xmlstarlet](#xmlstarlet)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## File format\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: File format">edit</a> \| (./index.php.md)\]
+
 The root element is `<modeling>`. The file uses four repeating XML
 primitives throughout:
 
@@ -51,7 +83,9 @@ primitives throughout:
 - `<array>` — a labelled multi-field table with named dimensions; rows
   are stored as `<r>` elements inside `<set>` blocks.
 
-The overall layout of vasprun.xml is:
+The overall layout of
+vasprun.xml is:
+
 
      <modeling>
        <generator>   ...  </generator>
@@ -76,10 +110,20 @@ The overall layout of vasprun.xml is:
        <structure name="finalpos"> ... </structure>
      </modeling>
 
-## Sections
-### Generator
+
+## Sections\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Sections">edit</a> \| (./index.php.md)\]
+
+### Generator\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Generator">edit</a> \| (./index.php.md)\]
+
 Contains the VASP version, build details, and the date and time of the
 run.
+
 
      <generator>
        <i name="program"    type="string">vasp </i>
@@ -90,10 +134,16 @@ run.
        <i name="time"       type="string">12:00:00 </i>
      </generator>
 
-### INCAR
+
+### INCAR\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
 Contains only the tags explicitly set in the
 [INCAR](../input-files/INCAR.md) file, without defaults. This is a compact
 record of the user-specified settings for the run.
+
 
      <incar>
        <i type="string" name="SYSTEM">diamond Si</i>
@@ -103,10 +153,16 @@ record of the user-specified settings for the run.
        <i name="SIGMA">      0.05000000</i>
      </incar>
 
-### Primitive cell
+
+### Primitive cell\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Primitive cell">edit</a> \| (./index.php.md)\]
+
 Contains the structure and lattice of the primitive unit cell, along
 with the mapping of primitive-cell ion indices to the full
 simulation-cell ion indices.
+
 
      <primitive_cell>
        <structure name="primitive_cell">
@@ -134,9 +190,15 @@ simulation-cell ion indices.
        </varray>
      </primitive_cell>
 
-### k points
+
+### k points\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: k points">edit</a> \| (./index.php.md)\]
+
 Specifies the **k**-point sampling of the Brillouin zone, mirroring the
 [KPOINTS](../input-files/KPOINTS.md) file.
+
 
      <kpoints>
        <generation param="Gamma">             <!-- generation scheme: Gamma, Monkhorst-Pack, or Explicit -->
@@ -159,7 +221,12 @@ Specifies the **k**-point sampling of the Brillouin zone, mirroring the
        </varray>
      </kpoints>
 
-### Parameters
+
+### Parameters\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Parameters">edit</a> \| (./index.php.md)\]
+
 Contains a complete record of all effective [INCAR](../input-files/INCAR.md)
 parameters, including those not set explicitly (with their default
 values). The block is organized into named `<separator>` subsections
@@ -183,8 +250,13 @@ corresponding to groups of related tags, for example:
 There are several other groups that we have not included here. The full
 documentation for each tag is found on its individual tag page.
 
-### Atom info
+### Atom info\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Atom info">edit</a> \| (./index.php.md)\]
+
 Contains the atomic species and per-ion type information.
+
 
      <atominfo>
        <atoms> 2 </atoms>               <!-- total number of ions -->
@@ -211,11 +283,17 @@ Contains the atomic species and per-ion type information.
        </array>
      </atominfo>
 
-### Initial structure
+
+### Initial structure\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Initial structure">edit</a> \| (./index.php.md)\]
+
 The ionic positions at the start of the run, read from
 [POSCAR](../input-files/POSCAR.md). For
 [molecular-dynamics](../categories/Category-Molecular_Dynamics.md)
 runs, this block also contains the initial ionic velocities.
+
 
      <structure name="initialpos">
        <crystal>
@@ -242,7 +320,12 @@ runs, this block also contains the initial ionic velocities.
        </varray>
      </structure>
 
-### Ionic steps
+
+### Ionic steps\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Ionic steps">edit</a> \| (./index.php.md)\]
+
 For runs with ionic motion
 ([relaxations](../categories/Category-Ionic_minimization.md),
 [MD](../categories/Category-Molecular_Dynamics.md),
@@ -250,6 +333,7 @@ For runs with ionic motion
 each ionic step is written as a sequence of flat blocks directly under
 `<modeling>`. There is no enclosing `<calculation>` element; each step
 contains:
+
 
      <!-- ionic step i (repeated for each step) -->
      <structure>
@@ -280,11 +364,16 @@ contains:
      </energy>
      <time name="totalsc"> 0.04 0.01 </time>   <!-- CPU and wall time for this step (s) -->
 
+
 |  |
 |----|
 | **Mind:** For [IBRION](../incar-tags/IBRION.md)=0 ([MD](../categories/Category-Molecular_Dynamics.md)) with a large number of steps ([NSW](../incar-tags/NSW.md) \>\> 1), vasprun.xml can become very large. Consider using [vaspout.h5](Vaspout.h5.md) instead, or reading with a streaming XML parser (see [below](#Direct_XML_parsing)). |
 
-### Electronic-structure calculation block
+### Electronic-structure calculation block\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Electronic-structure calculation block">edit</a> \| (./index.php.md)\]
+
 For a [single-point electronic minimization
 calculations](../tutorials/Setting_up_an_electronic_minimization.md)
 ([`NSW`](../incar-tags/NSW.md)` = 0`) and [post-DFT
@@ -295,18 +384,25 @@ the partial DOS ([LORBIT](../incar-tags/LORBIT.md)) and, for optical
 calculations, the dielectric function
 ([LOPTICS](../incar-tags/LOPTICS.md)).
 
-For [GW calculations](../redirects/GW_calculations.md) (e.g.,
+For <a href="/wiki/GW_calculations" class="mw-redirect"
+title="GW calculations">GW calculations</a> (e.g.,
 [ALGO](../incar-tags/ALGO.md)=EVGW0 or GW0), `<eigenvalues>` contains the
 quasiparticle energies updated by the GW self-energy. Multiple
 `<dielectricfunction>` blocks appear in the same `<calculation>`, each
 labelled by its `comment` attribute.
 
-### Final structure
-The ionic positions at the end of the run. For [MD
-runs](../redirects/MD_runs.md), this block also contains the final ionic
-velocities (also see [VELOCITY](../incar-tags/VELOCITY.md) for
+### Final structure\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Final structure">edit</a> \| (./index.php.md)\]
+
+The ionic positions at the end of the run. For
+<a href="/wiki/MD_runs" class="mw-redirect" title="MD runs">MD runs</a>,
+this block also contains the final ionic velocities (also see
+[VELOCITY](../incar-tags/VELOCITY.md) for
 [vaspout.h5](Vaspout.h5.md) output), suitable for
 restarting the trajectory.
+
 
      <structure name="finalpos">
        <crystal>
@@ -319,10 +415,20 @@ restarting the trajectory.
        <varray name="velocities"> ... </varray>
      </structure>
 
-## Reading vasprun.xml
-### pymatgen
-The [pymatgen](https://pymatgen.org) library provides the `Vasprun`
-class:
+
+## Reading vasprun.xml\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Reading vasprun.xml">edit</a> \| (./index.php.md)\]
+
+### pymatgen\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: pymatgen">edit</a> \| (./index.php.md)\]
+
+The <a href="https://pymatgen.org" class="external text"
+rel="nofollow">pymatgen</a> library provides the `Vasprun` class:
+
 
     from pymatgen.io.vasp import Vasprun
 
@@ -338,9 +444,17 @@ class:
     print(vr.final_structure)     # pymatgen Structure object
     dos = vr.complete_dos         # total and projected DOS
 
-### ASE
-The [Atomic Simulation Environment](https://wiki.fysik.dtu.dk/ase/)
-(ASE) reads vasprun.xml as a sequence of `Atoms` objects:
+
+### ASE\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: ASE">edit</a> \| (./index.php.md)\]
+
+The <a href="https://wiki.fysik.dtu.dk/ase/" class="external text"
+rel="nofollow">Atomic Simulation Environment</a> (ASE) reads
+vasprun.xml as a sequence of
+`Atoms` objects:
+
 
     from ase.io import read
 
@@ -350,9 +464,21 @@ The [Atomic Simulation Environment](https://wiki.fysik.dtu.dk/ase/)
     print(atoms.get_potential_energy())       # total energy (eV)
     print(atoms.get_forces())                 # forces (eV/Å)
 
-### Direct XML parsing
-#### ElementTree
-For custom workflows, parse vasprun.xml with Python's standard library:
+
+### Direct XML parsing\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Direct XML parsing">edit</a> \| (./index.php.md)\]
+
+#### ElementTree\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: ElementTree">edit</a> \| (./index.php.md)\]
+
+For custom workflows, parse
+vasprun.xml with Python's
+standard library:
+
 
     import xml.etree.ElementTree as ET
 
@@ -369,13 +495,19 @@ For custom workflows, parse vasprun.xml with Python's standard library:
             data = [[float(x) for x in v.text.split()] for v in forces]
             print(data)
 
+
 |  |
 |----|
 | **Mind:** For large MD trajectories, use `xml.etree.ElementTree.iterparse` to stream the file element by element and avoid loading it entirely into memory. |
 
-#### lxml
+#### lxml\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: lxml">edit</a> \| (./index.php.md)\]
+
 There are also plenty of other Python packages that can be used to read
 vasprun.xml, e.g., `lxml`:
+
 
     from lxml import etree
 
@@ -407,31 +539,61 @@ vasprun.xml, e.g., `lxml`:
         ]
         print(data)
 
+
 There are plenty of other Python packages that can be used, or other
 languages if you prefer, which we will not describe here.
 
-### Terminal commands
-#### xmllint
-The [xmllint](https://xmllint.com/) tool can be used to view the
-contents of the vasprun.xml file based from command line. E.g.,
+### Terminal commands\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Terminal commands">edit</a> \| (./index.php.md)\]
+
+#### xmllint\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: xmllint">edit</a> \| (./index.php.md)\]
+
+The <a href="https://xmllint.com/" class="external text"
+rel="nofollow">xmllint</a> tool can be used to view the contents of the
+vasprun.xml file based from
+command line. E.g.,
+
 
      xmllint --xpath '//dos/partial' vasprun.xml
 
+
 will print the partial density of states to terminal.
 
-#### xmlstarlet
-Alternatively, the [xmlstarlet](https://xmlstar.sourceforge.net/) tool
-can be used vasprun.xml, e.g.,
+#### xmlstarlet\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: xmlstarlet">edit</a> \| (./index.php.md)\]
+
+Alternatively, the
+<a href="https://xmlstar.sourceforge.net/" class="external text"
+rel="nofollow">xmlstarlet</a> tool can be used
+vasprun.xml, e.g.,
+
 
      xmlstarlet sel -t -c '//dos/partial' vasprun.xml
+
 
 will print the partial density of states to terminal.
 
 There are several other command line tools that can be used for
-analysis, e.g., [mpg](https://pymatgen.org/#pmg-command-line-interface)
-that we will not go into detail in here.
+analysis, e.g.,
+<a href="https://pymatgen.org/#pmg-command-line-interface"
+class="external text" rel="nofollow">mpg</a> that we will not go into
+detail in here.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=22"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [OUTCAR](OUTCAR.md) — the human-readable logfile.
 - [vaspout.h5](Vaspout.h5.md) — the HDF5 alternative to
-  vasprun.xml, preferred for large runs and newer features.
+  vasprun.xml, preferred for
+  large runs and newer features.
+
+

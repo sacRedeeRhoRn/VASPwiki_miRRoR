@@ -2,15 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_MODE
-ML_MODE = train \| select \| refit \| refitbayesian \| run \| delta \|
-none  
+
+
+ML_MODE = train \| select \|
+refit \| refitbayesian \| run \| delta \| none  
 Default: **ML_MODE** = none 
 
 Description: String-based tag selecting operation mode for machine
 learning force fields.
 
-|                                                        |
-|--------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This tag is only available as of VASP.6.4.0. |
 
 ------------------------------------------------------------------------
@@ -20,7 +22,8 @@ selecting the defaults for all other tags. Every tag that is affected by
 this "super tag" can be overwritten by the user by simply specifying the
 value for that tag. The following options are available for this tag:
 
-- `ML_MODE`` = train`**: On-the-fly training**
+- `ML_MODE`` = train`**:
+  On-the-fly training**
 
   Force predictions from the machine learning force field are used to
   drive the molecular dynamics (MD) simulation. However, if the error
@@ -51,12 +54,41 @@ value for that tag. The following options are available for this tag:
       6.4.0 this corresponds to
       [`ML_ISTART`](ML_ISTART.md)` = 1`.
 
-      [TABLE]
+      <table class="vasp-dark-link-panel"
+      style="border: 0px solid var(--vblue); --box-emph-color: var(--vblue); padding: 5px; color: var(--vdefault-text-nb); background: var(--vblue-bg)">
+      <colgroup>
+      <col style="width: 100%" />
+      </colgroup>
+      <tbody>
+      <tr>
+      <td><strong><span style="color: var(--vblue);">Tip:</span></strong> None
+      of the structures in the <a href="/wiki/ML_AB" title="ML AB">ML_AB</a>
+      file need to match he <a href="/wiki/POSCAR" title="POSCAR">POSCAR</a>
+      file for the current MD training run in terms of the simulation box,
+      elements, or number of atoms. However, if the same elements appear the
+      initial force field is used for predictions in the current MD run.
+      <p>The training data contained in the <a href="/wiki/ML_AB"
+      title="ML AB">ML_AB</a> file is included in the final machine learning
+      force field, i.e., the <a href="/wiki/ML_FFN" title="ML FFN">ML_FFN</a>
+      file will define a force field applicable to both the structures on the
+      <a href="/wiki/ML_AB" title="ML AB">ML_AB</a> file as well as to the
+      current MD simulation. This means that by restarting repeatedly with
+      <span class="mw-selflink selflink"><code class="vasp-dark-link-panel"
+      style="padding: 2px">ML_MODE</code></span><code
+      class="vasp-dark-link-panel" style="padding: 2px"> = train</code>, and
+      copying the <a href="/wiki/ML_ABN" title="ML ABN">ML_ABN</a> file from
+      the previous run to <a href="/wiki/ML_AB" title="ML AB">ML_AB</a>(!), it
+      is possible to iteratively extend the applicability of the a machine
+      learning force field, e.g., by exploring different temperature ranges or
+      element compositions.</p></td>
+      </tr>
+      </tbody>
+      </table>
 
     
 
-- `ML_MODE`` = select`**: Re-selection of local reference
-  configurations**
+- `ML_MODE`` = select`**:
+  Re-selection of local reference configurations**
 
   A new machine learning force field is generated from the *ab initio*
   data provided in the [ML_AB](../input-files/ML_AB.md) file. The structures
@@ -108,15 +140,17 @@ value for that tag. The following options are available for this tag:
 
     
 
-- `ML_MODE`` = refit`**: Refit a force field for "fast" evaluation**
+- `ML_MODE`` = refit`**: Refit
+  a force field for "fast" evaluation**
 
-  Similar to `ML_MODE`` = select`, refitting is done based on an
-  existing [ML_AB](../input-files/ML_AB.md) file, but the number of local
-  reference configurations for each species is taken from the
-  [ML_AB](../input-files/ML_AB.md) file. Sparsification is performed on the
-  local reference configurations, so the resulting
-  [ML_ABN](../output-files/ML_ABN.md) file will contain the same number or
-  fewer local reference configurations than the
+  Similar to
+  `ML_MODE`` = select`,
+  refitting is done based on an existing [ML_AB](../input-files/ML_AB.md)
+  file, but the number of local reference configurations for each
+  species is taken from the [ML_AB](../input-files/ML_AB.md) file.
+  Sparsification is performed on the local reference configurations, so
+  the resulting [ML_ABN](../output-files/ML_ABN.md) file will contain the
+  same number or fewer local reference configurations than the
   [ML_AB](../input-files/ML_AB.md) file.
 
   By default the resulting force field is geared towards "fast"
@@ -140,15 +174,16 @@ value for that tag. The following options are available for this tag:
 
     
 
-- `ML_MODE`` = refitbayesian`**: Refit a force field with Bayesian
-  regression (deprecated)**
+- `ML_MODE`` = refitbayesian`**:
+  Refit a force field with Bayesian regression (deprecated)**
 
-  Same as `ML_MODE`` = refit`, but Bayesian regression is employed. This
-  results in lower accuracy and much slower force fields than using
-  `ML_MODE`` = refit` and should be used with caution. On the other
-  hand, this mode allows the generation of
-  [ML_FFN](../output-files/ML_FFN.md) files that can calculate Bayesian
-  error estimates in addition to predictions.
+  Same as `ML_MODE`` = refit`,
+  but Bayesian regression is employed. This results in lower accuracy
+  and much slower force fields than using
+  `ML_MODE`` = refit` and
+  should be used with caution. On the other hand, this mode allows the
+  generation of [ML_FFN](../output-files/ML_FFN.md) files that can calculate
+  Bayesian error estimates in addition to predictions.
 
   This modes sets [`NSW`](NSW.md)` = 1`,
   [`ML_IALGO_LINREG`](ML_IALGO_LINREG.md)` = 1` and
@@ -158,7 +193,8 @@ value for that tag. The following options are available for this tag:
 
     
 
-- `ML_MODE`` = run`**: Perform only force field predictions**
+- `ML_MODE`` = run`**: Perform
+  only force field predictions**
 
   A previously trained machine learning force field is read from the
   [ML_FF](../input-files/ML_FF.md) file, and the MD simulation is driven
@@ -168,17 +204,19 @@ value for that tag. The following options are available for this tag:
   considered mature and ready for production runs.
 
   Optionally, if the force field was refitted using
-  `ML_MODE`` = refitbayesian`, the Bayesian error estimate of the
-  energies, forces, and stress can be computed and logged in the
+  `ML_MODE`` = refitbayesian`,
+  the Bayesian error estimate of the energies, forces, and stress can be
+  computed and logged in the
   [ML_LOGFILE](../output-files/ML_LOGFILE.md). The output frequency of
   the Bayesian errors can be set via the
-  [ML_IERR](../redirects/ML_IERR.md) tag, the default is 0.
+  <a href="/wiki/ML_IERR" class="mw-redirect" title="ML IERR">ML_IERR</a>
+  tag, the default is 0.
 
   For VASP versions prior to 6.4.0 this corresponds to
   [`ML_ISTART`](ML_ISTART.md)` = 2`.
 
-- `ML_MODE`` = delta`**: Performs ab-initio calcutions and force field
-  predictions**
+- `ML_MODE`` = delta`**:
+  Performs ab-initio calcutions and force field predictions**
 
   A previously trained machine learning force field is read from the
   [ML_FF](../input-files/ML_FF.md) file, and the MD simulation is driven by
@@ -198,7 +236,8 @@ value for that tag. The following options are available for this tag:
 
     
 
-- `ML_MODE`` = none`**: The tag is ignored**
+- `ML_MODE`` = none`**: The
+  tag is ignored**
 
   
 
@@ -210,17 +249,22 @@ value for that tag. The following options are available for this tag:
 |----|
 | **Tip:** Some choices of ML_MODE will automatically set other machine-learned force field tags. However, it is still possible to overwrite the defaults by specifying the corresponding tags in the [INCAR](../input-files/INCAR.md) file. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ML_MODE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_ISTART](ML_ISTART.md),
 [ML_LFAST](ML_LFAST.md),
-[ML_IERR](../redirects/ML_IERR.md),
+<a href="/wiki/ML_IERR" class="mw-redirect" title="ML IERR">ML_IERR</a>,
 [ML_OUTBLOCK](ML_OUTBLOCK.md),
 [ML_OUTPUT_MODE](ML_OUTPUT_MODE.md),
 [ML_IALGO_LINREG](ML_IALGO_LINREG.md),
 [ML_MCONF_NEW](ML_MCONF_NEW.md),
 [ML_CDOUB](ML_CDOUB.md),
 [ML_CTIFOR](ML_CTIFOR.md),
-[ML_IERR](../redirects/ML_IERR.md)
+<a href="/wiki/ML_IERR" class="mw-redirect" title="ML IERR">ML_IERR</a>
 
 ------------------------------------------------------------------------
+
+

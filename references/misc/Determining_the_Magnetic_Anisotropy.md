@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Determining the Magnetic Anisotropy
+
+
 Description: Magnetocrystalline Anisotropy Energy determined
 non-self-consistently
 
@@ -29,14 +31,14 @@ spins in different directions and the following equation
 
 $E_{\text{MAE}} = E_{(u,v,w)} - E_0$
 
-with $E_0$ the energy of the most stable
-spin orientation. More details are available in the
-[SAXIS](../incar-tags/SAXIS.md) and [LSORBIT](../incar-tags/LSORBIT.md)
-pages.
+with $E_0$ the
+energy of the most stable spin orientation. More details are available
+in the [SAXIS](../incar-tags/SAXIS.md) and
+[LSORBIT](../incar-tags/LSORBIT.md) pages.
 
-**Exercise :** Determine the Magnetocrystalline Anisotropy Energy of NiO
-in a non self-consistent approach by orientating the spins along the
-following path : (2,2,2) --\> (2,2,1) --\> (2,2,0) --\> ... --\>
+*<u>Exercise :</u>* Determine the Magnetocrystalline Anisotropy Energy
+of NiO in a non self-consistent approach by orientating the spins along
+the following path : (2,2,2) --\> (2,2,1) --\> (2,2,0) --\> ... --\>
 (2,2,-6). Compare to the [self-consistent
 approach](Including_the_Spin-Orbit_Coupling.md).
 
@@ -44,7 +46,7 @@ approach](Including_the_Spin-Orbit_Coupling.md).
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO MAE
       SYSTEM    = "NiO"
@@ -93,7 +95,7 @@ approach](Including_the_Spin-Orbit_Coupling.md).
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -103,7 +105,7 @@ approach](Including_the_Spin-Orbit_Coupling.md).
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -117,7 +119,14 @@ approach](Including_the_Spin-Orbit_Coupling.md).
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-## Download
-[nio_noSOC.tgz](https://vasp.at/wiki/images/3/3d/Nio_noSOC.tgz "Nio noSOC.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Determining_the_Magnetic_Anisotropy&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/3/3d/Nio_noSOC.tgz" class="internal"
+title="Nio noSOC.tgz">nio_noSOC.tgz</a>
 
 ------------------------------------------------------------------------
+
+

@@ -2,23 +2,28 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # EDIFFG
+
+
 EDIFFG = \[real\]  
 Default: **EDIFFG** = [EDIFF](EDIFF.md)×10 
 
-Description: EDIFFG defines the break condition for the ionic relaxation
-loop.
+Description: EDIFFG defines
+the break condition for the ionic relaxation loop.
 
 ------------------------------------------------------------------------
 
-When EDIFFG is positive, the relaxation is stopped when the change of
-the total energy is smaller than EDIFFG between two ionic steps.
+When EDIFFG is positive, the
+relaxation is stopped when the change of the total energy is smaller
+than EDIFFG between two ionic
+steps.
 
-When EDIFFG is negative, the relaxation is stopped when the norms of all
-the forces are smaller than \|EDIFFG\|. This is usually a more
-convenient setting.
+When EDIFFG is negative, the
+relaxation is stopped when the norms of all the forces are smaller than
+\|EDIFFG\|. This is usually a
+more convenient setting.
 
-If EDIFFG = 0, the ionic relaxation is stopped after
-[NSW](NSW.md) steps.
+If EDIFFG = 0, the ionic
+relaxation is stopped after [NSW](NSW.md) steps.
 
 |  |
 |----|
@@ -28,10 +33,15 @@ If EDIFFG = 0, the ionic relaxation is stopped after
 |----|
 | **Tip:** You can get information at each electronic step using [`NWRITE`](NWRITE.md)` = 2,3`. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=EDIFFG&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [EDIFF](EDIFF.md), [NWRITE](NWRITE.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-EDIFFG-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,16 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NTAUPAR
+
+
 NTAUPAR = \[integer\] 
 
 |  |  |  |
 |----|----|----|
 | Default: **NTAUPAR** | = depends on [MAXMEM](MAXMEM.md) | used in low scaling [GW](../methods/GW_approximation_of_Hedin's_equations.md) and RPA/ACFDT calculations. |
 
-Description: NTAUPAR available as of VASP.6, specifies the number of MPI
-groups sharing same imaginary time grid points. The default value of
-NTAUPAR is set to the largest possible value supported on the compute
-nodes to speed up the GW or RPA calculation.
+Description: NTAUPAR available
+as of VASP.6, specifies the number of MPI groups sharing same imaginary
+time grid points. The default value of NTAUPAR is set to the largest
+possible value supported on the compute nodes to speed up the GW or RPA
+calculation.
 
 ------------------------------------------------------------------------
 
@@ -30,7 +33,10 @@ value provided in the [INCAR](../input-files/INCAR.md).
 NTAUPAR=[NOMEGA](NOMEGA.md) is the maximum value possible,
 while NTAUPAR=1 is the smallest possible value.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NTAUPAR&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NOMEGAPAR](NOMEGAPAR.md),
 [NOMEGA](NOMEGA.md)
 
@@ -38,3 +44,5 @@ while NTAUPAR=1 is the smallest possible value.
 tag](https://vasp.at/wiki/index.php/Special-Search/-NTAUPAR-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

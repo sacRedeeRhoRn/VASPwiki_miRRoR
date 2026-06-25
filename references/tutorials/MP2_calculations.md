@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # MP2 calculations
+
+
 By specifying [ALGO](../incar-tags/ALGO.md)=*MP2* in the
 [INCAR](../input-files/INCAR.md) file VASP calculates MP2 correlation
 energies. It is strongly recommended to calculate all virtual states
@@ -15,7 +17,7 @@ Thus any MP2 calculation should proceed in three steps:
   switched off. Following specific [INCAR](../input-files/INCAR.md) tags
   have to be set:
 
-&nbsp;
+<!-- -->
 
     LHFCALC = .TRUE.
     AEXX = 1.0 ; ALDAC = 0.0 ; AGGAC = 0.0
@@ -25,7 +27,7 @@ Thus any MP2 calculation should proceed in three steps:
   [OUTCAR](../output-files/OUTCAR.md) file and execute VASP again using the
   following [INCAR](../input-files/INCAR.md) tags:
 
-&nbsp;
+<!-- -->
 
     NBANDS  =   maximum number of plane-waves
     LHFCALC = .TRUE.
@@ -34,21 +36,28 @@ Thus any MP2 calculation should proceed in three steps:
 
 - Finally calculate the MP2 correlation energy:
 
-&nbsp;
+<!-- -->
 
     NBANDS  =   maximum number of plane-waves
     LHFCALC = .TRUE. ;  AEXX = 1.0 ; ALDAC = 0.0
     LMAXMP2 = 2
 
-The flag LMAXMP2 specifies the maximum $l$ quantum number for the treatment of the one-center terms.
-This should be set to twice the maximum of the non local component in
-the pseudopotential. Alternatively
-[LMAXFOCKAE](../redirects/LMAXFOCKAE.md) can be set in the INCAR
-file. This is expected to be more efficient, but slightly less accurate.
-Combining [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) and
-[LMAXFOCKMP2](https://vasp.at/wiki/index.php/index.php)")
-is in principle also allowed but hardly offers any advantage over using
-only [LMAXFOCKAE](../redirects/LMAXFOCKAE.md) or
-[LMAXFOCKMP2](https://vasp.at/wiki/index.php/index.php)").
+The flag LMAXMP2 specifies the maximum $l$ quantum
+number for the treatment of the one-center terms. This should be set to
+twice the maximum of the non local component in the pseudopotential.
+Alternatively <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a> can be set in the INCAR file. This is
+expected to be more efficient, but slightly less accurate. Combining
+<a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a> and <a
+href="/wiki/index.php?title=LMAXFOCKMP2&amp;action=edit&amp;redlink=1"
+class="new" title="LMAXFOCKMP2 (page does not exist)">LMAXFOCKMP2</a> is
+in principle also allowed but hardly offers any advantage over using
+only <a href="/wiki/LMAXFOCKAE" class="mw-redirect"
+title="LMAXFOCKAE">LMAXFOCKAE</a> or <a
+href="/wiki/index.php?title=LMAXFOCKMP2&amp;action=edit&amp;redlink=1"
+class="new" title="LMAXFOCKMP2 (page does not exist)">LMAXFOCKMP2</a>.
 
 ------------------------------------------------------------------------
+
+

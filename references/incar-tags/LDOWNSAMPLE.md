@@ -2,17 +2,21 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LDOWNSAMPLE
+
+
 LDOWNSAMPLE = \[logical\]  
 Default: **LDOWNSAMPLE** = .FALSE. 
 
-Description: LDOWNSAMPLE selects a sub-grid of k-points defined in
+Description: LDOWNSAMPLE
+selects a sub-grid of k-points defined in
 [KPOINTS](../input-files/KPOINTS.md) from
 [WAVECAR](../input-files/WAVECAR.md)
 
 ------------------------------------------------------------------------
 
-If LDOWNSAMPLE is present, VASP selects a sub-grid of k-points defined
-in [KPOINTS](../input-files/KPOINTS.md) and stored in the
+If LDOWNSAMPLE is present,
+VASP selects a sub-grid of k-points defined in
+[KPOINTS](../input-files/KPOINTS.md) and stored in the
 [WAVECAR](../input-files/WAVECAR.md) file. This option is automatically
 selected for [cRPA
 calculations](../theory/Constrained–random-phase–approximation_formalism.md),
@@ -30,9 +34,14 @@ same factor in all three reciprocal-lattice directions. For anisotropic
 k-point grids where the dense-to-coarse ratio differs per direction, set
 [K_MULTIPLY](K_MULTIPLY.md) explicitly. Setting
 [K_MULTIPLY](K_MULTIPLY.md) in the
-[INCAR](../input-files/INCAR.md) automatically enables LDOWNSAMPLE.
+[INCAR](../input-files/INCAR.md) automatically enables
+LDOWNSAMPLE.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LDOWNSAMPLE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [K_MULTIPLY](K_MULTIPLY.md),
 [LWANNIER90](LWANNIER90.md),
 [LWANNIER90_RUN](LWANNIER90_RUN.md),
@@ -42,3 +51,5 @@ k-point grids where the dense-to-coarse ratio differs per direction, set
 tag](https://vasp.at/wiki/index.php/Special-Search/-LDOWNSAMPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

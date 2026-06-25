@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_SRPOT_S0
+
+
 ML_SRPOT_S0 = \[real\]  
 Default: **ML_SRPOT_S0** = 2.0 
 
@@ -11,13 +13,18 @@ potential used as an auxiliary potential in thermodynamic integration
 
 ------------------------------------------------------------------------
 
-This parameters sets the broadening $\sigma$ of the following repulsive exponential potential
+This parameters sets the broadening $\sigma$ of
+the following repulsive exponential potential
 
 $V(r) = b e^{-(r/\sigma)^n}.$
 
 In most use cases a value between 1 and 2 is optimal.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_SRPOT_S0&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LCOUPLE](ML_LCOUPLE.md),
 [ML_ICOUPLE](ML_ICOUPLE.md),
@@ -37,3 +44,5 @@ In most use cases a value between 1 and 2 is optimal.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

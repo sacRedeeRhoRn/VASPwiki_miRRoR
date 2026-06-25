@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Restarting finite differences calculations
+
+
 It is possible to restart [finite difference
 calculations](Phonons_from_finite_differences.md)
 using [`IBRION`](../incar-tags/IBRION.md)` = 6` and
@@ -33,10 +35,13 @@ used to run individual displacements.
 
 We will describe the restart procedure and splitting a calculation
 below. As an example, we take a 3x3x1 graphene supercell
-[POSCAR](../input-files/POSCAR.md) file from the [phonon
-tutorials](https://www.vasp.at/tutorials/latest/phonon/part1/#phonon-e02).
+[POSCAR](../input-files/POSCAR.md) file from the
+<a href="https://www.vasp.at/tutorials/latest/phonon/part1/#phonon-e02"
+class="external text" rel="nofollow">phonon tutorials</a>.
+
 
 **Click to see POSCAR and INCAR**
+
 
     C18
     1.0
@@ -96,22 +101,35 @@ be used thoughout:
     IBRION = 6
     POTIM = 0.015
 
+
 ## Contents
 
-- [1 Restarting a finite difference
-  calculation](#Restarting_a_finite_difference_calculation)
-- [2 Splitting a finite difference
-  calculation](#Splitting_a_finite_difference_calculation)
-  - [2.1 1. Preparing the
-    displacements](#1._Preparing_the_displacements)
-  - [2.2 2. Single displacement
-    calculations](#2._Single_displacement_calculations)
-  - [2.3 3. Collected finite
-    differences](#3._Collected_finite_differences)
-- [3 Practical hints](#Practical_hints)
-- [4 Related tags and sections](#Related_tags_and_sections)
 
-## Restarting a finite difference calculation
+- [1 Restarting a
+  finite difference
+  calculation](#Restarting_a_finite_difference_calculation)
+- [2 Splitting a
+  finite difference
+  calculation](#Splitting_a_finite_difference_calculation)
+  - [2.1 1.
+    Preparing the displacements](#1._Preparing_the_displacements)
+  - [2.2 2. Single
+    displacement
+    calculations](#2._Single_displacement_calculations)
+  - [2.3 3.
+    Collected finite
+    differences](#3._Collected_finite_differences)
+- [3 Practical
+  hints](#Practical_hints)
+- [4 Related tags
+  and sections](#Related_tags_and_sections)
+
+
+## Restarting a finite difference calculation\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Restarting a finite difference calculation">edit</a> \| (./index.php.md)\]
+
 The calculation failed after a certain point or has accidentally been
 cancelled:
 
@@ -173,7 +191,11 @@ completed and the phonon modes calculated:
     displacements            Group
     symmetry                 Group
 
-## Splitting a finite difference calculation
+## Splitting a finite difference calculation\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Splitting a finite difference calculation">edit</a> \| (./index.php.md)\]
+
 For large structures, it may be easier to split the displacements into
 separate calculations. This is done in three steps:
 
@@ -184,7 +206,11 @@ separate calculations. This is done in three steps:
 3.  Collected finite differences -
     [`CHECKPOINT_FD`](../incar-tags/CHECKPOINT_FD.md)` = CONTINUE`
 
-### 1. Preparing the displacements
+### 1. Preparing the displacements\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: 1. Preparing the displacements">edit</a> \| (./index.php.md)\]
+
 The displacements can be prepared using the
 [`CHECKPOINT_FD`](../incar-tags/CHECKPOINT_FD.md)` = PREPARE` tag:
 
@@ -219,7 +245,11 @@ and in the [vaspcheckfd.h5](../input-files/Vaspcheckfd.h5.md) file:
     subdir_prefix            Dataset {SCALAR}
     total_count              Dataset {SCALAR}
 
-### 2. Single displacement calculations
+### 2. Single displacement calculations\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: 2. Single displacement calculations">edit</a> \| (./index.php.md)\]
+
 Create directories **disp-N** for each of the
 [CONTCAR_disp-N](../output-files/CONTCAR_disp-N.md) file and run the
 calculations separately. To this end, copy all restart files in the
@@ -228,6 +258,7 @@ subdirectory, rename
 [POSCAR](../input-files/POSCAR.md), set
 [`CHECKPOINT_FD`](../incar-tags/CHECKPOINT_FD.md)` = SINGLE` in the
 [INCAR](../input-files/INCAR.md) file and run the calculation:
+
 
     max=$(printf "%s\n" CONTCAR_disp-* | sed 's/.*-//' | sort -n | tail -1)
 
@@ -243,6 +274,7 @@ subdirectory, rename
     """ >> disp-$i/INCAR
       ln -s ../CHGCAR disp-$i/CHGCAR
     done
+
 
 Each [INCAR](../input-files/INCAR.md) file in the directories will then look
 like:
@@ -286,7 +318,11 @@ and to the [vaspcheckfd.h5](../input-files/Vaspcheckfd.h5.md) file:
      
     data-1                   Group
 
-### 3. Collected finite differences
+### 3. Collected finite differences\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: 3. Collected finite differences">edit</a> \| (./index.php.md)\]
+
 Return to the parent directory and combine these separate displacements
 into one finite difference calculation using the
 [`CHECKPOINT_FD`](../incar-tags/CHECKPOINT_FD.md)` = CONTINUE` tag:
@@ -332,7 +368,11 @@ and [OUTCAR](../output-files/OUTCAR.md) file below
 as in [phonons from finite
 differences](Phonons_from_finite_differences.md).
 
-## Practical hints
+## Practical hints\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Practical hints">edit</a> \| (./index.php.md)\]
+
 - The phonon frequencies will differ slightly between one run and the
   split calculation, on the order of the 4th or 5th significant figure.
   We do not expect this to be significant.
@@ -349,7 +389,7 @@ differences](Phonons_from_finite_differences.md).
   [vaspcheckfd.h5](../input-files/Vaspcheckfd.h5.md) file, you will
   see it with the following warning:
 
-&nbsp;
+<!-- -->
 
      -----------------------------------------------------------------------------
     |                                                                             |
@@ -378,7 +418,11 @@ differences](Phonons_from_finite_differences.md).
   [`ICHARG`](../incar-tags/ICHARG.md)` = 1` so that the charge density is
   used, rather than starting from scratch.
 
-## Related tags and sections
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Restarting_finite_differences_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [CHECKPOINT_FD](../incar-tags/CHECKPOINT_FD.md),
 [vaspcheckfd.h5](../input-files/Vaspcheckfd.h5.md),
 [IBRION](../incar-tags/IBRION.md),
@@ -386,3 +430,5 @@ differences](Phonons_from_finite_differences.md).
 
 [Phonons from finite
 differences](Phonons_from_finite_differences.md)
+
+

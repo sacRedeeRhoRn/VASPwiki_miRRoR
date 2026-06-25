@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # DQ
+
+
 DQ = \[real\]  
 Default: **DQ** = 0.001 
 
@@ -10,10 +12,13 @@ the linear response calculation of chemical shifts.
 
 ------------------------------------------------------------------------
 
-Typical values for DQ are in the range \[0.001 - 0.003\]. The default is
-often sufficient.
+Typical values for DQ are in
+the range \[0.001 - 0.003\]. The default is often sufficient.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=DQ&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LCHIMAG](LCHIMAG.md),
 [ICHIBARE](ICHIBARE.md),
 [LNMR_SYM_RED](LNMR_SYM_RED.md),
@@ -23,3 +28,5 @@ often sufficient.
 tag](https://vasp.at/wiki/index.php/Special-Search/-DQ-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

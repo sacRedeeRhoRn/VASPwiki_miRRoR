@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Machine-learned force fields
+
+
 **Machine-learned force fields** used in combination with ab-initio
 [molecular
 dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
@@ -29,23 +31,40 @@ calculation](../methods/Machine_learning_force_field_calculations-_Basics.md)!
 Also, check out the description on [best practices on how to construct,
 test, and retrain force
 fields](../methods/Best_practices_for_machine-learned_force_fields.md),
-as well as the [basic tutorial that provides hands-on experience for
-silicon](https://www.vasp.at/tutorials/latest/md/part2) and this
-tutorial: [Liquid Si - MLFF](../misc/Liquid_Si_-_MLFF.md).
+as well as the <a href="https://www.vasp.at/tutorials/latest/md/part2"
+class="external text" rel="nofollow">basic tutorial that provides
+hands-on experience for silicon</a> and this tutorial: [Liquid Si -
+MLFF](../misc/Liquid_Si_-_MLFF.md).
+
 
 ## Contents
 
-- [1 Theory](#Theory)
-- [2 How to](#How_to)
-  - [2.1 Input](#Input)
-  - [2.2 Output](#Output)
-  - [2.3 Hyperparameters](#Hyperparameters)
-- [3 Additional resources](#Additional_resources)
-  - [3.1 How to](#How_to_2)
-  - [3.2 Tutorials](#Tutorials)
-  - [3.3 Lectures](#Lectures)
 
-## Theory
+- [1
+  Theory](#Theory)
+- [2 How
+  to](#How_to)
+  - [2.1
+    Input](#Input)
+  - [2.2
+    Output](#Output)
+  - [2.3
+    Hyperparameters](#Hyperparameters)
+- [3 Additional
+  resources](#Additional_resources)
+  - [3.1 How
+    to](#How_to_2)
+  - [3.2
+    Tutorials](#Tutorials)
+  - [3.3
+    Lectures](#Lectures)
+
+
+## Theory\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory">edit</a> \| (./index.php.md)\]
+
 VASP uses a Bayesian-learning algorithm for on-the-fly machine learning.
 The total energy and forces are predicted based on the machine-learned
 force field at each time step of the MD simulation. If the Bayesian
@@ -65,7 +84,11 @@ For details on the algorithm, check out the [theory article about
 machine learning force
 fields](../methods/Machine_learning_force_field-_Theory.md).
 
-## How to
+## How to\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 All related [INCAR tags](Category-INCAR_tag.md)
 and [input/output files](Category-Files.md) begin
 with the prefix *ML\_*. To learn about machine learning force fields,
@@ -82,7 +105,11 @@ visit:
 - [Running GRACE force fields in
   VASP](../methods/Running_GRACE_force_fields_in_VASP.md)
 
-### Input
+### Input\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
 Depending on whether the calculation is training, retraining, or
 applying the force field (see [ML_MODE](../incar-tags/ML_MODE.md)), VASP
 may require the following input files in addition to the usual [input
@@ -92,7 +119,11 @@ files](Category-Input_files.md)
 - [ML_AB](../input-files/ML_AB.md) Ab-initio training data.
 - [ML_FF](../input-files/ML_FF.md) Force-field parameters.
 
-### Output
+### Output\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The machine-learning–force-field method generates the following [output
 files](https://vasp.at/wiki/index.php/Category:Output_files):
 
@@ -106,7 +137,11 @@ files](https://vasp.at/wiki/index.php/Category:Output_files):
 - [ML_EATOM](../output-files/ML_EATOM.md) Local atomic energies.
 - [ML_HEAT](../output-files/ML_HEAT.md) Local heat flux.
 
-### Hyperparameters
+### Hyperparameters\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Hyperparameters">edit</a> \| (./index.php.md)\]
+
 Hyperparameters are user-defined parameters of the MLFF model that will
 not be optimized during training of the MLFF. For instance, cutoff radii
 ([ML_RCUT1](../incar-tags/ML_RCUT1.md),
@@ -126,21 +161,44 @@ the best MLFF model. In practice, usually the default values are a good
 guess. The default parameters of VASP were optimized on a selected set
 of bulk materials and on a molecular data base.
 
-## Additional resources
-### How to
+## Additional resources\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Additional resources">edit</a> \| (./index.php.md)\]
+
+### How to\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 - Training an [MLFF for transition states using
   metadynamics](../methods/Using_metadynamics_to_train_a_machine-learned_force_field.md).
 
-### Tutorials
-- Tutorial for [training a machine learning force field using
-  MD](https://www.vasp.at/tutorials/latest/md/part2).
-- Tutorial for [error analysis and hyperparameter
-  optimization](https://www.vasp.at/tutorials/latest/mlff/part1).
+### Tutorials\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Tutorials">edit</a> \| (./index.php.md)\]
 
-### Lectures
-- Lecture on the [basics of machine learning force
-  fields](https://youtu.be/f1VXKVlVhg4)
-- Lecture on [machine learning force
-  fields](https://youtu.be/HgGwgtkwh7g)
-- Lecture on [chemical reactions using
-  MLFFs](https://youtu.be/bzzHpTBwxbA)
+- Tutorial for <a href="https://www.vasp.at/tutorials/latest/md/part2"
+  class="external text" rel="nofollow">training a machine learning force
+  field using MD</a>.
+- Tutorial for <a href="https://www.vasp.at/tutorials/latest/mlff/part1"
+  class="external text" rel="nofollow">error analysis and hyperparameter
+  optimization</a>.
+
+### Lectures\[<a
+href="/wiki/index.php?title=Category:Machine-learned_force_fields&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Lectures">edit</a> \| (./index.php.md)\]
+
+- Lecture on the
+  <a href="https://youtu.be/f1VXKVlVhg4" class="external text"
+  rel="nofollow">basics of machine learning force fields</a>
+- Lecture on
+  <a href="https://youtu.be/HgGwgtkwh7g" class="external text"
+  rel="nofollow">machine learning force fields</a>
+- Lecture on
+  <a href="https://youtu.be/bzzHpTBwxbA" class="external text"
+  rel="nofollow">chemical reactions using MLFFs</a>
+
+

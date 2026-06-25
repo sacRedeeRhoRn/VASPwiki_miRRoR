@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ISEARCH
+
+
 ISEARCH = 0 \| 1  
 Default: **ISEARCH** = 0 
 
@@ -11,13 +13,17 @@ minimization of the electronic structure
 
 ------------------------------------------------------------------------
 
-- `ISEARCH`` = 0`: Legacy line-search algorithm.
-- `ISEARCH`` = 1`: Improved line-search algorithm.
+- `ISEARCH`` = 0`: Legacy
+  line-search algorithm.
+- `ISEARCH`` = 1`: Improved
+  line-search algorithm.
 
 The line search determines the optimal step size along the conjugate
-gradient search direction. `ISEARCH`` = 0` performs incremental steps
-along the search direction. It may lead to inconsistencies in total
-energy evaluations and slower convergence. `ISEARCH`` = 1` introduces a
+gradient search direction.
+`ISEARCH`` = 0` performs
+incremental steps along the search direction. It may lead to
+inconsistencies in total energy evaluations and slower convergence.
+`ISEARCH`` = 1` introduces a
 more robust and consistent method for determining the optimal step size,
 leading to improved convergence behavior and more reliable energy
 minimization.
@@ -30,7 +36,10 @@ minimization.
 |----|
 | **Mind:** `ISEARCH`` = 0` should only be used for backward compatibility or benchmarking against legacy behavior. |
 
-## Improved line-search algorithm (ISEARCH = 1)
+## Improved line-search algorithm (ISEARCH = 1)\[<a href="/wiki/index.php?title=ISEARCH&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Improved line-search algorithm (ISEARCH = 1)">edit</a> \| (./index.php.md)")\]
+
 The improved algorithm introduces several technical enhancements over
 the legacy implementation to ensure more robust convergence:
 
@@ -59,5 +68,10 @@ the legacy implementation to ensure more robust convergence:
   ignores the fit and automatically reverts to the step that yielded the
   lowest energy evaluation recorded in the current search.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ISEARCH&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md)
+
+

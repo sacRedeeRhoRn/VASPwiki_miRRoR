@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # EFERMI_NEDOS
+
+
 EFERMI_NEDOS = \[integer\]  
 Default: **EFERMI_NEDOS** = 21 
 
@@ -10,8 +12,8 @@ evaluate the Fermi–Dirac distribution and determine the Fermi level at
 finite temperature using the tetrahedron method only with
 [ISMEAR](ISMEAR.md) = −14 or -15 .
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -33,9 +35,13 @@ calculations](../tutorials/Transport_coefficients_including_electron-phonon_scat
 |----|
 | **Mind:** **ELPH_FERMI_NEDOS** is a valid alternative way of writing this tag. |
 
-## Implementation details
-At $T=0$, the integrated and
-differential densities of states are \$\$
+## Implementation details\[<a
+href="/wiki/index.php?title=EFERMI_NEDOS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Implementation details">edit</a> \| (./index.php.md)\]
+
+At $T=0$, the integrated and differential densities of
+states are \$\$
 n(\epsilon)=\sum\_{n\mathbf{k}}\theta(\epsilon-\epsilon\_{n\mathbf{k}}),
 \qquad
 g(\epsilon)=\sum\_{n\mathbf{k}}\delta(\epsilon-\epsilon\_{n\mathbf{k}}).
@@ -55,12 +61,21 @@ n\\\left(k_BT\ln\\\frac{1+x}{1-x}+\epsilon_F\right)\\dx. \$\$
 In practice, this integral is discretized as \$\$
 N_e(\epsilon_F,T)\simeq \frac{1}{2}\sum\_{i=1}^{N}w_i\\
 n\\\left(k_BT\ln\\\frac{1+x_i}{1-x_i}+\epsilon_F\right), \$\$ where
-$w_i$ and $x_i$ are Gauss–Legendre weights and abscissas. The step functions
+$w_i$ and $x_i$ are
+Gauss–Legendre weights and abscissas. The step functions
 \\\theta(\epsilon-\epsilon\_{n\mathbf{k}})\\ entering \\n(\epsilon)\\
 are evaluated using the tetrahedron method, with the number of energy
-points $N$ given by EFERMI_NEDOS.
+points $N$ given by
+EFERMI_NEDOS.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=EFERMI_NEDOS&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ISMEAR](ISMEAR.md), [SIGMA](SIGMA.md), [Smearing
-technique](../tutorials/Smearing_technique.md), [K-point
-integration](../redirects/K-point_integration.md)
+technique](../tutorials/Smearing_technique.md),
+<a href="/wiki/K-point_integration" class="mw-redirect"
+title="K-point integration">K-point integration</a>
+
+

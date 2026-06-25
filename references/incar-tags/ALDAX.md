@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ALDAX
+
+
 ALDAX = \[real\] 
 
 |  |  |  |
@@ -9,21 +11,47 @@ ALDAX = \[real\] 
 | Default: **ALDAX** | = 1.0-[AEXX](AEXX.md) | if [LHFCALC](LHFCALC.md)=.TRUE. |
 |  | = 1.0 | if [LHFCALC](LHFCALC.md)=.FALSE. |
 
-Description: ALDAX is a parameter that multiplies the LDA exchange
-functional or the LDA part of the GGA exchange functional.
+Description: ALDAX is a
+parameter that multiplies the LDA exchange functional or the LDA part of
+the GGA exchange functional.
 
 ------------------------------------------------------------------------
 
-ALDAX can be used as the fraction of LDA exchange in a Hartree-Fock/DFT
-hybrid functional.
+ALDAX can be used as the
+fraction of LDA exchange in a Hartree-Fock/DFT hybrid functional.
 
 |  |
 |----|
 | **Important:** ALDAX can be used only if [LHFCALC](LHFCALC.md)=.TRUE. |
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li>For versions of VASP prior to 6.4.0, <span
+class="mw-selflink selflink">ALDAX</span> was constrained to be equal to
+1.0-<a href="/wiki/AEXX" title="AEXX">AEXX</a>. This constraint is
+lifted since VASP.6.4.0.</li>
+<li><span class="mw-selflink selflink">ALDAX</span> is implemented for
+all functionals listed at <a href="/wiki/GGA" title="GGA">GGA</a> except
+AM05.</li>
+<li><span class="mw-selflink selflink">ALDAX</span> is implemented for
+the functionals from Libxc (see <a href="/wiki/LIBXC1"
+title="LIBXC1">LIBXC1</a> for details).</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ALDAX&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [AEXX](AEXX.md), [ALDAC](ALDAC.md),
 [AGGAX](AGGAX.md), [AGGAC](AGGAC.md),
 [AMGGAX](AMGGAX.md), [AMGGAC](AMGGAC.md),
@@ -36,3 +64,5 @@ formalism](../methods/Hybrid_functionals-_formalism.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-ALDAX-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

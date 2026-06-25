@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LORBITALREAL
-LORBITALREAL = .TRUE. \| .FALSE. 
+
+
+LORBITALREAL = .TRUE. \|
+.FALSE. 
 
 |                           |           |     |
 |---------------------------|-----------|-----|
 | Default: **LORBITALREAL** | = .FALSE. |     |
 
-Description: LORBITALREAL forces VASP to make the orbitals
-$\phi({\bf r})$ real-valued at the Gamma
-point and the Brillouin zone boundary.
+Description: LORBITALREAL
+forces VASP to make the orbitals $\phi({\bf r})$ real-valued at the Gamma point and the Brillouin zone
+boundary.
 
 ------------------------------------------------------------------------
 
@@ -22,7 +25,14 @@ If many degenerate orbitals are present, taking the real part can lead
 to linearly dependent orbitals. One can ensure that this problem does
 not occur by running the mean-field calculation starting from the
 [WAVECAR](../input-files/WAVECAR.md) file with tags
-[ALGO](ALGO.md)=SUBROT and LORBITALREAL =.TRUE..
+[ALGO](ALGO.md)=SUBROT and
+LORBITALREAL =.TRUE..
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LORBITALREAL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md), [IALGO](IALGO.md)
+
+

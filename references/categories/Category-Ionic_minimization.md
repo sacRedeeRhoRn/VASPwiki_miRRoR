@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Ionic minimization
+
+
 By virtue of the Born-Oppenheimer approximation, the electronic and
 ionic degrees of freedom are treated separately in VASP. Using the
 Hellmann-Feynman theorem, VASP can approximate the forces on each ion
@@ -32,14 +34,27 @@ algorithms based on [molecular
 dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
 that can be used to tackle the **ionic-minimization** problem.
 
-## Theory
-- Forces: [Forces](../redirects/Forces.md).
+## Theory\[<a
+href="/wiki/index.php?title=Category:Ionic_minimization&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory">edit</a> \| (./index.php.md)\]
 
-## How to
+- Forces:
+  <a href="/wiki/Forces" class="mw-redirect" title="Forces">Forces</a>.
+
+## How to\[<a
+href="/wiki/index.php?title=Category:Ionic_minimization&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 - [Structure
   optimization](../tutorials/Structure_optimization.md)
-- Effect of Pulay stress on volume optimizations: [Energy vs volume
-  Volume relaxations and Pulay
-  stress](https://vasp.at/wiki/index.php/index.php)").
+- Effect of Pulay stress on volume optimizations: <a
+  href="/wiki/index.php?title=Energy_vs_volume_Volume_relaxations_and_Pulay_stress&amp;action=edit&amp;redlink=1"
+  class="new"
+  title="Energy vs volume Volume relaxations and Pulay stress (page does not exist)">Energy
+  vs volume Volume relaxations and Pulay stress</a>.
 
 ------------------------------------------------------------------------
+
+

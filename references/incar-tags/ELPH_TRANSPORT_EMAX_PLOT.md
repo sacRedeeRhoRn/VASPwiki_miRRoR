@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_TRANSPORT_EMAX_PLOT
-ELPH_TRANSPORT_EMAX_PLOT = \[real\]  
+
+
+ELPH_TRANSPORT_EMAX_PLOT =
+\[real\]  
 Default: **ELPH_TRANSPORT_EMAX_PLOT** = $\max(\varepsilon_{n\mathbf{k}})$+5 
 
 Description: Specifies the maximum energy (in eV) to be considered when
@@ -10,20 +13,21 @@ computing the [transport distribution
 function](../theory/Electronic_transport_coefficients.md)
 for plotting.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
 
 By default, the upper energy limit is set to $\max(\varepsilon_{n\mathbf{k}})$ + 5 eV, where
-$\varepsilon_{n\mathbf{k}}$ are the
-electronic eigenvalues computed in the k-point mesh defined by the
+$\varepsilon_{n\mathbf{k}}$ are the electronic
+eigenvalues computed in the k-point mesh defined by the
 [KPOINTS_ELPH](../input-files/KPOINTS_ELPH.md) file. The transport
 function for plotting is evaluated on a linear energy grid of energies
 between
 [ELPH_TRANSPORT_EMIN_PLOT](ELPH_TRANSPORT_EMIN_PLOT.md)
-and ELPH_TRANSPORT_EMAX_PLOT and with
+and ELPH_TRANSPORT_EMAX_PLOT
+and with
 [ELPH_TRANSPORT_NEDOS_PLOT](ELPH_TRANSPORT_NEDOS_PLOT.md)
 points. The transport function for plotting is computed additionally to
 the one that is used to evaluate the [Onsager
@@ -40,9 +44,15 @@ The transport function and corresponding energy grids are written to
  /results/electron_phonon/electrons/transport_1/transport_function_plot Dataset {7, 1, 3, 3, 501}
 ```
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_TRANSPORT_EMAX_PLOT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
 - [ELPH_TRANSPORT_EMIN_PLOT](ELPH_TRANSPORT_EMIN_PLOT.md)
 - [ELPH_TRANSPORT_NEDOS_PLOT](ELPH_TRANSPORT_NEDOS_PLOT.md)
 - [ELPH_SCATTERING_APPROX](ELPH_SCATTERING_APPROX.md)
 - [TRANSPORT_RELAXATION_TIME](TRANSPORT_RELAXATION_TIME.md)
+
+

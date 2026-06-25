@@ -2,13 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NGZF
+
+
 NGZF = \[integer\]  
 Default: **NGZF** = set in accordance with [PREC](PREC.md),
 [NGZ](NGZ.md), [ENCUT](ENCUT.md) and
 [ENAUG](ENAUG.md) 
 
-Description: NGZF sets the number of grid points in the "fine" FFT grid
-along the first lattice vector.
+Description: NGZF sets the
+number of grid points in the "fine" FFT grid along the first lattice
+vector.
 
 ------------------------------------------------------------------------
 
@@ -18,7 +21,8 @@ used. In case USPPs are used, the local potentials
 (exchange-correlation, Hartree-potential, and ionic potentials) are also
 calculated on this "fine" FFT-mesh.
 
-By default NGZF is set in accordance with the requested "precision" mode
+By default NGZF is set in
+accordance with the requested "precision" mode
 [PREC](PREC.md), [NGZ](NGZ.md), and the plane wave
 kinetic energy cutoffs [ENCUT](ENCUT.md) and
 [ENAUG](ENAUG.md):
@@ -37,15 +41,19 @@ kinetic energy cutoffs [ENCUT](ENCUT.md) and
 
 where
 
-$E_{\rm cut}=\frac{\hbar^2}{2m_e}G_{\rm cut}^2
-\qquad E_{\rm aug}=\frac{\hbar^2}{2m_e}G_{\rm aug}^2$
+$E_{\rm cut}=\frac{\hbar^2}{2m_e}G_{\rm cut}^2 \qquad E_{\rm
+aug}=\frac{\hbar^2}{2m_e}G_{\rm aug}^2$
 
-with $E_{\rm cut}$=[ENCUT](ENCUT.md) and $E_{\rm aug}$=[ENAUG](ENAUG.md).
+with $E_{\rm cut}$=[ENCUT](ENCUT.md) and
+$E_{\rm aug}$=[ENAUG](ENAUG.md).
 
-Alternatively, NGZF can be set to a specific value in the
-[INCAR](../input-files/INCAR.md) file.
+Alternatively, NGZF can be set
+to a specific value in the [INCAR](../input-files/INCAR.md) file.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NGZF&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NGX](NGX.md), [NGY](NGY.md), [NGZ](NGZ.md),
 [NGXF](NGXF.md), [NGYF](NGYF.md),
 [PREC](PREC.md), [ENCUT](ENCUT.md),
@@ -53,3 +61,5 @@ Alternatively, NGZF can be set to a specific value in the
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NGZF-_incategory-Examples)
+
+

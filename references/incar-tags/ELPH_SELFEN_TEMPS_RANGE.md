@@ -2,13 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_TEMPS_RANGE
-ELPH_SELFEN_TEMPS_RANGE = \[real array\] 
+
+
+ELPH_SELFEN_TEMPS_RANGE =
+\[real array\] 
 
 Description: The range of temperatures (in K) at which to compute the
 phonon-mediated electron self-energy and transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -20,15 +23,17 @@ context of a [transport
 calculation](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md).
 
 A range of temperatures can be defined using
-`ELPH_SELFEN_TEMPS_RANGE`` = l u n`, where:
+`ELPH_SELFEN_TEMPS_RANGE`` = l u n`,
+where:
 
 - *l* is the lower limit of the temperature range.
 - *u* is the upper limit of the temperature range.
 - *n* is the number of steps between the two limits.
 
-For example, `ELPH_SELFEN_TEMPS_RANGE`` = 0 700 41` would create a list
-of **41** points from 0 K to 700 K. This is printed in the
-[OUTCAR](../output-files/OUTCAR.md) file:
+For example,
+`ELPH_SELFEN_TEMPS_RANGE`` = 0 700 41`
+would create a list of **41** points from 0 K to 700 K. This is printed
+in the [OUTCAR](../output-files/OUTCAR.md) file:
 
     elph_selfen_temps=
           0.000
@@ -43,7 +48,11 @@ At each temperature an electron-phonon calculation is performed, rather
 than defining it manually using
 [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_TEMPS_RANGE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon
@@ -58,3 +67,5 @@ than defining it manually using
 - [ELPH_SELFEN_CARRIER_PER_CELL](ELPH_SELFEN_CARRIER_PER_CELL.md)
 - [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md)
 - [NELECT](NELECT.md)
+
+

@@ -2,8 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Noncollinear magnetism
-## How to
+
+
+## How to\[<a
+href="/wiki/index.php?title=Category:Noncollinear_magnetism&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 - Noncollinear magnetism:
   [LNONCOLLINEAR](../incar-tags/LNONCOLLINEAR.md).
 
 ------------------------------------------------------------------------
+
+

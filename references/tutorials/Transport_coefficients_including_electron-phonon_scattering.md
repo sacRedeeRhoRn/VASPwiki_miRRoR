@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Transport coefficients including electron-phonon scattering
+
+
 In the framework of the linearized Boltzmann equations, we can compute a
 few electronic transport observables. The transport coefficients can be
 evaluated rather straightforwardly under the approximation of the
@@ -14,8 +16,8 @@ obtain a precise value. See the [theory
 page](../theory/Electronic_transport_coefficients.md)
 for more details on transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 |  |
@@ -50,37 +52,55 @@ The final output of the code is reported for each combination of
 computational parameters using the concept of [electron-phonon
 accumulators](../misc/Electron-phonon_accumulators.md).
 
+
 ## Contents
 
-- [1 Conductivity for metals](#Conductivity_for_metals)
-  - [1.1 Constant relaxation-time
-    approximation](#Constant_relaxation-time_approximation)
-  - [1.2 Self-energy relaxation-time
-    approximation](#Self-energy_relaxation-time_approximation)
-- [2 Mobility for semiconductors](#Mobility_for_semiconductors)
-  - [2.1 Constant relaxation-time
-    approximation](#Constant_relaxation-time_approximation_2)
-  - [2.2 Self-energy relaxation-time
-    approximation](#Self-energy_relaxation-time_approximation_2)
-- [3 Thermoelectric coefficients and the ZT figure of
-  merit](#Thermoelectric_coefficients_and_the_ZT_figure_of_merit)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## Conductivity for metals
-Conductivity $\sigma_{\alpha\beta}$
-relates the current to the applied electric field
+- [1 Conductivity
+  for metals](#Conductivity_for_metals)
+  - [1.1 Constant
+    relaxation-time
+    approximation](#Constant_relaxation-time_approximation)
+  - [1.2
+    Self-energy relaxation-time
+    approximation](#Self-energy_relaxation-time_approximation)
+- [2 Mobility for
+  semiconductors](#Mobility_for_semiconductors)
+  - [2.1 Constant
+    relaxation-time
+    approximation](#Constant_relaxation-time_approximation_2)
+  - [2.2
+    Self-energy relaxation-time
+    approximation](#Self-energy_relaxation-time_approximation_2)
+- [3 Thermoelectric
+  coefficients and the ZT figure of
+  merit](#Thermoelectric_coefficients_and_the_ZT_figure_of_merit)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Conductivity for metals\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Conductivity for metals">edit</a> \| (./index.php.md)\]
+
+Conductivity $\sigma_{\alpha\beta}$ relates the current to the applied electric field
 
 $J_\alpha = \sigma_{\alpha\beta} E_\beta$
 
-### Constant relaxation-time approximation
+### Constant relaxation-time approximation\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Constant relaxation-time approximation">edit</a> \| (./index.php.md)\]
+
 The constant relaxation time is often a good approximation for metals
 because the density of states often changes little around the Fermi
 level. What remains challenging is to determine a value for the constant
-relaxation time $\tau$. To avoid this,
-it is common to report the transport quantities in a different set of
-units, where $\tau=1$. To perform a CRTA
-calculation, you need to add the following variables to the
-[INCAR](../input-files/INCAR.md)
+relaxation time $\tau$. To
+avoid this, it is common to report the transport quantities in a
+different set of units, where $\tau=1$. To
+perform a CRTA calculation, you need to add the following variables to
+the [INCAR](../input-files/INCAR.md)
 
      ELPH_SCATTERING_APPROX = CRTA
      TRANSPORT_RELAXATION_TIME = 1e-14
@@ -89,7 +109,11 @@ calculation, you need to add the following variables to the
 |----|
 | **Mind:** This calculation can be done without the presence of the [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md) that contains the derivatives of the Kohn-Sham potential. |
 
-### Self-energy relaxation-time approximation
+### Self-energy relaxation-time approximation\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Self-energy relaxation-time approximation">edit</a> \| (./index.php.md)\]
+
 The **k**-mesh used in the previous calculation is a good starting point
 for a computation in the SERTA approximations (or MRTA) since the
 integral of the transport function is a requirement in both cases. This
@@ -116,7 +140,11 @@ means that VASP will compute the linewidths for more Kohn-Sham states.
 The states selected for computation are reported in the
 [OUTCAR](../output-files/OUTCAR.md) file
 
-## Mobility for semiconductors
+## Mobility for semiconductors\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Mobility for semiconductors">edit</a> \| (./index.php.md)\]
+
 In semiconductors, it is more usual to compute the mobility instead of
 the conductivity. This is because the conductivity is proportional to
 the number of free carriers, which means that by adding more free
@@ -126,12 +154,12 @@ intrinsic property of the material.
 
 $\sigma = n_e \mu_e + n_h \mu_h$
 
-with $n_e$ being the density of electron
-carriers, $n_h$ the density of hole
-carriers and $\mu_e = \sigma_e/n_e$ and
-$\mu_h = \sigma_h/n_h$ with
-$\sigma_e$ being the contribution of the
-conduction bands to the electron conductivity and $\sigma_h$ of the valence bands.
+with $n_e$ being
+the density of electron carriers, $n_h$ the
+density of hole carriers and $\mu_e = \sigma_e/n_e$ and $\mu_h = \sigma_h/n_h$ with $\sigma_e$
+being the contribution of the conduction bands to the electron
+conductivity and $\sigma_h$ of
+the valence bands.
 
 |  |
 |----|
@@ -152,27 +180,27 @@ electron doping.
 The mobility is related to the conductivity \$\sigma\$, which can be
 defined using the transport distribution function.
 
-$\mathcal{T}(\varepsilon) = \frac{e^2}{N \Omega}
-\sum_{n\mathbf{k}} \tau_{n\mathbf{k}} \\ \mathbf{v}_{n\mathbf{k}}
-\otimes \mathbf{v}_{n\mathbf{k}} \\ \delta(\varepsilon_{n\mathbf{k}} -
+$\mathcal{T}(\varepsilon) = \frac{e^2}{N \Omega} \sum_{n\mathbf{k}}
+\tau_{n\mathbf{k}} \\ \mathbf{v}_{n\mathbf{k}} \otimes
+\mathbf{v}_{n\mathbf{k}} \\ \delta(\varepsilon_{n\mathbf{k}} -
 \varepsilon),$
 
 and the Onsager coefficients are:
 
-$L_{ij} = \int d\varepsilon \\
-\mathcal{T}(\varepsilon) \\ (\varepsilon - \mu)^{i+j-2}
-\left(-\frac{\partial f^0}{\partial \varepsilon}\right).$
+$L_{ij} = \int d\varepsilon \\ \mathcal{T}(\varepsilon) \\
+(\varepsilon - \mu)^{i+j-2} \left(-\frac{\partial f^0}{\partial
+\varepsilon}\right).$
 
-where $\Omega$ is the volume of the unit
-cell, $\tau$ is the scattering lifetime,
-$v$ is the drift velocity,
-$f_{n\mathbf{k}}$ is the occupation
-number, and $\varepsilon_{n\mathbf{k}}$
-is the band energy.
+where $\Omega$ is
+the volume of the unit cell, $\tau$ is the
+scattering lifetime, $v$ is the
+drift velocity, $f_{n\mathbf{k}}$ is the occupation number, and
+$\varepsilon_{n\mathbf{k}}$ is the band energy.
 
 By restricting the band sums to conduction or valence bands, the
 conductivity can be separated into electron and hole contributions,
-$\sigma_e$ and $\sigma_h$, and the electron and hole mobilities defined:
+$\sigma_e$ and $\sigma_h$,
+and the electron and hole mobilities defined:
 
 |  |  |  |
 |----|----|----|
@@ -180,22 +208,24 @@ $\sigma_e$ and $\sigma_h$, and the electron and hole mobilities defined:
 | Electron mobility $\mu_e$ | $\mu_e = \tfrac{\sigma_{n \in \text{CB}}}{n_e}$ | $n_e = \frac{1}{\Omega N_\mathbf{k}}\sum_{\mathbf{k}n \in \text{CB}} f(\varepsilon_{\mathbf{k}n}, T, \mu)$ |
 | Hole mobility $\mu_h$ | $\mu_h = \tfrac{\sigma_{n \in \text{VB}}}{n_h}$ | $n_h = \frac{1}{\Omega N_\mathbf{k}}\sum_{\mathbf{k}n \in \text{VB}} \big\[1 - f(\varepsilon_{\mathbf{k}n}, T, \mu)\big\]$ |
 
-where $\sigma_{n \in \text{CB}}$ and
-$\sigma_{n \in \text{VB}}$ denote the
-conductivity restricted to states in the conduction and valence bands,
-respectively, $f_{n\mathbf{k}}$ is the
-[Fermi–Dirac distribution](../incar-tags/ELPH_FERMI_NEDOS.md),
-and $\mu$ is the [chemical
+where $\sigma_{n \in \text{CB}}$ and $\sigma_{n \in \text{VB}}$ denote the conductivity restricted to states in the
+conduction and valence bands, respectively, $f_{n\mathbf{k}}$ is the [Fermi–Dirac
+distribution](../incar-tags/ELPH_FERMI_NEDOS.md), and
+$\mu$ is the [chemical
 potential](../theory/Chemical_potential_in_electron-phonon_interactions.md)
 at the given temperature.
 
-### Constant relaxation-time approximation
+### Constant relaxation-time approximation\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Constant relaxation-time approximation">edit</a> \| (./index.php.md)\]
+
 The constant relaxation time is a very crude approximation in the case
 of semiconductors because it is proportional to the electronic density
-of states which have a $\propto \sqrt{e}$ behavior around the valence band maximum or conduction band
-minimum. It is however still instructive to perform these calculations,
-such as to get an idea of the **k**-sampling required to converge the
-mobility.
+of states which have a $\propto \sqrt{e}$ behavior around the valence band maximum or conduction
+band minimum. It is however still instructive to perform these
+calculations, such as to get an idea of the **k**-sampling required to
+converge the mobility.
 
 Because of the sharp jump in the density of states in the regions of
 interest for the transport computation, it is crucial to ensure that the
@@ -204,25 +234,35 @@ integration mesh
 points. More points are often required for semiconductors than for
 metals.
 
-### Self-energy relaxation-time approximation
+### Self-energy relaxation-time approximation\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Self-energy relaxation-time approximation">edit</a> \| (./index.php.md)\]
+
 The same observations apply here than in the case of metals, with the
 particularity that it is more difficult to converge the linewidths for
 semiconductors. This is specially true in the case of polar materials,
 where the electron-phonon matrix elements have an integrable divergence
 when $q\rightarrow0$.
 
-## Thermoelectric coefficients and the ZT figure of merit
+## Thermoelectric coefficients and the ZT figure of merit\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Thermoelectric coefficients and the ZT figure of merit">edit</a> \| (./index.php.md)\]
+
 The ZT figure of merit is given as a function of the transport
 coefficients and the absolute temperature, $T$:
 
 $ZT=\frac{\sigma S^2 T}{\kappa_e+\kappa_l}$
 
-The conductivity $\sigma$, Seebeck
-coefficient $S$ and the electronic
-contribution to the thermal conductivity $\kappa_e$ are reported in the [OUTCAR](../output-files/OUTCAR.md) file.
-Here is an example output where these values are reported for the
-different [temperatures](../incar-tags/ELPH_SELFEN_TEMPS.md) in
-a small table for each
+The conductivity $\sigma$,
+Seebeck coefficient $S$ and the
+electronic contribution to the thermal conductivity
+$\kappa_e$ are reported in the
+[OUTCAR](../output-files/OUTCAR.md) file. Here is an example output where
+these values are reported for the different
+[temperatures](../incar-tags/ELPH_SELFEN_TEMPS.md) in a small
+table for each
 [accumulator](../misc/Electron-phonon_accumulators.md):
 
     Transport for self-energy accumulator N=     1
@@ -234,20 +274,26 @@ a small table for each
             400.00000000          9.90446361        117.64008575         73.42946205        548.72555653     219490.22261143          0.00131031 Gauss-Legendre grids
             500.00000000          9.95389195        108.91505893         67.98526987        604.60014228     302300.07113882          0.00147236 Gauss-Legendre grids
 
-The lattice thermal conductivity $\kappa_l$ can be computed using the [Müller-Plathe
+The lattice thermal conductivity $\kappa_l$ can
+be computed using the [Müller-Plathe
 method](Müller-Plathe_method.md) or with
 an external package such as
-[phono3py](https://phonopy.github.io/phono3py/).
+<a href="https://phonopy.github.io/phono3py/" class="external text"
+rel="nofollow">phono3py</a>.
 
 Because the Seebeck coefficient $S$ and
 electronic contribution to the thermal conductivity
-$\kappa_e$ depend on the first and
-second momentum of the transport function, a larger number of points
+$\kappa_e$ depend on the first and second momentum of
+the transport function, a larger number of points
 ([TRANSPORT_NEDOS](../incar-tags/TRANSPORT_NEDOS.md)) is often
 required to obtain an accurate integration of these transport quantities
 than for the conductivity or mobility.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Transport_coefficients_including_electron-phonon_scattering&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Band-structure
   renormalization](Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Electronic transport
@@ -261,3 +307,5 @@ than for the conductivity or mobility.
 - [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 - [Electron-phonon interactions from Monte-Carlo
   sampling](Electron-phonon_interactions_from_Monte-Carlo_sampling.md)
+
+

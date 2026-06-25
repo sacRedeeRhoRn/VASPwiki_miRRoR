@@ -2,9 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_HEAT
+
+
 This file contains the local heat flux at every MD step in units of
-$\mathrm{ eV \\ \AA / fs}$. This file is
-only written if [ML_LHEAT](../incar-tags/ML_LHEAT.md)=**.TRUE.**.
+$\mathrm{ eV \\ \AA / fs}$. This file is only written if
+[ML_LHEAT](../incar-tags/ML_LHEAT.md)=**.TRUE.**.
 
 A sample output should look like the following:
 
@@ -23,3 +25,5 @@ Here "NSTEP" is the number of the MD step and "QXYZ" is the heat flux in
 three Cartesian directions.
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_BROAD_TOL
-ELPH_SELFEN_BROAD_TOL = \[real\]  
+
+
+ELPH_SELFEN_BROAD_TOL =
+\[real\]  
 Default: **ELPH_SELFEN_BROAD_TOL** = 1e-6 
 
 Description: defines the fraction of the total weight of the broadening
@@ -13,8 +16,8 @@ used when
 [ELPH_SELFEN_IMAG_SKIP](ELPH_SELFEN_IMAG_SKIP.md)=.TRUE.
 and [ELPH_SELFEN_DELTA](ELPH_SELFEN_DELTA.md)\>0.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -22,9 +25,11 @@ and [ELPH_SELFEN_DELTA](ELPH_SELFEN_DELTA.md)\>0.
 When evaluating delta-like quantities from the imaginary part of the
 electron self-energy, a finite broadening function
 $f(\epsilon)$ is used.
-ELPH_SELFEN_BROAD_TOL determines what fraction of the integral of this
-function is retained inside the energy window $\[-y, y\]$ around the chemical potential, such that the
-remaining tails are ignored.
+ELPH_SELFEN_BROAD_TOL
+determines what fraction of the integral of this function is retained
+inside the energy window $\[-y, y\]$
+around the chemical potential, such that the remaining tails are
+ignored.
 
 For a Lorentzian broadening of the form
 
@@ -35,28 +40,30 @@ where $\delta \equiv$
 integral between $-y$ and
 $y$ is
 
-$\int_{-y}^{y} \frac{\delta}{\delta^2 + x^2} \\
-dx = 2 \arctan\\\left(\frac{y}{\delta}\right),$
+$\int_{-y}^{y} \frac{\delta}{\delta^2 + x^2} \\ dx = 2
+\arctan\\\left(\frac{y}{\delta}\right),$
 
-while the total integral over all energies ($y \to
-\infty$) is $\pi$. We thus
+while the total integral over all energies ($y \to \infty$) is $\pi$. We thus
 require
 
-$2 \arctan\\\left(\frac{y}{\delta}\right) = \pi
-(1 - \alpha),$
+$2
+\arctan\\\left(\frac{y}{\delta}\right) = \pi (1 - \alpha),$
 
 where $\alpha \equiv$
 ELPH_SELFEN_BROAD_TOL.
 
-Solving for $y$ gives the energy cutoff:
+Solving for $y$ gives the
+energy cutoff:
 
-$y = \delta \\ \tan\\\left(\frac{\pi (1 -
-\alpha)}{2}\right).$
+$y
+= \delta \\ \tan\\\left(\frac{\pi (1 - \alpha)}{2}\right).$
 
 Hence:
 
-- A small value of ELPH_SELFEN_BROAD_TOL (e.g. 1e-6) means that nearly
-  the entire Lorentzian area is included — a wide energy window.
+- A small value of
+  ELPH_SELFEN_BROAD_TOL (e.g.
+  1e-6) means that nearly the entire Lorentzian area is included — a
+  wide energy window.
 - A large value (e.g. 0.1) restricts the integration to a smaller region
   around the resonance.
 
@@ -66,8 +73,14 @@ self-energy into an effective delta function. The width parameter
 $\delta$ is directly controlled by
 [ELPH_SELFEN_DELTA](ELPH_SELFEN_DELTA.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_BROAD_TOL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_SELFEN_IMAG_SKIP](ELPH_SELFEN_IMAG_SKIP.md)
 - [ELPH_SELFEN_DELTA](ELPH_SELFEN_DELTA.md)
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
+
+

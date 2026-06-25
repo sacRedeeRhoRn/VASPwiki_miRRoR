@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Makefile.include.linux intel cuda
+
+
     # Precompiler options                                                                                                                                                                                          
     CPP_OPTIONS= -DMPI -DHOST=\"LinuxIFC\" -DIFC \                                                                                                                                                                 
                  -DCACHE_SIZE=4000 -DPGF90 -Davoidalloc \                                                                                                                                                          
@@ -68,3 +70,5 @@
     GENCODE_ARCH    := -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\"
 
     MPI_INC    =/opt/intel/impi_latest/include64
+
+

@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # OUTCAR
-There are three main output files: OUTCAR in human-readable format,
-[vasprun.xml](Vasprun.xml.md) in xml format, and
-[vaspout.h5](Vaspout.h5.md) in HDF5 format. The OUTCAR
-file gives detailed human-readable output of a VASP run with roughly the
-following format:
+
+
+There are three main output files:
+OUTCAR in human-readable
+format, [vasprun.xml](Vasprun.xml.md) in xml format,
+and [vaspout.h5](Vaspout.h5.md) in HDF5 format. The
+OUTCAR file gives detailed
+human-readable output of a VASP run with roughly the following format:
 
 - A summary of the used input parameters (e.g.,
   [INCAR](../input-files/INCAR.md) tags), the starting structure (cf.
@@ -23,22 +26,37 @@ following format:
   moments](../categories/Category-Magnetism.md).
 - [Dielectric
   properties](../categories/Category-Dielectric_properties.md)
-- The amount of output written onto the OUTCAR file can be chosen by
+- The amount of output written onto the
+  OUTCAR file can be chosen by
   modifying the [NWRITE](../incar-tags/NWRITE.md) tag in the
   [INCAR](../input-files/INCAR.md) file.
 
+
 ## Contents
 
-- [1 INCAR tags](#INCAR_tags)
-  - [1.1 Common tags](#Common_tags)
-  - [1.2 Property tags](#Property_tags)
-- [2 Related tags and articles](#Related_tags_and_articles)
 
-## INCAR tags
-### Common tags
-The output to the OUTCAR file is determined by
-[INCAR](../input-files/INCAR.md) tags. The output for these is documented on
-their respective tag or how-to pages. Some of the most common tags are:
+- [1 INCAR
+  tags](#INCAR_tags)
+  - [1.1 Common
+    tags](#Common_tags)
+  - [1.2 Property
+    tags](#Property_tags)
+- [2 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## INCAR tags\[<a href="/wiki/index.php?title=OUTCAR&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR tags">edit</a> \| (./index.php.md)\]
+
+### Common tags\[<a href="/wiki/index.php?title=OUTCAR&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Common tags">edit</a> \| (./index.php.md)\]
+
+The output to the OUTCAR file
+is determined by [INCAR](../input-files/INCAR.md) tags. The output for these
+is documented on their respective tag or how-to pages. Some of the most
+common tags are:
 
 - the [IBRION](../incar-tags/IBRION.md) tag selects [structure
   optimization](../tutorials/Structure_optimization.md) -
@@ -60,7 +78,10 @@ their respective tag or how-to pages. Some of the most common tags are:
   equation](../theory/Category-Bethe-Salpeter_equations.md)
   (BSE).
 
-### Property tags
+### Property tags\[<a href="/wiki/index.php?title=OUTCAR&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Property tags">edit</a> \| (./index.php.md)\]
+
 There are also many tags for specific properties, such as
 [electron-phonon
 interactions](../categories/Category-Electron-phonon_interactions.md)
@@ -72,7 +93,10 @@ field gradient EFG ([LEFG](../incar-tags/LEFG.md)), etc.
 There are several other output files which we summarize below, along
 with several common tags for
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=OUTCAR&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - Output and input files: [INCAR](../input-files/INCAR.md),
   [POSCAR](../input-files/POSCAR.md), [KPOINTS](../input-files/KPOINTS.md),
   [POTCAR](../input-files/POTCAR.md), [OSZICAR](OSZICAR.md),
@@ -91,3 +115,5 @@ with several common tags for
   core-level binding energies](../incar-tags/ICORELEVEL.md),
   [optics](../incar-tags/ALGO.md), [density of states
   (DOS)](../incar-tags/LORBIT.md).
+
+

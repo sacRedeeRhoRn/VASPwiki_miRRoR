@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IALL_IN_ONE
+
+
 |  |  |  |
 |----|----|----|
 | Default: **IALL_IN_ONE** | = 1 | for [LALL_IN_ONE](LALL_IN_ONE.md)=.TRUE. or [NBANDS](NBANDS.md)\<0 |
 |  | = -1 | for [LALL_IN_ONE](LALL_IN_ONE.md)=.FALSE. |
 
-Description: IALL_IN_ONE\>0 enables the all-in-one mode for [many-body
-perturbation
-theory](../redirects/Many-body_perturbation_theory.md)
+Description: IALL_IN_ONE\>0
+enables the all-in-one mode for
+<a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+title="Many-body perturbation theory">many-body perturbation theory</a>
 calculations, i.e.,
 [ALGO](ALGO.md)=[ACFDT\[R\]](/wiki/ACFDT/RPA_calculations "ACFDT/RPA calculations"),
 [\[EV\]GW0\[R\]](/wiki/Practical_guide_to_GW_calculations "Practical guide to GW calculations"),
@@ -39,14 +42,20 @@ The all-in-one mode is automatically enabled for
 [ALGO](ALGO.md)=\[EV\]GW\[0\]R, RPA\[R\],ACFDT\[R\] if
 [NBANDS](NBANDS.md) is not set.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** available as of VASP.6.4.0 |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=IALL_IN_ONE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md), [NBANDS](NBANDS.md)
 [NBANDSEXACT](NBANDSEXACT.md)
 [NBANDS_WAVE](NBANDS_WAVE.md)
 [LALL_IN_ONE](LALL_IN_ONE.md)
 
 ------------------------------------------------------------------------
+
+

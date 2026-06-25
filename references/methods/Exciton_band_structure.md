@@ -2,14 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Exciton band structure
-[![](https://vasp.at/wiki/images/thumb/1/17/Exciton_band_structure_hBN.png/300px-Exciton_band_structure_hBN.png)](https://vasp.at/wiki/File:Exciton_band_structure_hBN.png)
 
-Band structure of the two lowest excitons in bulkh hBN
+
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Exciton_band_structure_hBN.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/1/17/Exciton_band_structure_hBN.png/300px-Exciton_band_structure_hBN.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/1/17/Exciton_band_structure_hBN.png 1.5x"
+width="300" height="225" /></a>
+<figcaption>Band structure of the two lowest excitons in bulkh
+hBN</figcaption>
+</figure>
 
 Exciton band dispersion serves as a powerful tool for characterizing
 excitations in a system and can be directly linked to the measured
-dynamical structure factor^([\[1\]](#cite_note-gatti:prb:2013-1)). The
-exciton band structure is a band structure plot where the exciton
+dynamical structure
+factor<sup>[\[1\]](#cite_note-gatti:prb:2013-1)</sup>.
+The exciton band structure is a band structure plot where the exciton
 energies are presented for different q-points. To find the exciton
 energies at the required \$q\$-points, [the Bethe-Salpeter equation
 (BSE)](../tutorials/Bethe-Salpeter-equations_calculations.md)
@@ -17,7 +27,11 @@ energies at the required \$q\$-points, [the Bethe-Salpeter equation
 calculation](Time-dependent_density-functional_theory_calculations.md))
 has to be solved for every such \$q\$-point.
 
-### Excitons at finite q
+### Excitons at finite q\[<a
+href="/wiki/index.php?title=Exciton_band_structure&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Excitons at finite q">edit</a> \| (./index.php.md)\]
+
 To solve the BSE ([ALGO](../incar-tags/ALGO.md)=BSE or TDHF) at a finite
 momentum q, the index of the corresponding \$q\$-point has to be
 provided via the [KPOINT_BSE](../incar-tags/KPOINT_BSE.md) tag. To
@@ -31,6 +45,7 @@ To be able to produce a smooth exciton band structure plot a large
 number of k-points have to be included. For example, bulk hBN with
 24x24x2 k-points grid has the following k-points in the irreducible
 Brillouin zone:
+
 
        Subroutine IBZKPT returns following result:
      ===========================================
@@ -56,6 +71,7 @@ Brillouin zone:
       0.083333  0.041667  0.000000     12.000000
       0.125000  0.041667  0.000000     12.000000
     ...
+
 
 In GW and BSE calculations one can find two blocks for *Subroutine
 IBZKPT returns following result:*. The first one corresponds to the
@@ -90,11 +106,23 @@ corresponding [vasprun.xml](../output-files/Vasprun.xml.md) files:
 The dispersion along G-K path for the two lowest excitons in bulk hBN is
 shown in the figure.
 
-## Related tags and sections
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Exciton_band_structure&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [KPOINT_BSE](../incar-tags/KPOINT_BSE.md),
 [ANTIRES](../incar-tags/ANTIRES.md)
 
-## References
-1.  [↑](#cite_ref-gatti:prb:2013_1-0) [Matteo Gatti and Francesco
-    Sottile, Phys. Rev. B **88**, 155113
-    (2013).](http://dx.doi.org/10.1103/PhysRevB.88.155113)
+## References\[<a
+href="/wiki/index.php?title=Exciton_band_structure&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-gatti:prb:2013_1-0)
+    <a href="http://dx.doi.org/10.1103/PhysRevB.88.155113"
+    class="external text" rel="nofollow">Matteo Gatti and Francesco Sottile,
+    Phys. Rev. B <strong>88</strong>, 155113 (2013).</a>
+
+

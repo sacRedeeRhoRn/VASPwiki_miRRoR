@@ -2,28 +2,38 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BANDGAP
-BANDGAP = COMPACT \| WEIGHT \| KPOINT  
+
+
+BANDGAP = COMPACT \| WEIGHT \|
+KPOINT  
 Default: **BANDGAP** = COMPACT 
 
-Description: BANDGAP determines the verbosity for reporting the bandgap
-to the OUTCAR file. Only the first character is significant.
+Description: BANDGAP
+determines the verbosity for reporting the bandgap to the OUTCAR file.
+Only the first character is significant.
 
 ------------------------------------------------------------------------
 
-[![](https://vasp.at/wiki/images/thumb/c/c6/Bandgap.png/400px-Bandgap.png)](https://vasp.at/wiki/File:Bandgap.png)
-
-For semiconductors, the direct and fundamental bandgap have a clear
-definition. For semimetals, the Fermi energy cuts through bands so
-depending on the method one defines either a zero or a negative
-fundamental bandgap. For metals, defining a bandgap is not meaningful.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Bandgap.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/c/c6/Bandgap.png/400px-Bandgap.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/c/c6/Bandgap.png/600px-Bandgap.png 1.5x, /wiki/images/thumb/c/c6/Bandgap.png/800px-Bandgap.png 2x"
+width="400" height="714" /></a>
+<figcaption>For semiconductors, the direct and fundamental bandgap have
+a clear definition. For semimetals, the Fermi energy cuts through bands
+so depending on the method one defines either a zero or a negative
+fundamental bandgap. For metals, defining a bandgap is not
+meaningful.</figcaption>
+</figure>
 
 The bandgap of the system separates the occupied valence bands from the
 unoccupied conduction bands. Of particular interest are the fundamental
 bandgap between valence band maximum (VBM) and conduction band minimum
 (CBM) and the direct bandgap at a single **k** point.
 
-BANDGAP controls how VASP reports the bandgap information. The following
-options exist:
+BANDGAP controls how VASP
+reports the bandgap information. The following options exist:
 
 - BANDGAP=COMPACT
 
@@ -41,29 +51,34 @@ Considers each **k** point individually to decide what valence and
 conduction bands are. Provides a comprehensive report of all band
 extrema.
 
-## Difference between WEIGHT and KPOINT
+## Difference between WEIGHT and KPOINT\[<a href="/wiki/index.php?title=BANDGAP&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Difference between WEIGHT and KPOINT">edit</a> \| (./index.php.md)\]
+
 The figure illustrates different possible properties of electronic band
 structures. For semiconductors, the bandgap is well defined so that the
-choice of BANDGAP only affects whether the output is compact or verbose.
-For metals, there is no straightforward definition of a bandgap so the
-default of BANDGAP=COMPACT is sufficient. A semimetal shares properties
-with metals (Fermi energy crosses bands) and with semiconductors
-(visible bandgap in the band structure).
+choice of BANDGAP only affects
+whether the output is compact or verbose. For metals, there is no
+straightforward definition of a bandgap so the default of
+BANDGAP=COMPACT is sufficient.
+A semimetal shares properties with metals (Fermi energy crosses bands)
+and with semiconductors (visible bandgap in the band structure).
 
-BANDGAP=WEIGHT interprets systems like a metal; valence (conduction)
-states are more (less) than half-filled. In this case, the bandgap of a
-semimetal converges to zero with an increasing number of **k** points
-similar to a metal. For N number of electrons, the number of valence
-states is not in general equal to N for all **k** points. Hence, the
-direct bandgap is not necessarily between the N-th and the (N + 1)-th
-state.
+BANDGAP=WEIGHT interprets
+systems like a metal; valence (conduction) states are more (less) than
+half-filled. In this case, the bandgap of a semimetal converges to zero
+with an increasing number of **k** points similar to a metal. For N
+number of electrons, the number of valence states is not in general
+equal to N for all **k** points. Hence, the direct bandgap is not
+necessarily between the N-th and the (N + 1)-th state.
 
-BANDGAP=KPOINT considers systems like a semiconductor where every **k**
-point may be treated individually. The number of valence bands is equal
-to the number of electrons N for all **k** points and the direct bandgap
-is equal to the smallest difference between the N-th and (N + 1)-th
-state. In a semimetal, this approach produces a negative bandgap because
-the Fermi energy crosses the bands. For collinear calculations
+BANDGAP=KPOINT considers
+systems like a semiconductor where every **k** point may be treated
+individually. The number of valence bands is equal to the number of
+electrons N for all **k** points and the direct bandgap is equal to the
+smallest difference between the N-th and (N + 1)-th state. In a
+semimetal, this approach produces a negative bandgap because the Fermi
+energy crosses the bands. For collinear calculations
 ([ISPIN](ISPIN.md)=2), this method will allow for a different
 number of up and down electrons at every **k** point.
 
@@ -71,7 +86,10 @@ number of up and down electrons at every **k** point.
 |----|
 | **Mind:** Setting BANDGAP=KPOINT only impacts the output of VASP. It is not considered when evaluating the occupations of different bands. If you want to enforce certain occupations, please consider the tags [NUPDOWN](NUPDOWN.md), [FERWE](FERWE.md), and [FERDO](FERDO.md). |
 
-## Example of the verbose output
+## Example of the verbose output\[<a href="/wiki/index.php?title=BANDGAP&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Example of the verbose output">edit</a> \| (./index.php.md)\]
+
     Band structure
     --------------
                            spin independent             spin component 1             spin component 2
@@ -95,9 +113,14 @@ coordinates. The second block reports analogous values for the direct
 gap. In each case the energy difference of the band edges is computed
 and printed as fundamental and direct gap, respectively.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=BANDGAP&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [EFERMI](EFERMI.md), [ISMEAR](ISMEAR.md),
 [SIGMA](SIGMA.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-BANDGAP-_incategory-Examples)
+
+

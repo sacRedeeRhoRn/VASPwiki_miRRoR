@@ -2,26 +2,35 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NELMIN
+
+
 NELMIN = \[integer\]  
 Default: **NELMIN** = 2 
 
-Description: NELMIN specifies the minimum number of electronic
-self-consistency steps.
+Description: NELMIN specifies
+the minimum number of electronic self-consistency steps.
 
 ------------------------------------------------------------------------
 
-It is rarely necessary to change the value of the NELMIN tag. In some
-cases, e.g., in
+It is rarely necessary to change the value of the
+NELMIN tag. In some cases,
+e.g., in
 [molecular-dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
 runs, or
 [ionic-minimization](../categories/Category-Ionic_minimization.md)
-methods, we recommend increasing the NELMIN tag to a value between 4 and
-8.
+methods, we recommend increasing the
+NELMIN tag to a value between
+4 and 8.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=NELMIN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [NELM](NELM.md), [NELMDL](NELMDL.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NELMIN-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

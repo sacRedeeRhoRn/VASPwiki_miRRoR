@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NiO HSE06
+
+
 Description: Hybrid functional calculation using the HSE06 functional.
 
 It is strongly recommended to start from a converged PBE calculation
@@ -9,14 +11,14 @@ It is strongly recommended to start from a converged PBE calculation
 method. For other [hybrid
 functionals](../methods/List_of_hybrid_functionals.md)
 
-**Exercise :** Check the values presented
+*<u>Exercise :</u>* Check the values presented
 [here](NiO_GGA+U.md).
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO HSE06 AFM
       SYSTEM   = "NiO"
@@ -50,7 +52,7 @@ functionals](../methods/List_of_hybrid_functionals.md)
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -60,7 +62,7 @@ functionals](../methods/List_of_hybrid_functionals.md)
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -74,7 +76,14 @@ functionals](../methods/List_of_hybrid_functionals.md)
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-## Download
-[nio_hse06.tgz](https://vasp.at/wiki/images/7/7b/Nio_hse06.tgz "Nio hse06.tgz")
+## Download\[<a
+href="/wiki/index.php?title=NiO_HSE06&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/7/7b/Nio_hse06.tgz" class="internal"
+title="Nio hse06.tgz">nio_hse06.tgz</a>
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Electron Phonon Couplings: Statistical averages
+
+
+
 Redirect to:
 
 - [Band gap renormalization in diamond using one-shot
   method](../misc/Band_gap_renormalization_in_diamond_using_one-shot_method.md)
+
+

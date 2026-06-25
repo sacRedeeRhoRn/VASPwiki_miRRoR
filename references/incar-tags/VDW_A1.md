@@ -2,15 +2,20 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VDW_A1
+
+
 VDW_A1 = \[real\] 
 
-Description: VDW_A1 sets the scaling $a_{1}$ of the critical radii in the rational Becke-Johnson damping
-function of the DFT-D3 and [DFT-D4](../methods/DFT-D4.md) methods.
+Description: VDW_A1 sets the
+scaling $a_{1}$ of
+the critical radii in the rational Becke-Johnson damping function of the
+DFT-D3 and [DFT-D4](../methods/DFT-D4.md) methods.
 
 ------------------------------------------------------------------------
 
-VDW_A1 allows to set the scaling $a_{1}$ of the critical radii in the rational Becke-Johnson damping
-function:
+VDW_A1 allows to set the
+scaling $a_{1}$ of
+the critical radii in the rational Becke-Johnson damping function:
 
 - [DFT-D3](../methods/DFT-D3.md) ([IVDW](IVDW.md)=12).
 - [simple-DFT-D3](../methods/Simple-DFT-D3.md)
@@ -19,7 +24,10 @@ function:
   mrational, or optimizedpower).
 - [DFT-D4](../methods/DFT-D4.md) ([IVDW](IVDW.md)=13).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=VDW_A1&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IVDW](IVDW.md), [VDW_A2](VDW_A2.md),
 [DFT-D3](../methods/DFT-D3.md),
 [simple-DFT-D3](../methods/Simple-DFT-D3.md),
@@ -29,3 +37,5 @@ function:
 tag](https://vasp.at/wiki/index.php/Special-Search/-VDW_A1-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,43 +2,71 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # STM of graphite
+
+
+
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-STM of graphite \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+STM of
+graphite \> [STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Generation of an STM image of a graphite surface.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     C: Graphite Lattice
     1.0
      +2.4410462393  +0.0000000000  +0.0000000000 
@@ -57,7 +85,11 @@ Generation of an STM image of a graphite surface.
      +0.0000000000  +0.0000000000 +13.2280975708 
      +0.0000000000  +1.4093387034 +13.2280975708
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     general:
       SYSTEM = Graphite surface slap
       ENMAX  = 400
@@ -76,7 +108,11 @@ Generation of an STM image of a graphite surface.
     #   ICHARG = 2
     #   LORBIT = 11
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     K-Points
     0
     Monkhorst-Pack
@@ -85,42 +121,62 @@ Generation of an STM image of a graphite surface.
 
 - Only one k point in z direction since we have a surface.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - First copy INCAR.DOS to [INCAR](../input-files/INCAR.md) to get the
   lm-decomposed DOS.
 
-&nbsp;
+<!-- -->
 
 - Second copy INCAR.par to [INCAR](../input-files/INCAR.md) and run VASP for
   the preliminary calculation.
 
-&nbsp;
+<!-- -->
 
 - To get an STM image use p4vasp:
 
-[![](https://vasp.at/wiki/images/thumb/f/f3/Fig_graphite_STM_1.png/800px-Fig_graphite_STM_1.png)](https://vasp.at/wiki/File:Fig_graphite_STM_1.png)
+<a href="/wiki/File:Fig_graphite_STM_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f3/Fig_graphite_STM_1.png/800px-Fig_graphite_STM_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/f/f3/Fig_graphite_STM_1.png/1200px-Fig_graphite_STM_1.png 1.5x, /wiki/images/f/f3/Fig_graphite_STM_1.png 2x"
+width="800" height="534" /></a>
 
-## Download
-[Graphite_STM.tgz](https://vasp.at/wiki/images/a/ac/Graphite_STM.tgz "Graphite STM.tgz")
+## Download\[<a
+href="/wiki/index.php?title=STM_of_graphite&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/a/ac/Graphite_STM.tgz" class="internal"
+title="Graphite STM.tgz">Graphite_STM.tgz</a>
+
 
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
 [vibrational frequencies of CO on Ni 111
 surface](Vibrational_frequencies_of_CO_on_Ni_111_surface.md) \>
-STM of graphite \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+STM of
+graphite \> [STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

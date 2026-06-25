@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constrained-random-phase approximation
+
+
+
 Redirect to:
 
 - [Category:Constrained-random-phase
   approximation](../theory/Category-Constrained-random-phase_approximation.md)
+
+

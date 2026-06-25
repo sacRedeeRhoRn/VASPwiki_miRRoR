@@ -2,19 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BMIX
+
+
 BMIX = \[real\]  
 Default: **BMIX** = 1.0 
 
-Description: BMIX sets the cutoff wave vector for Kerker mixing scheme
-([IMIX](IMIX.md)=1 and/or [INIMIX](INIMIX.md)=1).
+Description: BMIX sets the
+cutoff wave vector for Kerker mixing scheme ([IMIX](IMIX.md)=1
+and/or [INIMIX](INIMIX.md)=1).
 
 ------------------------------------------------------------------------
 
 The mixed density is given by
 
-$\rho_{\rm mix}\left(G\right)=\rho_{\rm
-in}\left(G\right)+A \frac{G^2}{G^2+B^2}\Bigl(\rho_{\rm
-out}\left(G\right)-\rho_{\rm in}\left(G\right)\Bigr)$
+$\rho_{\rm mix}\left(G\right)=\rho_{\rm in}\left(G\right)+A
+\frac{G^2}{G^2+B^2}\Bigl(\rho_{\rm out}\left(G\right)-\rho_{\rm
+in}\left(G\right)\Bigr)$
 
 with $A$=[AMIX](AMIX.md) and
 $B$=BMIX
@@ -28,17 +31,25 @@ mixing parameters, if required. Search in the
     eigenvalues of (default mixing * dielectric matrix)
 
 The parameters for the mixing are optimal if the mean eigenvalue
-Γ_(mean)=1, and if the width of the eigenvalue spectrum is minimal. For
-an initial linear mixing (BMIX≈0) an optimal setting for
-[AMIX](AMIX.md) can be found easily by setting
-[AMIX](AMIX.md)_(optimal)=[AMIX](AMIX.md)_(current)\*Γ_(mean).
+Γ<sub>mean</sub>=1, and if the width of the eigenvalue spectrum is
+minimal. For an initial linear mixing
+(BMIX≈0) an optimal setting
+for [AMIX](AMIX.md) can be found easily by setting
+[AMIX](AMIX.md)<sub>optimal</sub>=[AMIX](AMIX.md)<sub>current</sub>\*Γ<sub>mean</sub>.
 For the Kerker scheme ([IMIX](IMIX.md)=1) either
-[AMIX](AMIX.md) or BMIX can be optimized, but we recommend to
-change only BMIX and keep [AMIX](AMIX.md) fixed (you must
-decrease BMIX if the mean eigenvalue is larger than one, and increase
-BMIX if the mean eigenvalue Γ_(mean)\<1).
+[AMIX](AMIX.md) or
+BMIX can be optimized, but we
+recommend to change only BMIX
+and keep [AMIX](AMIX.md) fixed (you must decrease
+BMIX if the mean eigenvalue is
+larger than one, and increase
+BMIX if the mean eigenvalue
+Γ<sub>mean</sub>\<1).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=BMIX&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IMIX](IMIX.md), [INIMIX](INIMIX.md),
 [MAXMIX](MAXMIX.md), [AMIX](AMIX.md),
 [AMIX_MAG](AMIX_MAG.md),
@@ -48,4 +59,8 @@ BMIX if the mean eigenvalue Γ_(mean)\<1).
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-BMIX-_incategory-Examples)
 
-## References
+## References\[<a href="/wiki/index.php?title=BMIX&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+

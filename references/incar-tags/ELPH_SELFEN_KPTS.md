@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_KPTS
-ELPH_SELFEN_KPTS = \[real array\]  
+
+
+ELPH_SELFEN_KPTS = \[real
+array\]  
 Default: **ELPH_SELFEN_KPTS** = All k-points 
 
 Description: Computes the electron self-energy due to electron-phonon
 for a list of k-points specified by their fractional coordinates.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -41,10 +44,16 @@ Instead of specifying the reduced coordinates, one can specify the index
 of the **k** point appearing the in irreducible Brillouin zone list
 using [ELPH_SELFEN_IKPT](ELPH_SELFEN_IKPT.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_KPTS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_RUN](ELPH_RUN.md)
 - [KPOINTS_ELPH](../input-files/KPOINTS_ELPH.md)
 - [ELPH_SELFEN_GAPS](ELPH_SELFEN_GAPS.md)
 - [ELPH_SELFEN_BAND_START](ELPH_SELFEN_BAND_START.md)
 - [ELPH_SELFEN_BAND_STOP](ELPH_SELFEN_BAND_STOP.md)
 - [ELPH_SELFEN_IKPT](ELPH_SELFEN_IKPT.md)
+
+

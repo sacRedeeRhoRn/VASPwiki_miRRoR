@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_DELTA
-ELPH_SELFEN_DELTA = \[real array\]  
+
+
+ELPH_SELFEN_DELTA = \[real
+array\]  
 Default: **ELPH_SELFEN_DELTA** = 0.01 
 
 Description: Complex imaginary shift to use when computing the
 self-energy due to electron-phonon coupling.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -31,10 +34,16 @@ accumulators is increased such that one exists for each value in this
 array. It is possible to compute the self-energy using the tetrahedron
 method and a finite complex shift in the same run.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_DELTA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_SELFEN_GAPS](ELPH_SELFEN_GAPS.md)
 - [ELPH_SELFEN_FAN](ELPH_SELFEN_FAN.md)
 - [ELPH_SELFEN_STATIC](ELPH_SELFEN_STATIC.md)
+
+

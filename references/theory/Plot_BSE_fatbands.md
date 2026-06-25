@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Plot BSE fatbands
+
+
 It can be useful to inspect which electron-hole pairs or transitions
 contribute the most to a particular exciton
-^([\[1\]](#cite_note-bokdam:scr:2016-1)). In VASP it is possible to
-write the lowest [NBSEEIG](../incar-tags/NBSEEIG.md) eigenvectors into
-the [BSEFATBAND](../output-files/BSEFATBAND.md) file, which can be used
-for making a fatband structure plot.
+<sup>[\[1\]](#cite_note-bokdam:scr:2016-1)</sup>.
+In VASP it is possible to write the lowest
+[NBSEEIG](../incar-tags/NBSEEIG.md) eigenvectors into the
+[BSEFATBAND](../output-files/BSEFATBAND.md) file, which can be used for
+making a fatband structure plot.
 
 For example, a fatband structure plot for the first bright exciton can
 be made following these steps:
@@ -28,7 +31,7 @@ be made following these steps:
 5.  Plot the band structure with point size corresponding to the
     coupling coefficients Abs(X_BSE), i.e.,
 
-&nbsp;
+<!-- -->
 
     |k-point|     hole        electron       Abs(X_BSE)
                eigenvalue    eigenvalue
@@ -48,9 +51,15 @@ along G-L and G-X directions in Si:
     awk < BSE-$NBSE.dat '{ if ($1==$2 && $3==$2)  print sqrt($1*$1+$2*$2+$3*$3), $4, $5, $6}' > bands-GL.dat
     awk < BSE-$NBSE.dat '{ if ($1==$3 && $2==0.0) print sqrt($1*$1+$2*$2+$3*$3), $4, $5, $6}' > bands-GX.dat
 
-[![](https://vasp.at/wiki/images/thumb/1/1b/Bsefatband.png/300px-Bsefatband.png)](https://vasp.at/wiki/File:Bsefatband.png)
-
-The fatband structure plot for one the BSE eigenvectors in Si
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Bsefatband.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/1/1b/Bsefatband.png/300px-Bsefatband.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/1/1b/Bsefatband.png/450px-Bsefatband.png 1.5x, /wiki/images/thumb/1/1b/Bsefatband.png/600px-Bsefatband.png 2x"
+width="300" height="363" /></a>
+<figcaption>The fatband structure plot for one the BSE eigenvectors in
+Si</figcaption>
+</figure>
 
 The fatband structure plot can be done in gnuplot by running the
 following script:
@@ -72,17 +81,35 @@ following script:
                    "" u 1:2 ps 0.5 lc "#808080" w d,      \
                    "" u 1:3 ps 0.5 lc "#808080" w d
 
-### Tutorials
-- Tutorial for [plotting
-  fatbands](https://www.vasp.at/tutorials/latest/bse/part3/#BSE-e10)
-  (see end of exercise).
+### Tutorials\[<a
+href="/wiki/index.php?title=Plot_BSE_fatbands&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Tutorials">edit</a> \| (./index.php.md)\]
 
-## Related tags and sections
+- Tutorial for
+  <a href="https://www.vasp.at/tutorials/latest/bse/part3/#BSE-e10"
+  class="external text" rel="nofollow">plotting fatbands</a> (see end of
+  exercise).
+
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Plot_BSE_fatbands&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [BSEFATBAND](../output-files/BSEFATBAND.md),
 [NBSEEIG](../incar-tags/NBSEEIG.md),
 [BSE](../tutorials/Bethe-Salpeter-equations_calculations.md)
 
-## References
-1.  [↑](#cite_ref-bokdam:scr:2016_1-0) [M. Bokdam, T. Sander, A.
-    Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci.
-    Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)
+## References\[<a
+href="/wiki/index.php?title=Plot_BSE_fatbands&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-bokdam:scr:2016_1-0)
+    <a href="https://doi.org/10.1038/srep28618" class="external text"
+    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
+    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
+    (2016).</a>
+
+

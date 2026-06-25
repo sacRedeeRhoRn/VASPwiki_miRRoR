@@ -2,20 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NpH ensemble
-The NpH ensemble (isoenthalpic–isobaric ensemble) is a [statistical
+
+
+The NpH ensemble
+(isoenthalpic–isobaric ensemble) is a [statistical
 ensemble](../categories/Category-Ensembles.md) that is used to
 study material properties under the conditions of a constant particle
 number N, a pressure p fluctuating around an equilibrium pressure
-$\langle p \rangle$ and a conserved
-enthalpy H (up to numerical inaccuracies). This page describes how to
-sample the NpH ensemble from a
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run.
+$\langle p \rangle$ and a conserved enthalpy H (up to
+numerical inaccuracies). This page describes how to sample the NpH
+ensemble from a
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run.
 
 **Instructions for setting up a NpH ensemble**
 
 To run an NpH
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a>
 simulation [`MDALGO`](../incar-tags/MDALGO.md)` = 3` has to be used. The
 [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md) and
 [LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md) have to be
@@ -42,11 +46,12 @@ The inertia of lattice degrees-of-freedom is controlled with the
 
 It is recommended to equilibrate the system of interest with an
 [NPT](NpT_ensemble.md)
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run before starting the NpH run. A general guide for molecular-dynamics
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run
+before starting the NpH run. A general guide for molecular-dynamics
 simulations can be found on the
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-page.
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> page.
 
 *An example [INCAR](../input-files/INCAR.md) file for the NpH ensemble*
 
@@ -62,12 +67,21 @@ page.
 
 |  |
 |----|
-| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The [electronic minimization](../redirects/Electronic_minimization.md) or the [machine learning](../redirects/Machine-learned_force_fields.md) tags have to be added. |
+| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The <a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a> or the <a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">machine learning</a> tags have to be added. |
 
-## Related tags and articles
-[Molecular-dynamics
-calculations](../redirects/Molecular_dynamics_calculations.md),
-[ISIF](../incar-tags/ISIF.md), [MDALGO](../incar-tags/MDALGO.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NpH_ensemble&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">Molecular-dynamics
+calculations</a>, [ISIF](../incar-tags/ISIF.md),
+[MDALGO](../incar-tags/MDALGO.md),
 [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md),
 [LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md),
 [Ensembles](../categories/Category-Ensembles.md)
+
+

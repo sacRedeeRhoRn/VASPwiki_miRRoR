@@ -2,30 +2,29 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Time-propagation algorithms in molecular dynamics
-In [molecular dynamics simulations](../redirects/MD.md), the ionic positions
-$\mathbf{r}_{i}(t)$ and velocities
-$\mathbf{v}_{i}(t)$ are monitored as
-functions of time $t$. This time
-dependence is obtained by integrating Newton's equations of motion. When
-integrating the equations of motions it is important to use symplectic
-algorithms which conserve the phase-space volume. To solve the equations
-of motion under symplectic conditions, various integration algorithms
-have been developed. The time dependence of a particle can be expressed
-in a Taylor expansion
 
-$\mathbf{r}_{i}(t+\Delta t) =
-\mathbf{r}_{i}(t) + \mathbf{v}_{i}(t)\Delta t +
-\frac{\mathbf{F}_{i}}{2m}(t)\Delta t^{2} + \frac{\partial^{3}
-\mathbf{r}_{i}(t)}{\partial t^{3}}\Delta t^{3} + \mathcal{O}(\Delta
-t^{4})$
 
-A backward propagation in time by a time step $\Delta t$ can be obtained in a similar way
+In <a href="/wiki/MD" class="mw-redirect" title="MD">molecular dynamics
+simulations</a>, the ionic positions $\mathbf{r}_{i}(t)$ and velocities $\mathbf{v}_{i}(t)$ are monitored as functions of time
+$t$. This time dependence is obtained by integrating
+Newton's equations of motion. When integrating the equations of motions
+it is important to use symplectic algorithms which conserve the
+phase-space volume. To solve the equations of motion under symplectic
+conditions, various integration algorithms have been developed. The time
+dependence of a particle can be expressed in a Taylor expansion
 
-$\mathbf{r}_{i}(t-\Delta t) =
-\mathbf{r}_{i}(t) - \mathbf{v}_{i}(t)\Delta t +
-\frac{\mathbf{F}_{i}}{2m}(t)\Delta t^{2} - \frac{\partial^{3}
-\mathbf{r}_{i}(t)}{\partial t^{3}}\Delta t^{3} + \mathcal{O}(\Delta
-t^{4})$
+$\mathbf{r}_{i}(t+\Delta t) = \mathbf{r}_{i}(t) +
+\mathbf{v}_{i}(t)\Delta t + \frac{\mathbf{F}_{i}}{2m}(t)\Delta t^{2} +
+\frac{\partial^{3} \mathbf{r}_{i}(t)}{\partial t^{3}}\Delta t^{3} +
+\mathcal{O}(\Delta t^{4})$
+
+A backward propagation in time by a time step
+$\Delta t$ can be obtained in a similar way
+
+$\mathbf{r}_{i}(t-\Delta t) = \mathbf{r}_{i}(t) -
+\mathbf{v}_{i}(t)\Delta t + \frac{\mathbf{F}_{i}}{2m}(t)\Delta t^{2} -
+\frac{\partial^{3} \mathbf{r}_{i}(t)}{\partial t^{3}}\Delta t^{3} +
+\mathcal{O}(\Delta t^{4})$
 
 Adding these two equation gives and rearrangement gives the Verlet
 algorithm
@@ -41,26 +40,36 @@ t)}{\Delta t}$
 $\mathbf{r}_{i}(t+\Delta t) = \mathbf{r}_{i}(t)+
 \mathbf{v}_{i}(t)\Delta t+\frac{\mathbf{F}_{i}}{2m}(t)\Delta t^{2}.$
 
+
 ## Contents
 
-- [1 Velocity-Verlet integration
-  scheme](#Velocity-Verlet_integration_scheme)
-- [2 Leap-Frog integration scheme](#Leap-Frog_integration_scheme)
-- [3 Thermostats and used
-  integrators](#Thermostats_and_used_integrators)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## Velocity-Verlet integration scheme
+- [1
+  Velocity-Verlet integration
+  scheme](#Velocity-Verlet_integration_scheme)
+- [2 Leap-Frog
+  integration scheme](#Leap-Frog_integration_scheme)
+- [3 Thermostats
+  and used integrators](#Thermostats_and_used_integrators)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Velocity-Verlet integration scheme\[<a
+href="/wiki/index.php?title=Time-propagation_algorithms_in_molecular_dynamics&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Velocity-Verlet integration scheme">edit</a> \| (./index.php.md)\]
+
 The Velocity-Verlet algorithm can be decomposed into the following
 steps:
 
-1.  $\mathbf{v}_{i}(t + \frac{1}{2}\Delta
+1.  $\mathbf{v}_{i}(t +
+    \frac{1}{2}\Delta
     t)=\mathbf{v}_{i}(t)+\frac{\mathbf{F}_{i}(t)}{2m_{i}}\Delta t$
-2.  $\mathbf{r}_{i}(t + \Delta t) =
-    \mathbf{r}_{i}(t) + \mathbf{v}_{i}(t + \frac{1}{2}\Delta t)\Delta
-    t$
-3.  compute forces $\mathbf{F}_{i}(t)$
-    from density functional theory or machine learning
+2.  $\mathbf{r}_{i}(t +
+    \Delta t) = \mathbf{r}_{i}(t) + \mathbf{v}_{i}(t +
+    \frac{1}{2}\Delta t)\Delta t$
+3.  compute forces $\mathbf{F}_{i}(t)$ from density functional theory or machine learning
 4.  $\mathbf{v}_{i}(t + \Delta
     t)=\mathbf{v}_{i}(t+\frac{1}{2}\Delta
     t)+\frac{\mathbf{F}_{i}(t+\Delta t)}{2m_{i}}\Delta t$
@@ -68,24 +77,31 @@ steps:
 From these equations it can be seen that the velocity and the position
 vectors are synchronous in time.
 
-## Leap-Frog integration scheme
+## Leap-Frog integration scheme\[<a
+href="/wiki/index.php?title=Time-propagation_algorithms_in_molecular_dynamics&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Leap-Frog integration scheme">edit</a> \| (./index.php.md)\]
+
 Another form of the Verlet algorithm can be written in the form of the
 Leap-Frog algorithm. The Leap-Frog algorithm consists of the following
 steps:
 
-1.  compute forces $\mathbf{F}_{i}(t)$
-    from density functional theory or machine learning
-2.  $\mathbf{v}_{i}(t + \frac{1}{2}\Delta
-    t)=\mathbf{v}_{i}(t- \frac{1}{2}\Delta
+1.  compute forces $\mathbf{F}_{i}(t)$ from density functional theory or machine learning
+2.  $\mathbf{v}_{i}(t +
+    \frac{1}{2}\Delta t)=\mathbf{v}_{i}(t- \frac{1}{2}\Delta
     t)+\frac{\mathbf{F}_{i}(t)}{m_{i}}\Delta t$
-3.  $\mathbf{r}_{i}(t + \Delta t) =
-    \mathbf{r}_{i}(t) + \mathbf{v}_{i}(t + \frac{1}{2}\Delta t)\Delta
-    t$
+3.  $\mathbf{r}_{i}(t +
+    \Delta t) = \mathbf{r}_{i}(t) + \mathbf{v}_{i}(t +
+    \frac{1}{2}\Delta t)\Delta t$
 
 In this form the velocity and the position vectors are asynchronous in
 time.
 
-## Thermostats and used integrators
+## Thermostats and used integrators\[<a
+href="/wiki/index.php?title=Time-propagation_algorithms_in_molecular_dynamics&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Thermostats and used integrators">edit</a> \| (./index.php.md)\]
+
 |  |  |  |
 |----|----|----|
 | MDALGO | thermostat | integration algorithm |
@@ -97,6 +113,13 @@ time.
 | 5 | [CSVR](CSVR_thermostat.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
 | 5 | [Multiple Andersen](../incar-tags/MDALGO.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Time-propagation_algorithms_in_molecular_dynamics&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [MDALGO](../incar-tags/MDALGO.md),
-[Thermostats](../redirects/Thermostats.md)
+<a href="/wiki/Thermostats" class="mw-redirect"
+title="Thermostats">Thermostats</a>
+
+

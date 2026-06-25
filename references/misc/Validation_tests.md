@@ -2,30 +2,51 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Validation tests
+
+
 As of VASP.6.1.0, each release contains a testsuite for validation.
 
 |  |
 |----|
-| **Warning:** VASP.6.1.0, VASP.6.1.1, and VASP.6.1.2 have a potentially serious issue related to the test suite. Please read about it [here](#Known_issues). |
+| **Warning:** VASP.6.1.0, VASP.6.1.1, and VASP.6.1.2 have a potentially serious issue related to the test suite. Please read about it <a href="#Known_issues" class="mw-selflink-fragment">here</a>. |
+
 
 ## Contents
 
-- [1 Testsuite](#Testsuite)
-- [2 Running the tests](#Running_the_tests)
-  - [2.1 Run the tests with make
-    (recommended)](#Run_the_tests_with_make_(recommended))
-  - [2.2 Configuring the testsuite
-    manually](#Configuring_the_testsuite_manually)
-    - [2.2.1 Categories](#Categories)
-  - [2.3 Directly execute the runtest
-    script](#Directly_execute_the_runtest_script)
-    - [2.3.1 Configuration templates](#Configuration_templates)
-- [3 The output of the tests](#The_output_of_the_tests)
-- [4 What if tests fail](#What_if_tests_fail)
-- [5 Known issues](#Known_issues)
-- [6 Related Sections](#Related_Sections)
 
-## Testsuite
+- [1
+  Testsuite](#Testsuite)
+- [2 Running the
+  tests](#Running_the_tests)
+  - [2.1 Run the
+    tests with make
+    (recommended)](#Run_the_tests_with_make_(recommended))
+  - [2.2
+    Configuring the testsuite
+    manually](#Configuring_the_testsuite_manually)
+    - [2.2.1
+      Categories](#Categories)
+  - [2.3 Directly
+    execute the runtest
+    script](#Directly_execute_the_runtest_script)
+    - [2.3.1
+      Configuration
+      templates](#Configuration_templates)
+- [3 The output of
+  the tests](#The_output_of_the_tests)
+- [4 What if tests
+  fail](#What_if_tests_fail)
+- [5 Known
+  issues](#Known_issues)
+- [6 Related
+  Sections](#Related_Sections)
+
+
+## Testsuite\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Testsuite">edit</a> \| (./index.php.md)\]
+
 The VASP testsuite is located in \`root/testsuite\` where \`root\` is
 the root directory of the build system.
 
@@ -47,7 +68,7 @@ testsuite/
 Testsuite root directory. Holds several subdirectories and the main
 bash-script `runtest` that runs the tests and validates the results.
 
-&nbsp;
+<!-- -->
 
 testsuite/tests  
 Holds a whole bunch of subdirectories that in turn contain the input
@@ -58,7 +79,7 @@ files ([INCAR](../input-files/INCAR.md)`.?.*`,
 [OSZICAR](../output-files/OSZICAR.md)`.ref` etc.) for the test
 calculations.
 
-&nbsp;
+<!-- -->
 
 testsuite/POTCARS  
 Holds the [POTCAR](../input-files/POTCAR.md) files (potentials), one for
@@ -67,7 +88,7 @@ is:
 
     POTCAR.name-of-test-subdirectory
 
-&nbsp;
+<!-- -->
 
 testsuite/tools  
 Contains a bash-script (`call_compare`) and a Fortran source file
@@ -80,13 +101,13 @@ in `root/makefile.include` (see the [compiler variables section of
 Installing
 VASP](Installing_VASP.6.X.X.md)).
 
-&nbsp;
+<!-- -->
 
 testsuite/runtest  
 Main execution script that orchestrates which tests are executed based
 on set environment variables.
 
-&nbsp;
+<!-- -->
 
 testsuite/makefile  
 Autoconf makefile containing some simple rules that either compile
@@ -95,8 +116,16 @@ selection of tests (`make test`) or execute all test (`make test_all`).
 
   
 
-## Running the tests
-### Run the tests with `make` (recommended)
+## Running the tests\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Running the tests">edit</a> \| (./index.php.md)\]
+
+### Run the tests with `make` (recommended)\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Run the tests with make (recommended)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 After building the `vasp_std`, `vasp_gam`, and `vasp_ncl` executables
@@ -127,7 +156,11 @@ in `root/testsuite`.
 
   
 
-### Configuring the testsuite manually
+### Configuring the testsuite manually\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Configuring the testsuite manually">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 Configured the testsuite by setting several environment variables (with
@@ -216,7 +249,11 @@ Default:
 
   
 
-#### Categories
+#### Categories\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Categories">edit</a> \| (./index.php.md)\]
+
 A variety of environment variables can be set to run or exclude tests
 belonging to specific categories. Default: not set
 
@@ -338,7 +375,11 @@ specific category (or categories):
 - `VASP_TESTSUITE_RUN_NCORE1`
 - `VASP_TESTSUITE_RUN_WAN90`
 
-### Directly execute the `runtest` script
+### Directly execute the `runtest` script\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Directly execute the runtest script">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 Besides by means of `make` the testsuite may be invoked by executing the
@@ -362,8 +403,9 @@ files in `root/testsuite` and run the testsuite with:
 **N.B.I**: To pipe the full output to a file (`testsuite.log`) add
 `> testsuite.log 2>&1` to the commands above.
 
-**N.B.II**: We maintain [a small collection of configuration
-templates](#Configuration_templates).
+**N.B.II**: We maintain
+<a href="#Configuration_templates" class="mw-selflink-fragment">a small
+collection of configuration templates</a>.
 
 **N.B.III**: When you want to run the testsuite by executing the
 `runtest` directly you will *first* have to build the
@@ -383,24 +425,28 @@ In case of a successful run, `runtest` script will exit with error code
 
   
 
-#### Configuration templates
+#### Configuration templates\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Configuration templates">edit</a> \| (./index.php.md)\]
+
 The following configuration files are to be seen as templates to help
 you construct your own:
 
-**General**
+<u>*General*</u>
 
 - [all.conf](All.conf.md) : runs all tests
 - [fast.conf](Fast.conf.md): runs the `FAST` category of
   tests
 
-**Running with MPI + OpenMP**
+<u>*Running with MPI + OpenMP*</u>
 
 - [impi+omp.conf](Impi+omp.conf.md): for OpenMP +
   Intel-MPI
 - [ompi+omp.conf](Ompi+omp.conf.md): for OpenMP +
   OpenMPI
 
-**To test the CUDA-GPU executables**
+<u>*To test the CUDA-GPU executables*</u>
 
 - [cuda.conf](Cuda.conf.md)
 
@@ -412,10 +458,15 @@ configuration files with `runtest`.
 
   
 
-## The output of the tests
+## The output of the tests\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: The output of the tests">edit</a> \| (./index.php.md)\]
+
 If one runs the tests by means of `make`, as recommended
-[above](#Run_the_tests_with_make_.28recommended.29) all output
-(`stdout+stderr`) will be written to `root/testsuite/testsuite.log`.
+<a href="#Run_the_tests_with_make_.28recommended.29"
+class="mw-selflink-fragment">above</a> all output (`stdout+stderr`) will
+be written to `root/testsuite/testsuite.log`.
 
 Tests that fail write an `ERROR` to `root/testsuite/testsuite.log` and
 the tests that were not passed successfully will be listed at the end of
@@ -423,7 +474,11 @@ this file (and `make` will exit in error).
 
   
 
-## What if tests fail
+## What if tests fail\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: What if tests fail">edit</a> \| (./index.php.md)\]
+
 We have successfully run the testsuite (on 1, 2, 4, 6, and 8 MPI-ranks)
 using executables built with [various
 toolchains](Toolchains.md).
@@ -433,8 +488,8 @@ tests, we'd ask you to reproduce these errors with one of the
 aforementioned [toolchains](Toolchains.md) if possible.
 If your problems persist with a validated toolchain or you have no
 access to any of these toolchains, please submit a bug report to the
-[VASP-forum](https://www.vasp.at/forum) and we will look into the
-matter.
+<a href="https://www.vasp.at/forum" class="external text"
+rel="nofollow">VASP-forum</a> and we will look into the matter.
 
 **N.B.**: This bug report should contain all information we need to try
 to reproduce the problem: a list of the compilers and libraries you have
@@ -444,7 +499,11 @@ your testsuite run. Please keep the other output
 well since we might need to inspect these in addition to the logfile in
 the course of trying to solve your problem.
 
-## Known issues
+## Known issues\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Known issues">edit</a> \| (./index.php.md)\]
+
 The testsuite scripts in vasp.6.1.0, vasp.6.1.1 and vasp.6.1.2 releases
 have a potentially serious issue that can lead to loss of user data
 unrelated to vasp in the home directory! This issue has yet been only
@@ -469,8 +528,14 @@ results in the `$dir` variable becoming empty, `cd` to the home folder
 and removing ALL files recursively that do not match the pre-defined
 patterns.
 
-## Related Sections
+## Related Sections\[<a
+href="/wiki/index.php?title=Validation_tests&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Related Sections">edit</a> \| (./index.php.md)\]
+
 [Installing
 VASP.6.X.X](Installing_VASP.6.X.X.md)
 
 ------------------------------------------------------------------------
+
+

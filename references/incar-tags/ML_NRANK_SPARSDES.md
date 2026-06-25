@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_NRANK_SPARSDES
-ML_NRANK_SPARSDES = \[integer\]  
+
+
+ML_NRANK_SPARSDES =
+\[integer\]  
 Default: **ML_NRANK_SPARSDES** = 5 
 
 Description: This tag sets the number of highest eigenvalues to which
 the correlation is measured within the angular descriptor sparsification
 (within the machine learning force field method).
 
-|                                                        |
-|--------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This tag is only available as of VASP 6.4.3. |
 
 ------------------------------------------------------------------------
@@ -23,7 +26,11 @@ For details on the theory of angular descriptor sparsification see
 For details on how to use the sparsification see the tag
 [ML_LSPARSDES](ML_LSPARSDES.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_NRANK_SPARSDES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LSPARSDES](ML_LSPARSDES.md),
 [ML_RDES_SPARSDES](ML_RDES_SPARSDES.md),
@@ -31,3 +38,5 @@ For details on how to use the sparsification see the tag
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_EPS_LOW-_incategory-Examples)
+
+

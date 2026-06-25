@@ -2,6 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Style-guide
+
+
+
 Redirect to:
 
-- [Construction:Style-guide](https://vasp.at/wiki/index.php/index.php)")
+- <a
+  href="/wiki/index.php?title=Construction:Style-guide&amp;action=edit&amp;redlink=1"
+  class="new"
+  title="Construction:Style-guide (page does not exist)">Construction:Style-guide</a>
+
+

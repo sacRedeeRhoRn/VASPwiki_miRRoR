@@ -2,114 +2,137 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # DFT+DMFT calculations
+
+
 Density-functional theory plus dynamical mean-field theory
-(DFT+DMFT)^([\[1\]](#cite_note-kotliar:rmp:2006-1)) is an advanced
-extension of DFT that provides a more accurate treatment of strongly
-correlated materials including dynamical effects at finite temperature
-compared to [DFT+U](../methods/Category-DFT+U.md). DFT+DMFT
-calculations are not within VASP, but VASP allows to interface external
-DMFT codes. Here, we will guide through the steps to perform a DFT+DMFT
-calculation using the TRIQS software
-library^([\[2\]](#cite_note-parcollet:cpc:196-2)), more specifically the
-TRIQS/solid_dmft software^([\[3\]](#cite_note-merkel:joss:7-3)). In this
-following HowTo, we will calculate the local spectral function
+(DFT+DMFT)<sup>[\[1\]](#cite_note-kotliar:rmp:2006-1)</sup>
+is an advanced extension of DFT that provides a more accurate treatment
+of strongly correlated materials including dynamical effects at finite
+temperature compared to
+[DFT+U](../methods/Category-DFT+U.md). DFT+DMFT calculations
+are not within VASP, but VASP allows to interface external DMFT codes.
+Here, we will guide through the steps to perform a DFT+DMFT calculation
+using the TRIQS software
+library<sup>[\[2\]](#cite_note-parcollet:cpc:196-2)</sup>,
+more specifically the TRIQS/solid_dmft
+software<sup>[\[3\]](#cite_note-merkel:joss:7-3)</sup>.
+In this following HowTo, we will calculate the local spectral function
 $A(\omega)$ of NiO using DMFT.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
+
 
 ## Contents
 
-- [1 Theory overview](#Theory_overview)
-- [2 Technical requirements](#Technical_requirements)
-- [3 Step-by-step tutorial](#Step-by-step_tutorial)
-  - [3.1 Step 1: Perform a SCF DFT
-    calculation](#Step_1:_Perform_a_SCF_DFT_calculation)
-  - [3.2 Step 2: Convert the VASP output to TRIQS
-    input](#Step_2:_Convert_the_VASP_output_to_TRIQS_input)
-  - [3.3 Step 3: Perform a DMFT
-    calculation](#Step_3:_Perform_a_DMFT_calculation)
-  - [3.4 Step 4: Perform a CSC DFT+DMFT
-    calculation](#Step_4:_Perform_a_CSC_DFT+DMFT_calculation)
-  - [3.5 Step 5: calculating the local spectral
-    function](#Step_5:_calculating_the_local_spectral_function)
-  - [3.6 Further reading](#Further_reading)
-  - [3.7 Helper functions for python](#Helper_functions_for_python)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## Theory overview
+- [1 Theory
+  overview](#Theory_overview)
+- [2 Technical
+  requirements](#Technical_requirements)
+- [3 Step-by-step
+  tutorial](#Step-by-step_tutorial)
+  - [3.1 Step 1:
+    Perform a SCF DFT
+    calculation](#Step_1:_Perform_a_SCF_DFT_calculation)
+  - [3.2 Step 2:
+    Convert the VASP output to TRIQS
+    input](#Step_2:_Convert_the_VASP_output_to_TRIQS_input)
+  - [3.3 Step 3:
+    Perform a DMFT
+    calculation](#Step_3:_Perform_a_DMFT_calculation)
+  - [3.4 Step 4:
+    Perform a CSC DFT+DMFT
+    calculation](#Step_4:_Perform_a_CSC_DFT+DMFT_calculation)
+  - [3.5 Step 5:
+    calculating the local spectral
+    function](#Step_5:_calculating_the_local_spectral_function)
+  - [3.6 Further
+    reading](#Further_reading)
+  - [3.7 Helper
+    functions for python](#Helper_functions_for_python)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## Theory overview\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory overview">edit</a> \| (./index.php.md)\]
+
 Similarly to the [GW method](../theory/Category-GW.md), DFT+DMFT
 relies on the [Green's functions
 formalism](../methods/GW_approximation_of_Hedin's_equations.md).
-But, in contrast to [GW](../redirects/GW.md), DMFT is working on a projected
-sub-space of the KS states, much like
+But, in contrast to
+<a href="/wiki/GW" class="mw-redirect" title="GW">GW</a>, DMFT is
+working on a projected sub-space of the KS states, much like
 [DFT+U](../methods/Category-DFT+U.md). The projection is
 performed in VASP in the same way it is done for the
 [LDAU](../incar-tags/LDAU.md) tag by projecting the KS states on localized
 orbitals provided by the PAW formalism:
 
-$P^{\mathbf{R}}_{L,\nu}(\mathbf{k}) = \sum_i
-\langle \chi^{\mathbf{R}}_L | \phi_i \rangle \langle \tilde{p}_i |
+$P^{\mathbf{R}}_{L,\nu}(\mathbf{k}) = \sum_i \langle
+\chi^{\mathbf{R}}_L | \phi_i \rangle \langle \tilde{p}_i |
 \tilde{\Psi}_{\nu \mathbf{k}} \rangle,$
 
-where $|\chi^{\mathbf{R}}_L\rangle$
-are localized basis functions associated with each correlated site R,
-$|\phi_i \rangle$ are all-electron
-partial waves, and $| \tilde{p}_i\rangle$ are the standard PAW projectors. $L$ is a compound index of local quantum numbers. The raw
+where $|\chi^{\mathbf{R}}_L\rangle$ are localized basis functions associated with each
+correlated site R, $|\phi_i \rangle$ are all-electron partial waves, and
+$|
+\tilde{p}_i\rangle$ are the standard PAW projectors.
+$L$ is a compound index of local quantum numbers. The raw
 projectors are orthonormalized and connect the KS basis
 $\nu$ with the localized orbitals
-$m$: $P^{\mathbf{R}}_{m,\nu}(\mathbf{k})$.^([\[4\]](#cite_note-Schuler:JPCM:2018-4))
+$m$: $P^{\mathbf{R}}_{m,\nu}(\mathbf{k})$.<sup>[\[4\]](#cite_note-Schuler:JPCM:2018-4)</sup>
 
 In DFT+DMFT theory the central quantity is the lattice Green's function:
 
-$G_{\nu \nu{\prime}}(\mathbf{k}, i\omega_n) =
-\left\[ \left( i\omega_n + \mu - \varepsilon_{\nu \mathbf{k}} \right)
-\hat{\mathbb{I}} - \hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n)
-\right\]^{-1}_{\nu \nu{\prime}}.$
+ 
 
-where $\varepsilon_{\nu \mathbf{k}}$
-are the KS eigenvalues, $\mu$ is the
-chemical potential, and $\hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n)$ is the DMFT
-calculated self-energy embedded in the KS space at a given
+$G_{\nu \nu{\prime}}(\mathbf{k}, i\omega_n) = \left\[ \left( i\omega_n +
+\mu - \varepsilon_{\nu \mathbf{k}} \right) \hat{\mathbb{I}} -
+\hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n) \right\]^{-1}_{\nu
+\nu{\prime}}.$
+
+where $\varepsilon_{\nu \mathbf{k}}$ are the KS eigenvalues, $\mu$ is the
+chemical potential, and $\hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n)$ is the
+DMFT calculated self-energy embedded in the KS space at a given
 $k$ point and discrete [Matsubara
 frequency](https://vasp.at/wiki/index.php/Matsubara_formalism)
-$i\omega_n$. The self-energy contains
-the electron correlation effects calculated by DMFT. The DMFT equations
-are solved in the localized basis and then embedded via the projector
-functions:
+$i\omega_n$. The self-energy contains the electron
+correlation effects calculated by DMFT. The DMFT equations are solved in
+the localized basis and then embedded via the projector functions:
 
-$\hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n) =
-\sum_{\nu\nu{\prime}} |\Psi_{\nu \mathbf{k}}\rangle \langle
-\Psi_{\nu{\prime} \mathbf{k}}| \cdot \sum_{mm{\prime}} P^\*_{\nu,
-m}(\mathbf{k}) \Sigma^\text{imp}_{mm{\prime}}(i\omega_n) P_{m{\prime},
+$\hat{\Sigma}^{\text{KS}}(\mathbf{k}, i\omega_n) = \sum_{\nu\nu{\prime}}
+|\Psi_{\nu \mathbf{k}}\rangle \langle \Psi_{\nu{\prime} \mathbf{k}}|
+\cdot \sum_{mm{\prime}} P^\*_{\nu, m}(\mathbf{k})
+\Sigma^\text{imp}_{mm{\prime}}(i\omega_n) P_{m{\prime},
 \nu{\prime}}(\mathbf{k}) .$
 
 The self-energy in DMFT is obtained by first extracting the local
 Green's function (with an initial guess of $\Sigma^\text{imp}$) in the localized basis:
 
-$G^{\text{loc}}_{m m'}(i\omega_n) =
-\sum_{\mathbf{k}} \sum_{\nu \nu'} P_{m \nu}(\mathbf{k}) G_{\nu
-\nu'}(\mathbf{k}, i\omega_n) P^\*_{m' \nu'}(\mathbf{k})$
+$G^{\text{loc}}_{m m'}(i\omega_n) = \sum_{\mathbf{k}} \sum_{\nu \nu'}
+P_{m \nu}(\mathbf{k}) G_{\nu \nu'}(\mathbf{k}, i\omega_n) P^\*_{m'
+\nu'}(\mathbf{k})$
 
 from which we extract a dynamic Weiss field $\mathcal{G}$:
 
-$\mathcal{G}_{m m '} = \left( \left\[
-\mathbf{G}^\text{loc} \right\]^{-1} + \mathbf{\Sigma}^\text{imp}
-\right)^{-1}_{m m'}$
+$\mathcal{G}_{m m '} = \left( \left\[ \mathbf{G}^\text{loc}
+\right\]^{-1} + \mathbf{\Sigma}^\text{imp} \right)^{-1}_{m m'}$
 
 that is used in DMFT to construct an Anderson impurity model, by
 supplying a local many-body Hamiltonian incorporating the local energy
 levels plus the interaction Hamiltonian. By solving the Anderson
 impurity problem we obtain the impurity Green's function
-$G^\text{imp}_{m m'}$ and the impurity
-self-energy $\Sigma^\text{imp}_{m m'}$
-via Dysons equations:
+$G^\text{imp}_{m m'}$ and the impurity self-energy
+$\Sigma^\text{imp}_{m m'}$ via Dysons equations:
 
-$\Sigma^\text{imp}_{m m'} = \left\[
-\mathbf{\mathcal{G}} \right\]^{-1}_{m m'} - \left\[
-\mathbf{G}^\text{imp} \right\]^{-1}_{m m'}$
+$\Sigma^\text{imp}_{m m'} = \left\[ \mathbf{\mathcal{G}}
+\right\]^{-1}_{m m'} - \left\[ \mathbf{G}^\text{imp} \right\]^{-1}_{m
+m'}$
 
 This procedure is iterated until the DMFT self-consistency condition is
 satisfied:
@@ -120,14 +143,14 @@ Importantly, there is a second self-consistency condition for combined
 DFT+DMFT calculations. From the lattice Green's function a density
 matrix can be computed:
 
-$N_{\nu \nu'} (\mathbf{k}) = \frac{1}{\beta}
-\sum_{i \omega_n} G_{\nu \nu'}(\mathbf{k}, i\omega_n)$
+$N_{\nu \nu'} (\mathbf{k}) = \frac{1}{\beta} \sum_{i \omega_n} G_{\nu
+\nu'}(\mathbf{k}, i\omega_n)$
 
 that is related to the DFT density by:
 
-$\rho(\mathbf{r}) = \sum_{\mathbf{k}} \sum_{\nu
-\nu'} \langle \mathbf{r} | \Psi_{\nu \mathbf{k}} \rangle N_{\nu
-\nu'}(\mathbf{k}) \langle \Psi_{\nu' \mathbf{k}} | \mathbf{r} \rangle$
+$\rho(\mathbf{r}) = \sum_{\mathbf{k}} \sum_{\nu \nu'} \langle
+\mathbf{r} | \Psi_{\nu \mathbf{k}} \rangle N_{\nu \nu'}(\mathbf{k})
+\langle \Psi_{\nu' \mathbf{k}} | \mathbf{r} \rangle$
 
 This implies that both the DFT charge density and the obtained DMFT
 density matrix have to coincide as well. This so-called
@@ -141,23 +164,34 @@ From the final self-energy or Green's function the spectral function
 (similar to the DOS in DFT) can be computed, which can be compared to
 photoemission spectroscopy. DFT+DMFT also allows to calculate other
 spectral properties and structural properties. See
-Ref.^([\[1\]](#cite_note-kotliar:rmp:2006-1)) for more information.
+Ref.<sup>[\[1\]](#cite_note-kotliar:rmp:2006-1)</sup>
+for more information.
 
-## Technical requirements
+## Technical requirements\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Technical requirements">edit</a> \| (./index.php.md)\]
+
 To follow the tutorial VASP has to be compiled with [HDF5
 support](../categories/Category-HDF5_support.md) and should
 be newer than version 6.5.0. Additionally TRIQS has to be installed
 including its applications ctseg, maxent, dft_tools, and solid_dmft in
-version 3.4.0 or newer. See the following [installation
-instructions](https://triqs.github.io/solid_dmft/install.html). TRIQS
-can easiest be obtained via
-[conda](https://triqs.github.io/triqs/latest/install.html#anaconda).
+version 3.4.0 or newer. See the following
+<a href="https://triqs.github.io/solid_dmft/install.html"
+class="external text" rel="nofollow">installation instructions</a>.
+TRIQS can easiest be obtained via
+<a href="https://triqs.github.io/triqs/latest/install.html#anaconda"
+class="external text" rel="nofollow">conda</a>.
 
 |  |
 |----|
 | **Mind:** Currently this tutorial requires the installation of the unstable branch of TRIQS/dft_tools and TRIQS/solid_dmft manually from source. The features will be part of the upcoming release 3.4.0 of TRIQS. |
 
-## Step-by-step tutorial
+## Step-by-step tutorial\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step tutorial">edit</a> \| (./index.php.md)\]
+
 NiO is a charge-transfer insulator that becomes anti-ferromagnetic at
 low temperatures. At higher temperatures NiO is para-magnetic and a
 prototypical Mott insulator. In the tutorial [NiO
@@ -165,7 +199,11 @@ LSDA+U](../misc/NiO_LSDA+U.md) DFT+U is used to calculate the
 low temperature magnetic state of NiO. Here, we will calculate the Mott
 insulating state at higher temperatures using DFT+DMFT.
 
-### Step 1: Perform a SCF DFT calculation
+### Step 1: Perform a SCF DFT calculation\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Perform a SCF DFT calculation">edit</a> \| (./index.php.md)\]
+
 First we will perform a SCF DFT calculation to converge the KS
 wavefunction and project the KS states on localized Ni-d orbitals. We
 will later use the Ni-d projectors for DMFT. The
@@ -190,7 +228,8 @@ The [KPOINTS](../input-files/KPOINTS.md) file is:
      15 15 15
 
 For the [POTCAR](../input-files/POTCAR.md) we are using the 'Ni_pv' and the
-'O' [pseudopotentials](../redirects/Pseudopotentials.md). The
+'O' <a href="/wiki/Pseudopotentials" class="mw-redirect"
+title="Pseudopotentials">pseudopotentials</a>. The
 [INCAR](../input-files/INCAR.md) file is:
 
      SYSTEM  = NiO
@@ -231,10 +270,15 @@ Note here the *LOCPROJ mode* message. Afterwards the projections are
 stored in the file [vaspgamma.h5](../input-files/Vaspgamma.h5.md) and
 [LOCPROJ](../incar-tags/LOCPROJ.md).
 
-### Step 2: Convert the VASP output to TRIQS input
+### Step 2: Convert the VASP output to TRIQS input\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Convert the VASP output to TRIQS input">edit</a> \| (./index.php.md)\]
+
 We will use the converter tool inside of TRIQS/dft_tools to convert the
 VASP output to a TRIQS input file. To this end, we prepare a config file
 *plo.cfg* with the following content:
+
 
     [General]
     DOSMESH = -10 10 3001
@@ -254,10 +298,13 @@ VASP output to a TRIQS input file. To this end, we prepare a config file
                 0.0  0.0  0.0  1.0  0.0
                 0.0  0.0  0.0  0.0  1.0
 
-For details on the config file see the [DFT tools
-documentation](https://triqs.github.io/dft_tools/latest/guide/conv_vasp.html).
-The converter can be run by creating a small python script with the
+
+For details on the config file see the
+<a href="https://triqs.github.io/dft_tools/latest/guide/conv_vasp.html"
+class="external text" rel="nofollow">DFT tools documentation</a>. The
+converter can be run by creating a small python script with the
 following content:
+
 
     from triqs_dft_tools.converters.vasp import VaspConverter
     import triqs_dft_tools.converters.plovasp.converter as plo_converter
@@ -268,6 +315,7 @@ following content:
     # run the converter
     Converter = VaspConverter(filename = 'vasp')
     Converter.convert_dft_input()
+
 
 Running the python script via *python converter.py* will create the
 input file *vasp.h5* that can be used for the DMFT calculation. The std
@@ -289,6 +337,7 @@ the on-site density matrix is printed:
 
 We can plot the DFT DOS from VASP together with the DOS of the projected
 orbitals from VASP via the following python code using py4vasp:
+
 
     import py4vasp
     import matplotlib.pyplot as plt
@@ -315,16 +364,28 @@ orbitals from VASP via the following python code using py4vasp:
     plt.legend()
     plt.show()
 
+
 Resulting in:
 
-[![](https://vasp.at/wiki/images/thumb/7/74/Dft_dmft_tutorial_1.png/600px-Dft_dmft_tutorial_1.png)](https://vasp.at/wiki/File:Dft_dmft_tutorial_1.png)
-
-DFT total DOS and projector DOS from TRIQS/DFT_Tools
+<figure class="mw-halign-none" typeof="mw:File/Thumb">
+<a href="/wiki/File:Dft_dmft_tutorial_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/74/Dft_dmft_tutorial_1.png/600px-Dft_dmft_tutorial_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/7/74/Dft_dmft_tutorial_1.png/900px-Dft_dmft_tutorial_1.png 1.5x, /wiki/images/7/74/Dft_dmft_tutorial_1.png 2x"
+width="600" height="370" /></a>
+<figcaption>DFT total DOS and projector DOS from
+TRIQS/DFT_Tools</figcaption>
+</figure>
 
 capturing the Ni-d orbital character. The DMFT calculation will now use
 this projected DOS as input.
 
-### Step 3: Perform a DMFT calculation
+### Step 3: Perform a DMFT calculation\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Perform a DMFT calculation">edit</a> \| (./index.php.md)\]
+
 Copy the *vasp.h5* file to a new directory. Then, we perform first a
 one-shot DMFT calculation to converge the self-energy, before performing
 charge-density updates with VASP. To perform the DMFT calculation, we
@@ -337,6 +398,7 @@ config file prepares the DMFT calculation to solve the DMFT equation
 with U=8 eV and J=1.0 eV, which are typical values for NiO (compare with
 the [NiO LSDA+U](../misc/NiO_LSDA+U.md) howto). Create the
 'dmft_config.toml' file with the following content:
+
 
     [general]
     seedname = "vasp"
@@ -377,6 +439,7 @@ the [NiO LSDA+U](../misc/NiO_LSDA+U.md) howto). Create the
     [advanced]
     dc_fixed_value = 59.0
 
+
 Importantly, we specify the electronic temperature of the calculation
 via the option 'beta=20' 1/eV to be half of room temperature, U/J are
 set to the aforementioned values, the *seedname* and *jobname* specify
@@ -386,10 +449,11 @@ be performed. The section *\[solver\]* specifies the solver to be used,
 in this case we use the CTSEG solver, and its parameters. The ctseg
 solver is a QMC impurity solver operating on the [Matsubara
 axis](https://vasp.at/wiki/index.php/Matsubara_formalism). Please refer to
-the [solid_dmft
-documentation](https://triqs.github.io/solid_dmft/input_output/DMFT_input/input.html)
-for more details on the parameters. The QMC solver parallelizes very
-well over MPI and we request 1e+7 Monte Carlo steps.
+the <a
+href="https://triqs.github.io/solid_dmft/input_output/DMFT_input/input.html"
+class="external text" rel="nofollow">solid_dmft documentation</a> for
+more details on the parameters. The QMC solver parallelizes very well
+over MPI and we request 1e+7 Monte Carlo steps.
 
 To perform the DMFT calculation we run the following command:
 
@@ -414,8 +478,8 @@ observables file should look like this:
 
 The second column shows the chemical potential that is varies in each
 DMFT iteration to fulfill the electron count of the system. The next
-columns monitor $G(\beta/2)$ per
-localized orbital, which monitors the spectral function at the Fermi
+columns monitor $G(\beta/2)$
+per localized orbital, which monitors the spectral function at the Fermi
 level, to indicate metallic or insulating behavior. The last columns
 show the orbital occupations and the impurity occupation. The
 convergence can be monitored via the file *conv_obs0.dat*, which should
@@ -434,9 +498,10 @@ Note the 'δGimp' column, which shows the DMFT self-consistency
 condition, but also the first column 'δμ' which shows the convergence of
 the chemical potential. The converged self-energy is stored along all
 other calculated properties in the file 'jobname/seedname.h5'. You can
-for example plot the self-energy for the Ni $e_g$ and $t_{2g}$ orbitals with
-the following code using the [small helper functions on the
-bottom](#helperpythonfunctions):
+for example plot the self-energy for the Ni $e_g$ and
+$t_{2g}$ orbitals with the following code using the
+[small helper functions on the bottom](#helperpythonfunctions):
+
 
     with HDFArchive('dmft_os/U8.0-J1.0-beta20-qmc2e+7/vasp.h5','r') as ar:
         S_os_iw = ar['DMFT_results/last_iter/Sigma_freq_0']
@@ -454,28 +519,41 @@ bottom](#helperpythonfunctions):
     plt.legend()
     plt.show()
 
+
 The plot should look similar to this:
 
-[![](https://vasp.at/wiki/images/thumb/4/43/Dft_dmft_tutorial_2.png/800px-Dft_dmft_tutorial_2.png)](https://vasp.at/wiki/File:Dft_dmft_tutorial_2.png)
-
-Ni-d impurity self-energy from OS DMFT
+<figure class="mw-halign-none" typeof="mw:File/Thumb">
+<a href="/wiki/File:Dft_dmft_tutorial_2.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/43/Dft_dmft_tutorial_2.png/800px-Dft_dmft_tutorial_2.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/4/43/Dft_dmft_tutorial_2.png 1.5x" width="800"
+height="305" /></a>
+<figcaption>Ni-d impurity self-energy from OS DMFT</figcaption>
+</figure>
 
 Showing the Ni $e_g$ and Ni
-$t_{2g}$ orbital self-energies
-separately (real part left, and imaginary part right). Both show typical
-QMC noise at larger frequencies, with a analytic tail-fitting at
-frequencies larger than 20 eV.
+$t_{2g}$ orbital self-energies separately (real part
+left, and imaginary part right). Both show typical QMC noise at larger
+frequencies, with a analytic tail-fitting at frequencies larger than 20
+eV.
 
-### Step 4: Perform a CSC DFT+DMFT calculation
+### Step 4: Perform a CSC DFT+DMFT calculation\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Perform a CSC DFT+DMFT calculation">edit</a> \| (./index.php.md)\]
+
 Now we are ready to perform a CSC DFT+DMFT calculation. We create a new
 directory for the calculation and copy the following files into it:
 [INCAR](../input-files/INCAR.md), [POSCAR](../input-files/POSCAR.md),
 [KPOINTS](../input-files/KPOINTS.md), [POTCAR](../input-files/POTCAR.md),
 *plo.cfg*, [CHGCAR](../input-files/CHGCAR.md),
 [WAVECAR](../input-files/WAVECAR.md), and *dmft_config.toml*. solid_dmft
-will run VASP for us, but we do have to specify [how it is
-run](https://triqs.github.io/solid_dmft/input_output/DMFT_input/dft.html)
-by adding the following section to the \`dmft_config.toml\` file:
+will run VASP for us, but we do have to specify <a
+href="https://triqs.github.io/solid_dmft/input_output/DMFT_input/dft.html"
+class="external text" rel="nofollow">how it is run</a> by adding the
+following section to the \`dmft_config.toml\` file:
+
 
     [dft]
     plo_cfg = "plo.cfg"
@@ -487,6 +565,7 @@ by adding the following section to the \`dmft_config.toml\` file:
     mpi_exe = "/path/to/mpirun"
     dft_exec = "/path/to/bin/vasp_std"
 
+
 Here, you have to change the mpi executable and VASP executable path.
 Also make sure to adjust the number of cores to be used for the DFT
 calculations via the *n_cores* option. Since VASP is performing an
@@ -496,6 +575,7 @@ to converge the KS states with the new charge density from DMFT via
 *n_iter*. Also change the following options in the *dmft_config.toml*
 file:
 
+
     csc = true
     n_iter_dmft_first = 2
     n_iter_dmft_per = 2
@@ -503,6 +583,7 @@ file:
 
     load_sigma = true
     path_to_sigma = "/path/to/dmft-os/U8.0-J1.0-beta20-qmc1e+7/vasp.h5"
+
 
 This will load the sigma from the file *vasp.h5* in the folder
 *dmft-os/U8.0-J1.0-beta20-qmc1e+7* and instruct solid_dmft to perform a
@@ -547,28 +628,39 @@ calculation, showing the effect of charge self-consistency:
 The difference is also visible in the final self-energy comparing OS
 with CSC:
 
-[![](https://vasp.at/wiki/images/thumb/a/ac/Dft_dmft_tutorial_3.png/800px-Dft_dmft_tutorial_3.png)](https://vasp.at/wiki/File:Dft_dmft_tutorial_3.png)
+<figure class="mw-halign-none" typeof="mw:File/Thumb">
+<a href="/wiki/File:Dft_dmft_tutorial_3.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/a/ac/Dft_dmft_tutorial_3.png/800px-Dft_dmft_tutorial_3.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/a/ac/Dft_dmft_tutorial_3.png 1.5x" width="800"
+height="310" /></a>
+<figcaption>Ni-d impurity self-energy from CSC DFT+DMFT</figcaption>
+</figure>
 
-Ni-d impurity self-energy from CSC DFT+DMFT
+The $e_g$ orbital
+is now closer to half filling and, thus, more insulating. The large
+self-energy for $i \omega_n \rightarrow 0$ is signaling a pole in the self-energy at
+$\omega=0$ typical for a Mott insulator.
 
-The $e_g$ orbital is now closer to half
-filling and, thus, more insulating. The large self-energy for
-$i \omega_n \rightarrow 0$ is signaling
-a pole in the self-energy at $\omega=0$
-typical for a Mott insulator.
+### Step 5: calculating the local spectral function\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: calculating the local spectral function">edit</a> \| (./index.php.md)\]
 
-### Step 5: calculating the local spectral function
 Next, we are ready to calculate the local spectral function
-$A(\omega)$ of NiO for the Ni-d
-orbitals. This is the easiest post-processing step, since we can simply
-calculate the local spectral function based on the impurity Green's
-function $G^\text{imp}_{m m'}$.
-However, since the impurity solver works on the Matsubara axis, we have
-to find an analytic continuation of the Green's function to the real
-frequency axis. The analytic continuation is done using a maximum
-entropy method in the [TRIQS/maxent](https://triqs.github.io/maxent/)
-package. Prepare a little script in the calculation folder utilizing the
-post processing functions of solid_dmft:
+$A(\omega)$ of NiO for the Ni-d orbitals. This is the
+easiest post-processing step, since we can simply calculate the local
+spectral function based on the impurity Green's function
+$G^\text{imp}_{m m'}$. However, since the impurity
+solver works on the Matsubara axis, we have to find an analytic
+continuation of the Green's function to the real frequency axis. The
+analytic continuation is done using a maximum entropy method in the
+<a href="https://triqs.github.io/maxent/" class="external text"
+rel="nofollow">TRIQS/maxent</a> package. Prepare a little script in the
+calculation folder utilizing the post processing functions of
+solid_dmft:
+
 
     import solid_dmft.postprocessing.maxent_gf_imp as gimp_maxent
 
@@ -579,9 +671,11 @@ post processing functions of solid_dmft:
                                   n_points_maxent=400,
                                   n_points_alpha=20)
 
+
 The script utilizes MPI for parallelization so run it via *mpirun python
 gimp_maxent.py*. The script will write the local spectral function into
 the \`*vasp.h5* file. We can now plot it via the following code:
+
 
     # load the results
     with HDFArchive('dmft_csc/vasp.h5','r') as ar:
@@ -600,28 +694,49 @@ the \`*vasp.h5* file. We can now plot it via the following code:
     plt.legend()
     plt.show()
 
-[![](https://vasp.at/wiki/images/thumb/8/8f/Dft_dmft_tutorial_4.png/700px-Dft_dmft_tutorial_4.png)](https://vasp.at/wiki/File:Dft_dmft_tutorial_4.png)
 
-Ni-d projected local spectral function from MaxEnt
+<figure class="mw-halign-none" typeof="mw:File/Thumb">
+<a href="/wiki/File:Dft_dmft_tutorial_4.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/8f/Dft_dmft_tutorial_4.png/700px-Dft_dmft_tutorial_4.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/8/8f/Dft_dmft_tutorial_4.png 1.5x" width="700"
+height="356" /></a>
+<figcaption>Ni-d projected local spectral function from
+MaxEnt</figcaption>
+</figure>
 
 We can see that the local spectral function is gapped with the
-$t_{2g}$ orbitals completely filled
-(compare with DFT initial occupations), and the $e_{g}$ orbital being gapped. Mind that this is the summed
-spectral function for up + down spin, with both channels being
-degenerate.
+$t_{2g}$ orbitals completely filled (compare with DFT
+initial occupations), and the $e_{g}$
+orbital being gapped. Mind that this is the summed spectral function for
+up + down spin, with both channels being degenerate.
 
-### Further reading
+### Further reading\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Further reading">edit</a> \| (./index.php.md)\]
+
 Similar to DFT, DMFT calculations have many parameters that can be
 tuned. Here, all parameters were carefully chosen to converge the DMFT
 calculation properly, and close to experiment. Especially, the double
 counting correction was chosen such that it best fits the experimental
-data.^([\[5\]](#cite_note-karolak:2010-5)) To learn more about TRIQS
-visit the [TRIQS Python
-tutorials](https://triqs.github.io/triqs/latest/userguide.html#python-tutorials)
-page. And for more concrete DMFT tutorials see the [solid_dmft
-tutorials](https://triqs.github.io/solid_dmft/tutorials.html).
+data.<sup>[\[5\]](#cite_note-karolak:2010-5)</sup>
+To learn more about TRIQS visit the <a
+href="https://triqs.github.io/triqs/latest/userguide.html#python-tutorials"
+class="external text" rel="nofollow">TRIQS Python tutorials</a> page.
+And for more concrete DMFT tutorials see the
+<a href="https://triqs.github.io/solid_dmft/tutorials.html"
+class="external text" rel="nofollow">solid_dmft tutorials</a>.
 
-### Helper functions for python
+### Helper functions for python\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Helper functions for python">edit</a> \| (./index.php.md)\]
+
+ 
+
+
     import numpy as np
 
     # plotting
@@ -678,30 +793,49 @@ tutorials](https://triqs.github.io/solid_dmft/tutorials.html).
      
         return mesh_arr
 
-## Related tags and articles
+
+## Related tags and articles\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [vaspgamma.h5](../input-files/Vaspgamma.h5.md),
 [GAMMA](../input-files/GAMMA.md), [ICHARG](../incar-tags/ICHARG.md),
 [Matsubara formalism](https://vasp.at/wiki/index.php/Matsubara_formalism)
 
-## References
-1.  ↑ ^([a](#cite_ref-kotliar:rmp:2006_1-0))
-    ^([b](#cite_ref-kotliar:rmp:2006_1-1)) [G. Kotliar, S. Y.
-    Savrasov, K. Haule, V. S. Oudovenko, O. Parcollet, and C. A.
-    Marianetti, *Electronic structure calculations with dynamical
-    mean-field theory*, Rev. Mod. Phys. **78**, 865
-    (2006)](https://link.aps.org/doi/10.1103/RevModPhys.78.865)
-2.  [↑](#cite_ref-parcollet:cpc:196_2-0) [O. Parcollet, M. Ferrero, T.
-    Ayral, H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer
-    Physics Communications **196**, 398
-    (2015).](http://dx.doi.org/10.1016/j.cpc.2015.04.023)
-3.  [↑](#cite_ref-merkel:joss:7_3-0) [M. E. Merkel, A. Carta, S. Beck
-    and Alexander Hampel, Journal of Open Source Software **7**, 77
-    (2022).](https://doi.org/10.21105/joss.04623)
-4.  [↑](#cite_ref-Schuler:JPCM:2018_4-0) [M. Schüler, O.E. Peil, G.J.
-    Kraberger, R. Pordzik, M. Marsman, G. Kresse, T.O. Wehling, and M.
-    Aichhorn, J. Phys.: Condens. Matter **30**, 475901
-    (2018).](https://doi.org/10.1088/1361-648X/aae80a)
-5.  [↑](#cite_ref-karolak:2010_5-0) [M. Karolak, G. Ulm, T. Wehling, V.
-    Mazurenko, A. Poteryaev, and A. Lichtenstein, *Double counting in
-    LDA+DMFT—The example of NiO*, J. Electron Spectros. Relat. Phenomena
-    **118**, 11 (2010).](https://doi.org/10.1016/j.elspec.2010.05.021)
+## References\[<a
+href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-kotliar:rmp:2006_1-0)</sup>
+    <sup>[b](#cite_ref-kotliar:rmp:2006_1-1)</sup>
+    <a href="https://link.aps.org/doi/10.1103/RevModPhys.78.865"
+    class="external text" rel="nofollow">G. Kotliar, S. Y. Savrasov, K.
+    Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti,
+    <em>Electronic structure calculations with dynamical mean-field
+    theory</em>, Rev. Mod. Phys. <strong>78</strong>, 865 (2006)</a>
+2.  [↑](#cite_ref-parcollet:cpc:196_2-0)
+    <a href="http://dx.doi.org/10.1016/j.cpc.2015.04.023"
+    class="external text" rel="nofollow">O. Parcollet, M. Ferrero, T. Ayral,
+    H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics
+    Communications <strong>196</strong>, 398 (2015).</a>
+3.  [↑](#cite_ref-merkel:joss:7_3-0)
+    <a href="https://doi.org/10.21105/joss.04623" class="external text"
+    rel="nofollow">M. E. Merkel, A. Carta, S. Beck and Alexander Hampel,
+    Journal of Open Source Software <strong>7</strong>, 77 (2022).</a>
+4.  [↑](#cite_ref-Schuler:JPCM:2018_4-0)
+    <a href="https://doi.org/10.1088/1361-648X/aae80a" class="external text"
+    rel="nofollow">M. Schüler, O.E. Peil, G.J. Kraberger, R. Pordzik, M.
+    Marsman, G. Kresse, T.O. Wehling, and M. Aichhorn, J. Phys.: Condens.
+    Matter <strong>30</strong>, 475901 (2018).</a>
+5.  [↑](#cite_ref-karolak:2010_5-0)
+    <a href="https://doi.org/10.1016/j.elspec.2010.05.021"
+    class="external text" rel="nofollow">M. Karolak, G. Ulm, T. Wehling, V.
+    Mazurenko, A. Poteryaev, and A. Lichtenstein, <em>Double counting in
+    LDA+DMFT—The example of NiO</em>, J. Electron Spectros. Relat. Phenomena
+    <strong>118</strong>, 11 (2010).</a>
+
+

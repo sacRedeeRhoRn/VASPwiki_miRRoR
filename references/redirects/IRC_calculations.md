@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # IRC calculations
+
+
+
 Redirect to:
 
 - [Intrinsic-reaction-coordinate
   calculations](../tutorials/Intrinsic-reaction-coordinate_calculations.md)
+
+

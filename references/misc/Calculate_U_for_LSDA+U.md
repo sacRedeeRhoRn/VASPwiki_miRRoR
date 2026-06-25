@@ -2,24 +2,48 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Calculate U for LSDA+U
+
+
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 POSCAR](#POSCAR)
-- [3 KPOINTS](#KPOINTS)
-- [4 The DFT groudstate](#The_DFT_groudstate)
-- [5 Non-selfconsistent response](#Non-selfconsistent_response)
-- [6 Selfconsistent response](#Selfconsistent_response)
-- [7 The final result](#The_final_result)
-- [8 Download](#Download)
-- [9 References](#References)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  POSCAR](#POSCAR)
+- [3
+  KPOINTS](#KPOINTS)
+- [4 The DFT
+  groudstate](#The_DFT_groudstate)
+- [5
+  Non-selfconsistent
+  response](#Non-selfconsistent_response)
+- [6 Selfconsistent
+  response](#Selfconsistent_response)
+- [7 The final
+  result](#The_final_result)
+- [8
+  Download](#Download)
+- [9
+  References](#References)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 In this exercise, you will calculate the U parameter for the DFT+U
 treatment of Ni *d*-electrons in NiO using the linear response *ansatz*
-of Cococcioni *et al.*.^([\[1\]](#cite_note-cococcioni:2005-1))
+of Cococcioni *et
+al.*.<sup>[\[1\]](#cite_note-cococcioni:2005-1)</sup>
 
-## [POSCAR](../input-files/POSCAR.md)
+## [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
 For this calculation we will use a 2×2×2 supercell of AFM-II NiO:
 
     AFM  NiO
@@ -87,14 +111,22 @@ This should yield something like:
 
 *i.e.*, two Ni entries followed by one O entry.
 
-## [KPOINTS](../input-files/KPOINTS.md)
+## [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Gamma only
      0
     Monkhorst
      1 1 1 
      0 0 0
 
-## The DFT groudstate
+## The DFT groudstate\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: The DFT groudstate">edit</a> \| (./index.php.md)\]
+
 We will calculate the DFT ground state of our NiO system with the
 following [INCAR](../input-files/INCAR.md):
 
@@ -198,11 +230,14 @@ end of the [OUTCAR](../output-files/OUTCAR.md) file:
 This shows that in the DFT grounstate mostly*d*-electrons are attributed
 to atomic sites 1-16 with anti-ferromagnetic ordering.
 
-## Non-selfconsistent response
+## Non-selfconsistent response\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Non-selfconsistent response">edit</a> \| (./index.php.md)\]
+
 The next step is to calculate the following response function:
 
-$\chi^0_{IJ}=\frac{\partial N^{\rm
-NSCF}_{I}}{\partial V_{J}}$
+$\chi^0_{IJ}=\frac{\partial N^{\rm NSCF}_{I}}{\partial V_{J}}$
 
 This is the change in the number of *d*-electrons on site *I* due to an
 additional spherical potential acting on the *d*-manifold on site *J*.
@@ -286,14 +321,16 @@ $\Delta N^{\rm NSCF}_1= 4.488 - 4.438 = 0.050$
 
 and hence
 
-$\chi^0_{11} = \frac{0.050}{0.1} = 0.50 \\
-(eV)^{-1}$
+$\chi^0_{11} = \frac{0.050}{0.1} = 0.50 \\ (eV)^{-1}$
 
-## Selfconsistent response
+## Selfconsistent response\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Selfconsistent response">edit</a> \| (./index.php.md)\]
+
 The *selfconsistent* reponse function:
 
-$\chi_{IJ}=\frac{\partial N^{\rm
-SCF}_{I}}{\partial V_{J}}$
+$\chi_{IJ}=\frac{\partial N^{\rm SCF}_{I}}{\partial V_{J}}$
 
 is computed similarly:
 
@@ -361,18 +398,22 @@ $\Delta N^{\rm NSCF}_1= 4.452 - 4.438 = 0.012$
 
 and hence
 
-$\chi_{11} = \frac{0.012}{0.1} = 0.12 \\
-(eV)^{-1}$
+$\chi_{11} = \frac{0.012}{0.1} = 0.12 \\ (eV)^{-1}$
 
-## The final result
+## The final result\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: The final result">edit</a> \| (./index.php.md)\]
+
 After we have computed both the non-selfconsistent as well as the
 selfconsistent response functions, the U parameter for the DFT+U
 treatment of Ni *d*-electrons in NiO is found from:
 
-$U = \chi^{-1}-\chi_0^{-1} \approx
-\left(\frac{\partial N^{\rm SCF}_{I}}{\partial V_{I}}\right)^{-1} -
-\left(\frac{\partial N^{\rm NSCF}_{I}}{\partial V_{I}}\right)^{-1} =
-\frac{1}{0.12}-\frac{1}{0.5} = 6.33 \\ eV$
+$U
+= \chi^{-1}-\chi_0^{-1} \approx \left(\frac{\partial N^{\rm
+SCF}_{I}}{\partial V_{I}}\right)^{-1} - \left(\frac{\partial N^{\rm
+NSCF}_{I}}{\partial V_{I}}\right)^{-1} = \frac{1}{0.12}-\frac{1}{0.5}
+= 6.33 \\ eV$
 
   
 To get a more accurate result, one should repeat the previous
@@ -385,19 +426,37 @@ The relevant response functions are then easily found from a linear fit
 of the number of *d*-electrons on atomic site 1 as a function of the
 additional potential *V*:
 
-[![](https://vasp.at/wiki/images/thumb/3/30/NiOLDAU3.png/500px-NiOLDAU3.png)](https://vasp.at/wiki/File:NiOLDAU3.png)
+<a href="/wiki/File:NiOLDAU3.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/3/30/NiOLDAU3.png/500px-NiOLDAU3.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/3/30/NiOLDAU3.png/750px-NiOLDAU3.png 1.5x, /wiki/images/3/30/NiOLDAU3.png 2x"
+width="500" height="386" /></a>
 
 From the above, we then have:
 
-$U = \chi^{-1}-\chi_0^{-1} \approx
-\left(\frac{\partial N^{\rm SCF}_{I}}{\partial V_{I}}\right)^{-1} -
-\left(\frac{\partial N^{\rm NSCF}_{I}}{\partial V_{I}}\right)^{-1} =
+$U
+= \chi^{-1}-\chi_0^{-1} \approx \left(\frac{\partial N^{\rm
+SCF}_{I}}{\partial V_{I}}\right)^{-1} - \left(\frac{\partial N^{\rm
+NSCF}_{I}}{\partial V_{I}}\right)^{-1} =
 \frac{1}{0.131333}-\frac{1}{0.492333} = 5.58 \\ eV$
 
-## Download
-[NiO_calcU.tgz](https://vasp.at/wiki/images/4/40/NiO_calcU.tgz "NiO calcU.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-## References
-1.  [↑](#cite_ref-cococcioni:2005_1-0) [M. Cococcioni and S. de
-    Gironcoli, Phys. Rev. B **71**, 035105
-    (2005).](https://doi.org/10.1103/PhysRevB.71.035105)
+<a href="/wiki/images/4/40/NiO_calcU.tgz" class="internal"
+title="NiO calcU.tgz">NiO_calcU.tgz</a>
+
+## References\[<a
+href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-cococcioni:2005_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.71.035105"
+    class="external text" rel="nofollow">M. Cococcioni and S. de Gironcoli,
+    Phys. Rev. B <strong>71</strong>, 035105 (2005).</a>
+
+

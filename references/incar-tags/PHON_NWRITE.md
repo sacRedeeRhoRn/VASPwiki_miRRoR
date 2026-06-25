@@ -2,13 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PHON_NWRITE
+
+
 PHON_NWRITE = \[integer\] 
 
 |                          |     |     |
 |--------------------------|-----|-----|
 | Default: **PHON_NWRITE** | = 1 |     |
 
-Description: PHON_NWRITE determines how much output is written to the
+Description: PHON_NWRITE
+determines how much output is written to the
 [OUTCAR](../output-files/OUTCAR.md) file when computing the phonon
 dispersion
 [LPHON_DISPERSION](LPHON_DISPERSION.md)=.TRUE.
@@ -28,11 +31,15 @@ one-line format. The available options are:
 | -2 | For each q point, q-point coordinates and frequencies are written in separate blocks and frequencies are reported in different units. |
 | -3 | Like -2, but in addition, the phonon eigenvectors are written for each q point. |
 
-|                                            |
-|--------------------------------------------|
+|  |
+|----|
 | **Mind:** Only available as of VASP 6.3.2. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PHON_NWRITE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [QPOINTS](../input-files/QPOINTS.md),
 [LPHON_DISPERSION](LPHON_DISPERSION.md),
 [LPHON_POLAR](LPHON_POLAR.md),
@@ -42,3 +49,5 @@ one-line format. The available options are:
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LPHON_DISPERSION-_incategory-Examples)
+
+

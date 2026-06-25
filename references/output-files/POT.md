@@ -2,26 +2,35 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # POT
-The POT file contains the total local potential (in eV), including the
-PAW augmentation part. It is written for optimized-effective-potential
-(OEP)-type calculations — such as the local Hartree-Fock and EXX-OEP
-methods, when [`LVTOT`](../incar-tags/LVTOT.md)` = True`, and it stores the
-local potential as the restart quantity for such calculations.
+
+
+The POT file contains the
+total local potential (in eV), including the PAW augmentation part. It
+is written for optimized-effective-potential (OEP)-type calculations —
+such as the local Hartree-Fock and EXX-OEP methods, when
+[`LVTOT`](../incar-tags/LVTOT.md)` = True`, and it stores the local
+potential as the restart quantity for such calculations.
 
 As of VASP 6.6.0, [`LVTOT`](../incar-tags/LVTOT.md)` = True` together with
-[`LH5`](../incar-tags/LH5.md)` = True` writes the content of the POT file to
-the restart file [vaspwave.h5](Vaspwave.h5.md) instead.
-When restarting, a legacy POT file is used in preference to
-[vaspwave.h5](Vaspwave.h5.md) if both are present.
+[`LH5`](../incar-tags/LH5.md)` = True` writes the content of the
+POT file to the restart file
+[vaspwave.h5](Vaspwave.h5.md) instead. When restarting,
+a legacy POT file is used in
+preference to [vaspwave.h5](Vaspwave.h5.md) if both are
+present.
 
 |  |
 |----|
 | **Tip:** If you are interested in the local potential as a quantity (and not in restarting a calculation), use the [LOCPOT](LOCPOT.md) file and/or the [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md) tag instead. |
 
-## Format
-The POT file uses the same block format as the
-[CHGCAR](../input-files/CHGCAR.md) file, with the potential (in eV) in
-place of the charge density. Each block consists of:
+## Format\[<a href="/wiki/index.php?title=POT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Format">edit</a> \| (./index.php.md)\]
+
+The POT file uses the same
+block format as the [CHGCAR](../input-files/CHGCAR.md) file, with the
+potential (in eV) in place of the charge density. Each block consists
+of:
 
 - Structure in [POSCAR](../input-files/POSCAR.md) format
 - FFT-grid dimensions [NGXF](../incar-tags/NGXF.md),
@@ -53,7 +62,10 @@ part.
 |----|
 | **Warning:** The augmentation occupancies are written up to the *l*-quantum number set by [LMAXMIX](../incar-tags/LMAXMIX.md). See [LMAXMIX](../incar-tags/LMAXMIX.md) for the consequences of restarting without the appropriate one-center occupancies. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=POT&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Restart and output files cheat
 sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 
@@ -62,3 +74,5 @@ sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 [LVTOT](../incar-tags/LVTOT.md), [LVHAR](../incar-tags/LVHAR.md),
 [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md),
 [LH5](../incar-tags/LH5.md), [LMAXMIX](../incar-tags/LMAXMIX.md)
+
+

@@ -2,37 +2,66 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # KERNEL_TRUNCATION/IPAD
-KERNEL_TRUNCATION/IPAD = integer 
+
+
+KERNEL_TRUNCATION/IPAD =
+integer 
 
 |  |  |  |
 |----|----|----|
 | Default: **KERNEL_TRUNCATION/IPAD** | = 3 | if [`KERNEL_TRUNCATION/IDIMENSIONALITY`](KERNEL_TRUNCATION__IDIMENSIONALITY.md)` = 0` |
 |  | = 2 | if [`KERNEL_TRUNCATION/IDIMENSIONALITY`](KERNEL_TRUNCATION__IDIMENSIONALITY.md)` = 2` |
 
-**Description:** KERNEL_TRUNCATION/IPAD controls the padding strategy
-used for the Coulomb kernel truncation in reciprocal space. Padding
-defines how much additional empty space is introduced around the charge
-density before applying
-truncation.^([\[1\]](#cite_note-vijay:prb:2025-1)) This affects both the
-accuracy of the truncated Coulomb potential and the computational cost.
+**Description:**
+KERNEL_TRUNCATION/IPAD
+controls the padding strategy used for the Coulomb kernel truncation in
+reciprocal space. Padding defines how much additional empty space is
+introduced around the charge density before applying
+truncation.<sup>[\[1\]](#cite_note-vijay:prb:2025-1)</sup>
+This affects both the accuracy of the truncated Coulomb potential and
+the computational cost.
 
 ------------------------------------------------------------------------
 
-Setting KERNEL_TRUNCATION/IPAD allows fine control over how much
-zero-padding is applied along each reciprocal-space direction. Padding
-ensures that the truncated Coulomb kernel does not artificially interact
-with its periodic replicas in non-periodic directions.
+Setting KERNEL_TRUNCATION/IPAD
+allows fine control over how much zero-padding is applied along each
+reciprocal-space direction. Padding ensures that the truncated Coulomb
+kernel does not artificially interact with its periodic replicas in
+non-periodic directions.
 
-Typically, increasing KERNEL_TRUNCATION/IPAD improves accuracy at the
-expense of computational cost.
+Typically, increasing
+KERNEL_TRUNCATION/IPAD
+improves accuracy at the expense of computational cost.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li><a href="/wiki/KERNEL_TRUNCATION/LTRUNCATE"
+title="KERNEL TRUNCATION/LTRUNCATE">KERNEL_TRUNCATION/LTRUNCATE</a> must
+be set to <code>.TRUE.</code> for <span
+class="mw-selflink selflink">KERNEL_TRUNCATION/IPAD</span> to have any
+effect.</li>
+<li>This tag is only available as of VASP.6.5.0.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 |  |
 |----|
 | **Warning:** When padding is used, the vaccum is added on the edges of the cell, as such it is very important that the motif is centered in the simulation box. If you encounter problems using Coulomb truncation with padding, try the same calculations without padding (see examples bellow). |
 
-## Example
+## Example\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/IPAD&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
     KERNEL_TRUNCATION {
          LTRUNCATE       = T
          IDIMENSIONALITY = 2
@@ -59,16 +88,29 @@ and a truncation length of z/2. In this case, half of the simulation box
 is effectively unused, but the algorithm remains simpler. This
 configuration can be useful for debugging purposes.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/IPAD&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [KERNEL_TRUNCATION/LTRUNCATE](KERNEL_TRUNCATION__LTRUNCATE.md),
 [KERNEL_TRUNCATION/IDIMENSIONALITY](KERNEL_TRUNCATION__IDIMENSIONALITY.md),
 [KERNEL_TRUNCATION/LCOARSEN](KERNEL_TRUNCATION__LCOARSEN.md),
 [KERNEL_TRUNCATION/FACTOR](KERNEL_TRUNCATION__FACTOR.md),
 [KERNEL_TRUNCATION/ISURFACE](KERNEL_TRUNCATION__ISURFACE.md)
 
-## References
-1.  [↑](#cite_ref-vijay:prb:2025_1-0) [S. Vijay, M. Schlipf, H.
-    Miranda, F. Karsai, M. Kaltak, M. Marsman, and G. Kresse, *Efficient
-    periodic density functional theory calculations of charged molecules
-    and surfaces using Coulomb kernel truncation*, Phys. Rev. B **112**,
-    045409 (2025).](https://doi.org/10.1103/cd6s-cdkf)
+## References\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/IPAD&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-vijay:prb:2025_1-0)
+    <a href="https://doi.org/10.1103/cd6s-cdkf" class="external text"
+    rel="nofollow">S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak,
+    M. Marsman, and G. Kresse, <em>Efficient periodic density functional
+    theory calculations of charged molecules and surfaces using Coulomb
+    kernel truncation</em>, Phys. Rev. B <strong>112</strong>, 045409
+    (2025).</a>
+
+

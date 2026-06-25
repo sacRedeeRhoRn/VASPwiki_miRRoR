@@ -2,13 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NiO GGA
-**Exercise :** Determine the most stable magnetic order between the
+
+
+*<u>Exercise :</u>* Determine the most stable magnetic order between the
 antiferromagnetic (AFM) and ferromagnetic (FM) configurations. Compare
 the both DOS.
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO GGA AFM
       SYSTEM   = "NiO"
@@ -37,7 +39,7 @@ the both DOS.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -47,7 +49,7 @@ the both DOS.
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -61,7 +63,13 @@ the both DOS.
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-## Download
-[nio_gga.tgz](https://vasp.at/wiki/images/e/e6/Nio_gga.tgz "Nio gga.tgz")
+## Download\[<a href="/wiki/index.php?title=NiO_GGA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/e/e6/Nio_gga.tgz" class="internal"
+title="Nio gga.tgz">nio_gga.tgz</a>
 
 ------------------------------------------------------------------------
+
+

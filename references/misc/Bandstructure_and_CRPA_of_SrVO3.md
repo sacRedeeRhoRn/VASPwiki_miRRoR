@@ -2,39 +2,64 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Bandstructure and CRPA of SrVO3
+
+
+
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
 [bandgap of Si in
-GW](Bandgap_of_Si_in_GW.md) \> [bandstructure
-of Si in GW
+GW](Bandgap_of_Si_in_GW.md) \>
+[bandstructure of Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \>
-[Equilibrium volume of Si in the
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \> [Equilibrium volume of Si
+in the
 RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 DFT groundstate calculation](#DFT_groundstate_calculation)
-- [3 Obtain DFT virtual orbitals and long-wave
+
+- [1
+  Task](#Task)
+- [2 DFT
+  groundstate calculation](#DFT_groundstate_calculation)
+- [3 Obtain DFT
+  virtual orbitals and long-wave
   limit](#Obtain_DFT_virtual_orbitals_and_long-wave_limit)
-  - [3.1 The dielectric function](#The_dielectric_function)
-- [4 GW Step](#GW_Step)
-  - [4.1 The dielectric function](#The_dielectric_function_2)
-- [5 HSE hybrid functional](#HSE_hybrid_functional)
-- [6 Post-processing: Density of states and Bandstructure for PBE, GW
-  and
+  - [3.1 The
+    dielectric function](#The_dielectric_function)
+- [4 GW
+  Step](#GW_Step)
+  - [4.1 The
+    dielectric function](#The_dielectric_function_2)
+- [5 HSE hybrid
+  functional](#HSE_hybrid_functional)
+- [6
+  Post-processing: Density of states and
+  Bandstructure for PBE, GW and
   HSE](#Post-processing:_Density_of_states_and_Bandstructure_for_PBE,_GW_and_HSE)
-  - [6.1 Density of States](#Density_of_States)
-  - [6.2 Bandstructure with wannier90](#Bandstructure_with_wannier90)
-  - [6.3 Alternative way to calculate the PBE
+  - [6.1 Density of
+    States](#Density_of_States)
+  - [6.2
+    Bandstructure with
+    wannier90](#Bandstructure_with_wannier90)
+  - [6.3
+    Alternative way to calculate the PBE
     bandstructure](#Alternative_way_to_calculate_the_PBE_bandstructure)
 
-## Task
-Calculation of the GW bandstructure of SrVO₃ using VASP and
-[WANNIER90](http://www.wannier.org).
+
+## Task\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
+Calculation of the GW bandstructure of SrVO<sub>3</sub> using VASP and
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">WANNIER90</a>.
 
 ------------------------------------------------------------------------
 
@@ -42,8 +67,9 @@ Performing a GW calculation with VASP is a 3-step procedure: a DFT
 groundstate calculation, a calculation to obtain a number of virtual
 orbitals, and the actual GW calculation itself. In this example we will
 also see how the results of the GW calculation may be postprocessed with
-[WANNIER90](http://www.wannier.org) to obtain the dispersion of the
-bands along the usual high symmetry directions in reciprocal space.
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">WANNIER90</a> to obtain the dispersion of the bands along
+the usual high symmetry directions in reciprocal space.
 
 **N.B.:** This example involves quite a number of individual
 calculations. The easiest way to run this example is to execute:
@@ -57,13 +83,17 @@ And compare the output of the different steps (DFT, GW, HSE) by:
 In any case, one can consider the `doall.sh` script to be an overview of
 the steps described below.
 
-## DFT groundstate calculation
+## DFT groundstate calculation\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: DFT groundstate calculation">edit</a> \| (./index.php.md)\]
+
 The first step is a conventional DFT (in this case PBE) groundstate
 calculation.
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DFT)
 
-&nbsp;
+<!-- -->
 
     SYSTEM  = SrVO3                        # system name
     NBANDS = 36                            # small number  of bands
@@ -80,7 +110,7 @@ system:
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     SrVO3
     3.84652  #cubic fit for 6x6x6 k-points
@@ -104,7 +134,7 @@ sampling:
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.BULK)
 
-&nbsp;
+<!-- -->
 
     Automatically generated mesh
            0
@@ -113,22 +143,27 @@ sampling:
      0 0 0
 
 **Mind**: this is definitely not dense enough for a high-quality
-description of SrVO₃, but in the interest of speed we will live with it.
-Copy the aforementioned file to [KPOINTS](../input-files/KPOINTS.md):
+description of SrVO<sub>3</sub>, but in the interest of speed we will
+live with it. Copy the aforementioned file to
+[KPOINTS](../input-files/KPOINTS.md):
 
     cp KPOINTS.BULK KPOINTS
 
 and run VASP. If all went well, one should obtain a
 [WAVECAR](../input-files/WAVECAR.md) file containing the PBE wavefunction.
 
-## Obtain DFT virtual orbitals and long-wave limit
+## Obtain DFT virtual orbitals and long-wave limit\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Obtain DFT virtual orbitals and long-wave limit">edit</a> \| (./index.php.md)\]
+
 Use following [INCAR](../input-files/INCAR.md) file to increase the number
 of virtual states and to determine the long-wave limit of the
 polarizability (stored in [WAVEDER](../input-files/WAVEDER.md)):
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DIAG)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = 0                             # Gaussian smearing
@@ -150,7 +185,11 @@ Also make a backup of the charge density for later:
 
     cp CHGCAR CHGCAR.DIAG
 
-### The dielectric function
+### The dielectric function\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: The dielectric function">edit</a> \| (./index.php.md)\]
+
 As a bonus, VASP determines the frequency dependent dielectric function
 in the independent-particle (IP) picture and writes the result to the
 [OUTCAR](../output-files/OUTCAR.md) and
@@ -169,7 +208,11 @@ dielectric function (from the
 
     ./plotoptics2
 
-## GW Step
+## GW Step\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: GW Step">edit</a> \| (./index.php.md)\]
+
 The actual GW calculation requires a set of one-electron energies and
 eigenstates. In this case we use the PBE solution obtained from previous
 step:
@@ -178,11 +221,11 @@ step:
     cp WAVEDER.DIAG WAVEDER
 
 The following [INCAR](../input-files/INCAR.md) file selects the 'single
-shot' GW calculation also known as G₀W₀:
+shot' GW calculation also known as G<sub>0</sub>W<sub>0</sub>:
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.GW0)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = 0                             # Gaussian smearing
@@ -195,14 +238,19 @@ shot' GW calculation also known as G₀W₀:
     NOMEGA = 200                           # large number of real frequency points for Hilbert transforms of W and self-energy
 
 Restarting VASP will overwrite the present
-[WAVECAR](../input-files/WAVECAR.md) and
-[vasprun.xml](../output-files/Vasprun.xml.md) file. Make a copy them
-for later.
+[WAVECAR](../input-files/WAVECAR.md)
+and
+[vasprun.xml](../output-files/Vasprun.xml.md)
+file. Make a copy them for later.
 
     cp WAVECAR WAVECAR.GW0
     cp vasprun.xml vasprun.GW0.xml
 
-### The dielectric function
+### The dielectric function\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: The dielectric function">edit</a> \| (./index.php.md)\]
+
 To extract the frequency dependent dielectric constant, both in the
 independent-particle picture as well as including local field effects
 (either in DFT or in the RPA) and plot the real and imaginary components
@@ -210,9 +258,13 @@ using *gnuplot*, execute
 
     ./plotchi
 
-## HSE hybrid functional
-To illustrate the kind of results one would obtain for SrVO₃ using the
-[DFT/Hartree-Fock hybrid functional
+## HSE hybrid functional\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: HSE hybrid functional">edit</a> \| (./index.php.md)\]
+
+To illustrate the kind of results one would obtain for SrVO<sub>3</sub>
+using the [DFT/Hartree-Fock hybrid functional
 HSE](../methods/Category-Hybrid_functionals.md),
 without actually doing a full self-consistent calculation, we will
 recalculate the one-electron energies and DOS
@@ -225,7 +277,7 @@ Use the following [INCAR](../input-files/INCAR.md) file:
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.HSE)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = 0                             # Gaussian smearing
@@ -241,14 +293,22 @@ Restart VASP and make a copy of the wavefunction for post-processing
 
     cp WAVECAR WAVECAR.HSE
 
-## Post-processing: Density of states and Bandstructure for PBE, GW and HSE
-### Density of States
+## Post-processing: Density of states and Bandstructure for PBE, GW and HSE\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Post-processing: Density of states and Bandstructure for PBE, GW and HSE">edit</a> \| (./index.php.md)\]
+
+### Density of States\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Density of States">edit</a> \| (./index.php.md)\]
+
 The DOS of the PBE, GW and HSE solution can be calculated in a
 post-processing step with
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DOS)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = -5                            # Bloechl's tetrahedron method (requires at least 3x3x3 k-points)
@@ -286,13 +346,17 @@ V-t2g, V-eg and O-p states with the scriptfile
 
 This requires gnuplot to be installed.
 
-### Bandstructure with `wannier90`
+### Bandstructure with `wannier90`\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Bandstructure with wannier90">edit</a> \| (./index.php.md)\]
+
 The bandstructure can be calculated via Wannier interpolation using
 `wannier90` in the library mode
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.WAN)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = 0                             # Gaussian smearing
@@ -345,7 +409,11 @@ thus obtained, may conveniently be visualized with gnuplot:
 message unless you remove the first line of `wannier90_band.gnu` (some
 deprecated syntax issue).
 
-### Alternative way to calculate the PBE bandstructure
+### Alternative way to calculate the PBE bandstructure\[<a
+href="/wiki/index.php?title=Bandstructure_and_CRPA_of_SrVO3&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Alternative way to calculate the PBE bandstructure">edit</a> \| (./index.php.md)\]
+
 VASP allows to interpolate the PBE bandstructure from the PBE charge
 density
 
@@ -356,7 +424,7 @@ by adapting the [KPOINTS](../input-files/KPOINTS.md) file as follows:
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.BSTR)
 
-&nbsp;
+<!-- -->
 
     Auto
     15
@@ -374,12 +442,13 @@ by adapting the [KPOINTS](../input-files/KPOINTS.md) file as follows:
     0.50000000  0.50000000  0.00000000   !M
     0.00000000  0.00000000  0.00000000   !G
 
-The following [INCAR](../input-files/INCAR.md) file tells VASP to
-interpolate the bandstructure:
+The following
+[INCAR](../input-files/INCAR.md)
+file tells VASP to interpolate the bandstructure:
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.BSTR)
 
-&nbsp;
+<!-- -->
 
     SYSTEM = SrVO3                         # system name
     ISMEAR = 0                             # Gaussian smearing
@@ -400,16 +469,22 @@ PBE, HSE and GW calculation can be compared via
 **N.B.:** Mind that this approach works only for DFT wavefunctions, like
 PBE or LDA.
 
+
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
 [bandgap of Si in
-GW](Bandgap_of_Si_in_GW.md) \> [bandstructure
-of Si in GW
+GW](Bandgap_of_Si_in_GW.md) \>
+[bandstructure of Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \>
-[Equilibrium volume of Si in the
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \> [Equilibrium volume of Si
+in the
 RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 Back to the [main page](The_VASP_Manual.md).
+
+

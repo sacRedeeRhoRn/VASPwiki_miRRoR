@@ -2,21 +2,24 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_DW
+
+
 ELPH_SELFEN_DW = \[logical\]  
 Default: **ELPH_SELFEN_DW** = .FALSE. 
 
 Description: Controls whether the Debye-Waller contribution is included
 in the calculation of the phonon-induced electron self-energy.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
 
 The phonon-induced electron self-energy has two contributions at second
 order in perturbation theory, the Fan-Migdal self-energy and the
-real-valued Debye-Waller self-energy. ELPH_SELFEN_DW controls the
+real-valued Debye-Waller self-energy.
+ELPH_SELFEN_DW controls the
 computation of the latter, while the former can be computed via
 [ELPH_SELFEN_FAN](ELPH_SELFEN_FAN.md).
 
@@ -27,9 +30,13 @@ the [vaspout.h5](../output-files/Vaspout.h5.md) file as
 
 |  |
 |----|
-| **Mind:** The Debye-Waller self-energy is computed using the rigid-ion approximation^([\[1\]](#cite_note-giustino:rmp:2017-1)). |
+| **Mind:** The Debye-Waller self-energy is computed using the rigid-ion approximation<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_DW&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -38,7 +45,16 @@ the [vaspout.h5](../output-files/Vaspout.h5.md) file as
 - [ELPH_SELFEN_GAPS](ELPH_SELFEN_GAPS.md)
 - [ELPH_SELFEN_FAN](ELPH_SELFEN_FAN.md)
 
-## References
-1.  [↑](#cite_ref-giustino:rmp:2017_1-0) [F. Giustino, *Electron-phonon
-    interactions from first principles*, Rev. Mod. Phys. **89**, 015003
-    (2017).](https://doi.org/10.1103/RevModPhys.89.015003)
+## References\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_DW&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-giustino:rmp:2017_1-0)
+    <a href="https://doi.org/10.1103/RevModPhys.89.015003"
+    class="external text" rel="nofollow">F. Giustino, <em>Electron-phonon
+    interactions from first principles</em>, Rev. Mod. Phys.
+    <strong>89</strong>, 015003 (2017).</a>
+
+

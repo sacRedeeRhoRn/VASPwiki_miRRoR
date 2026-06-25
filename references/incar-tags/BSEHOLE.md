@@ -2,16 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BSEHOLE
+
+
 BSEHOLE = \[real array\] 
 
-Description: BSEHOLE sets the coordinates of the fixed hole of the
-exciton wavefunction
+Description: BSEHOLE sets the
+coordinates of the fixed hole of the exciton wavefunction
 
 ------------------------------------------------------------------------
 
-If BSEHOLE is set in a BSE calculation, VASP computes exciton
-wavefunction for the first [NBSEEIG](NBSEEIG.md) states.
-The coordinates are provided in direct (fractional) coordinates.
+If BSEHOLE is set in a BSE
+calculation, VASP computes exciton wavefunction for the first
+[NBSEEIG](NBSEEIG.md) states. The coordinates are provided
+in direct (fractional) coordinates.
 
 When fixing the position of the particle, ensure that it is not fixed
 exactly at the center of an atom or coincides with a node of the
@@ -26,11 +29,16 @@ or
 
     electron position is fixed at:
 
-## Related tags and sections
+## Related tags and sections\[<a href="/wiki/index.php?title=BSEHOLE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [BSEELECTRON](BSEELECTRON.md),
-[NBSEEIG](NBSEEIG.md), [BSE
-calculations](../redirects/BSE_calculations.md), [Plotting
-exciton
+[NBSEEIG](NBSEEIG.md),
+<a href="/wiki/BSE_calculations" class="mw-redirect"
+title="BSE calculations">BSE calculations</a>, [Plotting exciton
 wavefunction](../theory/Plotting_exciton_wavefunction.md)
 
 ------------------------------------------------------------------------
+
+

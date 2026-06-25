@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_GAPS
-ELPH_SELFEN_GAPS = \[logical\]  
+
+
+ELPH_SELFEN_GAPS =
+\[logical\]  
 Default: **ELPH_SELFEN_GAPS** = .FALSE. 
 
 Description: Find the direct and indirect gaps and the valence and
 conduction Kohn-Sham states that form it and select to compute their
 self-energy due to electron-phonon coupling.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -38,7 +41,11 @@ of [ELPH_SELFEN_KPTS](ELPH_SELFEN_KPTS.md),
 and
 [ELPH_SELFEN_BAND_STOP](ELPH_SELFEN_BAND_STOP.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_GAPS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Electron-phonon
@@ -46,3 +53,5 @@ and
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_SELFEN_BAND_START](ELPH_SELFEN_BAND_START.md)
 - [ELPH_SELFEN_BAND_STOP](ELPH_SELFEN_BAND_STOP.md)
+
+

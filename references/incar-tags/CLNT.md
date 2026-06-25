@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CLNT
+
+
 CLNT = \[integer\] 
 
 |                   |     |     |
 |-------------------|-----|-----|
 | Default: **CLNT** | = 1 |     |
 
-Description: CLNT selects the type of the excited atoms in XAS
-calculations with [ICORELEVEL](ICORELEVEL.md)\>0.
+Description: CLNT selects the
+type of the excited atoms in XAS calculations with
+[ICORELEVEL](ICORELEVEL.md)\>0.
 
 ------------------------------------------------------------------------
 
@@ -28,7 +31,10 @@ and
 [BSE](../tutorials/Bethe-Salpeter_equation_for_core_excitations.md)
 calculations.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=CLNT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICORELEVEL](ICORELEVEL.md), [CLN](CLN.md),
 [CLL](CLL.md), [CLZ](CLZ.md)
 
@@ -36,3 +42,5 @@ calculations.
 tag](https://vasp.at/wiki/index.php/Special-Search/-CLNT-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Berry phases
+
+
 The polarization in a periodic system can be computed using the [berry
 phase formulation of the
 polarization](../theory/Berry_phases_and_finite_electric_fields.md)
@@ -24,3 +26,5 @@ piezoelectric
 tensor](../theory/Berry_phases_and_finite_electric_fields.md)
 respectively. These calculations can be automated inside VASP using
 [LCALCEPS](../incar-tags/LCALCEPS.md).
+
+

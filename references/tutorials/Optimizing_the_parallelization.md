@@ -2,28 +2,45 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Optimizing the parallelization
+
+
 To find the optimal
 [parallelization](../categories/Category-Parallelization.md)
 setup of a VASP calculation, it is necessary to run tests for each
 system, algorithm and computer architecture. Below, we offer general
 advice on how to optimize the parallelization.
 
+
 ## Contents
 
-- [1 Optimizing the parallelization](#Optimizing_the_parallelization)
-  - [1.1 Step 1: list of the relevant parallelization INCAR
-    tags](#Step_1:_list_of_the_relevant_parallelization_INCAR_tags)
-  - [1.2 Step 2: Dry run](#Step_2:_Dry_run)
-  - [1.3 Step 3: Test candidate
-    parallelization](#Step_3:_Test_candidate_parallelization)
-  - [1.4 Step 4: Use best performing
-    parallelization](#Step_4:_Use_best_performing_parallelization)
-- [2 Tips to parallelize electronic
-  minimization](#Tips_to_parallelize_electronic_minimization)
-- [3 Understanding the hardware](#Understanding_the_hardware)
-- [4 Related tags an articles](#Related_tags_an_articles)
 
-## Optimizing the parallelization
+- [1 Optimizing the
+  parallelization](#Optimizing_the_parallelization)
+  - [1.1 Step 1:
+    list of the relevant parallelization INCAR
+    tags](#Step_1:_list_of_the_relevant_parallelization_INCAR_tags)
+  - [1.2 Step 2:
+    Dry run](#Step_2:_Dry_run)
+  - [1.3 Step 3:
+    Test candidate
+    parallelization](#Step_3:_Test_candidate_parallelization)
+  - [1.4 Step 4:
+    Use best performing
+    parallelization](#Step_4:_Use_best_performing_parallelization)
+- [2 Tips to
+  parallelize electronic
+  minimization](#Tips_to_parallelize_electronic_minimization)
+- [3 Understanding
+  the hardware](#Understanding_the_hardware)
+- [4 Related tags
+  an articles](#Related_tags_an_articles)
+
+
+## Optimizing the parallelization\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Optimizing the parallelization">edit</a> \| (./index.php.md)\]
+
 For repetitive tasks, **a few iterations estimate the performance** of
 the full calculation very well. For example, run only a few electronic
 or ionic self-consistency steps (without reaching full convergence).
@@ -47,22 +64,30 @@ ranks. But it is often beneficial to add parallelization of the FFTs
 calculations ([IMAGES](../incar-tags/IMAGES.md)). Additionally, there are
 some parallelization options for specific algorithms in VASP, e.g.,
 [NOMEGAPAR](../incar-tags/NOMEGAPAR.md) for parallelization over
-imaginary frequency points in $GW$ and
-RPA calculations. In summary, **VASP parallelizes with**
+imaginary frequency points in $GW$ and RPA
+calculations. In summary, **VASP parallelizes with**
 
-$\text{total ranks} = \text{ranks parallelizing
-bands} \times \text{NCORE} \times \text{KPAR} \times \text{IMAGES}
-\times \text{other algorithm-dependent tags}.$
+$\text{total ranks} = \text{ranks parallelizing bands} \times
+\text{NCORE} \times \text{KPAR} \times \text{IMAGES} \times \text{other
+algorithm-dependent tags}.$
 
 To optimize the parallelization, follow this recipe:
 
-### Step 1: list of the relevant [parallelization INCAR tags](../categories/Category-Parallelization.md)
+### Step 1: list of the relevant [parallelization INCAR tags](../categories/Category-Parallelization.md)\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: list of the relevant parallelization INCAR tags">edit</a> \| (./index.php.md)\]
+
 **Create a list of the relevant [parallelization INCAR
 tags](../categories/Category-Parallelization.md)** for
 the specific calculation. **Read the documentation for each of the
 relevant tags** to understand the limits and reasonable choices.
 
-### Step 2: Dry run
+### Step 2: Dry run\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Dry run">edit</a> \| (./index.php.md)\]
+
 For any calculation involving [electronic
 minimization](../categories/Category-Electronic_minimization.md),
 it can be useful to first **run VASP with
@@ -81,17 +106,29 @@ and the total number of plane waves, are written to the
 [OUTCAR](../output-files/OUTCAR.md) file while using barely any
 computational time.
 
-### Step 3: Test candidate parallelization
+### Step 3: Test candidate parallelization\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Test candidate parallelization">edit</a> \| (./index.php.md)\]
+
 Combine the information from the documentation and the [dry
 run](../misc/Command-line_arguments.md)
 into a few possible candidates for a reasonable setup. **Run test
 calculations** on a subset of the production run e.g. by reducing the
 number of steps.
 
-### Step 4: Use best performing parallelization
+### Step 4: Use best performing parallelization\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Use best performing parallelization">edit</a> \| (./index.php.md)\]
+
 Run the production calculation with the best performing setup.
 
-## Tips to parallelize [electronic minimization](../categories/Category-Electronic_minimization.md)
+## Tips to parallelize [electronic minimization](../categories/Category-Electronic_minimization.md)\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Tips to parallelize electronic minimization">edit</a> \| (./index.php.md)\]
+
 For the common case of [electronic
 minimization](../categories/Category-Electronic_minimization.md)
 calculations, the following rules of thumb apply:
@@ -114,9 +151,10 @@ calculations, the following rules of thumb apply:
   [KPAR](../incar-tags/KPAR.md) up to the number of irreducible **k**
   points. Keep in mind that [KPAR](../incar-tags/KPAR.md) should factorize
   the number of **k** points. This is especially important to reduce MPI
-  communication between [NUMA domains](#Understanding_the_hardware) and
-  compute nodes. Read also [KPAR](../incar-tags/KPAR.md) for more
-  information.
+  communication between
+  <a href="#Understanding_the_hardware" class="mw-selflink-fragment">NUMA
+  domains</a> and compute nodes. Read also [KPAR](../incar-tags/KPAR.md) for
+  more information.
 
 |  |
 |----|
@@ -148,7 +186,11 @@ calculations, the following rules of thumb apply:
   VASP runs into separate calculations. The limit is dictated by the
   number of desired calculations.
 
-## Understanding the hardware
+## Understanding the hardware\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Understanding the hardware">edit</a> \| (./index.php.md)\]
+
 Optimizing the parallel execution depends greatly on the hardware
 architecture, network topology for MPI communication, and [compiler /
 library toolchain](../misc/Toolchains.md). Hence, it is a good
@@ -176,13 +218,17 @@ that use it most often. Understanding and managing NUMA domains is
 essential for optimizing memory placement and parallel performance in
 HPC.
 
-[![NUMA example Epyc
-7543](https://vasp.at/wiki/images/thumb/2/26/Numa_example.png/950px-Numa_example.png)](https://vasp.at/wiki/File:Numa_example.png)
-
-Fig. 1: Example output of `lstopo` command for an AMD Epyc 7543P
-processor. The processor consists of multiple hardware tiles that
-display as 4 distinct NUMA domains. Disclaimer: This is an example and
-not a general hardware recommentation.
+<figure class="mw-halign-none" typeof="mw:File/Thumb">
+<a href="/wiki/File:Numa_example.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/2/26/Numa_example.png/950px-Numa_example.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/2/26/Numa_example.png/1425px-Numa_example.png 1.5x, /wiki/images/2/26/Numa_example.png 2x"
+width="950" height="372" alt="NUMA example Epyc 7543" /></a>
+<figcaption>Fig. 1: Example output of <code>lstopo</code> command for an
+AMD Epyc 7543P processor. The processor consists of multiple hardware
+tiles that display as 4 distinct NUMA domains. Disclaimer: This is an
+example and not a general hardware recommentation.</figcaption>
+</figure>
 
 Fig. 1 displays the NUMA architecture of an AMD Epyc 7543P processor. In
 total this processor has 512 GB of system memory available. However,
@@ -246,8 +292,14 @@ nodes with this processor you have).
 For benchmarking, start with this settings. Then, try to change the
 parallelization tags and observe how performance changes.
 
-## Related tags an articles
+## Related tags an articles\[<a
+href="/wiki/index.php?title=Optimizing_the_parallelization&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags an articles">edit</a> \| (./index.php.md)\]
+
 [Parallelization](../categories/Category-Parallelization.md)
 
 [NCORE](../incar-tags/NCORE.md), [KPAR](../incar-tags/KPAR.md),
 [IMAGES](../incar-tags/IMAGES.md)
+
+

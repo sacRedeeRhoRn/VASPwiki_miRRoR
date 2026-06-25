@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # INIWAV
+
+
 INIWAV = 0 \| 1 
 
 |                     |     |     |
@@ -32,14 +34,19 @@ read" and "entering main loop", in large systems consider using the
 parallel random number generator
 [`RANDOM_GENERATOR`](RANDOM_GENERATOR.md)` = pcg_32`.
 
-|                                                |
-|------------------------------------------------|
+|  |
+|----|
 | **Tip:** Use `INIWAV`` = 1` whenever possible. |
 
 |  |
 |----|
 | **Mind:** The INIWAV tag is only used for jobs that start from scratch ([`ISTART`](ISTART.md)` = 0`) and has no meaning otherwise. |
 
-## Related tags and sections
+## Related tags and sections\[<a href="/wiki/index.php?title=INIWAV&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [ISTART](ISTART.md)
 [RANDOM_GENERATOR](RANDOM_GENERATOR.md)
+
+

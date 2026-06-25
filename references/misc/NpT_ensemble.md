@@ -2,24 +2,27 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NpT ensemble
-The NpT ensemble (isothermal-isobaric ensemble) is a [statistical
+
+
+The NpT ensemble
+(isothermal-isobaric ensemble) is a [statistical
 ensemble](../categories/Category-Ensembles.md) that is used to
 study material properties under the conditions of a constant particle
 number N, a pressure p fluctuating around an equilibrium value
-$\langle p \rangle$ and a temperature T
-fluctuating around an equilibrium value $\langle T
-\rangle$. This page describes how to sample the NpT ensemble
+$\langle p \rangle$ and a temperature T fluctuating
+around an equilibrium value $\langle T \rangle$. This page describes how to sample the NpT ensemble
 from a
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run.
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run.
 
 **Instructions for setting up an NpT ensemble**
 
 The Parinello-Rahman
-algorithm^([\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2))
+algorithm<sup>[\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2)</sup>
 is the method of choice when setting up an NpT
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-run. To use the Parinello-Rahman algorithm the [Langevin
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> run. To
+use the Parinello-Rahman algorithm the [Langevin
 thermostat](../tutorials/Langevin_thermostat.md) has to be
 adjusted for an NpT simulation by setting the
 [ISIF](../incar-tags/ISIF.md)=3 in the [INCAR](../input-files/INCAR.md) file.
@@ -43,10 +46,11 @@ lattice degrees of freedom.
 The additional tags in the column for the thermostat have to be set
 because the default values are zero resulting in a different ensemble.
 To use the NpT ensemble VASP has to be compiled with the precompiler
-flag [-Dtbdyn](../redirects/Precompiler_flags.md). A general
-guide for molecular-dynamics simulations can be found on the
-[molecular-dynamics](../redirects/Molecular_dynamics_calculations.md)
-page.
+flag <a href="/wiki/Precompiler_flags" class="mw-redirect"
+title="Precompiler flags">-Dtbdyn</a>. A general guide for
+molecular-dynamics simulations can be found on the
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">molecular-dynamics</a> page.
 
 *An example [INCAR](../input-files/INCAR.md) file for the NpT ensemble*
 
@@ -63,26 +67,42 @@ page.
 
 |  |
 |----|
-| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The [electronic minimization](../redirects/Electronic_minimization.md) or the [machine learning](../redirects/Machine-learned_force_fields.md) tags have to be added. |
+| **Mind:** This [INCAR](../input-files/INCAR.md) file only contains the parameters for the molecular-dynamics part. The <a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a> or the <a href="/wiki/Machine-learned_force_fields" class="mw-redirect"
+title="Machine-learned force fields">machine learning</a> tags have to be added. |
 
 |  |
 |----|
 | **Warning:** Calculations of systems with limited long-range order (e.g. liquids) may lead to irreversible deformations of the cell within this ensemble. For those systems one must use an [ICONST](../input-files/ICONST.md) file containing constraints for the Bravais lattice. |
 
-## Related tags and articles
-[Molecular-dynamics
-calculations](../redirects/Molecular_dynamics_calculations.md),
-[ISIF](../incar-tags/ISIF.md), [MDALGO](../incar-tags/MDALGO.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NpT_ensemble&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">Molecular-dynamics
+calculations</a>, [ISIF](../incar-tags/ISIF.md),
+[MDALGO](../incar-tags/MDALGO.md),
 [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md),
 [LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md),
 [PMASS](../incar-tags/PMASS.md),
 [Ensembles](../categories/Category-Ensembles.md),
 [ICONST](../input-files/ICONST.md)
 
-## References
-1.  [↑](#cite_ref-parrinello:prl:1980_1-0) [M. Parrinello and A. Rahman,
-    Phys. Rev. Lett. **45**, 1196
-    (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
-2.  [↑](#cite_ref-parrinello:jap:1981_2-0) [M. Parrinello and A.
-    Rahman, J. Appl. Phys. **52**, 7182
-    (1981).](https://doi.org/10.1063/1.328693)
+## References\[<a
+href="/wiki/index.php?title=NpT_ensemble&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-parrinello:prl:1980_1-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.45.1196"
+    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
+    Rev. Lett. <strong>45</strong>, 1196 (1980).</a>
+2.  [↑](#cite_ref-parrinello:jap:1981_2-0)
+    <a href="https://doi.org/10.1063/1.328693" class="external text"
+    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys.
+    <strong>52</strong>, 7182 (1981).</a>
+
+

@@ -2,31 +2,60 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Spin-orbit coupling in a Ni monolayer
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
 [NiO](NiO.md) \> [NiO
-LSDA+U](NiO_LSDA+U.md) \> Spin-orbit coupling in a Ni
-monolayer \> [Spin-orbit coupling in a Fe
+LSDA+U](NiO_LSDA+U.md) \>
+Spin-orbit coupling in a Ni
+monolayer \>
+[Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>[constraining
 local magnetic
 moments](Constraining_local_magnetic_moments.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Spin-orbit coupling (SOC) in a freestanding Ni monolayer.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     fcc Ni 100 surface
      3.53
        .50000   .50000   .00000
@@ -36,7 +65,11 @@ Spin-orbit coupling (SOC) in a freestanding Ni monolayer.
     Cartesian
        .00000   .00000   .00000
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM        = Ni (100) monolayer
     ISTART        = 0
     ENCUT         = 270.00
@@ -55,18 +88,26 @@ Spin-orbit coupling (SOC) in a freestanding Ni monolayer.
   setting [MAGMOM](../incar-tags/MAGMOM.md) = 1.0 0.0 0.0 in the
   [INCAR](../input-files/INCAR.md) file.
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     k-points
      0
     Monkhorst-Pack
     9 9 1
     0 0 0
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - The sample output for the total energy using out of plane
   magnetization is given in the [OSZICAR](../output-files/OSZICAR.md) file:
 
-&nbsp;
+<!-- -->
 
     ...
     DAV:  20    -0.371322930070E+01    0.15852E-03   -0.11632E-03   636   0.235E-01    0.225E-02
@@ -76,7 +117,7 @@ Spin-orbit coupling (SOC) in a freestanding Ni monolayer.
 - The sample output for the total energy using in plane magnetization
   looks like the following:
 
-&nbsp;
+<!-- -->
 
     ...
     DAV:  19    -0.371443443024E+01   -0.80757E-04   -0.35822E-03  1084   0.323E-01    0.119E-02
@@ -88,15 +129,27 @@ Spin-orbit coupling (SOC) in a freestanding Ni monolayer.
 
 $E_{\textrm{MAE}}=E(m_{\perp})-E(m_{\parallel})=1.2 \\ \textrm{meV}$
 
-## Download
-[4_4_SOI_Ni.tgz](https://vasp.at/wiki/images/9/98/4_4_SOI_Ni.tgz "4 4 SOI Ni.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Spin-orbit_coupling_in_a_Ni_monolayer&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-[Overview](../tutorials/Magnetism_-_Tutorial.md) \> [fcc Ni
+<a href="/wiki/images/9/98/4_4_SOI_Ni.tgz" class="internal"
+title="4 4 SOI Ni.tgz">4_4_SOI_Ni.tgz</a>
+
+
+[Overview](../tutorials/Magnetism_-_Tutorial.md) \>
+[fcc Ni
 (revisited)](https://vasp.at/wiki/index.php/Fcc_Ni_(revisited) "Fcc Ni (revisited)") \>
 [NiO](NiO.md) \> [NiO
-LSDA+U](NiO_LSDA+U.md) \> Spin-orbit coupling in a Ni
-monolayer \> [Spin-orbit coupling in a Fe
+LSDA+U](NiO_LSDA+U.md) \>
+Spin-orbit coupling in a Ni
+monolayer \>
+[Spin-orbit coupling in a Fe
 monolayer](Spin-orbit_coupling_in_a_Fe_monolayer.md) \>[constraining
 local magnetic
 moments](Constraining_local_magnetic_moments.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

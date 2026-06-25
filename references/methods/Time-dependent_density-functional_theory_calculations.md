@@ -2,69 +2,83 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Time-dependent density-functional theory calculations
+
+
 VASP offers a powerful module for performing time-dependent
 density-functional theory (TDDFT) or time-dependent Hartree-Fock (TDHF)
 calculations by solving the Casida equation . This approach can be used
 for obtaining the frequency-dependent dielectric function with the
 excitonic effects and can be based on the ground-state electronic
 structure in the DFT, hybrid-functional or even *GW* approximations. You
-can watch a lecture covering [TDDFT theory and
-calculations](https://youtu.be/arTPHW28qNM) on our YouTube channel.
+can watch a lecture covering
+<a href="https://youtu.be/arTPHW28qNM" class="external text"
+rel="nofollow">TDDFT theory and calculations</a> on our YouTube channel.
+
 
 ## Contents
 
-- [1 From TDDFT (or TDHF) to Casida's
-  equation](#From_TDDFT_(or_TDHF)_to_Casida's_equation)
-- [2 Solving Casida equation](#Solving_Casida_equation)
-- [3 Time-dependent Hartree-Fock](#Time-dependent_Hartree-Fock)
-- [4 Time-dependent DFT calculation](#Time-dependent_DFT_calculation)
-- [5 Calculations beyond Tamm-Dancoff
-  approximation](#Calculations_beyond_Tamm-Dancoff_approximation)
-- [6 Calculations at finite
-  wavevectors](#Calculations_at_finite_wavevectors)
-- [7 References](#References)
 
-## From TDDFT (or TDHF) to Casida's equation
+- [1 From TDDFT (or
+  TDHF) to Casida's
+  equation](#From_TDDFT_(or_TDHF)_to_Casida's_equation)
+- [2 Solving Casida
+  equation](#Solving_Casida_equation)
+- [3 Time-dependent
+  Hartree-Fock](#Time-dependent_Hartree-Fock)
+- [4 Time-dependent
+  DFT calculation](#Time-dependent_DFT_calculation)
+- [5 Calculations
+  beyond Tamm-Dancoff
+  approximation](#Calculations_beyond_Tamm-Dancoff_approximation)
+- [6 Calculations
+  at finite wavevectors](#Calculations_at_finite_wavevectors)
+- [7
+  References](#References)
+
+
+## From TDDFT (or TDHF) to Casida's equation\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: From TDDFT (or TDHF) to Casida&#39;s equation">edit</a> \| (./index.php.md) to Casida's equation")\]
+
 In time-dependent density functional theory the electrons follow a
 time-dependent Schrödinger equation
 
-$\mathrm i \frac{\partial}{\partial
-t}\left|\phi_i\[n(t)\]\rangle\right. = \left\[-\frac{\nabla^2}{2} +
-V_{\mathrm H}\[n(t)\] + V_{\mathrm{xc}}\[n(t)\] +
+$\mathrm i \frac{\partial}{\partial t}\left|\phi_i\[n(t)\]\rangle\right.
+= \left\[-\frac{\nabla^2}{2} + V_{\mathrm H}\[n(t)\] +
+V_{\mathrm{xc}}\[n(t)\] +
 V_\mathrm{ext}(t)\right\]\left|\phi_i\[n(t)\]\rangle\right.,$
 
 where all quantities are now dependent on a time-evolving density,
 $n(t)$. The external potential
-$V_\mathrm{ext}(t)$ now is explicitly
-dependent on time, and which is used to perturb the system away from the
-ground state. For time-dependent Hartree-Fock (TDHF) one would only need
-to replace the exchange correlation potential, $V_\mathrm{xc}$, with the Fock exchange term,
+$V_\mathrm{ext}(t)$ now is explicitly dependent on
+time, and which is used to perturb the system away from the ground
+state. For time-dependent Hartree-Fock (TDHF) one would only need to
+replace the exchange correlation potential, $V_\mathrm{xc}$, with the Fock exchange term,
 $V_\mathrm{x}$.
 
 From linear-response theory it is possible to evaluate the change in the
 ground-state density due to the external potential,
 
-$\chi(\mathbf 1,2) = \frac{\delta n(1)}{\delta
-V_\mathrm{ext}(2)},$
+$\chi(\mathbf 1,2) = \frac{\delta n(1)}{\delta V_\mathrm{ext}(2)},$
 
 or due to the total Kohn-Sham potential
 
-$\chi_0(\mathbf 1,2) = \frac{\delta n(1)}{\delta
-V_\mathrm{Ks}(2)}.$
+$\chi_0(\mathbf 1,2) = \frac{\delta n(1)}{\delta V_\mathrm{Ks}(2)}.$
 
 Both quantities are related via a Dyson equation. It is possible to show
 that
 
-$\frac{\delta V_\mathrm{KS}(1)}{\delta
-V_\mathrm{ext}(2)} = \delta(1,2) + \frac{\delta(t_1-t_2)}{|\mathbf
-r_1 - \mathbf r_2|} + f_\mathrm{xc}(1,2),$
+$\frac{\delta V_\mathrm{KS}(1)}{\delta V_\mathrm{ext}(2)} =
+\delta(1,2) + \frac{\delta(t_1-t_2)}{|\mathbf r_1 - \mathbf r_2|} +
+f_\mathrm{xc}(1,2),$
 
-with $f_\mathrm{xc}(1,2) = \frac{\delta
-V_\mathrm{xc}(1)}{\delta n(2)}$ being the
+with $f_\mathrm{xc}(1,2) =
+\frac{\delta V_\mathrm{xc}(1)}{\delta n(2)}$ being the
 exchange-correlation kernel. This quantity is dependent on the choice
 taken to the exchange-correlation energy functional. The application of
-a chain rule to $\chi(1,2)$ leads to a
-Dyson equation
+a chain rule to $\chi(1,2)$
+leads to a Dyson equation
 
 $\chi(1,2) = \chi_0(1,2) +
 \chi_0(1,3)\left\[\frac{\delta(t_3-t_4)}{|\mathbf r_3 - \mathbf
@@ -76,11 +90,12 @@ transitions from valence to conduction states at the same k-point. The
 latter choice comes from the fact that, when dealing with optical
 measurements (e.g. absorption), we deal with neutral excitations and the
 momentum of the absorbed photons is practically zero. Once all of this
-is taken into account, the equation for $\chi(1,2)$ is recast as an eigenvalue problem
+is taken into account, the equation for $\chi(1,2)$ is
+recast as an eigenvalue problem
 
-$\left( \begin{matrix} A & B \\ -B^\* & -A^\*
-\end{matrix} \right) \left( \begin{matrix} X \\ Y \end{matrix} \right) =
-\omega \left( \begin{matrix} X \\ Y \end{matrix} \right),$
+$\left( \begin{matrix} A & B \\ -B^\* & -A^\* \end{matrix} \right) \left(
+\begin{matrix} X \\ Y \end{matrix} \right) = \omega \left(
+\begin{matrix} X \\ Y \end{matrix} \right),$
 
 which is also known as the Casida equation. The A and B matrices are
 given by
@@ -92,9 +107,8 @@ cv'|f_\mathrm{xc}(1,2)|c'v\rangle,$
 
 while the B matrix is computed via
 
-$B_{vc}^{v'c'} = \langle vv'|\frac{1}{|\mathbf
-r_1-\mathbf r_2|}|cc'\rangle - \langle
-vv'|f_\mathrm{xc}(1,2)|c'c\rangle.$
+$B_{vc}^{v'c'} = \langle vv'|\frac{1}{|\mathbf r_1-\mathbf
+r_2|}|cc'\rangle - \langle vv'|f_\mathrm{xc}(1,2)|c'c\rangle.$
 
 The A matrix describes the resonant (excitations) and anti-resonant
 (de-excitation) transitions, while the B matrix deals with the coupling
@@ -104,10 +118,10 @@ non-Hermitian.
 This formalism is very similar to the [Bethe-Salpeter
 equation](../theory/Bethe-Salpeter_equation.md), only
 now instead of the exchange-correlation self-energy,
-$\Sigma_\mathrm{xc}$, and the screened
-interaction, $W$, it deals with the
-exchange-correlation potential, $V_\mathrm{xc}$, and with the exchange-correlation kernen,
-$f_\mathrm{xc}$.
+$\Sigma_\mathrm{xc}$, and the screened interaction,
+$W$, it deals with the exchange-correlation potential,
+$V_\mathrm{xc}$, and with the exchange-correlation
+kernen, $f_\mathrm{xc}$.
 
 Contrary to the [time-propagation
 algorithm](../tutorials/Time-evolution_algorithm.md),
@@ -119,17 +133,20 @@ eigenvectors of the Casida matrix, which can provide important
 information on the nature of the electron-hole pairs that are involved
 in the absorption process.
 
-## Solving Casida equation
+## Solving Casida equation\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Solving Casida equation">edit</a> \| (./index.php.md)\]
+
 The algorithm for solving the Casida equation can be selected by setting
 [ALGO](../incar-tags/ALGO.md) = TDHF. This approach is very similar to BSE
 but differs in the way the screening of the Coulomb potential is
 approximated. The TDHF approach uses the exchange-correlation kernel
 $f_{\rm xc}$, whereas BSE requires the
-$W(\omega \to 0)$ from a preceding *GW*
-calculation. Thus, in order to perform a TDHF calculation, one only
-needs to provide the ground-state orbitals
-([WAVECAR](../input-files/WAVECAR.md)) and the derivatives of the orbitals
-with respect to $k$
+$W(\omega \to 0)$ from a preceding *GW* calculation.
+Thus, in order to perform a TDHF calculation, one only needs to provide
+the ground-state orbitals ([WAVECAR](../input-files/WAVECAR.md)) and the
+derivatives of the orbitals with respect to $k$
 ([WAVEDER](../input-files/WAVEDER.md)).
 
 |  |
@@ -141,7 +158,11 @@ ground-state calculation, however, the TDHF does not need the preceding
 *GW* and can be performed with the DFT or hybrid-functional orbitals and
 energies.
 
-## Time-dependent Hartree-Fock
+## Time-dependent Hartree-Fock\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Time-dependent Hartree-Fock">edit</a> \| (./index.php.md)\]
+
 The TDHF calculations can be performed in two steps:
 
 1.  ground-state calculation
@@ -149,7 +170,7 @@ The TDHF calculations can be performed in two steps:
 
 For example, an optical absorption calculation of bulk Si can be
 performed using a dielectric-dependent hybrid-functional described in
-Refs.^([\[1\]](#cite_note-chen2018nonempirical-1)[\[2\]](#cite_note-cui2018doubly-2)[\[3\]](#cite_note-liu2019assessing-3)).
+Refs.<sup>[\[1\]](#cite_note-chen2018nonempirical-1)[\[2\]](#cite_note-cui2018doubly-2)[\[3\]](#cite_note-liu2019assessing-3)</sup>.
 
     SYSTEM    = Si
     ISMEAR    = 0 
@@ -187,7 +208,11 @@ exchange-correlation kernel is approximated by the density-density part
 only. This makes predictions for spin-polarized systems less accurate
 than for non-spin-polarized systems.
 
-## Time-dependent DFT calculation
+## Time-dependent DFT calculation\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Time-dependent DFT calculation">edit</a> \| (./index.php.md)\]
+
 The TDDFT calculation using the PBE exchange-correlation kernel can be
 performed by disabling the ladder diagrams
 [LADDER](../incar-tags/LADDER.md) = .FALSE., i.e., only the PBE
@@ -220,29 +245,51 @@ The calculated frequency-dependent dielectric function, transition
 energies and oscillator strength values are stored in the
 [vasprun.xml](../output-files/Vasprun.xml.md) file.
 
-## Calculations beyond Tamm-Dancoff approximation
-Calculations beyond Tamm-Dancoff approximation can be performed in the
-same manner as in the
-[BSE](../redirects/BSE_calculations.md).
+## Calculations beyond Tamm-Dancoff approximation\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculations beyond Tamm-Dancoff approximation">edit</a> \| (./index.php.md)\]
 
-## Calculations at finite wavevectors
+Calculations beyond Tamm-Dancoff approximation can be performed in the
+same manner as in the <a
+href="/wiki/BSE_calculations#Calculations_beyond_Tamm-Dancoff_approximation"
+class="mw-redirect" title="BSE calculations">BSE</a>.
+
+## Calculations at finite wavevectors\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculations at finite wavevectors">edit</a> \| (./index.php.md)\]
+
 Calculations at finite wavevectors can be performed in the same manner
 as in the
-[BSE](../redirects/BSE_calculations.md).
+<a href="/wiki/BSE_calculations#Calculations_at_finite_wavevectors"
+class="mw-redirect" title="BSE calculations">BSE</a>.
 
-## References
-1.  [↑](#cite_ref-chen2018nonempirical_1-0) [W. Chen, G. Miceli, G.M.
-    Rignanese, and A. Pasquarello, *Nonempirical dielectric-dependent
-    hybrid functional with range separation for semiconductors and
-    insulators*, Phys. Rev. Mater. **2**, 073803
-    (2018).](https://doi.org/10.1103/PhysRevMaterials.2.073803)
-2.  [↑](#cite_ref-cui2018doubly_2-0) [Z.H. Cui, Y.C. Wang, M.Y.
-    Zhang, X. Xu, and H. Jiang, *Doubly Screened Hybrid Functional: An
-    Accurate First-Principles Approach for Both Narrow- and Wide-Gap
-    Semiconductors* J. Phys. Chem. Lett., **9**, 2338-2345
-    (2018).](https://doi.org/10.1021/acs.jpclett.8b00919)
-3.  [↑](#cite_ref-liu2019assessing_3-0) [P. Liu, C. Franchini, M.
-    Marsman, and G. Kresse, *Assessing model-dielectric-dependent hybrid
-    functionals on the antiferromagnetic transition-metal monoxides MnO,
-    FeO, CoO, and NiO*, J. Phys.: Condens. Matter **32**, 015502
-    (2020).](https://doi.org/10.1088/1361-648x/ab4150)
+## References\[<a
+href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-chen2018nonempirical_1-0)
+    <a href="https://doi.org/10.1103/PhysRevMaterials.2.073803"
+    class="external text" rel="nofollow">W. Chen, G. Miceli, G.M. Rignanese,
+    and A. Pasquarello, <em>Nonempirical dielectric-dependent hybrid
+    functional with range separation for semiconductors and insulators</em>,
+    Phys. Rev. Mater. <strong>2</strong>, 073803 (2018).</a>
+2.  [↑](#cite_ref-cui2018doubly_2-0)
+    <a href="https://doi.org/10.1021/acs.jpclett.8b00919"
+    class="external text" rel="nofollow">Z.H. Cui, Y.C. Wang, M.Y. Zhang, X.
+    Xu, and H. Jiang, <em>Doubly Screened Hybrid Functional: An Accurate
+    First-Principles Approach for Both Narrow- and Wide-Gap
+    Semiconductors</em> J. Phys. Chem. Lett., <strong>9</strong>, 2338-2345
+    (2018).</a>
+3.  [↑](#cite_ref-liu2019assessing_3-0)
+    <a href="https://doi.org/10.1088/1361-648x/ab4150" class="external text"
+    rel="nofollow">P. Liu, C. Franchini, M. Marsman, and G. Kresse,
+    <em>Assessing model-dielectric-dependent hybrid functionals on the
+    antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and
+    NiO</em>, J. Phys.: Condens. Matter <strong>32</strong>, 015502
+    (2020).</a>
+
+

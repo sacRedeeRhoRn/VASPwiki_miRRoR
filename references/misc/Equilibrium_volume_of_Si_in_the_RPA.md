@@ -2,34 +2,55 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Equilibrium volume of Si in the RPA
+
+
+
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
 [bandgap of Si in
-GW](Bandgap_of_Si_in_GW.md) \> [bandstructure
-of Si in GW
+GW](Bandgap_of_Si_in_GW.md) \>
+[bandstructure of Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \> Equilibrium
-volume of Si in the RPA \> [List of
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \>
+Equilibrium volume of Si in the
+RPA \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-  - [1.1 Step 1: DFT groundstate calculation with a “dense” mesh of
-    k-points](#Step_1:_DFT_groundstate_calculation_with_a_“dense”_mesh_of_k-points)
-  - [1.2 Step 2: Compute the Hartree-Fock energy using the DFT
-    orbitals](#Step_2:_Compute_the_Hartree-Fock_energy_using_the_DFT_orbitals)
-  - [1.3 Step 3: DFT groundstate calculation with a “coarse” mesh of
-    k-points](#Step_3:_DFT_groundstate_calculation_with_a_“coarse”_mesh_of_k-points)
-  - [1.4 Step 4: Obtain DFT "virtual" orbitals (empty
-    states)](#Step_4:_Obtain_DFT_%22virtual%22_orbitals_(empty_states))
-  - [1.5 Step 5: calculate the RPA correlation energy
-    (ACFDT)](#Step_5:_calculate_the_RPA_correlation_energy_(ACFDT))
-- [2 Running this example](#Running_this_example)
-- [3 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+  - [1.1 Step 1:
+    DFT groundstate calculation with a “dense” mesh of
+    k-points](#Step_1:_DFT_groundstate_calculation_with_a_“dense”_mesh_of_k-points)
+  - [1.2 Step 2:
+    Compute the Hartree-Fock energy using the DFT
+    orbitals](#Step_2:_Compute_the_Hartree-Fock_energy_using_the_DFT_orbitals)
+  - [1.3 Step 3:
+    DFT groundstate calculation with a “coarse” mesh of
+    k-points](#Step_3:_DFT_groundstate_calculation_with_a_“coarse”_mesh_of_k-points)
+  - [1.4 Step 4:
+    Obtain DFT "virtual" orbitals (empty
+    states)](#Step_4:_Obtain_DFT_%22virtual%22_orbitals_(empty_states))
+  - [1.5 Step 5:
+    calculate the RPA correlation energy
+    (ACFDT)](#Step_5:_calculate_the_RPA_correlation_energy_(ACFDT))
+- [2 Running this
+  example](#Running_this_example)
+- [3
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 In this example you will calculate the equilibrium lattice constant of
 Si in the RPA (ACFDT).
 
@@ -61,10 +82,14 @@ performed by the script *doall.sh* (see below):
 This script will perform the following calculations for a range of
 different lattice constants:
 
-### Step 1: DFT groundstate calculation with a “dense” mesh of k-points
+### Step 1: DFT groundstate calculation with a “dense” mesh of k-points\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: DFT groundstate calculation with a “dense” mesh of k-points">edit</a> \| (./index.php.md)\]
+
 - The following [INCAR](../input-files/INCAR.md) file is used (INCAR.DFT):
 
-&nbsp;
+<!-- -->
 
     ISMEAR = 0 ; SIGMA = 0.05
     EDIFF = 1E-8
@@ -72,7 +97,7 @@ different lattice constants:
 - The following [KPOINTS](../input-files/KPOINTS.md) file is used
   (KPOINTS.12):
 
-&nbsp;
+<!-- -->
 
     12x12x12
      0
@@ -82,15 +107,19 @@ different lattice constants:
 
   
 
-### Step 2: Compute the Hartree-Fock energy using the DFT orbitals
+### Step 2: Compute the Hartree-Fock energy using the DFT orbitals\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Compute the Hartree-Fock energy using the DFT orbitals">edit</a> \| (./index.php.md)\]
+
 - To Compute the Hartree-Fock energy using DFT orbitals we need the
   ([WAVECAR](../input-files/WAVECAR.md)) of Step 1.
 
-&nbsp;
+<!-- -->
 
 - The [INCAR](../input-files/INCAR.md) file INCAR.EXX is used in this step:
 
-&nbsp;
+<!-- -->
 
     ALGO = EIGENVAL ; NELM = 1
     LWAVE = .FALSE.
@@ -104,14 +133,18 @@ different lattice constants:
 - [NKRED](../incar-tags/NKRED.md)=2 is used for the downsample the k-space
   representation of the Fock-potential to save time.
 
-&nbsp;
+<!-- -->
 
 - Using [NBANDS](../incar-tags/NBANDS.md)=4 only occupied states are
   considered to save time.
 
   
 
-### Step 3: DFT groundstate calculation with a “coarse” mesh of k-points
+### Step 3: DFT groundstate calculation with a “coarse” mesh of k-points\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: DFT groundstate calculation with a “coarse” mesh of k-points">edit</a> \| (./index.php.md)\]
+
 - Perform a DFT groundstate calculation with a “coarse” mesh of
   k-points.
 
@@ -120,7 +153,7 @@ calculation.
 
 - The following [INCAR](../input-files/INCAR.md) file is used (INCAR.DFT):
 
-&nbsp;
+<!-- -->
 
     ISMEAR = 0 ; SIGMA = 0.05
     EDIFF = 1E-8
@@ -128,7 +161,7 @@ calculation.
 - The following coarse [KPOINTS](../input-files/KPOINTS.md) file is used
   (KPOINTS.6):
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -138,15 +171,19 @@ calculation.
 
   
 
-### Step 4: Obtain DFT "virtual" orbitals (empty states)
+### Step 4: Obtain DFT "virtual" orbitals (empty states)\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Obtain DFT &quot;virtual&quot; orbitals (empty states)">edit</a> \| (./index.php.md)")\]
+
 - Obtain DFT "virtual" orbitals (empty states).
 
-&nbsp;
+<!-- -->
 
 - The following [INCAR](../input-files/INCAR.md) file is used in this step
   (INCAR.DIAG):
 
-&nbsp;
+<!-- -->
 
     ALGO = Exact
     NBANDS = 64
@@ -168,11 +205,15 @@ calculation.
 
   
 
-### Step 5: calculate the RPA correlation energy (ACFDT)
+### Step 5: calculate the RPA correlation energy (ACFDT)\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: calculate the RPA correlation energy (ACFDT)">edit</a> \| (./index.php.md)")\]
+
 - The following [INCAR](../input-files/INCAR.md) file is used in this step
   (INCAR.ACFDT):
 
-&nbsp;
+<!-- -->
 
     ALGO = ACFDT
     NBANDS = 64
@@ -180,7 +221,7 @@ calculation.
 
 - In OUTCAR.ACFDT.X.X one finds the RPA correlation energy, e.g.:
 
-&nbsp;
+<!-- -->
 
             cutoff energy      smooth cutoff    RPA   correlation   Hartree contr. to MP2
      ---------------------------------------------------------------------------------
@@ -198,14 +239,14 @@ calculation.
 - Take the “converged value”, in this case: *EC(RPA) = -10.9079580568*eV
   (an approximate “infinite basis set” limit).
 
-&nbsp;
+<!-- -->
 
 - This calculations needs the orbitals
   ([WAVECAR](../input-files/WAVECAR.md) file) and the derivative of the
   orbitals w.r.t. the Bloch wavevectors
   ([WAVEDER](../input-files/WAVEDER.md) file) written in Step 4.
 
-&nbsp;
+<!-- -->
 
 - The RPA total energy is calculated as the, *E(RPA)=EC(RPA)+EXX*, the
   sum of the RPA correlation energy of step 5 *EC(RPA)* and the Hartree
@@ -216,7 +257,11 @@ file (there are two spaces between free and energy).
 
   
 
-## Running this example
+## Running this example\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Running this example">edit</a> \| (./index.php.md)\]
+
 The following bash-script `doall.sh` will run through all of the
 aforementioned calculational steps (step 1-5) for a range of different
 lattice constants (*a=5.1-5.8* Å in steps of *0.1* Å)
@@ -312,26 +357,45 @@ To execute the aforementions script:
   the total energy vs. lattice-constant curves for DFT and RPA by means
   of:
 
-&nbsp;
+<!-- -->
 
     ./plotall.sh
 
-[![](https://vasp.at/wiki/images/thumb/8/8c/Fig_ACFDT_1_a.png/408px-Fig_ACFDT_1_a.png)](https://vasp.at/wiki/File:Fig_ACFDT_1_a.png)
+<a href="/wiki/File:Fig_ACFDT_1_a.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/8c/Fig_ACFDT_1_a.png/408px-Fig_ACFDT_1_a.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/8/8c/Fig_ACFDT_1_a.png/612px-Fig_ACFDT_1_a.png 1.5x, /wiki/images/thumb/8/8c/Fig_ACFDT_1_a.png/816px-Fig_ACFDT_1_a.png 2x"
+width="408" height="248" /></a>
 
-[![](https://vasp.at/wiki/images/thumb/9/9c/Fig_ACFDT_1_b.png/400px-Fig_ACFDT_1_b.png)](https://vasp.at/wiki/File:Fig_ACFDT_1_b.png)
+<a href="/wiki/File:Fig_ACFDT_1_b.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/9/9c/Fig_ACFDT_1_b.png/400px-Fig_ACFDT_1_b.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/9/9c/Fig_ACFDT_1_b.png/600px-Fig_ACFDT_1_b.png 1.5x, /wiki/images/thumb/9/9c/Fig_ACFDT_1_b.png/800px-Fig_ACFDT_1_b.png 2x"
+width="400" height="240" /></a>
 
 ------------------------------------------------------------------------
 
-## Download
-[Si_ACFDT_vol.tgz](https://vasp.at/wiki/images/e/eb/Si_ACFDT_vol.tgz "Si ACFDT vol.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Equilibrium_volume_of_Si_in_the_RPA&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/e/eb/Si_ACFDT_vol.tgz" class="internal"
+title="Si ACFDT vol.tgz">Si_ACFDT_vol.tgz</a>
+
 
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
 [bandgap of Si in
-GW](Bandgap_of_Si_in_GW.md) \> [bandstructure
-of Si in GW
+GW](Bandgap_of_Si_in_GW.md) \>
+[bandstructure of Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \> Equilibrium
-volume of Si in the RPA \> [List of
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \>
+Equilibrium volume of Si in the
+RPA \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

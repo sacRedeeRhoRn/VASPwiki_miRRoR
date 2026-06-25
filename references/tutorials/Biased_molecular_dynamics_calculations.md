@@ -2,20 +2,41 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Biased molecular dynamics calculations
+
+
+
 ## Contents
 
-- [1 How to](#How_to)
-  - [1.1 Available potentials](#Available_potentials)
-    - [1.1.1 Harmonic potentials](#Harmonic_potentials)
-    - [1.1.2 Step function](#Step_function)
-    - [1.1.3 Gaussian potential](#Gaussian_potential)
-  - [1.2 Output](#Output)
-- [2 Examples of usage](#Examples_of_usage)
-- [3 Related methods in VASP](#Related_methods_in_VASP)
-- [4 Related tags and articles](#Related_tags_and_articles)
-- [5 References](#References)
 
-## How to
+- [1 How
+  to](#How_to)
+  - [1.1 Available
+    potentials](#Available_potentials)
+    - [1.1.1
+      Harmonic
+      potentials](#Harmonic_potentials)
+    - [1.1.2 Step
+      function](#Step_function)
+    - [1.1.3
+      Gaussian
+      potential](#Gaussian_potential)
+  - [1.2
+    Output](#Output)
+- [2 Examples of
+  usage](#Examples_of_usage)
+- [3 Related
+  methods in VASP](#Related_methods_in_VASP)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+- [5
+  References](#References)
+
+
+## How to\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
 - First one needs to setup a [standard molecular
   dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
   run. The bias potentials are supported in both the
@@ -35,7 +56,7 @@
   [ICONST](../input-files/ICONST.md) file. The type of bias potential is
   also set in this file. The format of this file follows this layout:
 
-&nbsp;
+<!-- -->
 
     flag item(1) ... item(N) status
 
@@ -61,16 +82,31 @@ description of the full capabilities of the geometric parameters.
 | Step function | 4 | [FBIAS_A](../incar-tags/FBIAS_A.md), [FBIAS_D](../incar-tags/FBIAS_D.md), and [FBIAS_R0](../incar-tags/FBIAS_R0.md) |
 | Gaussian potential | 5 | parameters set in [PENALTYPOT](../input-files/PENALTYPOT.md) file |
 
-### Available potentials
-[![](https://vasp.at/wiki/images/thumb/4/43/Bias_potentials.png/300px-Bias_potentials.png)](https://vasp.at/wiki/File:Bias_potentials.png)
+### Available potentials\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Available potentials">edit</a> \| (./index.php.md)\]
 
-Fig.1) Graphical representation of (a) harmonic, (b) Fermi
-function-shaped, and (c) and Gauss function-shaped bias potentials.
+<figure class="mw-default-size" typeof="mw:File/Thumb">
+<a href="/wiki/File:Bias_potentials.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/43/Bias_potentials.png/300px-Bias_potentials.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/4/43/Bias_potentials.png/450px-Bias_potentials.png 1.5x, /wiki/images/thumb/4/43/Bias_potentials.png/600px-Bias_potentials.png 2x"
+width="300" height="232" /></a>
+<figcaption>Fig.1) Graphical representation of (a) harmonic, (b) Fermi
+function-shaped, and (c) and Gauss function-shaped bias
+potentials.</figcaption>
+</figure>
 
 In the following details are given on how to control the available bias
 potentials in VASP that are plotted in Fig.1.
 
-#### Harmonic potentials
+#### Harmonic potentials\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Harmonic potentials">edit</a> \| (./index.php.md)\]
+
 A sum of Harmonic potentials (curve (a) in Fig.1)
 
 $\tilde{V}(\xi_1,\dots,\xi_{M_8}) =
@@ -81,13 +117,13 @@ where the sum runs over all ($M_8$)
 coordinates the potential acts upon. The potential is chosen in the
 [ICONST](../input-files/ICONST.md) file by setting the `status` to 8. The
 parameters of the potential are the force constant
-$\kappa_{\mu}$
-([SPRING_K](../incar-tags/SPRING_K.md)) and the minimum or the potential
-$\xi_{0\mu}$
+$\kappa_{\mu}$ ([SPRING_K](../incar-tags/SPRING_K.md))
+and the minimum or the potential $\xi_{0\mu}$
 [SPRING_R0](../incar-tags/SPRING_R0.md). These must be set in the
 [INCAR](../input-files/INCAR.md) file. Optionally, it is possible to change
-the value of $\xi_{0\mu}$ every MD step
-at a constant rate defined via the [INCAR](../input-files/INCAR.md) tag
+the value of $\xi_{0\mu}$
+every MD step at a constant rate defined via the
+[INCAR](../input-files/INCAR.md) tag
 [SPRING_V0](../incar-tags/SPRING_V0.md).
 
 |  |
@@ -95,12 +131,17 @@ at a constant rate defined via the [INCAR](../input-files/INCAR.md) tag
 | **Mind:** The number of items defined via [SPRING_K](../incar-tags/SPRING_K.md), [SPRING_R0](../incar-tags/SPRING_R0.md), and [SPRING_V0](../incar-tags/SPRING_V0.md) must be equal to $M_8$. Otherwise, the calculation terminates with an error message. |
 
 This form of bias potential is employed in several simulation protocols,
-such as the umbrella sampling^([\[1\]](#cite_note-torrie:jcp:1977-1)),
+such as the umbrella
+sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>,
 umbrella integration, or steered MD, and is useful also in cases where
-the $\xi_{\mu}$ values need to be
-restrained.
+the $\xi_{\mu}$
+values need to be restrained.
 
-#### Step function
+#### Step function\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step function">edit</a> \| (./index.php.md)\]
+
 A sum of Fermi-like step functions (curve (b) in Fig.1)
 
 $\tilde{V}(\xi_1,\dots,\xi_{M_4}) =
@@ -111,11 +152,11 @@ where the sum runs over all ($M_4$)
 coordinates the potential acts upon. The potential is chosen in the
 [ICONST](../input-files/ICONST.md) file by setting the `status` to 4. The
 parameters of the potential are the height of the step
-($A_{\mu}$ set by
-[FBIAS_A](../incar-tags/FBIAS_A.md)), the slope around the point
-$\xi_{0\mu}$ ($D_{\mu}$ set by [FBIAS_D](../incar-tags/FBIAS_D.md)), and the
-position of the step ($\xi_{0\mu}$ set
-by [FBIAS_R0](../incar-tags/FBIAS_R0.md)). These must be set in the
+($A_{\mu}$ set by [FBIAS_A](../incar-tags/FBIAS_A.md)),
+the slope around the point $\xi_{0\mu}$
+($D_{\mu}$ set by [FBIAS_D](../incar-tags/FBIAS_D.md)),
+and the position of the step ($\xi_{0\mu}$
+set by [FBIAS_R0](../incar-tags/FBIAS_R0.md)). These must be set in the
 [INCAR](../input-files/INCAR.md) file.
 
 |  |
@@ -123,9 +164,14 @@ by [FBIAS_R0](../incar-tags/FBIAS_R0.md)). These must be set in the
 | **Mind:** The number of items defined via [FBIAS_A](../incar-tags/FBIAS_A.md), [FBIAS_D](../incar-tags/FBIAS_D.md), and [FBIAS_R0](../incar-tags/FBIAS_R0.md) must be equal to $M_4$. Otherwise, the calculation terminates with an error message. |
 
 This form of potential is suitable especially for imposing restrictions
-on the upper (or lower) limit of the value of $\xi$.
+on the upper (or lower) limit of the value of
+$\xi$.
 
-#### Gaussian potential
+#### Gaussian potential\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Gaussian potential">edit</a> \| (./index.php.md)\]
+
 A sum of Gauss functions (curve (b) in Fig.1)
 
 $\tilde{V}(\xi_1,\dots,\xi_{M}) =
@@ -133,12 +179,12 @@ $\tilde{V}(\xi_1,\dots,\xi_{M}) =
 \[-\frac{\sum_{\mu=1}^{M_5}(\xi_{\mu}(q)-\xi_{0\nu,\mu})^2}{2w_{\nu}^2}
 \right \], \\$
 
-where $N_5$ is the number of Gaussian
-functions and $M_5$ is the number of
-coordinates the potential acts upon. The potential is chosen in the
-[ICONST](../input-files/ICONST.md) file by setting the `status` to 5. The
-parameters of the potentials, $h_{\nu}$, $w_{\nu}$, and
-$\xi_{0\nu,\mu}$ are defined in the
+where $N_5$ is the
+number of Gaussian functions and $M_5$ is the
+number of coordinates the potential acts upon. The potential is chosen
+in the [ICONST](../input-files/ICONST.md) file by setting the `status` to
+5. The parameters of the potentials, $h_{\nu}$,
+$w_{\nu}$, and $\xi_{0\nu,\mu}$ are defined in the
 [PENALTYPOT](../input-files/PENALTYPOT.md) file.
 
 This type of bias potential is primarily intended for use in
@@ -146,16 +192,25 @@ metadynamics, but since Gaussians can be used as basis functions for
 more general shapes, they can also be used to prepare various atypically
 shaped bias potentials.
 
-### Output
+### Output\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The values of all collective variables defined in the
 [ICONST](../input-files/ICONST.md) file for each MD step are listed in the
 [REPORT](../output-files/REPORT.md) file. Check the lines after the string
 `Metadynamics`.
 
-## Examples of usage
+## Examples of usage\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Examples of usage">edit</a> \| (./index.php.md)\]
+
 Let us consider the nucleophile substitution reaction of
-CH$_3$Cl with Cl$^-$. The reactant is a weak van-der-Waals complex. The
-corresponding [POSCAR](../input-files/POSCAR.md) file reads
+CH$_3$Cl with Cl$^-$. The
+reactant is a weak van-der-Waals complex. The corresponding
+[POSCAR](../input-files/POSCAR.md) file reads
 
     vdW complex CH3Cl...Cl 
     1.00000000000000
@@ -172,13 +227,14 @@ corresponding [POSCAR](../input-files/POSCAR.md) file reads
     4.32824726  8.75151396  7.80743202
     6.84157897  6.18713289  4.46842049
 
-Due to the weak interactions between CH$_3$Cl and Cl$^-$, the complex can
-collapse at high temperatures. This can be avoided by setting an upper
-bound for the length of the non-bonding Cl...C interactions. This can be
-conveniently achieved by using a Fermi-like step-shaped bias potential.
-To this end, we need to define the Cl...C distance, i.e., the distance
-between the atoms 1 and 5, as a coordinate with status 4 in the
-[ICONST](../input-files/ICONST.md) file:
+Due to the weak interactions between CH$_3$Cl and
+Cl$^-$, the complex can collapse at high temperatures.
+This can be avoided by setting an upper bound for the length of the
+non-bonding Cl...C interactions. This can be conveniently achieved by
+using a Fermi-like step-shaped bias potential. To this end, we need to
+define the Cl...C distance, i.e., the distance between the atoms 1 and
+5, as a coordinate with status 4 in the [ICONST](../input-files/ICONST.md)
+file:
 
     R 1 5 4   
 
@@ -201,31 +257,36 @@ bias potential parameters [FBIAS_A](../incar-tags/FBIAS_A.md),
     FBIAS_R0 = 3.5
 
 Since the bias potential acts only on one internal coordinate
-($M_4=1$), we need to provide only one
-number for each of the tags. The chosen bias potential parameters ensure
-that repulsive bias forces steeply increase when the C...Cl distance is
-increased beyond about $3.2 \AA$. This
-causes a shortening of the distance in the next MD step. Notice that the
-bias force is essentially negligible for distances below
-$3 \AA$. A careful adjustment of
+($M_4=1$), we need to provide only one number for each of
+the tags. The chosen bias potential parameters ensure that repulsive
+bias forces steeply increase when the C...Cl distance is increased
+beyond about $3.2 \AA$.
+This causes a shortening of the distance in the next MD step. Notice
+that the bias force is essentially negligible for distances below
+$3
+\AA$. A careful adjustment of
 [FBIAS_A](../incar-tags/FBIAS_A.md) and
 [FBIAS_D](../incar-tags/FBIAS_D.md) is needed to ensure that (i) the bias
 force is large enough to effectively limit the value of
 $\xi$, and (ii) the interval of
-$\xi$ values for which the bias forces
-are significant is broad enough to avoid overcoming via random
-fluctuations. A suitable setting can be found by noting that the maximal
-bias force of $\frac{D\\A}{4\xi_0}$ is
-exerted on the system at the point $\xi = \xi_{0}$. This can be seen by inspecting the analytical expression for
-the potential.
+$\xi$ values for which the bias forces are significant
+is broad enough to avoid overcoming via random fluctuations. A suitable
+setting can be found by noting that the maximal bias force of
+$\frac{D\\A}{4\xi_0}$ is exerted on the system at the
+point $\xi = \xi_{0}$. This can be seen by inspecting the analytical
+expression for the potential.
 
-## Related methods in VASP
+## Related methods in VASP\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Related methods in VASP">edit</a> \| (./index.php.md)\]
+
 - [Metadynamics](../theory/Metadynamics.md): In contrast to the
   methods discussed on this page metadynamics continuously updates the
   bias potential of the system to push it into unvisited parts of phase
   space.
 
-&nbsp;
+<!-- -->
 
 - [Interface pinning](../theory/Interface_pinning.md): This
   employs a bias potential to pin the state of an interface between a
@@ -233,7 +294,11 @@ the potential.
   [INCAR](../input-files/INCAR.md) tags than the bias potentials presented
   on this page.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md),
 [PENALTYPOT](../input-files/PENALTYPOT.md),
 [HILLS_BIN](../incar-tags/HILLS_BIN.md),
@@ -247,7 +312,15 @@ the potential.
 [Biased molecular
 dynamics](../theory/Biased_molecular_dynamics.md)
 
-## References
-1.  [↑](#cite_ref-torrie:jcp:1977_1-0) [G. M. Torrie and J. P.
-    Valleau, J. Comp. Phys. **23**, 187
-    (1977).](http://doi.org/10.1016/0021-9991(77)90121-8)
+## References\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-torrie:jcp:1977_1-0)
+    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
+    class="external text" rel="nofollow">G. M. Torrie and J. P. Valleau, J.
+    Comp. Phys. <strong>23</strong>, 187 (1977).</a>
+
+

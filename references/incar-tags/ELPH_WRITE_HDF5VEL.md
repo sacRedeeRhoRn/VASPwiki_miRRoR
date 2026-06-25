@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_WRITE_HDF5VEL
-ELPH_WRITE_HDF5VEL = \[logical\]  
+
+
+ELPH_WRITE_HDF5VEL =
+\[logical\]  
 Default: **ELPH_WRITE_HDF5VEL** = .FALSE. 
 
 Description: If set, writes the electron group velocities to the
 [vaspout.h5](../output-files/Vaspout.h5.md) file.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -28,6 +31,12 @@ number of bands is the one set by
 be different from [NBANDS](NBANDS.md). If both are set, both
 outputs are written.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_WRITE_HDF5VEL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_WRITE_TEXTVEL](ELPH_WRITE_TEXTVEL.md)
+
+

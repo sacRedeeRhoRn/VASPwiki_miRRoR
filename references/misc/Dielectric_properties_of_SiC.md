@@ -2,37 +2,69 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Dielectric properties of SiC
+
+
+
 [Overview](../tutorials/Optical_properties_and_dielectric_response_-_Tutorial.md) \>
-dielectric properties of SiC \> [dielectric properties of
-Si](Dielectric_properties_of_Si.md)  \>
-[Ionic contributions to the frequency dependent dielectric function of
+dielectric properties of
+SiC \> [dielectric
+properties of
+Si](Dielectric_properties_of_Si.md)
+ \> [Ionic contributions to
+the frequency dependent dielectric function of
 NaCl](Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Static dielectric properties](#Static_dielectric_properties)
-  - [2.1 Density functional perturbation
-    theory](#Density_functional_perturbation_theory)
-  - [2.2 Response to finite electric
-    fields](#Response_to_finite_electric_fields)
-  - [2.3 Ionic contributions to the static dielectric
-    properties](#Ionic_contributions_to_the_static_dielectric_properties)
-- [3 Frequency dependent dielectric
-  response](#Frequency_dependent_dielectric_response)
-  - [3.1 The independent-particle
-    picture](#The_independent-particle_picture)
-  - [3.2 Including local field effects](#Including_local_field_effects)
-- [4 References](#References)
-- [5 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2 Static
+  dielectric properties](#Static_dielectric_properties)
+  - [2.1 Density
+    functional perturbation
+    theory](#Density_functional_perturbation_theory)
+  - [2.2 Response
+    to finite electric
+    fields](#Response_to_finite_electric_fields)
+  - [2.3 Ionic
+    contributions to the static dielectric
+    properties](#Ionic_contributions_to_the_static_dielectric_properties)
+- [3 Frequency
+  dependent dielectric
+  response](#Frequency_dependent_dielectric_response)
+  - [3.1 The
+    independent-particle
+    picture](#The_independent-particle_picture)
+  - [3.2 Including
+    local field effects](#Including_local_field_effects)
+- [4
+  References](#References)
+- [5
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the static and frequency dependent dielectric properties
 of SiC.
 
-## Static dielectric properties
-### Density functional perturbation theory
+## Static dielectric properties\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Static dielectric properties">edit</a> \| (./index.php.md)\]
+
+### Density functional perturbation theory\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Density functional perturbation theory">edit</a> \| (./index.php.md)\]
+
 Let us start with the calculation of the static dielectric properties.
 The most convenient way to determine the Born effective charges,
 dielectric-, piezoelectric tensors is by means of density functional
@@ -40,7 +72,7 @@ perturbation theory ([LEPSILON](../incar-tags/LEPSILON.md)=*.TRUE.*).
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.LEPSILON)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -67,7 +99,7 @@ perturbation theory ([LEPSILON](../incar-tags/LEPSILON.md)=*.TRUE.*).
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.8)
 
-&nbsp;
+<!-- -->
 
     8x8x8
      0
@@ -77,7 +109,7 @@ perturbation theory ([LEPSILON](../incar-tags/LEPSILON.md)=*.TRUE.*).
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     system SiC
     4.35
@@ -89,7 +121,12 @@ perturbation theory ([LEPSILON](../incar-tags/LEPSILON.md)=*.TRUE.*).
     0.00 0.00 0.00 
     0.25 0.25 0.25
 
-[![](https://vasp.at/wiki/images/thumb/f/f2/Fig_dielectric_properties_SiC_1.png/300px-Fig_dielectric_properties_SiC_1.png)](https://vasp.at/wiki/File:Fig_dielectric_properties_SiC_1.png)
+<a href="/wiki/File:Fig_dielectric_properties_SiC_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/f/f2/Fig_dielectric_properties_SiC_1.png/300px-Fig_dielectric_properties_SiC_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/f/f2/Fig_dielectric_properties_SiC_1.png/450px-Fig_dielectric_properties_SiC_1.png 1.5x, /wiki/images/f/f2/Fig_dielectric_properties_SiC_1.png 2x"
+width="300" height="328" /></a>
 
 - The [LRPA](../incar-tags/LRPA.md)-tag
 
@@ -139,9 +176,10 @@ charges in the RPA tend to be nonsensical.
 - The [LPEAD](../incar-tags/LPEAD.md)-tag
 
 As an alternative to solving a linear Sternheimer equation (Eq. 32 of
-^([\[1\]](#cite_note-gajdos:prb:06-1))), one may compute
-$| \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}
-\rangle$ from finite differences by specifying
+<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>),
+one may compute $| \nabla_{\mathbf{k}}
+\tilde{u}_{n\mathbf{k}} \rangle$ from finite
+differences by specifying
 
     LPEAD=.TRUE.
 
@@ -149,9 +187,10 @@ $| \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}
 in the [INCAR](../input-files/INCAR.md) file. The derivative of the
 cell-periodic part of the wave function w.r.t. the Bloch vector is then
 computed by means of a fourth-order finite difference stencil, in the
-spirit of Eqs. 96 and 97 of ^([\[2\]](#cite_note-nunes:prb:01-2)). The
-results of the calculation of static dielectric properties by means of
-[LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. tend to converge more
+spirit of Eqs. 96 and 97 of
+<sup>[\[2\]](#cite_note-nunes:prb:01-2)</sup>.
+The results of the calculation of static dielectric properties by means
+of [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. tend to converge more
 rapidly w.r.t. **k**-point sampling with
 [LPEAD](../incar-tags/LPEAD.md)=.TRUE.
 
@@ -168,14 +207,18 @@ Rerun the example with
 
 This will allow for a clean comparison with the next topic.
 
-### Response to finite electric fields
+### Response to finite electric fields\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Response to finite electric fields">edit</a> \| (./index.php.md)\]
+
 The second way one may compute the static dielectric properties is from
 [self-consistent response of the system to a finite electric
-field](../theory/Berry_phases_and_finite_electric_fields.md).^([\[3\]](#cite_note-souza:prl:02-3))
+field](../theory/Berry_phases_and_finite_electric_fields.md).<sup>[\[3\]](#cite_note-souza:prl:02-3)</sup>
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -183,7 +226,11 @@ field](../theory/Berry_phases_and_finite_electric_fields.md).^([\[3\]](#cite_not
         
     LCALCEPS = .TRUE.
 
-### Ionic contributions to the static dielectric properties
+### Ionic contributions to the static dielectric properties\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Ionic contributions to the static dielectric properties">edit</a> \| (./index.php.md)\]
+
 To obtain the ionic contributions to the static dielectric properties
 one needs to compute the force-constant matrices (Hessian of the total
 energy w.r.t. the ionic positions) and internal strain tensors (second
@@ -194,7 +241,7 @@ These properties may be obtained from finite differences
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -219,7 +266,11 @@ and search for
 
 in the [OUTCAR](../output-files/OUTCAR.md) file.
 
-## Frequency dependent dielectric response
+## Frequency dependent dielectric response\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Frequency dependent dielectric response">edit</a> \| (./index.php.md)\]
+
 Frequency dependent dielectric functions may be computed at various
 levels of approximation:
 
@@ -233,7 +284,7 @@ functional) calculation
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DFT)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -241,7 +292,7 @@ functional) calculation
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.6)
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -252,7 +303,11 @@ functional) calculation
 **Mind**: keep the [WAVECAR](../input-files/WAVECAR.md) file, you're going
 to need it in the following.
 
-### The independent-particle picture
+### The independent-particle picture\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: The independent-particle picture">edit</a> \| (./index.php.md)\]
+
 To compute the frequency dependent dielectric function in the
 independent-particle (IP) picture we restart from the
 [WAVECAR](../input-files/WAVECAR.md) of the previous run, with the
@@ -260,7 +315,7 @@ following [INCAR](../input-files/INCAR.md)
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.LOPTICS)
 
-&nbsp;
+<!-- -->
 
     ALGO = Exact
     NBANDS  = 64
@@ -311,16 +366,18 @@ or run the following bash-script (`plotoptics2`)
 - [LPEAD](../incar-tags/LPEAD.md)-tag
 
 As an alternative to the perturbative expression (Eq. 31 of
-^([\[1\]](#cite_note-gajdos:prb:06-1))), one may compute
-$| \nabla_{\mathbf{k}} \tilde{u}_{n\mathbf{k}}
-\rangle$ from finite differences by specifying
+<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>),
+one may compute $| \nabla_{\mathbf{k}}
+\tilde{u}_{n\mathbf{k}} \rangle$ from finite
+differences by specifying
 
     LPEAD=.TRUE.
 
 in the [INCAR](../input-files/INCAR.md) file. The derivative of the
 cell-periodic part of the wave function w.r.t. the Bloch vector is then
 computed by means of a fourth-order finite difference stencil, in the
-spirit of Eqs. 96 and 97 of ^([\[2\]](#cite_note-nunes:prb:01-2)).
+spirit of Eqs. 96 and 97 of
+<sup>[\[2\]](#cite_note-nunes:prb:01-2)</sup>.
 
 **Mind**: keep the [WAVECAR](../input-files/WAVECAR.md) and
 [WAVEDER](../input-files/WAVEDER.md) files, you're going to need them in
@@ -329,7 +386,11 @@ the following. You might also want to keep a copy of the
 
     cp vasprun.xml vasprun_loptics.xml
 
-### Including local field effects
+### Including local field effects\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Including local field effects">edit</a> \| (./index.php.md)\]
+
 To determine the frequency dependent dielectric function including local
 field effects one needs the [WAVECAR](../input-files/WAVECAR.md) and
 [WAVEDER](../input-files/WAVEDER.md) files from the previous calculation
@@ -339,7 +400,7 @@ orbitals), and
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.CHI)
 
-&nbsp;
+<!-- -->
 
     # Frequency dependent dielectric tensor with and
     # without local field effects in RPA
@@ -485,29 +546,58 @@ with the same [CSHIFT](../incar-tags/CSHIFT.md) as VASP chose for the
 
 and compare the dielectric functions again.
 
-- The sample output (using a $6\times6\times6$ mesh for the k points) should look like the following:
+- The sample output (using a $6\times6\times6$ mesh for the k points) should look like the
+  following:
 
-[![](https://vasp.at/wiki/images/thumb/1/11/Fig_dielectric_properties_SiC_2.png/600px-Fig_dielectric_properties_SiC_2.png)](https://vasp.at/wiki/File:Fig_dielectric_properties_SiC_2.png)
+<a href="/wiki/File:Fig_dielectric_properties_SiC_2.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/1/11/Fig_dielectric_properties_SiC_2.png/600px-Fig_dielectric_properties_SiC_2.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/1/11/Fig_dielectric_properties_SiC_2.png/900px-Fig_dielectric_properties_SiC_2.png 1.5x, /wiki/images/1/11/Fig_dielectric_properties_SiC_2.png 2x"
+width="600" height="367" /></a>
 
-## References
-1.  ↑ ^([a](#cite_ref-gajdos:prb:06_1-0))
-    ^([b](#cite_ref-gajdos:prb:06_1-1)) [M. Gajdoš, K. Hummer, G.
-    Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112
-    (2006).](http://link.aps.org/doi/10.1103/PhysRevB.73.045112)
-2.  ↑ ^([a](#cite_ref-nunes:prb:01_2-0))
-    ^([b](#cite_ref-nunes:prb:01_2-1)) [R. W. Nunes and X. Gonze, Phys.
-    Rev. B 63, 155107
-    (2001).](http://link.aps.org/doi/10.1103/PhysRevB.63.155107)
-3.  [↑](#cite_ref-souza:prl:02_3-0) [I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. 89, 117602
-    (2002).](http://link.aps.org/doi/10.1103/PhysRevLett.89.117602)
+## References\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-## Download
-[SiC_dielectric.tgz](https://vasp.at/wiki/images/f/f0/SiC_dielectric.tgz "SiC dielectric.tgz")
+
+1.  ↑
+    <sup>[a](#cite_ref-gajdos:prb:06_1-0)</sup>
+    <sup>[b](#cite_ref-gajdos:prb:06_1-1)</sup>
+    <a href="http://link.aps.org/doi/10.1103/PhysRevB.73.045112"
+    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
+    Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).</a>
+2.  ↑
+    <sup>[a](#cite_ref-nunes:prb:01_2-0)</sup>
+    <sup>[b](#cite_ref-nunes:prb:01_2-1)</sup>
+    <a href="http://link.aps.org/doi/10.1103/PhysRevB.63.155107"
+    class="external text" rel="nofollow">R. W. Nunes and X. Gonze, Phys.
+    Rev. B 63, 155107 (2001).</a>
+3.  [↑](#cite_ref-souza:prl:02_3-0)
+    <a href="http://link.aps.org/doi/10.1103/PhysRevLett.89.117602"
+    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
+    Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).</a>
+
+
+## Download\[<a
+href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/f/f0/SiC_dielectric.tgz" class="internal"
+title="SiC dielectric.tgz">SiC_dielectric.tgz</a>
+
 
 [Overview](../tutorials/Optical_properties_and_dielectric_response_-_Tutorial.md) \>
-dielectric properties of SiC \> [dielectric properties of
-Si](Dielectric_properties_of_Si.md)  \>
-[Ionic contributions to the frequency dependent dielectric function of
+dielectric properties of
+SiC \> [dielectric
+properties of
+Si](Dielectric_properties_of_Si.md)
+ \> [Ionic contributions to
+the frequency dependent dielectric function of
 NaCl](Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

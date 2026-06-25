@@ -2,14 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Phonons from density-functional-perturbation theory
+
+
 The phonon calculations using [density-functional-perturbation theory
 (DFPT)](../theory/Phonons-_Theory.md)
 are carried out by setting [**IBRION**=7 or
 8](../incar-tags/IBRION.md) in the [INCAR](../input-files/INCAR.md)
 file.
 
-|                                                                  |
-|------------------------------------------------------------------|
+|  |
+|----|
 | **Mind:** Only zone-center (Γ-point) frequencies are calculated. |
 
 In general, the DFPT routines in VASP are somewhat rudimentary and only
@@ -58,14 +60,25 @@ and the [internal strain
 tensor](../theory/Phonons-_Theory.md),
 respectively.
 
+
 ## Contents
 
-- [1 Input](#Input)
-- [2 Output](#Output)
-- [3 Related tags and sections](#Related_tags_and_sections)
-- [4 References](#References)
 
-## Input
+- [1
+  Input](#Input)
+- [2
+  Output](#Output)
+- [3 Related tags
+  and sections](#Related_tags_and_sections)
+- [4
+  References](#References)
+
+
+## Input\[<a
+href="/wiki/index.php?title=Phonons_from_density-functional-perturbation_theory&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
 To use DFPT, set the tag [**IBRION**=7 or
 8](../incar-tags/IBRION.md) in the [INCAR](../input-files/INCAR.md)
 file. There are two options for using the DFPT routines to compute the
@@ -80,7 +93,11 @@ If [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. or
 [LCALCEPS](../incar-tags/LCALCEPS.md)=.TRUE., additional dielectric
 properties are computed.
 
-## Output
+## Output\[<a
+href="/wiki/index.php?title=Phonons_from_density-functional-perturbation_theory&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Output">edit</a> \| (./index.php.md)\]
+
 The second derivates of the total energy with respect to ionic
 displacements (interatomic force constants) are computed, the [dynamical
 matrix](../theory/Phonons-_Theory.md) is
@@ -101,41 +118,59 @@ Furthermore, the [Born effective
 charges](../theory/Phonons-_Theory.md) are
 determined analytically by contracting the linear response of the
 orbitals over the "polarization" vector Eq. (30) in Ref.
-^([\[1\]](#cite_note-gajdos:prb:2006-1)). These should agree well with
-the Born effective charges that were previously determined when the
-linear response with respect to external fields
-[LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. was calculated (there are
-two different routes to calculate mixed derivatives). The final summary
-output towards the end of the [OUTCAR](../output-files/OUTCAR.md) file
-writes the Born effective charges determined from the linear response
-with respect to external fields.
+<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)</sup>.
+These should agree well with the Born effective charges that were
+previously determined when the linear response with respect to external
+fields [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. was calculated
+(there are two different routes to calculate mixed derivatives). The
+final summary output towards the end of the
+[OUTCAR](../output-files/OUTCAR.md) file writes the Born effective charges
+determined from the linear response with respect to external fields.
 
 It is possible to [obtain the phonon dispersion at different **q**
 points](Computing_the_phonon_dispersion_and_DOS.md)
 by computing the force constants on a sufficiently large supercell and
 Fourier interpolating the dynamical matrices in the primitive cell.
 
-It is also possible to use phonopy^([\[2\]](#cite_note-phonopy-2)) to
-use the results of a density-functional-perturbation theory calculation
-done with VASP.^([\[3\]](#cite_note-phonopy_dfpt-3))
+It is also possible to use
+phonopy<sup>[\[2\]](#cite_note-phonopy-2)</sup>
+to use the results of a density-functional-perturbation theory
+calculation done with
+VASP.<sup>[\[3\]](#cite_note-phonopy_dfpt-3)</sup>
 
 |  |
 |----|
 | **Mind:** [IBRION](../incar-tags/IBRION.md)=7 or 8 are supported by VASP.5.1 and later versions. |
 
-## Related tags and sections
+## Related tags and sections\[<a
+href="/wiki/index.php?title=Phonons_from_density-functional-perturbation_theory&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and sections">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [LEPSILON](../incar-tags/LEPSILON.md),
 [Phonons: Theory](../theory/Phonons-_Theory.md), [Phonons
 from finite
 differences](Phonons_from_finite_differences.md)
 
-## References
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0) [M. Gajdoš, K. Hummer, G.
-    Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**,
-    045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
+## References\[<a
+href="/wiki/index.php?title=Phonons_from_density-functional-perturbation_theory&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
+    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
+    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
+    (2006).</a>
 2.  [↑](#cite_ref-phonopy_2-0)
-    [http://phonopy.github.io/phonopy/index.html
-    (2022).](http://phonopy.github.io/phonopy/index.html)
+    <a href="http://phonopy.github.io/phonopy/index.html"
+    class="external text"
+    rel="nofollow">http://phonopy.github.io/phonopy/index.html (2022).</a>
 3.  [↑](#cite_ref-phonopy_dfpt_3-0)
-    [http://phonopy.github.io/phonopy/vasp-dfpt.html
-    (2022).](http://phonopy.github.io/phonopy/vasp-dfpt.html)
+    <a href="http://phonopy.github.io/phonopy/vasp-dfpt.html"
+    class="external text"
+    rel="nofollow">http://phonopy.github.io/phonopy/vasp-dfpt.html
+    (2022).</a>
+
+

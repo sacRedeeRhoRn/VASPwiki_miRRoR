@@ -10,9 +10,11 @@ Usage
 
 Conversion pipeline
 -------------------
-1. Primary: pandoc (subprocess) — `pandoc -f html -t gfm-raw_html`
+1. Primary: pandoc (subprocess) — `pandoc -f html -t gfm`
    HTML is fed on stdin; GFM markdown is captured from stdout.
-   (`-raw_html` disables raw-HTML passthrough for cleaner output.)
+   (raw_html passthrough is ENABLED so complex tables survive as raw <table> HTML
+   rather than being dropped as `[TABLE]` placeholders; residual span/div chrome
+   is stripped by strip_html_chrome() in post-processing.)
 
 2. Fallback (pandoc missing): markdownify (guarded by ImportError).
    Only activated if `subprocess` call for pandoc fails with FileNotFoundError.
@@ -70,7 +72,7 @@ def _convert_pandoc(html: str) -> str:
     Raises subprocess.CalledProcessError on non-zero exit.
     """
     result = subprocess.run(
-        ["pandoc", "-f", "html", "-t", "gfm-raw_html"],
+        ["pandoc", "-f", "html", "-t", "gfm"],
         input=html,
         capture_output=True,
         text=True,
@@ -357,6 +359,54 @@ def strip_chrome(md: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# HTML chrome stripping (span/div removal outside table blocks)
+# ---------------------------------------------------------------------------
+
+# Matches a complete <table>…</table> block, possibly multi-line.
+_TABLE_BLOCK_RE = re.compile(r"<table\b.*?</table>", re.DOTALL | re.IGNORECASE)
+
+# Tag patterns for span and div (opening and closing, incl. self-closing variants).
+_SPAN_TAG_RE = re.compile(r"</?span\b[^>]*>", re.IGNORECASE)
+_DIV_TAG_RE  = re.compile(r"</?div\b[^>]*>",  re.IGNORECASE)
+
+
+def strip_html_chrome(md: str) -> str:
+    """
+    Remove residual HTML chrome (<span> and <div> wrapper tags) introduced by
+    pandoc's raw_html passthrough, while leaving <table>…</table> blocks fully
+    intact (including any spans/divs that happen to be *inside* table cells).
+
+    Strategy:
+    - Split the document into alternating [non-table, table, non-table, …] segments.
+    - In non-table segments: strip <span …>, </span>, <div …>, </div> tags (keep
+      inner text).
+    - Table segments: pass through untouched.
+    - Reassemble in original order.
+    - Collapse any runs of 3+ blank lines to 2 (cosmetic, mirrors strip_chrome).
+    """
+    # Split around table blocks.  re.split with a capturing group gives:
+    #   [before_table1, table1, between, table2, …, after_last_table]
+    parts = _TABLE_BLOCK_RE.split(md)
+    table_blocks = _TABLE_BLOCK_RE.findall(md)
+
+    # parts has len(table_blocks)+1 non-table segments interleaved with table_blocks.
+    result_parts: list[str] = []
+    for i, segment in enumerate(parts):
+        # Strip span/div tags from non-table prose.
+        segment = _SPAN_TAG_RE.sub("", segment)
+        segment = _DIV_TAG_RE.sub("", segment)
+        result_parts.append(segment)
+        # Re-insert the matching table block (if any) after this segment.
+        if i < len(table_blocks):
+            result_parts.append(table_blocks[i])
+
+    reassembled = "".join(result_parts)
+    # Cosmetic: collapse runs of 3+ blank lines to 2.
+    reassembled = re.sub(r"\n{4,}", "\n\n\n", reassembled)
+    return reassembled
+
+
+# ---------------------------------------------------------------------------
 # Provenance header
 # ---------------------------------------------------------------------------
 
@@ -491,6 +541,7 @@ def main() -> None:
         md = rewrite_image_srcs(md)
         md = rewrite_wiki_links(md, slugmap)
         md = strip_chrome(md)
+        md = strip_html_chrome(md)
 
         # Prepend provenance header.
         header = build_header(title, displaytitle, revid, fetched_at)

@@ -2,19 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VRijkl
-|                                      |
-|--------------------------------------|
+
+
+|  |
+|----|
 | **Mind:** Available as of VASP 6.6.0 |
 
-The VRijkl file is written for [`ALGO`](../incar-tags/ALGO.md)` = 2e4wa` and
-stores all bare off-center Coulomb integrals commensurate with the
-selected k-point grid (see [off-center
+The VRijkl file is written for
+[`ALGO`](../incar-tags/ALGO.md)` = 2e4wa` and stores all bare off-center
+Coulomb integrals commensurate with the selected k-point grid (see
+[off-center
 interactions](../theory/Constrained–random-phase–approximation_formalism.md)):
 
-$V_{ijkl}^{\sigma\sigma'} = \int {\rm d}{\bf
-r}\int {\rm d}{\bf r}' \frac{ w_{i}^{\*\sigma}({\bf r})
-w_{j}^{\sigma}({\bf r}) w_{k}^{\*\sigma'}({\bf r}'+{\bf R})
-w_{l}^{\sigma'}({\bf r}'+{\bf R})}{|{\bf r}-{\bf r}'|}$
+$V_{ijkl}^{\sigma\sigma'} = \int {\rm d}{\bf r}\int {\rm d}{\bf r}'
+\frac{ w_{i}^{\*\sigma}({\bf r}) w_{j}^{\sigma}({\bf r})
+w_{k}^{\*\sigma'}({\bf r}'+{\bf R}) w_{l}^{\sigma'}({\bf r}'+{\bf
+R})}{|{\bf r}-{\bf r}'|}$
 
 The file contains one block per lattice vector **R**. Each block header
 gives the lattice vector index and its fractional coordinates. The
@@ -43,7 +46,10 @@ number of basis functions becomes large.
 |----|
 | **Tip:** To improve performance, use a coarser sub-grid of the original **k**-point grid by enabling [`LDOWNSAMPLE`](../incar-tags/LDOWNSAMPLE.md)` = T`. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=VRijkl&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Constrained–random-phase–approximation
 formalism](../theory/Constrained–random-phase–approximation_formalism.md)
 
@@ -53,3 +59,5 @@ Files: [VIJKL](VIJKL.md), [UIJKL](UIJKL.md),
 Tags: [LTWO_CENTRE](../incar-tags/LTWO_CENTRE.md),
 [LOCALIZED_BASIS](../theory/LOCALIZED_BASIS.md),
 [ALGO](../incar-tags/ALGO.md)
+
+

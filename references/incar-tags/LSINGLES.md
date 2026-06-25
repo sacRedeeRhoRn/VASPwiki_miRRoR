@@ -2,23 +2,31 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LSINGLES
+
+
 LSINGLES = .TRUE. \| .FALSE.  
 Default: **LSINGLES** = .FALSE. 
 
 Description: Switch on singles contribution to correlation energy for
 [GW
-algorithms](../methods/Practical_guide_to_GW_calculations.md).^([\[1\]](#cite_note-klimes:jcp:143-1))
+algorithms](../methods/Practical_guide_to_GW_calculations.md).<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
 
 ------------------------------------------------------------------------
 
-LSINGLES enables the calculation of the singles contributions to the
-correlation energy that can be represented by the following Feynman
-(time-ordered)
-diagrams:^([\[2\]](#cite_note-kaltak:thesis2015-2)[\[1\]](#cite_note-klimes:jcp:143-1))
+LSINGLES enables the
+calculation of the singles contributions to the correlation energy that
+can be represented by the following Feynman (time-ordered)
+diagrams:<sup>[\[2\]](#cite_note-kaltak:thesis2015-2)[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
 
-[![](https://vasp.at/wiki/images/thumb/e/eb/SinglesDiagrams.png/320px-SinglesDiagrams.png)](https://vasp.at/wiki/File:SinglesDiagrams.png)
+<a href="/wiki/File:SinglesDiagrams.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/eb/SinglesDiagrams.png/320px-SinglesDiagrams.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/eb/SinglesDiagrams.png/480px-SinglesDiagrams.png 1.5x, /wiki/images/thumb/e/eb/SinglesDiagrams.png/640px-SinglesDiagrams.png 2x"
+width="320" height="97" /></a>
 
-LSINGLES is used in combination with the [low-scaling
+LSINGLES is used in
+combination with the [low-scaling
 ACFDT/RPA](../methods/ACFDT__RPA_calculations.md)
 and
 [GW](../methods/Practical_guide_to_GW_calculations.md)
@@ -26,39 +34,39 @@ algorithms.
 
 If the [ACFDT/RPA
 algorithm](../methods/ACFDT__RPA_calculations.md)
-is selected with [ALGO](ALGO.md)=RPAR\|ACFDTR and LSINGLES is
-set, the code calculates two singles contributions and writes following
-lines to [OUTCAR](../output-files/OUTCAR.md)
+is selected with [ALGO](ALGO.md)=RPAR\|ACFDTR and
+LSINGLES
+is set, the code calculates two singles contributions and writes
+following lines to [OUTCAR](../output-files/OUTCAR.md)
 
     HF single shot energy change        -1.23182672
     renormalized HF singles             -1.23310555
 
 Here, **renomalized HF singles** corresponds to the renormalized singles
 contribution suggested by Ren and
-coworkers:^([\[3\]](#cite_note-ren:prb:88-3))
+coworkers:<sup>[\[3\]](#cite_note-ren:prb:88-3)</sup>
 
-$E^{rSE}_c = -\sum_{a\in virt, i\in occ}
-\frac{|\langle i| V^{HF} - V_0^{KS}|a\rangle|^2
-}{\epsilon_a-\epsilon_i}$
+$E^{rSE}_c = -\sum_{a\in virt, i\in occ} \frac{|\langle i| V^{HF} -
+V_0^{KS}|a\rangle|^2 }{\epsilon_a-\epsilon_i}$
 
 This contribution accounts for the change of the mean-field exchange
 energy and can be derived consistently within the AC-FDT framework as
 described in Sec. II D Eq. (28) of Klimeš et
-al.^([\[1\]](#cite_note-klimes:jcp:143-1))
+al.<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
 
 In contrast, the **HF single shot energy change** line contains the
-somewhat simpler contribution^([\[1\]](#cite_note-klimes:jcp:143-1))
+somewhat simpler
+contribution<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
 
-$E_c^{rSE} = \mathrm{Tr}\left\[ (\gamma_{HF} -
-\gamma_{DFT})\hat h_{HF} \right\],$
+$E_c^{rSE} = \mathrm{Tr}\left\[ (\gamma_{HF} - \gamma_{DFT})\hat
+h_{HF} \right\],$
 
-where $\gamma_{HF}$ is the Hartree-Fock
-density matrix, determined for the Hartree-Fock Hamiltonian
-$\hat h_{HF}$ and
-$\gamma_{DFT}$ is the Kohn-Sham density
-matrix. In all practical calculations, we found that both values, the
-single-shot HF and renormalized singles contributions, are exceedingly
-close to each other.
+where $\gamma_{HF}$
+is the Hartree-Fock density matrix, determined for the Hartree-Fock
+Hamiltonian $\hat h_{HF}$
+and $\gamma_{DFT}$ is the Kohn-Sham density matrix. In all practical
+calculations, we found that both values, the single-shot HF and
+renormalized singles contributions, are exceedingly close to each other.
 
 If the [GW
 algorithm](../methods/Practical_guide_to_GW_calculations.md)
@@ -66,13 +74,14 @@ is selected with [ALGO](ALGO.md)=G0W0R, the
 [OUTCAR](../output-files/OUTCAR.md) contains also the singles contribution
 beyond the Hartree-Fock level
 
-$E_c^{GWSE} = \mathrm{Tr}\left\[ (\gamma_{RPA} -
-\gamma_{DFT})\hat h_{HF} \right\],$
+$E_c^{GWSE} = \mathrm{Tr}\left\[ (\gamma_{RPA} - \gamma_{DFT})\hat
+h_{HF} \right\],$
 
 where $\gamma_{RPA}$ is the RPA density
-matrix.^([\[1\]](#cite_note-klimes:jcp:143-1)) For versions \<= 6.4.2,
-this contribution is not directly printed to file. However, the first
-and second term is printed to [OUTCAR](../output-files/OUTCAR.md):
+matrix.<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+For versions \<= 6.4.2, this contribution is not directly printed to
+file. However, the first and second term is printed to
+[OUTCAR](../output-files/OUTCAR.md):
 
     Energies using frozen KS orbitals
     Hartree-Fock free energy of the ion-electron system (eV)
@@ -102,31 +111,46 @@ is then obtained by adding the singles contribution to the value of
 
 `HF+E_corr(extrapolated)    =      -153.98810072 eV`
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LSINGLES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [NATURALO](NATURALO.md) natural orbital selection for
   *RPA* and *GW* calculations
 - [ALGO](ALGO.md) for response functions and *RPA*
   calculations
 - for an overview on total energies using the [ACFDT/RPA
   formalism](../methods/ACFDT__RPA_calculations.md)
-- for a practical guide to [GW
-  calculations](../redirects/GW_calculations.md)
+- for a practical guide to
+  <a href="/wiki/GW_calculations" class="mw-redirect"
+  title="GW calculations">GW calculations</a>
 - [Basis set
   convergence](../methods/ACFDT__RPA_calculations.md)
   of ACFDT/RPA calculations
 
-## References
+## References\[<a href="/wiki/index.php?title=LSINGLES&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
-1.  ↑ ^([a](#cite_ref-klimes:jcp:143_1-0))
-    ^([b](#cite_ref-klimes:jcp:143_1-1))
-    ^([c](#cite_ref-klimes:jcp:143_1-2))
-    ^([d](#cite_ref-klimes:jcp:143_1-3))
-    ^([e](#cite_ref-klimes:jcp:143_1-4)) [J. Klimeš, M. Kaltak, and G.
-    Kresse, J. Chem. Phys. **143**, 102816
-    (2015).](https://doi.org/10.1063/1.4929346)
-2.  [↑](#cite_ref-kaltak:thesis2015_2-0) [M. Kaltak, Thesis: Merging GW
-    with DMFT (2015).](https://utheses.univie.ac.at/detail/33771#)
-3.  [↑](#cite_ref-ren:prb:88_3-0) [X. Ren, P. Rinke, G. E. Scuseria,
-    and M. Scheffler, Phys. Rev. B **88**, 035120
-    (2013).](http://doi.org/10.1103/PhysRevB.88.035120)
+
+1.  ↑
+    <sup>[a](#cite_ref-klimes:jcp:143_1-0)</sup>
+    <sup>[b](#cite_ref-klimes:jcp:143_1-1)</sup>
+    <sup>[c](#cite_ref-klimes:jcp:143_1-2)</sup>
+    <sup>[d](#cite_ref-klimes:jcp:143_1-3)</sup>
+    <sup>[e](#cite_ref-klimes:jcp:143_1-4)</sup>
+    <a href="https://doi.org/10.1063/1.4929346" class="external text"
+    rel="nofollow">J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys.
+    <strong>143</strong>, 102816 (2015).</a>
+2.  [↑](#cite_ref-kaltak:thesis2015_2-0)
+    <a href="https://utheses.univie.ac.at/detail/33771#"
+    class="external text" rel="nofollow">M. Kaltak, Thesis: Merging GW with
+    DMFT (2015).</a>
+3.  [↑](#cite_ref-ren:prb:88_3-0)
+    <a href="http://doi.org/10.1103/PhysRevB.88.035120"
+    class="external text" rel="nofollow">X. Ren, P. Rinke, G. E. Scuseria,
+    and M. Scheffler, Phys. Rev. B <strong>88</strong>, 035120 (2013).</a>
+
+

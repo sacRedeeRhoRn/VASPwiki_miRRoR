@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # vaspwave.h5
-The vaspwave.h5 file is the hdf5 counterpart of the
-[WAVECAR](../input-files/WAVECAR.md) and [CHGCAR](../input-files/CHGCAR.md)
-and other files used inside a more elaborate workflow, like for instance
-GW. This file is written if [LH5](../incar-tags/LH5.md)=.TRUE. is set in the
-[INCAR](../input-files/INCAR.md) file.
+
+
+The vaspwave.h5 file is the
+hdf5 counterpart of the [WAVECAR](../input-files/WAVECAR.md) and
+[CHGCAR](../input-files/CHGCAR.md) and other files used inside a more
+elaborate workflow, like for instance GW. This file is written if
+[LH5](../incar-tags/LH5.md)=.TRUE. is set in the [INCAR](../input-files/INCAR.md)
+file.
 
 |  |
 |----|
@@ -18,7 +21,11 @@ GW. This file is written if [LH5](../incar-tags/LH5.md)=.TRUE. is set in the
 - Wannier projection matrices [WANPROJ](../input-files/WANPROJ.md)
 - local potential [POT](POT.md)
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Vaspwave.h5&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Restart and output files cheat
 sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 
@@ -26,3 +33,5 @@ sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 [WAVECAR](../input-files/WAVECAR.md), [CHGCAR](../input-files/CHGCAR.md),
 [WAVEDER](../input-files/WAVEDER.md), [WANPROJ](../input-files/WANPROJ.md),
 [POT](POT.md)
+
+

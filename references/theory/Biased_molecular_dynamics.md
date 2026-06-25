@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Biased molecular dynamics
+
+
 *Biased molecular dynamics'* (MD) refers to advanced [MD-simulation
 methods](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
 that introduce a *bias potential*. One of the most important purposes of
@@ -11,12 +13,13 @@ Depending on the type of sampling and in combination with the
 corresponding statistical methods one then has access to important
 thermodynamic quantities like, e.g., free energies. Biased molecular
 dynamics comes in very different flavors such as, e.g., umbrella
-sampling^([\[1\]](#cite_note-torrie:jcp:1977-1)) and umbrella
-integration^([\[2\]](#cite_note-kaestner:jcp:2005-2)), to name a few.
-For a comprehensive description (especially about umbrella sampling), we
-refer the interested user to Ref.
-^([\[3\]](#cite_note-frenkel:ap-book:2002-3)) written by D. Frenkel and
-B. Smit.
+sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>
+and umbrella
+integration<sup>[\[2\]](#cite_note-kaestner:jcp:2005-2)</sup>,
+to name a few. For a comprehensive description (especially about
+umbrella sampling), we refer the interested user to Ref.
+<sup>[\[3\]](#cite_note-frenkel:ap-book:2002-3)</sup>
+written by D. Frenkel and B. Smit.
 
 The probability density for a geometric parameter ξ of the system driven
 by a Hamiltonian
@@ -31,22 +34,21 @@ $P(\xi_i)=\frac{\int\delta\Big(\xi(q)-\xi_i\Big)
 \exp\left\\-H(q,p)/k_B\\T\right\\dq\\dp} =
 \langle\delta\Big(\xi(q)-\xi_i\Big)\rangle_{H}.$
 
-The term $\langle X \rangle_H$ stands
-for a thermal average of quantity *X* evaluated for the system driven by
-the Hamiltonian *H*.
+The term $\langle X \rangle_H$ stands for a thermal average of quantity *X* evaluated
+for the system driven by the Hamiltonian *H*.
 
 If the system is modified by adding a bias potential
-$\tilde{V}(\xi)$ acting on one or
-multiple selected internal coordinates of the system ξ=ξ(*q*), the
-Hamiltonian takes the form
+$\tilde{V}(\xi)$ acting on one or multiple selected
+internal coordinates of the system ξ=ξ(*q*), the Hamiltonian takes the
+form
 
 $\tilde{H}(q,p) = H(q,p) + \tilde{V}(\xi),$
 
 and the probability density of ξ in the biased ensemble is
 
-$\tilde{P}(\xi_i)= \frac{\int
-\delta\Big(\xi(q)-\xi_i\Big) \exp\left\\-\tilde{H}(q,p)/k_B\\T\right\\
-dq\\dp}{\int \exp\left\\-\tilde{H}(q,p)/k_B\\T\right\\dq\\dp} =
+$\tilde{P}(\xi_i)= \frac{\int \delta\Big(\xi(q)-\xi_i\Big)
+\exp\left\\-\tilde{H}(q,p)/k_B\\T\right\\ dq\\dp}{\int
+\exp\left\\-\tilde{H}(q,p)/k_B\\T\right\\dq\\dp} =
 \langle\delta\Big(\xi(q)-\xi_i\Big)\rangle_{\tilde{H}}.$
 
 It can be shown that the biased and unbiased averages are related via
@@ -69,15 +71,19 @@ $\langle A \rangle_{H} =\frac{\langle A(q)
 \exp\left\\\tilde{V}(\xi)/k_B\\T\right\\ \rangle_{\tilde{H}}}.$
 
 One of the most popular methods using bias potentials is umbrella
-sampling^([\[1\]](#cite_note-torrie:jcp:1977-1)). This method uses a
-bias potential to enhance sampling of ξ in regions with low
-*P*(ξ_(*i*)), e.g., transition regions of chemical reactions. The
-correct distributions are recovered afterward using the equation for
-$\langle A \rangle_{H}$ above.
+sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>.
+This method uses a bias potential to enhance sampling of ξ in regions
+with low *P*(ξ<sub>*i*</sub>), e.g., transition regions of chemical
+reactions. The correct distributions are recovered afterward using the
+equation for $\langle A \rangle_{H}$ above.
 
-### How to
-For a description of biased molecular dynamics see Biased molecular
-dynamics.
+### How to\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How to">edit</a> \| (./index.php.md)\]
+
+For a description of biased molecular dynamics see
+Biased molecular dynamics.
 
 - For a biased molecular dynamics run with [Andersen
   thermostat](../tutorials/Andersen_thermostat.md), one has
@@ -106,7 +112,11 @@ The values of all collective variables for each MD step are listed in
 the [REPORT](../output-files/REPORT.md) file. Check the lines after the
 string `Metadynamics`.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ICONST](../input-files/ICONST.md),
 [PENALTYPOT](../input-files/PENALTYPOT.md),
 [HILLS_BIN](../incar-tags/HILLS_BIN.md),
@@ -120,17 +130,28 @@ string `Metadynamics`.
 [Biased molecular dynamics
 calculations](../tutorials/Biased_molecular_dynamics_calculations.md)
 
-## References
-1.  ↑ ^([a](#cite_ref-torrie:jcp:1977_1-0))
-    ^([b](#cite_ref-torrie:jcp:1977_1-1)) [G. M. Torrie and J. P.
-    Valleau, J. Comp. Phys. **23**, 187
-    (1977).](http://doi.org/10.1016/0021-9991(77)90121-8)
-2.  [↑](#cite_ref-kaestner:jcp:2005_2-0) [J. Kästner, and W. Thiel,
-    *Bridging the gap between thermodynamic integration and umbrella
-    sampling provides a novel analysis method: “Umbrella
-    integration”*, J. Chem. Phys. **123**, 144104
-    (2005).](https://doi.org/10.1063/1.2052648)
-3.  [↑](#cite_ref-frenkel:ap-book:2002_3-0) [D. Frenkel and B. Smit,
-    *Understanding molecular simulations: from algorithms to
-    applications*, Academic Press: San Diego,
-    2002.](http://doi.org/10.1016/0021-9991(77)90121-8)
+## References\[<a
+href="/wiki/index.php?title=Biased_molecular_dynamics&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-torrie:jcp:1977_1-0)</sup>
+    <sup>[b](#cite_ref-torrie:jcp:1977_1-1)</sup>
+    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
+    class="external text" rel="nofollow">G. M. Torrie and J. P. Valleau, J.
+    Comp. Phys. <strong>23</strong>, 187 (1977).</a>
+2.  [↑](#cite_ref-kaestner:jcp:2005_2-0)
+    <a href="https://doi.org/10.1063/1.2052648" class="external text"
+    rel="nofollow">J. Kästner, and W. Thiel, <em>Bridging the gap between
+    thermodynamic integration and umbrella sampling provides a novel
+    analysis method: “Umbrella integration”</em>, J. Chem. Phys.
+    <strong>123</strong>, 144104 (2005).</a>
+3.  [↑](#cite_ref-frenkel:ap-book:2002_3-0)
+    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
+    class="external text" rel="nofollow">D. Frenkel and B. Smit,
+    <em>Understanding molecular simulations: from algorithms to
+    applications</em>, Academic Press: San Diego, 2002.</a>
+
+

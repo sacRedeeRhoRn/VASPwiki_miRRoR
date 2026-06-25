@@ -2,40 +2,73 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Installing VASP.5.X.X
+
+
+
 ## Contents
 
-- [1 Requirements](#Requirements)
-- [2 Build system](#Build_system)
-- [3 How to make VASP](#How_to_make_VASP)
-- [4 Adapting makefile.include](#Adapting_makefile.include)
-  - [4.1 Precompiler variables](#Precompiler_variables)
-  - [4.2 Compiler variables](#Compiler_variables)
-  - [4.3 Linking against libraries](#Linking_against_libraries)
-    - [4.3.1 Note on LAPACK 3.6.0 and
-      newer](#Note_on_LAPACK_3.6.0_and_newer)
-  - [4.4 The list of objects](#The_list_of_objects)
-  - [4.5 Fast-Fourier-Transforms](#Fast-Fourier-Transforms)
-  - [4.6 Special rules](#Special_rules)
-    - [4.6.1 Special rules for the optimization level of FFT related
+
+- [1
+  Requirements](#Requirements)
+- [2 Build
+  system](#Build_system)
+- [3 How to make
+  VASP](#How_to_make_VASP)
+- [4 Adapting
+  makefile.include](#Adapting_makefile.include)
+  - [4.1
+    Precompiler
+    variables](#Precompiler_variables)
+  - [4.2 Compiler
+    variables](#Compiler_variables)
+  - [4.3 Linking
+    against libraries](#Linking_against_libraries)
+    - [4.3.1 Note
+      on LAPACK 3.6.0 and newer](#Note_on_LAPACK_3.6.0_and_newer)
+  - [4.4 The list
+    of objects](#The_list_of_objects)
+  - [4.5
+    Fast-Fourier-Transforms](#Fast-Fourier-Transforms)
+  - [4.6 Special
+    rules](#Special_rules)
+    - [4.6.1
+      Special rules for the optimization level of
+      FFT related
       objects](#Special_rules_for_the_optimization_level_of_FFT_related_objects)
-    - [4.6.2 Special rules in general](#Special_rules_in_general)
-  - [4.7 For the VASP library (lib)](#For_the_VASP_library_(lib))
-  - [4.8 For the LOCPROJ-parser
-    (parser)](#For_the_LOCPROJ-parser_(parser))
-  - [4.9 For the interface to Wannier90
+    - [4.6.2
+      Special rules in
+      general](#Special_rules_in_general)
+  - [4.7 For the
+    VASP library (lib)](#For_the_VASP_library_(lib))
+  - [4.8 For the
+    LOCPROJ-parser (parser)](#For_the_LOCPROJ-parser_(parser))
+  - [4.9 For the
+    interface to Wannier90
     (optional)](#For_the_interface_to_Wannier90_(optional))
-  - [4.10 For libbeef (optional)](#For_libbeef_(optional))
-  - [4.11 For the GPU port](#For_the_GPU_port)
-- [5 Examples](#Examples)
-- [6 Patches](#Patches)
-  - [6.1 For vasp.5.4.1.24Jun15](#For_vasp.5.4.1.24Jun15)
-  - [6.2 For vasp.5.4.1.05Feb16 (with GPU
+  - [4.10 For
+    libbeef (optional)](#For_libbeef_(optional))
+  - [4.11 For the
+    GPU port](#For_the_GPU_port)
+- [5
+  Examples](#Examples)
+- [6
+  Patches](#Patches)
+  - [6.1 For
+    vasp.5.4.1.24Jun15](#For_vasp.5.4.1.24Jun15)
+  - [6.2 For
+    vasp.5.4.1.05Feb16 (with GPU
     support)](#For_vasp.5.4.1.05Feb16_(with_GPU_support))
   - [6.3 For
     vasp.5.4.4.18Apr17-6-g9f103f2a35](#For_vasp.5.4.4.18Apr17-6-g9f103f2a35)
-- [7 Related Sections](#Related_Sections)
+- [7 Related
+  Sections](#Related_Sections)
 
-## Requirements
+
+## Requirements\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Requirements">edit</a> \| (./index.php.md)\]
+
 For the compilation of the parallel version of VASP the following
 software is mandatory:
 
@@ -43,7 +76,11 @@ software is mandatory:
 - An implementation of MPI (Message Passing Interface).
 - Numerical libraries like BLAS, LAPACK, ScaLAPACK, and FFTW.
 
-## Build system
+## Build system\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Build system">edit</a> \| (./index.php.md)\]
+
 The build system of VASP (as of versions \>= 5.4.1) has the following
 structure:
 
@@ -60,48 +97,52 @@ structure:
 root/  
 Holds the high-level makefile, and several subdirectories.
 
-&nbsp;
+<!-- -->
 
 root/src  
 Holds the source files of VASP, and a low-level makefile.
 
-&nbsp;
+<!-- -->
 
 root/src/lib  
 Holds the source of the VASP library (used to be vasp.X.lib), and a
 low-level makefile.
 
-&nbsp;
+<!-- -->
 
 root/src/parser  
 Holds the source of the [LOCPROJ](../incar-tags/LOCPROJ.md) parser (as of
 versions \>= 5.4.4), and a low-level makefile.
 
-&nbsp;
+<!-- -->
 
 root/src/CUDA  
 Holds the source of the cuda-code that will be executed on the GPU by
 the [CUDA-C GPU port of
 VASP](CUDA-C_GPU_port_of_VASP.md).
 
-&nbsp;
+<!-- -->
 
 root/arch  
 Holds a collection of makefile.include.arch files.
 
-&nbsp;
+<!-- -->
 
 root/build  
 The different versions of VASP, i.e., the standard, gamma-only,
 non-collinear version will be build in separate subdirectories of this
 directory.
 
-&nbsp;
+<!-- -->
 
 root/bin  
 Here make will store the binaries.
 
-## How to make VASP
+## How to make VASP\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: How to make VASP">edit</a> \| (./index.php.md)\]
+
 Copy one of the `makefile.include.arch` files in `root/arch` to
 `root/makefile.include`. Take one that most closely reflects your system
 (hopefully). For instance, on a linux box with the Intel Composer suite:
@@ -141,20 +182,29 @@ respectively.
 **N.B.**: Unfortunately at this time we do not offer a GPU port of the
 gamma-only version yet.
 
-## Adapting makefile.include
-### Precompiler variables
+## Adapting makefile.include\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Adapting makefile.include">edit</a> \| (./index.php.md)\]
+
+### Precompiler variables\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Precompiler variables">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 CPP_OPTIONS  
 Specify the precompiler flags:
 
-&nbsp;
+<!-- -->
 
     CPP_OPTIONS=[-Dflag1 [-Dflag2] ... ]
 
 Take a lead from the `makefile.include.arch` files in **/arch**, and
-have a look at the [description of the commonly used VASP prcompiler
-flags](../redirects/Precompiler_flags.md).
+have a look at the <a href="/wiki/Precompiler_flags" class="mw-redirect"
+title="Precompiler flags">description of the commonly used VASP
+prcompiler flags</a>.
 
 - N.B.I: -DNGZhalf, -DwNGZhalf, -DNGXhalf, -DwNGXhalf are deprecated
   options. Building the standard, gamma-only, or non-collinear version
@@ -172,14 +222,18 @@ The command to invoke the precompiler you want to use, for instance:
 
 - Using cpp:
 
-&nbsp;
+<!-- -->
 
     CPP=/usr/bin/cpp -P -C -traditional $*$(FUFFIX) >$*$(SUFFIX) $(CPP_OPTIONS)
 
 - N.B.: This variable has to include \$(CPP_OPTIONS)! If not,
   CPP_OPTIONS will be ignored.
 
-### Compiler variables
+### Compiler variables\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Compiler variables">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 The Fortran compiler will be invoked as:
@@ -196,7 +250,7 @@ free-form source layout, without line-length limitation. For instance:
 
 - Using gfortran:
 
-&nbsp;
+<!-- -->
 
     FREE=-ffree-form -ffree-line-length-none
 
@@ -204,7 +258,7 @@ FC
 The command to invoke your Fortran compiler (e.g. gfortran, ifort,
 mpif90, mpiifort, ... ).
 
-&nbsp;
+<!-- -->
 
 FCL  
 The command that invokes the linker. In most cases:
@@ -214,14 +268,14 @@ The command that invokes the linker. In most cases:
 - Using the Intel composer suite (Fortan compiler + MKL libraries),
   typically:
 
-&nbsp;
+<!-- -->
 
     FCL=$(FC) -mkl
 
 OFLAG  
 The general level of optimization (default: OFLAG=-O2).
 
-&nbsp;
+<!-- -->
 
 FFLAGS  
 Additional compiler flags.
@@ -230,14 +284,14 @@ Additional compiler flags.
 
     FFLAGS+=-g 
 
-&nbsp;
+<!-- -->
 
 OFLAG_IN  
 (default: -O2) In the vast majority of makefiles this variable is set:
 
     OFLAG_IN=$(OFLAG)
 
-&nbsp;
+<!-- -->
 
 DEBUG  
 The optimization level with which the main program (main.F) will be
@@ -245,14 +299,18 @@ compiled, usually:
 
     DEBUG=-O0
 
-&nbsp;
+<!-- -->
 
 INCS  
 Use this variable to specify objects to be included in the sense of:
 
     INCS=-Idirectory-with-files-to-be-included
 
-### Linking against libraries
+### Linking against libraries\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Linking against libraries">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 The linker will be invoked as:
@@ -278,11 +336,15 @@ For other configurations please take a lead from the
 `makefile.include.arch` files under **/arch**, or look at the [examples
 below](#Examples).
 
-#### Note on LAPACK 3.6.0 and newer
+#### Note on LAPACK 3.6.0 and newer\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Note on LAPACK 3.6.0 and newer">edit</a> | (./index.php.md)\]
+
 As of LAPACK >=3.6 the subroutine DGEGV is deprecated and replaced by
-DGGEV \[[\[1\]](http://www.netlib.org/lapack/lapack-3.6.0.html)\].
-Linking against LAPACK 3.6 or higher will result in following error
-message:
+DGGEV \[<a href="http://www.netlib.org/lapack/lapack-3.6.0.html"
+class="external autonumber" rel="nofollow">[1]</a>\]. Linking against
+LAPACK 3.6 or higher will result in following error message:
 
     broyden.o: In function `__broyden_MOD_broyd':
     broyden.f90:(.text+0x4bb0): undefined reference to `dgegv_'
@@ -304,7 +366,11 @@ and following lines to `./src/symbol.inc`
 
 This will replace all calls of DGEGV by DGGEV before compilation.
 
-### The list of objects
+### The list of objects\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: The list of objects">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 The standard list of objects needed to compile VASP is given by the
@@ -319,14 +385,18 @@ by means of:
 N.B.: Several objects will \*have\* to be added in this manner (see the
 following section on "Fast-Fourier-Transforms).
 
-### Fast-Fourier-Transforms
+### Fast-Fourier-Transforms\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Fast-Fourier-Transforms">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 OBJECTS  
 Add the objects to be compiled (or linked againts) that provide the FFTs
 (may include static libraries of objects .a).
 
-&nbsp;
+<!-- -->
 
 INCS  
 In case one compiles using the fftw-library, i.e.,
@@ -347,7 +417,7 @@ Common choices are:
 - To use Intel's MKL wrapper of fftw (and compiling with CPP_OPTIONS= ..
   -DMPI ..):
 
-&nbsp;
+<!-- -->
 
     OBJECTS= fftmpiw.o fftmpi_map.o fftw3d.o fft3dlib.o \
              $(MKLROOT)/interfaces/fftw3xf/libfftw3xf_intel.a
@@ -355,7 +425,7 @@ Common choices are:
 
 - Or to use Juergen Furtmueller's FFT implementation (and -DMPI):
 
-&nbsp;
+<!-- -->
 
     OBJECTS= fftmpi.o fftmpi_map.o fft3dfurth.o fft3dlib.o
 
@@ -365,10 +435,18 @@ For other configurations please take lead from the
 `makefile.include.arch` files under **/arch** or look at the [examples
 below](#Examples).
 
-### Special rules
+### Special rules\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Special rules">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
-#### Special rules for the optimization level of FFT related objects
+#### Special rules for the optimization level of FFT related objects\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Special rules for the optimization level of FFT related objects">edit</a> | (./index.php.md)\]
+
 The makefiles of our old build systems contained a set of special rules
 for the optimization level allowed in the compilation of the FFT related
 objects. In the current build system these special rules can be
@@ -377,7 +455,11 @@ duplicated by adding the following:
     OBJECTS_O1 += fft3dfurth.o fftw3d.o fftmpi.o fftmpiw.o
     OBJECTS_O2 += fft3dlib.o
 
-#### Special rules in general
+#### Special rules in general\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Special rules in general">edit</a> | (./index.php.md)\]
+
 The current `src/makefile` contains a set of recipes to allow for the
 compilation of objects at different levels of optimization (other than
 the general level specified by OFLAG). These recipes replace the special
@@ -392,12 +474,12 @@ where x stands for: 1, 2, 3, or IN.
 FFLAGS_x  
 Default: FFLAGS_x=\$(FFLAGS), for x=1, 2, 3, and IN.
 
-&nbsp;
+<!-- -->
 
 OFLAG_x  
 Default: OFLAG_x=-Ox (for x=1, 2, 3), and OFLAG_IN=-O2
 
-&nbsp;
+<!-- -->
 
 INCS_x  
 Default: INCS_x=\$(INCS), for x=1, 2, 3, and IN.
@@ -421,7 +503,11 @@ special rules) use the following construct:
     SOURCE_O1=
     OBJECTS_O1= .. your list of objects ..
 
-### For the VASP library (`lib`)
+### For the VASP library (`lib`)\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: For the VASP library (lib)">edit</a> \| (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 CPP_LIB  
@@ -430,7 +516,7 @@ set:
 
     CPP_LIB=$(CPP)
 
-&nbsp;
+<!-- -->
 
 FC_LIB  
 The command to invoke your Fortran compiler. In most cases:
@@ -447,7 +533,7 @@ optimization. In most cases:
 
     FFLAGS_LIB=-O1
 
-&nbsp;
+<!-- -->
 
 FREE_LIB  
 Specify the options that your Fortran compiler needs for it to accept
@@ -456,14 +542,14 @@ it will suffise to set:
 
     FREE_LIB=$(FREE)
 
-&nbsp;
+<!-- -->
 
 CC_LIB  
 The command to invoke your C compiler (e.g. gcc, icc, ..).
 
 N.B.: the library can be compiled without MPI support.
 
-&nbsp;
+<!-- -->
 
 CFLAGS_LIB  
 C compiler flags, including a specification of the level of
@@ -471,7 +557,7 @@ optimization. In most cases:
 
     CFLAGS_LIB=-O
 
-&nbsp;
+<!-- -->
 
 OBJECTS_LIB  
 List of "non-standard" objects to be added to the library. In most
@@ -484,7 +570,11 @@ well, i.e.,
 
     OBJECTS_LIB= .. getshmem.o ..
 
-### For the LOCPROJ-parser (`parser`)
+### For the LOCPROJ-parser (`parser`)\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: For the LOCPROJ-parser (parser)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 CXX_PARS  
@@ -498,32 +588,49 @@ and needs to be linked against:
 
     LLIBS += -Lparser -lparser -lstdc++
 
-### For the interface to Wannier90 (optional)
+
+### For the interface to Wannier90 (optional)\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: For the interface to Wannier90 (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
-To include the interface to Wannier90 ([-DVASP2WANNIER90 or
--DVASP2WANNIER90v2](../redirects/Precompiler_flags.md)),
+To include the interface to Wannier90
+(<a href="/wiki/Precompiler_flags#wannier90" class="mw-redirect"
+title="Precompiler flags">-DVASP2WANNIER90 or -DVASP2WANNIER90v2</a>),
 one needs to specify:
 
     LLIBS += /your-wannier90-directory/libwannier.a
 
-And one needs to download [Wannier90](http://www.wannier.org) and
-compile `libwannier.a`.
+And one needs to download
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">Wannier90</a> and compile `libwannier.a`.
 
-### For `libbeef` (optional)
+
+### For `libbeef` (optional)\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: For libbeef (optional)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 In case one wants to compile VASP with the BEEF van-der-Waals
 functionals
-([-Dlibbeef](../redirects/Precompiler_flags.md)), one
-needs to add:
+(<a href="/wiki/Precompiler_flags#libbeef" class="mw-redirect"
+title="Precompiler flags">-Dlibbeef</a>), one needs to add:
 
     LLIBS += -Lyour-libbeef-directory -lbeef
 
-And one needs to [download and compile
-libbeef](https://github.com/vossjo/libbeef), of course.
+And one needs to
+<a href="https://github.com/vossjo/libbeef" class="external text"
+rel="nofollow">download and compile libbeef</a>, of course.
 
-### For the GPU port
+### For the GPU port\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: For the GPU port">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 CUDA_ROOT  
@@ -531,21 +638,21 @@ Location of CUDA toolkit install. For example:
 
     CUDA_ROOT := /opt/cuda
 
-&nbsp;
+<!-- -->
 
 CUDA_LIB  
 CUDA toolkit libraries to link to. Typically:
 
     CUDA_LIB := -L$(CUDA_ROOT)/lib64 -lnvToolsExt -lcudart -lcuda -lcufft -lcublas
 
-&nbsp;
+<!-- -->
 
 NVCC  
 Location of CUDA compiler and flags. Typically:
 
     NVCC := $(CUDA_ROOT)/bin/nvcc -g
 
-&nbsp;
+<!-- -->
 
 OBJECTS_GPU  
 Add the objects to be compiled (or linked againts) that provide the FFTs
@@ -553,7 +660,7 @@ Add the objects to be compiled (or linked againts) that provide the FFTs
 
     OBJECTS_GPU = fftmpiw.o fftmpi_map.o fft3dlib.o fftw3d_gpu.o fftmpiw_gpu.o
 
-&nbsp;
+<!-- -->
 
 GENCODE_ARCH  
 CUDA compiler options to generate code for your particular GPU
@@ -570,10 +677,11 @@ For Maxwell:
 Multiple \`-gencode\` statements can be compiled to create
 cross-platform executables.
 
-For details see the [NVIDIA nvcc
-documentation](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc).
+For details see the
+<a href="http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc"
+class="external text" rel="nofollow">NVIDIA nvcc documentation</a>.
 
-&nbsp;
+<!-- -->
 
 MPI_INC  
 Path to MPI include files so the CUDA compiler can find them. For
@@ -583,7 +691,7 @@ example:
 
 These can often be found with `mpicc --show`.
 
-&nbsp;
+<!-- -->
 
 CPP_GPU  
 Preprocessor options for GPU compilation.
@@ -597,8 +705,8 @@ RPROJ_MU.
 
 Optional:
 
-Set `-DCUFFT_MIN=N` to intercept any FFT calls of size greater than *N*³
-and evaluate on GPU.
+Set `-DCUFFT_MIN=N` to intercept any FFT calls of size greater than
+*N*<sup>3</sup> and evaluate on GPU.
 
 Experimental:
 
@@ -613,19 +721,34 @@ If using the experimental MAGMA support, path to MAGMA 1.6. Typically:
 
     MAGMA_ROOT := /opt/magma/lib
 
-## Examples
+## Examples\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Examples">edit</a> \| (./index.php.md)\]
+
 - [makefile.include.linux_intel](Makefile.include.linux_intel.md)
 - [makefile.include.linux_gfortran](Makefile.include.linux_gfortran.md)
 - [makefile.include.linux_intel_cuda](Makefile.include.linux_intel_cuda.md)
 
-## Patches
-### For vasp.5.4.1.24Jun15
+## Patches\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=20"
+class="mw-editsection-visualeditor"
+title="Edit section: Patches">edit</a> \| (./index.php.md)\]
+
+### For vasp.5.4.1.24Jun15\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=21"
+class="mw-editsection-visualeditor"
+title="Edit section: For vasp.5.4.1.24Jun15">edit</a> \| (./index.php.md)\]
+
 Unfortunately several bugs were reported for vasp.5.4.1.24Jun15. To fix
 them download the patch(es) below:
 
-- [patch.5.4.1.08072015.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.1.08072015.gz)
-- [patch.5.4.1.27082015.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.1.27082015.gz)
-- [patch.5.4.1.06112015.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.1.06112015.gz)
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.1.08072015.gz"
+  class="external text" rel="nofollow">patch.5.4.1.08072015.gz</a>
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.1.27082015.gz"
+  class="external text" rel="nofollow">patch.5.4.1.27082015.gz</a>
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.1.06112015.gz"
+  class="external text" rel="nofollow">patch.5.4.1.06112015.gz</a>
 
 To apply these patch(es) gunzip the patch file(s) and
 
@@ -633,12 +756,17 @@ To apply these patch(es) gunzip the patch file(s) and
 
 within your vasp.X.X.X root-directory.
 
-### For vasp.5.4.1.05Feb16 (with GPU support)
+### For vasp.5.4.1.05Feb16 (with GPU support)\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=22"
+class="mw-editsection-visualeditor"
+title="Edit section: For vasp.5.4.1.05Feb16 (with GPU support)">edit</a> \| (./index.php.md)")\]
+
 The following patch improves the mapping between MPI-ranks and GPUs on
 multi-node/multi-GPU systems (the issue is performance only, not a
 bugfix):
 
-- [patch.5.4.1.14032016.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.1.14032016.gz)
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.1.14032016.gz"
+  class="external text" rel="nofollow">patch.5.4.1.14032016.gz</a>
 
 The following patch unfortunately does address several bugs:
 
@@ -652,7 +780,8 @@ The following patch unfortunately does address several bugs:
 **N.B.**: Unfortunately this bugfix affects the total energy. Effects
 are expected to be negligible except for heavy elements.
 
-- [patch.5.4.1.03082016.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.1.03082016.gz)
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.1.03082016.gz"
+  class="external text" rel="nofollow">patch.5.4.1.03082016.gz</a>
 
 To apply these patches gunzip the patch files and
 
@@ -661,7 +790,11 @@ To apply these patches gunzip the patch files and
 
 within your vasp.X.X.X root-directory.
 
-### For vasp.5.4.4.18Apr17-6-g9f103f2a35
+### For vasp.5.4.4.18Apr17-6-g9f103f2a35\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=23"
+class="mw-editsection-visualeditor"
+title="Edit section: For vasp.5.4.4.18Apr17-6-g9f103f2a35">edit</a> \| (./index.php.md)\]
+
 The following patch addresses a few issues:
 
 1.  Fixes a bug in the stress term when using the SCAN functional in
@@ -674,7 +807,8 @@ and adds support for:
 
 1.  The CX13 vdW-DFT functional.
 
-- [patch.5.4.4.16052018.gz](http://cms.mpi.univie.ac.at/patches/patch.5.4.4.16052018.gz)
+- <a href="http://cms.mpi.univie.ac.at/patches/patch.5.4.4.16052018.gz"
+  class="external text" rel="nofollow">patch.5.4.4.16052018.gz</a>
 
 To apply this patch gunzip the patch file and
 
@@ -682,9 +816,15 @@ To apply this patch gunzip the patch file and
 
 within your vasp.X.X.X root-directory.
 
-## Related Sections
-[Precompiler flags](../redirects/Precompiler_flags.md),
-[CUDA-C GPU port of
+## Related Sections\[<a
+href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=24"
+class="mw-editsection-visualeditor"
+title="Edit section: Related Sections">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Precompiler_flags" class="mw-redirect"
+title="Precompiler flags">Precompiler flags</a>, [CUDA-C GPU port of
 VASP](CUDA-C_GPU_port_of_VASP.md),
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LWRITE_SPN
-LWRITE_SPN = .TRUE. \| .FALSE.  
+
+
+LWRITE_SPN = .TRUE. \|
+.FALSE.  
 Default: **LWRITE_SPN** = .FALSE. 
 
 Description: Write **wannier90.spn** file for noncollinear calculations.
@@ -24,11 +27,15 @@ The file is formatted, and the appropriate line
 |----|
 | **Warning:** Only the default setting for [SAXIS](SAXIS.md) is supported. |
 
-|                                                |
-|------------------------------------------------|
+|  |
+|----|
 | **Mind:** Available for VASP version \> 6.4.2. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LWRITE_SPN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LWANNIER90](LWANNIER90.md),
 [LWRITE_UNK](LWRITE_UNK.md),
 [LWRITE_MMN_AMN](LWRITE_MMN_AMN.md),
@@ -37,3 +44,5 @@ The file is formatted, and the appropriate line
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LWANNIER90-_incategory-Examples)
+
+

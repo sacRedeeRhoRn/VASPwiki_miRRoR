@@ -2,42 +2,71 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Vibrational frequencies of CO on Ni 111 surface
+
+
+
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
-vibrational frequencies of CO on Ni 111 surface \> [STM of
-graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+vibrational frequencies of CO on Ni
+111 surface \> [STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the vibrational frequencies of CO@Ni(111) (on top).
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     Ni - (111) + CO on-top                  
        3.53000000000000     
          0.7071067800000000    0.0000000000000000    0.0000000000000000
@@ -71,7 +100,11 @@ N.B.: this [POSCAR](../input-files/POSCAR.md) is essentially the result
 the [CO on Ni 111
 surface](CO_on_Ni_111_surface.md) example.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
      SYSTEM = CO on Ni111 - frequencies
         
     general:
@@ -92,18 +125,26 @@ surface](CO_on_Ni_111_surface.md) example.
 - Reuse of the mixer between ionic steps
   ([MAXMIX](../incar-tags/MAXMIX.md)) to save time.
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     k-points
     0
     Monkhorst-Pack
     9 9 1
     0 0 0
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - Finite differences give the following additional output in the
   [OUTCAR](../output-files/OUTCAR.md) fiel for frequency calculations:
 
-&nbsp;
+<!-- -->
 
     Finite differences progress:
      Degree of freedom:   1/  2
@@ -111,11 +152,12 @@ surface](CO_on_Ni_111_surface.md) example.
      Total:               1/  4
 
 - After the first calculation for the equilibrium geometry,
-  [NFREE](../incar-tags/NFREE.md) displacements ($\pm$[POTIM](../incar-tags/POTIM.md)) are performed for each degree
-  of freedom. From these displacements the dynamical matrix is set up
-  and diagonalized.
+  [NFREE](../incar-tags/NFREE.md) displacements
+  ($\pm$[POTIM](../incar-tags/POTIM.md)) are performed for
+  each degree of freedom. From these displacements the dynamical matrix
+  is set up and diagonalized.
 
-&nbsp;
+<!-- -->
 
 - At the end of the [OUTCAR](../output-files/OUTCAR.md) file the following
   are listed:
@@ -124,13 +166,13 @@ surface](CO_on_Ni_111_surface.md) example.
   - The eigenfrequencies.
   - Eigenvectors (first normalized and then mass-weighted).
 
-&nbsp;
+<!-- -->
 
 - The example output for the eigenvectors and eigenvalues of the
   dynamical matrix from the [OUTCAR](../output-files/OUTCAR.md) file should
   look like the following:
 
-&nbsp;
+<!-- -->
 
     Eigenvectors and eigenvalues of the dynamical matrix
     ----------------------------------------------------
@@ -176,26 +218,38 @@ to
 Also test whether you need to decrease [EDIFF](../incar-tags/EDIFF.md) to
 1E-8.
 
-## Download
-[COonNi111_freq.tgz](https://vasp.at/wiki/images/4/40/COonNi111_freq.tgz "COonNi111 freq.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Vibrational_frequencies_of_CO_on_Ni_111_surface&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/4/40/COonNi111_freq.tgz" class="internal"
+title="COonNi111 freq.tgz">COonNi111_freq.tgz</a>
+
 
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
-[Ni 100 surface DOS](Ni_100_surface_DOS.md) \>
+[Ni 100 surface
+DOS](Ni_100_surface_DOS.md) \>
 [Ni 100 surface
 bandstructure](Ni_100_surface_bandstructure.md) \>
 [Ni 111 surface
 relaxation](Ni_111_surface_relaxation.md) \>
 [CO on Ni 111
-surface](CO_on_Ni_111_surface.md) \> [Ni 111
-surface high
+surface](CO_on_Ni_111_surface.md) \>
+[Ni 111 surface high
 precision](Ni_111_surface_high_precision.md) \>
 [partial DOS of CO on Ni 111
 surface](Partial_DOS_of_CO_on_Ni_111_surface.md) \>
-vibrational frequencies of CO on Ni 111 surface \> [STM of
-graphite](STM_of_graphite.md) \> [STM of
-graphene](STM_of_graphene.md) \> [collective jumps
-of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
+vibrational frequencies of CO on Ni
+111 surface \> [STM of
+graphite](STM_of_graphite.md) \>
+[STM of
+graphene](STM_of_graphene.md) \>
+[collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band
 Calculation](https://vasp.at/wiki/index.php/Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation "Collective jumps of a Pt adatom on fcc-Pt (001): Nudged Elastic Band Calculation")
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

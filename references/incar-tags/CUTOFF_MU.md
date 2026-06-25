@@ -2,29 +2,36 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CUTOFF_MU
-CUTOFF_MU = \[real\] ( \[real\] ) 
+
+
+CUTOFF_MU = \[real\] (
+\[real\] ) 
 
 |  |  |  |
 |----|----|----|
 | Default: **CUTOFF_MU** | = 0.8 \* Fermi level of a system with [NUM_WANN](NUM_WANN.md) orbitals occupied |  |
 
-Description: CUTOFF_MU specifies the energy cutoff
-$\mu$ in eV for the function specified
-by CUTOFF_MU.
+Description: CUTOFF_MU
+specifies the energy cutoff $\mu$ in eV
+for the function specified by
+CUTOFF_MU.
 
 ------------------------------------------------------------------------
 
-The value $\mu$ of CUTOFF_MU corresponds
-to the energy cutoff of the cutoff function used to obtain Wannier
-functions with the [one-shot
-method](https://vasp.at/wiki/index.php/Wannier_functions) "Wannier functions").
-The meaning of $\mu$ depends on the
-[CUTOFF_TYPE](CUTOFF_TYPE.md) tag.
+The value $\mu$ of
+CUTOFF_MU corresponds to the
+energy cutoff of the cutoff function used to obtain Wannier functions
+with the <a
+href="/wiki/Wannier_functions#One-shot_single_value_decomposition_(SVD)"
+class="mw-redirect" title="Wannier functions">one-shot method</a>. The
+meaning of $\mu$ depends
+on the [CUTOFF_TYPE](CUTOFF_TYPE.md) tag.
 
 For spin-polarized calculations ([`ISPIN`](ISPIN.md)` = 2`),
-two values can be specified for CUTOFF_MU, one for each spin channel. If
-only a single value is specified, it will be used for both spin
-channels.
+two values can be specified for
+CUTOFF_MU, one for each spin
+channel. If only a single value is specified, it will be used for both
+spin channels.
 
 The default value is computed by first determining the Fermi level of
 the system if it had [NUM_WANN](NUM_WANN.md) orbitals
@@ -35,10 +42,16 @@ determine the unitary transformation $U_{mn\mathbf{k}}$ from Bloch states to Wan
 |----|
 | **Tip:** Careful tuning of this parameter is required to obtain a good Wannierization. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=CUTOFF_MU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [CUTOFF_TYPE](CUTOFF_TYPE.md),
 [CUTOFF_SIGMA](CUTOFF_SIGMA.md),
 [LSCDM](LSCDM.md), [LOCPROJ](LOCPROJ.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-CUTOFF_MU-_incategory-Examples)
+
+

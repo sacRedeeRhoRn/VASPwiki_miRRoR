@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LPARD
+
+
 LPARD = \[logical\]  
 Default: **LPARD** = .FALSE. 
 
@@ -10,13 +12,13 @@ Description: Determines whether partial (band and/or
 
 ------------------------------------------------------------------------
 
-An LPARD run is a postprocessing step that requires a pre-converged
-calculation. It writes the partial density, or multiple partial charge
-densities, to one [PARCHG](../output-files/PARCHG.md) file or several
-PARCHG.\*.\* files, depending on the setting of
-[LSEPB](LSEPB.md) and [LSEPK](LSEPK.md). If
-[LPARDH5](LPARDH5.md) = .TRUE., the output is redirected
-from [PARCHG](../output-files/PARCHG.md) to
+An LPARD run is a
+postprocessing step that requires a pre-converged calculation. It writes
+the partial density, or multiple partial charge densities, to one
+[PARCHG](../output-files/PARCHG.md) file or several PARCHG.\*.\* files,
+depending on the setting of [LSEPB](LSEPB.md) and
+[LSEPK](LSEPK.md). If [LPARDH5](LPARDH5.md) =
+.TRUE., the output is redirected from [PARCHG](../output-files/PARCHG.md) to
 [vaspout.h5](../output-files/Vaspout.h5.md).
 
 |  |
@@ -37,15 +39,22 @@ contributing **k** points through [KPUSE](KPUSE.md).
 |----|
 | **Mind:** If only the LPARD tag is set, without any other tags to specify the separation of charge, then the [NBMOD](NBMOD.md) tag defaults to -1. The valence charge density (without the augmentation charges) is then written to the [CHGCAR](../input-files/CHGCAR.md) file, and no other partial charge output is generated. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LPARD&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IBAND](IBAND.md), [EINT](EINT.md),
 [NBMOD](NBMOD.md), [KPUSE](KPUSE.md),
 [LSEPB](LSEPB.md), [LSEPK](LSEPK.md),
 [LPARDH5](LPARDH5.md), [PARCHG](../output-files/PARCHG.md),
-[vaspout.h5](../output-files/Vaspout.h5.md), [Band-decomposed charge
-densities](../redirects/Band-decomposed_charge_densities.md)
+[vaspout.h5](../output-files/Vaspout.h5.md),
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">Band-decomposed charge
+densities</a>
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LPARD-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

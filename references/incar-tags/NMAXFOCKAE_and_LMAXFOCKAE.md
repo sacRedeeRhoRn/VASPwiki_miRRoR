@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NMAXFOCKAE and LMAXFOCKAE
+
+
 **NMAXFOCKAE** = 1\|2 
 
 |                         |     |     |
@@ -24,14 +26,18 @@ as well as many-body post DFT methods (GW, RPA, MP2, etc.).
 
 ------------------------------------------------------------------------
 
-## Detailed Discussion
+## Detailed Discussion\[<a
+href="/wiki/index.php?title=NMAXFOCKAE_and_LMAXFOCKAE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Detailed Discussion">edit</a> \| (./index.php.md)\]
+
 In the PAW method, the difference between the charge density of the
 all-electron partial waves $\phi_\beta$
 and the pseudo partial waves $\tilde \phi_\beta$
 
-$Q_{\alpha\beta}({\mathbf r})=
-\phi^\*_\alpha({\mathbf r})\phi_\beta({\mathbf r}) - \tilde
-\phi^\*_\alpha({\mathbf r})\tilde \phi_\beta({\mathbf r})$
+$Q_{\alpha\beta}({\mathbf r})= \phi^\*_\alpha({\mathbf
+r})\phi_\beta({\mathbf r}) - \tilde \phi^\*_\alpha({\mathbf r})\tilde
+\phi_\beta({\mathbf r})$
 
 is usually treated on spherical grids centered at each atom (one-center
 terms inside the PAW spheres, see [PAW
@@ -61,15 +67,14 @@ implemented. This means shape restoration is not required and should not
 change the results.
 
 To achieve the improved treatment on the plane wave grid,
-$Q_{\alpha\beta}({\mathbf r})$ is
-Fourier transformed to reciprocal space $Q_{\alpha\beta}(q)$ and then expanded in a set of orthogonal
-functions localized at each atomic site. These augmentation charges are
-then added to the pseudo charge densities on the plane wave grid. Shape
-restoration is only accurate up to a certain plane wave cutoff,
-typically about 150 eV for **NMAXFOCKAE** =1, and 400 eV for
-**NMAXFOCKAE** = 2. Experience shows that **NMAXFOCKAE** =1 is
-sufficient to predict very accurate energy differences and quite
-accurate quasiparticle energies.
+$Q_{\alpha\beta}({\mathbf r})$ is Fourier transformed
+to reciprocal space $Q_{\alpha\beta}(q)$ and then expanded in a set of orthogonal functions
+localized at each atomic site. These augmentation charges are then added
+to the pseudo charge densities on the plane wave grid. Shape restoration
+is only accurate up to a certain plane wave cutoff, typically about 150
+eV for **NMAXFOCKAE** =1, and 400 eV for **NMAXFOCKAE** = 2. Experience
+shows that **NMAXFOCKAE** =1 is sufficient to predict very accurate
+energy differences and quite accurate quasiparticle energies.
 
   
 
@@ -117,10 +122,15 @@ with *L*-quantum numbers up to 4), whereas for f elements, users should
 test whether **LMAXFOCKAE**= 6 is required.
 
 More details on shape restoration are explained in
-Ref.^([\[1\]](#cite_note-shishkin:prb:2006-1)) and
-^([\[2\]](#cite_note-unzog:prb:2022-2)).
+Ref.<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)</sup>
+and
+<sup>[\[2\]](#cite_note-unzog:prb:2022-2)</sup>.
 
-## Usefull Settings
+## Usefull Settings\[<a
+href="/wiki/index.php?title=NMAXFOCKAE_and_LMAXFOCKAE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Usefull Settings">edit</a> \| (./index.php.md)\]
+
 In summary, useful manual settings of **NMAXFOCKAE** and **LMAXFOCKAE**
 are:
 
@@ -134,7 +144,11 @@ are:
   **LMAXFOCKAE** suffices (OUTCAR file). Use this setting only with
   care, as it can result in very noisy data for coarse FFT grids.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NMAXFOCKAE_and_LMAXFOCKAE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LMAXFOCK](LMAXFOCK.md),
 [QMAXFOCKAE](QMAXFOCKAE.md),
 [LFOCKAEDFT](LFOCKAEDFT.md)
@@ -144,10 +158,16 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-NMAXFOCKAE-_incategory-Examp
 
 ------------------------------------------------------------------------
 
-1.  [↑](#cite_ref-shishkin:prb:2006_1-0) [M. Shishkin and G. Kresse,
-    Phys. Rev. B **74**, 035101
-    (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
-2.  [↑](#cite_ref-unzog:prb:2022_2-0) [M. Unzog, A. Tal, G. Kresse,
-    *X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133
-    (2022).](http://doi.org/10.1103/PhysRevB.106.155133)
+
+1.  [↑](#cite_ref-shishkin:prb:2006_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
+    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
+    Rev. B <strong>74</strong>, 035101 (2006).</a>
+2.  [↑](#cite_ref-unzog:prb:2022_2-0)
+    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
+    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
+    <em>X-ray absorption using the projector augmented-wave method and the
+    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
+    (2022).</a>
+
+

@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_MOPOT_IJM
-ML_MOPOT_IJM = \[integer array\]  
+
+
+ML_MOPOT_IJM = \[integer
+array\]  
 Default: **ML_MOPOT_IJM** = none 
 
 Description: Specifies the list of Morse potential pairs used as
@@ -28,7 +31,11 @@ after the other.
 
   
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_MOPOT_IJM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LCOUPLE](ML_LCOUPLE.md),
 [ML_ICOUPLE](ML_ICOUPLE.md),
@@ -48,3 +55,5 @@ after the other.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

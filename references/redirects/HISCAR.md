@@ -2,6 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # HISCAR
+
+
+
 Redirect to:
 
-- [ML HISCAR](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=ML_HISCAR&amp;redirect=no"
+  class="mw-redirect" title="ML HISCAR">ML HISCAR</a>
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NBANDSEXACT
+
+
 NBANDSEXACT = \[integer\] 
 
 |  |  |  |
@@ -9,13 +11,14 @@ NBANDSEXACT = \[integer\] 
 | Default: **NBANDSEXACT** | = -1 | for [LALL_IN_ONE](LALL_IN_ONE.md)=.FALSE. |
 |  | = maximum number of plane waves | for [LALL_IN_ONE](LALL_IN_ONE.md)=.TRUE. |
 
-Description: NBANDSEXACT specifies the number of bands used in the
-all-in-one mode of [many-body perturbation
-theory](../redirects/Many-body_perturbation_theory.md)
+Description: NBANDSEXACT
+specifies the number of bands used in the all-in-one mode of
+<a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+title="Many-body perturbation theory">many-body perturbation theory</a>
 calculations.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** available as of VASP.6.4.0 |
 
 ------------------------------------------------------------------------
@@ -23,11 +26,13 @@ calculations.
 In the all-in-one mode, VASP automatically performs the necessary DFT
 steps prior to the many-body perturbation theory (MBPT) calculation,
 i.e. a DFT calculation with [NBANDS](NBANDS.md), followed by
-an exact diagonalization of the Kohn-Sham Hamiltonian with NBANDSEXACT
-bands. Note, NBANDSEXACT is set by default to the maximum number of
-plane-waves given by the chosen energy cutoff for the orbitals
-[ENCUT](ENCUT.md). In the all-in-one mode, the actual GW/RPA
-calculation is also performed with NBANDSEXACT bands. If
+an exact diagonalization of the Kohn-Sham Hamiltonian with
+NBANDSEXACT bands. Note,
+NBANDSEXACT is set by default
+to the maximum number of plane-waves given by the chosen energy cutoff
+for the orbitals [ENCUT](ENCUT.md). In the all-in-one mode,
+the actual GW/RPA calculation is also performed with
+NBANDSEXACT bands. If
 [NBANDS_WAVE](NBANDS_WAVE.md) is not set, all orbitals
 are written to [WAVECAR](../input-files/WAVECAR.md), which potentially
 becomes huge in file size.
@@ -40,10 +45,16 @@ The all-in-one mode is automatically enabled for
 [ALGO](ALGO.md)=\[EV\]GW\[0\]R, RPA\[R\],ACFDT\[R\] if
 [NBANDS](NBANDS.md) is not set.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NBANDSEXACT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md), [NBANDS](NBANDS.md)
 [NBANDS_WAVE](NBANDS_WAVE.md)
 [LALL_IN_ONE](LALL_IN_ONE.md)
 [IALL_IN_ONE](IALL_IN_ONE.md)
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PHON_DOS
+
+
 PHON_DOS = 0 \| 1 \| 2 
 
 |                       |     |     |
@@ -28,11 +30,14 @@ When line mode in the [QPOINTS](../input-files/QPOINTS.md) file and
 gaussian smearing (PHON_DOS=1) is used, the phonon density of states
 will still be computed but the results are not reliable.
 
-|                                            |
-|--------------------------------------------|
+|  |
+|----|
 | **Mind:** Only available as of VASP 6.4.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=PHON_DOS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [QPOINTS](../input-files/QPOINTS.md),
 [PHON_NWRITE](PHON_NWRITE.md),
 [LPHON_POLAR](LPHON_POLAR.md),
@@ -44,3 +49,5 @@ will still be computed but the results are not reliable.
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LPHON_DISPERSION-_incategory-Examples)
+
+

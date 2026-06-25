@@ -2,7 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Ensembles
-### Introduction
+
+
+### Introduction\[<a
+href="/wiki/index.php?title=Category:Ensembles&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Introduction">edit</a> \| (./index.php.md)\]
+
 A central concept of statistical mechanics is the ensemble. An ensemble
 consists of a large number of virtual copies of the system of interest.
 An ensemble will always depend on three thermodynamic state variables,
@@ -17,7 +23,11 @@ simulations. The molecular-dynamics approach generates the
 configurations for the ensemble by integrating Newton's equations of
 motion.
 
-### Theory
+### Theory\[<a
+href="/wiki/index.php?title=Category:Ensembles&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Theory">edit</a> \| (./index.php.md)\]
+
 In this section various ensembles will be introduced. To describe an
 ensemble mathematically the partition function will be used. The
 partition function is the central mathematical entity in statistical
@@ -40,24 +50,22 @@ agreement with the NVE constraints
 $\Omega(N,V,E) = \sum_{E-\delta E <
 E(N,V,\\\mathbf{r}_{i}\\,\\\mathbf{p}_{i}\\) < E + \delta E } 1.$
 
-In this equation $\delta E$ denotes a
-infinitesimal energy. $\\\mathbf{r}_{i}\\$ denotes the set of particle positions and
-$\\\mathbf{p}_{i}\\$ are the conjugate
-momenta. The sum is over all particle positions and momenta giving an
-energy in agreement with the energy constraint. Therefore,
-$\Omega(N,V,E)$ is the number of
-microstates under the given conditions. From the microcanonical
-partition function it is possible to obtain the entropy by
+In this equation $\delta E$
+denotes a infinitesimal energy. $\\\mathbf{r}_{i}\\$ denotes the set of particle positions and
+$\\\mathbf{p}_{i}\\$ are the conjugate momenta. The sum
+is over all particle positions and momenta giving an energy in agreement
+with the energy constraint. Therefore, $\Omega(N,V,E)$ is the number of microstates under the given
+conditions. From the microcanonical partition function it is possible to
+obtain the entropy by
 
 $S(N,V,E) = k_{B}log\Omega(N,V,E),$
 
-where $k_{B}$ is the Boltzmann
-constant. The probabilities for the different micro states (r) are given
-by
+where $k_{B}$ is
+the Boltzmann constant. The probabilities for the different micro states
+(r) are given by
 
-$P_{r}(N,V,E) = \begin{cases}
-\frac{1}{\Omega(N,V,E)}\\ for\\ E-\delta E < E < E + \delta E \\ 0\\
-else \end{cases}$.
+$P_{r}(N,V,E) = \begin{cases} \frac{1}{\Omega(N,V,E)}\\ for\\ E-\delta E
+< E < E + \delta E \\ 0\\ else \end{cases}$.
 
 The microcanonical ensemble is a theoretical realization of a N particle
 system which is placed in a box with fixed volume and fully isolated
@@ -77,9 +85,8 @@ be
 $Z(N,V,T) = \sum_{r}e^{-\beta
 E(N,V,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)} 1$,
 
-where $\beta$ is the inverse temperature
-$\frac{1}{k_{B}T}$. The probability for
-a single microstate r is
+where $\beta$ is the
+inverse temperature $\frac{1}{k_{B}T}$. The probability for a single microstate r is
 
 $P_{r}(N,V,T) = \frac{1}{Z(N,V,T)}e^{-\beta
 E(N,V,\\\mathbf{r}_{i}\\,\\\mathbf{p}_{i}\\)}$.
@@ -92,8 +99,8 @@ $F(N,V,T) = -k_{B}logZ(N,V,T)$
 and the average energy of the system under canonical conditions can be
 computed as
 
-$\langle E \rangle = -k_{B}T\frac{\partial
-F(N,V,T)}{\partial \beta}= \sum_{r} \frac{e^{-\beta
+$\langle E \rangle = -k_{B}T\frac{\partial F(N,V,T)}{\partial \beta}=
+\sum_{r} \frac{e^{-\beta
 E(N,V,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)}E(N,V,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)}{Z}$.
 
 The canonical ensemble can be visualized as N particle system in a fixed
@@ -101,8 +108,8 @@ volume box which is allowed to exchange thermal energy with a huge heat
 bath surrounding it. Therefore, in equilibrium the instantaneous
 temperature (temperature derived from kinetic energy) is fluctuating
 around the heat bath temperature. Temperature fluctuations are
-proportional to $N^{-1/2}$. Hence, in
-the thermodynamic limit ($N \rightarrow \infty$) temperature fluctuations vanish. There are several
+proportional to $N^{-1/2}$.
+Hence, in the thermodynamic limit ($N \rightarrow \infty$) temperature fluctuations vanish. There are several
 techniques to realize the canonical ensemble in a computer simulation.
 The configurations in a NVT ensemble can be sampled from a
 [molecular-dynamics](../misc/NVT_ensemble.md) run.
@@ -118,10 +125,9 @@ can be derived to be
 $Y(N,p,T) = \sum_{r}e^{-\beta\left(
 E(N,V,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)+pV_{r}\right)}$,
 
-where $\beta$ is the inverse temperature
-$\frac{1}{k_{B}T}$ and pV is the
-contribution to the energy due to volume work. The probability for a
-single microstate r is
+where $\beta$ is the
+inverse temperature $\frac{1}{k_{B}T}$ and pV is the contribution to the energy due to volume
+work. The probability for a single microstate r is
 
 $P_{r}(N,p,T) = \frac{1}{Y(Np,T)}e^{-\beta
 \left(E(N,p,\\\mathbf{r}_{i}\\,\\\mathbf{p}_{i}\\)+pV_{r}\right)}$.
@@ -134,8 +140,8 @@ $G(N,p,T) = -k_{B}logY(Np,T)$
 and the average internal energy of the system under isothermal–isobaric
 conditions can be computed as
 
-$\langle E \rangle = -k_{B}T\frac{\partial
-G(N,p,T)}{\partial \beta}= \sum_{r} \frac{e^{-\beta
+$\langle E \rangle = -k_{B}T\frac{\partial G(N,p,T)}{\partial \beta}=
+\sum_{r} \frac{e^{-\beta
 \left(E(N,p,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)+pV_{r}\right)}E(N,p,\\\mathbf{r}_{r}\\,\\\mathbf{p}_{r}\\)}{Y}$.
 
 The isothermal–isobaric ensemble can be visualized as N particle system
@@ -164,9 +170,8 @@ H<H(N,p,\\\mathbf{r}_{i}\\,\\\mathbf{p}_{i}\\)<H+\delta H} 1$.
 
 The probability for a single microstate r is
 
-$P_{r}(N,p,H) = \begin{cases}
-\frac{1}{X(N,p,H)}\\ for\\ H-\delta H < H < E + \delta H \\ 0\\ else
-\end{cases}$.
+$P_{r}(N,p,H) = \begin{cases} \frac{1}{X(N,p,H)}\\ for\\ H-\delta H < H
+< E + \delta H \\ 0\\ else \end{cases}$.
 
 The isoenthalpic–isobaric ensemble can be visualized as N particle
 system in a box without rigid boundaries which is thermally isolated
@@ -177,7 +182,11 @@ pressure will fluctuate around the desired pressure value. The
 configurations in a NpH ensemble can be sampled from a
 [molecular-dynamics](../misc/NpH_ensemble.md) run.
 
-### How To
+### How To\[<a
+href="/wiki/index.php?title=Category:Ensembles&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: How To">edit</a> \| (./index.php.md)\]
+
 The following table gives an overview of the possible combinations of
 ensembles and thermostats in VASP:
 
@@ -191,3 +200,5 @@ ensembles and thermostats in VASP:
 | [Isobaric-isothermal (NpT)](../misc/NpT_ensemble.md) | not available | not available | [MDALGO](../incar-tags/MDALGO.md)=3 | not available | not available | not available |
 |  |  |  | [ISIF](../incar-tags/ISIF.md)=3 |  |  |  |
 | [Isoenthalpic-isobaric (NpH)](../misc/NpH_ensemble.md) | [MDALGO](../incar-tags/MDALGO.md)=3, [ISIF](../incar-tags/ISIF.md)=3, [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md)=[LANGEVIN_GAMMA_L](../incar-tags/LANGEVIN_GAMMA_L.md)=0.0 |  |  |  |  |  |
+
+

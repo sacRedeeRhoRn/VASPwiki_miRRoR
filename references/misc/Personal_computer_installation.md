@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Personal computer installation
+
+
 Here you will find instructions on how to install VASP on some
 widely-used Linux distributions. For the sake of simplicity the
 suggested build processes rely as much as possible on compilers and
@@ -20,7 +22,8 @@ In order to verify each build we run the FAST category tests of the
 
 |  |
 |----|
-| **Tip:** All build instructions presented here include [HDF5 support](Makefile.include.md) "Makefile.include") to allow post-processing of results with [py4vasp](https://vasp.at/py4vasp/latest/index.html). |
+| **Tip:** All build instructions presented here include [HDF5 support](Makefile.include.md) "Makefile.include") to allow post-processing of results with <a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a>. |
 
 The build instructions have been tested on clean installations (virtual
 machines or docker images) of the operating systems in the following
@@ -46,53 +49,83 @@ page:
 |  | 9.3 |  |  |  | [Link](#Building_VASP_6.5.0_on_Rocky_Linux_9.3) |
 | [Mac OS X](#Mac_OS_X) | M1/2/3/4 |  |  |  | [Link](#Building_VASP_6.5.1_on_Mac_OS_X_(Apple_Silicon_M1/2/3/4)) |
 
-A red box background indicates that there are known issues with the used
-compiler/library versions (see the individual instructions for details).
-The table and corresponding instructions will be updated when either a
-new version of VASP or a major release of the operating systems is
-available. However, not all combinations will be tested and hence some
-fields will stay blank. In these cases it may still be helpful to start
-from instructions for close-by tested combinations.
+A  red box background indicates
+that there are known issues with the used compiler/library versions (see
+the individual instructions for details). The table and corresponding
+instructions will be updated when either a new version of VASP or a
+major release of the operating systems is available. However, not all
+combinations will be tested and hence some fields will stay blank. In
+these cases it may still be helpful to start from instructions for
+close-by tested combinations.
 
   
 
+
 ## Contents
 
-- [1 Debian](#Debian)
-  - [1.1 Building VASP 6.3.X to 6.4.X on Debian
-    11](#Building_VASP_6.3.X_to_6.4.X_on_Debian_11)
-  - [1.2 Building VASP 6.4.X to 6.5.0 on Debian
-    12](#Building_VASP_6.4.X_to_6.5.0_on_Debian_12)
-- [2 Ubuntu](#Ubuntu)
-  - [2.1 Building VASP 6.3.0 - 6.3.1 on Ubuntu
-    20.04](#Building_VASP_6.3.0_-_6.3.1_on_Ubuntu_20.04)
-  - [2.2 Building VASP 6.3.X to 6.4.X on Ubuntu
-    22.04](#Building_VASP_6.3.X_to_6.4.X_on_Ubuntu_22.04)
-  - [2.3 Building VASP 6.5.0 on Ubuntu
-    24.04](#Building_VASP_6.5.0_on_Ubuntu_24.04)
-- [3 Fedora](#Fedora)
-  - [3.1 Building VASP 6.3.0 - 6.3.1 on Fedora
-    35](#Building_VASP_6.3.0_-_6.3.1_on_Fedora_35)
-  - [3.2 Building VASP 6.4.X on Fedora 37 to
-    38](#Building_VASP_6.4.X_on_Fedora_37_to_38)
-  - [3.3 Building VASP 6.5.0 on Fedora
-    41](#Building_VASP_6.5.0_on_Fedora_41)
-- [4 Rocky Linux](#Rocky_Linux)
-  - [4.1 Building VASP 6.3.0 - 6.3.1 on Rocky Linux
-    8.5](#Building_VASP_6.3.0_-_6.3.1_on_Rocky_Linux_8.5)
-  - [4.2 Building VASP 6.3.2 on Rocky Linux
-    9.0](#Building_VASP_6.3.2_on_Rocky_Linux_9.0)
-  - [4.3 Building VASP 6.4.X on Rocky Linux
-    9.2](#Building_VASP_6.4.X_on_Rocky_Linux_9.2)
-  - [4.4 Building VASP 6.5.0 on Rocky Linux
-    9.3](#Building_VASP_6.5.0_on_Rocky_Linux_9.3)
-- [5 Mac OS X](#Mac_OS_X)
-  - [5.1 Building VASP 6.5.1 on Mac OS X (Apple Silicon
-    M1/2/3/4)](#Building_VASP_6.5.1_on_Mac_OS_X_(Apple_Silicon_M1/2/3/4))
-- [6 Footnotes and references](#Footnotes_and_references)
 
-## Debian
-### Building VASP 6.3.X to 6.4.X on Debian 11
+- [1
+  Debian](#Debian)
+  - [1.1 Building
+    VASP 6.3.X to 6.4.X on Debian
+    11](#Building_VASP_6.3.X_to_6.4.X_on_Debian_11)
+  - [1.2 Building
+    VASP 6.4.X to 6.5.0 on Debian
+    12](#Building_VASP_6.4.X_to_6.5.0_on_Debian_12)
+- [2
+  Ubuntu](#Ubuntu)
+  - [2.1 Building
+    VASP 6.3.0 - 6.3.1 on Ubuntu
+    20.04](#Building_VASP_6.3.0_-_6.3.1_on_Ubuntu_20.04)
+  - [2.2 Building
+    VASP 6.3.X to 6.4.X on Ubuntu
+    22.04](#Building_VASP_6.3.X_to_6.4.X_on_Ubuntu_22.04)
+  - [2.3 Building
+    VASP 6.5.0 on Ubuntu
+    24.04](#Building_VASP_6.5.0_on_Ubuntu_24.04)
+- [3
+  Fedora](#Fedora)
+  - [3.1 Building
+    VASP 6.3.0 - 6.3.1 on Fedora
+    35](#Building_VASP_6.3.0_-_6.3.1_on_Fedora_35)
+  - [3.2 Building
+    VASP 6.4.X on Fedora 37 to
+    38](#Building_VASP_6.4.X_on_Fedora_37_to_38)
+  - [3.3 Building
+    VASP 6.5.0 on Fedora 41](#Building_VASP_6.5.0_on_Fedora_41)
+- [4 Rocky
+  Linux](#Rocky_Linux)
+  - [4.1 Building
+    VASP 6.3.0 - 6.3.1 on Rocky Linux
+    8.5](#Building_VASP_6.3.0_-_6.3.1_on_Rocky_Linux_8.5)
+  - [4.2 Building
+    VASP 6.3.2 on Rocky Linux
+    9.0](#Building_VASP_6.3.2_on_Rocky_Linux_9.0)
+  - [4.3 Building
+    VASP 6.4.X on Rocky Linux
+    9.2](#Building_VASP_6.4.X_on_Rocky_Linux_9.2)
+  - [4.4 Building
+    VASP 6.5.0 on Rocky Linux
+    9.3](#Building_VASP_6.5.0_on_Rocky_Linux_9.3)
+- [5 Mac OS
+  X](#Mac_OS_X)
+  - [5.1 Building
+    VASP 6.5.1 on Mac OS X (Apple Silicon
+    M1/2/3/4)](#Building_VASP_6.5.1_on_Mac_OS_X_(Apple_Silicon_M1/2/3/4))
+- [6 Footnotes and
+  references](#Footnotes_and_references)
+
+
+## Debian\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Debian">edit</a> \| (./index.php.md)\]
+
+### Building VASP 6.3.X to 6.4.X on Debian 11\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.X to 6.4.X on Debian 11">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -103,7 +136,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-10.2.1 | openmpi-4.1.0 | fftw-3.3.8 | openblas-0.3.13 |  | netlib-scalapack-2.1.0 | hdf5-1.10.6 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-10.2.1 | openmpi-4.1.0 | fftw-3.3.8 | openblas-0.3.13 |  | netlib-scalapack-2.1.0 | hdf5-1.10.6 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 These packages can be installed directly from the command line like
 this:
@@ -167,7 +200,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.4.X to 6.5.0 on Debian 12
+### Building VASP 6.4.X to 6.5.0 on Debian 12\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.4.X to 6.5.0 on Debian 12">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -242,8 +279,16 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-## Ubuntu
-### Building VASP 6.3.0 - 6.3.1 on Ubuntu 20.04
+## Ubuntu\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Ubuntu">edit</a> \| (./index.php.md)\]
+
+### Building VASP 6.3.0 - 6.3.1 on Ubuntu 20.04\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.0 - 6.3.1 on Ubuntu 20.04">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -324,7 +369,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.3.X to 6.4.X on Ubuntu 22.04
+### Building VASP 6.3.X to 6.4.X on Ubuntu 22.04\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.X to 6.4.X on Ubuntu 22.04">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -399,7 +448,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.5.0 on Ubuntu 24.04
+### Building VASP 6.5.0 on Ubuntu 24.04\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.5.0 on Ubuntu 24.04">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -478,8 +531,16 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-## Fedora
-### Building VASP 6.3.0 - 6.3.1 on Fedora 35
+## Fedora\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Fedora">edit</a> \| (./index.php.md)\]
+
+### Building VASP 6.3.0 - 6.3.1 on Fedora 35\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.0 - 6.3.1 on Fedora 35">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -490,7 +551,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.19 |  | netlib-scalapack-2.1.0 | hdf5-1.10.7 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.19 |  | netlib-scalapack-2.1.0 | hdf5-1.10.7 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 These packages can be installed directly from the command line like
 this:
@@ -565,7 +626,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.4.X on Fedora 37 to 38
+### Building VASP 6.4.X on Fedora 37 to 38\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.4.X on Fedora 37 to 38">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -652,7 +717,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.5.0 on Fedora 41
+### Building VASP 6.5.0 on Fedora 41\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.5.0 on Fedora 41">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -738,8 +807,16 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-## Rocky Linux
-### Building VASP 6.3.0 - 6.3.1 on Rocky Linux 8.5
+## Rocky Linux\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Rocky Linux">edit</a> \| (./index.php.md)\]
+
+### Building VASP 6.3.0 - 6.3.1 on Rocky Linux 8.5\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.0 - 6.3.1 on Rocky Linux 8.5">edit</a> \| (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -750,7 +827,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.5 | openblas-0.3.12 |  | netlib-scalapack-2.0.2 | hdf5-1.10.5 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.5 | openblas-0.3.12 |  | netlib-scalapack-2.0.2 | hdf5-1.10.5 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 Some of these packages are available from the default package sources:
 
@@ -758,7 +835,8 @@ Some of these packages are available from the default package sources:
 
 Unfortunately the GCC version 8.5 provided by default is not suitable
 for compiling VASP. As an alternative we can use a newer version from
-the [EPEL repositories](https://docs.fedoraproject.org/en-US/epel/):
+the <a href="https://docs.fedoraproject.org/en-US/epel/"
+class="external text" rel="nofollow">EPEL repositories</a>:
 
     sudo dnf install epel-release
     sudo dnf install gcc-toolset-11-gcc gcc-toolset-11-gcc-c++ gcc-toolset-11-gcc-gfortran
@@ -841,7 +919,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.3.2 on Rocky Linux 9.0
+### Building VASP 6.3.2 on Rocky Linux 9.0\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.3.2 on Rocky Linux 9.0">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -852,15 +934,15 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.15 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.15 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 Some of these packages are available from the default package sources:
 
     sudo dnf install gcc gcc-c++ gcc-gfortran openmpi-devel fftw-devel
 
 Some required libraries are available within the "CRB" ("Code Ready
-Builder") and [EPEL
-repositories](https://docs.fedoraproject.org/en-US/epel/) repositories:
+Builder") and <a href="https://docs.fedoraproject.org/en-US/epel/"
+class="external text" rel="nofollow">EPEL repositories</a> repositories:
 
     sudo dnf config-manager --set-enabled crb
     sudo dnf install openblas-devel
@@ -935,7 +1017,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.4.X on Rocky Linux 9.2
+### Building VASP 6.4.X on Rocky Linux 9.2\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.4.X on Rocky Linux 9.2">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -946,15 +1032,15 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.3.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.21 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-11.3.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.21 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 Some of these packages are available from the default package sources:
 
     sudo dnf install rsync gcc gcc-c++ gcc-gfortran openmpi-devel fftw-devel
 
 Some required libraries are available within the "CRB" ("Code Ready
-Builder") and [EPEL
-repositories](https://docs.fedoraproject.org/en-US/epel/) repositories:
+Builder") and <a href="https://docs.fedoraproject.org/en-US/epel/"
+class="external text" rel="nofollow">EPEL repositories</a> repositories:
 
     sudo dnf install 'dnf-command(config-manager)'
     sudo dnf config-manager --set-enabled crb
@@ -1030,7 +1116,11 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-### Building VASP 6.5.0 on Rocky Linux 9.3
+### Building VASP 6.5.0 on Rocky Linux 9.3\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.5.0 on Rocky Linux 9.3">edit</a> | (./index.php.md)\]
+
 ------------------------------------------------------------------------
 
 First, we need to make sure that the
@@ -1041,15 +1131,15 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.5.0 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.26 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak^([\[1\]](#cite_note-ompi-bug-1-1)) |
+| gcc-11.5.0 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.26 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
 
 Some of these packages are available from the default package sources:
 
     sudo dnf install rsync gcc gcc-c++ gcc-gfortran openmpi-devel fftw-devel
 
 Some required libraries are available within the "CRB" ("Code Ready
-Builder") and [EPEL
-repositories](https://docs.fedoraproject.org/en-US/epel/) repositories:
+Builder") and <a href="https://docs.fedoraproject.org/en-US/epel/"
+class="external text" rel="nofollow">EPEL repositories</a> repositories:
 
     sudo dnf install 'dnf-command(config-manager)'
     sudo dnf config-manager --set-enabled crb
@@ -1125,15 +1215,24 @@ require only pure MPI parallelization without OpenMP threading add
 
 in your `~/.bashrc` file.
 
-## Mac OS X
-### Building VASP 6.5.1 on Mac OS X (Apple Silicon M1/2/3/4)
+## Mac OS X\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=17"
+class="mw-editsection-visualeditor"
+title="Edit section: Mac OS X">edit</a> | (./index.php.md)\]
+
+### Building VASP 6.5.1 on Mac OS X (Apple Silicon M1/2/3/4)\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=18"
+class="mw-editsection-visualeditor"
+title="Edit section: Building VASP 6.5.1 on Mac OS X (Apple Silicon M1/2/3/4)">edit</a> | (./index.php.md)")\]
+
 ------------------------------------------------------------------------
 
 VASP can be compiled on recent Apple Silicon hardware running Mac OS.
 First, we need to make sure that the
 [prerequisites](Installing_VASP.6.X.X.md)
 for building VASP are met. Here, we use the package manager
-[homebrew](https://brew.sh/) to install all required dependencies:
+<a href="https://brew.sh/" class="external text"
+rel="nofollow">homebrew</a> to install all required dependencies:
 
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
@@ -1141,7 +1240,8 @@ for building VASP are met. Here, we use the package manager
 | gcc-14.2.0 | openmpi-5.0.7 | fftw-3.3.10 | openblas-0.3.29 |  | netlib-scalapack-2.2.2 | hdf5-1.14.5 | some test fail with precision loss |
 
 These packages can be installed directly from the command line after
-[homebrew](https://brew.sh/) is installed:
+<a href="https://brew.sh/" class="external text"
+rel="nofollow">homebrew</a> is installed:
 
     brew install gfortran gcc fftw hdf5 openmpi openblas scalapack qd
 
@@ -1189,9 +1289,10 @@ Search for the paragraph in `makefile.include` starting with
 
 - Quad precision support with OpenMPI in brew seems to be broken (test
   failures in GW tests). To fix this we have to link explicitly against
-  the qd library by adding the [following
-  lines](https://www.vasp.at/wiki/index.php/Precompiler_options#-Dqd_emulate)
-  in the makefile:
+  the qd library by adding the <a
+  href="https://www.vasp.at/wiki/index.php/Precompiler_options#-Dqd_emulate"
+  class="external text" rel="nofollow">following lines</a> in the
+  makefile:
 
       CPP_OPTIONS += -Dqd_emulate
       LLIBS       += -L$(BREW_ROOT)/lib -lqdmod
@@ -1223,11 +1324,23 @@ and high [KPAR](../incar-tags/KPAR.md) settings. To increase performance
 avoid using the efficiency cores, i.e. run VASP only with number of MPI
 ranks equivalent to the number of performance cores.
 
-## Footnotes and references
-1.  ↑ ^([a](#cite_ref-ompi-bug-1_1-0)) ^([b](#cite_ref-ompi-bug-1_1-1))
-    ^([c](#cite_ref-ompi-bug-1_1-2)) ^([d](#cite_ref-ompi-bug-1_1-3))
-    ^([e](#cite_ref-ompi-bug-1_1-4)) ^([f](#cite_ref-ompi-bug-1_1-5)) A
-    bug in OpenMPI versions 4.0.4-4.1.1 causes a memory leak in some
-    ScaLAPACK calls. This mainly affects long
+## Footnotes and references\[<a
+href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp;section=19"
+class="mw-editsection-visualeditor"
+title="Edit section: Footnotes and references">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-ompi-bug-1_1-0)</sup>
+    <sup>[b](#cite_ref-ompi-bug-1_1-1)</sup>
+    <sup>[c](#cite_ref-ompi-bug-1_1-2)</sup>
+    <sup>[d](#cite_ref-ompi-bug-1_1-3)</sup>
+    <sup>[e](#cite_ref-ompi-bug-1_1-4)</sup>
+    <sup>[f](#cite_ref-ompi-bug-1_1-5)</sup>
+    A bug in OpenMPI versions 4.0.4-4.1.1
+    causes a memory leak in some ScaLAPACK calls. This mainly affects
+    long
     [molecular-dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
     runs. This issue is fixed as of openmpi-4.1.2.
+
+

@@ -2,25 +2,32 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LCALCPOL
+
+
 LCALCPOL = .TRUE. \| .FALSE.  
 Default: **LCALCPOL** = .FALSE. 
 
-Description: LCALCPOL=.TRUE. switches on the evaluation of the Berry
-phase expressions for the macroscopic electronic polarization in
-accordance with the so-called [Modern Theory of
+Description: LCALCPOL=.TRUE.
+switches on the evaluation of the Berry phase expressions for the
+macroscopic electronic polarization in accordance with the so-called
+[Modern Theory of
 Polarization](../theory/Berry_phases_and_finite_electric_fields.md).
 
 ------------------------------------------------------------------------
 
-For LCALCPOL=.TRUE., VASP calculates the electronic contribution to the
-polarization, along the three reciprocal lattice vectors **G**_(i),
-i=1,2,3, (i.e. Σ_(i) **P**·**G**_(i)) in a single run (unlike
+For LCALCPOL=.TRUE., VASP
+calculates the electronic contribution to the polarization, along the
+three reciprocal lattice vectors **G**<sub>i</sub>, i=1,2,3, (i.e.
+Σ<sub>i</sub> **P**·**G**<sub>i</sub>) in a single run (unlike
 [LBERRY](LBERRY.md)=.TRUE.).
 
-### An example: The fluorine displacement dipole (Born effective charge) in NaF
+### An example: The fluorine displacement dipole (Born effective charge) in NaF\[<a href="/wiki/index.php?title=LCALCPOL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: An example: The fluorine displacement dipole (Born effective charge) in NaF">edit</a> \| (./index.php.md) in NaF")\]
+
 - With [INCAR](../input-files/INCAR.md) file:
 
-&nbsp;
+<!-- -->
 
     PREC = Med
     EDIFF= 1E-6
@@ -32,7 +39,7 @@ i=1,2,3, (i.e. Σ_(i) **P**·**G**_(i)) in a single run (unlike
 
 - [KPOINTS](../input-files/KPOINTS.md) file:
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -42,7 +49,7 @@ i=1,2,3, (i.e. Σ_(i) **P**·**G**_(i)) in a single run (unlike
 
 - [POSCAR](../input-files/POSCAR.md) file:
 
-&nbsp;
+<!-- -->
 
     NaF
      4.5102
@@ -104,10 +111,13 @@ calculations yield a Born effective charge for fluorine of
 
 $Z^\*=0.0449/0.045102=-0.995|e|\\$.
 
-The socalled parallel or $\mathbf{G}_{\parallel}$ direction in the integration over the reciprocal space unit
-cell is set in [IGPAR](IGPAR.md).
+The socalled parallel or $\mathbf{G}_{\parallel}$ direction in the integration over the reciprocal space
+unit cell is set in [IGPAR](IGPAR.md).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LCALCPOL&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LCALCEPS](LCALCEPS.md),
 [EFIELD_PEAD](EFIELD_PEAD.md),
 [LPEAD](LPEAD.md), [IPEAD](IPEAD.md),
@@ -120,3 +130,5 @@ fields](../theory/Berry_phases_and_finite_electric_fields.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-LCALCPOL-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,9 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # DFT-D4
-DFT-D4^([\[1\]](#cite_note-caldeweyher:jcp:2019-1)[\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3))
+
+
+DFT-D4<sup>[\[1\]](#cite_note-caldeweyher:jcp:2019-1)[\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3)</sup>
 is an external package that can be [linked to
 VASP](../misc/Makefile.include.md).
 DFT-D4 adds to the DFT energy expression a term that accounts for the
@@ -15,10 +17,14 @@ which allows for a fast computation. Since every functional has
 different interactions between atoms, DFT-D4 tailors its adjustable
 parameters to the functional. For more information regarding these
 parameters, please refer to the DFT-D4
-paper^([\[1\]](#cite_note-caldeweyher:jcp:2019-1)) and
-websites.^([\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3))
+paper<sup>[\[1\]](#cite_note-caldeweyher:jcp:2019-1)</sup>
+and
+websites.<sup>[\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3)</sup>
 
-## Usage
+## Usage\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Usage">edit</a> \| (./index.php.md)\]
+
 For some of the common exchange-correlation functionals (e.g., PBE,
 SCAN, or HSE06) it is sufficient to set [IVDW](../incar-tags/IVDW.md)=13 in
 the [INCAR](../input-files/INCAR.md) file. Internally, VASP passes
@@ -30,14 +36,38 @@ functional name to optimized settings for the adjustable parameters of
 the vdW interaction. VASP uses these parameters to compute the DFT-D4
 energies, forces, and stresses in every ionic step and adds them to the
 corresponding DFT terms. As a result, you can relax structures or run
-[MD simulations](../redirects/MD.md) with an approximate treatment of vdW
-interactions.
+<a href="/wiki/MD" class="mw-redirect" title="MD">MD simulations</a>
+with an approximate treatment of vdW interactions.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vpurple); --box-emph-color: var(--vpurple); padding: 5px; color: var(--vdefault-text-nb); background: var(--vpurple-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span
+style="color: var(--vpurple);">Important:</span></strong>
+<ul>
+<li>The API of DFT-D4 has been modified starting with version 4.0.0. The
+adaptation has been made in VASP.6.6.0. Versions of DFT-D4 with the old
+API (v3.7.0 and older) can still be compiled with VASP.6.6.0 as
+explained <a
+href="/wiki/Makefile.include#DFT-D4_and_simple-DFT-D3_.28optional.29"
+title="Makefile.include">here</a>.</li>
+<li>Below, we explain how to tweak the parameters of DFT-D4. Typically,
+you should not modify them unless you have a very good reason, e.g.,
+because the interface is not implemented for the exchange-correlation
+functional you use.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 |  |
 |----|
-| **Mind:** DFT-D4 may switch to a [smooth cutoff](https://github.com/dftd4/dftd4/issues/377) by default, which will change results for periodic systems with respect to prior versions. |
+| **Mind:** DFT-D4 may switch to a <a href="https://github.com/dftd4/dftd4/issues/377"
+class="external text" rel="nofollow">smooth cutoff</a> by default, which will change results for periodic systems with respect to prior versions. |
 
 VASP allows setting the following tags in the
 [INCAR](../input-files/INCAR.md) file:
@@ -61,18 +91,34 @@ VASP allows setting the following tags in the
 - [VDW_CNRADIUS](../incar-tags/VDW_CNRADIUS.md) : coordination
   number cutoff (available from VASP.6.6.0 onwards).
 
-## References
-1.  ↑ ^([a](#cite_ref-caldeweyher:jcp:2019_1-0))
-    ^([b](#cite_ref-caldeweyher:jcp:2019_1-1)) [E. Caldeweyher, S.
-    Ehlert, A. Hansen, H. Neugebauer, S. Spicher, C. Bannwarth, and S.
-    Grimme, J. Chem. Phys. **150**, 154122
-    (2019).](https://doi.org/10.1063/1.5090222)
-2.  ↑ ^([a](#cite_ref-dftd4_1_2-0)) ^([b](#cite_ref-dftd4_1_2-1))
-    [https://dftd4.readthedocs.io](https://dftd4.readthedocs.io/)
-3.  ↑ ^([a](#cite_ref-dftd4_2_3-0)) ^([b](#cite_ref-dftd4_2_3-1))
-    [https://github.com/dftd4](https://github.com/dftd4/)
+## References\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-## Related tags and articles
+
+1.  ↑
+    <sup>[a](#cite_ref-caldeweyher:jcp:2019_1-0)</sup>
+    <sup>[b](#cite_ref-caldeweyher:jcp:2019_1-1)</sup>
+    <a href="https://doi.org/10.1063/1.5090222" class="external text"
+    rel="nofollow">E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S.
+    Spicher, C. Bannwarth, and S. Grimme, J. Chem. Phys.
+    <strong>150</strong>, 154122 (2019).</a>
+2.  ↑
+    <sup>[a](#cite_ref-dftd4_1_2-0)</sup>
+    <sup>[b](#cite_ref-dftd4_1_2-1)</sup>
+    <a href="https://dftd4.readthedocs.io/" class="external text"
+    rel="nofollow">https://dftd4.readthedocs.io</a>
+3.  ↑
+    <sup>[a](#cite_ref-dftd4_2_3-0)</sup>
+    <sup>[b](#cite_ref-dftd4_2_3-1)</sup>
+    <a href="https://github.com/dftd4/" class="external text"
+    rel="nofollow">https://github.com/dftd4</a>
+
+
+## Related tags and articles\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IVDW](../incar-tags/IVDW.md),
 [DFTD4_MODEL](../incar-tags/DFTD4_MODEL.md),
 [DFTD4_XC](../incar-tags/DFTD4_XC.md), [VDW_S6](../incar-tags/VDW_S6.md),
@@ -82,3 +128,5 @@ VASP allows setting the following tags in the
 [VDW_CNRADIUS](../incar-tags/VDW_CNRADIUS.md),
 [DFT-D3](DFT-D3.md),
 [simple-DFT-D3](Simple-DFT-D3.md)
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Input files
+
+
 As a minimal setup, VASP requires the following **input files**:
 
 - the [INCAR](../input-files/INCAR.md) file,
@@ -36,3 +38,5 @@ the calculation: the [STOPCAR](../incar-tags/STOPCAR.md) file. It is not
 used in a standard workflow, but it might be convenient to stop a
 calculation manually when it takes too long or a technical issue on the
 compute engine arises.
+
+

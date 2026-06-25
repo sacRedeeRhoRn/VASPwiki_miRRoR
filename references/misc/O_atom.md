@@ -2,40 +2,72 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # O atom
+
+
+
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-O atom \> [O atom
-spinpolarized](O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+O
+atom \> [O atom
+spinpolarized](O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](O_dimer.md) \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+[O
+dimer](O_dimer.md) \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-  - [3.1 stdout](#stdout)
-  - [3.2 OUTCAR](#OUTCAR)
-  - [3.3 Restart of the calculation](#Restart_of_the_calculation)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+  - [3.1
+    stdout](#stdout)
+  - [3.2
+    OUTCAR](#OUTCAR)
+  - [3.3 Restart of
+    the calculation](#Restart_of_the_calculation)
+- [4
+  Download](#Download)
+
+
+## Task\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Performing a standard calculation for a single oxygen atom in a box.
 Getting to know the main input and output files of VASP.
 
   
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     O atom in a box
      1.0          ! universal scaling parameters
      8.0 0.0 0.0  ! lattice vector  a(1)
@@ -49,11 +81,17 @@ We are using a POSCAR file with a single atom. Sufficiently large
 lattice parameters are selected so that no (significant) interactions
 between atoms in neighbouring cells is present.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM = O atom in a box
     ISMEAR = 0  ! Gaussian smearing
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Gamma-point only
      0
     Monkhorst Pack
@@ -64,8 +102,15 @@ For atoms or molecules a single k point is sufficient. When more k
 points are used only the interaction between atoms (which should be
 zero) is described more accurately.
 
-## Calculation
-### stdout
+## Calculation\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
+### stdout\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: stdout">edit</a> \| (./index.php.md)\]
+
+
     running on    8 total cores
     distrk:  each k-point on    8 cores,    1 groups
     distr:  one band on    1 cores,    8 groups
@@ -109,7 +154,11 @@ Short explanation of the symbols in the
 | rms | total residual vector $\sum_{nk} w_{k} f_{nk} (\mathrm{H} - \epsilon_{nk}) \psi_{nk}$ |
 | rms(c) | charge density residual vector |
 
-### [OUTCAR](../output-files/OUTCAR.md)
+
+### [OUTCAR](../output-files/OUTCAR.md)\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: OUTCAR">edit</a> \| (./index.php.md)\]
+
 The individual parts of the [OUTCAR](../output-files/OUTCAR.md) file are
 separated by lines.
 
@@ -121,36 +170,36 @@ parts:
 - Reading [INCAR](../input-files/INCAR.md), [POTCAR](../input-files/POTCAR.md),
   [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
 - Nearest neighbor distances and analysis of symmetry
 
-&nbsp;
+<!-- -->
 
 - Verbose job information
 
-&nbsp;
+<!-- -->
 
 - Information on lattice, k points and positions
 
-&nbsp;
+<!-- -->
 
 - Information on the basis set (number of plane waves)
 
-&nbsp;
+<!-- -->
 
 - Non-local pseudo potential information
 
-&nbsp;
+<!-- -->
 
 - Information for each electronic step (one line in
   [OSZICAR](../output-files/OSZICAR.md))
 
-&nbsp;
+<!-- -->
 
 - Timing and energy information
 
-&nbsp;
+<!-- -->
 
        POTLOK:  cpu time    0.0878: real time    0.0877
        SETDIJ:  cpu time    0.0015: real time    0.0014
@@ -183,7 +232,7 @@ parts:
 
 - Information on the Eigenvalues
 
-&nbsp;
+<!-- -->
 
     E-fermi :  -8.8431     XC(G=0):  -0.8043     alpha+bet : -0.1463
     k-point     1 :       0.0000    0.0000    0.0000
@@ -199,7 +248,7 @@ parts:
 
 - Information on stress tensor
 
-&nbsp;
+<!-- -->
 
     The O atom (Example: Oatom)
     FORCE on cell =-STRESS in cart. coord.  units (eV):
@@ -221,7 +270,7 @@ parts:
 
 - Information on the energy
 
-&nbsp;
+<!-- -->
 
     FREE ENERGIE OF THE ION-ELECTRON SYSTEM (eV)
     ---------------------------------------------------
@@ -249,7 +298,10 @@ any calculated energy the energy of the atom in the configuration for
 which the pseudo potential was generated. All pseudo potentials were
 generated using non spin-polarized reference atoms.
 
-### Restart of the calculation
+### Restart of the calculation\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Restart of the calculation">edit</a> \| (./index.php.md)\]
+
 When VASP is restarted the [WAVECAR](../input-files/WAVECAR.md) file is
 read and the run is continued from the previous wave functions
 (converging rapidly).
@@ -277,20 +329,35 @@ read and the run is continued from the previous wave functions
       1 F= -.31467728E+00 E0= -.16041496E+00 d E =-.308525E+00
     writing wavefunctions
 
-## Download
-[Oatom.tgz](https://vasp.at/wiki/images/7/7a/Oatom.tgz "Oatom.tgz")
+## Download\[<a href="/wiki/index.php?title=O_atom&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/7/7a/Oatom.tgz" class="internal"
+title="Oatom.tgz">Oatom.tgz</a>
+
 
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-O atom \> [O atom
-spinpolarized](O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+O
+atom \> [O atom
+spinpolarized](O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-[O dimer](O_dimer.md) \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+[O
+dimer](O_dimer.md) \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 Back to the [main page](The_VASP_Manual.md).
+
+

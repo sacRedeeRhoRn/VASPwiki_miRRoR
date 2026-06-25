@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Liquid Si
+
+
+
 Redirect to:
 
 - [Liquid Si -
   Freezing](../misc/Liquid_Si_-_Freezing.md)
+
+

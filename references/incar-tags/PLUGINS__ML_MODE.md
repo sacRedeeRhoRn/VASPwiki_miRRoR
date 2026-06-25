@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PLUGINS/ML MODE
-PLUGINS/ML_MODE = none \| run  
+
+
+PLUGINS/ML_MODE = none \|
+run  
 Default: **PLUGINS/ML_MODE** = none 
 
 Description: String-based tag selecting operation mode for running
@@ -11,13 +14,18 @@ plugins.
 
 ------------------------------------------------------------------------
 
-- `PLUGINS/ML_MODE`` = none` Forces and stress provided by the plugin
-  are added to the ab-initio forces computed by VASP.
-- `PLUGINS/ML_MODE`` = run` VASP skips the ab-initio calculation and
-  uses the forces and stress of the plugin to replace the forces of
-  VASP.
+- `PLUGINS/ML_MODE`` = none`
+  Forces and stress provided by the plugin are added to the ab-initio
+  forces computed by VASP.
+- `PLUGINS/ML_MODE`` = run`
+  VASP skips the ab-initio calculation and uses the forces and stress of
+  the plugin to replace the forces of VASP.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PLUGINS/ML_MODE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Plugins](../tutorials/Plugins.md),
 [PLUGINS/FORCE_AND_STRESS](PLUGINS__FORCE_AND_STRESS.md),
 [PLUGINS/ML_OUTBLOCK](PLUGINS__ML_OUTBLOCK.md),
@@ -26,3 +34,5 @@ plugins.
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-PLUGINS/ML_MODE-_incategory-Examples)
+
+

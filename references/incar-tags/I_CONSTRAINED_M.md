@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # I_CONSTRAINED_M
-I_CONSTRAINED_M = 1 \| 2 \| 4  
+
+
+I_CONSTRAINED_M = 1 \| 2 \|
+4  
 Default: **I_CONSTRAINED_M** = none 
 
-Description: I_CONSTRAINED_M switches on the constrained local moments
-approach.
+Description: I_CONSTRAINED_M
+switches on the constrained local moments approach.
 
 ------------------------------------------------------------------------
 
@@ -17,76 +20,83 @@ magnetization in a site centered sphere of radius
 [RWIGS](RWIGS.md)) into a direction given by the
 [M_CONSTR](M_CONSTR.md)-tag.
 
-- I_CONSTRAINED_M=1: Constrain the *direction* of the magnetic moments.
+- I_CONSTRAINED_M=1: Constrain
+  the *direction* of the magnetic moments.
 
 The total energy is given by
 
-$E=E_0+ \sum_I\lambda \left\[
-\vec{M}_I-\hat{M}^0_I \left( \hat{M}^0_I \cdot
-\vec{M}_I\right)\right\]^2$
+$E=E_0+ \sum_I\lambda \left\[ \vec{M}_I-\hat{M}^0_I \left( \hat{M}^0_I
+\cdot \vec{M}_I\right)\right\]^2$
 
-where *E*₀ is the usual DFT energy, and the second term on the
-right-hand-side represents the penalty. The sum is taken over all atomic
-sites *I*, $\hat{M}^0_I$ is the desired
-direction (unit vector) of the magnetic moment at site *I* (as specified
-using [M_CONSTR](M_CONSTR.md)), and $\vec{M}_I$ is the integrated magnetic moment inside a sphere
-Ω_(*I*) (the radius **must** be specified by means of
+where *E*<sub>0</sub> is the usual DFT energy, and the second term on
+the right-hand-side represents the penalty. The sum is taken over all
+atomic sites *I*, $\hat{M}^0_I$
+is the desired direction (unit vector) of the magnetic moment at site
+*I* (as specified using [M_CONSTR](M_CONSTR.md)), and
+$\vec{M}_I$ is the integrated magnetic moment inside a
+sphere Ω<sub>*I*</sub> (the radius **must** be specified by means of
 [RWIGS](RWIGS.md)) around the position of atom *I*,
 
-$\vec{M}_I=\int_{\Omega_I} \vec{m}(\mathbf{r})
-F_I(|\mathbf{r}|) d\mathbf{r}$
+ 
 
-where *F*_(*I*)(\|**r**\|) is a function of norm 1 inside Ω_(*I*), that
-smoothly goes to zero towards the boundary of Ω_(*I*).
+$\vec{M}_I=\int_{\Omega_I} \vec{m}(\mathbf{r}) F_I(|\mathbf{r}|)
+d\mathbf{r}$
+
+where *F*<sub>*I*</sub>(\|**r**\|) is a function of norm 1 inside
+Ω<sub>*I*</sub>, that smoothly goes to zero towards the boundary of
+Ω<sub>*I*</sub>.
 
 The penalty term in the total energy introduces an additional potential
 inside the aforementioned spheres centered at the atomic sites *I*,
 given by
 
-$V_I (\mathbf{r})=2\lambda \left\[
-\vec{M}_I-\hat{M}^0_I \left( \hat{M}^0_I \cdot \vec{M_I}\right)\right\]
-\cdot \vec{\sigma} F_I(|\mathbf{r}|)$
+$V_I (\mathbf{r})=2\lambda \left\[ \vec{M}_I-\hat{M}^0_I \left(
+\hat{M}^0_I \cdot \vec{M_I}\right)\right\] \cdot \vec{\sigma}
+F_I(|\mathbf{r}|)$
 
-where $\vec{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ are the Pauli spin-matrices.
+where $\vec{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ are the
+Pauli spin-matrices.
 
-- I_CONSTRAINED_M=2: Constrain the *size and direction* of the magnetic
-  moments.
+- I_CONSTRAINED_M=2: Constrain
+  the *size and direction* of the magnetic moments.
 
 The total energy is given by
 
-$E=E_0+ \sum_I\lambda \left(
-\vec{M}_I-\vec{M}^0_I \right)^2$
+$E=E_0+ \sum_I\lambda \left( \vec{M}_I-\vec{M}^0_I \right)^2$
 
-where $\vec{M}^0_I$ is the desired
-magnetic moment at site *I* (as specified using
+where $\vec{M}^0_I$
+is the desired magnetic moment at site *I* (as specified using
 [M_CONSTR](M_CONSTR.md)).
 
 The additional potential that arises from the penalty contribution to
 the total energy is given by
 
-$V_I (\mathbf{r})=2\lambda \left(
-\vec{M}_I-\vec{M}^0_I \right)\cdot \vec{\sigma} F_I(|\mathbf{r}|)$
+$V_I (\mathbf{r})=2\lambda \left( \vec{M}_I-\vec{M}^0_I \right)\cdot
+\vec{\sigma} F_I(|\mathbf{r}|)$
 
-- I_CONSTRAINED_M=4: Constrain the *direction and sign* of the magnetic
-  moments^([\[1\]](#cite_note-ma:prb:15-1)), available since VASP.6.4.0.
+- I_CONSTRAINED_M=4: Constrain
+  the *direction and sign* of the magnetic
+  moments<sup>[\[1\]](#cite_note-ma:prb:15-1)</sup>,
+  available since VASP.6.4.0.
 
 The total energy is given by
 
-$E=E_0+ \sum_I\lambda \left( |\vec{M}_I| -
-\hat{M}^0_I \cdot \vec{M}_I\right)$
+$E=E_0+ \sum_I\lambda \left( |\vec{M}_I| - \hat{M}^0_I \cdot
+\vec{M}_I\right)$
 
-where $\hat{M}^0_I$ is the desired
-magnetic moment at site *I* (as specified using
+where $\hat{M}^0_I$
+is the desired magnetic moment at site *I* (as specified using
 [M_CONSTR](M_CONSTR.md)).
 
 The additional potential that arises from the penalty contribution to
 the total energy is given by
 
-$V_I (\mathbf{r})=\lambda \left(
-\hat{M}_I-\hat{M}^0_I \right)\cdot \vec{\sigma} F_I(|\mathbf{r}|)$
+$V_I (\mathbf{r})=\lambda \left( \hat{M}_I-\hat{M}^0_I \right)\cdot
+\vec{\sigma} F_I(|\mathbf{r}|)$
 
-where $\hat{M}_I$ denotes the unit
-vector in $\vec{M}_I$ direction.
+where $\hat{M}_I$
+denotes the unit vector in $\vec{M}_I$
+direction.
 
 The weight λ, with which the penalty terms enter into the total energy
 expression and the Hamiltonian in the above is specified through the
@@ -96,10 +106,10 @@ As is probably clear from the above, applying constraints by means of a
 penalty functional contributes to the total energy. This contribution,
 however, decreases with increasing [LAMBDA](LAMBDA.md) and
 can in principle be made vanishingly small
-^([\[1\]](#cite_note-ma:prb:15-1)). Increasing
-[LAMBDA](LAMBDA.md) stepwise, from one run to another
-(slowly so the solution remains stable) one thus converges towards the
-DFT total energy for a given magnetic configuration.
+<sup>[\[1\]](#cite_note-ma:prb:15-1)</sup>.
+Increasing [LAMBDA](LAMBDA.md) stepwise, from one run to
+another (slowly so the solution remains stable) one thus converges
+towards the DFT total energy for a given magnetic configuration.
 
 ------------------------------------------------------------------------
 
@@ -146,7 +156,11 @@ Under `lambda*MW_perp` the constraining "magnetic field" at each atomic
 site is listed. It shows which magnetic field is added to the DFT
 Hamiltonian to stabilize the magnetic configuration.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=I_CONSTRAINED_M&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [M_CONSTR](M_CONSTR.md), [LAMBDA](LAMBDA.md),
 [RWIGS](RWIGS.md),
 [LNONCOLLINEAR](LNONCOLLINEAR.md)
@@ -154,8 +168,18 @@ Hamiltonian to stabilize the magnetic configuration.
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-I_CONSTRAINED_M-_incategory-HowTo)
 
-## References
-1.  ↑ ^([a](#cite_ref-ma:prb:15_1-0)) ^([b](#cite_ref-ma:prb:15_1-1))
-    [P.-W. Ma and S. L. Dudarev, *Constrained density functional for
-    noncollinear magnetism*, Phys. Rev. B **91**, 054420
-    (2015).](http://doi.org/10.1103/PhysRevB.91.054420)
+## References\[<a
+href="/wiki/index.php?title=I_CONSTRAINED_M&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-ma:prb:15_1-0)</sup>
+    <sup>[b](#cite_ref-ma:prb:15_1-1)</sup>
+    <a href="http://doi.org/10.1103/PhysRevB.91.054420"
+    class="external text" rel="nofollow">P.-W. Ma and S. L. Dudarev,
+    <em>Constrained density functional for noncollinear magnetism</em>,
+    Phys. Rev. B <strong>91</strong>, 054420 (2015).</a>
+
+

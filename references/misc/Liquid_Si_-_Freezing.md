@@ -2,10 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Liquid Si - Freezing
+
+
+
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> Liquid
-Si - Freezing \> [Nucleophile Substitution CH3Cl - Standard
+MD](Liquid_Si_-_Standard_MD.md) \>
+Liquid Si -
+Freezing \>
+[Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD1](Nuclephile_Substitution_CH3Cl_-_mMD1.md) \>
@@ -19,23 +24,47 @@ SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-  - [3.1 Diffusion](#Diffusion)
-  - [3.2 Pair correlation function](#Pair_correlation_function)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+  - [3.1
+    Diffusion](#Diffusion)
+  - [3.2 Pair
+    correlation function](#Pair_correlation_function)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 In this example, the goal is to simulate the freezing of liquid Si.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     Si
     15.12409564534287297131
          0.5000000000000000    0.5000000000000000    0.0000000000000000
@@ -92,7 +121,11 @@ In this example, the goal is to simulate the freezing of liquid Si.
       0.3965793440603315  0.5364088146415013  0.6064549771969059
       0.6686412136025504  0.7848666926903073  0.5681234351534038
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM =  Si
     # electronic degrees                                                            
     LREAL = A                      # real space projection
@@ -125,7 +158,11 @@ In this example, the goal is to simulate the freezing of liquid Si.
   \$i for [TEBEG](../incar-tags/TEBEG.md) and [TEEND](../incar-tags/TEEND.md)
   will be replaced in each calculation (see below).
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> | (./index.php.md)\]
+
     Si-freezing
     0 0 0
     Gamma
@@ -134,7 +171,11 @@ In this example, the goal is to simulate the freezing of liquid Si.
 
 - A single k-point is sufficient in this example.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> | (./index.php.md)\]
+
 We will execute the cooling stepwise so several calculations at
 different temperatures are required in this calculation. The
 [INCAR](../input-files/INCAR.md) is created with a script for each
@@ -186,22 +227,27 @@ the following:
   executable. The script is then simply starte by typing the following
   command in the command line:
 
-&nbsp;
+<!-- -->
 
     bash ./script
 
-### Diffusion
+### Diffusion\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Diffusion">edit</a> | (./index.php.md)\]
+
 The diffusion coefficient in 3 dimensions is given as
 
 $D=\frac{\langle x^{2} \rangle} {6 t}$
 
-where t defines time and $\langle x^{2} \rangle$. The 6 in the denominator contains a factor of 3 accounting
-for the 3 spatial dimensions (usually the diffusion coefficient is
-written with a 2 in the denominator in literature corresponding to only
-one dimension). In our case, we calculate the above equation as follows
+where t defines time and $\langle x^{2} \rangle$. The 6 in the denominator contains a factor of 3
+accounting for the 3 spatial dimensions (usually the diffusion
+coefficient is written with a 2 in the denominator in literature
+corresponding to only one dimension). In our case, we calculate the
+above equation as follows
 
-$D=\frac{\langle \sum\_{i}^{N}
-\[x\_{i}(t)-x\_{i}(0)\]^{2} \rangle}{6 \Delta t}$.
+$D=\frac{\langle \sum\_{i}^{N} \[x\_{i}(t)-x\_{i}(0)\]^{2} \rangle}{6
+\Delta t}$.
 
 Here the diffusion coefficient is calculated over an ensemble average to
 get better statistics. Our calculations were carried out for 1200 fs for
@@ -210,7 +256,9 @@ regarding the first 300 fs as equilibration of each temperature. The
 following python script (*diffusion_coefficient.py*) calculates the
 diffusion coefficient at a given temperature:
 
+
 **Click to show/*diffusion_coefficient.py***
+
 
     #!/usr/bin/python
 
@@ -306,15 +354,16 @@ diffusion coefficient at a given temperature:
     time=(direct[confcount-1]-direct[10])*potim/10**3.0 #conversion to ps
     print temp,d/time
 
+
   
 Since the atoms can move such that the distance between old and new
 positions becomes larger than 0.5 (in crystallographic or fractional
 coordinates). Let us take for example the movement of atom 0 in the
-$x$ direction from 0 to -0.25, which
-would be output in the [CONTCAR](../output-files/CONTCAR.md) as 0.75. The
-distance corresponding to that would be then calculated as 0.75 which is
-wrong since we have periodic images and the real shortest distance would
-be 0.25. Hence all distances larger than 0.5 have to be shifted by -1.0.
+$x$ direction from 0 to -0.25, which would be output in
+the [CONTCAR](../output-files/CONTCAR.md) as 0.75. The distance
+corresponding to that would be then calculated as 0.75 which is wrong
+since we have periodic images and the real shortest distance would be
+0.25. Hence all distances larger than 0.5 have to be shifted by -1.0.
 This is taken care of in the script.
 
 We will use a short bash script (*dscript.sh*) to calculate the
@@ -344,11 +393,17 @@ The data for the diffusion coefficient at each temperature is output to
 *diff_coeff.dat* and plotted in *diff_coeff.jpg* which should look like
 the following:
 
-[![](https://vasp.at/wiki/images/thumb/c/c2/Diff_coeff.jpg/300px-Diff_coeff.jpg)](https://vasp.at/wiki/File:Diff_coeff.jpg)
+<a href="/wiki/File:Diff_coeff.jpg" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/c/c2/Diff_coeff.jpg/300px-Diff_coeff.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/c/c2/Diff_coeff.jpg/450px-Diff_coeff.jpg 1.5x, /wiki/images/thumb/c/c2/Diff_coeff.jpg/600px-Diff_coeff.jpg 2x"
+width="300" height="225" /></a>
 
 **Exercise**: Interpret Fig. 1 yourself!
 
+
 **Click to show/Solution**
+
 
 **Solution**:
 
@@ -357,29 +412,35 @@ temperature by
 
 $D=\mu k_{B} T$
 
-where $k_{B}$ is the Boltzmann constant
-and $\mu$ is the mobility of the
-particle. Evidently, this relation is approximately fulfilled in Fig. 1.
-At approximately 1400 K we see a peak. This temperature should
-correspond to the phase transition temperature. Close to the phase
-transition point the scaling with respect to the reduced temperature
-$T_{\mathrm{red}}$ becomes
+where $k_{B}$ is
+the Boltzmann constant and $\mu$ is the
+mobility of the particle. Evidently, this relation is approximately
+fulfilled in Fig. 1. At approximately 1400 K we see a peak. This
+temperature should correspond to the phase transition temperature. Close
+to the phase transition point the scaling with respect to the reduced
+temperature $T_{\mathrm{red}}$ becomes
 
-$\langle x^{2} \rangle \propto
-T_{\mathrm{red}}^{1-\alpha},\qquad \qquad \qquad
-T_{\mathrm{red}}=\frac{T-T_{c}}{T_{c}}$
+$\langle x^{2} \rangle \propto T_{\mathrm{red}}^{1-\alpha},\qquad \qquad
+\qquad T_{\mathrm{red}}=\frac{T-T_{c}}{T_{c}}$
 
-where $\alpha$ is an anomalous dimension
-(it may be positive or negative) and $T_{c}$ is the critical temperature. For infinite large systems and
-infinite time, this would lead to a singularity in the plot, but since
-we are dealing with a finite-sized system it results in a finite peak at
-the phase transition point.
+where $\alpha$ is an
+anomalous dimension (it may be positive or negative) and
+$T_{c}$ is the critical temperature. For infinite large
+systems and infinite time, this would lead to a singularity in the plot,
+but since we are dealing with a finite-sized system it results in a
+finite peak at the phase transition point.
 
-### Pair correlation function
+
+### Pair correlation function\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Pair correlation function">edit</a> \| (./index.php.md)\]
+
 The pair-correlation function provides information about the probability
-of finding two atoms at a given distance $r$. The pair-correlation function is save for each temperature
-under *PCDAT.T*. The following script will plot the pair correlation
-functions at different temperatures in one figure:
+of finding two atoms at a given distance $r$. The
+pair-correlation function is save for each temperature under *PCDAT.T*.
+The following script will plot the pair correlation functions at
+different temperatures in one figure:
 
     #!/bin/bash
 
@@ -395,11 +456,18 @@ To execute it type the following command:
 
 The plot should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/3/34/Pair_liquid_Si_freezing.jpg/300px-Pair_liquid_Si_freezing.jpg)](https://vasp.at/wiki/File:Pair_liquid_Si_freezing.jpg)
+<a href="/wiki/File:Pair_liquid_Si_freezing.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/3/34/Pair_liquid_Si_freezing.jpg/300px-Pair_liquid_Si_freezing.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/3/34/Pair_liquid_Si_freezing.jpg/450px-Pair_liquid_Si_freezing.jpg 1.5x, /wiki/images/thumb/3/34/Pair_liquid_Si_freezing.jpg/600px-Pair_liquid_Si_freezing.jpg 2x"
+width="300" height="225" /></a>
 
 **Exercise:** Interpret the figure yourself!
 
+
 **Click to show/Solution**
+
 
 **Solution**:
 
@@ -410,15 +478,24 @@ range of distances. With decreasing temperature, the pair correlation
 function in the plot gets more structured. This indicates that
 crystallization is happening.
 
+
   
 
-## Download
-[Si_Liquid_Freezing.tgz](https://vasp.at/wiki/images/c/c2/Si_Liquid_Freezing.tgz "Si Liquid Freezing.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Liquid_Si_-_Freezing&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/c/c2/Si_Liquid_Freezing.tgz" class="internal"
+title="Si Liquid Freezing.tgz">Si_Liquid_Freezing.tgz</a>
+
 
 [Overview](../tutorials/Molecular_dynamics_-_Tutorial.md) \>[Liquid
 Si - Standard
-MD](Liquid_Si_-_Standard_MD.md) \> Liquid
-Si - Freezing \> [Nucleophile Substitution CH3Cl - Standard
+MD](Liquid_Si_-_Standard_MD.md) \>
+Liquid Si -
+Freezing \>
+[Nucleophile Substitution CH3Cl - Standard
 MD](Nucleophile_Substitution_CH3Cl_-_Standard_MD.md) \>
 [Nuclephile Substitution CH3Cl -
 mMD1](Nuclephile_Substitution_CH3Cl_-_mMD1.md) \>
@@ -431,3 +508,5 @@ SG](Nuclephile_Substitution_CH3Cl_-_SG.md) \>
 [Nuclephile Substitution CH3Cl -
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
+
+

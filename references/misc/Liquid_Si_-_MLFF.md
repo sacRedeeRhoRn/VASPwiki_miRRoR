@@ -2,33 +2,62 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Liquid Si - MLFF
+
+
+
 [Overview](../tutorials/Machine_learning_force_field_-_Tutorial.md) \>
-Liquid Si - MLFF \> [List of
+Liquid Si -
+MLFF \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-  - [2.3 INCAR](#INCAR)
-- [3 Calculation](#Calculation)
-  - [3.1 Creating the liquid structure](#Creating_the_liquid_structure)
-  - [3.2 Structral properties of the force
-    field](#Structral_properties_of_the_force_field)
-  - [3.3 Obtaining a more accurate force
-    field](#Obtaining_a_more_accurate_force_field)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+  - [2.3
+    INCAR](#INCAR)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Creating
+    the liquid structure](#Creating_the_liquid_structure)
+  - [3.2 Structral
+    properties of the force
+    field](#Structral_properties_of_the_force_field)
+  - [3.3 Obtaining
+    a more accurate force
+    field](#Obtaining_a_more_accurate_force_field)
+- [4
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Generating a machine learning force field for liquid Si. For this
 tutorial, we expect that the user is already familiar with running
 [conventional ab initio molecular dynamic
 calculations](Liquid_Si_-_Standard_MD.md).
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
 In this example we start from a 64 atom super cell of diamond-fcc Si
 (the same as in [Liquid Si - Standard
 MD](Liquid_Si_-_Standard_MD.md)):
@@ -106,7 +135,11 @@ MD](Liquid_Si_-_Standard_MD.md)):
        0.12500000   0.87500000   0.87500000
        0.62500000   0.87500000   0.87500000
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
 We will start with a single k point in this example:
 
     K-Points
@@ -115,7 +148,11 @@ We will start with a single k point in this example:
      1  1  1
      0  0  0
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     #Basic parameters
     ISMEAR = 0
     SIGMA = 0.1
@@ -143,8 +180,16 @@ We will start with a single k point in this example:
     ML_LMLFF = .TRUE.
     ML_ISTART = 0
 
-## Calculation
-### Creating the liquid structure
+## Calculation\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
+### Creating the liquid structure\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Creating the liquid structure">edit</a> \| (./index.php.md)\]
+
 Because we don't have a structure of liquid silicon readily available,
 we first create that structure by starting from a super cell of
 crystalline silicon with 64 atoms. The temperature is set to 2000 K so
@@ -178,7 +223,7 @@ in the beginning of the file and upon "grepping". The status of each MD
 step is given by the keyword "STATUS". Please invoke the following
 command:
 
-&nbsp;
+<!-- -->
 
     grep STATUS ML_LOGFILE
 
@@ -258,7 +303,11 @@ with the doabin column of the STATUS keyword). The other three columns
 show the errors on the energy (eV/atom), forces (ev/Angstrom) and stress
 (kB).
 
-### Structral properties of the force field
+### Structral properties of the force field\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Structral properties of the force field">edit</a> \| (./index.php.md)\]
+
 To examine the accuracy of structural properties, we compare the
 deviations between a 3 ps molecular dynamics run using the force field
 and a full ab initio calculation. For a meaningful comparison, it is
@@ -287,7 +336,9 @@ positions
 To analyze the pair correlation function, we use the PERL script
 *pair_correlation_function.pl*
 
+
 **Click to show/hide pair_correlation_function.pl**
+
 
     #!/usr/bin/perl
 
@@ -498,6 +549,7 @@ To analyze the pair correlation function, we use the PERL script
        print $r," ",$pcf[$i],"\n";
     }
 
+
 and process the previously saved [XDATCAR](../output-files/XDATCAR.md)
 files
 
@@ -519,18 +571,27 @@ the following command
 The pair correlation functions obtained that way should look similar to
 this figure
 
-[![](https://vasp.at/wiki/images/thumb/e/ec/PC_MLFF_vs_AI_3ps.jpg/400px-PC_MLFF_vs_AI_3ps.jpg)](https://vasp.at/wiki/File:PC_MLFF_vs_AI_3ps.jpg)
+<a href="/wiki/File:PC_MLFF_vs_AI_3ps.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/ec/PC_MLFF_vs_AI_3ps.jpg/400px-PC_MLFF_vs_AI_3ps.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/ec/PC_MLFF_vs_AI_3ps.jpg/600px-PC_MLFF_vs_AI_3ps.jpg 1.5x, /wiki/images/e/ec/PC_MLFF_vs_AI_3ps.jpg 2x"
+width="400" height="300" /></a>
 
 We see that pair correlation is quite well reproduced although the error
 in the force of ~0.242 eV/$\AA$ shown
 above is a little bit too large. This error is maybe too large for
 accurate production calculations (usually an accuracy of approximately
-0.1 eV/$\AA$ is targeted), but since the
-pair correlation function is well reproduced it is perfectly fine to use
-this on-the-fly force field in the time-consuming melting of the
-crystal.
+0.1 eV/$\AA$ is
+targeted), but since the pair correlation function is well reproduced it
+is perfectly fine to use this on-the-fly force field in the
+time-consuming melting of the crystal.
 
-### Obtaining a more accurate force field
+### Obtaining a more accurate force field\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Obtaining a more accurate force field">edit</a> \| (./index.php.md)\]
+
 Including the melting phase in the force field may impact the accuracy
 of the force field. To improve it is usually advisable to learn on the
 pure structures, which in our case this means to use the
@@ -658,9 +719,18 @@ finish. One should also look at the accuracy of the force on the
 training data and more importantly on the accuracy on some test data
 that is outside of the training sets.
 
-## Download
-[MLFF_Liquid_Si_tutorial.tgz](https://vasp.at/wiki/images/9/97/MLFF_Liquid_Si_tutorial.tgz "MLFF Liquid Si tutorial.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Liquid_Si_-_MLFF&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/9/97/MLFF_Liquid_Si_tutorial.tgz" class="internal"
+title="MLFF Liquid Si tutorial.tgz">MLFF_Liquid_Si_tutorial.tgz</a>
+
 
 [Overview](../tutorials/Machine_learning_force_field_-_Tutorial.md) \>
-Liquid Si - MLFF \> [List of
+Liquid Si -
+MLFF \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

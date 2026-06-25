@@ -2,13 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_RUN
+
+
 ELPH_RUN = \[logical\]  
 Default: **ELPH_RUN** = .false. 
 
 Description: Select whether to run and electron-phonon calculation.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -32,7 +34,10 @@ Additionally, the tag [ELPH_MODE](ELPH_MODE.md) sets
 defaults for other [INCAR](../input-files/INCAR.md) tags depending on the
 quantities of interest.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ELPH_RUN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Bandstructure
   renormalization](../tutorials/Bandgap_renormalization_due_to_electron-phonon_coupling.md)
 - [Transport
@@ -42,3 +47,5 @@ quantities of interest.
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
 - [ELPH_MODE](ELPH_MODE.md)
 - [ELPH_DRIVER](ELPH_DRIVER.md)
+
+

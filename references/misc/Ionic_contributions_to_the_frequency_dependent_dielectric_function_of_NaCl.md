@@ -2,35 +2,62 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Ionic contributions to the frequency dependent dielectric function of NaCl
+
+
+
 [Overview](../tutorials/Optical_properties_and_dielectric_response_-_Tutorial.md) \>
 [dielectric properties of
 SiC](Dielectric_properties_of_SiC.md) \>
 [dielectric properties of
-Si](Dielectric_properties_of_Si.md)  \>
-Ionic contributions to the frequency dependent dielectric function of
-NaCl  \> [List of
+Si](Dielectric_properties_of_Si.md)
+ \>
+Ionic contributions to the frequency
+dependent dielectric function of NaCl
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Calculation](#Calculation)
-- [3 Input](#Input)
-  - [3.1 POSCAR](#POSCAR)
-  - [3.2 KPOINTS](#KPOINTS)
-  - [3.3 INCAR](#INCAR)
-- [4 Results](#Results)
-  - [4.1 Further study on the three imaginary phonon
-    modes](#Further_study_on_the_three_imaginary_phonon_modes)
-- [5 Plotting](#Plotting)
-- [6 References](#References)
-- [7 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Calculation](#Calculation)
+- [3
+  Input](#Input)
+  - [3.1
+    POSCAR](#POSCAR)
+  - [3.2
+    KPOINTS](#KPOINTS)
+  - [3.3
+    INCAR](#INCAR)
+- [4
+  Results](#Results)
+  - [4.1 Further
+    study on the three imaginary phonon
+    modes](#Further_study_on_the_three_imaginary_phonon_modes)
+- [5
+  Plotting](#Plotting)
+- [6
+  References](#References)
+- [7
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the ionic contruibutions to the frequency dependent
 dielectric function of NaCl.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 To get the full (electronic & ionic) frequency dependent dielectric
 function you will have to compute them separately.
 
@@ -44,14 +71,22 @@ dielectric function.
 
 Step 4. Add the two dielectric functions together:
 
-$\varepsilon(\omega)=\varepsilon_{\rm
-elec}(\omega)+\varepsilon_{\rm ion}(\omega)$
+$\varepsilon(\omega)=\varepsilon_{\rm elec}(\omega)+\varepsilon_{\rm
+ion}(\omega)$
 
 This approach can be used for semi-conductors and insulators, not for
 metals.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     NaCl FCC                               
       5.55596202    
         0.5000000000000000    0.5000000000000000    0.0000000000000000
@@ -63,7 +98,11 @@ metals.
      0.0000000000000000  0.0000000000000000  0.0000000000000000
      0.5000000000000000  0.5000000000000000  0.5000000000000000
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
 A smaller 4x4x4 or 8x8x8 would also suffice in case you are running
 interactively on one core.
 
@@ -73,10 +112,14 @@ interactively on one core.
     11 11 11
     0 0 0
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md) file for the static calculation:
 
-&nbsp;
+<!-- -->
 
     PREC = High
     ISMEAR = 0 ; SIGMA = 0.01
@@ -84,7 +127,8 @@ interactively on one core.
     GGA = PS
 
 - [INCAR](../input-files/INCAR.md) electronic contributions to the frequency
-  dependent dielectric function^([\[1\]](#cite_note-gajdos:prb:2006-1))
+  dependent dielectric
+  function<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)</sup>
 
 (see other tutorials for more advanced options:
 [Dielectric_properties_of_SiC](Dielectric_properties_of_SiC.md).
@@ -101,9 +145,10 @@ example.)
   
 
 - [INCAR](../input-files/INCAR.md) ionic contributions to the frequency
-  dependent dielectric function^([\[2\]](#cite_note-bokdam:scr:2016-2)):
+  dependent dielectric
+  function<sup>[\[2\]](#cite_note-bokdam:scr:2016-2)</sup>:
 
-&nbsp;
+<!-- -->
 
     PREC = High
     ISMEAR = 0 ; SIGMA = 0.01
@@ -118,7 +163,11 @@ example.)
     #NFREE = 2 ; POTIM = 0.015
     #In both 1 and 2 the calculated dielectric function is in vasprun.xml #######
 
-## Results
+## Results\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Results">edit</a> \| (./index.php.md)\]
+
 Download all necessary files and run doall.sh. An Awk script
 ("extract_diel_vasprun") is used to extract the dielectric function from
 the vasprun.xml file and write it into a easy to plot two-column format.
@@ -126,16 +175,21 @@ If everything goes well you will obtain two files ("diel.electron.dat"
 and "diel.ion.dat"). The two dielectric functions have been plotted in
 the following figure:
 
-[![](https://vasp.at/wiki/images/thumb/0/07/NaCl-diel-ion.png/500px-NaCl-diel-ion.png)](https://vasp.at/wiki/File:NaCl-diel-ion.png)
+<a href="/wiki/File:NaCl-diel-ion.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/0/07/NaCl-diel-ion.png/500px-NaCl-diel-ion.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/0/07/NaCl-diel-ion.png/750px-NaCl-diel-ion.png 1.5x, /wiki/images/thumb/0/07/NaCl-diel-ion.png/1000px-NaCl-diel-ion.png 2x"
+width="500" height="386" /></a>
 
 *Note that the units on the frequency axes are different, eV and
-2$\pi$THz!* The high frequency
-'ion-clamped' dielectric constant ($\varepsilon_{\infty}$) was obtained with the LOPTICS
-calculation. The static field ($\omega=0$) contribution of the ionic lattice to the dielectric constant
-( $\varepsilon_{\rm ion}$) can be
-calculated by DFPT or by the finite-difference method. In both cases the
-phonon frequencies (ie. eigenvalues of the dynamical matrix) and the
-Born effective charges are calculated and written to the OUTCAR file:
+2$\pi$THz!* The high frequency 'ion-clamped' dielectric
+constant ($\varepsilon_{\infty}$) was obtained with the LOPTICS calculation. The static
+field ($\omega=0$)
+contribution of the ionic lattice to the dielectric constant (
+$\varepsilon_{\rm ion}$) can be calculated by DFPT or
+by the finite-difference method. In both cases the phonon frequencies
+(ie. eigenvalues of the dynamical matrix) and the Born effective charges
+are calculated and written to the OUTCAR file:
 
     BORN EFFECTIVE CHARGES (including local field effects) (in e, cummulative output)
     ---------------------------------------------------------------------------------
@@ -173,7 +227,11 @@ here as we can see in the eigenvectors of the dynamical matrix.
 The total static dielectric constant is then the sum of the two
 contributions: $\varepsilon_{0}=\varepsilon_{\infty}+\varepsilon_{\rm ion}$
 
-### Further study on the three imaginary phonon modes
+### Further study on the three imaginary phonon modes\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Further study on the three imaginary phonon modes">edit</a> \| (./index.php.md)\]
+
 Besides the three dipole-active modes, there are thee imaginary (f/i)
 phonon modes. Here these modes do not indicate that our structure is
 dynamically unstable. The finite plane-wave basisset that we have used
@@ -198,41 +256,66 @@ where in the cell we place the center of mass of all ions combined.
 The two vectors do not have the same lenght. In this case that is the
 result of mass-weighting of the eigenvectors.
 
-- Calculate $\sqrt{m_{\rm Na}/m_{\rm Cl}}$. The masses you can get by
+- Calculate $\sqrt{m_{\rm Na}/m_{\rm
+  Cl}}$. The masses you can get by
 
-&nbsp;
+<!-- -->
 
     grep POMASS POTCAR
 
 - Is the calculated mass ratio similar as the ratio between the two
-  displacement vectors? ($-0.128181/\sqrt{m_{\rm
-  Na}} =? -0.159541/\sqrt{m_{\rm Cl}}$)
+  displacement vectors? ($-0.128181/\sqrt{m_{\rm Na}}
+  =? -0.159541/\sqrt{m_{\rm Cl}}$)
 
-## Plotting
+## Plotting\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Plotting">edit</a> \| (./index.php.md)\]
+
 Use xmgrace or your other favourite plotting tool to plot the two
 collumn files (diel.electron.dat and diel.electron.dat):
 
     xmgrace -nxy diel.electron.dat &
     xmgrace -nxy diel.ion.dat
 
-## References
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0) [M. Gajdoš, K. Hummer, G.
-    Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**,
-    045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
-2.  [↑](#cite_ref-bokdam:scr:2016_2-0) [M. Bokdam, T. Sander, A.
-    Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci.
-    Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)
+## References\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
+    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
+    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
+    (2006).</a>
+2.  [↑](#cite_ref-bokdam:scr:2016_2-0)
+    <a href="https://doi.org/10.1038/srep28618" class="external text"
+    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
+    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
+    (2016).</a>
+
 
   
 
-## Download
-[NaCl_dielectric.tgz](https://vasp.at/wiki/images/2/2d/NaCl_dielectric.tgz "NaCl dielectric.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/2/2d/NaCl_dielectric.tgz" class="internal"
+title="NaCl dielectric.tgz">NaCl_dielectric.tgz</a>
+
 
 [Overview](../tutorials/Optical_properties_and_dielectric_response_-_Tutorial.md) \>
 [dielectric properties of
 SiC](Dielectric_properties_of_SiC.md) \>
 [dielectric properties of
-Si](Dielectric_properties_of_Si.md)  \>
-Ionic contributions to the frequency dependent dielectric function of
-NaCl  \> [List of
+Si](Dielectric_properties_of_Si.md)
+ \>
+Ionic contributions to the frequency
+dependent dielectric function of NaCl
+ \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

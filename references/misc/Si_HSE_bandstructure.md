@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Si HSE bandstructure
+
+
 Description: Bandstructure for Si within DFT+HF
 
 Bandstructure in VASP can be obtained following three different
@@ -13,39 +15,62 @@ example](Fcc_Si_bandstructure.md).
 Within Hybrid functional theory it is possible to plot bandstructure
 using procedure 2 or 3.
 
+
 ## Contents
 
-- [1 Procedure 1: Standard procedure (suitable for DFT
-  calculations)](#Procedure_1:_Standard_procedure_(suitable_for_DFT_calculations))
-  - [1.1 Standard self-consistent (SC)
-    run](#Standard_self-consistent_(SC)_run)
-  - [1.2 Non-SC calculation
-    (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
-  - [1.3 Plot using p4v](#Plot_using_p4v)
-- [2 Procedure 2: 0-weight (Fake) SC procedure (works DFT & hybrid
-  functionals)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(works_DFT_&_hybrid_functionals))
-  - [2.1 Standard DFT run](#Standard_DFT_run)
-  - [2.2 Hybrid calculation using a suitably modified KPOINTS
-    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
-  - [2.3 Plot using p4v](#Plot_using_p4v_2)
-- [3 Procedure 3: VASP2WANNIER90 (works for DFT, hybrid functionals, and
-  GW)](#Procedure_3:_VASP2WANNIER90_(works_for_DFT,_hybrid_functionals,_and_GW))
-  - [3.1 Standard DFT run](#Standard_DFT_run_2)
-  - [3.2 Increase the number of states to
-    24](#Increase_the_number_of_states_to_24)
-  - [3.3 HSE + LWANNIER90 run](#HSE_+_LWANNIER90_run)
-  - [3.4 Plot bandstructure (Wannier interpolation) using XMGRACE or
-    GNUPLOT](#Plot_bandstructure_(Wannier_interpolation)_using_XMGRACE_or_GNUPLOT)
-- [4 Download](#Download)
 
-## Procedure 1: Standard procedure (suitable for DFT calculations)
+- [1 Procedure 1:
+  Standard procedure (suitable for DFT
+  calculations)](#Procedure_1:_Standard_procedure_(suitable_for_DFT_calculations))
+  - [1.1 Standard
+    self-consistent (SC) run](#Standard_self-consistent_(SC)_run)
+  - [1.2 Non-SC
+    calculation (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
+  - [1.3 Plot using
+    p4v](#Plot_using_p4v)
+- [2 Procedure 2:
+  0-weight (Fake) SC procedure (works DFT & hybrid
+  functionals)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(works_DFT_&_hybrid_functionals))
+  - [2.1 Standard
+    DFT run](#Standard_DFT_run)
+  - [2.2 Hybrid
+    calculation using a suitably modified KPOINTS
+    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
+  - [2.3 Plot using
+    p4v](#Plot_using_p4v_2)
+- [3 Procedure 3:
+  VASP2WANNIER90 (works for DFT, hybrid functionals, and
+  GW)](#Procedure_3:_VASP2WANNIER90_(works_for_DFT,_hybrid_functionals,_and_GW))
+  - [3.1 Standard
+    DFT run](#Standard_DFT_run_2)
+  - [3.2 Increase
+    the number of states to
+    24](#Increase_the_number_of_states_to_24)
+  - [3.3 HSE +
+    LWANNIER90 run](#HSE_+_LWANNIER90_run)
+  - [3.4 Plot
+    bandstructure (Wannier interpolation) using XMGRACE or
+    GNUPLOT](#Plot_bandstructure_(Wannier_interpolation)_using_XMGRACE_or_GNUPLOT)
+- [4
+  Download](#Download)
+
+
+## Procedure 1: Standard procedure (suitable for DFT calculations)\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 1: Standard procedure (suitable for DFT calculations)">edit</a> \| (./index.php.md)")\]
+
 Only possible within DFT. Described in [Fcc Si bandstructure
 example](Fcc_Si_bandstructure.md):
 
-### Standard self-consistent (SC) run
+### Standard self-consistent (SC) run\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard self-consistent (SC) run">edit</a> \| (./index.php.md) run")\]
+
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     system Si
     5.430
@@ -59,7 +84,7 @@ example](Fcc_Si_bandstructure.md):
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.dft)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -67,7 +92,7 @@ example](Fcc_Si_bandstructure.md):
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.6)
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -75,13 +100,17 @@ example](Fcc_Si_bandstructure.md):
      6 6 6
      0 0 0
 
-### Non-SC calculation ([ICHARG](../incar-tags/ICHARG.md)=11)
+### Non-SC calculation ([ICHARG](../incar-tags/ICHARG.md)=11)\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Non-SC calculation (ICHARG=11)">edit</a> \| (./index.php.md)")\]
+
 Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
 [KPOINTS](../input-files/KPOINTS.md) file
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -92,7 +121,7 @@ Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS_PBE_bands)
 
-&nbsp;
+<!-- -->
 
     k-points for bandstructure L-G-X-U K-G
      10
@@ -110,19 +139,32 @@ Use preconverged [CHGCAR](../input-files/CHGCAR.md) file and a suitable
       0.37500  0.7500   0.37500    1
       0.00000  0.00000  0.00000    1
 
-### Plot using p4v
-P4VASP: [p4v](http://www.p4vasp.at)
+### Plot using p4v\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Plot using p4v">edit</a> \| (./index.php.md)\]
 
-## Procedure 2: 0-weight (Fake) SC procedure (works DFT & hybrid functionals)
+P4VASP: <a href="http://www.p4vasp.at" class="external text"
+rel="nofollow">p4v</a>
+
+## Procedure 2: 0-weight (Fake) SC procedure (works DFT & hybrid functionals)\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 2: 0-weight (Fake) SC procedure (works DFT &amp; hybrid functionals)">edit</a> \| (./index.php.md) SC procedure (works DFT & hybrid functionals)")\]
+
 This procedure can be applied to compute bandstructure at hybrid
 functionals and DFT level (see the `HSE_bandstructure.sh` script).
 
-### Standard DFT run
+### Standard DFT run\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard DFT run">edit</a> \| (./index.php.md)\]
+
 Just as before
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.dft)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -130,7 +172,7 @@ Just as before
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINST.6)
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -138,10 +180,14 @@ Just as before
      6 6 6
      0 0 0
 
-### Hybrid calculation using a suitably modified KPOINTS file
+### Hybrid calculation using a suitably modified KPOINTS file\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Hybrid calculation using a suitably modified KPOINTS file">edit</a> \| (./index.php.md)\]
+
 - [INCAR](../input-files/INCAR.md) (see INCAR.hse)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -156,7 +202,7 @@ Just as before
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS_HSE_bands.6 and
   README.txt)
 
-&nbsp;
+<!-- -->
 
     Automatically generated mesh
           26
@@ -194,12 +240,21 @@ bands often have a zig-zag structure.
 
   
 
-### Plot using p4v
-P4VASP: [p4v](http://www.p4vasp.at)
+### Plot using p4v\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Plot using p4v">edit</a> \| (./index.php.md)\]
+
+P4VASP: <a href="http://www.p4vasp.at" class="external text"
+rel="nofollow">p4v</a>
 
 **Mind**: Zoom in on the right-side part of the bandstructure plot.
 
-## Procedure 3: VASP2WANNIER90 (works for DFT, hybrid functionals, and GW)
+## Procedure 3: VASP2WANNIER90 (works for DFT, hybrid functionals, and GW)\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Procedure 3: VASP2WANNIER90 (works for DFT, hybrid functionals, and GW)">edit</a> \| (./index.php.md)")\]
+
 Wannier function interpolation using the VASP2WANNIER90 interface: this
 procedure is applicable to DFT, hybrid functionals, and GW bandstructure
 calculations. Here we apply it for a hybrid functional. For GW see the
@@ -212,12 +267,16 @@ examples.
 To see a summary of the workflow below, have a look at the
 `HSE_bandstructure_with_wannier90.sh`.
 
-### Standard DFT run
+### Standard DFT run\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Standard DFT run">edit</a> \| (./index.php.md)\]
+
 Just as before
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.dft)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -225,7 +284,7 @@ Just as before
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINST.6)
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -233,12 +292,16 @@ Just as before
      6 6 6
      0 0 0
 
-### Increase the number of states to 24
+### Increase the number of states to 24\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Increase the number of states to 24">edit</a> \| (./index.php.md)\]
+
 This step is optional.
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.diag)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -248,13 +311,17 @@ This step is optional.
          
     NBANDS = 24
 
-### HSE + LWANNIER90 run
+### HSE + LWANNIER90 run\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: HSE + LWANNIER90 run">edit</a> \| (./index.php.md)\]
+
 Run the hybrid functional calculation and call `wannier90` (see
 [LWANNIER90_RUN](../incar-tags/LWANNIER90_RUN.md)). .
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.hse_with_wannier90)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.01
@@ -273,7 +340,7 @@ You will have to provide some instructions for `wannier90` as well:
 
 - wannier90.win (see wannier90.win_start)
 
-&nbsp;
+<!-- -->
 
     num_wann=18
     num_bands=24
@@ -302,25 +369,30 @@ You will have to provide some instructions for `wannier90` as well:
 default wannier90.win compatible with the POSCAR and INCAR files, which
 needs to be suitably modified by including the proper instruction
 required to generate the maximally localized wannier functions (refer to
-the [WANNIER90 manual](http://www.wannier.org/doc/user_guide.pdf)).
+the <a href="http://www.wannier.org/doc/user_guide.pdf"
+class="external text" rel="nofollow">WANNIER90 manual</a>).
 
-### Plot bandstructure (Wannier interpolation) using XMGRACE or GNUPLOT
+### Plot bandstructure (Wannier interpolation) using XMGRACE or GNUPLOT\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Plot bandstructure (Wannier interpolation) using XMGRACE or GNUPLOT">edit</a> \| (./index.php.md) using XMGRACE or GNUPLOT")\]
+
 If all went well, `wannier90` will have generated the following
 bandstructure files which can be visualized using xmgrace or gnuplot:
 
 - wannier90_band.agr
 
-&nbsp;
+<!-- -->
 
     xmgrace ./wannier90_band.agr
 
 - wannier90_band.dat
 
-&nbsp;
+<!-- -->
 
 - wannier90_band.gnu
 
-&nbsp;
+<!-- -->
 
     gnuplot -persist ./wannier90_band.gnu
 
@@ -328,7 +400,14 @@ bandstructure files which can be visualized using xmgrace or gnuplot:
 message unless you remove the first line of `wannier90_band.gnu` (some
 deprecated syntax issue).
 
-## Download
-[Si_HSE_band.tgz](https://vasp.at/wiki/images/e/e4/Si_HSE_band.tgz "Si HSE band.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Si_HSE_bandstructure&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/e/e4/Si_HSE_band.tgz" class="internal"
+title="Si HSE band.tgz">Si_HSE_band.tgz</a>
 
 ------------------------------------------------------------------------
+
+

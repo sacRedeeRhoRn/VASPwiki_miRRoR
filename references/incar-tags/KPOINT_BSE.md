@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # KPOINT_BSE
-KPOINT_BSE = \[integer\] (optionally
-\[integer\],\[integer\],\[integer\]) 
 
-Description: KPOINT_BSE specifies the k-point index at which VASP
-calculates the dielectric matrix.
+
+KPOINT_BSE = \[integer\]
+(optionally \[integer\],\[integer\],\[integer\]) 
+
+Description: KPOINT_BSE
+specifies the k-point index at which VASP calculates the dielectric
+matrix.
 
 ------------------------------------------------------------------------
 
@@ -24,18 +27,24 @@ additional integer numbers:
 This allows calculating the dielectric function at a k point outside of
 the first Brillouin zone corresponding to
 
-$\mathbf{k} + n_{1} \mathbf{b}_{1}+ n_{2}
-\mathbf{b}_{2} + n_{3} \mathbf{b}_{3}$
+$\mathbf{k} + n_{1} \mathbf{b}_{1}+ n_{2} \mathbf{b}_{2} + n_{3}
+\mathbf{b}_{3}$
 
-where $\mathbf{b}_{i}$ are the
-reciprocal-lattice vectors of the unit cell.
+where $\mathbf{b}_{i}$ are the reciprocal-lattice vectors of the unit cell.
 
 |  |
 |----|
 | **Warning:** We strongly recommend using [ANTIRES](ANTIRES.md)=2 for the finite wavevector calculations. The Tamm-Dancoff approximation can lead to unphysical results for the dielectric function at a finite wavevector. |
 
-## Related tags and articles
-[BSE calculations](../redirects/BSE_calculations.md),
+## Related tags and articles\[<a
+href="/wiki/index.php?title=KPOINT_BSE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/BSE_calculations" class="mw-redirect"
+title="BSE calculations">BSE calculations</a>,
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-KPOINT_BSE-_incategory-HowTo)
+
+

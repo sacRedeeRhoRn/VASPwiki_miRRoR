@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Nonlocal van der Waals density functionals
+
+
+
 Redirect to:
 
 - [Nonlocal vdW-DF
   functionals](../methods/Nonlocal_vdW-DF_functionals.md)
+
+

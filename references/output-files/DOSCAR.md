@@ -2,16 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # DOSCAR
-The DOSCAR file contains the DOS and integrated DOS. The units are
-number of states/eV and number of states, respectively and thus
-extensively defined. The intensive DOS is obtained by dividing by the
-Volume of the unit cell. For dynamic simulations and relaxations, an
-averaged DOS and an averaged integrated DOS is written to the file. For
-a description of how the averaging is done see the tags
-[NBLOCK](../incar-tags/NBLOCK.md), [KBLOCK](../incar-tags/KBLOCK.md),
-[EMIN](../incar-tags/EMIN.md), [EMAX](../incar-tags/EMAX.md) and
-[NEDOS](../incar-tags/NEDOS.md). The first few lines of the DOSCAR file are
-made up by a header:
+
+
+The DOSCAR file contains the
+DOS and integrated DOS. The units are number of states/eV and number of
+states, respectively and thus extensively defined. The intensive DOS is
+obtained by dividing by the Volume of the unit cell. For dynamic
+simulations and relaxations, an averaged DOS and an averaged integrated
+DOS is written to the file. For a description of how the averaging is
+done see the tags [NBLOCK](../incar-tags/NBLOCK.md),
+[KBLOCK](../incar-tags/KBLOCK.md), [EMIN](../incar-tags/EMIN.md),
+[EMAX](../incar-tags/EMAX.md) and [NEDOS](../incar-tags/NEDOS.md). The first
+few lines of the DOSCAR file
+are made up by a header:
 
     Number of Ions (including empty spheres), Number of Ions, 0 (no partial DOS) or 1 (incl. partial DOS), NCDIJ (currently not used)     
     Volume of the unit cell [Angst**3], length of the basis vectors (a,b,c [m]), POTIM[s]
@@ -24,31 +27,32 @@ which is followed by [NEDOS](../incar-tags/NEDOS.md) lines with the columns
 
     energy     DOS     integrated DOS
 
-The density of states (DOS) $\bar n$,
-for Methfessel-Paxton smearing ([ISMEAR](../incar-tags/ISMEAR.md)\>0) and
+The density of states (DOS) $\bar n$, for
+Methfessel-Paxton smearing ([ISMEAR](../incar-tags/ISMEAR.md)\>0) and
 Fermi-Dirac smearing ([ISMEAR](../incar-tags/ISMEAR.md)=-1) is determined
 as the difference of the integrated DOS between two pins, i.e.
 
-$\bar n(\epsilon_i) = (N(\epsilon_i) -
-N(\epsilon_{i-1})) / \Delta \epsilon$
+$\bar n(\epsilon_i) = (N(\epsilon_i) - N(\epsilon_{i-1})) / \Delta
+\epsilon$
 
-where $\Delta \epsilon$ is the distance
-between two pins (energy difference between two grid point in the DOSCAR
-file), and $N(\epsilon_i)$ is the
-integrated DOS
+where $\Delta \epsilon$ is the distance between two pins (energy difference
+between two grid point in the
+DOSCAR file), and
+$N(\epsilon_i)$ is the integrated DOS
 
-$N (\epsilon_{i}) = \int_{-\infty}^{\epsilon_i}
-n(\epsilon) d \epsilon.$
+$N
+(\epsilon_{i}) = \int_{-\infty}^{\epsilon_i} n(\epsilon) d \epsilon.$
 
 This method conserves the total number of electrons exactly. For the
 tetrahedron method ([ISMEAR](../incar-tags/ISMEAR.md)=-4 or -5), the total
 integrated DOS is computed using the formulas in Appendix A and B of
-Bloechl's paper ^([\[1\]](#cite_note-bloechl:prb:1994-1)) and the DOS
-using the formulas from Appendix C
-^([\[1\]](#cite_note-bloechl:prb:1994-1)). In this case, it is not
-guaranteed that integrating the DOS will conserve the number of
-electrons. This can however be systematically improved by increasing
-[NEDOS](../incar-tags/NEDOS.md).
+Bloechl's paper
+<sup>[\[1\]](#cite_note-bloechl:prb:1994-1)</sup>
+and the DOS using the formulas from Appendix C
+<sup>[\[1\]](#cite_note-bloechl:prb:1994-1)</sup>.
+In this case, it is not guaranteed that integrating the DOS will
+conserve the number of electrons. This can however be systematically
+improved by increasing [NEDOS](../incar-tags/NEDOS.md).
 
 For spin-polarized calculations [ISPIN](../incar-tags/ISPIN.md)=2 each line
 holds five data columns with the following format
@@ -58,9 +62,10 @@ holds five data columns with the following format
 If [RWIGS](../incar-tags/RWIGS.md) or [LORBIT](../incar-tags/LORBIT.md)
 (important for Wigner Seitz radii) is set in the
 [INCAR](../input-files/INCAR.md) file, an lm- and site-projected DOS is
-calculated and written to the DOSCAR file for each ion. This data,
-again, contains [NEDOS](../incar-tags/NEDOS.md) lines with various columns
-depending on the choice of [LORBIT](../incar-tags/LORBIT.md),
+calculated and written to the
+DOSCAR file for each ion. This
+data, again, contains [NEDOS](../incar-tags/NEDOS.md) lines with various
+columns depending on the choice of [LORBIT](../incar-tags/LORBIT.md),
 [ISPIN](../incar-tags/ISPIN.md) and
 [LNONCOLLINEAR](../incar-tags/LNONCOLLINEAR.md).
 
@@ -89,8 +94,8 @@ components is available only for the site projected density of states:
 
 In this case, the (site projected) total density of states (total) and
 the (site projected) energy resolved magnetization density in the
-$x$ (mx), $y$ (my) and $z$ (mz) directions
-are available.
+$x$ (mx), $y$ (my) and
+$z$ (mz) directions are available.
 
 In all cases, the units of the l- and site projected DOS are
 states/atom/energy.
@@ -99,8 +104,10 @@ states/atom/energy.
 The site projected DOS is not evaluated in the parallel version for the
 following cases:
 
-- vasp.4.5, [NPAR](../incar-tags/NPAR.md)$\ne$1 no site projected DOS
-- vasp.4.6, [NPAR](../incar-tags/NPAR.md)$\ne$1, [LORBIT](../incar-tags/LORBIT.md)=0-5 no site projected DOS
+- vasp.4.5, [NPAR](../incar-tags/NPAR.md)$\ne$1 no
+  site projected DOS
+- vasp.4.6, [NPAR](../incar-tags/NPAR.md)$\ne$1,
+  [LORBIT](../incar-tags/LORBIT.md)=0-5 no site projected DOS
 
 In vasp.4.6 the site projected DOS can be evaluated for
 [LORBIT](../incar-tags/LORBIT.md)=10-12, even if [NPAR](../incar-tags/NPAR.md)
@@ -114,7 +121,12 @@ is not equal 1 (contrary to previous releases).
 
 ------------------------------------------------------------------------
 
-1.  ↑ ^([a](#cite_ref-bloechl:prb:1994_1-0))
-    ^([b](#cite_ref-bloechl:prb:1994_1-1)) [P.E. Blöchl, O. Jepsen, and
-    O.K. Andersen, Phys. Rev. B **49**, 16223
-    (1994).](https://doi.org/10.1103/PhysRevB.49.16223)
+
+1.  ↑
+    <sup>[a](#cite_ref-bloechl:prb:1994_1-0)</sup>
+    <sup>[b](#cite_ref-bloechl:prb:1994_1-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.49.16223"
+    class="external text" rel="nofollow">P.E. Blöchl, O. Jepsen, and O.K.
+    Andersen, Phys. Rev. B <strong>49</strong>, 16223 (1994).</a>
+
+

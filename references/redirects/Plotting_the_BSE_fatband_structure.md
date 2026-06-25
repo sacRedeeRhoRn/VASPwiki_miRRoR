@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Plotting the BSE fatband structure
+
+
+
 Redirect to:
 
-- [Plot BSE
-  fatband](https://vasp.at/wiki/index.php/index.php)
+- <a href="/wiki/index.php?title=Plot_BSE_fatband&amp;redirect=no"
+  class="mw-redirect" title="Plot BSE fatband">Plot BSE fatband</a>
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include.intel_serial
+
+
     # Precompiler options
     CPP_OPTIONS = -DHOST=\"LinuxIFC\"\
                   -DCACHE_SIZE=4000 \
@@ -46,3 +48,5 @@
 ------------------------------------------------------------------------
 
 [makefile.include](Makefile.include.md)
+
+

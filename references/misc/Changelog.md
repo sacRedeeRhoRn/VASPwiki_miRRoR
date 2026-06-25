@@ -2,27 +2,57 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Changelog
+
+
+
 ## Contents
 
-- [1 6.6.0](#6.6.0)
-  - [1.1 FEATURE](#FEATURE)
-  - [1.2 IMPROVEMENT](#IMPROVEMENT)
-  - [1.3 BUGFIX](#BUGFIX)
-- [2 6.5.1](#6.5.1)
-  - [2.1 FEATURE](#FEATURE_2)
-  - [2.2 IMPROVEMENT](#IMPROVEMENT_2)
-  - [2.3 BUGFIX](#BUGFIX_2)
-- [3 6.5.0](#6.5.0)
-  - [3.1 FEATURE](#FEATURE_3)
-  - [3.2 IMPROVEMENT](#IMPROVEMENT_3)
-  - [3.3 BUGFIX](#BUGFIX_3)
-- [4 6.4.3](#6.4.3)
-  - [4.1 FEATURE](#FEATURE_4)
-  - [4.2 IMPROVEMENT](#IMPROVEMENT_4)
-  - [4.3 BUGFIX](#BUGFIX_4)
 
-## 6.6.0
-### FEATURE
+- [1
+  6.6.0](#6.6.0)
+  - [1.1
+    FEATURE](#FEATURE)
+  - [1.2
+    IMPROVEMENT](#IMPROVEMENT)
+  - [1.3
+    BUGFIX](#BUGFIX)
+- [2
+  6.5.1](#6.5.1)
+  - [2.1
+    FEATURE](#FEATURE_2)
+  - [2.2
+    IMPROVEMENT](#IMPROVEMENT_2)
+  - [2.3
+    BUGFIX](#BUGFIX_2)
+- [3
+  6.5.0](#6.5.0)
+  - [3.1
+    FEATURE](#FEATURE_3)
+  - [3.2
+    IMPROVEMENT](#IMPROVEMENT_3)
+  - [3.3
+    BUGFIX](#BUGFIX_3)
+- [4
+  6.4.3](#6.4.3)
+  - [4.1
+    FEATURE](#FEATURE_4)
+  - [4.2
+    IMPROVEMENT](#IMPROVEMENT_4)
+  - [4.3
+    BUGFIX](#BUGFIX_4)
+
+
+## 6.6.0\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: 6.6.0">edit</a> \| (./index.php.md)\]
+
+
+### FEATURE\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: FEATURE">edit</a> \| (./index.php.md)\]
+
 - [X-ray absorption
   spectra](../tutorials/Bethe-Salpeter_equation_for_core_excitations.md)
   (XAS) using the Bethe-Salpeter equation (BSE).
@@ -113,7 +143,11 @@
   - Write the kinetic energy density ([LTAU](../incar-tags/LTAU.md) and
     [TAUCAR](../input-files/TAUCAR.md) file).
 
-### IMPROVEMENT
+### IMPROVEMENT\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: IMPROVEMENT">edit</a> \| (./index.php.md)\]
+
 - [Electron-phonon](../categories/Category-Electron-phonon_interactions.md)
   - List of carrier density ranges in electron-phonon transport
     calculations
@@ -164,7 +198,11 @@
   CMake](Installing_VASP.6.X.X.md)
   for instructions.
 
-### BUGFIX
+### BUGFIX\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: BUGFIX">edit</a> \| (./index.php.md)\]
+
 - MD driven by [VASPml](../methods/VASPml_library.md) (inside
   VASP or LAMMPS) crashed if the number of MPI tasks was larger than the
   number of atoms.
@@ -210,7 +248,9 @@
   and 6.5.1.
 - For very dense k-meshes, a crash could occur in the subroutine TETIRR,
   cf. the forum post
-  ([https://www.vasp.at/forum/viewtopic.php?t=19800](https://www.vasp.at/forum/viewtopic.php?t=19800)).
+  (<a href="https://www.vasp.at/forum/viewtopic.php?t=19800"
+  class="external free"
+  rel="nofollow">https://www.vasp.at/forum/viewtopic.php?t=19800</a>).
 - The ionic CG algorithm ([`IBRION`](../incar-tags/IBRION.md)` = 2`) for
   the Brent algorithm determined the bracketing interval improperly.
 - Fixed
@@ -256,7 +296,9 @@
   [AGGAC](../incar-tags/AGGAC.md).
 - During a geometry relaxation, the new atomic positions and cell
   parameters were not passed to libMBD, cf.
-  [https://www.vasp.at/forum/viewtopic.php?t=20071](https://www.vasp.at/forum/viewtopic.php?t=20071).
+  <a href="https://www.vasp.at/forum/viewtopic.php?t=20071"
+  class="external free"
+  rel="nofollow">https://www.vasp.at/forum/viewtopic.php?t=20071</a>.
 - Fixed deadlock in [VCAIMAGES](../incar-tags/VCAIMAGES.md) runs caused
   by inconsistent [STOPCAR](../incar-tags/STOPCAR.md)-check MPI_allreduce
   calls between MLFF and pure-DFT images.
@@ -307,13 +349,22 @@
   small roundoff differences in energy terms (e.g., Hartree) between
   [KPAR](../incar-tags/KPAR.md) groups.
 
-## 6.5.1
-### FEATURE
+## 6.5.1\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: 6.5.1">edit</a> \| (./index.php.md)\]
+
+
+### FEATURE\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: FEATURE">edit</a> \| (./index.php.md)\]
+
 - Added output of the imaginary part of the dielectric function from XAS
   calculations to vaspout.h5 (HDF5), and of the dielectric function with
   respect to the Fermi level to OUTCAR.
 
-&nbsp;
+<!-- -->
 
 - For
   [`ELPH_POT_GENERATE`](../incar-tags/ELPH_POT_GENERATE.md)` = True`:
@@ -326,7 +377,11 @@
   - The primitive-cell information is also written to
     [vaspout.h5](../output-files/Vaspout.h5.md).
 
-### IMPROVEMENT
+### IMPROVEMENT\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: IMPROVEMENT">edit</a> \| (./index.php.md)\]
+
 - The line search algorithm of the conjugate gradient optimizer
   ([`ALGO`](../incar-tags/ALGO.md)` = A`) has been extensively improved:
   - previously, when performing the line search, it moved incremental
@@ -353,7 +408,7 @@
     search ([`ISEARCH`](../incar-tags/ISEARCH.md)` = 0`) is still the
     default.
 
-&nbsp;
+<!-- -->
 
 - Improvements for BSE:
   - The dielectric function is written as a scalar (not tensor) for
@@ -361,21 +416,25 @@
   - Hermiticity of the BSE matrix is now enforced for
     [`IBSE`](../incar-tags/IBSE.md)` = 3` to improve stability.
 
-&nbsp;
+<!-- -->
 
 - Improved the performance of the Ewald summation used in the truncated
   Coulomb kernel method for 2D materials by restricting the number of
   g-vectors that are used in the reciprocal space summation. This
   truncation of g-vectors is in keeping with the 3D summation, where
-  every value less than $10^{-10}$ is
-  removed.
+  every value less than $10^{-10}$
+  is removed.
 
-### BUGFIX
+### BUGFIX\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: BUGFIX">edit</a> \| (./index.php.md)\]
+
 - Fixed the handling of “very long full paths of files” with the Intel
   compiler (these were truncated at 255 characters). Now we allow for
   1023 characters and hope this will be enough …
 
-&nbsp;
+<!-- -->
 
 - For [`ISYM`](../incar-tags/ISYM.md)` = 3`, symmetry operation involving
   spinflips were incorrect under some special fringe circumstances. This
@@ -383,31 +442,31 @@
   anti-ferromagnetic systems where the spin-up and spin-dn density of
   states differ from each other at some k-points.
 
-&nbsp;
+<!-- -->
 
 - Fixed a bug that prevented building without scaLAPACK support.
 
-&nbsp;
+<!-- -->
 
 - Fixed inconsistent ML_FF input/output for non-scaLAPACK build.
 
-&nbsp;
+<!-- -->
 
 - The code crashed for [`LKPROJ`](../incar-tags/LKPROJ.md)` = True`. This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - SERTA is now correctly listed as "self-energy relaxation-time
   approximation" in [OUTCAR](../output-files/OUTCAR.md).
 
-&nbsp;
+<!-- -->
 
 - The `wannier90.UNK` files were not correctly written for non-collinear
   magnetic calculations. This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - If both [`ISPIN`](../incar-tags/ISPIN.md)` = 2` and
   [`LNONCOLLINEAR`](../incar-tags/LNONCOLLINEAR.md)` = True` (or
@@ -420,54 +479,54 @@
   latter will default back to [`ISPIN`](../incar-tags/ISPIN.md)` = 1`
   internally).
 
-&nbsp;
+<!-- -->
 
 - Fixed a problem with the final diagonalization in the occupied
   subspace before the computation of the forces: this bug sometimes
   caused errors in the forces when the wave functions were not tightly
   converged, for [`ALGO`](../incar-tags/ALGO.md)` = A or D`.
 
-&nbsp;
+<!-- -->
 
 - BSE crashed on GPUs with `-DCUSOLVERMP` and `-DCUBLASMP` when
   [OMEGAMAX](../incar-tags/OMEGAMAX.md) was set. This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - The computation of the dielectric function was not correctly
   implemented for finite-q in [`IBSE`](../incar-tags/IBSE.md)` = 1,3`.
 
-&nbsp;
+<!-- -->
 
 - BSE crashed for [`IBSE`](../incar-tags/IBSE.md)` = 3` with the gamma-only
   version. This has been fixed.
 
-&nbsp;
+<!-- -->
 
 - [BSEPREC](../incar-tags/BSEPREC.md) was overwritten for
   [`IBSE`](../incar-tags/IBSE.md)` = 3`. This has been fixed.
 
-&nbsp;
+<!-- -->
 
 - The feature to compute the transport function using
   [ELPH_TRANSPORT_NEDOS_PLOT](../incar-tags/ELPH_TRANSPORT_NEDOS_PLOT.md)
   was broken. This has been fixed.
 
-&nbsp;
+<!-- -->
 
 - Electron-phonon code crashed for
   [`ELPH_MODE`](../incar-tags/ELPH_MODE.md)` = renorm`. This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - VASP no longer crashes when running
   [`ELPH_POT_GENERATE`](../incar-tags/ELPH_POT_GENERATE.md)` = True`
   without specifying the FFT grid via
   [ELPH_POT_FFT_MESH](../incar-tags/ELPH_POT_FFT_MESH.md).
 
-&nbsp;
+<!-- -->
 
 - The
   [LATTICE_CONSTRAINTS](../incar-tags/LATTICE_CONSTRAINTS.md)
@@ -475,13 +534,13 @@
   This [issue](Known_issues.md) has been
   fixed.
 
-&nbsp;
+<!-- -->
 
 - For [`ISIF`](../incar-tags/ISIF.md)` = 4, 5, 6`, the header of the
   [XDATCAR](../output-files/XDATCAR.md) file was written twice. This has
   been fixed.
 
-&nbsp;
+<!-- -->
 
 - The truncated Coulomb kernel method for 2D systems only worked
   correctly if the cell was twice as large as the thickness of the slab.
@@ -492,20 +551,20 @@
   conditions. This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - There was a (small) memory leak in the use of HDF5. This
   [issue](Known_issues.md) has been
   fixed.
 
-&nbsp;
+<!-- -->
 
 - In case the HF exchange was activated via the
   [LTHOMAS](../incar-tags/LTHOMAS.md) tag, VASP wrongly kept
   [`IMIX`](../incar-tags/IMIX.md)` = 4`. Now
   [`IMIX`](../incar-tags/IMIX.md)` = 1` is used.
 
-&nbsp;
+<!-- -->
 
 - The OpenACC version crashed when compiled with python plugin support
   (`-DPLUGINS,`). This
@@ -513,7 +572,7 @@
   the python plugins are now fully supported in the OpenACC version as
   well.
 
-&nbsp;
+<!-- -->
 
 - For [`IBRION`](../incar-tags/IBRION.md)` = 12` or
   [`PLUGINS/STRUCTURE`](../incar-tags/PLUGINS__STRUCTURE.md)` = True`
@@ -522,7 +581,7 @@
   [issue](Known_issues.md) has been
   fixed.
 
-&nbsp;
+<!-- -->
 
 - The combination of
   [`PLUGINS/STRUCTURE`](../incar-tags/PLUGINS__STRUCTURE.md)` = True`
@@ -530,25 +589,26 @@
   crash. This [issue](Known_issues.md) is
   fixed.
 
-&nbsp;
+<!-- -->
 
 - [`ML_MODE`](../incar-tags/ML_MODE.md)` = train` was broken when running
   on multiple nodes *and* using shared memory (`-Duse_shmem`). This
   [issue](Known_issues.md) is fixed.
 
-&nbsp;
+<!-- -->
 
 - Fixed broken ML_FF version check in VASPml; was unable to read ML_FFs
   from VASP 6.5.0 (earlier versions work).
 
-&nbsp;
+<!-- -->
 
-- [ML_IERR](../redirects/ML_IERR.md) was deprecated in favor of new tag
-  name [ML_ESTBLOCK](../incar-tags/ML_ESTBLOCK.md). This fixes
-  "grepping" for `ERR` in [ML_LOGFILE](../output-files/ML_LOGFILE.md)
-  (old tag still works).
+- <a href="/wiki/ML_IERR" class="mw-redirect" title="ML IERR">ML_IERR</a>
+  was deprecated in favor of new tag name
+  [ML_ESTBLOCK](../incar-tags/ML_ESTBLOCK.md). This fixes "grepping"
+  for `ERR` in [ML_LOGFILE](../output-files/ML_LOGFILE.md) (old tag
+  still works).
 
-&nbsp;
+<!-- -->
 
 - The output of the total energy to the [OUTCAR](../output-files/OUTCAR.md)
   was wrong when running [`ML_MODE`](../incar-tags/ML_MODE.md)` = train`
@@ -556,13 +616,22 @@
   [issue](Known_issues.md) issue has been
   fixed.
 
-&nbsp;
+<!-- -->
 
 - Fixed an incorrectly sized spline grid that sometimes led to wrong
   force predictions by VASPml.
 
-## 6.5.0
-### FEATURE
+## 6.5.0\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: 6.5.0">edit</a> \| (./index.php.md)\]
+
+
+### FEATURE\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: FEATURE">edit</a> \| (./index.php.md)\]
+
 - [Electron-phonon
   coupling](../categories/Category-Electron-phonon_interactions.md):
   - Zero-point [renormalisation of band
@@ -600,8 +669,8 @@
   - Introducing the [spilling
     factor](../methods/Best_practices_for_machine-learned_force_fields.md)
     as an error estimate of the force field with
-    [ML_IERR](../redirects/ML_IERR.md), which can be easily combined
-    with the fast execution mode.
+    <a href="/wiki/ML_IERR" class="mw-redirect" title="ML IERR">ML_IERR</a>,
+    which can be easily combined with the fast execution mode.
 - External forces with [EFOR](../incar-tags/EFOR.md).
 - Spline interpolation of the electronic structure factor
   ([ESF_SPLINES](ESF_SPLINES.md)) for [k-point
@@ -611,7 +680,11 @@
 - [Müller-Plathe method for thermal conductivity
   calculations](../tutorials/Müller-Plathe_method.md).
 
-### IMPROVEMENT
+### IMPROVEMENT\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: IMPROVEMENT">edit</a> \| (./index.php.md)\]
+
 - HDF5:
   - Write partial charges to the hdf5 output instead of
     [PARCHG](../output-files/PARCHG.md) files. This in turn enables the
@@ -635,7 +708,11 @@
   field](../categories/Category-Machine-learned_force_fields.md)
   in production mode.
 
-### BUGFIX
+### BUGFIX\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: BUGFIX">edit</a> \| (./index.php.md)\]
+
 - The code failed to compile with gfortran with -DELPA.
 - [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) did not work correctly
   anymore for [NCORE](../incar-tags/NCORE.md)/=1.
@@ -712,19 +789,31 @@
 - Fixed a crash of noncollinear calculations when using
   [KPOINTS_OPT](../input-files/KPOINTS_OPT.md).
 
-## 6.4.3
-#### FEATURE
+## 6.4.3\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: 6.4.3">edit</a> \| (./index.php.md)\]
+
+
+#### FEATURE\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: FEATURE">edit</a> \| (./index.php.md)\]
+
 - Increased flexibility in the choice of exchange-correlation
   functionals: added the tags [XC](../incar-tags/XC.md) and
   [XC_C](../incar-tags/XC_C.md) to specify linear combinations of
   exchange-correlation functionals.
 - Additional MGGA functionals (v1-sregTM, v2-sregTM, v3-sregTM, and
   v2-sregTM-L) from Francisco, Cancio, and Trickey
-  ([https://doi.org/10.1063/5.0167868](https://doi.org/10.1063/5.0167868),
-  [https://doi.org/10.1063/5.0167873](https://doi.org/10.1063/5.0167873)).
+  (<a href="https://doi.org/10.1063/5.0167868" class="external free"
+  rel="nofollow">https://doi.org/10.1063/5.0167868</a>,
+  <a href="https://doi.org/10.1063/5.0167873" class="external free"
+  rel="nofollow">https://doi.org/10.1063/5.0167873</a>).
 - Interface to the external code libMBD
-  ([https://libmbd.github.io](https://libmbd.github.io)): many-body
-  dispersion methods for van der Waals interactions. See
+  (<a href="https://libmbd.github.io" class="external free"
+  rel="nofollow">https://libmbd.github.io</a>): many-body dispersion
+  methods for van der Waals interactions. See
   [LIBMBD_METHOD](../incar-tags/LIBMBD_METHOD.md).
 - Analyze the bandgap and write the results to
   [OUTCAR](../output-files/OUTCAR.md) and
@@ -754,7 +843,11 @@
 - [LWRITE_SPN](../incar-tags/LWRITE_SPN.md)=T writes the spin-matrix
   element to the .spn file for wannier90.
 
-#### IMPROVEMENT
+#### IMPROVEMENT\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=15"
+class="mw-editsection-visualeditor"
+title="Edit section: IMPROVEMENT">edit</a> \| (./index.php.md)\]
+
 - Update
   [makefile.include.nec_aurora](Makefile.include.nec_aurora.md)
   template to work with the recent NEC compiler version (5.0.0+).
@@ -766,7 +859,8 @@
 - [LSINGLES](../incar-tags/LSINGLES.md): “singles” contribution printed
   to [OUTCAR](../output-files/OUTCAR.md) for GWR algorithms, *i.e.*, Eq. 34
   of Klimes *et al.*, JCP 143, 102816 (2015)
-  ([https://doi.org/10.1063/1.4929346](https://doi.org/10.1063/1.4929346)).
+  (<a href="https://doi.org/10.1063/1.4929346" class="external free"
+  rel="nofollow">https://doi.org/10.1063/1.4929346</a>).
 - [SAXIS](../incar-tags/SAXIS.md) = 0 0 0 behaves like
   [SAXIS](../incar-tags/SAXIS.md) = 0 0 1. This behavior is unchanged but
   we now print a warning.
@@ -788,7 +882,8 @@
   [ISIF](../incar-tags/ISIF.md)=3. This is not solved per se, but the
   resulting error message has been improved to suggest adding the
   appropriate tag to skip this step
-  ([KBLOWUP](https://vasp.at/wiki/index.php/index.php)")=.FALSE.).
+  (<a href="/wiki/index.php?title=KBLOWUP&amp;action=edit&amp;redlink=1"
+  class="new" title="KBLOWUP (page does not exist)">KBLOWUP</a>=.FALSE.).
 - Copy the atomic type designation from [POSCAR](../input-files/POSCAR.md)
   to [CONTCAR](../output-files/CONTCAR.md). In all other instances where
   the structure is written to file (e.g.
@@ -809,8 +904,8 @@
   guesses.
 - Check maximum size of sysv shmem segments used in
   machine-learning-code paths.
-- [BSE algorithm](../redirects/BSE.md) has been optimized and ported to GPU
-  by means of OpenACC.
+- <a href="/wiki/BSE" class="mw-redirect" title="BSE">BSE algorithm</a>
+  has been optimized and ported to GPU by means of OpenACC.
 - Spectral function is recalculated after GW calculations for
   [LOPTICS](../incar-tags/LOPTICS.md)=.TRUE.
 - Demote LATTCHK exception from error to warning.
@@ -820,7 +915,11 @@
   force-field generations is decreased. Hence, the total runtime until
   re-selection is finished will also be reduced.
 
-#### BUGFIX
+#### BUGFIX\[<a
+href="/wiki/index.php?title=Changelog&amp;veaction=edit&amp;section=16"
+class="mw-editsection-visualeditor"
+title="Edit section: BUGFIX">edit</a> \| (./index.php.md)\]
+
 - Descriptor sparsification was not working in combination with the
   [ML_MODE](../incar-tags/ML_MODE.md) tag: the tag
   [ML_LSPARSDES](../incar-tags/ML_LSPARSDES.md) was automatically
@@ -844,7 +943,7 @@
 - Fix incorrect formatting in [REPORT](../output-files/REPORT.md) file
   (values of last column shifted to next line).
 
-&nbsp;
+<!-- -->
 
 - Restarting a calculation from
   [vaspwave.h5](../output-files/Vaspwave.h5.md) when the number of
@@ -867,14 +966,14 @@
   [KPUSE](../incar-tags/KPUSE.md) can no longer contain bands or points
   that are larger than the total number of bands or k points.
 
-&nbsp;
+<!-- -->
 
 - Due to a bug the wavefunction prediction was not as effective as it
   could be.
 - Use a tighter threshold for Laplace-transformed MP2 to avoid incorrect
   treatment of Coulomb potential.
 
-&nbsp;
+<!-- -->
 
 - NMR linear response did not work for [LREAL](../incar-tags/LREAL.md)=Auto
   or .TRUE. (with the GNU compiler).
@@ -884,7 +983,7 @@
   [ISPIN](../incar-tags/ISPIN.md)=2 for a non-spinpolarized system did not
   yield the same result as with [ISPIN](../incar-tags/ISPIN.md)=1.
 
-&nbsp;
+<!-- -->
 
 - [SAXIS](../incar-tags/SAXIS.md): For sx=0 and sy\<0, alpha=-pi/2. It used
   to falsely assume alpha=pi/2.
@@ -894,7 +993,7 @@
   was not read when using [IBRION](../incar-tags/IBRION.md)=1 or 2:
   default values (T T T = no constraints) were used.
 
-&nbsp;
+<!-- -->
 
 - The SCDM method now works correctly for k-point meshes that do not
   include the Gamma point.
@@ -902,7 +1001,7 @@
   (i.e. wannier90.win file instead of
   [WANNIER90_WIN](../incar-tags/WANNIER90_WIN.md) tag).
 
-&nbsp;
+<!-- -->
 
 - The LDA and GGA components of the AM05 GGA functional were not
   multiplied by the parameters [ALDAX](../incar-tags/ALDAX.md),
@@ -912,3 +1011,5 @@
   incompatible with the selected functional, then the header of the new
   kernel was the one of the old incompatible kernel. Furthermore,
   writing the new vdW kernels was not restricted to a single MPI rank.
+
+

@@ -2,17 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # CMBJE
+
+
 CMBJE = \[real\]  
 Default: **CMBJE** = 0.5 
 
-Description: sets the $e$ parameter in
-the MBJ and local MBJ potentials.
+Description: sets the $e$ parameter
+in the MBJ and local MBJ potentials.
 
 ------------------------------------------------------------------------
 
 See the description of the [METAGGA](METAGGA.md) tag.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=CMBJE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [METAGGA](METAGGA.md), [CMBJ](CMBJ.md),
 [CMBJA](CMBJA.md), [CMBJB](CMBJB.md),
 [SMBJ](SMBJ.md), [RSMBJ](RSMBJ.md),
@@ -23,3 +28,5 @@ See the description of the [METAGGA](METAGGA.md) tag.
 tag](https://vasp.at/wiki/index.php/Special-Search/-CMBJE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

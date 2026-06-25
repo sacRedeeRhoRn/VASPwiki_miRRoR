@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NBLK
+
+
 NBLK = \[integer\] 
 
 |                   |       |                       |
@@ -9,8 +11,8 @@ NBLK = \[integer\] 
 | Default: **NBLK** | = -1  | VASP.4.6              |
 |                   | = 256 | in VASP.5.2, if dfast |
 
-Description: NBLK determines the blocking factor in many BLAS level 3
-routines.
+Description: NBLK determines
+the blocking factor in many BLAS level 3 routines.
 
 ------------------------------------------------------------------------
 
@@ -30,14 +32,17 @@ following FORTRAN code:
                   &   (1.,0.), C(IBLOCK+1,1), NDIM)
       100 CONTINUE
 
-ZGEMM is the matrix $\times$ matrix
-multiplication command of the BLAS package. The task performed by this
-call is indicated by the comment line written above the ZGEMM call.
-Generally NBLK=16 or 32 is large enough for super-scalar machines. A
-large value might be necessary on vector machines for optimal
-performance (NBLK=128).
+ZGEMM is the matrix $\times$
+matrix multiplication command of the BLAS package. The task performed by
+this call is indicated by the comment line written above the ZGEMM call.
+Generally NBLK=16 or 32 is
+large enough for super-scalar machines. A large value might be necessary
+on vector machines for optimal performance
+(NBLK=128).
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NBLK-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

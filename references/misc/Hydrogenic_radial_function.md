@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Hydrogenic radial function
+
+
 |  |  |
 |----|----|
 | $n$ | $R(r)$ |
@@ -10,3 +12,5 @@
 | $3$ | ${\sqrt \frac{4}{27}}\alpha^{3/2}(1-2\alpha r/3+2\alpha^2 r^2/27)\exp(-\alpha r /3)$ |
 
 *n*s type Hydrogen radial wave functions
+
+

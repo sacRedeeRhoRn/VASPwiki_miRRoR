@@ -2,38 +2,46 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LOPTICS
+
+
 LOPTICS = .TRUE. \| .FALSE.  
 Default: **LOPTICS** = .FALSE. 
 
-Description: LOPTICS=.TRUE. calculates the frequency dependent
-dielectric matrix after the electronic ground state has been determined.
+Description: LOPTICS=.TRUE.
+calculates the frequency dependent dielectric matrix after the
+electronic ground state has been determined.
 
 ------------------------------------------------------------------------
 
 The imaginary part is determined by a summation over empty states using
 the equation:
 
-$\epsilon^{(2)}_{\alpha \beta}\left(\omega\right)
-= \frac{4\pi^2 e^2}{\Omega} \mathrm{lim}_{q \rightarrow 0}
-\frac{1}{q^2} \sum_{c,v,\mathbf{k}} 2 w_\mathbf{k} \delta(
-\epsilon_{c\mathbf{k}} - \epsilon_{v\mathbf{k}} - \omega) \times
-\langle u_{c\mathbf{k}+\mathbf{e}_\alpha q} | u_{v\mathbf{k}}
-\rangle \langle u_{v\mathbf{k}} | u_{c\mathbf{k}+\mathbf{e}_\beta q}
-\rangle$
+ 
+
+$\epsilon^{(2)}_{\alpha \beta}\left(\omega\right) = \frac{4\pi^2
+e^2}{\Omega} \mathrm{lim}_{q \rightarrow 0} \frac{1}{q^2}
+\sum_{c,v,\mathbf{k}} 2 w_\mathbf{k} \delta( \epsilon_{c\mathbf{k}} -
+\epsilon_{v\mathbf{k}} - \omega) \times \langle
+u_{c\mathbf{k}+\mathbf{e}_\alpha q} | u_{v\mathbf{k}} \rangle
+\langle u_{v\mathbf{k}} | u_{c\mathbf{k}+\mathbf{e}_\beta q} \rangle$
 
 here the indices *c* and *v* refer to conduction and valence band states
-respectively, and *u*_(*c***k**) is the cell periodic part of the
-orbitals at the k-point **k**. The real part of the dielectric tensor
-ε⁽¹⁾ is obtained by the usual Kramers-Kronig transformation
+respectively, and *u*<sub>*c***k**</sub> is the cell periodic part of
+the orbitals at the k-point **k**. The real part of the dielectric
+tensor ε<sup>(1)</sup> is obtained by the usual Kramers-Kronig
+transformation
 
-$\epsilon^{(1)}_{\alpha \beta} (\omega) = 1 +
-\frac{2}{ \pi} P \int_0^{\infty} \frac{ \epsilon^{(2)}_{\alpha \beta}
-(\omega') \omega'}{ \omega'^2- \omega^2 + i \eta } d \omega'$
+ 
+
+$\epsilon^{(1)}_{\alpha \beta} (\omega) = 1 + \frac{2}{ \pi} P
+\int_0^{\infty} \frac{ \epsilon^{(2)}_{\alpha \beta} (\omega')
+\omega'}{ \omega'^2- \omega^2 + i \eta } d \omega'$
 
 where *P* denotes the principle value. The method is explained in detail
 in the paper by Gajdoš *et al.* (see Eqs. 15, 29, and
-30).^([\[1\]](#cite_note-gajdos:prb:06-1)) The complex shift η is
-determined by the parameter [CSHIFT](CSHIFT.md).
+30).<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>
+The complex shift η is determined by the parameter
+[CSHIFT](CSHIFT.md).
 
 Note that local field effects, i.e. changes of the cell periodic part of
 the potential are neglected in this approximation. These can be
@@ -41,12 +49,14 @@ evaluated using either the implemented density functional perturbation
 theory ([LEPSILON](LEPSILON.md)=.TRUE.), or the GW
 routines.
 
-The method selected using LOPTICS=.TRUE. requires an appreciable number
-of empty conduction band states. Reasonable results are usually only
-obtained, if the parameter [NBANDS](NBANDS.md) is roughly
-doubled or tripled in the [INCAR](../input-files/INCAR.md) file with respect
-to the VASP default. Furthermore it is emphasized that the routine works
-properly even for [HF and screened exchange type calculations and hybrid
+The method selected using
+LOPTICS=.TRUE. requires an
+appreciable number of empty conduction band states. Reasonable results
+are usually only obtained, if the parameter
+[NBANDS](NBANDS.md) is roughly doubled or tripled in the
+[INCAR](../input-files/INCAR.md) file with respect to the VASP default.
+Furthermore it is emphasized that the routine works properly even for
+[HF and screened exchange type calculations and hybrid
 functionals](../methods/Category-Hybrid_functionals.md).
 In this case, finite differences are used to determine the derivatives
 of the Hamiltonian with respect to **k**.
@@ -58,22 +68,30 @@ around [NEDOS](NEDOS.md)=2000 are strongly recommended.
 
 VASP posses multiple other routines to calculate the frequency dependent
 dielectric function. Specifically, one can use [ALGO](ALGO.md)
-= TDHF (Casida/[BSE
-calculations](../redirects/BSE_calculations.md)),
-[ALGO](ALGO.md) = GW ([GW
-calculations](../redirects/GW_calculations.md)) and
-[ALGO](ALGO.md) = TIMEEV ([Time
-Evolution](../redirects/Time_Evolution.md): apply a delta kick
-and follow the induced dipoles). Compared to LOPTICS=.TRUE., all those
+= TDHF (Casida/<a href="/wiki/BSE_calculations" class="mw-redirect"
+title="BSE calculations">BSE calculations</a>),
+[ALGO](ALGO.md) = GW
+(<a href="/wiki/GW_calculations" class="mw-redirect"
+title="GW calculations">GW calculations</a>) and
+[ALGO](ALGO.md) = TIMEEV
+(<a href="/wiki/Time_Evolution" class="mw-redirect"
+title="Time Evolution">Time Evolution</a>: apply a delta kick and follow
+the induced dipoles). Compared to
+LOPTICS=.TRUE., all those
 routines have the advantage to include effects beyond the independent
 particle approximation, however, they are usually also much more
 expensive than LOPTICS=.TRUE.
 
-### Spectral broadening
-The dielectric function calculated with LOPTICS includes broadening due
-to the smearing method [ISMEAR](ISMEAR.md) and the
+### Spectral broadening\[<a href="/wiki/index.php?title=LOPTICS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Spectral broadening">edit</a> \| (./index.php.md)\]
+
+The dielectric function calculated with
+LOPTICS includes broadening
+due to the smearing method [ISMEAR](ISMEAR.md) and the
 Lorentzian broadening due to the complex shift in the Kramers-Kronig
-transformation. For example, the combination of LOPTICS=.TRUE. and
+transformation. For example, the combination of
+LOPTICS=.TRUE. and
 [ISMEAR](ISMEAR.md)=0 produces the dielectric function
 broadened by a Gaussian with the width [SIGMA](SIGMA.md) and
 a Lorentzian with the width [CSHIFT](CSHIFT.md). To avoid
@@ -100,18 +118,30 @@ large transition element.
 |----|
 | **Mind:** Furthermore the combination of LOPTICS = .TRUE. and [ISMEAR](ISMEAR.md) selecting the tetrahedron method is only supported as of VASP 6.3. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LOPTICS&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [CSHIFT](CSHIFT.md), [LNABLA](LNABLA.md),
-[LEPSILON](LEPSILON.md), [Time
-Evolution](../redirects/Time_Evolution.md),
+[LEPSILON](LEPSILON.md),
+<a href="/wiki/Time_Evolution" class="mw-redirect"
+title="Time Evolution">Time Evolution</a>,
 [WPLASMAI](WPLASMAI.md)
 
 See also: [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LOPTICS-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-gajdos:prb:06_1-0) [M. Gajdoš, K. Hummer, G.
-    Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112
-    (2006).](http://link.aps.org/doi/10.1103/PhysRevB.73.045112)
+## References\[<a href="/wiki/index.php?title=LOPTICS&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-gajdos:prb:06_1-0)
+    <a href="http://link.aps.org/doi/10.1103/PhysRevB.73.045112"
+    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
+    Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).</a>
+
 
 ------------------------------------------------------------------------
+
+

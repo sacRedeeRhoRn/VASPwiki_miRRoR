@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # KERNEL_TRUNCATION/LTRUNCATE
-KERNEL_TRUNCATION/LTRUNCATE = .True. \| .False.  
+
+
+KERNEL_TRUNCATION/LTRUNCATE =
+.True. \| .False.  
 Default: **KERNEL_TRUNCATION/LTRUNCATE** = .False. 
 
 Description: Truncates the Coulomb kernel to remove [electrostatic
@@ -11,14 +14,16 @@ along non-periodic dimensions.
 
 ------------------------------------------------------------------------
 
-Setting KERNEL_TRUNCATION/LTRUNCATE = T switches on the
-Coulomb-kernel-truncation
-method^([\[1\]](#cite_note-vijay:prb:2025-1)[\[2\]](#cite_note-rozzi:prb:2006-2)[\[3\]](#cite_note-sohier:prb:2017-3)).
+Setting
+KERNEL_TRUNCATION/LTRUNCATE =
+T switches on the Coulomb-kernel-truncation
+method<sup>[\[1\]](#cite_note-vijay:prb:2025-1)[\[2\]](#cite_note-rozzi:prb:2006-2)[\[3\]](#cite_note-sohier:prb:2017-3)</sup>.
 It effectively removes interactions with periodic replicas in
 non-periodic directions. In other words, the interactions are removed
-along the surface normal for [2D
-materials](../redirects/2D_materials.md), and along all directions
-for 0D systems, i.e. for isolated atoms and molecules.
+along the surface normal for
+<a href="/wiki/2D_materials" class="mw-redirect" title="2D materials">2D
+materials</a>, and along all directions for 0D systems, i.e. for
+isolated atoms and molecules.
 
 In the simplest implementation of the Coulomb-kernel-truncation method
 ([`KERNEL_TRUNCATION/LCOARSEN`](KERNEL_TRUNCATION__LCOARSEN.md)` = F`),
@@ -34,7 +39,24 @@ computational cost.
 |----|
 | **Tip:** Use the [`KERNEL_TRUNCATION/LCOARSEN`](KERNEL_TRUNCATION__LCOARSEN.md)` = T` to avoid the increased [FFT-grid sizes](../tutorials/Energy_cutoff_and_FFT_meshes.md). |
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li><span
+class="mw-selflink selflink">KERNEL_TRUNCATION/LTRUNCATE</span> acts as
+a "super-tag", i.e. unless this tag is switched on further options in
+KERNEL_TRUNCATION will be ignored.</li>
+<li>This tag is only available as of VASP.6.5.0.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 Detailed information about the setting are documented on respective
 related tags.
@@ -43,7 +65,11 @@ related tags.
 |----|
 | **Warning:** When padding is used, the vaccum is added on the edges of the cell, therefore it is very important there are no atoms on the cell boundary in the non-periodic direction. We recommend centering the motif in the simulation box. If you encounter problems using Coulomb truncation with padding, try the same calculations without padding (see examples bellow). |
 
-## Example
+## Example\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/LTRUNCATE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
     KERNEL_TRUNCATION {
          LTRUNCATE       = T
          IDIMENSIONALITY = 2
@@ -64,29 +90,45 @@ this direction.
     }
 
 This setup corresponds to truncating the Coulomb interaction along the
-surface normal direction (say, along z) for a [2D
-material](../redirects/2D_material.md), using no vacuum padding and
-a truncation length of z/2. In this case, half of the simulation box is
-effectively unused and will produce a potential that is not desired.
-However, the algorithm is much simpler. We recommend this configuration
-for debugging purposes.
+surface normal direction (say, along z) for a
+<a href="/wiki/2D_material" class="mw-redirect" title="2D material">2D
+material</a>, using no vacuum padding and a truncation length of z/2. In
+this case, half of the simulation box is effectively unused and will
+produce a potential that is not desired. However, the algorithm is much
+simpler. We recommend this configuration for debugging purposes.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/LTRUNCATE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [KERNEL_TRUNCATION/LCOARSEN](KERNEL_TRUNCATION__LCOARSEN.md),
 [KERNEL_TRUNCATION/IDIMENSIONALITY](KERNEL_TRUNCATION__IDIMENSIONALITY.md),
 [KERNEL_TRUNCATION/ISURFACE](KERNEL_TRUNCATION__ISURFACE.md),
 [KERNEL_TRUNCATION/FACTOR](KERNEL_TRUNCATION__FACTOR.md),
 [KERNEL_TRUNCATION/IPAD](KERNEL_TRUNCATION__IPAD.md)
 
-## References
-1.  [↑](#cite_ref-vijay:prb:2025_1-0) [S. Vijay, M. Schlipf, H.
-    Miranda, F. Karsai, M. Kaltak, M. Marsman, and G. Kresse, *Efficient
-    periodic density functional theory calculations of charged molecules
-    and surfaces using Coulomb kernel truncation*, Phys. Rev. B **112**,
-    045409 (2025).](https://doi.org/10.1103/cd6s-cdkf)
-2.  [↑](#cite_ref-rozzi:prb:2006_2-0) [C. A. Rozzi, D. Varsano, A.
-    Marini, E. K. Gross, A. J. Rubio, Phys. Rev. B **73**, 20511
-    (2006).](https://doi.org/10.1103/PhysRevB.73.205119)
-3.  [↑](#cite_ref-sohier:prb:2017_3-0) [T. Sohier, M. Calandra, and F.
-    Mauri, Phys. Rev. B 96, 75448
-    (2017).](https://doi.org/10.1103/PhysRevB.96.075448)
+## References\[<a
+href="/wiki/index.php?title=KERNEL_TRUNCATION/LTRUNCATE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-vijay:prb:2025_1-0)
+    <a href="https://doi.org/10.1103/cd6s-cdkf" class="external text"
+    rel="nofollow">S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak,
+    M. Marsman, and G. Kresse, <em>Efficient periodic density functional
+    theory calculations of charged molecules and surfaces using Coulomb
+    kernel truncation</em>, Phys. Rev. B <strong>112</strong>, 045409
+    (2025).</a>
+2.  [↑](#cite_ref-rozzi:prb:2006_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.73.205119"
+    class="external text" rel="nofollow">C. A. Rozzi, D. Varsano, A. Marini,
+    E. K. Gross, A. J. Rubio, Phys. Rev. B <strong>73</strong>, 20511
+    (2006).</a>
+3.  [↑](#cite_ref-sohier:prb:2017_3-0)
+    <a href="https://doi.org/10.1103/PhysRevB.96.075448"
+    class="external text" rel="nofollow">T. Sohier, M. Calandra, and F.
+    Mauri, Phys. Rev. B 96, 75448 (2017).</a>
+
+

@@ -2,33 +2,40 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Self-Consistent Potential Correction
+
+
 SCPC (self-consistent potential correction) is an external package
 (developed in the Bremen Center for Computational Materials Science and
 in the MPI-Hamburg) that can be linked to VASP. For more information
 about this package see
-[https://github.com/aradi/SCPC-Method](https://github.com/aradi/SCPC-Method).
-In supercell calculations for a charged system, a jellium counter charge
-is applied to maintain overall neutrality, but the interaction of the
-artificially repeated charges has to be corrected for, both in the total
-energy and in the one-electron eigenvalues and eigenstates. This becomes
-paramount in slab calculations, where the jellium counter charge may
-induce spurious states in the vacuum. SCPC corrects for the spurious
-effects of the repeated charges automatically, without any
-post-processing.
+<a href="https://github.com/aradi/SCPC-Method" class="external free"
+rel="nofollow">https://github.com/aradi/SCPC-Method</a>. In supercell
+calculations for a charged system, a jellium counter charge is applied
+to maintain overall neutrality, but the interaction of the artificially
+repeated charges has to be corrected for, both in the total energy and
+in the one-electron eigenvalues and eigenstates. This becomes paramount
+in slab calculations, where the jellium counter charge may induce
+spurious states in the vacuum. SCPC corrects for the spurious effects of
+the repeated charges automatically, without any post-processing.
 
 SCPC considers the deviation (Δρ) in the electron distribution between
 the charged and a reference neutral system (provided by VASP in the
 corresponding CHGCAR files), and calculates the corresponding periodic
-electrostatic potential, V_(per), aligned to the potential of the
-reference system (provided in LOCPOT). Also the potential, V_(iso), for
-the same but isolated charge distribution, Δρ, is determined by using
-open (Dirichlet) boundary conditions. The difference V_(cor) = V_(iso) -
-V_(per) is added to the total electronic potential in each step of the
-iterative solution of the Kohn-Sham equation. For more information
-regarding the method, please refer to the SCPC
-paper.^([\[1\]](#cite_note-scpc:deSilva:2021-1))
+electrostatic potential, V<sub>per</sub>, aligned to the potential of
+the reference system (provided in LOCPOT). Also the potential,
+V<sub>iso</sub>, for the same but isolated charge distribution, Δρ, is
+determined by using open (Dirichlet) boundary conditions. The difference
+V<sub>cor</sub> = V<sub>iso</sub> - V<sub>per</sub> is added to the
+total electronic potential in each step of the iterative solution of the
+Kohn-Sham equation. For more information regarding the method, please
+refer to the SCPC
+paper.<sup>[\[1\]](#cite_note-scpc:deSilva:2021-1)</sup>
 
-## Usage
+## Usage\[<a
+href="/wiki/index.php?title=Self-Consistent_Potential_Correction&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Usage">edit</a> \| (./index.php.md)\]
+
 SCPC needs the following keywords in the INCAR file:
 
     SCPC { 
@@ -55,12 +62,20 @@ geometry of the charged defect, but using the pristine system as
 reference instead causes usually only a small error. The correction is
 not yet implemented into the calculation of the forces. For more
 information see
-[https://github.com/aradi/SCPC-Method](https://github.com/aradi/SCPC-Method)
-.
+<a href="https://github.com/aradi/SCPC-Method" class="external free"
+rel="nofollow">https://github.com/aradi/SCPC-Method</a> .
 
-## References
-1.  [↑](#cite_ref-scpc:deSilva:2021_1-0) [M. Chagas de Silva, M.
-    Lorke, B. Aradi, M. Farzalipour Tabriz, T. Frauenheim, Angel
-    Rubio, D. Rocca and P. Deák, *Self-consistent potential correction
-    for charged periodic systems*, Phys. Rev. Lett. **126**, 076401
-    (2021).](https://doi.org/10.1103/PhysRevLett.126.076401)
+## References\[<a
+href="/wiki/index.php?title=Self-Consistent_Potential_Correction&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-scpc:deSilva:2021_1-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.126.076401"
+    class="external text" rel="nofollow">M. Chagas de Silva, M. Lorke, B.
+    Aradi, M. Farzalipour Tabriz, T. Frauenheim, Angel Rubio, D. Rocca and
+    P. Deák, <em>Self-consistent potential correction for charged periodic
+    systems</em>, Phys. Rev. Lett. <strong>126</strong>, 076401 (2021).</a>
+
+

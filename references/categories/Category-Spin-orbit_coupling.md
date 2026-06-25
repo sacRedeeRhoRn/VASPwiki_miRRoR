@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Spin-orbit coupling
+
+
 **Spin-orbit coupling** (SOC) is the relativistic interaction between
 the spin of an electron and its orbital motion. It is one of the
 **relativistic corrections** that become important for systems
@@ -14,16 +16,28 @@ coupling is treated within the noncollinear framework, so that the
 wavefunction is described by two-component spinors rather than scalar
 orbitals.
 
+
 ## Contents
 
-- [1 Enabling spin-orbit coupling](#Enabling_spin-orbit_coupling)
-- [2 When to include spin-orbit
-  coupling](#When_to_include_spin-orbit_coupling)
-- [3 Magnetic anisotropy energy](#Magnetic_anisotropy_energy)
-- [4 Band structure and spin texture](#Band_structure_and_spin_texture)
-- [5 Tutorials](#Tutorials)
 
-## Enabling spin-orbit coupling
+- [1 Enabling
+  spin-orbit coupling](#Enabling_spin-orbit_coupling)
+- [2 When to
+  include spin-orbit
+  coupling](#When_to_include_spin-orbit_coupling)
+- [3 Magnetic
+  anisotropy energy](#Magnetic_anisotropy_energy)
+- [4 Band structure
+  and spin texture](#Band_structure_and_spin_texture)
+- [5
+  Tutorials](#Tutorials)
+
+
+## Enabling spin-orbit coupling\[<a
+href="/wiki/index.php?title=Category:Spin-orbit_coupling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Enabling spin-orbit coupling">edit</a> \| (./index.php.md)\]
+
 Spin-orbit coupling is switched on with a single tag
 ([LSORBIT](../incar-tags/LSORBIT.md)), which automatically activates the
 [noncollinear
@@ -35,7 +49,11 @@ calculation now uses two-component spinors, the magnetic configuration
 is specified by three components per atom
 ([MAGMOM](../incar-tags/MAGMOM.md)).
 
-## When to include spin-orbit coupling
+## When to include spin-orbit coupling\[<a
+href="/wiki/index.php?title=Category:Spin-orbit_coupling&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: When to include spin-orbit coupling">edit</a> \| (./index.php.md)\]
+
 Even when you are not after a property that intrinsically requires
 spin-orbit coupling, it can still change your results. For heavy
 elements the effect on total energies, equilibrium geometries, and band
@@ -48,7 +66,11 @@ rule of thumb, the heavier the elements in your structure, the more
 likely spin-orbit coupling matters, since the SOC constant \$\propto
 Z^4\$.
 
-## Magnetic anisotropy energy
+## Magnetic anisotropy energy\[<a
+href="/wiki/index.php?title=Category:Spin-orbit_coupling&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Magnetic anisotropy energy">edit</a> \| (./index.php.md)\]
+
 With spin-orbit coupling the energy is no longer invariant under a
 global rotation of the spins, so it depends on the orientation of the
 spins relative to the crystal axes. The total-energy differences between
@@ -59,7 +81,11 @@ can be written to the output ([LORBMOM](../incar-tags/LORBMOM.md)). For
 the details, see [Noncollinear
 magnetism](Category-Noncollinear_magnetism.md).
 
-## Band structure and spin texture
+## Band structure and spin texture\[<a
+href="/wiki/index.php?title=Category:Spin-orbit_coupling&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Band structure and spin texture">edit</a> \| (./index.php.md)\]
+
 Spin-orbit coupling splits bands that would otherwise be degenerate and
 gives each Bloch state a spin expectation value that varies across the
 Brillouin zone, the spin texture seen in Rashba and topological systems.
@@ -73,6 +99,13 @@ computing and visualizing the spin texture is given in the how-to
 [Computing the spin
 texture](../tutorials/Computing_the_spin_texture.md).
 
-## Tutorials
-- [Spin-orbit coupling for bcc Fe
-  bulk.](https://www.vasp.at/tutorials/latest/magnetism/part2/#mag-e06)
+## Tutorials\[<a
+href="/wiki/index.php?title=Category:Spin-orbit_coupling&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Tutorials">edit</a> \| (./index.php.md)\]
+
+- <a href="https://www.vasp.at/tutorials/latest/magnetism/part2/#mag-e06"
+  class="external text" rel="nofollow">Spin-orbit coupling for bcc Fe
+  bulk.</a>
+
+

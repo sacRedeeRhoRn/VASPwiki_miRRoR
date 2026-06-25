@@ -2,11 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Number of G-vectors changed in the star
+
+
 This happens because the number of G vectors in the plane-wave basis for
 each k-point is determined according to
 
-$\frac{\hbar^2}{2m_e} (\mathbf{G+k})^2 <
-\text{ENCUT}$
+$\frac{\hbar^2}{2m_e} (\mathbf{G+k})^2 < \text{ENCUT}$
 
 Using this criterion for different k-points will yield a different
 number of G-vectors that fall within the sphere for each k-point.
@@ -45,19 +46,21 @@ symmetry operations are found within the
 
 There are a few things you can try to circumvent this problem:
 
-- Symmetrize your POSCAR file using [this
-  script](https://gist.github.com/henriquemiranda/e4a1b616693aac339ef011af6484f890)
-  also see more details in
-  [POSCAR](../input-files/POSCAR.md))
+- Symmetrize your POSCAR file using <a
+  href="https://gist.github.com/henriquemiranda/e4a1b616693aac339ef011af6484f890"
+  class="external text" rel="nofollow">this script</a> also see more
+  details in [POSCAR](../input-files/POSCAR.md))
 
-&nbsp;
+<!-- -->
 
 - Try and change ENCUT slightly
 
-&nbsp;
+<!-- -->
 
 - Deactivate symmetries by setting ISYM=0 or ISYM=-1
 
   
 
 ------------------------------------------------------------------------
+
+

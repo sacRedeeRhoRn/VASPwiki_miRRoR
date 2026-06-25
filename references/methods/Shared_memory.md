@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Shared memory
+
+
 VASP is mainly
 [parallelized](../categories/Category-Parallelization.md)
 using MPI, and as much as practically feasible the computational work
@@ -22,27 +24,29 @@ options](../misc/Precompiler_options.md):
 
 **-Duse_shmem**
 
-Use shared-memory segments to reduce the memory demands of [GW (ALGO =
-EVGW0, EVGW, QPGW0, and QPGW)](../incar-tags/ALGO.md) and the [memory
-demands of
+Use shared-memory segments to
+reduce the memory demands of [GW (ALGO = EVGW0, EVGW, QPGW0, and
+QPGW)](../incar-tags/ALGO.md) and the [memory demands of
 machine-learned–force-field](Machine_learning_force_field_calculations-_Basics.md)
 calculations.
 
 **-Dshmem_bcast_buffer**
 
-Use shared-memory segments to reduce the amount of MPI communication in
-hybrid-functional calculations.
+Use shared-memory segments to
+reduce the amount of MPI communication in hybrid-functional
+calculations.
 
 **-Dshmem_rproj**
 
-Use shared-memory segments to reduce the storage demands of the
-[real-space PAW projectors](../incar-tags/LREAL.md).
+Use shared-memory segments to
+reduce the storage demands of the [real-space PAW
+projectors](../incar-tags/LREAL.md).
 
 **-Dsysv** (recommended if possible, see notes below)
 
-Use of `ipcs` shared-memory segments and `system-V` semaphores
-**instead** of using default MPI-3 shared-memory capabilities (see
-below).
+Use of `ipcs` shared-memory
+segments and `system-V` semaphores **instead** of using default MPI-3
+shared-memory capabilities (see below).
 
 In any case the aforementioned [precompiler
 options](../misc/Precompiler_options.md) have to be
@@ -113,7 +117,11 @@ maximum size is 16Gb.
 |----|
 | **Warning:** How to change the maximum number of semaphores and shared-memory segments, and the maximum size of the latter, depends on the particular Linux distribution and generally requires superuser rights. For this reason the use of this implementation of shared memory (`-Dsysv`) is not practical in many situations. |
 
-## Related articles
+## Related articles\[<a
+href="/wiki/index.php?title=Shared_memory&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related articles">edit</a> \| (./index.php.md)\]
+
 [Installing
 VASP.6.X.X](../misc/Installing_VASP.6.X.X.md),
 [makefile.include](../misc/Makefile.include.md),
@@ -123,3 +131,5 @@ fields](Machine_learning_force_field_calculations-_Basics.md),
 [NCSHMEM](../incar-tags/NCSHMEM.md) ,
 
 ------------------------------------------------------------------------
+
+

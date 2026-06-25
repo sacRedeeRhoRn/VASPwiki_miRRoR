@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Wannier Functions
+
+
+
 Redirect to:
 
 - [Category:Wannier
   functions](../categories/Category-Wannier_functions.md)
+
+

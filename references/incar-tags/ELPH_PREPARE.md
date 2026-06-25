@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_PREPARE
+
+
 ELPH_PREPARE = \[logical\]  
 Default: **ELPH_PREPARE** = .FALSE. 
 
@@ -9,8 +11,8 @@ Description: Writes the potential, the force-constants and other
 information related to electron-phonon interactions to the
 [vaspout.h5](../output-files/Vaspout.h5.md) file.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -20,16 +22,26 @@ In order to calculate electron-phonon interactions, one must first
 supercell](../tutorials/Electron-phonon_potential_from_supercells.md)
 and generate the
 [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
-file. To do this using [phelel](https://github.com/phonopy/phelel), it
-is necessary to provide additional supercell information to phelel. This
-is accomplished by setting `ELPH_PREPARE`` = True` in each involved
-supercell calculation. Afterwards, phelel can be used to calculate the
-required derivatives and produce the
+file. To do this using
+<a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a>, it is necessary to provide additional
+supercell information to phelel. This is accomplished by setting
+`ELPH_PREPARE`` = True` in
+each involved supercell calculation. Afterwards, phelel can be used to
+calculate the required derivatives and produce the
 [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 file. For further information on this workflow, please consult the
-online documentation of [phelel](https://github.com/phonopy/phelel).
+online documentation of
+<a href="https://github.com/phonopy/phelel" class="external text"
+rel="nofollow">phelel</a>.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_PREPARE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Electron-phonon potential from
   supercells](../tutorials/Electron-phonon_potential_from_supercells.md)
 - [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
+
+

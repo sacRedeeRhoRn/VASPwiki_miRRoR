@@ -2,24 +2,28 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # MSDGW F
+
+
 MSDGW_F = \[real\]  
 Default: **MSDGW_F** = -1 
 
-Description: A positive value of MSDGW_F triggers the mixed
+Description: A positive value of
+MSDGW_F triggers the mixed
 stochastic-deterministic compression algorithm of Altman and
-co-workers.^([\[1\]](#cite_note-altman:prl:2024-1))
+co-workers.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
 
 ------------------------------------------------------------------------
 
-MSDGW_F is the constant energy ratio $F$
-of the compression algorithm. If set to a positive value, energies
-beyond the protected space defined by
-[MSDGW_NP](../methods/MSDGW_NP.md) are subdivided into energy bins of
-width $\Delta E_i$ and replaced by other
-energies $E_i$, such that
-$F=\Delta E_i/E_i$. The original
-orbitals are replaced by [MSDGW_NXI](../methods/MSDGW_NXI.md)
-randomly linear combined orbitals. Larger values of MSDGW_F increase the
+MSDGW_F is the constant energy
+ratio $F$ of the
+compression algorithm. If set to a positive value, energies beyond the
+protected space defined by [MSDGW_NP](../methods/MSDGW_NP.md) are
+subdivided into energy bins of width $\Delta E_i$
+and replaced by other energies $E_i$, such
+that $F=\Delta E_i/E_i$. The original orbitals are replaced by
+[MSDGW_NXI](../methods/MSDGW_NXI.md) randomly linear combined
+orbitals. Larger values of
+MSDGW_F increase the
 compression level at the expense of accuracy. The same holds true for
 smaller values of [MSDGW_NXI](../methods/MSDGW_NXI.md).
 
@@ -30,24 +34,34 @@ calculations](../methods/Practical_guide_to_GW_calculations.md).
 It has been demonstrated that one can reduce the unoccupied manifold by
 more than 50 per cent and speed up the GW step by a factor of 2 or more
 with a resulting error of only 50 meV or less on the quasi-particle band
-gap.^([\[1\]](#cite_note-altman:prl:2024-1))
+gap.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
 
-|                                       |
-|---------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP.6.6.0. |
 
 |  |
 |----|
 | **Warning:** Not recommended for [LRPAFORCE](LRPAFORCE.md)=T. |
 
+
 ## Contents
 
-- [1 Use cases](#Use_cases)
-- [2 Caveats](#Caveats)
-- [3 Related tags and articles](#Related_tags_and_articles)
-- [4 References](#References)
 
-## Use cases
+- [1 Use
+  cases](#Use_cases)
+- [2
+  Caveats](#Caveats)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+- [4
+  References](#References)
+
+
+## Use cases\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Use cases">edit</a> \| (./index.php.md)\]
+
 - Recommended for
   [ALGO](ALGO.md)=EVG0W\[R\|RK\]\|CRPA\[R\|RK\]:
 
@@ -61,28 +75,44 @@ indicate that the compression has been performed:
      bands after compression:      240  
 
 To test different compression settings, it is recommended perform the
-GW/CRPA calculation in steps and to set MSDGW_F only in the actual GW
+GW/CRPA calculation in steps and to set
+MSDGW_F only in the actual GW
 step. This avoids repeating the expensive exact diagonalization of the
 Kohn-Sham Hamiltonian.
 
-## Caveats
+## Caveats\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
+
 Care must be taken for GW/(c)RPA calculations that are performed in
 steps and include the long-wave limit stored in
 [WAVEDER](../input-files/WAVEDER.md). After band compression, this limit
 must be re-calculated by setting [LOPTICS](LOPTICS.md) in
 combination with [LPEAD](LPEAD.md).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [MSDGW_NXI](../methods/MSDGW_NXI.md),
 [MSDGW_SEED](../methods/MSDGW_SEED.md),
 [MSDGW_NP](../methods/MSDGW_NP.md)
 
-## References
-1.  ↑ ^([a](#cite_ref-altman:prl:2024_1-0))
-    ^([b](#cite_ref-altman:prl:2024_1-1)) [Altman, A. R. and Kundu, S.
-    and da Jornada, F. H., *Mixed Stochastic-Deterministic Approach for
-    Many-Body Perturbation Theory Calculations*, Phys. Rev. Lett.
-    **132**, 086401
-    (2024).](https://doi.org/10.1103/PhysRevLett.132.086401)
+## References\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-altman:prl:2024_1-0)</sup>
+    <sup>[b](#cite_ref-altman:prl:2024_1-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevLett.132.086401"
+    class="external text" rel="nofollow">Altman, A. R. and Kundu, S. and da
+    Jornada, F. H., <em>Mixed Stochastic-Deterministic Approach for
+    Many-Body Perturbation Theory Calculations</em>, Phys. Rev. Lett.
+    <strong>132</strong>, 086401 (2024).</a>
+
 
 ------------------------------------------------------------------------
+
+

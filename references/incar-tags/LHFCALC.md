@@ -2,11 +2,14 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LHFCALC
+
+
 LHFCALC = .TRUE. \| .FALSE.  
 Default: **LHFCALC** = .FALSE. 
 
-Description: LHFCALC specifies whether a Hartree-Fock/DFT hybrid
-functional type calculation is performed.
+Description: LHFCALC specifies
+whether a Hartree-Fock/DFT hybrid functional type calculation is
+performed.
 
 ------------------------------------------------------------------------
 
@@ -27,10 +30,9 @@ If the blocked-Davidson algorithm [`ALGO`](ALGO.md)` = Normal`
 is used, in many cases the Pulay mixer will be unable to determine the
 proper ground-state. We hence recommend to select the blocked-Davidson
 algorithm only in combination with straight mixing or a Kerker-like
-mixing (see the [section on
-mixing](../redirects/Density_mixing.md)). The following
-combination have been successfully applied for small and medium-sized
-systems
+mixing (see the <a href="/wiki/Density_mixing" class="mw-redirect"
+title="Density mixing">section on mixing</a>). The following combination
+have been successfully applied for small and medium-sized systems
 
     LHFCALC = .TRUE. ; ALGO = Normal ; IMIX = 1 ; AMIX = a
 
@@ -49,7 +51,10 @@ If convergence is not obtained, it is recommended to reduce the timestep
 |----|
 | **Mind:** The stress tensor is not calculated by default for `LHFCALC`` = .TRUE.` (i.e., [`ISIF`](ISIF.md)` = 0`) as it is expensive for hybrid functionals. It can be turned on by setting [`ISIF`](ISIF.md)` = 2`. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LHFCALC&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [AEXX](AEXX.md), [ALDAX](ALDAX.md),
 [ALDAC](ALDAC.md), [AGGAX](AGGAX.md),
 [AGGAC](AGGAC.md), [AMGGAX](AMGGAX.md),
@@ -65,3 +70,5 @@ formalism](../methods/Hybrid_functionals-_formalism.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-LHFCALC-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

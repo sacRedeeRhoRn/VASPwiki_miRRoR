@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Band-structure calculation using meta-GGA functionals
+
+
 For [band-structure
 calculations](../categories/Category-Band_structure.md)
 with [METAGGA](../incar-tags/METAGGA.md) functionals, follow the same
@@ -10,10 +12,19 @@ functionals](Band-structure_calculation_using_hybrid_functionals.md).
 The reason is that a regular k mesh has to be provided in order to
 compute the kinetic-energy density.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_meta-GGA_functionals&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [KPOINTS](../input-files/KPOINTS.md),
 [KPOINTS_OPT](../input-files/KPOINTS_OPT.md), [Band-structure
 calculation using hybrid
 functionals](Band-structure_calculation_using_hybrid_functionals.md)
 
-## References
+## References\[<a
+href="/wiki/index.php?title=Band-structure_calculation_using_meta-GGA_functionals&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+

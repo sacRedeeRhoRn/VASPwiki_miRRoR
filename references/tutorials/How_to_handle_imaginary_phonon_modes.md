@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # How to handle imaginary phonon modes
+
+
 An imaginary (soft) phonon mode signals that the current structure is a
 saddle point on the potential-energy surface: displacing atoms along the
 mode eigenvector lowers the total energy. This page describes how to
@@ -14,31 +16,55 @@ or a frozen-phonon scan.
 |----|
 | **Mind:** An unrelaxed or poorly converged cell can produce spurious imaginary modes from [Pulay stress](Pulay_stress.md) or residual forces. If imaginary modes appear unexpectedly, first tighten the ionic relaxation ([ISIF](../incar-tags/ISIF.md)=3, tight [EDIFFG](../incar-tags/EDIFFG.md)) and recompute the phonons before drawing conclusions. |
 
+
 ## Contents
 
-- [1 Step-by-step instructions](#Step-by-step_instructions)
-  - [1.1 Step 1: Compute phonon
-    frequencies](#Step_1:_Compute_phonon_frequencies)
-  - [1.2 Step 2: Classify the modes](#Step_2:_Classify_the_modes)
-  - [1.3 Step 3 (optional): Map instabilities to the primitive cell via
-    the phonon band
-    structure](#Step_3_(optional):_Map_instabilities_to_the_primitive_cell_via_the_phonon_band_structure)
-  - [1.4 Step 4: Determine the working
-    supercell](#Step_4:_Determine_the_working_supercell)
-  - [1.5 Step 5: Extract the eigenvector and set up the IRC starting
-    structure](#Step_5:_Extract_the_eigenvector_and_set_up_the_IRC_starting_structure)
-  - [1.6 Step 6: Follow the IRC to the energy
-    minimum](#Step_6:_Follow_the_IRC_to_the_energy_minimum)
-  - [1.7 Step 7: Relax from the determined
-    minimum](#Step_7:_Relax_from_the_determined_minimum)
-  - [1.8 Step 8: Verify the stability of the relaxed
-    structure](#Step_8:_Verify_the_stability_of_the_relaxed_structure)
-- [2 Recommendations and advice](#Recommendations_and_advice)
-- [3 Related tags and articles](#Related_tags_and_articles)
-- [4 References](#References)
 
-## Step-by-step instructions
-### Step 1: Compute phonon frequencies
+- [1 Step-by-step
+  instructions](#Step-by-step_instructions)
+  - [1.1 Step 1:
+    Compute phonon
+    frequencies](#Step_1:_Compute_phonon_frequencies)
+  - [1.2 Step 2:
+    Classify the modes](#Step_2:_Classify_the_modes)
+  - [1.3 Step 3
+    (optional): Map instabilities to the primitive cell via the phonon
+    band
+    structure](#Step_3_(optional):_Map_instabilities_to_the_primitive_cell_via_the_phonon_band_structure)
+  - [1.4 Step 4:
+    Determine the working
+    supercell](#Step_4:_Determine_the_working_supercell)
+  - [1.5 Step 5:
+    Extract the eigenvector and set up the IRC starting
+    structure](#Step_5:_Extract_the_eigenvector_and_set_up_the_IRC_starting_structure)
+  - [1.6 Step 6:
+    Follow the IRC to the energy
+    minimum](#Step_6:_Follow_the_IRC_to_the_energy_minimum)
+  - [1.7 Step 7:
+    Relax from the determined
+    minimum](#Step_7:_Relax_from_the_determined_minimum)
+  - [1.8 Step 8:
+    Verify the stability of the relaxed
+    structure](#Step_8:_Verify_the_stability_of_the_relaxed_structure)
+- [2
+  Recommendations and
+  advice](#Recommendations_and_advice)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+- [4
+  References](#References)
+
+
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
+### Step 1: Compute phonon frequencies\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Compute phonon frequencies">edit</a> \| (./index.php.md)\]
+
 Run a finite-differences phonon calculation on the structure of
 interest. The same [INCAR](../input-files/INCAR.md) setup applies whether
 you use the primitive cell (Γ-point modes only) or a supercell (to
@@ -66,7 +92,9 @@ The full displacement eigenvector for each mode is printed in the block
 frequency list.
 
 Alternatively, read frequencies and eigenvectors directly with
-[py4vasp](https://vasp.at/py4vasp/latest/index.html):
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a>:
+
 
     import py4vasp, numpy as np
     calc = py4vasp.Calculation.from_path(".")
@@ -74,7 +102,12 @@ Alternatively, read frequencies and eigenvectors directly with
     freqs = mode_data["frequencies"]   # complex eV; imag > 0 → imaginary mode
     evecs = mode_data["eigenvectors"]  # (n_modes, n_atoms, 3), mass-weighted
 
-### Step 2: Classify the modes
+
+### Step 2: Classify the modes\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Classify the modes">edit</a> \| (./index.php.md)\]
+
 Stable modes have a non-zero real part; imaginary (unstable) modes have
 a non-zero imaginary part. Three acoustic modes always appear near zero
 — this is a numerical artefact of the finite-differences procedure, not
@@ -87,17 +120,24 @@ a structural instability.
 | \> 5–20              | Genuine soft mode → structural instability      |
 
 To identify the softest genuine optical mode with
-[py4vasp](https://vasp.at/py4vasp/latest/index.html):
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a>:
+
 
     # Threshold to exclude acoustic zeros
     optical_soft = np.where(freqs.imag * 1000 > 0.5)[0]   # imaginary part > 0.5 meV
     most_soft    = optical_soft[np.argmax(freqs[optical_soft].imag)]
     soft_vec     = evecs[most_soft]   # (n_atoms, 3) mass-weighted displacement pattern
 
+
 If no mode exceeds the threshold, the structure is dynamically stable at
 the computed **q**-points.
 
-### Step 3 (optional): Map instabilities to the primitive cell via the phonon band structure
+### Step 3 (optional): Map instabilities to the primitive cell via the phonon band structure\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3 (optional): Map instabilities to the primitive cell via the phonon band structure">edit</a> \| (./index.php.md): Map instabilities to the primitive cell via the phonon band structure")\]
+
 If Step 1 was run on a supercell, the interatomic force constants can be
 Fourier-interpolated onto a dense **q**-path in the primitive-cell
 Brillouin zone. This reveals at which **q**-vectors the instabilities
@@ -119,7 +159,11 @@ a [QPOINTS](../input-files/QPOINTS.md) file in line-mode format.
 |----|
 | **Mind:** This calculation does not include the macroscopic electric field responsible for LO-TO splitting near Γ. Ferroelectric branches are therefore degenerate at Γ and absolute optical frequencies near Γ may differ from experiment. To capture LO-TO splitting, obtain Born effective charges and the high-frequency dielectric tensor via [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. or [LCALCEPS](../incar-tags/LCALCEPS.md)=.TRUE. and supply them via [PHON_BORN_CHARGES](../incar-tags/PHON_BORN_CHARGES.md) and [PHON_DIELECTRIC](../incar-tags/PHON_DIELECTRIC.md). This does not affect soft-mode identification. |
 
-### Step 4: Determine the working supercell
+### Step 4: Determine the working supercell\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Determine the working supercell">edit</a> \| (./index.php.md)\]
+
 VASP always displaces atoms at Γ, so the instability must fold to Γ in
 the chosen supercell.
 
@@ -138,7 +182,11 @@ the supercell images: atoms in the first primitive-cell image are
 displaced along +**e**, atoms in the second image along −**e**, and so
 on.
 
-### Step 5: Extract the eigenvector and set up the IRC starting structure
+### Step 5: Extract the eigenvector and set up the IRC starting structure\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: Extract the eigenvector and set up the IRC starting structure">edit</a> \| (./index.php.md)\]
+
 The intrinsic-reaction-coordinate (IRC) method requires the soft-mode
 eigenvector as a *dimer-axis block* appended to the
 [POSCAR](../input-files/POSCAR.md). Use the high-symmetry saddle-point
@@ -146,8 +194,9 @@ structure directly — no pre-displacement is needed because the forces
 are zero there by symmetry.
 
 Extract the eigenvector from
-[py4vasp](https://vasp.at/py4vasp/latest/index.html) as shown in Step 2,
-or read it from [OUTCAR](../output-files/OUTCAR.md): locate the block
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> as shown in Step 2, or
+read it from [OUTCAR](../output-files/OUTCAR.md): locate the block
 "Eigenvectors and eigenvalues of the dynamical matrix", find the entry
 labelled `f/i=` for the imaginary mode, and copy the three Cartesian
 components listed for each atom.
@@ -179,7 +228,11 @@ For zone-boundary modes, negate the dimer-block rows that correspond to
 the second (and every alternating) primitive-cell image in the
 supercell.
 
-### Step 6: Follow the IRC to the energy minimum
+### Step 6: Follow the IRC to the energy minimum\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 6: Follow the IRC to the energy minimum">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md)=40 activates the
 intrinsic-reaction-coordinate method of Hratchian and Schlegel. Starting
 from the saddle point, VASP propagates the structure along the
@@ -223,15 +276,19 @@ on both sides. For each displaced structure run a static calculation
 the [WAVECAR](../input-files/WAVECAR.md) from the λ = 0 reference as a
 starting guess ([ISTART](../incar-tags/ISTART.md)=1) to accelerate SCF
 convergence. Plot ΔE(λ) to read the condensation energy and identify
-λ_(min), then proceed to Step 7 using the
-[POSCAR](../input-files/POSCAR.md) at λ_(min).
+λ<sub>min</sub>, then proceed to Step 7 using the
+[POSCAR](../input-files/POSCAR.md) at λ<sub>min</sub>.
 
-### Step 7: Relax from the determined minimum
+### Step 7: Relax from the determined minimum\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 7: Relax from the determined minimum">edit</a> \| (./index.php.md)\]
+
 Use the final ionic configuration from the IRC run
 ([CONTCAR](../output-files/CONTCAR.md)) or the displaced
-[POSCAR](../input-files/POSCAR.md) at λ_(min) from the frozen-phonon scan
-as the starting geometry. The relaxation procedure is identical in both
-cases:
+[POSCAR](../input-files/POSCAR.md) at λ<sub>min</sub> from the
+frozen-phonon scan as the starting geometry. The relaxation procedure is
+identical in both cases:
 
     IBRION  = 2    ! conjugate-gradient relaxation
     ISIF    = 3    ! relax atoms, cell shape, and volume
@@ -248,7 +305,11 @@ used as input for a follow-up phonon calculation (Step 8).
 |----|
 | **Mind:** The frozen-phonon scan constrains displacements to a single mode eigenvector. Even at the energy minimum along λ, forces transverse to the scan direction may be non-zero when the mode is degenerate. The full [ISIF](../incar-tags/ISIF.md)=3 relaxation in this step removes all residual forces and optimises the cell shape simultaneously. |
 
-### Step 8: Verify the stability of the relaxed structure
+### Step 8: Verify the stability of the relaxed structure\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 8: Verify the stability of the relaxed structure">edit</a> \| (./index.php.md)\]
+
 Re-run Step 1 on the fully relaxed geometry using the same
 finite-differences setup. Confirm that no `f/i=` modes remain in
 [OUTCAR](../output-files/OUTCAR.md). The symmetry lowering associated with
@@ -258,7 +319,11 @@ the original instability, but competing instabilities at other
 if a supercell phonon dispersion (Step 3) showed multiple imaginary
 branches.
 
-## Recommendations and advice
+## Recommendations and advice\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Recommendations and advice">edit</a> \| (./index.php.md)\]
+
 - Always verify that the structure is fully relaxed before computing
   phonons. Residual forces from a geometry optimisation that converged
   on NSW rather than EDIFFG are a frequent source of spurious imaginary
@@ -279,7 +344,11 @@ branches.
   on the new structure (Step 8). Symmetry lowering can stabilise the
   original instability but activate new ones.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 Tags: [IBRION](../incar-tags/IBRION.md), [NFREE](../incar-tags/NFREE.md),
 [POTIM](../incar-tags/POTIM.md), [ISIF](../incar-tags/ISIF.md),
 [EDIFFG](../incar-tags/EDIFFG.md), [NSW](../incar-tags/NSW.md),
@@ -303,4 +372,9 @@ calculations](Intrinsic-reaction-coordinate_calculations.md),
 [Structure
 optimization](Structure_optimization.md)
 
-## References
+## References\[<a
+href="/wiki/index.php?title=How_to_handle_imaginary_phonon_modes&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+

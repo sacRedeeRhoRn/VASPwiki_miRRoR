@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ICHARG
-ICHARG = 0 \| 1 \| 2 \| 4 \| 5 
+
+
+ICHARG = 0 \| 1 \| 2 \| 4 \|
+5 
 
 |                     |     |                                      |
 |---------------------|-----|--------------------------------------|
 | Default: **ICHARG** | = 2 | if [ISTART](ISTART.md)=0 |
 |                     | = 0 | else                                 |
 
-Description: ICHARG determines how VASP constructs the *initial* charge
-density.
+Description: ICHARG determines
+how VASP constructs the *initial* charge density.
 
 ------------------------------------------------------------------------
 
@@ -19,11 +22,12 @@ density.
 Calculate the charge density from initial wave functions.
 
 If [ISTART](ISTART.md) is *internally reset* due to an
-invalid [WAVECAR](../input-files/WAVECAR.md) file, ICHARG will be set to
+invalid [WAVECAR](../input-files/WAVECAR.md) file,
+ICHARG will be set to
 ICHARG=2.
 
-|                                                                    |
-|--------------------------------------------------------------------|
+|  |
+|----|
 | **Warning:** This may cause convergence problems for some systems. |
 
 - ICHARG=1
@@ -72,39 +76,43 @@ optimized-effective-potential methods (OEP), if the flag
 
 External charge-density-update mode to read in and add an external
 correction to the Kohn-Sham (KS) occupations in every SCF step of the
-[electronic
-minimization](../redirects/Electronic_minimization.md).
-The initialization of the charge density is done as in ICHARG=1, and
-after [NELMDL](NELMDL.md) steps VASP reads the occupations
-from a user-supplied text file [GAMMA](../input-files/GAMMA.md) (or
+<a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a>. The
+initialization of the charge density is done as in
+ICHARG=1, and after
+[NELMDL](NELMDL.md) steps VASP reads the occupations from a
+user-supplied text file [GAMMA](../input-files/GAMMA.md) (or
 [vaspgamma.h5](../input-files/Vaspgamma.h5.md) if compiled with [HDF5
 support](../categories/Category-HDF5_support.md)) for each
 k point in each SCF step. The procedure described in
-Ref.^([\[1\]](#cite_note-schueler:jpcm:30-1)) Eq. (30)-(32) is then used
-to construct a new charge density from the combined occupations (KS
-occupations + [GAMMA](../input-files/GAMMA.md) file), from which the next KS
-potential is constructed. The [DFT
-workflow](../redirects/Electronic_minimization.md)
-continues after a user-supplied [vasp.lock](../input-files/Vasp.lock.md)
-file is read. Additionally, with ICHARG=5 after each SCF step VASP
-writes out all with [LOCPROJ](LOCPROJ.md) defined wave
-function projections. The ICHARG=5 mode can be used with an external
-code that modifies the occupations, and requires extra output after each
-SCF step. The TRIQS software
-package^([\[2\]](#cite_note-parcollet:cpc:196-2)) makes use of it to
-perform charge self-consistent DFT plus dynamical mean field theory
-(DMFT)
-calculations^([\[3\]](#cite_note-merkel:joss:7-3)[\[4\]](#cite_note-aichhorn:cpc:204-4)).
+Ref.<sup>[\[1\]](#cite_note-schueler:jpcm:30-1)</sup>
+Eq. (30)-(32) is then used to construct a new charge density from the
+combined occupations (KS occupations + [GAMMA](../input-files/GAMMA.md)
+file), from which the next KS potential is constructed. The
+<a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">DFT workflow</a> continues after a
+user-supplied [vasp.lock](../input-files/Vasp.lock.md) file is read.
+Additionally, with ICHARG=5
+after each SCF step VASP writes out all with
+[LOCPROJ](LOCPROJ.md) defined wave function projections.
+The ICHARG=5 mode can be used
+with an external code that modifies the occupations, and requires extra
+output after each SCF step. The TRIQS software
+package<sup>[\[2\]](#cite_note-parcollet:cpc:196-2)</sup>
+makes use of it to perform charge self-consistent DFT plus dynamical
+mean field theory (DMFT)
+calculations<sup>[\[3\]](#cite_note-merkel:joss:7-3)[\[4\]](#cite_note-aichhorn:cpc:204-4)</sup>.
 See the
 [DFT+DMFT](../tutorials/DFT+DMFT_calculations.md) howto
 page for a tutorial.
 
 - ICHARG=10
 
-non-selfconsistent calculations: Adding 10 to the value of ICHARG, e.g.,
-ICHARG=11 or 12 (or the less convenient value 10) means that the charge
-density will be kept constant during the *entire electronic
-minimization*.
+non-selfconsistent calculations: Adding 10 to the value of
+ICHARG, e.g.,
+ICHARG=11 or 12 (or the less
+convenient value 10) means that the charge density will be kept constant
+during the *entire electronic minimization*.
 
 There are several reasons why to keep the charge density constant:
 
@@ -134,16 +142,20 @@ functional](../methods/Harris-Foulkes_functional.md).
 
 The initial charge density is of importance in the following cases:
 
-- If ICHARG≥10 the charge density remains constant during the run.
+- If ICHARG≥10 the charge
+  density remains constant during the run.
 
-&nbsp;
+<!-- -->
 
 - For all algorithms except [IALGO](IALGO.md)=5X the initial
   charge density is used to set up the initial Hamiltonian that is used
   in the first few non-selfconsistent steps, c.f.,
   [NELMDL](NELMDL.md) tag.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ICHARG&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Restart and output files cheat
 sheet](../tutorials/Restart_and_output_files_cheat_sheet.md)
 
@@ -158,19 +170,26 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ICHARG-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-1.  [↑](#cite_ref-schueler:jpcm:30_1-0) [M. Schüler, O. E. Peil, G. J.
-    Kraberger, R. Pordzik, M. Marsman, G. Kresse, T. O. Wehling, and M.
-    Aichhorn, Journal of Physics: Condensed Matter **30**, 475901
-    (2018).](https://doi.org/10.1088/1361-648X/aae80a)
-2.  [↑](#cite_ref-parcollet:cpc:196_2-0) [O. Parcollet, M. Ferrero, T.
-    Ayral, H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer
-    Physics Communications **196**, 398
-    (2015).](http://dx.doi.org/10.1016/j.cpc.2015.04.023)
-3.  [↑](#cite_ref-merkel:joss:7_3-0) [M. E. Merkel, A. Carta, S. Beck
-    and Alexander Hampel, Journal of Open Source Software **7**, 77
-    (2022).](https://doi.org/10.21105/joss.04623)
-4.  [↑](#cite_ref-aichhorn:cpc:204_4-0) [M. Aichhorn, L. Pourovskii, P.
+
+1.  [↑](#cite_ref-schueler:jpcm:30_1-0)
+    <a href="https://doi.org/10.1088/1361-648X/aae80a" class="external text"
+    rel="nofollow">M. Schüler, O. E. Peil, G. J. Kraberger, R. Pordzik, M.
+    Marsman, G. Kresse, T. O. Wehling, and M. Aichhorn, Journal of Physics:
+    Condensed Matter <strong>30</strong>, 475901 (2018).</a>
+2.  [↑](#cite_ref-parcollet:cpc:196_2-0)
+    <a href="http://dx.doi.org/10.1016/j.cpc.2015.04.023"
+    class="external text" rel="nofollow">O. Parcollet, M. Ferrero, T. Ayral,
+    H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics
+    Communications <strong>196</strong>, 398 (2015).</a>
+3.  [↑](#cite_ref-merkel:joss:7_3-0)
+    <a href="https://doi.org/10.21105/joss.04623" class="external text"
+    rel="nofollow">M. E. Merkel, A. Carta, S. Beck and Alexander Hampel,
+    Journal of Open Source Software <strong>7</strong>, 77 (2022).</a>
+4.  [↑](#cite_ref-aichhorn:cpc:204_4-0)
+    <a href="https://doi.org/10.1016/j.cpc.2016.03.014"
+    class="external text" rel="nofollow">M. Aichhorn, L. Pourovskii, P.
     Seth, V. Vildosola, M. Zingl, O. E. Peil, X. Deng, J. Mravlje, G. J.
     Kraberger, C. Martins, M. Ferrero, O. Parcollet, Computer Physics
-    Communications **204**, 200
-    (2016).](https://doi.org/10.1016/j.cpc.2016.03.014)
+    Communications <strong>204</strong>, 200 (2016).</a>
+
+

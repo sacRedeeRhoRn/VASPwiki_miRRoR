@@ -2,32 +2,61 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Graphite MBD binding energy
+
+
+
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-[fcc Si](Fcc_Si.md) \> [fcc Si
-DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+[fcc
+Si](Fcc_Si.md) \>
+[fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
-graphite MBD binding energy  \> [graphite interlayer
+graphite MBD binding energy
+ \> [graphite interlayer
 distance](Graphite_interlayer_distance.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Running this example](#Running_this_example)
-- [4 Download](#Download)
-- [5 References](#References)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3 Running this
+  example](#Running_this_example)
+- [4
+  Download](#Download)
+- [5
+  References](#References)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 In this example you will determine the interlayer binding energy of
 graphite in its experimental structure using the MBD@rsSCS method of
 Tchatchenko *et al.* to account for van der Waals interactions.
@@ -35,8 +64,9 @@ Tchatchenko *et al.* to account for van der Waals interactions.
 Semilocal DFT at the GGA level underestimates long-range dispersion
 interactions. In the case of graphite, PBE predicts the interlayer
 binding energy of ~1 meV/atom which is too small compared to the RPA
-reference of 0.048 eV/atom ^([\[1\]](#cite_note-lebegue-1)). In
-contrast, the pairwise correction scheme of Tkatchenko and Scheffler,
+reference of 0.048 eV/atom
+<sup>[\[1\]](#cite_note-lebegue-1)</sup>.
+In contrast, the pairwise correction scheme of Tkatchenko and Scheffler,
 overestimates this quantity strongly (0.083 eV/atom, see the [Graphite
 TS binding
 energy](Graphite_TS_binding_energy.md)
@@ -45,11 +75,19 @@ many-body effects in dispersion energy are taken into account using the
 MBD@rsSCS method of Tchatchenko et al. (see [Many-body dispersion
 energy](../methods/Many-body_dispersion_energy.md)).
 
-## Input
-### POSCAR
+## Input\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### POSCAR\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
 - Graphite:
 
-&nbsp;
+<!-- -->
 
     graphite
     1.0
@@ -65,7 +103,7 @@ energy](../methods/Many-body_dispersion_energy.md)).
 
 - Graphene:
 
-&nbsp;
+<!-- -->
 
     graphite
     1.0
@@ -77,7 +115,11 @@ energy](../methods/Many-body_dispersion_energy.md)).
        0.00000000  0.00000000  0.25000000
        0.33333333  0.66666667  0.25000000
 
-### INCAR
+### INCAR\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     IVDW = 202           
     LVDWEXPANSION =.TRUE. 
     NSW = 1 
@@ -93,10 +135,14 @@ energy](../methods/Many-body_dispersion_energy.md)).
     ALGO = Fast
     NPAR = 2
 
-### KPOINTS
+### KPOINTS\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
 - Graphite:
 
-&nbsp;
+<!-- -->
 
     Monkhorst Pack
     0
@@ -106,7 +152,7 @@ energy](../methods/Many-body_dispersion_energy.md)).
 
 - Graphene:
 
-&nbsp;
+<!-- -->
 
     Monkhorst Pack
     0
@@ -116,7 +162,11 @@ energy](../methods/Many-body_dispersion_energy.md)).
 
   
 
-## Running this example
+## Running this example\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Running this example">edit</a> \| (./index.php.md)\]
+
 To run this example, execute the `run.sh` bash-script:
 
     #
@@ -168,27 +218,56 @@ it is written in the file `results.dat`. (N.B.: for the latter *python*
 needs to be available.)
 
 The computed value of 0.050 eV/A is now fairly close to the RPA
-reference of 0.048 eV/atom ^([\[1\]](#cite_note-lebegue-1)).
+reference of 0.048 eV/atom
+<sup>[\[1\]](#cite_note-lebegue-1)</sup>.
 
-## Download
-[graphiteBinding_mdb.tgz](https://vasp.at/wiki/images/2/2a/GraphiteBinding_mbd.tgz "GraphiteBinding mbd.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-## References
-1.  ↑ ^([a](#cite_ref-lebegue_1-0)) ^([b](#cite_ref-lebegue_1-1)) [S.
-    Lebègue, J. Harl, Tim Gould, J. G. Ángyán, G. Kresse, and J. F.
-    Dobson, Phys. Rev. Lett. 105, 196401
-    (2010).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.196401)
+<a href="/wiki/images/2/2a/GraphiteBinding_mbd.tgz" class="internal"
+title="GraphiteBinding mbd.tgz">graphiteBinding_mdb.tgz</a>
+
+## References\[<a
+href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  ↑
+    <sup>[a](#cite_ref-lebegue_1-0)</sup>
+    <sup>[b](#cite_ref-lebegue_1-1)</sup>
+    <a
+    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.196401"
+    class="external text" rel="nofollow">S. Lebègue, J. Harl, Tim Gould, J.
+    G. Ángyán, G. Kresse, and J. F. Dobson, Phys. Rev. Lett. 105, 196401
+    (2010).</a>
+
 
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
-[fcc Si](Fcc_Si.md) \> [fcc Si
-DOS](Fcc_Si_DOS.md) \> [fcc Si
-bandstructure](Fcc_Si_bandstructure.md) \> [cd
-Si](Cd_Si.md) \> [cd Si volume
+[fcc
+Si](Fcc_Si.md) \>
+[fcc Si
+DOS](Fcc_Si_DOS.md) \>
+[fcc Si
+bandstructure](Fcc_Si_bandstructure.md) \>
+[cd
+Si](Cd_Si.md) \>
+[cd Si volume
 relaxation](Cd_Si_volume_relaxation.md) \>
-[cd Si relaxation](Cd_Si_relaxation.md) \>
-[beta-tin Si](Beta-tin_Si.md) \> [fcc
-Ni](Fcc_Ni.md) \> [graphite TS binding
+[cd Si
+relaxation](Cd_Si_relaxation.md) \>
+[beta-tin
+Si](Beta-tin_Si.md) \>
+[fcc
+Ni](Fcc_Ni.md) \>
+[graphite TS binding
 energy](Graphite_TS_binding_energy.md) \>
-graphite MBD binding energy  \> [graphite interlayer
+graphite MBD binding energy
+ \> [graphite interlayer
 distance](Graphite_interlayer_distance.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

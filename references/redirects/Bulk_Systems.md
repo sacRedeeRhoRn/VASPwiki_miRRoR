@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Bulk Systems
+
+
+
 Redirect to:
 
 - [Bulk Systems -
   Tutorial](../tutorials/Bulk_Systems_-_Tutorial.md)
+
+

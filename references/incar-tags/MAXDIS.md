@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # MAXDIS
+
+
 MAXDIS = \[real\] 
 
 |                     |                      |     |
@@ -18,9 +20,11 @@ At each ionic step, the maximum Cartesian displacement of any atom
 (using minimum-image convention) is compared to MAXDIS. If exceeded, the
 charge density extrapolation controlled by
 [IWAVPR](IWAVPR.md) is skipped and atomic densities are used
-instead. Setting MAXDIS=0.0 disables this reset entirely.
+instead. Setting MAXDIS=0.0
+disables this reset entirely.
 
-MAXDIS is particularly important in [on-the-fly machine learning force
+MAXDIS is particularly
+important in [on-the-fly machine learning force
 field](../categories/Category-Machine-learned_force_fields.md)
 ([ML_MODE](ML_MODE.md)=train) calculations, where many
 machine-learning-driven ionic steps are executed between successive ab
@@ -29,7 +33,12 @@ between two DFT calculations, making the charge density from the
 previous ab initio step a poor initial guess for the next one —
 potentially causing slow or problematic electronic convergence.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=MAXDIS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IWAVPR](IWAVPR.md), [IBRION](IBRION.md),
 [POTIM](POTIM.md), [ML_LMLFF](ML_LMLFF.md),
 [ML_MODE](ML_MODE.md)
+
+

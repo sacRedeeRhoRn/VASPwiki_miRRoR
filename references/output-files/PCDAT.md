@@ -2,13 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PCDAT
-The PCDAT file contains the pair correlation function. For dynamic
-simulations ([IBRION](../incar-tags/IBRION.md)$\ge$0) an averaged pair correlation is written to the file (see
-also [NBLOCK](../incar-tags/NBLOCK.md), [KBLOCK](../incar-tags/KBLOCK.md),
+
+
+The PCDAT file contains the
+pair correlation function. For dynamic simulations
+([IBRION](../incar-tags/IBRION.md)$\ge$0) an
+averaged pair correlation is written to the file (see also
+[NBLOCK](../incar-tags/NBLOCK.md), [KBLOCK](../incar-tags/KBLOCK.md),
 [NPACO](../incar-tags/NPACO.md) and [APACO](../incar-tags/APACO.md)).
 
-A sample output of the PCDAT file for a system containing two element
-types looks as follows:
+A sample output of the PCDAT
+file for a system containing two element types looks as follows:
 
       1   8   1   0  0.8163705E+01  0.1000000E+04
      CAR
@@ -71,12 +75,13 @@ Here is the description of each line:
 - Line 6: [NPACO](../incar-tags/NPACO.md), [NPACO](../incar-tags/NPACO.md),
   [NPACO](../incar-tags/NPACO.md).
 - Line 7: [NPACO](../incar-tags/NPACO.md).
-- Line 8: 0.1\*10⁻⁹ (fixed output).
-- Line 9: [APACO](../incar-tags/APACO.md)$\times$10⁻¹⁰/[NPACO](../incar-tags/NPACO.md).
+- Line 8: 0.1\*10<sup>-9</sup> (fixed output).
+- Line 9: [APACO](../incar-tags/APACO.md)$\times$10<sup>-10</sup>/[NPACO](../incar-tags/NPACO.md).
 - Line 10:
   [NSW](../incar-tags/NSW.md)/[NBLOCK](../incar-tags/NBLOCK.md)/[KBLOCK](../incar-tags/KBLOCK.md).
-- Line 11: [POTIM](../incar-tags/POTIM.md)$\times$10⁻¹⁵, norm of lattice vector 1 times 10⁻¹⁰, norm of lattice
-  vector 2 times 10⁻¹⁰, norm of lattice vector 3 times 10⁻¹⁰.
+- Line 11: [POTIM](../incar-tags/POTIM.md)$\times$10<sup>-15</sup>, norm of lattice vector 1 times
+  10<sup>-10</sup>, norm of lattice vector 2 times 10<sup>-10</sup>,
+  norm of lattice vector 3 times 10<sup>-10</sup>.
 - Line 12-(12+[NPACO](../incar-tags/NPACO.md)): Input mean
   temperature/([NBLOCK](../incar-tags/NBLOCK.md)$\times$[KBLOCK](../incar-tags/KBLOCK.md)), actual mean
   temperature.
@@ -101,7 +106,9 @@ The PCDAT file contains no abscissa. To obtain the pair correlation
 functions with the corresponding abscissa the following 'bash/awk'
 script can be used:
 
+
 **Click to show/*pair_correlation_xny.sh***
+
 
     file=PCDAT
     awk <$file >PCDAT.xy '
@@ -130,7 +137,9 @@ script can be used:
     }
     '
 
-To use this script, in your folder with the PCDAT file, please copy the
+
+To use this script, in your folder with the
+PCDAT file, please copy the
 content to *pair_correlation_xny.sh* and type the following:
 
     bash pair_correlation_xny.sh 
@@ -139,10 +148,15 @@ The resulting pair correlation function is written to
 
     PCDAT.xy
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=PCDAT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IBRION](../incar-tags/IBRION.md), [MDALGO](../incar-tags/MDALGO.md),
 [NBLOCK](../incar-tags/NBLOCK.md), [KBLOCK](../incar-tags/KBLOCK.md),
 [NSW](../incar-tags/NSW.md), [NPACO](../incar-tags/NPACO.md),
 [APACO](../incar-tags/APACO.md)
 
 ------------------------------------------------------------------------
+
+

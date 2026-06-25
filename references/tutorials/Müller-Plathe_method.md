@@ -2,39 +2,45 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Müller-Plathe method
+
+
 There are two components of the thermal conductivity, the
 [electronic](../theory/Electronic_transport_coefficients.md)
-$\kappa_e$ and the lattice
-$\kappa_l$, which we call
-$\lambda$ here. The lattice thermal
-conductivity $\lambda$ can be obtained
-by Fourier's law
+$\kappa_e$ and the
+lattice
+$\kappa_l$, which we call $\lambda$
+here. The lattice thermal conductivity $\lambda$ can
+be obtained by Fourier's law
 
 $\mathbf{J} = -\lambda \nabla T$,
 
-where $\mathbf{J}$ is the heat-flux
-vector and $\nabla T=\partial T/\partial
+where $\mathbf{J}$
+is the heat-flux vector and $\nabla T=\partial T/\partial
 \mathbf{a}_i$ is the temperature gradient. In reverse
 nonequilibrium molecular dynamics proposed by
-Müller-Plathe^([\[1\]](#cite_note-mueller-plathe:jcp:1997-1)), a
-temperature gradient ($\partial T/\partial
+Müller-Plathe<sup>[\[1\]](#cite_note-mueller-plathe:jcp:1997-1)</sup>,
+a temperature gradient ($\partial T/\partial
 \mathbf{a}_i$) along selected lattice axis
-$\mathbf{a}_i$ is created by splitting
-the simulation box into 2N slabs of identical thickness orthogonal to
-$\mathbf{a}_i$ and swapping the
-velocity of the coolest particle of type $\mu$ from the slab 1 ($v_{\mu,c}$) with the velocity of the hottest particle of the same type
-from the slab N+1 ($v_{\mu,h}$).
-Assuming that $\mathbf{a}_i$ is
-orthogonal to the remaining two lattice vectors $\mathbf{a}_j$ and $\mathbf{a}_k$, $\lambda$ is computed as
+$\mathbf{a}_i$ is created by splitting the simulation
+box into 2N slabs of identical thickness orthogonal to
+$\mathbf{a}_i$ and swapping the velocity of the coolest
+particle of type $\mu$ from the
+slab 1 ($v_{\mu,c}$)
+with the velocity of the hottest particle of the same type from the slab
+N+1 ($v_{\mu,h}$).
+Assuming that $\mathbf{a}_i$ is orthogonal to the remaining two lattice vectors
+$\mathbf{a}_j$ and $\mathbf{a}_k$, $\lambda$ is
+computed as
 
-$\lambda = -\frac{\sum_{transfers} \sum_{\mu}
-m_{\mu} (v_{\mu,h}^2 - v_{\mu,c}^2 )}{4\tau |\mathbf{a}_j
-\times\mathbf{a}_k| \langle \partial T/\partial \mathbf{a}_i \rangle}$
+$\lambda = -\frac{\sum_{transfers} \sum_{\mu} m_{\mu} (v_{\mu,h}^2 -
+v_{\mu,c}^2 )}{4\tau |\mathbf{a}_j \times\mathbf{a}_k| \langle
+\partial T/\partial \mathbf{a}_i \rangle}$
 
 where the first summation is taken over all swapping events,
-$m_{\mu}$ is the mass of a particle of
-the type $\mu$, $\tau$ is the total simulation time, and $\langle\cdots\rangle$ represents an ensemble average of the
-quantity enclosed. The method is invoked by defining the parameter
+$m_{\mu}$ is the mass of a particle of the type
+$\mu$, $\tau$ is the
+total simulation time, and $\langle\cdots\rangle$ represents an ensemble average of the quantity
+enclosed. The method is invoked by defining the parameter
 [FMP_ACTIVE](../incar-tags/FMP_ACTIVE.md) (see below). The simulation
 has to be started from a well-equilibrated
 [POSCAR](../input-files/POSCAR.md)-file and one of the following
@@ -47,7 +53,34 @@ ensemble](../misc/NVE_ensemble.md):
 | [Langevin thermostat](Langevin_thermostat.md) | [`MDALGO`](../incar-tags/MDALGO.md)` = 3` and [`LANGEVIN_GAMMA`](../incar-tags/LANGEVIN_GAMMA.md)` = NTYP×0.0` |
 | [Andersen thermostat](Andersen_thermostat.md) | [`MDALGO`](../incar-tags/MDALGO.md)` = 1` and [`ANDERSEN_PROB`](../incar-tags/ANDERSEN_PROB.md)` = 0.0` |
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li>For measurements of thermal conductivity <span class="smj-container"
+style="opacity:.5">$\lambda$</span>, the <a
+href="/wiki/Langevin_thermostat" title="Langevin thermostat">Langevin
+thermostat</a> is preferred because it utilizes the velocity Verlet
+algorithm. The velocity Verlet algorithm computes positions and
+velocities in a synchronized manner. Nevertheless, setting <a
+href="/wiki/MDALGO" title="MDALGO"><code class="vasp-dark-link-panel"
+style="padding: 2px">MDALGO</code></a><code class="vasp-dark-link-panel"
+style="padding: 2px"> = 1</code> can be useful when studying particle
+redistributions under a temperature gradient.</li>
+<li>The Müller-Plathe method can be utilized in the canonical ensemble.
+In the canonical ensemble, the thermal conductivity can not be measured
+because the energy is not conserved. Still, it can be useful to study a
+material's properties with a temperature gradient under canonical
+conditions.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 The behavior of the simulation is controlled via the following
 parameters defined in the [INCAR](../input-files/INCAR.md) file:
@@ -56,8 +89,7 @@ parameters defined in the [INCAR](../input-files/INCAR.md) file:
   the method and specifies whether or not the atomic type (as defined in
   [POSCAR](../input-files/POSCAR.md)) is allowed for swapping.
 - [FMP_DIRECTION](../incar-tags/FMP_DIRECTION.md)=\[integer\] index
-  of the lattice vector $\mathbf{a}_i$
-  along which the gradient $\partial T/\partial
+  of the lattice vector $\mathbf{a}_i$ along which the gradient $\partial T/\partial
   \mathbf{a}_i$ is created.
 - [FMP_SNUMBER](../incar-tags/FMP_SNUMBER.md)=\[integer\] number of
   slabs.
@@ -66,13 +98,14 @@ parameters defined in the [INCAR](../input-files/INCAR.md) file:
 - [FMP_PERIOD](../incar-tags/FMP_PERIOD.md)=\[integer\] number of time
   steps between two swapping events.
 
-The output needed to evaluate the expression for $\lambda$ is written out to the [REPORT](../output-files/REPORT.md)
-file. In particular, lines introduced by the string "tsl\>" contain the
-ID number of the slab (item 2), the number of atoms in the slab (item
-3), and the instantaneous temperature of the slab (item 4). This
-information, is needed to evaluate $\langle
-\partial T/\partial \mathbf{a}_i \rangle$ and is written for
-each MD step:
+The output needed to evaluate the expression for
+$\lambda$ is written out to the
+[REPORT](../output-files/REPORT.md) file. In particular, lines introduced by
+the string "tsl\>" contain the ID number of the slab (item 2), the
+number of atoms in the slab (item 3), and the instantaneous temperature
+of the slab (item 4). This information, is needed to evaluate
+$\langle \partial T/\partial \mathbf{a}_i \rangle$ and
+is written for each MD step:
 
     grep "tsl>" REPORT 
     tsl>        1     128   348.740
@@ -103,26 +136,60 @@ lines starting with the string "fmp\>" are written (only written if
 
 These lines contain the ID numbers (items 4 and 5) and instantaneous
 temperatures of hot (item 6) and cold atoms (item 7). Since the
-instantaneous temperature of a single particle $\mu$ is defined via $\frac{3}{2}k_B\\T_{\mu} = \frac{m_{\mu}}{2} v_{\mu}^2$, the
-instantaneous temperatures of hot and cold atoms can be used, in a
-straightforward manner, to evaluate the numerator of the equation for
+instantaneous temperature of a single particle
+$\mu$ is defined via $\frac{3}{2}k_B\\T_{\mu} =
+\frac{m_{\mu}}{2} v_{\mu}^2$, the instantaneous
+temperatures of hot and cold atoms can be used, in a straightforward
+manner, to evaluate the numerator of the equation for
 $\lambda$ given above:
 
      grep "fmp>" REPORT | awk 'BEGIN {bolkEV=8.6173857e-5; Q=0.} {Q+= $6-$7} END {print 1.5*Q*bolkEV}'  
 
   
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vcyan); --box-emph-color: var(--vcyan); padding: 5px; color: var(--vdefault-text-nb); background: var(--vcyan-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vcyan);">Mind:</span></strong>
+<ul>
+<li>The swapping process defined above leaves the total energy
+unchanged. Thus, for instance, the total energy is a conserved quantity
+if the simulation with the Müller-Plathe method is realized in the <a
+href="/wiki/NVE_ensemble" title="NVE ensemble">NVE ensemble</a>.</li>
+<li>The lattice vector along which the gradient of temperature is
+evaluated must be orthogonal to the remaining two lattice vectors.</li>
+<li>To obtain meaningful results, a large supercell must be used in this
+type of simulation. Additionally averaging over several MD runs is
+recommended.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
 
 ## Contents
 
-- [1 Example](#Example)
-- [2 Convergence Analysis for thermal
-  conductivity](#Convergence_Analysis_for_thermal_conductivity)
-- [3 Related tags and articles](#Related_tags_and_articles)
-- [4 References](#References)
 
-## Example
+- [1
+  Example](#Example)
+- [2 Convergence
+  Analysis for thermal
+  conductivity](#Convergence_Analysis_for_thermal_conductivity)
+- [3 Related tags
+  and articles](#Related_tags_and_articles)
+- [4
+  References](#References)
+
+
+## Example\[<a
+href="/wiki/index.php?title=M%C3%BCller-Plathe_method&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
 [INCAR](../input-files/INCAR.md):
 
     ML_LMLFF       = .TRUE. # switch on machine learning
@@ -149,7 +216,9 @@ $\lambda$ given above:
 
 [POSCAR](../input-files/POSCAR.md):
 
+
 **Click to show POSCAR**
+
 
     H2O_liquid                              
        1.00000000000000     
@@ -7725,10 +7794,13 @@ $\lambda$ given above:
       0.00000000E+00  0.00000000E+00  0.00000000E+00
       0.00000000E+00  0.00000000E+00  0.00000000E+00
 
+
 To extract the data from a collection of REPORT files the following
 analysis script can be used. AnalysisScript.sh:
 
+
 **Click to show AnalysisScript.sh**
+
 
      #!/usr/bin/env bash
      echo "This script will compute the thermal conductivity from VASP output."
@@ -7796,23 +7868,39 @@ analysis script can be used. AnalysisScript.sh:
      lambda=$(echo print "(" 0.5 "*" $Q "/" $A "/" $grad "*" 1602177.3299999998 ")" |python)
      echo lambda $lambda
 
-## Convergence Analysis for thermal conductivity
+
+## Convergence Analysis for thermal conductivity\[<a
+href="/wiki/index.php?title=M%C3%BCller-Plathe_method&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Convergence Analysis for thermal conductivity">edit</a> \| (./index.php.md)\]
+
 In general, a lot of molecular dynamics steps and a large supercell are
 needed to get converged results for thermal conductivity. Therefore,
 convergence analysis is a crucial step when measuring thermal
-conductivities. To measure the convergence of $\lambda$ it is recommended to do several MD runs. The thermal
-conductivity can then be computed with the help of the provided analysis
-script. It should be noted that the analysis script assumes a linear
-temperature gradient. Hence, it is essential to check the linearity of
-the temperature gradient when using the script.
+conductivities. To measure the convergence of
+$\lambda$ it is recommended to do several MD runs. The
+thermal conductivity can then be computed with the help of the provided
+analysis script. It should be noted that the analysis script assumes a
+linear temperature gradient. Hence, it is essential to check the
+linearity of the temperature gradient when using the script.
 
-[![](https://vasp.at/wiki/images/thumb/7/7c/FMP_method_convergence.png/500px-FMP_method_convergence.png)](https://vasp.at/wiki/File:FMP_method_convergence.png)
-
-Convergence of $\lambda$. As the
+<figure class="mw-halign-center" typeof="mw:File/Thumb">
+<a href="/wiki/File:FMP_method_convergence.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/7c/FMP_method_convergence.png/500px-FMP_method_convergence.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/7/7c/FMP_method_convergence.png 1.5x" width="500"
+height="375" /></a>
+<figcaption>Convergence of $\lambda$. As the
 simulation time progresses, the averages of the plot incorporate an
-increasing amount of data until convergence is achieved
+increasing amount of data until convergence is achieved</figcaption>
+</figure>
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=M%C3%BCller-Plathe_method&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [FMP DIRECTION](../incar-tags/FMP_DIRECTION.md),
 [FMP_ACTIVE](../incar-tags/FMP_ACTIVE.md),
 [FMP_SNUMBER](../incar-tags/FMP_SNUMBER.md),
@@ -7820,8 +7908,16 @@ increasing amount of data until convergence is achieved
 [FMP_PERIOD](../incar-tags/FMP_PERIOD.md), [Electronic transport
 coefficients](../theory/Electronic_transport_coefficients.md)
 
-## References
-1.  [↑](#cite_ref-mueller-plathe:jcp:1997_1-0) [F. Müller-Plathe, *A
-    simple nonequilibrium molecular dynamics method for calculating the
-    thermal conductivity*, J. Chem. Phys. **106**, 6082
-    (1997).](https://doi.org/10.1063/1.473271)
+## References\[<a
+href="/wiki/index.php?title=M%C3%BCller-Plathe_method&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-mueller-plathe:jcp:1997_1-0)
+    <a href="https://doi.org/10.1063/1.473271" class="external text"
+    rel="nofollow">F. Müller-Plathe, <em>A simple nonequilibrium molecular
+    dynamics method for calculating the thermal conductivity</em>, J. Chem.
+    Phys. <strong>106</strong>, 6082 (1997).</a>
+
+

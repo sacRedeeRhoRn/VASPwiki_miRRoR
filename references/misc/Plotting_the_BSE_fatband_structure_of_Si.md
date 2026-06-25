@@ -2,31 +2,56 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Plotting the BSE fatband structure of Si
-[Overview](../tutorials/BSE_-_Tutorial.md) \> [Dielectric
-properties of Si using
+
+
+
+[Overview](../tutorials/BSE_-_Tutorial.md) \>
+[Dielectric properties of Si using
 BSE](Dielectric_properties_of_Si_using_BSE.md) \>
 [Improving the dielectric
 function](Improving_the_dielectric_function.md)
- \> Plotting the BSE fatband structure of Si \> [List of
+ \>
+Plotting the BSE fatband structure of
+Si \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 INCAR](#INCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-  - [3.1 Step 1 DFT calculation](#Step_1_DFT_calculation)
-  - [3.2 Step 2 BSE calculation with
-    fatbands](#Step_2_BSE_calculation_with_fatbands)
-- [4 Download](#Download)
-- [5 References](#References)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    INCAR](#INCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Step 1 DFT
+    calculation](#Step_1_DFT_calculation)
+  - [3.2 Step 2 BSE
+    calculation with
+    fatbands](#Step_2_BSE_calculation_with_fatbands)
+- [4
+  Download](#Download)
+- [5
+  References](#References)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Visualization of the BSE eigenvectors using fatbands.
 
-## Input
+## Input\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
     Si
      5.4300
     0.5 0.5 0.0
@@ -37,11 +62,15 @@ Visualization of the BSE eigenvectors using fatbands.
     0.00 0.00 0.00 
     0.25 0.25 0.25 
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
 - This is the [INCAR](../input-files/INCAR.md) file for the basic DFT
   calculation:
 
-&nbsp;
+<!-- -->
 
     System  = Si
 
@@ -56,30 +85,46 @@ Visualization of the BSE eigenvectors using fatbands.
     LPEAD = .TRUE.
     OMEGAMAX = 40
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
 The [KPOINTS](../input-files/KPOINTS.md) file will be automatically
 generated in this example.
 
   
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - In this example we will calculate and plot the first "bright" BSE
   eigenstates of silicon, also called
-  fatbands^([\[1\]](#cite_note-bokdam:scr:6-1)). In this tutorial the
-  modelBSE setup from the previous tutorial is used in combination with
-  a 10x10x10 gamma centered k-point grid (Note: This calculation takes ~
-  50 min. on 16 cores, if you don't want to wait that long, a 4x4x4 grid
-  requires only a minute.) In principle the standard BSE method can also
-  be used instead.
+  fatbands<sup>[\[1\]](#cite_note-bokdam:scr:6-1)</sup>.
+  In this tutorial the modelBSE setup from the previous tutorial is used
+  in combination with a 10x10x10 gamma centered k-point grid (Note: This
+  calculation takes ~ 50 min. on 16 cores, if you don't want to wait
+  that long, a 4x4x4 grid requires only a minute.) In principle the
+  standard BSE method can also be used instead.
 
-### Step 1 DFT calculation
+### Step 1 DFT calculation\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1 DFT calculation">edit</a> \| (./index.php.md)\]
+
 We run a standard DFT calculation with the input files given above.
 
-### Step 2 BSE calculation with fatbands
+### Step 2 BSE calculation with fatbands\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2 BSE calculation with fatbands">edit</a> \| (./index.php.md)\]
+
 - The [INCAR](../input-files/INCAR.md) file for the modelBSE calculation
   looks like the following:
 
-&nbsp;
+<!-- -->
 
     System  = Si
 
@@ -116,7 +161,7 @@ We run a standard DFT calculation with the input files given above.
   course differ depending on the method you use and the density of your
   k-point grid):
 
-&nbsp;
+<!-- -->
 
     <varray name="opticaltransitions" >
      <v>      3.148           0.000 </v>
@@ -139,7 +184,7 @@ means in this case number 4.
 - We inspect the fourth band in the
   [BSEFATBAND](../output-files/BSEFATBAND.md) output file:
 
-&nbsp;
+<!-- -->
 
                  28428                10
          1BSE eigenvalue    3.14798542      IP-eigenvalue:    3.25790292
@@ -178,7 +223,7 @@ Columns 1-6 are used to plot the fatbands.
 2.  Filter out all e-h pairs that lie on the high symmetry k-lines along
     which you want to plot the fat bandstructure:
 
-&nbsp;
+<!-- -->
 
     #!/bin/bash
     NBSE=1 #Select the BSE eigenvector of interest.
@@ -190,7 +235,7 @@ Columns 1-6 are used to plot the fatbands.
 
 1.  Use a plotting program to plot the output in the following manner:
 
-&nbsp;
+<!-- -->
 
     |k-point|   electron        hole          |A|
                eigenvalue    eigenvalue
@@ -198,7 +243,12 @@ Columns 1-6 are used to plot the fatbands.
 
 - The sample output for this tutorial should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/c/c5/Fig_BSE_example3_1.png/500px-Fig_BSE_example3_1.png)](https://vasp.at/wiki/File:Fig_BSE_example3_1.png)
+<a href="/wiki/File:Fig_BSE_example3_1.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/c/c5/Fig_BSE_example3_1.png/500px-Fig_BSE_example3_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/c/c5/Fig_BSE_example3_1.png/750px-Fig_BSE_example3_1.png 1.5x, /wiki/images/c/c5/Fig_BSE_example3_1.png 2x"
+width="500" height="444" /></a>
 
 The fat band picture allows you to visually inspect which e-h pairs
 contribute the most to a particular BSE eigenstate. When k-point
@@ -209,17 +259,34 @@ and/or [OMEGAMAX](../incar-tags/OMEGAMAX.md) values. Try
 [NBANDSO](../incar-tags/NBANDSO.md)=[NBANDSV](../incar-tags/NBANDSV.md)=2and
 check how much this effects the BSE results.
 
-## Download
-[Si_BSEfatbands.tgz](https://vasp.at/wiki/images/0/0c/Si_BSEfatbands.tgz "Si BSEfatbands.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
 
-## References
-1.  [↑](#cite_ref-bokdam:scr:6_1-0) [M.Bokdam et al., Scientific Reports
-    6, 28618 (2016).](https://www.nature.com/articles/srep28618)
+<a href="/wiki/images/0/0c/Si_BSEfatbands.tgz" class="internal"
+title="Si BSEfatbands.tgz">Si_BSEfatbands.tgz</a>
 
-[Overview](../tutorials/BSE_-_Tutorial.md) \> [Dielectric
-properties of Si using
+## References\[<a
+href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-bokdam:scr:6_1-0)
+    <a href="https://www.nature.com/articles/srep28618"
+    class="external text" rel="nofollow">M.Bokdam et al., Scientific Reports
+    6, 28618 (2016).</a>
+
+
+[Overview](../tutorials/BSE_-_Tutorial.md) \>
+[Dielectric properties of Si using
 BSE](Dielectric_properties_of_Si_using_BSE.md) \>
 [Improving the dielectric
 function](Improving_the_dielectric_function.md)
- \> Plotting the BSE fatband structure of Si \> [List of
+ \>
+Plotting the BSE fatband structure of
+Si \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

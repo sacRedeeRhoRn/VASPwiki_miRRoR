@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # GW and ACFDT
+
+
+
 Redirect to:
 
 - [GW and ACFDT -
   Tutorial](../tutorials/GW_and_ACFDT_-_Tutorial.md)
+
+

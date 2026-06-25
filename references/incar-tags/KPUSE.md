@@ -2,12 +2,15 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # KPUSE
+
+
 KPUSE = \[integer array\]  
 Default: **KPUSE** = not set 
 
-Description: KPUSE sets a list of **k** points that contribute to
-calculating the [partial charge
-density](../redirects/Band-decomposed_charge_densities.md).
+Description: KPUSE sets a list
+of **k** points that contribute to calculating the
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">partial charge density</a>.
 
 ------------------------------------------------------------------------
 
@@ -25,15 +28,22 @@ variants, depending on the setting of [LSEPB](LSEPB.md) and
 E.g. if `KPUSE = 1 4 7` the charge density will be calculated for the
 three **k** points 1, 4, and 7.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=KPUSE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LPARD](LPARD.md), [NBMOD](NBMOD.md),
 [EINT](EINT.md), [IBAND](IBAND.md),
 [LSEPB](LSEPB.md), [LSEPK](LSEPK.md),
 [LPARDH5](LPARDH5.md), [PARCHG](../output-files/PARCHG.md),
-[vaspout.h5](../output-files/Vaspout.h5.md), [Band-decomposed charge
-densities](../redirects/Band-decomposed_charge_densities.md)
+[vaspout.h5](../output-files/Vaspout.h5.md),
+<a href="/wiki/Band-decomposed_charge_densities" class="mw-redirect"
+title="Band-decomposed charge densities">Band-decomposed charge
+densities</a>
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-KPUSE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_TRANSPORT_EMIN_PLOT
-ELPH_TRANSPORT_EMIN_PLOT = \[real\]  
+
+
+ELPH_TRANSPORT_EMIN_PLOT =
+\[real\]  
 Default: **ELPH_TRANSPORT_EMIN_PLOT** = $\min(\varepsilon_{n\mathbf{k}})$-5 
 
 Description: Specifies the minimum energy (in eV) to be considered when
@@ -10,18 +13,19 @@ computing the [transport distribution
 function](../theory/Electronic_transport_coefficients.md)
 for plotting.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
 
 By default, the lower energy limit is set to $\min(\varepsilon_{n\mathbf{k}})$ − 5 eV, where
-$\varepsilon_{n\mathbf{k}}$ are the
-electronic eigenvalues computed in the k-point mesh defined by the
+$\varepsilon_{n\mathbf{k}}$ are the electronic
+eigenvalues computed in the k-point mesh defined by the
 [KPOINTS_ELPH](../input-files/KPOINTS_ELPH.md) file. The transport
 function for plotting is evaluated on a linear energy grid of energies
-between ELPH_TRANSPORT_EMIN_PLOT and
+between
+ELPH_TRANSPORT_EMIN_PLOT and
 [ELPH_TRANSPORT_EMAX_PLOT](ELPH_TRANSPORT_EMAX_PLOT.md)
 and with
 [ELPH_TRANSPORT_NEDOS_PLOT](ELPH_TRANSPORT_NEDOS_PLOT.md)
@@ -40,10 +44,16 @@ The transport function and corresponding energy grids are written to
  /results/electron_phonon/electrons/transport_1/transport_function_plot Dataset {7, 1, 3, 3, 501}
 ```
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_TRANSPORT_EMIN_PLOT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [ELPH_TRANSPORT](ELPH_TRANSPORT.md)
 - [ELPH_TRANSPORT_EMAX_PLOT](ELPH_TRANSPORT_EMAX_PLOT.md)
 - [ELPH_TRANSPORT_NEDOS_PLOT](ELPH_TRANSPORT_NEDOS_PLOT.md)
 - [ELPH_RUN](ELPH_RUN.md)
 - [ELPH_SCATTERING_APPROX](ELPH_SCATTERING_APPROX.md)
 - [TRANSPORT_RELAXATION_TIME](TRANSPORT_RELAXATION_TIME.md)
+
+

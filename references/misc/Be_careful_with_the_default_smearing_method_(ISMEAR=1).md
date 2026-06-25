@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Be careful with the default smearing method (ISMEAR=1)
+
+
 The default for [ISMEAR](../incar-tags/ISMEAR.md) is 1 in VASP. This
 setting is not appropriate for insulators and semiconductors, and can
 results in one-electron occupancies that are larger than 1 (2 for non
@@ -18,3 +20,5 @@ smearing](Number_of_k_points_and_method_for_smearing.md)!
   
 
 ------------------------------------------------------------------------
+
+

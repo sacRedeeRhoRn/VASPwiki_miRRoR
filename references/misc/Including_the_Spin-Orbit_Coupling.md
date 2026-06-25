@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Including the Spin-Orbit Coupling
+
+
 Description: Spin-Orbit Coupling (SOC) included self-consistently
 
 The Magnetocrystalline Anisotropy Energy is determined by rotating all
@@ -18,23 +20,23 @@ spins in different directions and the following equation
 
 $E_{\text{MAE}} = E_{(u,v,w)} - E_0$
 
-with $E_0$ the energy of the most stable
-spin orientation.
+with $E_0$ the
+energy of the most stable spin orientation.
 
 More details are available in the [SAXIS](../incar-tags/SAXIS.md) and
 [LSORBIT](../incar-tags/LSORBIT.md) pages.
 
-**Exercise :** Determine the total magnetic moment by adding the orbital
-moment of the Ni atoms. Calculate the Magnetocrystalline Anisotropy
-Energy of NiO by orientating the spins along the following path :
-(2,2,2) --\> (2,2,1) --\> (2,2,0) --\> ... --\> (2,2,-6). Identify the
-most stable spin orientation according to this path.
+*<u>Exercise :</u>* Determine the total magnetic moment by adding the
+orbital moment of the Ni atoms. Calculate the Magnetocrystalline
+Anisotropy Energy of NiO by orientating the spins along the following
+path : (2,2,2) --\> (2,2,1) --\> (2,2,0) --\> ... --\> (2,2,-6).
+Identify the most stable spin orientation according to this path.
 
 ------------------------------------------------------------------------
 
 - [INCAR](../input-files/INCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO GGA+U SOC
      SYSTEM    = "NiO"
@@ -79,7 +81,7 @@ most stable spin orientation according to this path.
 
 - [KPOINTS](../input-files/KPOINTS.md)
 
-&nbsp;
+<!-- -->
 
     k-points
      0
@@ -89,7 +91,7 @@ most stable spin orientation according to this path.
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     NiO
      4.17
@@ -103,7 +105,14 @@ most stable spin orientation according to this path.
      0.5 0.5 0.5
      1.5 1.5 1.5
 
-## Download
-[nio_SOC.tgz](https://vasp.at/wiki/images/3/38/Nio_SOC.tgz "Nio SOC.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Including_the_Spin-Orbit_Coupling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/3/38/Nio_SOC.tgz" class="internal"
+title="Nio SOC.tgz">nio_SOC.tgz</a>
 
 ------------------------------------------------------------------------
+
+

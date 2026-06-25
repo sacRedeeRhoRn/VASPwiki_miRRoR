@@ -2,8 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:VASP
+
+
 This is the top-level category
 
 ------------------------------------------------------------------------
 
 [Contents](../misc/The_VASP_Manual.md)
+
+

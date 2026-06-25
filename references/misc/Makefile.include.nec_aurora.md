@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # makefile.include.nec_aurora
+
+
     # Default precompiler options
     CPP_OPTIONS = -DHOST=\"SXAurora\" \
                   -D__NEC__ \
@@ -93,3 +95,5 @@
 ------------------------------------------------------------------------
 
 [makefile.include](Makefile.include.md)
+
+

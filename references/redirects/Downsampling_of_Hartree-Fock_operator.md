@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Downsampling of Hartree-Fock operator
+
+
+
 Redirect to:
 
 - [Downsampling of the Hartree-Fock
   operator](../methods/Downsampling_of_the_Hartree-Fock_operator.md)
+
+

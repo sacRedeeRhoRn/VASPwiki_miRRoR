@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Computing the work function
+
+
 The work function is defined as the work needed to move an electron from
 a surface to a point in vacuum sufficiently far away from this surface.
 It is a central quantity in surface science, vacuum science, catalysis,
@@ -19,29 +21,42 @@ and possible pitfalls.
 |----|
 | **Mind:** The work function is a property of a surface, not a bulk property. Hence, the content of this page only applies to systems with reduced dimensionality (such as surfaces), i.e., systems where there is expected to be a charge-density-free region in at least one direction of the cell. |
 
+
 ## Contents
 
-- [1 Required quantities](#Required_quantities)
-- [2 Step-by-step instructions](#Step-by-step_instructions)
-- [3 Example](#Example)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## Required quantities
-The work function, $\Phi$, is computed
-using the expression, $\Phi =
-e\phi_{\mathrm{vacuum}} - \varepsilon_{\mathrm{F}}$ where
-$\phi_{\mathrm{vacuum}}$ is the vacuum
-potential, i.e., the potential sufficiently far away from a surface,
-such that if an electron were to be placed at this position, it would
-not feel the presence of the surface. $\varepsilon_{F}$ is the Fermi level of the surface, and
-$e$ is the charge on the electron (equal
-to 1 in atomic units). In the next section, we describe how
-$\phi_{\mathrm{vacuum}}$ and
-$\varepsilon_{F}$ are determined from
-the [LOCPOT](../output-files/LOCPOT.md) and [OUTCAR](../output-files/OUTCAR.md)
+- [1 Required
+  quantities](#Required_quantities)
+- [2 Step-by-step
+  instructions](#Step-by-step_instructions)
+- [3
+  Example](#Example)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Required quantities\[<a
+href="/wiki/index.php?title=Computing_the_work_function&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Required quantities">edit</a> \| (./index.php.md)\]
+
+The work function, $\Phi$, is
+computed using the expression, $\Phi =
+e\phi_{\mathrm{vacuum}} - \varepsilon_{\mathrm{F}}$
+where $\phi_{\mathrm{vacuum}}$ is the vacuum potential, i.e., the potential
+sufficiently far away from a surface, such that if an electron were to
+be placed at this position, it would not feel the presence of the
+surface. $\varepsilon_{F}$ is the Fermi level of the surface, and
+$e$ is the charge on the electron (equal to 1 in atomic
+units). In the next section, we describe how $\phi_{\mathrm{vacuum}}$ and $\varepsilon_{F}$ are determined from the
+[LOCPOT](../output-files/LOCPOT.md) and [OUTCAR](../output-files/OUTCAR.md)
 files, respectively.
 
-## Step-by-step instructions
+## Step-by-step instructions\[<a
+href="/wiki/index.php?title=Computing_the_work_function&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
+
 **Step 1**: Ensure that the chosen structure has a large enough
 atom-free, i.e., charge-density-free, and field-free region in the
 direction normal to the surface. A good rule of thumb is to center the
@@ -101,14 +116,24 @@ energy in eV.
 
       grep "Fermi energy" OUTCAR
 
-## Example
-[![](https://vasp.at/wiki/images/thumb/7/70/Workfunction_potentials.png/400px-Workfunction_potentials.png)](https://vasp.at/wiki/File:Workfunction_potentials.png)
+## Example\[<a
+href="/wiki/index.php?title=Computing_the_work_function&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
 
-Vacuum potential referenced to the Fermi energy plotted against the
-distance along the surface normal. Insets to the figure show the work
-function for (red) a clean Pt(111) surface (blue) Pt(111) with a carbon
-atom adsorbed on only one surface termination (atom center ~15 Å on the
-*x* axis).
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:Workfunction_potentials.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/7/70/Workfunction_potentials.png/400px-Workfunction_potentials.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/7/70/Workfunction_potentials.png/600px-Workfunction_potentials.png 1.5x, /wiki/images/thumb/7/70/Workfunction_potentials.png/800px-Workfunction_potentials.png 2x"
+width="400" height="300" /></a>
+<figcaption>Vacuum potential referenced to the Fermi energy plotted
+against the distance along the surface normal. Insets to the figure show
+the work function for (red) a clean Pt(111) surface (blue) Pt(111) with
+a carbon atom adsorbed on only one surface termination (atom center ~15
+Å on the <em>x</em> axis).</figcaption>
+</figure>
 
 Consider an example of a carbon atom adsorbed on an *fcc*-Pt(111)
 surface. The structure of such a system is
@@ -158,11 +183,18 @@ normal (*x* axis) for two systems, *fcc* Pt(111) surface (in blue) and
 Pt(111) surface with a carbon atom adsorbed on one surface termination
 (Pt(111)-C\*). The vacuum potentials are flat, (i.e., constant), on
 either side (magnified in insets). The work function on either side of
-the slab is annotated in the insets as $\Phi$. It is equal for both sides of the clean slab but slightly
-higher for the case of Pt(111)-C\*.
+the slab is annotated in the insets as $\Phi$. It is
+equal for both sides of the clean slab but slightly higher for the case
+of Pt(111)-C\*.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Computing_the_work_function&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LOCPOT](../output-files/LOCPOT.md), [LDIPOL](../incar-tags/LDIPOL.md),
 [IDIPOL](../incar-tags/IDIPOL.md), [DIPOL](../incar-tags/DIPOL.md),
 [LVHAR](../incar-tags/LVHAR.md),
 [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md)
+
+

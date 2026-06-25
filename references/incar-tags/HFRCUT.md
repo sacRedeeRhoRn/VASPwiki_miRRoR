@@ -2,10 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # HFRCUT
+
+
 HFRCUT = \[real\]  
 Default: **HFRCUT** = 0 
 
-Description: HFRCUT specifies how the [Coulomb kernel is approximated at
+Description: HFRCUT specifies
+how the [Coulomb kernel is approximated at
 G=0](../methods/Coulomb_singularity.md) when the Fock
 energy and the exchange potential are evaluated.
 
@@ -22,11 +25,13 @@ that the density matrix is local. The leading order correction is given
 by the difference between the electrostatic energy of a localized model
 charge density in a homogeneous background periodically repeated and the
 same model charge density in isolation. For details we refer to J. Paier
-*et al.,*^([\[1\]](#cite_note-paier:jcp:05-1)) Section II. D. 4.
+*et
+al.,*<sup>[\[1\]](#cite_note-paier:jcp:05-1)</sup>
+Section II. D. 4.
 
-- HFRCUT = 0: Ewald summation *or* method of Massida, Posternak, and
-  Baldereschi depending on
-  k-mesh^([\[2\]](#cite_note-gygi:prb:86-2)[\[3\]](#cite_note-massidda:prb:93-3))
+- HFRCUT = 0: Ewald summation
+  *or* method of Massida, Posternak, and Baldereschi depending on
+  k-mesh<sup>[\[2\]](#cite_note-gygi:prb:86-2)[\[3\]](#cite_note-massidda:prb:93-3)</sup>
 
 If a regular automatic k-mesh and the standard 1/r Coulomb kernel are
 used, the correction is computed using Ewald summations. If the k-mesh
@@ -34,7 +39,7 @@ is *not* regular (e.g., if the k-points are explicitly listed in the
 [KPOINTS](../input-files/KPOINTS.md) file) or if kernels different from
 the bare Coulomb kernel are used (e.g., HSE functional), the method of
 Massida, Posternak, and
-Baldereschi^([\[2\]](#cite_note-gygi:prb:86-2)[\[3\]](#cite_note-massidda:prb:93-3))
+Baldereschi<sup>[\[2\]](#cite_note-gygi:prb:86-2)[\[3\]](#cite_note-massidda:prb:93-3)</sup>
 is used. This approach assumes that the model charge density is an
 error-function-like charge distribution in real space in order to handle
 the long-range nature of the potential in reciprocal space. It requires
@@ -43,31 +48,39 @@ setting a decay constant for the error function, see
 and the method of Massida, Posternak, and Baldereschi, are strictly
 equivalent for regular k-mesh.
 
-- HFRCUT = -1: Automated cutoff
-  radius^([\[4\]](#cite_note-spenceralavi:prb:08-4))
+- HFRCUT = -1: Automated
+  cutoff
+  radius<sup>[\[4\]](#cite_note-spenceralavi:prb:08-4)</sup>
 
 An alternative recipe is to replace the 1/r Coulomb kernel with a
 truncated Coulomb kernel that is strictly zero beyond a certain cutoff
-radius. If HFRCUT is set to -1, the radial cutoff is chosen to be
-equivalent to the radius of the sphere with a volume of the unit cell
-times the total number of k-points in the full Brillouin zone. For
-instance, for a 4x4x4 k-point grid, that yields 64 times the volume of
-the unit cell.
+radius. If HFRCUT is set to
+-1, the radial cutoff is chosen to be equivalent to the radius of the
+sphere with a volume of the unit cell times the total number of k-points
+in the full Brillouin zone. For instance, for a 4x4x4 k-point grid, that
+yields 64 times the volume of the unit cell.
 
-- HFRCUT = \[cutoff radius\]: Manually set cutoff radius in Ångström.
+- HFRCUT = \[cutoff radius\]:
+  Manually set cutoff radius in Ångström.
 
-In the limit of many k-points, both methods (HFRCUT=-1 and HFRCUT=0)
-should yield identical results. In our experience, the HFRCUT=-1
-converges more rapidly for systems with a gap, as well as molecules and
-atoms, whereas HFRCUT=0 converges faster for metallic systems. It is
-expedient to first converge the energies with respect to the number of
-k-points for both methods and then select for subsequent calculations
-the method that converges more rapidly. A detailed comparison of the
-convergence of the different methods for metallic and gapped materials
-was made by Sundararaman and
-Arias^([\[5\]](#cite_note-sundararamanarias:prb:13-5)).
+In the limit of many k-points, both methods
+(HFRCUT=-1 and
+HFRCUT=0) should yield
+identical results. In our experience, the
+HFRCUT=-1 converges more
+rapidly for systems with a gap, as well as molecules and atoms, whereas
+HFRCUT=0 converges faster for
+metallic systems. It is expedient to first converge the energies with
+respect to the number of k-points for both methods and then select for
+subsequent calculations the method that converges more rapidly. A
+detailed comparison of the convergence of the different methods for
+metallic and gapped materials was made by Sundararaman and
+Arias<sup>[\[5\]](#cite_note-sundararamanarias:prb:13-5)</sup>.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=HFRCUT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [AEXX](AEXX.md), [AGGAX](AGGAX.md),
 [AGGAC](AGGAC.md), [ALDAC](ALDAC.md),
 [HFALPHA](HFALPHA.md), [LTHOMAS](LTHOMAS.md),
@@ -80,23 +93,37 @@ formalism](../methods/Hybrid_functionals-_formalism.md),
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-HFRCUT-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-paier:jcp:05_1-0) [J. Paier, R. Hirschl, M. Marsman,
-    and G. Kresse, J. Chem. Phys. **122**, 234102
-    (2005).](https://doi.org/10.1063/1.1926272)
-2.  ↑ ^([a](#cite_ref-gygi:prb:86_2-0))
-    ^([b](#cite_ref-gygi:prb:86_2-1)) [F. Gygi and A. Baldereschi, Phys.
-    Rev. B **34**, 4405(R)
-    (1986).](https://doi.org/10.1103/PhysRevB.34.4405)
-3.  ↑ ^([a](#cite_ref-massidda:prb:93_3-0))
-    ^([b](#cite_ref-massidda:prb:93_3-1)) [S. Massidda, M. Posternak,
-    and A. Baldereschi, Phys. Rev. B **48**, 5058
-    (1993).](https://doi.org/10.1103/PhysRevB.48.5058)
-4.  [↑](#cite_ref-spenceralavi:prb:08_4-0) [J. Spencer and A. Alavi,
-    Phys. Phys. Rev. B **77**, 193110
-    (2008).](https://doi.org/10.1103/PhysRevB.77.193110)
-5.  [↑](#cite_ref-sundararamanarias:prb:13_5-0) [R. Sundararaman
-    and T. A. Arias, Phys. Rev. B **87**, 165122
-    (2013).](https://doi.org/10.1103/PhysRevB.87.165122)
+## References\[<a href="/wiki/index.php?title=HFRCUT&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-paier:jcp:05_1-0)
+    <a href="https://doi.org/10.1063/1.1926272" class="external text"
+    rel="nofollow">J. Paier, R. Hirschl, M. Marsman, and G. Kresse, J. Chem.
+    Phys. <strong>122</strong>, 234102 (2005).</a>
+2.  ↑
+    <sup>[a](#cite_ref-gygi:prb:86_2-0)</sup>
+    <sup>[b](#cite_ref-gygi:prb:86_2-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.34.4405" class="external text"
+    rel="nofollow">F. Gygi and A. Baldereschi, Phys. Rev. B
+    <strong>34</strong>, 4405(R) (1986).</a>
+3.  ↑
+    <sup>[a](#cite_ref-massidda:prb:93_3-0)</sup>
+    <sup>[b](#cite_ref-massidda:prb:93_3-1)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.48.5058" class="external text"
+    rel="nofollow">S. Massidda, M. Posternak, and A. Baldereschi, Phys. Rev.
+    B <strong>48</strong>, 5058 (1993).</a>
+4.  [↑](#cite_ref-spenceralavi:prb:08_4-0)
+    <a href="https://doi.org/10.1103/PhysRevB.77.193110"
+    class="external text" rel="nofollow">J. Spencer and A. Alavi, Phys.
+    Phys. Rev. B <strong>77</strong>, 193110 (2008).</a>
+5.  [↑](#cite_ref-sundararamanarias:prb:13_5-0)
+    <a href="https://doi.org/10.1103/PhysRevB.87.165122"
+    class="external text" rel="nofollow">R. Sundararaman and T. A. Arias,
+    Phys. Rev. B <strong>87</strong>, 165122 (2013).</a>
+
 
 ------------------------------------------------------------------------
+
+

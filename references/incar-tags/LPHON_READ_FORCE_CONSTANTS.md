@@ -2,15 +2,19 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LPHON_READ_FORCE_CONSTANTS
-LPHON_READ_FORCE_CONSTANTS = .TRUE. \| .FALSE. 
+
+
+LPHON_READ_FORCE_CONSTANTS =
+.TRUE. \| .FALSE. 
 
 |                                         |           |     |
 |-----------------------------------------|-----------|-----|
 | Default: **LPHON_READ_FORCE_CONSTANTS** | = .FALSE. |     |
 
-Description: LPHON_READ_FORCE_CONSTANTS read the force constants from a
-vaspin.h5 file containing the force constants computed with a previous
-VASP run.
+Description:
+LPHON_READ_FORCE_CONSTANTS
+read the force constants from a vaspin.h5 file containing the force
+constants computed with a previous VASP run.
 
 ------------------------------------------------------------------------
 
@@ -22,17 +26,22 @@ dispersion on a different path the user can modify the
 [QPOINTS](../input-files/QPOINTS.md) file and read the force constants
 computed previously (i.e. without performing the finite-differences
 computations on supercells again). To do so copy vaspout.h5 to vaspin.h5
-and set LPHON_READ_FORCE_CONSTANTS=.TRUE. in the
-[INCAR](../input-files/INCAR.md) file. Note that when this is set only the
-phonon dispersion is performed and then VASP quits without running any
-additional calculation specified in the [INCAR](../input-files/INCAR.md)
-file.
+and set
+LPHON_READ_FORCE_CONSTANTS=.TRUE.
+in the [INCAR](../input-files/INCAR.md) file. Note that when this is set
+only the phonon dispersion is performed and then VASP quits without
+running any additional calculation specified in the
+[INCAR](../input-files/INCAR.md) file.
 
-|                                            |
-|--------------------------------------------|
+|  |
+|----|
 | **Mind:** Only available as of VASP 6.4.0. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=LPHON_READ_FORCE_CONSTANTS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [QPOINTS](../input-files/QPOINTS.md),
 [LPHON_DISPERSION](LPHON_DISPERSION.md),
 [PHON_NWRITE](PHON_NWRITE.md),
@@ -43,3 +52,5 @@ file.
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LPHON_DISPERSION-_incategory-Examples)
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Terminal output
+
+
 The screen output of VASP consists of several sections and can contain
 important warnings and error messages.
 
@@ -9,32 +11,57 @@ important warnings and error messages.
 |----|
 | **Tip:** Check the **stdout** (or [OUTCAR](OUTCAR.md)) for warning messages after a calculation finishes. Often a small oversight can lead to plausible, but incorrect results. |
 
+
 ## Contents
 
-- [1 The header](#The_header)
-  - [1.1 No of nodes, MPI ranks, OpenMP threads, and
-    parallelization](#No_of_nodes,_MPI_ranks,_OpenMP_threads,_and_parallelization)
-  - [1.2 GPU detection](#GPU_detection)
-  - [1.3 Version number, build date, and executable
-    type](#Version_number,_build_date,_and_executable_type)
-  - [1.4 Structure information](#Structure_information)
-  - [1.5 ScaLAPACK](#ScaLAPACK)
-  - [1.6 LDA part of correlation](#LDA_part_of_correlation)
-  - [1.7 Reading the WAVECAR header](#Reading_the_WAVECAR_header)
-  - [1.8 Input file check](#Input_file_check)
-  - [1.9 FFT planning](#FFT_planning)
-  - [1.10 Reading WAVECAR and/or CHGCAR](#Reading_WAVECAR_and/or_CHGCAR)
-- [2 The body](#The_body)
-- [3 Error and warning messages](#Error_and_warning_messages)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## The header
+- [1 The
+  header](#The_header)
+  - [1.1 No of
+    nodes, MPI ranks, OpenMP threads, and
+    parallelization](#No_of_nodes,_MPI_ranks,_OpenMP_threads,_and_parallelization)
+  - [1.2 GPU
+    detection](#GPU_detection)
+  - [1.3 Version
+    number, build date, and executable
+    type](#Version_number,_build_date,_and_executable_type)
+  - [1.4 Structure
+    information](#Structure_information)
+  - [1.5
+    ScaLAPACK](#ScaLAPACK)
+  - [1.6 LDA part
+    of correlation](#LDA_part_of_correlation)
+  - [1.7 Reading
+    the WAVECAR header](#Reading_the_WAVECAR_header)
+  - [1.8 Input file
+    check](#Input_file_check)
+  - [1.9 FFT
+    planning](#FFT_planning)
+  - [1.10 Reading
+    WAVECAR and/or CHGCAR](#Reading_WAVECAR_and/or_CHGCAR)
+- [2 The
+  body](#The_body)
+- [3 Error and
+  warning messages](#Error_and_warning_messages)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## The header\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: The header">edit</a> \| (./index.php.md)\]
+
 The header has a few sections, that may or may not get printed depending
 on the calculation. Additional information and warnings may be present
 depending on the calculation and setup. Some common blocks are described
 below.
 
-### No of nodes, MPI ranks, OpenMP threads, and parallelization
+### No of nodes, MPI ranks, OpenMP threads, and parallelization\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: No of nodes, MPI ranks, OpenMP threads, and parallelization">edit</a> \| (./index.php.md)\]
+
 The first output details rank, threading, and
 [parallelization](../categories/Category-Parallelization.md)
 information. E.g. with [`KPAR`](../incar-tags/KPAR.md)` = 4` and OpenMP
@@ -51,7 +78,11 @@ or without OpenMP threading, but [`KPAR`](../incar-tags/KPAR.md)` = 1` and
     distrk:  each k-point on   16 cores,    1 groups
     distr:  one band on    4 cores,    4 groups
 
-### GPU detection
+### GPU detection\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: GPU detection">edit</a> \| (./index.php.md)\]
+
 If the executable is
 [installed](../misc/Installing_VASP.6.X.X.md) with
 [support for GPU offloading](../categories/Category-GPU.md), and
@@ -60,7 +91,11 @@ here:
 
     Offloading initialized ...    2 GPUs detected
 
-### Version number, build date, and executable type
+### Version number, build date, and executable type\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Version number, build date, and executable type">edit</a> \| (./index.php.md)\]
+
 Note that both the standard and the
 [noncollinear](../categories/Category-Noncollinear_magnetism.md)
 version print out "complex", while the gamma-only version prints
@@ -72,17 +107,29 @@ version print out "complex", while the gamma-only version prints
 
     vasp.6.5.0 16Dec24 (build Feb 28 2025 14:30:48) gamma-only
 
-### Structure information
+### Structure information\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Structure information">edit</a> \| (./index.php.md)\]
+
     POSCAR found type information on POSCAR CoSiTi
     POSCAR found :  3 types and       4 ions
 
-### ScaLAPACK
+### ScaLAPACK\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: ScaLAPACK">edit</a> \| (./index.php.md)\]
+
 This line is present if VASP is installed with [ScaLAPACK
 support](../misc/Precompiler_options.md).
 
     scaLAPACK will be used
 
-### LDA part of correlation
+### LDA part of correlation\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: LDA part of correlation">edit</a> \| (./index.php.md)\]
+
 The following line prints the implementation selected for the LDA XC
 energy. E.g.:
 
@@ -93,7 +140,11 @@ or
     LDA part: xc-table for (Slater(with rela. corr.)+CA(PZ))
     , standard interpolation
 
-### Reading the [WAVECAR](../input-files/WAVECAR.md) header
+### Reading the [WAVECAR](../input-files/WAVECAR.md) header\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Reading the WAVECAR header">edit</a> \| (./index.php.md)\]
+
 If a [WAVECAR](../input-files/WAVECAR.md) is present, the header is read
 now
 
@@ -116,7 +167,11 @@ first *NK2* **k**-points from the [WAVECAR](../input-files/WAVECAR.md)
 will be mapped to the new **k** points. In both cases the coordinates of
 **k** points are not considered.
 
-### Input file check
+### Input file check\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Input file check">edit</a> \| (./index.php.md)\]
+
 If the [input files](../categories/Category-Input_files.md)
 [POSCAR](../input-files/POSCAR.md), [INCAR](../input-files/INCAR.md), and
 [KPOINTS](../input-files/KPOINTS.md) are consistent, the following line is
@@ -124,12 +179,20 @@ printed
 
     POSCAR, INCAR and KPOINTS ok, starting setup
 
-### FFT planning
+### FFT planning\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: FFT planning">edit</a> \| (./index.php.md)\]
+
     FFT: planning ... GRIDC
     FFT: planning ... GRID_SOFT
     FFT: planning ... GRID
 
-### Reading [WAVECAR](../input-files/WAVECAR.md) and/or [CHGCAR](../input-files/CHGCAR.md)
+### Reading [WAVECAR](../input-files/WAVECAR.md) and/or [CHGCAR](../input-files/CHGCAR.md)\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Reading WAVECAR and/or CHGCAR">edit</a> \| (./index.php.md)\]
+
 Depending on the availability of the files and the setting of
 [ISTART](../incar-tags/ISTART.md) and [ICHARG](../incar-tags/ICHARG.md), the
 [WAVECAR](../input-files/WAVECAR.md) or [CHGCAR](../input-files/CHGCAR.md)
@@ -153,7 +216,11 @@ also be read from [CHGCAR](../input-files/CHGCAR.md)
     charge-density read from file: GaAs                                    
     magnetization density read from file 1
 
-## The body
+## The body\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: The body">edit</a> \| (./index.php.md)\]
+
 After the line
 
     entering main loop
@@ -163,7 +230,11 @@ the body of the **stdout** begins. It is essentially equivalent to the
 [OSZICAR](OSZICAR.md) page for an explanation of the
 presented data.
 
-## Error and warning messages
+## Error and warning messages\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: Error and warning messages">edit</a> \| (./index.php.md)\]
+
 Incorrect usage of [INCAR](../input-files/INCAR.md) tags will result in
 errors printed to **stdout**, and VASP will terminate immediately. E.g.
 [`KPAR`](../incar-tags/KPAR.md)` = .TRUE.` will result in:
@@ -229,5 +300,11 @@ result in, probably the wrong, automatic ferromagnetic initialization:
     |                                                                             |
      -----------------------------------------------------------------------------
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Terminal_output&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [OSZICAR](OSZICAR.md), [OUTCAR](OUTCAR.md)
+
+

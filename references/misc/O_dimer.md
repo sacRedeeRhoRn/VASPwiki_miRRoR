@@ -2,35 +2,66 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # O dimer
+
+
+
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](O_atom.md) \> [O atom
-spinpolarized](O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+[O
+atom](O_atom.md) \>
+[O atom
+spinpolarized](O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-O dimer \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+O
+dimer \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 INCAR](#INCAR)
-  - [2.3 KPOINTS](#KPOINTS)
-- [3 Calculation](#Calculation)
-  - [3.1 stdout](#stdout)
-- [4 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    INCAR](#INCAR)
+  - [2.3
+    KPOINTS](#KPOINTS)
+- [3
+  Calculation](#Calculation)
+  - [3.1
+    stdout](#stdout)
+- [4
+  Download](#Download)
+
+
+## Task\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Relaxation of the bond length of an oxygen dimer.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
     O dimer in a box
      1.0          ! universal scaling parameters
      8.0 0.0 0.0  ! lattice vector  a(1)
@@ -41,14 +72,20 @@ Relaxation of the bond length of an oxygen dimer.
      0 0 0        ! first atom
      0 0 1.22     ! second atom
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     SYSTEM = O2 dimer in a box
     ISMEAR = 0 ! Gaussian smearing
     ISPIN  = 2 ! spin polarized calculation
     NSW = 5    ! 5 ionic steps
     IBRION = 2 ! use the conjugate gradient algorithm
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     Gamma-point only
      0
     Monkhorst Pack
@@ -59,14 +96,17 @@ Relaxation of the bond length of an oxygen dimer.
 
   
 
-## Calculation
+## Calculation\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 - We have selected in the [INCAR](../input-files/INCAR.md) file that
   geometry relaxation should be performed. In this case 5 ionic steps
   ([NSW](../incar-tags/NSW.md)=5) should be done at most. For the relaxation
   a conjugate gradient (CG) algorithm is used
   ([IBRION](../incar-tags/IBRION.md)=2).
 
-&nbsp;
+<!-- -->
 
 - The CG algorithm requires line minimizations along the search
   direction. This is done using a variant of Brent's algorithm. (Picture
@@ -74,14 +114,19 @@ Relaxation of the bond length of an oxygen dimer.
   - Trial step along search direction (gradient scaled by
     [POTIM](../incar-tags/POTIM.md))
   - Quadratic or cubic interpolation using energies and forces at
-    $\mathbf{x}_{0}$ and
-    $\mathbf{x}_{1}$ allows to
-    determine the approximate minimum
+    $\mathbf{x}_{0}$ and $\mathbf{x}_{1}$ allows to determine the approximate minimum
   - Continue minimization, if app. minimum is not accurate enough
 
-[![](https://vasp.at/wiki/images/thumb/e/e0/Fig_O2_dimer_1.png/400px-Fig_O2_dimer_1.png)](https://vasp.at/wiki/File:Fig_O2_dimer_1.png)
+<a href="/wiki/File:Fig_O2_dimer_1.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/e0/Fig_O2_dimer_1.png/400px-Fig_O2_dimer_1.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/e0/Fig_O2_dimer_1.png/600px-Fig_O2_dimer_1.png 1.5x, /wiki/images/thumb/e/e0/Fig_O2_dimer_1.png/800px-Fig_O2_dimer_1.png 2x"
+width="400" height="87" /></a>
 
-### stdout
+### stdout\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: stdout">edit</a> \| (./index.php.md)\]
+
     DAV:   1     0.517118590134E+02    0.51712E+02    -0.31393E+03    80   0.366E+02
     ...    ...   ...
     ...    ...   ...
@@ -111,48 +156,64 @@ Explanation of the output:
 - The quantitiy *trial-energy change* is the change of the energy in the
   trial step.
 
-&nbsp;
+<!-- -->
 
 - The first value after 1. order is the expected energy change
   calculated from the forces $((\mathbf{F}(\textrm{start})+\mathbf{F}(\textrm{trial}))/2\times$ change of positions - central difference.
 
-&nbsp;
+<!-- -->
 
-- The second and third value correspond to $\mathbf{F}(\mathrm{start}) \times$ change of positions and
-  $\mathbf{F} (\mathrm{trial}) \times$
-  change of position.
+- The second and third value correspond to $\mathbf{F}(\mathrm{start})
+  \times$ change of positions and
+  $\mathbf{F} (\mathrm{trial}) \times$ change of
+  position.
 
-&nbsp;
+<!-- -->
 
 - The value *step* is the estimated size of the step leading to a line
   minimization along the current search direction. *harm* is the optimal
   step using a second order (or harmonic) interpolation.
 
-&nbsp;
+<!-- -->
 
 - The trial step size can be controlled by the paramter
   [POTIM](../incar-tags/POTIM.md) (the value *step* times the present
   [POTIM](../incar-tags/POTIM.md) is usually optimal).
 
-&nbsp;
+<!-- -->
 
 - The final positions after the optimization are stored in the
   [CONTCAR](../output-files/CONTCAR.md) file. One can copy
   [CONTCAR](../output-files/CONTCAR.md) to [POSCAR](../input-files/POSCAR.md)
   and continue the relaxation.
 
-## Download
-[Odimer.tgz](https://vasp.at/wiki/images/8/8b/Odimer.tgz "Odimer.tgz")
+## Download\[<a href="/wiki/index.php?title=O_dimer&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/8/8b/Odimer.tgz" class="internal"
+title="Odimer.tgz">Odimer.tgz</a>
+
 
 [Overview](../tutorials/Atoms_and_Molecules_-_Tutorial.md) \>
-[O atom](O_atom.md) \> [O atom
-spinpolarized](O_atom_spinpolarized.md) \> [O
-atom spinpolarized low
+[O
+atom](O_atom.md) \>
+[O atom
+spinpolarized](O_atom_spinpolarized.md) \>
+[O atom spinpolarized low
 symmetry](O_atom_spinpolarized_low_symmetry.md) \>
-O dimer \> [CO](../incar-tags/CO.md) \> [CO
-vibration](CO_vibration.md) \> [CO partial
-DOS](CO_partial_DOS.md) \> [H2O](../incar-tags/H2O.md) \>
-[H2O vibration](H2O_vibration.md) \> [H2O molecular
+O
+dimer \>
+[CO](../incar-tags/CO.md) \> [CO
+vibration](CO_vibration.md) \>
+[CO partial
+DOS](CO_partial_DOS.md) \>
+[H2O](../incar-tags/H2O.md) \> [H2O
+vibration](H2O_vibration.md) \>
+[H2O molecular
 dynamics](H2O_molecular_dynamics.md) \>
 [Further things to try](At_and_mol_further.md)
- \> [List of tutorials](../categories/Category-Tutorials.md)
+ \> [List of
+tutorials](../categories/Category-Tutorials.md)
+
+

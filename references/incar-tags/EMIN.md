@@ -2,15 +2,18 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # EMIN
+
+
 EMIN = \[real\] 
 
 |  |  |  |
 |----|----|----|
 | Default: **EMIN** | = lowest KS eigenvalue - $\Delta$ |  |
 
-Description: EMIN specifies the lower boundary of the energy range for
-the evaluation of the electronic [density of
-states](../redirects/Density_of_states.md) (DOS).
+Description: EMIN specifies
+the lower boundary of the energy range for the evaluation of the
+electronic <a href="/wiki/Density_of_states" class="mw-redirect"
+title="Density of states">density of states</a> (DOS).
 
 ------------------------------------------------------------------------
 
@@ -22,9 +25,14 @@ The DOS is evaluated each [NBLOCK](NBLOCK.md) steps,
 |----|
 | **Tip:** Set EMIN to a value larger than [EMAX](EMAX.md), if you are not sure where the region of interest lies. |
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=EMIN&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [EMAX](EMAX.md), [NEDOS](NEDOS.md),
 [DOSCAR](../output-files/DOSCAR.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-EMIN-_incategory-Examples)
+
+

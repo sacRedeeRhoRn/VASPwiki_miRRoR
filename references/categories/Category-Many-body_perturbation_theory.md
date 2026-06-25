@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Many-body perturbation theory
+
+
 Treating the electron-electron interaction within **many-body
 perturbation theory** includes screening and renormalization effects
 beyond density-functional theory (DFT). It is based on the
@@ -10,28 +12,48 @@ a diagrammatic expansion of the electron interacting with other
 electrons. Instead of describing electrons by means of Kohn-Sham (KS)
 orbitals, the renormalized (or dressed) propagators yield quasiparticle
 orbitals. Another area that can be discussed in the language of
-many-body perturbation theory is [electron-phonon
-coupling](../redirects/Electron-phonon_coupling.md),
-which treats the interaction between electronic and ionic degrees of
-freedom.
+many-body perturbation theory is
+<a href="/wiki/Electron-phonon_coupling" class="mw-redirect"
+title="Electron-phonon coupling">electron-phonon coupling</a>, which
+treats the interaction between electronic and ionic degrees of freedom.
+
 
 ## Contents
 
-- [1 Available methods](#Available_methods)
-  - [1.1 Random-phase approximation
-    (RPA)](#Random-phase_approximation_(RPA))
-  - [1.2 Constrained random-phase approximation
-    (cRPA)](#Constrained_random-phase_approximation_(cRPA))
-  - [1.3 GW method](#GW_method)
-  - [1.4 Bethe-Salpeter equations
-    (BSE)](#Bethe-Salpeter_equations_(BSE))
-    - [1.4.1 X-ray absorption spectra](#X-ray_absorption_spectra)
-  - [1.5 Second-order Møller-Plesset perturbation theory
-    (MP2)](#Second-order_Møller-Plesset_perturbation_theory_(MP2))
-- [2 References](#References)
 
-## Available methods
-### Random-phase approximation (RPA)
+- [1 Available
+  methods](#Available_methods)
+  - [1.1
+    Random-phase approximation
+    (RPA)](#Random-phase_approximation_(RPA))
+  - [1.2
+    Constrained random-phase approximation
+    (cRPA)](#Constrained_random-phase_approximation_(cRPA))
+  - [1.3 GW
+    method](#GW_method)
+  - [1.4
+    Bethe-Salpeter equations
+    (BSE)](#Bethe-Salpeter_equations_(BSE))
+    - [1.4.1 X-ray
+      absorption spectra](#X-ray_absorption_spectra)
+  - [1.5
+    Second-order Møller-Plesset perturbation
+    theory
+    (MP2)](#Second-order_Møller-Plesset_perturbation_theory_(MP2))
+- [2
+  References](#References)
+
+
+## Available methods\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Available methods">edit</a> \| (./index.php.md)\]
+
+### Random-phase approximation (RPA)\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Random-phase approximation (RPA)">edit</a> \| (./index.php.md)")\]
+
 GW and RPA are post-DFT methods used to solve the many-body problem
 approximately.
 
@@ -49,24 +71,33 @@ post-processing tool to determine a more accurate ground-state energy.
 - [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md) —
   practical guide
-- Lecture on [RPA](https://youtu.be/0hV5bTpY89M).
+- Lecture on
+  <a href="https://youtu.be/0hV5bTpY89M" class="external text"
+  rel="nofollow">RPA</a>.
 
-### Constrained random-phase approximation (cRPA)
+### Constrained random-phase approximation (cRPA)\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Constrained random-phase approximation (cRPA)">edit</a> \| (./index.php.md)")\]
+
 The constrained random-phase approximation (cRPA) is a method that
 allows calculating the effective interaction parameter
-$U$, $J$
-and $J'$ for model Hamiltonians. The
-main idea is to neglect the screening effects of specific target states
-in the screened Coulomb interaction $W$
-of the $GW$ method. Usually, the target
-space is low-dimensional (up to 5 states) and therefore allows for the
-application of a higher-level theory, such as dynamical-mean-field
-theory (DMFT).
+$U$, $J$ and
+$J'$ for model Hamiltonians. The main idea is to neglect
+the screening effects of specific target states in the screened Coulomb
+interaction $W$ of the
+$GW$ method. Usually, the target space is low-dimensional
+(up to 5 states) and therefore allows for the application of a
+higher-level theory, such as dynamical-mean-field theory (DMFT).
 
 - [Formalism used for the cRPA
   method](../theory/Constrained–random-phase–approximation_formalism.md)
 
-### GW method
+### GW method\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: GW method">edit</a> \| (./index.php.md)\]
+
 The GW approximation goes hand in hand with the RPA since the very same
 diagrammatic contributions are taken into account in the screened
 Coulomb interaction of a system often denoted as W. However, in contrast
@@ -76,94 +107,132 @@ quasiparticles using a screened exchange-like contribution to the
 self-energy. The GW approximation is currently one of the most accurate
 many-body methods to calculate bandgaps.
 
-- [The GW approximation of Hedin's
-  equations](../redirects/The_GW_approximation_of_Hedin's_equations.md)
-  — theory
+- <a href="/wiki/The_GW_approximation_of_Hedin%27s_equations"
+  class="mw-redirect"
+  title="The GW approximation of Hedin&#39;s equations">The GW
+  approximation of Hedin's equations</a> — theory
 - [Practical guide to GW
   calculations](../methods/Practical_guide_to_GW_calculations.md)
   — practical guide
 - [GW and dielectric
   matrix](../methods/GW_and_dielectric_matrix.md)
-- Tutorial for [GW
-  calculations](https://www.vasp.at/tutorials/latest/gw/)
-- Lecture on [GW](https://youtu.be/zGPqDxsD80o)
-- Lecture on the [optical bandgap](https://youtu.be/6F_WNIh6V7I),
-  including using many-body perturbation theory (GW and RPA)
+- Tutorial for
+  <a href="https://www.vasp.at/tutorials/latest/gw/" class="external text"
+  rel="nofollow">GW calculations</a>
+- Lecture on
+  <a href="https://youtu.be/zGPqDxsD80o" class="external text"
+  rel="nofollow">GW</a>
+- Lecture on the
+  <a href="https://youtu.be/6F_WNIh6V7I" class="external text"
+  rel="nofollow">optical bandgap</a>, including using many-body
+  perturbation theory (GW and RPA)
 
-### Bethe-Salpeter equations (BSE)
+### Bethe-Salpeter equations (BSE)\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Bethe-Salpeter equations (BSE)">edit</a> \| (./index.php.md)")\]
+
 VASP offers a powerful module for solving time-dependent DFT (TD-DFT)
 and time-dependent Hartree-Fock equations (TDHF) (the Casida equation)
 or the Bethe-Salpeter (BSE)
-equation^([\[1\]](#cite_note-albrecht:prl:98-1)[\[2\]](#cite_note-rohlfing:prl:98-2)).
+equation<sup>[\[1\]](#cite_note-albrecht:prl:98-1)[\[2\]](#cite_note-rohlfing:prl:98-2)</sup>.
 These approaches are used for obtaining the frequency-dependent
 dielectric function with excitonic effects and can be based on the
 ground-state electronic structure in the DFT, hybrid-functional, or
 [GW](../methods/Practical_guide_to_GW_calculations.md)
 approximations. VASP also offers the TDHF and BSE calculations beyond
 the Tamm-Dancoff approximation
-(TDA)^([\[3\]](#cite_note-sander:prb:15-3)).
+(TDA)<sup>[\[3\]](#cite_note-sander:prb:15-3)</sup>.
 
 - [Bethe-Salpeter
   equations](../theory/Category-Bethe-Salpeter_equations.md)
   — all tags and articles
-- [BSE calculations](../redirects/BSE_calculations.md) —
-  practical guide
-- Tutorial for [BSE
-  calculations](https://www.vasp.at/tutorials/latest/bse/)
-- Lecture on [BSE](https://youtu.be/arTPHW28qNM)
+- <a href="/wiki/BSE_calculations" class="mw-redirect"
+  title="BSE calculations">BSE calculations</a> — practical guide
+- Tutorial for <a href="https://www.vasp.at/tutorials/latest/bse/"
+  class="external text" rel="nofollow">BSE calculations</a>
+- Lecture on
+  <a href="https://youtu.be/arTPHW28qNM" class="external text"
+  rel="nofollow">BSE</a>
 
-#### X-ray absorption spectra
+#### X-ray absorption spectra\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: X-ray absorption spectra">edit</a> \| (./index.php.md)\]
+
 The BSE/TDHF algorithm can also be used to model the X-ray absorption
 spectra (XAS), i.e., excitations from the core states into conduction
 bands. Detailed documentation of this method can be found in the [XAS
 category page](Category-XAS.md).
 
-- Tutorials for [XAS
-  calculations](https://www.vasp.at/tutorials/latest/xas/)
+- Tutorials for <a href="https://www.vasp.at/tutorials/latest/xas/"
+  class="external text" rel="nofollow">XAS calculations</a>
 
-### Second-order Møller-Plesset perturbation theory (MP2)
+### Second-order Møller-Plesset perturbation theory (MP2)\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Second-order Møller-Plesset perturbation theory (MP2)">edit</a> \| (./index.php.md)")\]
+
 There are three implementations available:
 
-- **MP2** ^([\[4\]](#cite_note-paier:2009-4)): this implementation is
-  recommended for very small unit cells, very few k-points and very low
-  plane-wave cutoffs. The system size scaling of this algorithm is N⁵.
-- **LTMP2**^([\[5\]](#cite_note-schaefer:2017-5)): for all larger
-  systems this Laplace-transformed MP2 (LTMP2) implementation is
-  recommended. Larger cutoffs and denser k-point meshes can be used. It
-  possesses a lower system size scaling (N⁴) and a more efficient
-  k-point sampling.
-- **stochastic LTMP2**^([\[6\]](#cite_note-schaefer:2018-6)): even
-  faster calculations at the price of statistical noise can be achieved
-  with the stochastic MP2 algorithm. It is an optimal choice for very
-  large systems where only relative errors per valence electron are
-  relevant. Keeping the absolute error fixed, the algorithm exhibits a
-  cubic scaling with the system size, N³, whereas for a fixed relative
+- **MP2**
+  <sup>[\[4\]](#cite_note-paier:2009-4)</sup>:
+  this implementation is recommended for very small unit cells, very few
+  k-points and very low plane-wave cutoffs. The system size scaling of
+  this algorithm is N⁵.
+- **LTMP2**<sup>[\[5\]](#cite_note-schaefer:2017-5)</sup>:
+  for all larger systems this Laplace-transformed MP2 (LTMP2)
+  implementation is recommended. Larger cutoffs and denser k-point
+  meshes can be used. It possesses a lower system size scaling (N⁴) and
+  a more efficient k-point sampling.
+- **stochastic
+  LTMP2**<sup>[\[6\]](#cite_note-schaefer:2018-6)</sup>:
+  even faster calculations at the price of statistical noise can be
+  achieved with the stochastic MP2 algorithm. It is an optimal choice
+  for very large systems where only relative errors per valence electron
+  are relevant. Keeping the absolute error fixed, the algorithm exhibits
+  a cubic scaling with the system size, N³, whereas for a fixed relative
   error, a linear scaling, N¹, can be achieved. Note that there is no
   k-point sampling and no spin polarization implemented for this
   algorithm.
 
-&nbsp;
+<!-- -->
 
 - [MP2 ground state calculation -
   Tutorial](../tutorials/MP2_ground_state_calculation_-_Tutorial.md)
 
-## References
-1.  [↑](#cite_ref-albrecht:prl:98_1-0) [S. Albrecht, L. Reining, R. Del
-    Sole, and G. Onida, Phys. Rev. Lett. **80**, 4510-4513
-    (1998).](https://doi.org/10.1103/PhysRevLett.80.4510)
-2.  [↑](#cite_ref-rohlfing:prl:98_2-0) [M. Rohlfing and S. G. Louie,
-    Phys. Rev. Lett. **81**, 2312-2315
-    (1998).](https://doi.org/10.1103/PhysRevLett.81.2312)
-3.  [↑](#cite_ref-sander:prb:15_3-0) [T. Sander, E. Maggio, and G.
-    Kresse, *Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization*, Phys. Rev. B **92**, 045209
-    (2015).](https://doi.org/10.1103/PhysRevB.92.045209)
-4.  [↑](#cite_ref-paier:2009_4-0) [M. Marsman, A. Grüneis, J. Paier, G.
-    Kresse, J. Chem. Phys. **130**, 184103
-    (2009).](https://doi.org/10.1063/1.3126249)
-5.  [↑](#cite_ref-schaefer:2017_5-0) [T. Schäfer, B. Ramberger, and G.
-    Kresse, J. Chem. Phys. **146**, 104101
-    (2017).](https://doi.org/10.1063/1.4976937)
-6.  [↑](#cite_ref-schaefer:2018_6-0) [T. Schäfer, B. Ramberger, and G.
-    Kresse, J. Chem. Phys. **148**, 064103
-    (2018).](https://doi.org/10.1063/1.5016100)
+## References\[<a
+href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-albrecht:prl:98_1-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.80.4510"
+    class="external text" rel="nofollow">S. Albrecht, L. Reining, R. Del
+    Sole, and G. Onida, Phys. Rev. Lett. <strong>80</strong>, 4510-4513
+    (1998).</a>
+2.  [↑](#cite_ref-rohlfing:prl:98_2-0)
+    <a href="https://doi.org/10.1103/PhysRevLett.81.2312"
+    class="external text" rel="nofollow">M. Rohlfing and S. G. Louie, Phys.
+    Rev. Lett. <strong>81</strong>, 2312-2315 (1998).</a>
+3.  [↑](#cite_ref-sander:prb:15_3-0)
+    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
+    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
+    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
+    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
+    045209 (2015).</a>
+4.  [↑](#cite_ref-paier:2009_4-0)
+    <a href="https://doi.org/10.1063/1.3126249" class="external text"
+    rel="nofollow">M. Marsman, A. Grüneis, J. Paier, G. Kresse, J. Chem.
+    Phys. <strong>130</strong>, 184103 (2009).</a>
+5.  [↑](#cite_ref-schaefer:2017_5-0)
+    <a href="https://doi.org/10.1063/1.4976937" class="external text"
+    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
+    <strong>146</strong>, 104101 (2017).</a>
+6.  [↑](#cite_ref-schaefer:2018_6-0)
+    <a href="https://doi.org/10.1063/1.5016100" class="external text"
+    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
+    <strong>148</strong>, 064103 (2018).</a>
+
+

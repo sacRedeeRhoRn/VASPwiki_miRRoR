@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_MOPOT_RM
+
+
 ML_MOPOT_RM = \[real\]  
 Default: **ML_MOPOT_RM** = 1.0 
 
@@ -11,11 +13,16 @@ potentials used as auxiliary potentials in thermodynamic integration
 
 ------------------------------------------------------------------------
 
-This parameter sets the equilibrium bond distance $r_{e}$ of the following Morse potential
+This parameter sets the equilibrium bond distance
+$r_{e}$ of the following Morse potential
 
 $V(r) = D_e (1-e^{-\beta(r-r_{e})})^2 - 1.$
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_MOPOT_RM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_LCOUPLE](ML_LCOUPLE.md),
 [ML_ICOUPLE](ML_ICOUPLE.md),
@@ -35,3 +42,5 @@ $V(r) = D_e (1-e^{-\beta(r-r_{e})})^2 - 1.$
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

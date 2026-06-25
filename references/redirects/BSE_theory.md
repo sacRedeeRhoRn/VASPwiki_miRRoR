@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BSE theory
+
+
+
 Redirect to:
 
 - [Bethe-Salpeter
   equation](../theory/Bethe-Salpeter_equation.md)
+
+

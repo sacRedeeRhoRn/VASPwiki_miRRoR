@@ -2,41 +2,60 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Constructing Wannier orbitals
+
+
 [Wannier
 orbitals](../categories/Category-Wannier_functions.md)
 are an important tool to study chemical bonding. They also form the
 basis of various interpolation techniques. As a quick summary, a Wannier
-orbital $|w_{m\mathbf{R}}\rangle$ is a
-function obtained from a linear combination of the Bloch (Kohn-Sham)
-orbitals $|\psi_{n\mathbf{k}}\rangle$:
+orbital $|w_{m\mathbf{R}}\rangle$ is a function obtained from a linear combination of
+the Bloch (Kohn-Sham) orbitals $|\psi_{n\mathbf{k}}\rangle$:
 
 $|w_{m\mathbf{R}}\rangle = \sum_{n\mathbf{k}}
 e^{-i\mathbf{k}\cdot\mathbf{R}} U_{mn\mathbf{k}}
 |\psi_{n\mathbf{k}}\rangle,$
 
-where the unitary matrix $U_{mn\mathbf{k}}$ is chosen such that the Wannier orbitals are localized in
-real space. The process of finding a suitable Wannier transformation
-matrix $U_{mn\mathbf{k}}$ is known as
-Wannierization. This page guides you through the steps required to
-perform Wannierization using the approaches available in VASP.
+where the unitary matrix $U_{mn\mathbf{k}}$ is chosen such that the Wannier orbitals are localized
+in real space. The process of finding a suitable Wannier transformation
+matrix $U_{mn\mathbf{k}}$ is known as Wannierization. This page guides you
+through the steps required to perform Wannierization using the
+approaches available in VASP.
+
 
 ## Contents
 
-- [1 One-shot Wannierization using a singular-value
-  decomposition](#One-shot_Wannierization_using_a_singular-value_decomposition)
-- [2 LOCPROJ method](#LOCPROJ_method)
-  - [2.1 Example - diamond](#Example_-_diamond)
-- [3 SCDM method](#SCDM_method)
-  - [3.1 Example - diamond](#Example_-_diamond_2)
-  - [3.2 Comparison with LOCPROJ](#Comparison_with_LOCPROJ)
-- [4 Disentanglement](#Disentanglement)
-  - [4.1 Example - SCDM Wannierization of
-    LiF](#Example_-_SCDM_Wannierization_of_LiF)
-- [5 Wannier90](#Wannier90)
-- [6 Related tags and articles](#Related_tags_and_articles)
-- [7 References](#References)
 
-## One-shot Wannierization using a singular-value decomposition
+- [1 One-shot
+  Wannierization using a singular-value
+  decomposition](#One-shot_Wannierization_using_a_singular-value_decomposition)
+- [2 LOCPROJ
+  method](#LOCPROJ_method)
+  - [2.1 Example -
+    diamond](#Example_-_diamond)
+- [3 SCDM
+  method](#SCDM_method)
+  - [3.1 Example -
+    diamond](#Example_-_diamond_2)
+  - [3.2 Comparison
+    with LOCPROJ](#Comparison_with_LOCPROJ)
+- [4
+  Disentanglement](#Disentanglement)
+  - [4.1 Example -
+    SCDM Wannierization of
+    LiF](#Example_-_SCDM_Wannierization_of_LiF)
+- [5
+  Wannier90](#Wannier90)
+- [6 Related tags
+  and articles](#Related_tags_and_articles)
+- [7
+  References](#References)
+
+
+## One-shot Wannierization using a singular-value decomposition\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: One-shot Wannierization using a singular-value decomposition">edit</a> \| (./index.php.md)\]
+
 The two main Wannierization methods are projections onto local functions
 using the [LOCPROJ](../incar-tags/LOCPROJ.md) tag and the
 Selected-Columns-of-the-Density-Matrix (SCDM) method using the
@@ -47,62 +66,59 @@ projection targets have to be chosen and placed manually using the
 [LOCPROJ](../incar-tags/LOCPROJ.md) tag. In contrast, the SCDM approach
 offers very little control and instead generates Wannier orbitals
 automatically from a small set of input
-parameters^([\[1\]](#cite_note-damle:mms:2018-1)). This is convenient
-for systems where the electronic character of the band structure is
-complicated or unknown.
+parameters<sup>[\[1\]](#cite_note-damle:mms:2018-1)</sup>.
+This is convenient for systems where the electronic character of the
+band structure is complicated or unknown.
 
-Both approaches produce as output a matrix $A_{mn
-\mathbf{k}}$. In the case of the
-[LOCPROJ](../incar-tags/LOCPROJ.md) tag, this is the projection matrix
-between the Bloch orbitals and the local functions,
-$\beta_m$:
+Both approaches produce as output a matrix $A_{mn \mathbf{k}}$. In the case of the [LOCPROJ](../incar-tags/LOCPROJ.md)
+tag, this is the projection matrix between the Bloch orbitals and the
+local functions, $\beta_m$:
 
-$A_{mn, \bf{k}} \equiv \langle \beta_m |
-\tilde{S} | \Psi_{n \bf{k}} \rangle.$
+$A_{mn, \bf{k}} \equiv \langle \beta_m | \tilde{S} | \Psi_{n \bf{k}}
+\rangle.$
 
-The operator $\tilde{S}$ is the overlap
-operator in the [projector-augmented-wave
+The operator $\tilde{S}$ is
+the overlap operator in the [projector-augmented-wave
 method](../methods/Projector-augmented-wave_formalism.md).
-In the case of the SCDM method, the matrix $A_{mn
-\mathbf{k}}$ is the result of an iterative process that
-extracts local functions from the information contained in the
-electronic one-particle density matrix.
+In the case of the SCDM method, the matrix $A_{mn \mathbf{k}}$ is the result of an iterative process that extracts
+local functions from the information contained in the electronic
+one-particle density matrix.
 
-In general, $A_{mn \mathbf{k}}$ is not
-going to be a unitary matrix. It could, in principle, be used to
-transform the Bloch orbitals into a set of non-orthogonal Wannier
-orbitals. However, for many applications, it is desirable to have
-orthonormal Wannier orbitals, such as for Wannier interpolation.
-Therefore, $A_{mn \mathbf{k}}$ needs
-first to be orthonormalized.
+In general, $A_{mn \mathbf{k}}$ is not going to be a unitary matrix. It could, in
+principle, be used to transform the Bloch orbitals into a set of
+non-orthogonal Wannier orbitals. However, for many applications, it is
+desirable to have orthonormal Wannier orbitals, such as for Wannier
+interpolation. Therefore, $A_{mn \mathbf{k}}$ needs first to be orthonormalized.
 
 In VASP, we employ a one-shot orthonormalization procedure that uses the
-[singular-value
-decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+<a href="https://en.wikipedia.org/wiki/Singular_value_decomposition"
+class="external text" rel="nofollow">singular-value decomposition</a>
 (SVD) of $A_{mn \mathbf{k}}$:
 
-$A_{mn\mathbf{k}} = \[D \Sigma
-V^\dagger\]_{mn\mathbf{k}},$
+$A_{mn\mathbf{k}} = \[D \Sigma V^\dagger\]_{mn\mathbf{k}},$
 
 which is then used to construct the unitary matrix
 $U_{mn \mathbf{k}}$:
 
-$U_{mn\mathbf{k}} =
-\[DV^\dagger\]_{mn\mathbf{k}}.$
+$U_{mn\mathbf{k}} = \[DV^\dagger\]_{mn\mathbf{k}}.$
 
 In contrast to iterative methods (e.g., Gram-Schmidt orthogonalization),
 the SVD orthogonalization operates simultaneously on all local
 functions. This ensures that the symmetry properties of the local
 functions encoded in $A_{mn \mathbf{k}}$ are preserved during the orthonormalization procedure.
 
-## LOCPROJ method
+## LOCPROJ method\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: LOCPROJ method">edit</a> \| (./index.php.md)\]
+
 To generate Wannier orbitals using local projections, it is sufficient
 to specify the [LOCPROJ](../incar-tags/LOCPROJ.md) tag with suitable
 projection targets. VASP will then apply the [one-shot
 orthonormalization](#One-shot_Wannierization_using_a_singular-value_decomposition)
 internally to obtain the Wannier transformation matrix
-$U_{mn\mathbf{k}}$. The number of
-Wannier orbitals is the same as the total number of local functions.
+$U_{mn\mathbf{k}}$. The number of Wannier orbitals is
+the same as the total number of local functions.
 
 |  |
 |----|
@@ -111,15 +127,16 @@ Wannier orbitals is the same as the total number of local functions.
 This information can then be used to perform Wannier interpolation of
 the electronic band structure (for example, using the
 [KPOINTS_WAN](../input-files/KPOINTS_WAN.md) file). It can also be
-passed to [Wannier90](http://www.wannier.org) (more on that
+passed to <a href="http://www.wannier.org" class="external text"
+rel="nofollow">Wannier90</a> (more on that
 [later](#SCDM_and_Wannier90)).
 
 To find a good representation of the electronic band structure in terms
 of Wannier orbitals, it is important to choose suitable projection
 targets. In general, this can be a difficult task as some bands
 hybridize and disperse, changing electronic character as a function of
-the Bloch vector $\mathbf{k}$. It is
-thus expedient to understand the relevant electronic bands before
+the Bloch vector $\mathbf{k}$.
+It is thus expedient to understand the relevant electronic bands before
 attempting a Wannierization using [LOCPROJ](../incar-tags/LOCPROJ.md).
 
 To gain insight into the electronic character of certain bands, you can
@@ -131,7 +148,11 @@ information is written to the [PROCAR](../output-files/PROCAR.md) file and
 can be used to determine suitable projection targets for
 [LOCPROJ](../incar-tags/LOCPROJ.md).
 
-### Example - diamond
+### Example - diamond\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Example - diamond">edit</a> \| (./index.php.md)\]
+
 Let us examine a small example to highlight the procedure of determining
 projection targets. Here, we aim to Wannierize the four highest-lying
 valence bands of diamond. This is a group of bands that is energetically
@@ -144,10 +165,10 @@ consider those states.
 First, let us run a calculation with
 [`LORBIT`](../incar-tags/LORBIT.md)` = 1` and
 [`RWIGS`](../incar-tags/RWIGS.md)` = 1.1`. This decomposes the bands into
-$l$ and $m$ quantum numbers in terms of spherical harmonics. We get
-information on each k-point in the [PROCAR](../output-files/PROCAR.md) file.
-Here is the start of the file, which contains information about the
-Γ-point:
+$l$ and $m$ quantum
+numbers in terms of spherical harmonics. We get information on each
+k-point in the [PROCAR](../output-files/PROCAR.md) file. Here is the start
+of the file, which contains information about the Γ-point:
 
     PROCAR lm decomposed
     # of k-points:    8         # of bands:    4         # of ions:    2
@@ -199,11 +220,13 @@ used in this example looks like this:
 
 The last part of the [LOCPROJ](../incar-tags/LOCPROJ.md) setting
 (`Hy 1 4.`) specifies that we want Hydrogen-like atomic orbitals
-(spherical harmonics) with main quantum number $n
-= 1$ and a diffusivity of $\alpha = 4$. The diffusivity influences the spread of the local function.
-A higher value generally results in a higher degree of localization.
-This is beneficial for Wannier interpolation and yields Wannier orbitals
-of higher quality in that regard.
+(spherical harmonics) with main quantum number
+$n
+= 1$ and a diffusivity of $\alpha = 4$.
+The diffusivity influences the spread of the local function. A higher
+value generally results in a higher degree of localization. This is
+beneficial for Wannier interpolation and yields Wannier orbitals of
+higher quality in that regard.
 
 |  |
 |----|
@@ -239,17 +262,25 @@ both files. The results can then be read from the
 
 The results can be seen in the following band-structure plot:
 
-[![](https://vasp.at/wiki/images/8/86/Locproj-c-4.png)](https://vasp.at/wiki/File:Locproj-c-4.png)
-
-Electronic band structure of diamond. Comparison between ab-initio data
-and Wannier interpolation using LOCPROJ method.
+<figure class="mw-halign-center" typeof="mw:File/Frame">
+<a href="/wiki/File:Locproj-c-4.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/8/86/Locproj-c-4.png" class="mw-file-element"
+decoding="async" width="703" height="275" /></a>
+<figcaption>Electronic band structure of diamond. Comparison between
+ab-initio data and Wannier interpolation using LOCPROJ
+method.</figcaption>
+</figure>
 
 The agreement between both methods is already very good. The remaining
 differences can be systematically decreased by increasing the k-point
 density in the initial [KPOINTS](../input-files/KPOINTS.md) file or by
 choosing a more suitable local basis.
 
-## SCDM method
+## SCDM method\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: SCDM method">edit</a> \| (./index.php.md)\]
+
 In contrast to the [LOCPROJ](../incar-tags/LOCPROJ.md) method, the SCDM
 method does not rely on the specification of a local basis. To activate
 the SCDM method, set [`LSCDM`](../incar-tags/LSCDM.md)` = true`. This will
@@ -267,7 +298,11 @@ The number of Wannier orbitals obtained is controlled via the
 |----|
 | **Mind:** You must ensure that [`NUM_WANN`](../incar-tags/NUM_WANN.md)` ≤ `[`NBANDS`](../incar-tags/NBANDS.md) in order to have enough information to construct the Wannier orbitals. |
 
-### Example - diamond
+### Example - diamond\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Example - diamond">edit</a> \| (./index.php.md)\]
+
 Let us repeat the example calculation [shown
 earlier](#LOCPROJ_method#Example_-_diamond) to obtain Wannier orbitals
 in diamond using the SCDM method. Once again, we choose
@@ -288,14 +323,21 @@ path for [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) and
 calculations. The results can be seen in the following band-structure
 plot:
 
-[![](https://vasp.at/wiki/images/5/50/Scdm-bands-c-4.png)](https://vasp.at/wiki/File:Scdm-bands-c-4.png)
-
-Electronic band structure of diamond. Comparison between ab-initio data
-and Wannier interpolation using SCDM method.
+<figure class="mw-halign-center" typeof="mw:File/Frame">
+<a href="/wiki/File:Scdm-bands-c-4.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/5/50/Scdm-bands-c-4.png" class="mw-file-element"
+decoding="async" width="703" height="275" /></a>
+<figcaption>Electronic band structure of diamond. Comparison between
+ab-initio data and Wannier interpolation using SCDM method.</figcaption>
+</figure>
 
 Also in this case, the agreement between both methods is very good.
 
-### Comparison with LOCPROJ
+### Comparison with LOCPROJ\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Comparison with LOCPROJ">edit</a> \| (./index.php.md)\]
+
 The diamond example shows that a Wannierization of good quality can be
 achieved with both the [LOCPROJ](../incar-tags/LOCPROJ.md) as well as the
 SCDM approach. However, the bands considered in that example are fully
@@ -330,7 +372,11 @@ reproduce degeneracies since the underlying symmetries are broken.
 Usually, this difference is comparatively small but it is something to
 keep in mind.
 
-## Disentanglement
+## Disentanglement\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Disentanglement">edit</a> \| (./index.php.md)\]
+
 When
 [`NBANDS`](../incar-tags/NBANDS.md)` > `[`NUM_WANN`](../incar-tags/NUM_WANN.md)
 or when the bands are not energetically isolated, Wannierization becomes
@@ -347,7 +393,8 @@ functions that can be selected via
 [CUTOFF_TYPE](../incar-tags/CUTOFF_TYPE.md), `erfc`, `gaussian` and
 `fermi`. The tags [CUTOFF_MU](../incar-tags/CUTOFF_MU.md) and
 [CUTOFF_SIGMA](../incar-tags/CUTOFF_SIGMA.md) control the position,
-$\mu$, and width, $\sigma$, of these cutoff functions, respectively.
+$\mu$, and width, $\sigma$, of
+these cutoff functions, respectively.
 
 The complementary error function and Fermi function are particularly
 useful in scenarios where the band structure does not have a gap above
@@ -355,11 +402,19 @@ the relevant energies, such as in metals. The Gaussian function is
 useful for extracting a Wannier representation from a group of bands
 that is not surrounded by any gaps, below or above.
 
-### Example - SCDM Wannierization of LiF
-[![](https://vasp.at/wiki/images/7/7d/Scdm-bands-lif-disentangle.png)](https://vasp.at/wiki/File:Scdm-bands-lif-disentangle.png)
+### Example - SCDM Wannierization of LiF\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Example - SCDM Wannierization of LiF">edit</a> \| (./index.php.md)\]
 
-Electronic band structure of LiF. Comparison between ab-initio data and
-Wannier interpolation using SCDM method.
+<figure class="mw-halign-right" typeof="mw:File/Frame">
+<a href="/wiki/File:Scdm-bands-lif-disentangle.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/7/7d/Scdm-bands-lif-disentangle.png"
+class="mw-file-element" decoding="async" width="384" height="506" /></a>
+<figcaption>Electronic band structure of LiF. Comparison between
+ab-initio data and Wannier interpolation using SCDM method.</figcaption>
+</figure>
 
 LiF is an insulator with a wide band gap. The Wannierization of the
 valence states in isolation is as simple as shown
@@ -369,15 +424,16 @@ This renders the Wannierization of these conduction bands difficult
 without disentanglement.
 
 To obtain the lowest lying conduction bands of LiF, we choose the `erfc`
-cutoff function with an appropriate $\mu$ and $\sigma$. By default,
-VASP chooses reasonable default values for these parameters. However, in
-order to get a good Wannier fit of the band structure, both
-$\mu$ and $\sigma$ should be chosen carefully by the user through trial and
-error. As a rule of thumb, the smooth edge of the complementary error
-function should be positioned such that states below it are to be fitted
-more accurately. For this example, we have chosen $\mu = 10 \text{eV}$ and $\sigma = 0.1
-\text{eV}$, which places the edge of the cutoff function
-amidst the lowest-lying conduction bands with a relatively sharp edge.
+cutoff function with an appropriate $\mu$ and
+$\sigma$. By default, VASP chooses reasonable default
+values for these parameters. However, in order to get a good Wannier fit
+of the band structure, both $\mu$ and
+$\sigma$ should be chosen carefully by the user through
+trial and error. As a rule of thumb, the smooth edge of the
+complementary error function should be positioned such that states below
+it are to be fitted more accurately. For this example, we have chosen
+$\mu = 10 \text{eV}$ and $\sigma = 0.1 \text{eV}$, which places the edge of the cutoff function amidst
+the lowest-lying conduction bands with a relatively sharp edge.
 
 The minimal [INCAR](../input-files/INCAR.md) file for this example is
 provided below:
@@ -394,12 +450,14 @@ provided below:
 The initial k-point mesh is chosen to be `8x8x8` Γ-centered.
 
 The Wannier-interpolated band structure compares favorably against the
-ab-initio data below $\mu$ and starts to
-diverge from it more and more above $\mu$. This is a general trend with these kinds of calculations and
-is an unavoidable side effect of the disentanglement procedure. The
-alternative would be a much higher and sharper cutoff that requires more
-Wannier states to be constructed. This is however not generally
-advisable as it can negatively affect the quality of the Wannierization.
+ab-initio data below $\mu$ and
+starts to diverge from it more and more above
+$\mu$. This is a general trend with these kinds of
+calculations and is an unavoidable side effect of the disentanglement
+procedure. The alternative would be a much higher and sharper cutoff
+that requires more Wannier states to be constructed. This is however not
+generally advisable as it can negatively affect the quality of the
+Wannierization.
 
 |  |
 |----|
@@ -409,18 +467,23 @@ advisable as it can negatively affect the quality of the Wannierization.
 |----|
 | **Mind:** The quality of the Wannierization can depend strongly on the choice of [CUTOFF_MU](../incar-tags/CUTOFF_MU.md) and [CUTOFF_SIGMA](../incar-tags/CUTOFF_SIGMA.md). It will often take some trial and error to find reasonable parameters. |
 
-## Wannier90
+## Wannier90\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Wannier90">edit</a> \| (./index.php.md)\]
+
 Wannier orbitals obtained inside VASP via the
 [LOCPROJ](../incar-tags/LOCPROJ.md) or SCDM methods can be passed to
-[Wannier90](http://www.wannier.org) for further processing. Wannier90
-employs an iterative algorithm that generates so-called
-maximally-localized Wannier functions (MLWF). MLWFs are usually superior
-in terms of quality for band structure calculations. However, even
-though they are generated from an iterative procedure, Wannier90 still
-relies on good first guesses for the localized functions. This is where
-the SCDM method can provide a suitable set of initial functions for the
-MLWF procedure. In the case of the [LOCPROJ](../incar-tags/LOCPROJ.md)
-tag, the projection matrix $A_{mn\mathbf{k}}$ is passed directly to Wannier90 where the Wannier
+<a href="http://www.wannier.org" class="external text"
+rel="nofollow">Wannier90</a> for further processing. Wannier90 employs
+an iterative algorithm that generates so-called maximally-localized
+Wannier functions (MLWF). MLWFs are usually superior in terms of quality
+for band structure calculations. However, even though they are generated
+from an iterative procedure, Wannier90 still relies on good first
+guesses for the localized functions. This is where the SCDM method can
+provide a suitable set of initial functions for the MLWF procedure. In
+the case of the [LOCPROJ](../incar-tags/LOCPROJ.md) tag, the projection
+matrix $A_{mn\mathbf{k}}$ is passed directly to Wannier90 where the Wannier
 transformation is constructed. VASP handles the communication of the
 projection targets and matrix dimensions automatically.
 
@@ -448,11 +511,13 @@ iteration during the MLWF procedure.
 [LWANNIER90](../incar-tags/LWANNIER90.md) activates the interface
 between VASP and Wannier90 and writes a `wannier90.win` input file that
 can then be read by Wannier90. In addition to the basic input
-parameters, VASP also writes the overlap matrices $M_{mn}$ and $A_{mn}$ to the
-corresponding files, `wannier90.mmn` and `wannier90.amn`.
-$M_{mn}$ contains the overlaps between
-all pairs of Bloch orbitals. Meanwhile, $A_{mn}$ contains the overlaps between the Bloch orbitals and the
-projection targets (in this case, the SCDM orbitals obtained from VASP).
+parameters, VASP also writes the overlap matrices
+$M_{mn}$ and $A_{mn}$ to
+the corresponding files, `wannier90.mmn` and `wannier90.amn`.
+$M_{mn}$ contains the overlaps between all pairs of
+Bloch orbitals. Meanwhile, $A_{mn}$
+contains the overlaps between the Bloch orbitals and the projection
+targets (in this case, the SCDM orbitals obtained from VASP).
 
 |  |
 |----|
@@ -472,13 +537,25 @@ may also be necessary to set
 [`LWRITE_UNK`](../incar-tags/LWRITE_UNK.md)` = true`. This writes the
 cell-periodic part of the Bloch orbitals to disk.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LSCDM](../incar-tags/LSCDM.md), [LOCPROJ](../incar-tags/LOCPROJ.md),
 [CUTOFF_TYPE](../incar-tags/CUTOFF_TYPE.md),
 [CUTOFF_MU](../incar-tags/CUTOFF_MU.md),
 [CUTOFF_SIGMA](../incar-tags/CUTOFF_SIGMA.md)
 
-## References
-1.  [↑](#cite_ref-damle:mms:2018_1-0) [A. Damle and L. Lin, Multiscale
-    Model. Simul., **16(3)**, 1392–1410
-    (2018).](https://doi.org/10.1137/17M1129696)
+## References\[<a
+href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-damle:mms:2018_1-0)
+    <a href="https://doi.org/10.1137/17M1129696" class="external text"
+    rel="nofollow">A. Damle and L. Lin, Multiscale Model. Simul.,
+    <strong>16(3)</strong>, 1392–1410 (2018).</a>
+
+

@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_CARRIER_DEN_RANGE
-ELPH_SELFEN_CARRIER_DEN_RANGE = \[real array\] 
+
+
+ELPH_SELFEN_CARRIER_DEN_RANGE =
+\[real array\] 
 
 Description: List of carrier density ranges in logarithmic scale (in
-$cm^{-3}$) at which to compute the
-phonon-mediated electron self-energy and transport coefficients.
+$cm^{-3}$) at which to compute the phonon-mediated
+electron self-energy and transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.6.0 |
 
 ------------------------------------------------------------------------
@@ -18,7 +21,8 @@ From each carrier density specified in the array, a positive (electron
 doping) or negative (hole doping) number of electrons is added to the
 value of [NELECT](NELECT.md) and the chemical potential
 computed. A range of carrier densities can be defined using
-`ELPH_SELFEN_CARRIER_DEN_RANGE`` = l u n`, where:
+`ELPH_SELFEN_CARRIER_DEN_RANGE`` = l u n`,
+where:
 
 - *l* is the lower limit of the carrier density range.
 - *u* is the upper limit of the carrier density range.
@@ -33,13 +37,13 @@ carrier densities.
 
 You can add the range (*l* *u* *n*) N times, so you can have several
 different meshes of holes or electrons or both. For example,
-`ELPH_SELFEN_CARRIER_DEN_RANGE`` = -1e20 -1e16 51 1e20 1e16 51` would
-create a list of two meshes of carrier densities, (`-1e20 -1e16 51`) and
-(`1e20 1e16 51`). The first mesh has `51` carrier densities of holes
-between `-1e16` and `-1e20`; the second mesh has `51` carrier densities
-of electrons between `1e16` and `1e20`. You could also include more
-meshes if you want. You can check the carriers that you have chosen in
-the [OUTCAR](../output-files/OUTCAR.md) file:
+`ELPH_SELFEN_CARRIER_DEN_RANGE`` = -1e20 -1e16 51 1e20 1e16 51`
+would create a list of two meshes of carrier densities,
+(`-1e20 -1e16 51`) and (`1e20 1e16 51`). The first mesh has `51` carrier
+densities of holes between `-1e16` and `-1e20`; the second mesh has `51`
+carrier densities of electrons between `1e16` and `1e20`. You could also
+include more meshes if you want. You can check the carriers that you
+have chosen in the [OUTCAR](../output-files/OUTCAR.md) file:
 
     Chemical potential calculation:
     ===============================
@@ -62,7 +66,11 @@ the [OUTCAR](../output-files/OUTCAR.md) file:
       0.120E+17
       0.100E+17
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_CARRIER_DEN_RANGE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon
@@ -77,3 +85,5 @@ the [OUTCAR](../output-files/OUTCAR.md) file:
 - [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md)
 - [ELPH_SELFEN_TEMPS_RANGE](ELPH_SELFEN_TEMPS_RANGE.md)
 - [NELECT](NELECT.md)
+
+

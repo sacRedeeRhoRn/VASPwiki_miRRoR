@@ -2,14 +2,22 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Self-consistency cycle
-[![](https://vasp.at/wiki/images/thumb/a/a0/SCC.png/350px-SCC.png)](https://vasp.at/wiki/File:SCC.png)
 
-Fig. 1: the self-consistency cycle
+
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:SCC.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/a/a0/SCC.png/350px-SCC.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/a/a0/SCC.png/525px-SCC.png 1.5x, /wiki/images/thumb/a/a0/SCC.png/700px-SCC.png 2x"
+width="350" height="573" /></a>
+<figcaption>Fig. 1: the self-consistency cycle</figcaption>
+</figure>
 
 The term **self-consistency cycle** (SCC) denotes a category of
 algorithms that determine the electronic ground state by a combination
-of iterative matrix diagonalization and [density
-mixing](../redirects/Density_mixing.md).
+of iterative matrix diagonalization and
+<a href="/wiki/Density_mixing" class="mw-redirect"
+title="Density mixing">density mixing</a>.
 
 Figure 1. shows a procedural flowchart of the self-consistency cycle:
 
@@ -83,20 +91,32 @@ With respect to the aforementioned it should be emphasized that, in
 principle, the [RMM-DIIS](RMM-DIIS.md) method should also
 converge without any explicit subspace diagonalization and/or
 re-orthonormalization. However, in our experience their inclusion speeds
-up the convergence of the self-consistency cycle so substantially that
-it shortens the time-to-solution of most calculations, even though these
-operations scale as $O(N^3)$.
+up the convergence of the
+self-consistency cycle so
+substantially that it shortens the time-to-solution of most
+calculations, even though these operations scale as
+$O(N^3)$.
 
 For (a lot) more details on the self-consistency cycle and associated
 algorithms in VASP, we recommend the seminal papers by Kresse and
-Furthmüller.^([\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2))
+Furthmüller.<sup>[\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2)</sup>
 
-## References
-1.  [↑](#cite_ref-kresse:cms:1996_1-0) [G. Kresse and J. Furthmüller,
-    Comp. Mater. Sci. **6**, 15
-    (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
-2.  [↑](#cite_ref-kresse:prb:96_2-0) [G. Kresse and J. Furthmüller,
-    Phys. Rev. B **54**, 11169
-    (1996).](https://doi.org/10.1103/PhysRevB.54.11169)
+## References\[<a
+href="/wiki/index.php?title=Self-consistency_cycle&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-kresse:cms:1996_1-0)
+    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
+    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
+    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
+2.  [↑](#cite_ref-kresse:prb:96_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.54.11169"
+    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Phys.
+    Rev. B <strong>54</strong>, 11169 (1996).</a>
+
 
 ------------------------------------------------------------------------
+
+

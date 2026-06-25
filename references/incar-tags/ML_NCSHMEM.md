@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_NCSHMEM
+
+
 ML_NCSHMEM = \[integer\] 
 
 |  |  |  |
@@ -25,9 +27,10 @@ be subdivided further since it becomes an odd number. E.g. 128 becomes
 16, 48 becomes 24, 80 becomes 20, 86 becomes 43 and 16 stays 16.
 
 The total number of memory segments created equals the number of cores
-per node divided by ML_NCSHMEM. All memory segments have identical
-sizes, so a larger number of segments results in higher total memory
-consumption.
+per node divided by
+ML_NCSHMEM. All memory
+segments have identical sizes, so a larger number of segments results in
+higher total memory consumption.
 
 However, on systems with multiple NUMA domains, performance can degrade
 significantly during machine-learned force field inference if all
@@ -35,9 +38,15 @@ domains access the same memory segment. For optimal performance, each
 NUMA domain should have its own dedicated shared memory segment. For
 more details, we refer to [NCSHMEM](NCSHMEM.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_NCSHMEM&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_MODE](ML_MODE.md), [NCSHMEM](NCSHMEM.md),
 [Shared memory](../methods/Shared_memory.md)
 
 ------------------------------------------------------------------------
+
+

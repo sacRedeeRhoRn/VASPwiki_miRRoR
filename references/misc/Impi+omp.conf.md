@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Impi+omp.conf
+
+
     #
     # define the commands that run vasp_std, vasp_ncl, and vasp_gam
     #
@@ -14,3 +16,5 @@
     export VASP_TESTSUITE_EXE_STD="mpirun $mpi $omp $PWD/../bin/vasp_std"
     export VASP_TESTSUITE_EXE_NCL="mpirun $mpi $omp $PWD/../bin/vasp_ncl"
     export VASP_TESTSUITE_EXE_GAM="mpirun $mpi $omp $PWD/../bin/vasp_gam"
+
+

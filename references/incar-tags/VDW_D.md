@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # VDW_D
+
+
 VDW_D = \[real\] 
 
 |  |  |  |
@@ -10,18 +12,23 @@ VDW_D = \[real\] 
 |  | = 0.6966 | for [DFT-ulg](../methods/DFT-ulg.md) |
 |  | = 6 | for [Many-body dispersion energy](../methods/Many-body_dispersion_energy.md) |
 
-Description: VDW_D defines the damping parameter $d$.
+Description: VDW_D defines the
+damping parameter $d$.
 
 ------------------------------------------------------------------------
 
-VDW_D sets the damping parameter $d$ for
-the [DFT-D2](../methods/DFT-D2.md), [DFT-ulg](../methods/DFT-ulg.md),
+VDW_D sets the damping
+parameter $d$ for the
+[DFT-D2](../methods/DFT-D2.md), [DFT-ulg](../methods/DFT-ulg.md),
 [Tkatchenko-Scheffler](../methods/Tkatchenko-Scheffler_method.md),
 and [Many-body dispersion
 energy](../methods/Many-body_dispersion_energy.md)
 methods.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=VDW_D&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [DFT-D2](../methods/DFT-D2.md), [DFT-ulg](../methods/DFT-ulg.md),
 [Tkatchenko-Scheffler
 method](../methods/Tkatchenko-Scheffler_method.md),
@@ -32,3 +39,5 @@ energy](../methods/Many-body_dispersion_energy.md)
 tag](https://vasp.at/wiki/index.php/Special-Search/-VDW_D-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

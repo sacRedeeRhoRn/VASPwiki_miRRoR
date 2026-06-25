@@ -2,13 +2,27 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Category:Density of states
-[![](https://vasp.at/wiki/images/thumb/e/e2/Si.png/400px-Si.png)](https://vasp.at/wiki/File:Si.png)
 
-Density of states for silicon in the diamond structure.
 
-[![](https://vasp.at/wiki/images/thumb/a/aa/NiO.png/400px-NiO.png)](https://vasp.at/wiki/File:NiO.png)
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:Si.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/e/e2/Si.png/400px-Si.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/e/e2/Si.png/600px-Si.png 1.5x, /wiki/images/e/e2/Si.png 2x"
+width="400" height="263" /></a>
+<figcaption>Density of states for silicon in the diamond
+structure.</figcaption>
+</figure>
 
-Density of states of spin-polarized nickel(II) oxide.
+<figure class="mw-halign-right" typeof="mw:File/Thumb">
+<a href="/wiki/File:NiO.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/a/aa/NiO.png/400px-NiO.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/a/aa/NiO.png/600px-NiO.png 1.5x, /wiki/images/a/aa/NiO.png 2x"
+width="400" height="259" /></a>
+<figcaption>Density of states of spin-polarized nickel(II)
+oxide.</figcaption>
+</figure>
 
 The electronic density of states (DOS) describes how many electronic
 states are available at a given energy. It is a useful tool for
@@ -36,15 +50,24 @@ total spin-up and spin-down DOS are identical because the opposite
 magnetic moments compensate each other globally, while the material
 still shows an insulating band gap.
 
-## Plotting the density of states
+
+## Plotting the density of states\[<a
+href="/wiki/index.php?title=Category:Density_of_states&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Plotting the density of states">edit</a> \| (./index.php.md)\]
+
 You can conveniently plot the density of states using the Python package
 py4vasp. After completing a VASP calculation, load the calculation
 directory and call the DOS plotting routine:
+
 
     from py4vasp import Calculation
 
     calc = Calculation.from_path("./CALC/PATH")
     calc.dos.plot()
 
+
 This command reads the DOS data from the calculation directory and
 generates a plot of the density of states.
+
+

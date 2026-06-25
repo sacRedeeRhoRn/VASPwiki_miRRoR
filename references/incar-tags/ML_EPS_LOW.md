@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_EPS_LOW
+
+
 ML_EPS_LOW = \[real\] 
 
 |  |  |  |
@@ -18,23 +20,29 @@ fields.
 This value sets the threshold for the eigenvalues that contribute to the
 leverage scoring used in the CUR algorithm for the rank compression
 ("sparsification") of the local configurations (for details see appendix
-E of reference ^([\[1\]](#cite_note-jinnouchi2:arx:2019-1))). Small
-eigenvalues and those columns (local configurations) that are strongly
-connected with these small eigenvalues are removed by the sparsification
-routines. The default value is fairly well balanced, and we do not
-recommend to increase the threshold to values larger than 1E-7. Also
-using smaller values than 1E-9 does not improve the MLFF if Bayesian
-regression is used (but it can be benficial for SVD).
+E of reference
+<sup>[\[1\]](#cite_note-jinnouchi2:arx:2019-1)</sup>).
+Small eigenvalues and those columns (local configurations) that are
+strongly connected with these small eigenvalues are removed by the
+sparsification routines. The default value is fairly well balanced, and
+we do not recommend to increase the threshold to values larger than
+1E-7. Also using smaller values than 1E-9 does not improve the MLFF if
+Bayesian regression is used (but it can be benficial for SVD).
 
-The description how to choose ML_EPS_LOW for accurate force fields is
-given
+The description how to choose
+ML_EPS_LOW for accurate force
+fields is given
 [here](../methods/Best_practices_for_machine-learned_force_fields.md).
 
 On the theory of the sparsification of local reference configurations
 see
 [here](../methods/Machine_learning_force_field-_Theory.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_EPS_LOW&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md), [ML_MB](ML_MB.md),
 [ML_EPS_REG](ML_EPS_REG.md),
 [ML_IALGO_LINREG](ML_IALGO_LINREG.md)
@@ -42,11 +50,20 @@ see
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_EPS_LOW-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-jinnouchi2:arx:2019_1-0) [R. Jinnouchi, F. Karsai,
-    and G. Kresse, Phys. Rev. B **100**, 014105
-    (2019).](https://doi.org/10.1103/PhysRevB.100.014105)
+## References\[<a
+href="/wiki/index.php?title=ML_EPS_LOW&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-jinnouchi2:arx:2019_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.100.014105"
+    class="external text" rel="nofollow">R. Jinnouchi, F. Karsai, and G.
+    Kresse, Phys. Rev. B <strong>100</strong>, 014105 (2019).</a>
+
 
   
 
 ------------------------------------------------------------------------
+
+

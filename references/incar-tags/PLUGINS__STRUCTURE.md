@@ -2,30 +2,43 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # PLUGINS/STRUCTURE
-PLUGINS/STRUCTURE = .True. \| .False.  
+
+
+PLUGINS/STRUCTURE = .True. \|
+.False.  
 Default: **PLUGINS/STRUCTURE** = .False. 
 
-Description: PLUGINS/STRUCTURE calls the Python plugin for the structure
-interface for each ionic relaxation step
+Description: PLUGINS/STRUCTURE
+calls the Python plugin for the structure interface for each ionic
+relaxation step
 
 ------------------------------------------------------------------------
 
-When PLUGINS/STRUCTURE=.TRUE., VASP calls the `structure` Python
-function at the end of each ionic relaxation step. The primary use-case
-of this tag is to modify the structure based on the computed energy,
-force and stress tensor.
+When PLUGINS/STRUCTURE=.TRUE.,
+VASP calls the `structure` Python function at the end of each ionic
+relaxation step. The primary use-case of this tag is to modify the
+structure based on the computed energy, force and stress tensor.
 
-## Expected inputs
+## Expected inputs\[<a
+href="/wiki/index.php?title=PLUGINS/STRUCTURE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Expected inputs">edit</a> \| (./index.php.md)\]
+
 The `structure` Python function expects the following inputs,
+
 
     def structure(constants, additions):
         ...
 
-where `constants` and `additions` and [Python
-dataclasses](https://docs.python.org/3/library/dataclasses.html). The
+
+where `constants` and `additions` and
+<a href="https://docs.python.org/3/library/dataclasses.html"
+class="external text" rel="nofollow">Python dataclasses</a>. The
 `constants` dataclass consists of the following inputs, listed here with
 their associated
-[datatypes](https://numpy.org/doc/stable/user/basics.types.html)
+<a href="https://numpy.org/doc/stable/user/basics.types.html"
+class="external text" rel="nofollow">datatypes</a>
+
 
     @dataclass(frozen=True)
     class ConstantsStructure:
@@ -42,6 +55,7 @@ their associated
         shape_grid: IntArray
         charge_density: DoubleArray
         neighbor_list: List[Neighbors] = field(default_factory=list)
+
 
 Note that the [INCAR](../input-files/INCAR.md) tags are capitalized.
 `number_ions` is the total number of ions listed in the
@@ -62,22 +76,34 @@ near an atom up to a cutoff
 
 The `additions` dataclass consists of the following modifiable outputs
 
+
     @dataclass
     class AdditionsStructure:
         lattice_vectors: DoubleArray
         positions: DoubleArray
 
-## Modifying quantities
+
+## Modifying quantities\[<a
+href="/wiki/index.php?title=PLUGINS/STRUCTURE&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Modifying quantities">edit</a> \| (./index.php.md)\]
+
 Modify the quantities listed in additions by adding to them.
+
 
     def structure(constants, additions)
         additions.positions += np.ones((constants.number_ions,3))
+
 
 |  |
 |----|
 | **Warning:** You should not make modifications to quantities in `constants`. We implemented some safeguards to prevent accidental modifications. Intentional changes will lead to erratic behavior because we may change the VASP code assuming these quantities are constant. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=PLUGINS/STRUCTURE&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Plugins](../tutorials/Plugins.md),
 [PLUGINS/FORCE_AND_STRESS](PLUGINS__FORCE_AND_STRESS.md),
 [PLUGINS/LOCAL_POTENTIAL](PLUGINS__LOCAL_POTENTIAL.md),
@@ -85,3 +111,5 @@ Modify the quantities listed in additions by adding to them.
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-PLUGINS/STRUCTURE-_incategory-Examples)
+
+

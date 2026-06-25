@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NCRPA_BANDS
-NCRPA_BANDS = \[integer array\] 
+
+
+NCRPA_BANDS = \[integer
+array\] 
 
 Description: Controls which bands are excluded in the constrained
 random-phase approximation. Check also
@@ -21,9 +24,15 @@ removes all screening effects between bands 21, 22 and 23 from the
 constrained random-phase approximation of the screened Coulomb
 interaction.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=NCRPA_BANDS&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ALGO](ALGO.md),
 [NTARGET_STATES](NTARGET_STATES.md)
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NCRPA_BANDS-_incategory-Howto)
+
+

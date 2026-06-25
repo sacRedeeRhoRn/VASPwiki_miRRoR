@@ -1,6 +1,6 @@
 # VASP Wiki — Offline Reference Index
 
-Snapshot: 2026-06-24  ·  1601 pages  ·  GFDL 1.2 from vasp.at
+Snapshot: 2026-06-25  ·  1601 pages  ·  GFDL 1.2 from vasp.at
 
 ## incar-tags (626)
 

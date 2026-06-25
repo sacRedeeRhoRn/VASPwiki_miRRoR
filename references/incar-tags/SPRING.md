@@ -2,28 +2,33 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # SPRING
+
+
 SPRING = \[integer\]  
 Default: **SPRING** = -5 
 
-Description: SPRING gives the *spring constant* between the images as
-used in the elastic band method.
+Description: SPRING gives the
+*spring constant* between the images as used in the elastic band method.
 
 ------------------------------------------------------------------------
 
-SPRING has to be set together with [IMAGES](IMAGES.md) if
-the elastic band method is used to calculate energy barriers between two
-ionic configurations of a system.
+SPRING has to be set together
+with [IMAGES](IMAGES.md) if the elastic band method is used
+to calculate energy barriers between two ionic configurations of a
+system.
 
-For SPRING = 0, each image is only allowed to move into the direction
-perpendicular to the current hyper-tangent, which is calculated as the
-normal vector between two neighboring images. This algorithm keeps the
-distance between the images constant to *first order*. It is therefore
-possible to start with a dense image spacing around the saddle point to
-obtain a finer resolution around this point.
+For SPRING = 0, each image is
+only allowed to move into the direction perpendicular to the current
+hyper-tangent, which is calculated as the normal vector between two
+neighboring images. This algorithm keeps the distance between the images
+constant to *first order*. It is therefore possible to start with a
+dense image spacing around the saddle point to obtain a finer resolution
+around this point.
 
 The nudged elastic band
-method^([\[1\]](#cite_note-jons95-1)[\[2\]](#cite_note-jons98-2)) is
-applied when SPRING is set to a negative value e.g.
+method<sup>[\[1\]](#cite_note-jons95-1)[\[2\]](#cite_note-jons98-2)</sup>
+is applied when SPRING is set
+to a negative value e.g.
 
     SPRING= -5
 
@@ -49,21 +54,33 @@ minimization without line optimization
 ([IBRION](IBRION.md)=3, [SMASS](SMASS.md)=2).
 should be used, to pre-converge the images.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=SPRING&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [IMAGES](IMAGES.md), [IBRION](IBRION.md),
 [NFREE](NFREE.md), [SMASS](SMASS.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-SPRING-_incategory-Examples)
 
-## References
-1.  [↑](#cite_ref-jons95_1-0) [G. Mills, H. Jonsson and G. K. Schenter,
-    Surface Science, 324, 305
-    (1995).](http://dx.doi.org/10.1016/0039-6028(94)00731-4)
-2.  [↑](#cite_ref-jons98_2-0) H. Jonsson, G. Mills and K. W. Jacobsen,
-    *Nudged Elastic Band Method for Finding Minimum Energy Paths of
-    Transitions*, in *Classical and Quantum Dynamics in Condensed Phase
-    Simulations*, ed. B. J. Berne, G. Ciccotti and D. F. Coker (World
-    Scientific, 1998).
+## References\[<a href="/wiki/index.php?title=SPRING&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-jons95_1-0)
+    <a href="http://dx.doi.org/10.1016/0039-6028(94)00731-4"
+    class="external text" rel="nofollow">G. Mills, H. Jonsson and G. K.
+    Schenter, Surface Science, 324, 305 (1995).</a>
+2.  [↑](#cite_ref-jons98_2-0)
+    H. Jonsson, G. Mills and K. W.
+    Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy
+    Paths of Transitions*, in *Classical and Quantum Dynamics in
+    Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F.
+    Coker (World Scientific, 1998).
+
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Bandgap renormalization due to electron-phonon coupling
+
+
 The band-structure renormalization within the nonadiabatic Allen Heine
 Cardona (AHC) theory is computed from the real part of the electron
 self-energy evaluated at the Kohn-Sham (KS) eigenvalue. This calculation
@@ -18,8 +20,8 @@ For the theory on bandgap renormalization from perturbation theory, see
 the many-body perturbation theory section of the [theory
 page](../theory/Electron-phonon_interactions_theory.md).
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 |  |
@@ -34,17 +36,29 @@ page](../theory/Electron-phonon_interactions_theory.md).
 |----|
 | **Tip:** The phonon-induced renormalization of the fundamental gap can alternatively be calculated from a [stochastic approach](Electron-phonon_interactions_from_Monte-Carlo_sampling.md). |
 
+
 ## Contents
 
-- [1 Basic usage](#Basic_usage)
-- [2 Basis set convergence](#Basis_set_convergence)
-- [3 K-point sampling convergence and extrapolation to
-  infinity](#K-point_sampling_convergence_and_extrapolation_to_infinity)
-- [4 Special treatment of the dipole interaction for polar
-  materials](#Special_treatment_of_the_dipole_interaction_for_polar_materials)
-- [5 Related tags and articles](#Related_tags_and_articles)
 
-## Basic usage
+- [1 Basic
+  usage](#Basic_usage)
+- [2 Basis set
+  convergence](#Basis_set_convergence)
+- [3 K-point
+  sampling convergence and extrapolation to
+  infinity](#K-point_sampling_convergence_and_extrapolation_to_infinity)
+- [4 Special
+  treatment of the dipole interaction for polar
+  materials](#Special_treatment_of_the_dipole_interaction_for_polar_materials)
+- [5 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Basic usage\[<a
+href="/wiki/index.php?title=Bandgap_renormalization_due_to_electron-phonon_coupling&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Basic usage">edit</a> \| (./index.php.md)\]
+
 The first step of an electron-phonon calculation is the [computation of
 the electron-phonon
 potential](Electron-phonon_potential_from_supercells.md),
@@ -105,7 +119,11 @@ The final output of the code is reported for each combination of
 computational parameters using the concept of [electron-phonon
 accumulators](../misc/Electron-phonon_accumulators.md).
 
-## Basis set convergence
+## Basis set convergence\[<a
+href="/wiki/index.php?title=Bandgap_renormalization_due_to_electron-phonon_coupling&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Basis set convergence">edit</a> \| (./index.php.md)\]
+
 First, we will deal with convergence of the bandgap renormalization with
 respect to the number of electronic states
 ([NBANDS](../incar-tags/NBANDS.md)) and plane-waves
@@ -149,7 +167,11 @@ with a lower cutoff run faster, highlighting the importance of
 convergence tests for reaching a good compromise between accuracy and
 computational time.
 
-## K-point sampling convergence and extrapolation to infinity
+## K-point sampling convergence and extrapolation to infinity\[<a
+href="/wiki/index.php?title=Bandgap_renormalization_due_to_electron-phonon_coupling&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: K-point sampling convergence and extrapolation to infinity">edit</a> \| (./index.php.md)\]
+
 Apart from the convergence with respect to the basis set, one should
 perform a convergence with respect to the k-point sampling. This step
 implies running the calculation for increasingly dense k-point meshes
@@ -178,16 +200,20 @@ The usual approach is to extrapolate the result to zero broadening.
 |----|
 | **Tip:** Multiple values can be specified for [ELPH_SELFEN_DELTA](../incar-tags/ELPH_SELFEN_DELTA.md). VASP then computes the self-energy for each of these broadenings and reports the results in the [OUTCAR](../output-files/OUTCAR.md) and [vaspout.h5](../output-files/Vaspout.h5.md) files. For each value of the broadening, a new electron [self-energy accumulator](../misc/Electron-phonon_accumulators.md) is created with the corresponding settings and values reported in the [OUTCAR](../output-files/OUTCAR.md) file. This should help simplify the convergence study. |
 
-## Special treatment of the dipole interaction for polar materials
+## Special treatment of the dipole interaction for polar materials\[<a
+href="/wiki/index.php?title=Bandgap_renormalization_due_to_electron-phonon_coupling&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Special treatment of the dipole interaction for polar materials">edit</a> \| (./index.php.md)\]
+
 The convergence of the bandgap renormalization for polar materials (i.e.
 materials with a gap and non-zero born-effective charges) is especially
 challenging. This is because the electron-phonon potential diverges as
-$q\rightarrow0$. This divergence is due
-to long-range electrostatic interactions that are not screened by the
-electrons, as would be the case for metals. In these cases, VASP can
-remove this long-range component from the electron-phonon potential in
-the supercell, Fourier interpolate it and add it back in the primitive
-cell. The same [treatment is done for the interatomic force
+$q\rightarrow0$. This divergence is due to long-range
+electrostatic interactions that are not screened by the electrons, as
+would be the case for metals. In these cases, VASP can remove this
+long-range component from the electron-phonon potential in the
+supercell, Fourier interpolate it and add it back in the primitive cell.
+The same [treatment is done for the interatomic force
 constants](../theory/Phonons-_Theory.md) "Phonons: Theory").
 
 To activate the long-range treatment, set the following
@@ -207,7 +233,11 @@ To activate the long-range treatment, set the following
 |----|
 | **Tip:** The value of [ENCUTLR](../incar-tags/ENCUTLR.md) should be the smallest possible for efficiency reasons, but large enough such that the final quantity does not depend on it. Avoid values of [ENCUTLR](../incar-tags/ENCUTLR.md) that are too large, otherwise, the results might become unphysical. |
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Bandgap_renormalization_due_to_electron-phonon_coupling&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon potential from
@@ -217,3 +247,5 @@ To activate the long-range treatment, set the following
 - [phelel_params.hdf5](../input-files/Phelel_params.hdf5.md)
 - [Electron-phonon interactions from Monte-Carlo
   sampling](Electron-phonon_interactions_from_Monte-Carlo_sampling.md)
+
+

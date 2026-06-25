@@ -2,41 +2,75 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Band gap renormalization in diamond using one-shot method
+
+
+
 [Overview](../tutorials/Lattice_Dynamics_-_Tutorial.md) \>
-Band gap renormalization in diamond using one-shot method \> [List of
+Band gap renormalization in diamond
+using one-shot
+method \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
 
 ## Contents
 
-- [1 Task](#Task)
-- [2 Input](#Input)
-  - [2.1 POSCAR](#POSCAR)
-  - [2.2 KPOINTS](#KPOINTS)
-  - [2.3 INCAR](#INCAR)
-- [3 Calculation](#Calculation)
-  - [3.1 Obtain structure with special
-    displacements](#Obtain_structure_with_special_displacements)
-  - [3.2 Calculate electronic levels of structure with special
-    displacements](#Calculate_electronic_levels_of_structure_with_special_displacements)
-  - [3.3 Extract ZPR](#Extract_ZPR)
-  - [3.4 Better accuracy](#Better_accuracy)
-  - [3.5 Temperature dependence of the band
-    gap](#Temperature_dependence_of_the_band_gap)
-- [4 Temperature dependence of the band gap including volume
-  effects](#Temperature_dependence_of_the_band_gap_including_volume_effects)
-- [5 References](#References)
-- [6 Download](#Download)
 
-## Task
+- [1
+  Task](#Task)
+- [2
+  Input](#Input)
+  - [2.1
+    POSCAR](#POSCAR)
+  - [2.2
+    KPOINTS](#KPOINTS)
+  - [2.3
+    INCAR](#INCAR)
+- [3
+  Calculation](#Calculation)
+  - [3.1 Obtain
+    structure with special
+    displacements](#Obtain_structure_with_special_displacements)
+  - [3.2 Calculate
+    electronic levels of structure with special
+    displacements](#Calculate_electronic_levels_of_structure_with_special_displacements)
+  - [3.3 Extract
+    ZPR](#Extract_ZPR)
+  - [3.4 Better
+    accuracy](#Better_accuracy)
+  - [3.5
+    Temperature dependence of the band
+    gap](#Temperature_dependence_of_the_band_gap)
+- [4 Temperature
+  dependence of the band gap including volume
+  effects](#Temperature_dependence_of_the_band_gap_including_volume_effects)
+- [5
+  References](#References)
+- [6
+  Download](#Download)
+
+
+## Task\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculating the zero-point renormalization (ZPR) and the temperature
 dependence of the indirect band gap in diamond using a [one-shot
-method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon interactions theory")^([\[1\]](#cite_note-Zacharias:PRL:2015-1)[\[2\]](#cite_note-zacharias:prb:2016-2)).
+method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon interactions theory")<sup>[\[1\]](#cite_note-Zacharias:PRL:2015-1)[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>.
 
-## Input
-### [POSCAR](../input-files/POSCAR.md)
+## Input\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Input">edit</a> \| (./index.php.md)\]
+
+### [POSCAR](../input-files/POSCAR.md)\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: POSCAR">edit</a> \| (./index.php.md)\]
+
 - Primitive cell (*POSCAR.prim*):
 
-&nbsp;
+<!-- -->
 
     C_2_fcc
        1.00000000000000
@@ -51,7 +85,7 @@ method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon inter
 
 - 4x4x4 super cell used in this calculation (*POSCAR.4x4x4*):
 
-&nbsp;
+<!-- -->
 
     C_128_fcc
        1.00000000000000
@@ -190,7 +224,11 @@ method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon inter
        0.68750000   0.93750000   0.93750000
        0.93750000   0.93750000   0.93750000
 
-### [KPOINTS](../input-files/KPOINTS.md)
+### [KPOINTS](../input-files/KPOINTS.md)\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: KPOINTS">edit</a> \| (./index.php.md)\]
+
     K-Points
      0
     Gamma
@@ -200,7 +238,11 @@ method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon inter
 - We only need a single k-point, since the convergence is done via the
   super-cell size.
 
-### [INCAR](../input-files/INCAR.md)
+### [INCAR](../input-files/INCAR.md)\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
+
     general:
      System = cd-C
      PREC = Accurate
@@ -224,7 +266,11 @@ method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon inter
   eigenvectors and eigenvalues of the dynamical matrix at the Gamma
   point.
 
-## Calculation
+## Calculation\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
+
 This example will use a [one-shot
 method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon interactions theory"),
 where only a single structure that contains the electron-phonon
@@ -242,7 +288,11 @@ The calculation consists of two steps:
 3.  Extract ZPR as the difference between the band gaps from the two
     calculations.
 
-### Obtain structure with special displacements
+### Obtain structure with special displacements\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Obtain structure with special displacements">edit</a> \| (./index.php.md)\]
+
 To run the calculation *POSCAR.4x4x4* needs to be copied to *POSCAR* and
 *INCAR.init* to *INCAR*.
 
@@ -254,7 +304,11 @@ be later used for the band gap of the "undistorted" structure.
 The new [POSCAR](../input-files/POSCAR.md) file containing the special
 displacements is given as *POSCAR.T=0.*.
 
-### Calculate electronic levels of structure with special displacements
+### Calculate electronic levels of structure with special displacements\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Calculate electronic levels of structure with special displacements">edit</a> \| (./index.php.md)\]
+
 Copy the file *POSCAR.T=0.* to *POSCAR*.
 
 Delete (or comment out with *\#*) all the lines in the
@@ -271,14 +325,17 @@ Execute VASP.
 
 Copy *OUTCAR* to *OUTCAR.T=0.*.
 
-### Extract ZPR
+### Extract ZPR\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Extract ZPR">edit</a> \| (./index.php.md)\]
+
 We extract the band gap renormalization as
 
 $\Delta E_{\mathrm{rm}} = E_{\mathrm{SP}}-E$
 
-where $E_{\mathrm{SP}}$ and
-$E$ are the band gaps with and without
-special displacements, respectively.
+where $E_{\mathrm{SP}}$ and $E$ are the
+band gaps with and without special displacements, respectively.
 
 Since the 4x4x4 cell of cubic diamond has 3 degenerate bands at the
 valence band maximum and 6 degenerate bands at the conduction band
@@ -291,7 +348,9 @@ compatibility of the different computational methods.
 The band gaps are extracted from the previously saved files
 *OUTCAR.init* and *OUTCAR.T=0.* using the following script:
 
+
 **Click to show/*extract_zpr.sh***
+
 
     #!/bin/bash 
 
@@ -330,6 +389,7 @@ The band gaps are extracted from the previously saved files
     echo "The zero-point renormalization of the band gap (in eV) is:" 
     echo "$e1a $e1b $e1c $e2a $e2b $e2c $e2d $e2e $e2f $h_ref $l_ref" |awk '{print (($4+$5+$6+$7+$8+$9)/6.0-($1+$2+$3)/3.0)-($11-$10)}'
 
+
 To use the script please type:
 
     bash extract_zpr.sh
@@ -343,7 +403,11 @@ The output of the script should look like the following:
     The zero-point renormalization of the band gap (in eV) is:
     -0.353883
 
-### Better accuracy
+### Better accuracy\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: Better accuracy">edit</a> \| (./index.php.md)\]
+
 The accuracy of the band gap renormalization depends dominantly on the
 size of the super cell, so this is the quantity that has to be usually
 converged in this type of calculation.
@@ -365,7 +429,11 @@ a super cell from the primitive cell (*POSCAR.prim*) provided by this
 tutorial (how to build a super cell is for example covered
 [here](XANES_in_Diamond.md)).
 
-### Temperature dependence of the band gap
+### Temperature dependence of the band gap\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Temperature dependence of the band gap">edit</a> \| (./index.php.md)\]
+
 Here the temperature dependence of the band gap due to electron-phonon
 interactions is calculated. The input files are located in the directory
 *TEMP_DEPENDENCE*. Switch to this directory. Copy *POSCAR.4x4x4* to
@@ -382,7 +450,9 @@ Before running the calculations copy *INCAR.run_temp* to *INCAR*.
 Run a standard VASP calculation for each of them to obtain the band gap
 or use the script *run_temperature.sh* provided with this calculation:
 
+
 **Click to show/*run_temperature.sh***
+
 
     #!/bin/bash
 
@@ -400,6 +470,7 @@ or use the script *run_temperature.sh* provided with this calculation:
        mv OUTCAR OUTCAR.T\=$i
     done
 
+
   
 To run the script please edit the file and set your VASP executable path
 (*vasp_exec*) and the number of processors you are going to use (*np*).
@@ -410,7 +481,9 @@ To run the calculation type:
 This step produces several [OUTCAR](../output-files/OUTCAR.md) files which
 can be analyzed using the script *extract_temp.sh*:
 
+
 **Click to show/*extract_temp.sh***
+
 
     !/bin/bash 
 
@@ -453,6 +526,7 @@ can be analyzed using the script *extract_temp.sh*:
        echo "$e1a $e1b $e1c $e2a $e2b $e2c $e2d $e2e $e2f $temp $ref" |awk '{print $10,(($4+$5+$6+$7+$8+$9)/6.0-($1+$2+$3)/3.0)-$11}' >> gap_vs_temp.dat
     done
 
+
 To run the script please type the following:
 
     bash ./extract_temp.sh
@@ -467,17 +541,26 @@ following:
   
 The resulting curve should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/6/6b/Temperature_dependence_of_cd-C_4x4x4.jpg/600px-Temperature_dependence_of_cd-C_4x4x4.jpg)](https://vasp.at/wiki/File:Temperature_dependence_of_cd-C_4x4x4.jpg)
+<a href="/wiki/File:Temperature_dependence_of_cd-C_4x4x4.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/6/6b/Temperature_dependence_of_cd-C_4x4x4.jpg/600px-Temperature_dependence_of_cd-C_4x4x4.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/6/6b/Temperature_dependence_of_cd-C_4x4x4.jpg 1.5x"
+width="600" height="450" /></a>
 
 The experimental data (blue lines and circles) are taken from reference
-^([\[3\]](#cite_note-ODonnell:APL:1991-3)).
+<sup>[\[3\]](#cite_note-ODonnell:APL:1991-3)</sup>.
 
-## Temperature dependence of the band gap including volume effects
+## Temperature dependence of the band gap including volume effects\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=12"
+class="mw-editsection-visualeditor"
+title="Edit section: Temperature dependence of the band gap including volume effects">edit</a> \| (./index.php.md)\]
+
 In the previous step, we see that the experimental slope of the
 temperature dependence of the band gap is underestimated. To improve the
 agreement we will now also consider the volume dependence. The volume
 dependence is calculated from quasi-harmonic calculations
-^([\[4\]](#cite_note-Baroni:RMG:2010-4)).
+<sup>[\[4\]](#cite_note-Baroni:RMG:2010-4)</sup>.
 
 First save your obtained band gap vs. temperature curve, since it will
 be overwritten otherwise. Type the following:
@@ -502,7 +585,9 @@ different temperatures. Starting from the equilibrium volume we need to
 create [POSCAR](../input-files/POSCAR.md) files at different volumes. To do
 this use the script:
 
+
 **Click to show/*quasi_harm_4x4x4_diamond_create_pos_and_run_vasp.sh***
+
 
     #! /bin/bash
 
@@ -523,6 +608,7 @@ this use the script:
     mv OUTCAR OUTCAR_$i
     done
 
+
 This script creates 15 [POSCAR](../input-files/POSCAR.md) files where the
 volume is varied in both directions in steps of 2 percent with respect
 to the starting volume. It also runs the necessary VASP calculations to
@@ -536,8 +622,10 @@ each volume which are needed in the next step. In that step the free
 energy vs. volume curves need to be extracted for each temperature. To
 do this use the script:
 
+
 **Click to
 show/*quasi_harm_4x4x4_diamond_make_energy_vs_volume_plots.sh***
+
 
     #!/bin/bash
 
@@ -664,6 +752,7 @@ show/*quasi_harm_4x4x4_diamond_make_energy_vs_volume_plots.sh***
     rm hhhhelp.txt
     rm OUTHELP
 
+
 To use this script please type:
 
     bash ./quasi_harm_4x4x4_diamond_make_energy_vs_volume_plots.sh
@@ -673,7 +762,9 @@ The free energy curves for each volume are saved to *OUTTEMP\_\**.
 Finally to obtain the equilibrium volume at each temperature use the
 following script:
 
+
 **Click to show/*quasi_harm_4x4x4_diamond_obtain_fitting.sh***
+
 
     #!/bin/bash
 
@@ -694,6 +785,7 @@ following script:
 
     rm suppress_output
     rm OUTTEMP.current
+
 
 To run this script type:
 
@@ -723,7 +815,12 @@ type:
 
 The resulting plot should look like the following:
 
-[![](https://vasp.at/wiki/images/thumb/6/6f/Temperature_dependence_of_cd-C_4x4x4_vol.jpg/600px-Temperature_dependence_of_cd-C_4x4x4_vol.jpg)](https://vasp.at/wiki/File:Temperature_dependence_of_cd-C_4x4x4_vol.jpg)
+<a href="/wiki/File:Temperature_dependence_of_cd-C_4x4x4_vol.jpg"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/6/6f/Temperature_dependence_of_cd-C_4x4x4_vol.jpg/600px-Temperature_dependence_of_cd-C_4x4x4_vol.jpg"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/6/6f/Temperature_dependence_of_cd-C_4x4x4_vol.jpg 1.5x"
+width="600" height="450" /></a>
 
 Now we see in this plot that by adding volume effects a better agreement
 with experiment is obtained. For this tutorial, we only used a 4x4x4
@@ -733,39 +830,62 @@ to experiment. A discrepancy between experiment and theory is expected,
 since the electron exchange and correlation are not sufficiently
 described within PBE which was used in this example. To get a really
 excellent agreement one needs to use the GW approximation
-^([\[5\]](#cite_note-karsai:njp:2018-5)).
+<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>.
 
 Strictly speaking, the correct way to add volume effects to
 electron-phonon interactions would be to first change the volume for
 each temperature and then calculate the electron-phonon interaction for
 that temperature. In this tutorial and also in reference
-^([\[5\]](#cite_note-karsai:njp:2018-5)), it is done the other way
-around. Hence the electron-phonon interactions need to be calculated
-only once. In reference ^([\[5\]](#cite_note-karsai:njp:2018-5)) we
-observed that the two approaches give very similar results.
+<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>,
+it is done the other way around. Hence the electron-phonon interactions
+need to be calculated only once. In reference
+<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>
+we observed that the two approaches give very similar results.
 
-## References
-1.  [↑](#cite_ref-Zacharias:PRL:2015_1-0) [M. Zacharias, C. E. Patrick,
-    and F. Giustino, Phys. Rev. Lett. **115**, 177401
-    (2015).](https://doi.org/10.1103/PhysRevB.94.075125)
-2.  [↑](#cite_ref-zacharias:prb:2016_2-0) [M. Zacharias and F. Giustino,
-    Phys. Rev. B **94**, 075125
-    (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
-3.  [↑](#cite_ref-ODonnell:APL:1991_3-0) [K.P. ODonnel and X. Chen,
-    Appl. Phys. Lett. **58**, 2924
-    (1991).](https://doi.org/10.1063/1.104723)
-4.  [↑](#cite_ref-Baroni:RMG:2010_4-0) [S. Baroni, P. Giannozzi, and E.
-    Isaev, Rev. Min. Geochem. **71**, 39
-    (2010).](https://doi.org/10.2138/rmg.2010.71.3)
-5.  ↑ ^([a](#cite_ref-karsai:njp:2018_5-0))
-    ^([b](#cite_ref-karsai:njp:2018_5-1))
-    ^([c](#cite_ref-karsai:njp:2018_5-2)) [F. Karsai, M. Engel, E.
-    Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008
-    (2018).](https://doi.org/10.1088/1367-2630/aaf53f)
+## References\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=13"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-## Download
-[EPC cd-C.tgz](https://vasp.at/wiki/images/7/7b/EPC_cd-C.tgz "EPC cd-C.tgz")
+
+1.  [↑](#cite_ref-Zacharias:PRL:2015_1-0)
+    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
+    class="external text" rel="nofollow">M. Zacharias, C. E. Patrick, and F.
+    Giustino, Phys. Rev. Lett. <strong>115</strong>, 177401 (2015).</a>
+2.  [↑](#cite_ref-zacharias:prb:2016_2-0)
+    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
+    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
+    Rev. B <strong>94</strong>, 075125 (2016).</a>
+3.  [↑](#cite_ref-ODonnell:APL:1991_3-0)
+    <a href="https://doi.org/10.1063/1.104723" class="external text"
+    rel="nofollow">K.P. ODonnel and X. Chen, Appl. Phys. Lett.
+    <strong>58</strong>, 2924 (1991).</a>
+4.  [↑](#cite_ref-Baroni:RMG:2010_4-0)
+    <a href="https://doi.org/10.2138/rmg.2010.71.3" class="external text"
+    rel="nofollow">S. Baroni, P. Giannozzi, and E. Isaev, Rev. Min. Geochem.
+    <strong>71</strong>, 39 (2010).</a>
+5.  ↑
+    <sup>[a](#cite_ref-karsai:njp:2018_5-0)</sup>
+    <sup>[b](#cite_ref-karsai:njp:2018_5-1)</sup>
+    <sup>[c](#cite_ref-karsai:njp:2018_5-2)</sup>
+    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
+    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
+    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
+
+
+## Download\[<a
+href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=14"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/7/7b/EPC_cd-C.tgz" class="internal"
+title="EPC cd-C.tgz">EPC cd-C.tgz</a>
+
 
 [Overview](../tutorials/Lattice_Dynamics_-_Tutorial.md) \>
-Band gap renormalization in diamond using one-shot method \> [List of
+Band gap renormalization in diamond
+using one-shot
+method \> [List of
 tutorials](../categories/Category-Tutorials.md)
+
+

@@ -2,22 +2,29 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # HESSEMAT
-HESSEMAT defines the Hesse matrix in Cartesian coordinates
-($\underline{\mathbf{H}}^\mathbf{x}$ )
-for the use in [Thermodynamic integration with harmonic
+
+
+HESSEMAT defines the Hesse
+matrix in Cartesian coordinates ($\underline{\mathbf{H}}^\mathbf{x}$ ) for the use in
+[Thermodynamic integration with harmonic
 reference](../theory/Thermodynamic_integration.md).
 For a system containing $N$ atoms,
-HESSEMAT has $(3N+1)(N+1)$ lines. The
-first line specifies potential energy $V_{0,\mathbf{x}}(\mathbf{x}_0)$ (in eV) of the relaxed
-system for which $\underline{\mathbf{H}}^\mathbf{x}$ is computed. The following
-$3N$ lines are reserved for positions in
-fractional coordinates of all atoms constituting the system, whereby
-each line should contain three components of position vector of a single
-atom. The remaining part of HESSEMAT consist of $3N$ block of $N+1$ lines each.
-Each block contains information related to a single eigenmode of
-$\underline{\mathbf{H}}^\mathbf{x}$: the
-first line specified the eigenvalue (in eV/${\AA}^2$) and remaining and $N$ lines the corresponding eigenvector (in Cartesian
-coordinates) in a 3-column format.
+HESSEMAT has
+$(3N+1)(N+1)$ lines. The first line specifies potential
+energy $V_{0,\mathbf{x}}(\mathbf{x}_0)$ (in eV) of the
+relaxed system for which $\underline{\mathbf{H}}^\mathbf{x}$ is computed. The
+following $3N$ lines are
+reserved for positions in fractional coordinates of all atoms
+constituting the system, whereby each line should contain three
+components of position vector of a single atom. The remaining part of
+HESSEMAT consist of
+$3N$ block of $N+1$ lines
+each. Each block contains information related to a single eigenmode of
+$\underline{\mathbf{H}}^\mathbf{x}$: the first line
+specified the eigenvalue (in eV/${\AA}^2$) and
+remaining and $N$ lines the
+corresponding eigenvector (in Cartesian coordinates) in a 3-column
+format.
 
     0.0
      -0.036085604 0.076532881 0.201816325
@@ -36,5 +43,10 @@ coordinates) in a 3-column format.
 How to run thermodynamic integration calculations is given
 [here](../tutorials/Thermodynamic_integration_calculations.md).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=HESSEMAT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [TILAMBDA](TILAMBDA.md), [REPORT](../output-files/REPORT.md)
+
+

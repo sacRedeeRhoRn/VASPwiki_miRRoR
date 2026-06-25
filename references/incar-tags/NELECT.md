@@ -2,10 +2,13 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # NELECT
+
+
 NELECT = \[real\]  
 Default: **NELECT** = number of valence electrons 
 
-Description: NELECT sets the number of electrons.
+Description: NELECT sets the
+number of electrons.
 
 ------------------------------------------------------------------------
 
@@ -20,10 +23,13 @@ respective atom type) assuming the cell is charge-neutral. If the number
 of electrons is not compatible with the number derived from the valence
 and the number of atoms a homogeneous background charge is assumed. If
 the number of ions specified in the [POSCAR](../input-files/POSCAR.md) file
-is 0 and NELECT=n, then the energy of a homogeneous electron gas is
-calculated.
+is 0 and NELECT=n, then the
+energy of a homogeneous electron gas is calculated.
 
-## Charged calculations
+## Charged calculations\[<a href="/wiki/index.php?title=NELECT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Charged calculations">edit</a> \| (./index.php.md)\]
+
 |  |
 |----|
 | **Warning:** Using the NELECT tag without the use of an appropriate correction leads to a very slow convergence of energies with respect to the size *L* of the supercell. |
@@ -51,12 +57,19 @@ depends linearly on the width of the vacuum.
 |----|
 | **Warning:** Presently, no simple *a posteriori* correction scheme is implemented in VASP for slab calculations. Total energies from charged slab calculations must be used with care. In certain cases, relative energies between two charged surface calculations may be useful |
 
-## Related tags and articles
-[Monopole Dipole and Quadrupole
-corrections](https://vasp.at/wiki/index.php/Monopole_Dipole_and_Quadrupole_corrections),
-[EPSILON](EPSILON.md), [DIPOL](DIPOL.md),
-[IDIPOL](IDIPOL.md), [LMONO](LMONO.md),
-[LDIPOL](LDIPOL.md), [EFIELD](EFIELD.md)
+## Related tags and articles\[<a href="/wiki/index.php?title=NELECT&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Monopole_Dipole_and_Quadrupole_corrections"
+class="mw-redirect"
+title="Monopole Dipole and Quadrupole corrections">Monopole Dipole and
+Quadrupole corrections</a>, [EPSILON](EPSILON.md),
+[DIPOL](DIPOL.md), [IDIPOL](IDIPOL.md),
+[LMONO](LMONO.md), [LDIPOL](LDIPOL.md),
+[EFIELD](EFIELD.md)
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-NELECT-_incategory-Examples)
+
+

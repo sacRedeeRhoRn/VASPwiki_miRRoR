@@ -2,14 +2,17 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ELPH_SELFEN_CARRIER_PER_CELL
-ELPH_SELFEN_CARRIER_PER_CELL = \[real array\]  
+
+
+ELPH_SELFEN_CARRIER_PER_CELL =
+\[real array\]  
 Default: **ELPH_SELFEN_CARRIER_PER_CELL** = 0.0 
 
 Description: List of additional number of carriers for which to compute
 the phonon-mediated electron self-energy and transport coefficients.
 
-|                                      |
-|--------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 6.5.0 |
 
 ------------------------------------------------------------------------
@@ -21,8 +24,9 @@ the list of temperatures specified by
 positive number adds electrons (electron doping), while a negative one
 removes (hole doping).
 
-For example, `ELPH_SELFEN_CARRIER_PER_CELL`` = 0.001 0.01 0.1` means
-that the number of electrons per cell
+For example,
+`ELPH_SELFEN_CARRIER_PER_CELL`` = 0.001 0.01 0.1`
+means that the number of electrons per cell
 [`NELECT`](NELECT.md)` = 18` will be increased by the
 specified values which will produce the following table in the
 `Chemical potential calculation` section in the
@@ -47,21 +51,29 @@ specified values which will produce the following table in the
     T=    500.00000000     3.93108216     4.36792102     4.90841405
                       ----------------------------
 
-The number of elements in ELPH_SELFEN_CARRIER_PER_CELL determines the
-number of columns in the tables above, while
+The number of elements in
+ELPH_SELFEN_CARRIER_PER_CELL
+determines the number of columns in the tables above, while
 [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md)
 determines the number of rows. Specifying more than one carrier density
-in ELPH_SELFEN_CARRIER_PER_CELL creates additional [electron-phonon
+in
+ELPH_SELFEN_CARRIER_PER_CELL
+creates additional [electron-phonon
 accumulators](../misc/Electron-phonon_accumulators.md).
 
 Instead of specifying the number of carriers, it is possible to specify
-an additional carrier density in units of ${m^{-3}}$ via the
+an additional carrier density in units of ${m^{-3}}$ via
+the
 [ELPH_SELFEN_CARRIER_DEN](ELPH_SELFEN_CARRIER_DEN.md)
 tag. Alternatively, one can specify the chemical potential and determine
 the carrier concentration using
 [ELPH_SELFEN_MU](ELPH_SELFEN_MU.md).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ELPH_SELFEN_CARRIER_PER_CELL&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 - [Transport
   calculations](../tutorials/Transport_coefficients_including_electron-phonon_scattering.md)
 - [Electron-phonon
@@ -76,3 +88,5 @@ the carrier concentration using
 - [ELPH_SELFEN_TEMPS](ELPH_SELFEN_TEMPS.md)
 - [ELPH_SELFEN_TEMPS_RANGE](ELPH_SELFEN_TEMPS_RANGE.md)
 - [NELECT](NELECT.md)
+
+

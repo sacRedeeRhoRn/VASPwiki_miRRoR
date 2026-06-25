@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Machine learning force fields: Theory
+
+
+
 Redirect to:
 
 - [Machine learning force field:
   Theory](../methods/Machine_learning_force_field-_Theory.md)
+
+

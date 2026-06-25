@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_LMLFF
+
+
 ML_LMLFF = \[logical\]  
 Default: **ML_LMLFF** = .FALSE. 
 
@@ -14,11 +16,13 @@ learning force fields.
 
 ------------------------------------------------------------------------
 
-If ML_LMLFF = .FALSE. machine learning force fields are disabled and all
-related [INCAR](../input-files/INCAR.md) tags, i.e. all tags starting with
+If ML_LMLFF = .FALSE. machine
+learning force fields are disabled and all related
+[INCAR](../input-files/INCAR.md) tags, i.e. all tags starting with
 "**ML\_**", are ignored. If machine learning force fields are used by
-setting ML_LMLFF = .TRUE., the VASP mode of operation depends on the
-choice of [ML_MODE](ML_MODE.md). If
+setting ML_LMLFF = .TRUE., the
+VASP mode of operation depends on the choice of
+[ML_MODE](ML_MODE.md). If
 [ML_MODE](ML_MODE.md) is not supplied in the
 [INCAR](../input-files/INCAR.md) file then the default mode of operation is
 to run an MD simulation with on-the-fly machine learning, i.e.,
@@ -26,7 +30,10 @@ to run an MD simulation with on-the-fly machine learning, i.e.,
 "from scratch" if no [ML_AB](../input-files/ML_AB.md) file is provided,
 otherwise a continuation run is performed.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ML_LMLFF&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_MODE](ML_MODE.md),
 [ML_IALGO_LINREG](ML_IALGO_LINREG.md),
 [ML_IWEIGHT](ML_IWEIGHT.md),
@@ -43,3 +50,5 @@ otherwise a continuation run is performed.
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LMLFF-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

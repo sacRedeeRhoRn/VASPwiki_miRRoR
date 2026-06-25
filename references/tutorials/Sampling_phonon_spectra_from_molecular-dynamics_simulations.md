@@ -2,16 +2,23 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Sampling phonon spectra from molecular-dynamics simulations
-[![](https://vasp.at/wiki/images/thumb/4/49/PhononDOS.png/500px-PhononDOS.png)](https://vasp.at/wiki/File:PhononDOS.png)
 
-Fig. 1: **Left:** Shows convergence analysis of normalized
-velocity-autocorrelation function. **Right:** Convergence analysis of
-phonon DOS.
+
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:PhononDOS.png" class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/4/49/PhononDOS.png/500px-PhononDOS.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/4/49/PhononDOS.png 1.5x" width="500"
+height="375" /></a>
+<figcaption>Fig. 1: <strong>Left:</strong> Shows convergence analysis of
+normalized velocity-autocorrelation function. <strong>Right:</strong>
+Convergence analysis of phonon DOS.</figcaption>
+</figure>
 
 [Phonon](../categories/Category-Phonons.md) spectra can be
 obtained as the power spectrum of the normalized
 velocity-autocorrelation function
-^([\[1\]](#cite_note-reissland:book:1973-1)[\[2\]](#cite_note-lahnsteiner:prb:2022-2)).
+<sup>[\[1\]](#cite_note-reissland:book:1973-1)[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup>.
 The velocities of the ions and hence the velocity-autocorrelation
 function are recorded during a [molecular dynamics (MD)
 simulation](https://vasp.at/wiki/index.php/Category:Molecular_dynamics).
@@ -25,33 +32,51 @@ analyzing the power spectrum does not rely on mapping to a model
 Hamiltonian. It naturally accounts for anharmonic contributions, as well
 as temperature dependence.
 
+
 ## Contents
 
-- [1 Phonon spectra step-by-setp](#Phonon_spectra_step-by-setp)
-  - [1.1 Step 1: Generate thermalized initial
+
+- [1 Phonon spectra
+  step-by-setp](#Phonon_spectra_step-by-setp)
+  - [1.1 Step 1:
+    Generate thermalized initial
     structures](#Step_1:_Generate_thermalized_initial_structures)
-  - [1.2 Step 2: Sample velocities from NVE simulations for each initial
+  - [1.2 Step 2:
+    Sample velocities from NVE simulations for each initial
     structure](#Step_2:_Sample_velocities_from_NVE_simulations_for_each_initial_structure)
-  - [1.3 Step 3: Compute normalized velocity autocorrelation function
-    for each NVE
+  - [1.3 Step 3:
+    Compute normalized velocity autocorrelation function for each NVE
     simulation](#Step_3:_Compute_normalized_velocity_autocorrelation_function_for_each_NVE_simulation)
-  - [1.4 Step 4: Compute the power spectrum for each normalized velocity
+  - [1.4 Step 4:
+    Compute the power spectrum for each normalized velocity
     autocorrelation
     function](#Step_4:_Compute_the_power_spectrum_for_each_normalized_velocity_autocorrelation_function)
-  - [1.5 Step 5: Compute averages and check for
+  - [1.5 Step 5:
+    Compute averages and check for
     convergence](#Step_5:_Compute_averages_and_check_for_convergence)
-- [2 Example](#Example)
-  - [2.1 Setup and auxilary scripts](#Setup_and_auxilary_scripts)
-  - [2.2 Anharmonic ratteling in
+- [2
+  Example](#Example)
+  - [2.1 Setup and
+    auxilary scripts](#Setup_and_auxilary_scripts)
+  - [2.2 Anharmonic
+    ratteling in
     CsPbBr\$_{3}\$](#Anharmonic_ratteling_in_CsPbBr$_%7B3%7D$)
-- [3 References](#References)
-- [4 Related tags and articles](#Related_tags_and_articles)
+- [3
+  References](#References)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
 
-## Phonon spectra step-by-setp
-For the setup of the [MD
-simulation](../redirects/Molecular_dynamics_calculations.md)
-and choice of [ensemble](../categories/Category-Ensembles.md),
-two aspects need to be taken into account:
+
+## Phonon spectra step-by-setp\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Phonon spectra step-by-setp">edit</a> \| (./index.php.md)\]
+
+For the setup of the
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">MD simulation</a> and choice of
+[ensemble](../categories/Category-Ensembles.md), two aspects
+need to be taken into account:
 
 1.  To have a well-defined reciprocal space, the simulation has to be
     done at constant volume.
@@ -62,28 +87,38 @@ Hence, the following describes how to compute the **phonon spectra** by
 sampling an [NVE ensemble](../misc/NVE_ensemble.md) starting
 from thermalized structures.
 
-### Step 1: Generate thermalized initial structures
+### Step 1: Generate thermalized initial structures\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: Generate thermalized initial structures">edit</a> \| (./index.php.md)\]
+
 Run an [NVT simulation](../misc/NVT_ensemble.md) using the
 [Langevin thermostat](Langevin_thermostat.md)
 to generate thermalized initial structures. The choice of thermostat is
 crucial. The [Langevin
 thermostat](Langevin_thermostat.md) is
 well-suited because it is a stochastic
-[thermostat](../redirects/Thermostat.md) and populates all available
-[phonon](../redirects/Phonon.md) modes of our system uniformly, as white
-noise is added to the velocity autocorrelation due to random forces in
-each time step. The size of the system must be chosen such that the
-dimensions of the supercell are large enough to accommodate the
-[phonon](../redirects/Phonon.md) modes. Ideally, the time step
-([POTIM](../incar-tags/POTIM.md)) is chosen such that the frequency of the
-fastest phonon mode of interest can still be resolved. Run the [NVT
-simulation](../misc/NVT_ensemble.md) until the system is
-thermalized. Then, sample approximately 10 structures from the MD
-trajectory with a spacing of one or two times the self-correlation time
-and store the initial structures as [POSCAR](../input-files/POSCAR.md)
-files.
+<a href="/wiki/Thermostat" class="mw-redirect"
+title="Thermostat">thermostat</a> and populates all available
+<a href="/wiki/Phonon" class="mw-redirect" title="Phonon">phonon</a>
+modes of our system uniformly, as white noise is added to the velocity
+autocorrelation due to random forces in each time step. The size of the
+system must be chosen such that the dimensions of the supercell are
+large enough to accommodate the
+<a href="/wiki/Phonon" class="mw-redirect" title="Phonon">phonon</a>
+modes. Ideally, the time step ([POTIM](../incar-tags/POTIM.md)) is chosen
+such that the frequency of the fastest phonon mode of interest can still
+be resolved. Run the [NVT simulation](../misc/NVT_ensemble.md)
+until the system is thermalized. Then, sample approximately 10
+structures from the MD trajectory with a spacing of one or two times the
+self-correlation time and store the initial structures as
+[POSCAR](../input-files/POSCAR.md) files.
 
-### Step 2: Sample velocities from NVE simulations for each initial structure
+### Step 2: Sample velocities from NVE simulations for each initial structure\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: Sample velocities from NVE simulations for each initial structure">edit</a> \| (./index.php.md)\]
+
 For each initial structure, perform an [NVE
 simulation](../misc/NVE_ensemble.md) with
 [VELOCITY](../incar-tags/VELOCITY.md) = True . The minimum simulation
@@ -91,13 +126,20 @@ time requires roughly two slowest phonon cycles, which is dictated by
 the decay time of a preliminary trajectory's normalized velocity
 autocorrelation function to zero. The velocities are written to
 [vaspout.h5](../output-files/Vaspout.h5.md) and can be accessed using
-[py4vasp](https://vasp.at/py4vasp/latest/index.html) with
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> with
+
 
     import py4vasp as pv
     calc = pv.Calculation.from_path("path/to/calc")
     velocity_dict = calc.velocity[:].read()
 
-### Step 3: Compute normalized velocity autocorrelation function for each NVE simulation
+
+### Step 3: Compute normalized velocity autocorrelation function for each NVE simulation\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: Compute normalized velocity autocorrelation function for each NVE simulation">edit</a> \| (./index.php.md)\]
+
 The **normalized velocity autocorrelation function** for an
 \$N\$-particle system is given by \begin{equation}
 f(t)=\sum\_{s=1}^{types}f\_{s}(t)=\frac{\langle
@@ -110,14 +152,22 @@ trajectory. The sum over \$i\$ runs over the atoms within each species,
 and the sum \$s\$ is over all atomic species contained in the simulated
 system.
 
-### Step 4: Compute the power spectrum for each normalized velocity autocorrelation function
+### Step 4: Compute the power spectrum for each normalized velocity autocorrelation function\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 4: Compute the power spectrum for each normalized velocity autocorrelation function">edit</a> \| (./index.php.md)\]
+
 The phonon spectral function is the power spectrum of \$f_{s}(t)\$ and
 is obtained by performing the following Fourier transformation:
 \begin{equation} g(\omega)=\sum\_{s=1}^{types}g\_{s}(\omega)=\left\|
 \sum\_{s=1}^{types}\int\_{-\infty}^{\infty}f\_{s}(t)e^{-i\omega
 t}\right\|^{2}. \end{equation}
 
-### Step 5: Compute averages and check for convergence
+### Step 5: Compute averages and check for convergence\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 5: Compute averages and check for convergence">edit</a> \| (./index.php.md)\]
+
 To check for convergence, \$f(t)\$ and \$g(\omega)\$ obtained for each
 [NVE trajectory](../misc/NVE_ensemble.md) can be successively
 averaged. To this end, plot a single trajectory, compared to an average
@@ -126,10 +176,18 @@ repeated to generate additional data to reach the desired accuracy.
 
 |  |
 |----|
-| **Tip:** For further information on phonon signal analysis Ref^([\[2\]](#cite_note-lahnsteiner:prb:2022-2)) might be a helpful source. |
+| **Tip:** For further information on phonon signal analysis Ref<sup>[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup> might be a helpful source. |
 
-## Example
-### Setup and auxilary scripts
+## Example\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Example">edit</a> \| (./index.php.md)\]
+
+### Setup and auxilary scripts\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=8"
+class="mw-editsection-visualeditor"
+title="Edit section: Setup and auxilary scripts">edit</a> \| (./index.php.md)\]
+
 First, create thermalized initial structures. A simple
 [INCAR](../input-files/INCAR.md) file, which will perform an [NVT
 simulation](../misc/NVT_ensemble.md) could look as follows
@@ -199,7 +257,9 @@ for the analysis scripts of the next section.
 The following Python script can be used to compute normalized
 velocity-autocorrelation functions
 
+
 **Click to show ComputeCorrelation.py**
+
 
     import numpy as np
     class AutoCorrelation:
@@ -263,11 +323,14 @@ velocity-autocorrelation functions
                     counter[ t-dt ] += 1
             return corr_func / counter
 
+
 The following python script can be used to obtain the phonon density of
 states by computing the power spectra of the normalized velocity auto
 correlation functions.
 
+
 **Click to show PhononDOS.py**
+
 
     import sys
     import py4vasp
@@ -380,6 +443,7 @@ correlation functions.
          x.write_atom_ps()
          x.write_atom_ac()
 
+
 The **PhononDOS.py** script can be used to compute the phonon spectral
 function for a given [NVE simulation](../misc/NVE_ensemble.md)
 folder containing an [vaspout.h5](../output-files/Vaspout.h5.md) file
@@ -394,11 +458,22 @@ The written files will contain the frequency in `THz` as the first
 column. The second column will contain the phonon spectra computed as
 the power spectrum of the velocity autocorrelation function.
 
-### Anharmonic ratteling in CsPbBr\$\_{3}\$
-[![](https://vasp.at/wiki/images/thumb/8/85/CsPbBr3PhononDOS.png/140px-CsPbBr3PhononDOS.png)](https://vasp.at/wiki/File:CsPbBr3PhononDOS.png)
+### Anharmonic ratteling in CsPbBr\$\_{3}\$\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=9"
+class="mw-editsection-visualeditor"
+title="Edit section: Anharmonic ratteling in CsPbBr$_{3}$">edit</a> | (./index.php.md)\]
 
-Fig. 2: Snapshot of a \$2 \times 2 \times 2\$ CsPbBr\$\_{3}\$ simulation
-box at 500K as used in the simulations for the convergence analysis.
+<figure typeof="mw:File/Thumb">
+<a href="/wiki/File:CsPbBr3PhononDOS.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/8/85/CsPbBr3PhononDOS.png/140px-CsPbBr3PhononDOS.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/thumb/8/85/CsPbBr3PhononDOS.png/210px-CsPbBr3PhononDOS.png 1.5x, /wiki/images/thumb/8/85/CsPbBr3PhononDOS.png/280px-CsPbBr3PhononDOS.png 2x"
+width="140" height="153" /></a>
+<figcaption>Fig. 2: Snapshot of a $2 \times 2 \times 2$ CsPbBr$_{3}$
+simulation box at 500K as used in the simulations for the convergence
+analysis.</figcaption>
+</figure>
 
 In the following the convergence of the phonon DOS will be exemplified
 on the CsPbBr\$\_{3}\$ in the cubic phase at 500K. A snapshot of the
@@ -423,41 +498,68 @@ frequencies coupling to optical phonon modes formed by the oscillations
 of the lead bromide framework.
 
 For further information it is advised to take a look at
-Ref^([\[2\]](#cite_note-lahnsteiner:prb:2022-2)) or
-Ref^([\[3\]](#cite_note-lahnsteiner:jpcc:2024-3)) in which Cs\$^{+}\$
-rattling modes were tuned to adjust the thermal conductivity of the
-material.
+Ref<sup>[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup>
+or
+Ref<sup>[\[3\]](#cite_note-lahnsteiner:jpcc:2024-3)</sup>
+in which Cs\$^{+}\$ rattling modes were tuned to adjust the thermal
+conductivity of the material.
 
-[![](https://vasp.at/wiki/images/thumb/1/17/AtomReslovedPhononDOS.png/500px-AtomReslovedPhononDOS.png)](https://vasp.at/wiki/File:AtomReslovedPhononDOS.png)
-
-Fig. 3: **Left:** Shows atom-resolved normalized velocity
-autocorrelation function for CsPbBr\$\_{3}\$ at 500K. **Right:**
-Atom-resolved phonon DOS for CsPbBr\$\_{3}\$ at 500K.
-
-  
-
-## References
-1.  [↑](#cite_ref-reissland:book:1973_1-0) [J. A. *Reissland The Physics
-    of
-    Phonons*](https://www.abebooks.com/9780471715856/Physics-Phonons-J.A-Reissland-0471715859/plp)
-2.  ↑ ^([a](#cite_ref-lahnsteiner:prb:2022_2-0))
-    ^([b](#cite_ref-lahnsteiner:prb:2022_2-1))
-    ^([c](#cite_ref-lahnsteiner:prb:2022_2-2)) [J. Lahnsteiner and M.
-    Bokdam, Phys. Rev. B **105**, 024302
-    (2022).](https://doi.org/10.1103/PhysRevB.105.024302)
-3.  [↑](#cite_ref-lahnsteiner:jpcc:2024_3-0) [J. Lahnsteiner, M. Rang,
-    and M. Bokdam, J. Phys. Chem. C **128**, 1341
-    (2024).](https://doi.org/10.1021/acs.jpcc.3c06590)
+<figure class="mw-halign-center" typeof="mw:File/Thumb">
+<a href="/wiki/File:AtomReslovedPhononDOS.png"
+class="mw-file-description"><img
+src="https://vasp.at/wiki/images/thumb/1/17/AtomReslovedPhononDOS.png/500px-AtomReslovedPhononDOS.png"
+class="mw-file-element" decoding="async"
+srcset="/wiki/images/1/17/AtomReslovedPhononDOS.png 1.5x" width="500"
+height="375" /></a>
+<figcaption>Fig. 3: <strong>Left:</strong> Shows atom-resolved
+normalized velocity autocorrelation function for CsPbBr$_{3}$ at 500K.
+<strong>Right:</strong> Atom-resolved phonon DOS for CsPbBr$_{3}$ at
+500K.</figcaption>
+</figure>
 
   
 
-## Related tags and articles
-[Molecular-dynamics
-calculations](../redirects/Molecular_dynamics_calculations.md),
+## References\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=10"
+class="mw-editsection-visualeditor"
+title="Edit section: References">edit</a> \| (./index.php.md)\]
+
+
+1.  [↑](#cite_ref-reissland:book:1973_1-0)
+    <a
+    href="https://www.abebooks.com/9780471715856/Physics-Phonons-J.A-Reissland-0471715859/plp"
+    class="external text" rel="nofollow">J. A. <em>Reissland The Physics of
+    Phonons</em></a>
+2.  ↑
+    <sup>[a](#cite_ref-lahnsteiner:prb:2022_2-0)</sup>
+    <sup>[b](#cite_ref-lahnsteiner:prb:2022_2-1)</sup>
+    <sup>[c](#cite_ref-lahnsteiner:prb:2022_2-2)</sup>
+    <a href="https://doi.org/10.1103/PhysRevB.105.024302"
+    class="external text" rel="nofollow">J. Lahnsteiner and M. Bokdam, Phys.
+    Rev. B <strong>105</strong>, 024302 (2022).</a>
+3.  [↑](#cite_ref-lahnsteiner:jpcc:2024_3-0)
+    <a href="https://doi.org/10.1021/acs.jpcc.3c06590" class="external text"
+    rel="nofollow">J. Lahnsteiner, M. Rang, and M. Bokdam, J. Phys. Chem. C
+    <strong>128</strong>, 1341 (2024).</a>
+
+
+  
+
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=11"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
+title="Molecular dynamics calculations">Molecular-dynamics
+calculations</a>,
 
 [Computing the phonon dispersion and
 DOS](Computing_the_phonon_dispersion_and_DOS.md)
 
 [Langevin thermostat](Langevin_thermostat.md)
 
-[Ensembles](../redirects/Ensembles.md)
+<a href="/wiki/Ensembles" class="mw-redirect"
+title="Ensembles">Ensembles</a>
+
+

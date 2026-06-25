@@ -2,7 +2,10 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # BEXT
-BEXT = \[real\] ( \[real\] \[real\] ) 
+
+
+BEXT = \[real\] ( \[real\]
+\[real\] ) 
 
 |  |  |  |
 |----|----|----|
@@ -14,9 +17,9 @@ Description: Specifies an external magnetic field in eV.
 
 ------------------------------------------------------------------------
 
-BEXT tag sets an external magnetic field that acts on the electrons in a
-Zeeman-like manner. An additional potential of the following form
-carries this interaction:
+BEXT tag sets an external
+magnetic field that acts on the electrons in a Zeeman-like manner. An
+additional potential of the following form carries this interaction:
 
 - For spin-polarized calculations ([ISPIN](ISPIN.md) = 2):
 
@@ -24,58 +27,76 @@ $V^{\uparrow} = V^{\uparrow} + B_{\rm ext}$
 
 $V^{\downarrow} = V^{\downarrow} - B_{\rm ext}$
 
-and $B_{\rm ext}$ = BEXT (in eV).
+and $B_{\rm ext}$
+= BEXT (in eV).
 
 - For noncollinear calculations
   ([LNONCOLLINEAR](LNONCOLLINEAR.md) = .TRUE.):
 
-$V_{\alpha\beta} = V_{\alpha\beta} +
-\mathbf{B}_{\rm ext} \cdot \mathbf{\sigma}_{\alpha \beta}$
+$V_{\alpha\beta} = V_{\alpha\beta} + \mathbf{B}_{\rm ext} \cdot
+\mathbf{\sigma}_{\alpha \beta}$
 
-where $\mathbf{B}_{\rm ext}=({B}^1_{\rm ext},
-{B}^2_{\rm ext}, {B}^3_{\rm ext})^T$ is given by
+where $\mathbf{B}_{\rm
+ext}=({B}^1_{\rm ext}, {B}^2_{\rm ext}, {B}^3_{\rm ext})^T$ is given by
 
-[TABLE]
+<table
+style="white-space: pre; width:100%; table-layout: fixed; font-family: monospace; line-height: 1em; border-spacing: 0; padding: 0; margin: 0; background-color: var(--vCB-bg); color: var(--vdefault-text); border-width: 1px; border-style: solid; border-color: var(--vCB-border);">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><div
+style="width: calc(100% - 3*1em); overflow-x: auto; float: left; padding: 1em">
+<span class="mw-selflink selflink"><span
+style="color:var(--vdefault-text)">BEXT</span></span> = B1 B2 B3 ! in eV
+</div></td>
+</tr>
+</tbody>
+</table>
 
-and $\mathbf{\sigma}$ is the vector of
-Pauli matrices ([SAXIS](SAXIS.md), default:
-$\sigma_1=\hat x$,
-$\sigma_2 =\hat y$,
-$\sigma_3 = \hat z$).
+and $\mathbf{\sigma}$ is the vector of Pauli matrices
+([SAXIS](SAXIS.md), default: $\sigma_1=\hat x$, $\sigma_2 =\hat y$, $\sigma_3 = \hat z$).
 
 The effect of the above is most easily understood for the collinear case
 ([ISPIN](ISPIN.md)=2): The eigenenergies of spin-up states
-are raised by $B_{\rm ext}$ eV, whereas
-the eigenenergies of spin-down states are lowered by the same amount.
-The total energy changes by:
+are raised by $B_{\rm ext}$
+eV, whereas the eigenenergies of spin-down states are lowered by the
+same amount. The total energy changes by:
 
-$\Delta E = (n^{\uparrow} - n^{\downarrow})
-B_{\rm ext}$ eV
+$\Delta E = (n^{\uparrow} - n^{\downarrow}) B_{\rm ext}$ eV
 
-where $n^{\uparrow}$ and
-$n^{\downarrow}$ are the number of up-
-and down-spin electrons in the system.
+where $n^{\uparrow}$
+and $n^{\downarrow}$ are the number of up- and down-spin electrons in the
+system.
 
-BEXT is applied during the self-consistent [electronic
-minimization](../redirects/Electronic_minimization.md)
-and effectively shifts the eigenenergies of the spin-up and spin-down
-states w.r.t. each other at each step. Consequently, the electrons
-redistribute (changing the occupancies) *and* the density changes. The
-change in the density (,e.g., charge density and magnetization) also
-affects the scf potential and KS orbitals. For a rigid-band Zeeman
-splitting, converge the charge density with BEXT=0 and restart with
-BEXT$\neq$0 and fixed charge density
-([ICHARG](ICHARG.md)=11).
+BEXT is applied during the
+self-consistent
+<a href="/wiki/Electronic_minimization" class="mw-redirect"
+title="Electronic minimization">electronic minimization</a> and
+effectively shifts the eigenenergies of the spin-up and spin-down states
+w.r.t. each other at each step. Consequently, the electrons redistribute
+(changing the occupancies) *and* the density changes. The change in the
+density (,e.g., charge density and magnetization) also affects the scf
+potential and KS orbitals. For a rigid-band Zeeman splitting, converge
+the charge density with BEXT=0
+and restart with
+BEXT$\neq$0 and
+fixed charge density ([ICHARG](ICHARG.md)=11).
 
-## Units
+## Units\[<a href="/wiki/index.php?title=BEXT&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Units">edit</a> \| (./index.php.md)\]
+
 For an applied magnetic field $B_0$, the
 energy difference between two Zeeman-splitted electronic states is given
 by:
 
 $\hbar \omega = g_e \mu_B B_0,$
 
-where $\mu_B$ is the Bohr magneton and
-$g_e$ is the electron spin *g*-factor.
+where $\mu_B$ is the
+Bohr magneton and $g_e$ is the
+electron spin *g*-factor.
 
 For [ISPIN](ISPIN.md)=2, rigid-band Zeeman-splitted states
 imply:
@@ -83,17 +104,23 @@ imply:
 $V^{\uparrow} - V^{\downarrow} = 2 B_{\rm ext}$
 
 This leads to the following relationship between our definition of
-$B_{\rm ext}$ (in eV) and the magnetic
-field $B_0$ (in T):
+$B_{\rm ext}$ (in eV) and the magnetic field
+$B_0$ (in T):
 
 $B_0 = \frac{2 B_{\rm ext}}{g_e \mu_B}$
 
-where $\mu_B$= 5.788 381 8060 x 10⁻⁵ eV
-T⁻¹, and $g_e$= 2.002 319 304 362 56.
+where $\mu_B$= 5.788
+381 8060 x 10<sup>-5</sup> eV T<sup>-1</sup>, and
+$g_e$= 2.002 319 304 362 56.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=BEXT&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ISPIN](ISPIN.md),
 [LNONCOLLINEAR](LNONCOLLINEAR.md),
 [SAXIS](SAXIS.md)
 
 ------------------------------------------------------------------------
+
+

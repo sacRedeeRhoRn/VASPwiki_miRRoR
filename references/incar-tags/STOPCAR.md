@@ -2,8 +2,11 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # STOPCAR
-Using the STOPCAR file it is possible to stop VASP during the program
-execution. If the STOPCAR file contains the line
+
+
+Using the STOPCAR file it is
+possible to stop VASP during the program execution. If the
+STOPCAR file contains the line
 
     LSTOP = .TRUE.
 
@@ -19,3 +22,5 @@ might contain non converged results.
 If possible use the first option.
 
 ------------------------------------------------------------------------
+
+

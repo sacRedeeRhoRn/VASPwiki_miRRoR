@@ -2,16 +2,20 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # LDAU
+
+
 LDAU = .TRUE. \| .FALSE.  
 Default: **LDAU** = .FALSE. 
 
-Description: LDAU=.TRUE. switches on DFT+U.
+Description: LDAU=.TRUE.
+switches on DFT+U.
 
 ------------------------------------------------------------------------
 
-LDAU is the main control tag to switch on DFT+U. Check
-[LDAUTYPE](LDAUTYPE.md) for an overview of the available
-methods. A typical setup in the INCAR file may include
+LDAU is the main control tag
+to switch on DFT+U. Check [LDAUTYPE](LDAUTYPE.md) for an
+overview of the available methods. A typical setup in the INCAR file may
+include
 
      LDAU      = .TRUE.
      LDAUTYPE  = 2 
@@ -22,18 +26,20 @@ methods. A typical setup in the INCAR file may include
 
 **Note on band-structure calculation**: The
 [CHGCAR](../input-files/CHGCAR.md) file contains only information up to
-angular momentum quantum number $l$=[LMAXMIX](LMAXMIX.md) for the [on-site PAW
-occupancy matrices](LDAUTYPE.md). When the
+angular momentum quantum number $l$=[LMAXMIX](LMAXMIX.md) for the [on-site
+PAW occupancy matrices](LDAUTYPE.md). When the
 [CHGCAR](../input-files/CHGCAR.md) file is read and kept fixed in the
 course of the calculations ([ICHARG](ICHARG.md)=11), the
 results will necessarily be not identical to a self-consistent run. The
 deviations are often large for DFT+U calculations. For the calculation
 of band structures within the DFT+U approach, it is hence strictly
 required to increase [LMAXMIX](LMAXMIX.md) to 4
-($d$ elements) and 6
-($f$ elements).
+($d$ elements) and 6 ($f$ elements).
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=LDAU&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [LDAUTYPE](LDAUTYPE.md), [LDAUL](LDAUL.md),
 [LDAUU](LDAUU.md), [LDAUJ](LDAUJ.md),
 [LDAUPRINT](LDAUPRINT.md),
@@ -43,3 +49,5 @@ required to increase [LMAXMIX](LMAXMIX.md) to 4
 tag](https://vasp.at/wiki/index.php/Special-Search/-LDAU-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

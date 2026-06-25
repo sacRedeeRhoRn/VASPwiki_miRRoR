@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Restart and output files cheat sheet
+
+
 VASP can continue a calculation from the converged results of a previous
 run instead of restarting the electronic minimization from scratch. The
 wavefunctions are reused through [ISTART](../incar-tags/ISTART.md) and the
@@ -29,16 +31,28 @@ Which restart files are written, and whether in the legacy format or in
 [LTAU](../incar-tags/LTAU.md), [LVTOT](../incar-tags/LVTOT.md),
 [LH5](../incar-tags/LH5.md), and [LCHARGH5](../incar-tags/LCHARGH5.md).
 
+
 ## Contents
 
-- [1 How the tags interact](#How_the_tags_interact)
-  - [1.1 Defaults](#Defaults)
-- [2 Overview table](#Overview_table)
-- [3 Recognizing which restart file was
-  read](#Recognizing_which_restart_file_was_read)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## How the tags interact
+- [1 How the tags
+  interact](#How_the_tags_interact)
+  - [1.1
+    Defaults](#Defaults)
+- [2 Overview
+  table](#Overview_table)
+- [3 Recognizing
+  which restart file was
+  read](#Recognizing_which_restart_file_was_read)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## How the tags interact\[<a
+href="/wiki/index.php?title=Restart_and_output_files_cheat_sheet&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: How the tags interact">edit</a> \| (./index.php.md)\]
+
 [LWAVE](../incar-tags/LWAVE.md), [LCHARG](../incar-tags/LCHARG.md),
 [LTAU](../incar-tags/LTAU.md), and [LVTOT](../incar-tags/LVTOT.md) decide
 **whether** the wavefunctions, the charge density, the kinetic energy
@@ -51,7 +65,8 @@ entirely. [LCHARGH5](../incar-tags/LCHARGH5.md) is the exception: rather
 than switching the format, it writes the charge density to
 [vaspwave.h5](../output-files/Vaspwave.h5.md) *in addition*, so that
 the density is available for plotting with
-[py4vasp](https://vasp.at/py4vasp/latest/index.html) while the restart
+<a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> while the restart
 information is still written to the legacy files.
 
 The files are written according to the following rules:
@@ -81,7 +96,11 @@ The files are written according to the following rules:
   [`LH5`](../incar-tags/LH5.md)` = .TRUE.`. Only OEP and hybrid-functional
   OEP calculations write [POT](../output-files/POT.md).
 
-### Defaults
+### Defaults\[<a
+href="/wiki/index.php?title=Restart_and_output_files_cheat_sheet&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Defaults">edit</a> \| (./index.php.md)\]
+
 The defaults of [LWAVE](../incar-tags/LWAVE.md),
 [LCHARG](../incar-tags/LCHARG.md), [LH5](../incar-tags/LH5.md), and
 [LVTOT](../incar-tags/LVTOT.md) are fixed and do not depend on the other
@@ -106,9 +125,14 @@ with [`LH5`](../incar-tags/LH5.md)` = .TRUE.` writes the charge density to
 
 |  |
 |----|
-| **Tip:** To plot the charge density with [py4vasp](https://vasp.at/py4vasp/latest/index.html) while still writing restart information to the legacy [WAVECAR](../input-files/WAVECAR.md), set [`LCHARGH5`](../incar-tags/LCHARGH5.md)` = .TRUE.` together with [`LH5`](../incar-tags/LH5.md)` = .FALSE.`. |
+| **Tip:** To plot the charge density with <a href="https://vasp.at/py4vasp/latest/index.html"
+class="external text" rel="nofollow">py4vasp</a> while still writing restart information to the legacy [WAVECAR](../input-files/WAVECAR.md), set [`LCHARGH5`](../incar-tags/LCHARGH5.md)` = .TRUE.` together with [`LH5`](../incar-tags/LH5.md)` = .FALSE.`. |
 
-## Overview table
+## Overview table\[<a
+href="/wiki/index.php?title=Restart_and_output_files_cheat_sheet&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Overview table">edit</a> \| (./index.php.md)\]
+
 The table gives an overview of written restart files for every
 combination of effective (i.e., after applying the defaults) tag values.
 ✓ marks a written file, — a file that is not written. The highlighted
@@ -153,7 +177,11 @@ and charge density)
 |----|
 | **Mind:** This page describes VASP 6.5 and later. HDF5 output ([vaspwave.h5](../output-files/Vaspwave.h5.md)) is available as of VASP 6.0, and additional datasets are written as of VASP 6.6.0. In VASP 6.0 to 6.4.2 the default of [LCHARG](../incar-tags/LCHARG.md) was `.NOT.`[LH5](../incar-tags/LH5.md), and some combinations with [`LH5`](../incar-tags/LH5.md)` = .TRUE.` still wrote the legacy [CHGCAR](../input-files/CHGCAR.md). |
 
-## Recognizing which restart file was read
+## Recognizing which restart file was read\[<a
+href="/wiki/index.php?title=Restart_and_output_files_cheat_sheet&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Recognizing which restart file was read">edit</a> \| (./index.php.md)\]
+
 At startup VASP reports on the standard output which restart files it
 found and read, just before the `entering main loop` line. The excerpts
 below are for the wavefunction and charge-density restart.
@@ -200,7 +228,11 @@ from wavefunction*); the charge density stored in
 [vaspwave.h5](../output-files/Vaspwave.h5.md) is not read (see [Known
 issues#KnownIssue73](../misc/Known_issues.md)).
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=Restart_and_output_files_cheat_sheet&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 Files: [WAVECAR](../input-files/WAVECAR.md),
 [CHGCAR](../input-files/CHGCAR.md), [CHG](../output-files/CHG.md),
 [TAUCAR](../input-files/TAUCAR.md), [POT](../output-files/POT.md),
@@ -211,3 +243,5 @@ Tags: [LWAVE](../incar-tags/LWAVE.md), [LCHARG](../incar-tags/LCHARG.md),
 [LCHARGH5](../incar-tags/LCHARGH5.md), [LTAU](../incar-tags/LTAU.md),
 [LVTOT](../incar-tags/LVTOT.md), [LH5](../incar-tags/LH5.md),
 [ISTART](../incar-tags/ISTART.md), [ICHARG](../incar-tags/ICHARG.md)
+
+

@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Relativistic corrections
+
+
+
 Redirect to:
 
 - [Category:Spin-orbit
   coupling](../categories/Category-Spin-orbit_coupling.md)
+
+

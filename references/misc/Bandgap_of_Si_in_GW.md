@@ -2,31 +2,49 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Bandgap of Si in GW
+
+
+
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
-bandgap of Si in GW \> [bandstructure of Si in GW
+bandgap of Si in
+GW \> [bandstructure of
+Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \>
-[Equilibrium volume of Si in the
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \> [Equilibrium volume of Si
+in the
 RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 ## Contents
 
-- [1 Task](#Task)
-- [2 Step 1: DFT groundstate
-  calculation](#Step_1:_DFT_groundstate_calculation)
-- [3 Step 2: obtain DFT virtual
-  orbitals](#Step_2:_obtain_DFT_virtual_orbitals)
-- [4 Step 3: the actual GW
-  calculation](#Step_3:_the_actual_GW_calculation)
+
+- [1
+  Task](#Task)
+- [2 Step 1: DFT
+  groundstate calculation](#Step_1:_DFT_groundstate_calculation)
+- [3 Step 2: obtain
+  DFT virtual orbitals](#Step_2:_obtain_DFT_virtual_orbitals)
+- [4 Step 3: the
+  actual GW calculation](#Step_3:_the_actual_GW_calculation)
   - [4.1 Beyond the
     random-phase-approximation](#Beyond_the_random-phase-approximation)
-  - [4.2 Beyond G₀W₀: GW₀](#Beyond_G0W0:_GW0)
-- [5 Download](#Download)
+  - [4.2 Beyond
+    G<sub>0</sub>W<sub>0</sub>:
+    GW<sub>0</sub>](#Beyond_G0W0:_GW0)
+- [5
+  Download](#Download)
 
-## Task
+
+## Task\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Task">edit</a> \| (./index.php.md)\]
+
 Calculation of the bandgap of Si using various flavours of GW.
 
 ------------------------------------------------------------------------
@@ -39,13 +57,17 @@ properties](Dielectric_properties_of_Si.md).
 
 To do GW calculations we have to follow a 3-step procedure.
 
-## Step 1: DFT groundstate calculation
+## Step 1: DFT groundstate calculation\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 1: DFT groundstate calculation">edit</a> \| (./index.php.md)\]
+
 Everything starts with a standard DFT groundstate calculation (in this
 case PBE).
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DFT)
 
-&nbsp;
+<!-- -->
 
     ISMEAR =  0
     SIGMA  =  0.05
@@ -53,7 +75,7 @@ case PBE).
 
 - [KPOINTS](../input-files/KPOINTS.md) (see KPOINTS.6)
 
-&nbsp;
+<!-- -->
 
     6x6x6
      0
@@ -71,7 +93,7 @@ or to save some time use a "quick-and-dirty" setup (take KPOINTS.4):
 
 - [POSCAR](../input-files/POSCAR.md)
 
-&nbsp;
+<!-- -->
 
     system Si
     5.430
@@ -83,7 +105,11 @@ or to save some time use a "quick-and-dirty" setup (take KPOINTS.4):
     0.00 0.00 0.00
     0.25 0.25 0.25
 
-## Step 2: obtain DFT virtual orbitals
+## Step 2: obtain DFT virtual orbitals\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 2: obtain DFT virtual orbitals">edit</a> \| (./index.php.md)\]
+
 To obtain a [WAVECAR](../input-files/WAVECAR.md) file with a reasonable
 number of virtual orbitals (50-100 per atom) we need to restart from the
 previous groundstate calculation with [ALGO](../incar-tags/ALGO.md)=*Exact*,
@@ -94,7 +120,7 @@ and manually set the number of bands by means of the
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.DIAG)
 
-&nbsp;
+<!-- -->
 
     ALGO = Exact
     NBANDS  = 64
@@ -115,14 +141,18 @@ them in the following. For instance
     cp WAVECAR WAVECAR.DIAG
     cp WAVEDER WAVEDER.DIAG
 
-## Step 3: the actual GW calculation
+## Step 3: the actual GW calculation\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Step 3: the actual GW calculation">edit</a> \| (./index.php.md)\]
+
 Restart from the [WAVECAR](../input-files/WAVECAR.md) and
 [WAVEDER](../input-files/WAVEDER.md) files of the previous calculation,
 with
 
 - [INCAR](../input-files/INCAR.md) (see INCAR.GW)
 
-&nbsp;
+<!-- -->
 
     # Frequency dependent dielectric tensor including
     # local field effects within the RPA (default) or
@@ -200,7 +230,11 @@ To quickly find the QP-energy of the highest lying occupied state, try
 
     ./gap_GW.sh OUTCAR
 
-### Beyond the random-phase-approximation
+### Beyond the random-phase-approximation\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: Beyond the random-phase-approximation">edit</a> \| (./index.php.md)\]
+
 To include local field effects beyond the random-phase-approximation in
 the description of the frequency dependent dielectric response function
 (local field effects in DFT) add the following line to your
@@ -211,12 +245,16 @@ the description of the frequency dependent dielectric response function
 and again restart from the [WAVECAR](../input-files/WAVECAR.md) and
 [WAVEDER](../input-files/WAVEDER.md) files from step 2.
 
-### Beyond G₀W₀: GW₀
-The most usual step beyond single-shot GW (G₀W₀) is to iterate the
-quasi-particle energies in the Greens functions. This is the socalled
-GW₀ approximation. To have VASP do, for instance, 4 iterations of the
-QP-energies in G, add the following line to the
-[INCAR](../input-files/INCAR.md) file:
+### Beyond G<sub>0</sub>W<sub>0</sub>: GW<sub>0</sub>\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Beyond G0W0: GW0">edit</a> \| (./index.php.md)\]
+
+The most usual step beyond single-shot GW (G<sub>0</sub>W<sub>0</sub>)
+is to iterate the quasi-particle energies in the Greens functions. This
+is the socalled GW<sub>0</sub> approximation. To have VASP do, for
+instance, 4 iterations of the QP-energies in G, add the following line
+to the [INCAR](../input-files/INCAR.md) file:
 
     NELM = 4
 
@@ -228,17 +266,30 @@ To quickly find the QP-energy of the highest lying occupied state after
 
     ./gap_GW.sh OUTCAR
 
-## Download
-[Si_GW_gap.tgz](https://vasp.at/wiki/images/d/d5/Si_GW_gap.tgz "Si GW gap.tgz")
+## Download\[<a
+href="/wiki/index.php?title=Bandgap_of_Si_in_GW&amp;veaction=edit&amp;section=7"
+class="mw-editsection-visualeditor"
+title="Edit section: Download">edit</a> \| (./index.php.md)\]
+
+<a href="/wiki/images/d/d5/Si_GW_gap.tgz" class="internal"
+title="Si GW gap.tgz">Si_GW_gap.tgz</a>
+
 
 [Overview](../tutorials/GW_and_ACFDT_-_Tutorial.md) \>
-bandgap of Si in GW \> [bandstructure of Si in GW
+bandgap of Si in
+GW \> [bandstructure of
+Si in GW
 (VASP2WANNIER90)](https://vasp.at/wiki/index.php/Bandstructure_of_Si_in_GW_(VASP2WANNIER90) "Bandstructure of Si in GW (VASP2WANNIER90)") \>
 [bandstructure of SrVO3 in
 GW](Bandstructure_of_SrVO3_in_GW.md)
- \> [CRPA of SrVO3](CRPA_of_SrVO3.md)  \>
-[Equilibrium volume of Si in the
+ \> [CRPA of
+SrVO3](CRPA_of_SrVO3.md)
+ \> [Equilibrium volume of Si
+in the
 RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
+
 Back to the [main page](The_VASP_Manual.md).
+
+

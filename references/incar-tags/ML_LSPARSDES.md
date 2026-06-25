@@ -2,14 +2,16 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_LSPARSDES
+
+
 ML_LSPARSDES = \[logical\]  
 Default: **ML_LSPARSDES** = .FALSE. 
 
 Description: Specifies whether angular-descriptor sparsification is
 enabled within the machine learning force field method.
 
-|                                                        |
-|--------------------------------------------------------|
+|  |
+|----|
 | **Mind:** This tag is only available as of VASP 6.4.3. |
 
 ------------------------------------------------------------------------
@@ -27,8 +29,8 @@ the following tags:
   descriptors:
   [ML_RDES_SPARSDES](ML_RDES_SPARSDES.md). This
   tag controls the extent of the sparsification.
-- The number of the highest eigenvalues $k$ to which the correlation is measured via the leverage
-  scoring:
+- The number of the highest eigenvalues $k$ to which
+  the correlation is measured via the leverage scoring:
   [ML_NRANK_SPARSDES](ML_NRANK_SPARSDES.md). This
   parameter usually does not need to be changed.
 
@@ -50,7 +52,11 @@ already contain much fewer descriptors than the standard descriptor
 sparsification for [ML_DESC_TYPE](ML_DESC_TYPE.md)=1
 results in noticeable accuracy loss.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_LSPARSDES&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_RDES_SPARSDES](ML_RDES_SPARSDES.md),
 [ML_NRANK_SPARSDES](ML_NRANK_SPARSDES.md),
@@ -58,3 +64,5 @@ results in noticeable accuracy loss.
 
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_EPS_LOW-_incategory-Examples)
+
+

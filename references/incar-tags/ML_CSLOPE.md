@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ML_CSLOPE
+
+
 ML_CSLOPE = \[real\]  
 Default: **ML_CSLOPE** = $0.2$ 
 
@@ -16,11 +18,16 @@ described here:
 
 The standard error of the history of maximum estimated errors of the
 forces ([ML_MHIS](ML_MHIS.md)) and it's slope must be below
-[ML_CSIG](ML_CSIG.md) and ML_CSLOPE so that an update of
+[ML_CSIG](ML_CSIG.md) and
+ML_CSLOPE so that an update of
 the threshold for the maximum estimated error of forces
 [ML_CTIFOR](ML_CTIFOR.md) can take place.
 
-## Related tags and articles
+## Related tags and articles\[<a
+href="/wiki/index.php?title=ML_CSLOPE&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [ML_LMLFF](ML_LMLFF.md),
 [ML_ICRITERIA](ML_ICRITERIA.md),
 [ML_CSIG](ML_CSIG.md), [ML_MHIS](ML_MHIS.md),
@@ -30,3 +37,5 @@ the threshold for the maximum estimated error of forces
 tag](https://vasp.at/wiki/index.php/Special-Search/-ML_CSLOPE-_incategory-Examples)
 
 ------------------------------------------------------------------------
+
+

@@ -2,6 +2,8 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # ALGO
+
+
 ALGO = \[string\]  
 Default: **ALGO** = Normal 
 
@@ -22,17 +24,18 @@ many-body method:
 
 ------------------------------------------------------------------------
 
-|                                    |
-|------------------------------------|
+|  |
+|----|
 | **Mind:** Available as of VASP 4.5 |
 
-The ALGO tag has two kinds of settings: For a ground-state calculation,
-it selects the **electronic-minimization algorithm** (see
-[Electronic-minimization
+The ALGO tag has two kinds of
+settings: For a ground-state calculation, it selects the
+**electronic-minimization algorithm** (see [Electronic-minimization
 algorithms](#Electronic-minimization_algorithms) section below); that
 may be one of the self-consistency-cycle minimizers, the direct
-optimizers, or the postprocessing modes. For [many-body perturbation
-theory](../redirects/Many-body_perturbation_theory.md),
+optimizers, or the postprocessing modes. For
+<a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
+title="Many-body perturbation theory">many-body perturbation theory</a>,
 it instead selects the [algorithm for response functions, the GW
 variant, BSE, time evolution, and ACFDT/RPA](#GWALGOS). The stopping
 criterion is set using [EDIFF](EDIFF.md) and
@@ -44,26 +47,38 @@ described below to judge the convergence.
 |----|
 | **Tip:** To recompute the density of states (DOS), obtain the projected DOS or carry out any postprocessing from existing orbitals (e.g., a [WAVECAR](../input-files/WAVECAR.md) from a previous run) *without* re-optimizing them, set [`NELM`](NELM.md)` = 1`, [`LDIAG`](LDIAG.md)` = False`, and `ALGO`` = None`. Or to additionally recompute the one-electron energies set `ALGO`` = Eigenval`. |
 
+
 ## Contents
 
-- [1 Electronic-minimization
-  algorithms](#Electronic-minimization_algorithms)
-  - [1.1 Recommendations](#Recommendations)
-- [2 Output during the electronic
-  minimization](#Output_during_the_electronic_minimization)
-  - [2.1 Line-search output (direct
-    optimizers)](#Line-search_output_(direct_optimizers))
-- [3 ALGO for response functions, GW, and
-  ACFDT/RPA](#ALGO_for_response_functions,_GW,_and_ACFDT/RPA)
-- [4 Related tags and articles](#Related_tags_and_articles)
 
-## Electronic-minimization algorithms
+- [1
+  Electronic-minimization
+  algorithms](#Electronic-minimization_algorithms)
+  - [1.1
+    Recommendations](#Recommendations)
+- [2 Output during
+  the electronic
+  minimization](#Output_during_the_electronic_minimization)
+  - [2.1
+    Line-search output (direct
+    optimizers)](#Line-search_output_(direct_optimizers))
+- [3 ALGO for
+  response functions, GW, and
+  ACFDT/RPA](#ALGO_for_response_functions,_GW,_and_ACFDT/RPA)
+- [4 Related tags
+  and articles](#Related_tags_and_articles)
+
+
+## Electronic-minimization algorithms\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=1"
+class="mw-editsection-visualeditor"
+title="Edit section: Electronic-minimization algorithms">edit</a> \| (./index.php.md)\]
+
 For a [self-consistent ground-state
 calculation](../tutorials/Setting_up_an_electronic_minimization.md),
-ALGO selects how the orbitals are optimized at each electronic step.
-Each value corresponds to a setting of the lower-level tag
-[IALGO](IALGO.md). The algorithms fall into two groups (see
-the *Class* column): the
+ALGO selects how the orbitals
+are optimized at each electronic step. Each value corresponds to a
+setting of the lower-level tag [IALGO](IALGO.md). The
+algorithms fall into two groups (see the *Class* column): the
 [self-consistency-cycle](../theory/Self-consistency_cycle.md)
 methods iterate the charge density with a [charge-density
 mixer](../categories/Category-Density_mixing.md), whereas
@@ -99,39 +114,47 @@ and `ov`/`vo`) are available in vasp.6 and select the corresponding
 vasp.5 algorithms. For more technical details, read
 [IALGO](IALGO.md) and [LDIAG](LDIAG.md).
 
-### Recommendations
-- **Most systems**: `ALGO`` = Normal` (blocked Davidson) is the most
-  robust choice and the default.
+### Recommendations\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=2"
+class="mw-editsection-visualeditor"
+title="Edit section: Recommendations">edit</a> \| (./index.php.md)\]
+
+- **Most systems**:
+  `ALGO`` = Normal` (blocked
+  Davidson) is the most robust choice and the default.
 - **Large systems and molecular dynamics**:
   [RMM-DIIS](../theory/RMM-DIIS.md) (`Fast` or `VeryFast`) reduces
-  the *O*(*N*³) orthonormalization cost and is faster for large cells;
-  combine with [`LREAL`](LREAL.md)` = Auto`. VeryFast needs
-  good initial orbitals (it uses a large
+  the *O*(*N*<sup>3</sup>) orthonormalization cost and is faster for
+  large cells; combine with [`LREAL`](LREAL.md)` = Auto`.
+  VeryFast needs good initial orbitals (it uses a large
   [NELMDL](NELMDL.md)) and is the least robust on its own.
-  For [MD calculations](../redirects/MD_calculations.md) and
-  [structure
+  For <a href="/wiki/MD_calculations" class="mw-redirect"
+  title="MD calculations">MD calculations</a> and [structure
   optimization](../tutorials/Structure_optimization.md)
   or metals, also mind that barely occupied bands are less optimized
   ([WEIMIN](WEIMIN.md)).
-- **[Magnetic materials](../redirects/Magnetic_materials.md),
-  [DFT+U](../redirects/DFT+U.md),
+- **<a href="/wiki/Magnetic_materials" class="mw-redirect"
+  title="Magnetic materials">Magnetic materials</a>,
+  <a href="/wiki/DFT%2BU" class="mw-redirect" title="DFT+U">DFT+U</a>,
   [meta-GGA](../categories/Category-Exchange-correlation_functionals.md) "Category:Exchange-correlation functionals"),
   [Hartree-Fock and hybrid
   functionals](../categories/Category-Exchange-correlation_functionals.md)_and_hybrid_functionals "Category:Exchange-correlation functionals")**:
   The [direct
   optimizers](../theory/Direct_optimization_of_the_orbitals.md)
-  `ALGO`` = All` (or `Conjugate`) are more robust and recommended; use
-  the improved line search ([`ISEARCH`](ISEARCH.md)` = 1`).
-  `ALGO`` = VeryFast` is **not** supported for hybrid functionals.
+  `ALGO`` = All` (or
+  `Conjugate`) are more robust and recommended; use the improved line
+  search ([`ISEARCH`](ISEARCH.md)` = 1`).
+  `ALGO`` = VeryFast` is
+  **not** supported for hybrid functionals.
 - **Metals or small-gap systems with Hartree–Fock / meta-GGA**: You may
-  try `ALGO`` = Damped` with an appropriate time step
-  ([TIME](TIME.md)) and a somewhat larger
-  [NBANDS](NBANDS.md), if other algorithms fail.
+  try `ALGO`` = Damped` with
+  an appropriate time step ([TIME](TIME.md)) and a somewhat
+  larger [NBANDS](NBANDS.md), if other algorithms fail.
 - **Potential-only functionals or methods** (e.g.,
   [`METAGGA`](METAGGA.md)` = MBJ` or
-  [LSFBXC](LSFBXC.md)): use `ALGO`` = Normal`. Because these
-  functionals provide only a potential and no consistent total energy,
-  the iterative
+  [LSFBXC](LSFBXC.md)): use
+  `ALGO`` = Normal`. Because
+  these functionals provide only a potential and no consistent total
+  energy, the iterative
   [self-consistency-cycle](../theory/Self-consistency_cycle.md)
   minimizers work by applying the Hamiltonian repeatedly without taking
   the expression of the energy into account.
@@ -149,18 +172,24 @@ vasp.5 algorithms. For more technical details, read
   [`LMAXMIX`](LMAXMIX.md)` = 6` for systems with *f*
   electrons.
 - **Preparing many empty states** (e.g., for
-  [GW](../redirects/GW_calculations.md) or
+  <a href="/wiki/GW_calculations" class="mw-redirect"
+  title="GW calculations">GW</a> or
   [RPA](../methods/ACFDT__RPA_calculations.md)), run
-  `ALGO`` = Exact` after a normal [ground-state
-  calculation](../redirects/Ground-state_calculations.md).
+  `ALGO`` = Exact` after a
+  normal <a href="/wiki/Ground-state_calculations" class="mw-redirect"
+  title="Ground-state calculations">ground-state calculation</a>.
 - **Postprocessing from a [WAVECAR](../input-files/WAVECAR.md)**:
-  `ALGO`` = Eigenval` recomputes one-electron energies and the [density
-  of
+  `ALGO`` = Eigenval`
+  recomputes one-electron energies and the [density of
   states](../categories/Category-Density_of_states.md);
-  `ALGO`` = None` recomputes occupancies and the [density of
+  `ALGO`` = None` recomputes
+  occupancies and the [density of
   states](../categories/Category-Density_of_states.md).
 
-## Output during the electronic minimization
+## Output during the electronic minimization\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=3"
+class="mw-editsection-visualeditor"
+title="Edit section: Output during the electronic minimization">edit</a> \| (./index.php.md)\]
+
 At each electronic step, VASP writes one line to standard output and to
 the [OSZICAR](../output-files/OSZICAR.md) file. For example:
 
@@ -200,8 +229,8 @@ The columns are:
 - **ncg**: number of evaluations of the Hamiltonian acting on an orbital
   (*H*Ψ) in this step.
 - **rms**: root-mean-square norm of the residual vector
-  $|(\mathbf{H}-\epsilon\mathbf{S})\Psi\rangle$, i.e., how well the current orbitals solve the eigenvalue
-  problem.
+  $|(\mathbf{H}-\epsilon\mathbf{S})\Psi\rangle$, i.e.,
+  how well the current orbitals solve the eigenvalue problem.
 - The **last column** depends on the algorithm:
   - For the iterative
     [self-consistency-cycle](../theory/Self-consistency_cycle.md)
@@ -216,10 +245,11 @@ The columns are:
     steps.
   - For the
     [direct-minimization](../theory/Direct_optimization_of_the_orbitals.md)
-    algorithms (`ALGO`` = All/Conjugate` and `Damped`), which update the
-    density directly without a density mixer, the column is headed
-    **ort** instead and reports the orthonormality error of the
-    orbitals.
+    algorithms
+    (`ALGO`` = All/Conjugate`
+    and `Damped`), which update the density directly without a density
+    mixer, the column is headed **ort** instead and reports the
+    orthonormality error of the orbitals.
 
 The electronic loop stops once the energy change **dE** drops below the
 threshold set by [EDIFF](EDIFF.md), or after
@@ -228,12 +258,37 @@ minimization](../tutorials/Setting_up_an_electronic_minimization.md)
 for guidance on choosing these tags, and [IALGO](IALGO.md)
 for further details on the algorithms.
 
-[TABLE]
+<table class="vasp-dark-link-panel"
+style="border: 0px solid var(--vblue); --box-emph-color: var(--vblue); padding: 5px; color: var(--vdefault-text-nb); background: var(--vblue-bg)">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong><span style="color: var(--vblue);">Tip:</span></strong> In
+order to judge convergence:
+<ul>
+<li>Plot the total energy <strong>E</strong> minus the final total
+energy (<strong>E</strong> of the last step) as a function of electronic
+steps. The decay should be exponential. You may observe accidental
+stopping or very slow convergence if <span class="smj-container"
+style="opacity:.5">$E-E_{final}$</span> is
+noisy.</li>
+<li>Plot <strong>rms(c)</strong> as a function of electronic steps
+<strong>N</strong>. Large values indicate the electronic density is
+still changing and perhaps fluctuating (charge sloshing).</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
-### Line-search output (direct optimizers)
-For `ALGO`` = All/Conjugate`, each step also prints the diagnostics of
-the conjugate-gradient line minimization
-([ISEARCH](ISEARCH.md)), for example:
+### Line-search output (direct optimizers)\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=4"
+class="mw-editsection-visualeditor"
+title="Edit section: Line-search output (direct optimizers)">edit</a> \| (./index.php.md)")\]
+
+For `ALGO`` = All/Conjugate`,
+each step also prints the diagnostics of the conjugate-gradient line
+minimization ([ISEARCH](ISEARCH.md)), for example:
 
     CGA:   8    -0.815350365436E+01   -0.26844E+00   -0.26700E+00   896   0.102E+00   0.183E-02
     gam= 0.117 g(H,U,f)=  0.861E-01 0.436E-02 0.112E-01 ort(H,U,f) =-0.290E-01 0.260E-01 0.476E-02
@@ -259,43 +314,58 @@ the conjugate-gradient line minimization
   lengths probed along the search direction and the corresponding total
   energies, from which the minimum is located.
 
-## ALGO for response functions, [GW](../redirects/GW_calculations.md), and [ACFDT/RPA](../methods/ACFDT__RPA_calculations.md)
+ 
+
+## ALGO for response functions, <a href="/wiki/GW_calculations" class="mw-redirect"
+title="GW calculations">GW</a>, and [ACFDT/RPA](../methods/ACFDT__RPA_calculations.md)\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=5"
+class="mw-editsection-visualeditor"
+title="Edit section: ALGO for response functions, GW, and ACFDT/RPA">edit</a> \| (./index.php.md)\]
+
 The following tags are available as of VASP.5.X.
 
-- `ALGO`` = CHI` calculates the response functions only.
+- `ALGO`` = CHI` calculates
+  the response functions only.
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = TDHF` selects TDHF (or
+- `ALGO`` = TDHF` selects TDHF
+  (or
   [TDDFT](../methods/Time-dependent_density-functional_theory_calculations.md))
-  calculations using the VASP internal Cassida code see [BSE
-  calculations](../redirects/BSE_calculations.md), (available
-  as of VASP.5.2.12)
+  calculations using the VASP internal Cassida code see
+  <a href="/wiki/BSE_calculations" class="mw-redirect"
+  title="BSE calculations">BSE calculations</a>, (available as of
+  VASP.5.2.12)
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = BSE` selects BSE calculations using the VASP internal
-  Cassida code see [BSE
-  calculations](../redirects/BSE_calculations.md), (available
-  as of VASP.5.4.1)
+- `ALGO`` = BSE` selects BSE
+  calculations using the VASP internal Cassida code see
+  <a href="/wiki/BSE_calculations" class="mw-redirect"
+  title="BSE calculations">BSE calculations</a>, (available as of
+  VASP.5.4.1)
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = Timeev` performs a delta-pulse in time and then performs
-  [timepropagation](../redirects/Timepropagation.md)
+- `ALGO`` = Timeev` performs a
+  delta-pulse in time and then performs
+  <a href="/wiki/Timepropagation" class="mw-redirect"
+  title="Timepropagation">timepropagation</a>
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = ACFDT` selects RPA total energy calculations see [ACFDT/RPA
+- `ALGO`` = ACFDT` selects RPA
+  total energy calculations see [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md)
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = RPA` synonymous to ACFDT see [ACFDT/RPA
+- `ALGO`` = RPA` synonymous to
+  ACFDT see [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md)
   (available as of VASP.5.3.1)
 
-GW tags have been renamed in VASP as follows
+GW tags have been renamed in VASP as follows 
+
 
 |                  |      |       |      |       |     |      |
 |------------------|------|-------|------|-------|-----|------|
@@ -303,113 +373,129 @@ GW tags have been renamed in VASP as follows
 | \>= 5.2.12, \< 6 | QPGW | QPGW0 | GW   | GW0   | N/A | N/A  |
 | \>= 6            | QPGW | QPGW0 | EVGW | EVGW0 | GWR | GW0R |
 
-- `ALGO`` = EVGW0` selects single-shot *G*₀*W*₀ calculations or
-  partially self-consistent *GW* calculations. The orbitals
-  (wavefunctions) of the previous groundstate calculations are
-  maintained, and [G0W0
-  calculations](../redirects/GW_calculations.md) are
-  performed. If [NELM](NELM.md) is set, several iterations are
-  performed, and the QP energies are updated in the calculation of *G*
-  (for details, see [EVGW0
-  calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = EVGW0` selects
+  single-shot *G*<sub>0</sub>*W*<sub>0</sub> calculations or partially
+  self-consistent *GW* calculations. The orbitals (wavefunctions) of the
+  previous groundstate calculations are maintained, and
+  <a href="/wiki/GW_calculations#G0W0" class="mw-redirect"
+  title="GW calculations">G0W0 calculations</a> are performed. If
+  [NELM](NELM.md) is set, several iterations are performed,
+  and the QP energies are updated in the calculation of *G* (for
+  details, see <a href="/wiki/GW_calculations#gw0" class="mw-redirect"
+  title="GW calculations">EVGW0 calculations</a>).
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = EVGW` selects partially self-consistent
-  (eigenvalue-self-consistent) *GW* calculations. The orbitals of the
-  previous ground-state calculation are maintained; over
-  [NELM](NELM.md) iterations the QP energies are updated in
-  the calculation of *G* AND *W* (for details, see [self-consistent EVGW
-  and QPGW calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = EVGW` selects
+  partially self-consistent (eigenvalue-self-consistent) *GW*
+  calculations. The orbitals of the previous ground-state calculation
+  are maintained; over [NELM](NELM.md) iterations the QP
+  energies are updated in the calculation of *G* AND *W* (for details,
+  see <a href="/wiki/GW_calculations#qpgw" class="mw-redirect"
+  title="GW calculations">self-consistent EVGW and QPGW calculations</a>).
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = QPGW0` selects self-consistent *GW* calculations including
-  off-diagonal components of the self-energy. A full update of the QP
-  energies AND one-electron orbitals is performed in the calculation of
-  *G* only (for details see [QPGW0
-  calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = QPGW0` selects
+  self-consistent *GW* calculations including off-diagonal components of
+  the self-energy. A full update of the QP energies AND one-electron
+  orbitals is performed in the calculation of *G* only (for details see
+  <a href="/wiki/GW_calculations#qpgw0" class="mw-redirect"
+  title="GW calculations">QPGW0 calculations</a>).
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = QPGW` selects self-consistent *GW* calculations, including
-  off-diagonal components of the self-energy. A full update of the QP
-  energies AND one-electron orbitals is performed in the calculations of
-  *G* AND *W* (for details, see [QPGW
-  calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = QPGW` selects
+  self-consistent *GW* calculations, including off-diagonal components
+  of the self-energy. A full update of the QP energies AND one-electron
+  orbitals is performed in the calculations of *G* AND *W* (for details,
+  see <a href="/wiki/GW_calculations#qpgw" class="mw-redirect"
+  title="GW calculations">QPGW calculations</a>).
 
 Following tags are available as of VASP.6
 
-- `ALGO`` = RPAR` selects low scaling RPA total energy calculations (for
-  details see [ACFDT/RPA
+- `ALGO`` = RPAR` selects low
+  scaling RPA total energy calculations (for details see [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md))
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = ACFDTR` synonym for RPAR (for details see [ACFDT/RPA
+- `ALGO`` = ACFDTR` synonym
+  for RPAR (for details see [ACFDT/RPA
   calculations](../methods/ACFDT__RPA_calculations.md))
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = ACFDTRK` in combination with
-  [`LMP2LT`](LMP2LT.md)` = True` selects the low scaling MP2
-  total energy calculations (for details see the [MP2 ground state
+- `ALGO`` = ACFDTRK` in
+  combination with [`LMP2LT`](LMP2LT.md)` = True` selects
+  the low scaling MP2 total energy calculations (for details see the
+  [MP2 ground state
   Tutorial](../tutorials/MP2_ground_state_calculation_-_Tutorial.md))
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = GW0R` selects self-consistent GW₀ calculations, where only
-  the Green's function *G* is updated from the corresponding Dyson. The
-  screened potential *W* remains unchanged after the first iteration.
+- `ALGO`` = GW0R` selects
+  self-consistent GW<sub>0</sub> calculations, where only the Green's
+  function *G* is updated from the corresponding Dyson. The screened
+  potential *W* remains unchanged after the first iteration.
   [NELM](NELM.md) iteration cycles are performed (see
-  [self-consistent GW
-  calculations](../redirects/GW_calculations.md)).
+  <a href="/wiki/GW_calculations#scGW0R" class="mw-redirect"
+  title="GW calculations">self-consistent GW calculations</a>).
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = GWR` selects self-consistent GW calculations, where both,
-  *G* and *W* are updated from the corresponding Dyson equation.
-  [NELM](NELM.md) iteration cycles are performed. (for details
-  see [self-consistent GW
-  calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = GWR` selects
+  self-consistent GW calculations, where both, *G* and *W* are updated
+  from the corresponding Dyson equation. [NELM](NELM.md)
+  iteration cycles are performed. (for details see
+  <a href="/wiki/GW_calculations#scGWR" class="mw-redirect"
+  title="GW calculations">self-consistent GW calculations</a>).
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = G0W0R` selects single-shot GW calculations, non-interacting
-  *G* and *W* are determined from Kohn-Sham system and
-  [NELM](NELM.md) tag is ignored. Use this tag for single-shot
-  QP energies and first-order corrections to the density matrix (for
-  details, see [single-shot GW
-  calculations](../redirects/GW_calculations.md)).
+- `ALGO`` = G0W0R` selects
+  single-shot GW calculations, non-interacting *G* and *W* are
+  determined from Kohn-Sham system and [NELM](NELM.md) tag is
+  ignored. Use this tag for single-shot QP energies and first-order
+  corrections to the density matrix (for details, see
+  <a href="/wiki/GW_calculations#G0W0R" class="mw-redirect"
+  title="GW calculations">single-shot GW calculations</a>).
 
-|                                        |
-|----------------------------------------|
+|  |
+|----|
 | **Important:** Changes as of VASP.6.3: |
 
 - [NELMGW](NELMGW.md) replaces [NELM](NELM.md) in
-  [self-consistent GW
-  calculations](../redirects/GW_calculations.md).
+  <a href="/wiki/GW_calculations#scGWR" class="mw-redirect"
+  title="GW calculations">self-consistent GW calculations</a>.
 
-&nbsp;
+<!-- -->
 
-- `ALGO`` = CRPA` selects [constrained RPA
+- `ALGO`` = CRPA` selects
+  [constrained RPA
   calculations](../theory/Constrained–random-phase–approximation_formalism.md).
 
-|                                          |
-|------------------------------------------|
+|  |
+|----|
 | **Important:** available as of VASP.6.4: |
 
-- `ALGO`` = EVGW0R` selects the low-scaling analog of EVGW0, that is the
-  low-scaling partially self-consistent GW calculations, where
-  non-interacting *G* and *W* are determined from Kohn-Sham system and
-  [NELMGW](NELMGW.md) specifies the number of
-  self-consistent loops for *G*. *W* is kept on the Kohn-Sham level.
+- `ALGO`` = EVGW0R` selects
+  the low-scaling analog of EVGW0, that is the low-scaling partially
+  self-consistent GW calculations, where non-interacting *G* and *W* are
+  determined from Kohn-Sham system and [NELMGW](NELMGW.md)
+  specifies the number of self-consistent loops for *G*. *W* is kept on
+  the Kohn-Sham level.
 
-## Related tags and articles
+## Related tags and articles\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=6"
+class="mw-editsection-visualeditor"
+title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
+
 [Setting up an electronic
 minimization](../tutorials/Setting_up_an_electronic_minimization.md),
-[BSE calculations](../redirects/BSE_calculations.md), [GW
-calculations](../redirects/GW_calculations.md),
+<a href="/wiki/BSE_calculations" class="mw-redirect"
+title="BSE calculations">BSE calculations</a>,
+<a href="/wiki/GW_calculations" class="mw-redirect"
+title="GW calculations">GW calculations</a>,
 [ACFDT/RPA_calculations](../methods/ACFDT__RPA_calculations.md)
 
 [IALGO](IALGO.md), [LDIAG](LDIAG.md),
@@ -418,3 +504,5 @@ calculations](../redirects/GW_calculations.md),
 
 [Workflows that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-ALGO-_incategory-HowTo)
+
+

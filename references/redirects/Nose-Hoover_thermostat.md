@@ -2,7 +2,12 @@
 <!-- © VASP wiki contributors. Licensed under GNU Free Documentation License 1.2 (GFDL 1.2). -->
 
 # Nose-Hoover thermostat
+
+
+
 Redirect to:
 
 - [Nosé-Hoover
   thermostat](../tutorials/Nosé-Hoover_thermostat.md)
+
+
