@@ -10,7 +10,7 @@ Converging this sampling is one of the essential tasks in many
 calculations concerning the
 <a href="/wiki/Electronic_minimization" class="mw-redirect"
 title="Electronic minimization">electronic minimization</a>. A [regular
-mesh](#Regular_k-point_mesh) is the most common choice to select **k**
+mesh](#regular-k-point-mesh) is the most common choice to select **k**
 points:
 
     Regular 4 x 4 x 4 mesh centered at Gamma 
@@ -28,7 +28,7 @@ often visualized along high-symmetry paths. Some external
 tools<sup>[\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2)</sup>
 help to identify these points for materials of any symmetry. Use the
 template below to setup [band-structure
-calculations](#Band-structure_calculations). Alternatively, use a
+calculations](#band-structure-calculations). Alternatively, use a
 [KPOINTS_OPT](KPOINTS_OPT.md) file to get the band
 structure as a postprocessing step after the regular calculation.
 
@@ -47,30 +47,30 @@ structure as a postprocessing step after the regular calculation.
 
 |  |
 |----|
-| **Tip:** If the KPOINTS file is not present, the tag [KSPACING](../incar-tags/KSPACING.md) determines the **k**-point sampling. Use that option for a quick first run but prefer generating a [regular mesh](#Regular_k-point_mesh) for production calculations. |
+| **Tip:** If the KPOINTS file is not present, the tag [KSPACING](../incar-tags/KSPACING.md) determines the **k**-point sampling. Use that option for a quick first run but prefer generating a [regular mesh](#regular-k-point-mesh) for production calculations. |
 
 
 ## Contents
 
 
 - [1 Coordinate
-  system](#Coordinate_system)
+  system](#coordinate-system)
 - [2 Explicit
-  **k**-point mesh](#Explicit_k-point_mesh)
+  **k**-point mesh](#explicit-k-point-mesh)
 - [3 Regular
-  **k**-point mesh](#Regular_k-point_mesh)
+  **k**-point mesh](#regular-k-point-mesh)
 - [4 Symmetry
-  reduction of the mesh](#Symmetry_reduction_of_the_mesh)
+  reduction of the mesh](#symmetry-reduction-of-the-mesh)
 - [5 Generalized
-  regular meshes](#Generalized_regular_meshes)
+  regular meshes](#generalized-regular-meshes)
 - [6 Band-structure
-  calculations](#Band-structure_calculations)
+  calculations](#band-structure-calculations)
 - [7 Automatic
-  **k**-point mesh](#Automatic_k-point_mesh)
+  **k**-point mesh](#automatic-k-point-mesh)
 - [8 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Coordinate system\[<a href="/wiki/index.php?title=KPOINTS&amp;veaction=edit&amp;section=1"
@@ -138,7 +138,7 @@ When an explicit **k**-point mesh is provided, VASP uses exactly the
 provided points. The primary use case of this mode is to look at
 particular features in the band structure, e.g., for effective mass
 calculations. For [regular meshes](#Regular_regular_k-point_mesh) and
-[band structures](#Band_structure_calculations), we recommend using the
+[band structures](#band-structure-calculations), we recommend using the
 automatic generation to avoid mistakes. Nevertheless, all other modes
 write the processed input in this format to the
 [IBZKPT](../output-files/IBZKPT.md) file, so understanding this format helps
@@ -159,7 +159,7 @@ example has the following format:
 - Provide the number of **k**
   points on the second line.
 - The first character on the third line specifies the [coordinate
-  system](#Coordinate_system). Use *C*,
+  system](#coordinate-system). Use *C*,
   *c*, *K*, or *k* to indicate Cartesian coordinates. Any other
   character is interpreted as fractional/reciprocal coordinates
   but we advise writing *fractional* or *reciprocal* to make this clear.
@@ -173,7 +173,7 @@ Use the explicit mode for
 
 - a (small) number of **k** points not forming a regular mesh.
 - the calculation of band structure when [the line
-  mode](#Band_structure_calculations) is not suitable (example: [hybrid
+  mode](#band-structure-calculations) is not suitable (example: [hybrid
   functionals](../misc/Si_bandstructure.md)).
 - the irreducible part of the <a href="#generalized_regular_meshes"
   class="mw-selflink-fragment">genereralized regular meshes</a>
@@ -420,7 +420,7 @@ starting from this template
     0.00 0.00 0.00
 
 The mode is activated by specifying the [coordinate
-system](#Coordinate_system) with the first nonblank character in line 3.
+system](#coordinate-system) with the first nonblank character in line 3.
 A *C*, *c*, *K* or *k* character determines that the generating basis
 vectors are in Cartesian coordinates. Use *r* or *R* to select the
 reciprocal coordinate system instead. The latter is also the default
@@ -434,7 +434,7 @@ VASP generates three vectors $\mathbf g_1$,
 $\mathbf g_2$, and $\mathbf g_3$
 from the coefficients $x_i$ given in
 line 4–6. Depending on the selected [coordinate
-system](#Coordinate_system) these vectors are either multiples of the
+system](#coordinate-system) these vectors are either multiples of the
 reciprocal lattice vectors $\mathbf b_i$
 (reciprocal) or simply multiplying the coefficients by
 $2\pi/a$ (Cartesian). Here $a$ is the
@@ -457,7 +457,7 @@ where VASP chooses the $N_i$ to
 include all possible points of the generating mesh in the first
 Brillouin zone.
 
-The [regular **k**-point meshes](#Regular_k-point_mesh) are a subset of
+The [regular **k**-point meshes](#regular-k-point-mesh) are a subset of
 the generalized regular meshes, for which
 
 $\mathbf g_i = \mathbf b_i / N_i~.$
@@ -489,7 +489,7 @@ A typical use-case for generalized regular meshes is to generate a
 **k**-point mesh based on the *conventional* cell of a particular
 Bravais lattice to be used with the *primitive* cell of that lattice
 (see the [subsection on symmetry
-considerations](#Symmetry_reduction_of_the_mesh)). As an example,
+considerations](#symmetry-reduction-of-the-mesh)). As an example,
 consider the primitive cell of a *body-centered orthorhombic* lattice:
 
 $A
@@ -602,7 +602,7 @@ this template
 - The line mode activates when the first nonblank character on the third
   line is an *L* or *l* (for *line
   mode*)
-- The fourth line defines the [coordinate system](#Coordinate_system).
+- The fourth line defines the [coordinate system](#coordinate-system).
   Use Cartesian (*C*, *c*, *K*, or *k*)
   or fractional (any other character) coordinates.
 - Afterwards, any pair of lines define one
@@ -615,7 +615,7 @@ this template
   the band structure plots.
 
 The generated **k**-point mesh depends on the selected [coordinate
-system](#Coordinate_system). VASP produces equidistant **k** points for
+system](#coordinate-system). VASP produces equidistant **k** points for
 each segment such that the total of points including the endpoints
 equals the required number. Specifically for the template above, 40
 points from $\Gamma$ to X,

@@ -23,12 +23,12 @@ calculation:
 
 <!-- -->
 
-- [Molecular dynamics](#Molecular_dynamics)
+- [Molecular dynamics](#molecular-dynamics)
   - `IBRION`` = 0`
 
 <!-- -->
 
-- [Structure optimization](#Structure_optimization)
+- [Structure optimization](#structure-optimization)
   - `IBRION`` = 1` RMM-DIIS
   - `IBRION`` = 2` conjugate
     gradient
@@ -37,7 +37,7 @@ calculation:
 
 <!-- -->
 
-- [Computing phonon modes](#Computing_the_phonon_modes)
+- [Computing phonon modes](#computing-the-phonon-modes)
   - `IBRION`` = 5` finite
     differences without symmetry (deprecated; use 6 instead)
   - `IBRION`` = 6` finite
@@ -49,7 +49,7 @@ calculation:
 
 <!-- -->
 
-- [Analyzing transition states](#Analyzing_transition_states)
+- [Analyzing transition states](#analyzing-transition-states)
   - `IBRION`` = 40`
     <a href="/wiki/IRC_calculations" class="mw-redirect"
     title="IRC calculations">intrinsic-reaction-coordinate calculations</a>
@@ -59,7 +59,7 @@ calculation:
 <!-- -->
 
 - [User-supplied interactive
-  changes](#Interactively_supplied_positions_and_lattice_vectors)
+  changes](#interactively-supplied-positions-and-lattice-vectors)
   - `IBRION`` = 11` from
     standard input
   - `IBRION`` = 12` from
@@ -72,18 +72,18 @@ calculation:
 
 
 - [1 Molecular
-  dynamics](#Molecular_dynamics)
+  dynamics](#molecular-dynamics)
 - [2 Structure
-  optimization](#Structure_optimization)
+  optimization](#structure-optimization)
 - [3 Computing the
-  phonon modes](#Computing_the_phonon_modes)
+  phonon modes](#computing-the-phonon-modes)
 - [4 Analyzing
-  transition states](#Analyzing_transition_states)
+  transition states](#analyzing-transition-states)
 - [5 Interactively
   supplied positions and lattice
-  vectors](#Interactively_supplied_positions_and_lattice_vectors)
+  vectors](#interactively-supplied-positions-and-lattice-vectors)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Molecular dynamics\[<a href="/wiki/index.php?title=IBRION&amp;veaction=edit&amp;section=1"

@@ -66,30 +66,30 @@ potential is a nonlocal operator as in the Hartree-Fock-Roothaan theory.
 
 - [1 Expressions of
   the Hartree-Fock potential for the plane-wave basis
-  set](#Expressions_of_the_Hartree-Fock_potential_for_the_plane-wave_basis_set)
+  set](#expressions-of-the-hartree-fock-potential-for-the-plane-wave-basis-set)
 - [2 Types of
-  potentials](#Types_of_potentials)
+  potentials](#types-of-potentials)
 - [3 Families of
-  hybrid functionals](#Families_of_hybrid_functionals)
+  hybrid functionals](#families-of-hybrid-functionals)
   - [3.1 HF
-    exchange at full range](#HF_exchange_at_full_range)
+    exchange at full range](#hf-exchange-at-full-range)
   - [3.2 HF
     exchange at short range (error-function
-    screening)](#HF_exchange_at_short_range_(error-function_screening))
+    screening)](#hf-exchange-at-short-range-error-function-screening))
   - [3.3 HF
     exchange at short range and long range with different mixings
     (error-function
-    screening)](#HF_exchange_at_short_range_and_long_range_with_different_mixings_(error-function_screening))
+    screening)](#hf-exchange-at-short-range-and-long-range-with-different-mixings-error-function-screening))
   - [3.4 HF
     exchange at long range (error-function
-    screening)](#HF_exchange_at_long_range_(error-function_screening))
+    screening)](#hf-exchange-at-long-range-error-function-screening))
   - [3.5 HF
     exchange at short range (exponential
-    screening)](#HF_exchange_at_short_range_(exponential_screening))
+    screening)](#hf-exchange-at-short-range-exponential-screening))
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ### Expressions of the Hartree-Fock potential for the plane-wave basis set\[<a

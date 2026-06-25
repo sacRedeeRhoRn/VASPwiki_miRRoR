@@ -36,16 +36,16 @@ Which restart files are written, and whether in the legacy format or in
 
 
 - [1 How the tags
-  interact](#How_the_tags_interact)
+  interact](#how-the-tags-interact)
   - [1.1
-    Defaults](#Defaults)
+    Defaults](#defaults)
 - [2 Overview
-  table](#Overview_table)
+  table](#overview-table)
 - [3 Recognizing
   which restart file was
-  read](#Recognizing_which_restart_file_was_read)
+  read](#recognizing-which-restart-file-was-read)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## How the tags interact\[<a

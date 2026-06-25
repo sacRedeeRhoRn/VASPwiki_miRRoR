@@ -56,27 +56,27 @@ available to pinpoint transition states in VASP.
 
 
 - [1 Static
-  methods](#Static_methods)
+  methods](#static-methods)
   - [1.1 Improved
-    dimer method](#Improved_dimer_method)
+    dimer method](#improved-dimer-method)
   - [1.2 Nudged
-    elastic bands](#Nudged_elastic_bands)
+    elastic bands](#nudged-elastic-bands)
   - [1.3 Intrinsic
-    reaction coordinate](#Intrinsic_reaction_coordinate)
+    reaction coordinate](#intrinsic-reaction-coordinate)
 - [2 Dynamic
-  methods](#Dynamic_methods)
+  methods](#dynamic-methods)
 - [3 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [3.1
-    Books](#Books)
+    Books](#books)
   - [3.2 How
-    to](#How_to)
+    to](#how-to)
   - [3.3
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [3.4
-    Lectures](#Lectures)
+    Lectures](#lectures)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Static methods\[<a

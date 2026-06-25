@@ -28,14 +28,14 @@ sheet](../tutorials/Restart_and_output_files_cheat_sheet.md).
 
 
 - [1
-  Format](#Format)
+  Format](#format)
   - [1.1 Magnetic
-    calculations](#Magnetic_calculations)
+    calculations](#magnetic-calculations)
 - [2 Molecular
   dynamics and structure relaxation
-  (IBRION)](#Molecular_dynamics_and_structure_relaxation_(IBRION))
+  (IBRION)](#molecular-dynamics-and-structure-relaxation-ibrion))
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Format\[<a href="/wiki/index.php?title=CHGCAR&amp;veaction=edit&amp;section=1"

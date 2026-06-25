@@ -23,27 +23,27 @@ page](../categories/Category-NMR.md) and
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
   - [2.1 PAW
-    pseudopotentials](#PAW_pseudopotentials)
+    pseudopotentials](#paw-pseudopotentials)
   - [2.2 Additional
-    tags](#Additional_tags)
+    tags](#additional-tags)
 - [3 Example
   scripts for convergence
-  tests](#Example_scripts_for_convergence_tests)
+  tests](#example-scripts-for-convergence-tests)
   - [3.1 Energetic
-    break criterion tests](#Energetic_break_criterion_tests)
+    break criterion tests](#energetic-break-criterion-tests)
   - [3.2
-    **k**-points tests](#k-points_tests)
+    **k**-points tests](#k-points-tests)
   - [3.3 Energy
-    cutoff tests](#Energy_cutoff_tests)
+    cutoff tests](#energy-cutoff-tests)
   - [3.4 Related
-    tags and articles](#Related_tags_and_articles)
+    tags and articles](#related-tags-and-articles)
   - [3.5
-    References](#References)
+    References](#references)
 
 
 ## Step-by-step instructions\[<a

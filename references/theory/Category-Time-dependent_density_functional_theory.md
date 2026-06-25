@@ -40,24 +40,24 @@ page](../methods/Time-dependent_density-functional_theory.md).
   - [1.3 Lanczos
     algorithm (IBSE = 3)](#Lanczos_algorithm_(IBSE_=_3))
   - [1.4 Scaling
-    with the system size](#Scaling_with_the_system_size)
+    with the system size](#scaling-with-the-system-size)
 - [2 Time-evolution
   or real-time TDDFT (ALGO =
   TIMEEV)](#Time-evolution_or_real-time_TDDFT_(ALGO_=_TIMEEV))
   - [2.1 Scaling
-    with the system size](#Scaling_with_the_system_size_2)
+    with the system size](#scaling-with-the-system-size-2)
 - [3 Dyson-equation
   TDDFT (ALGO = CHI)](#Dyson-equation_TDDFT_(ALGO_=_CHI))
   - [3.1 Scaling
-    with the system size](#Scaling_with_the_system_size_3)
+    with the system size](#scaling-with-the-system-size-2)
 - [4 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [4.1
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [4.2 How
-    to](#How_to)
+    to](#how-to)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Casida TDDFT ([`ALGO`](../incar-tags/ALGO.md)` = TDHF`)\[<a

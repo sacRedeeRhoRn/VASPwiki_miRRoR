@@ -49,13 +49,13 @@ gap.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
 
 
 - [1 Use
-  cases](#Use_cases)
+  cases](#use-cases)
 - [2
-  Caveats](#Caveats)
+  Caveats](#caveats)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Use cases\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=1"

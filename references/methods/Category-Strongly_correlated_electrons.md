@@ -33,26 +33,26 @@ Coulomb interaction U.
 
 - [1 Estimating the
   on-site Coulomb interaction
-  U](#Estimating_the_on-site_Coulomb_interaction_U)
+  U](#estimating-the-on-site-coulomb-interaction-u)
 - [2
-  DFT+U](#DFT+U)
+  DFT+U](#dftu)
 - [3 Dynamical
-  mean-field theory (DMFT)](#Dynamical_mean-field_theory_(DMFT))
+  mean-field theory (DMFT)](#dynamical-mean-field-theory-dmft))
 - [4 Other
-  methods](#Other_methods)
+  methods](#other-methods)
   - [4.1 Hybrid
-    functionals](#Hybrid_functionals)
+    functionals](#hybrid-functionals)
   - [4.2 Hybrid
     functionals + U](#Hybrid_functionals_+_U)
   - [4.3
     Quasi-particle GW
-    (QPGW)](#Quasi-particle_GW_(QPGW))
+    (QPGW)](#quasi-particle-gw-qpgw))
 - [5 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [5.1
-    Books](#Books)
+    Books](#books)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Estimating the on-site Coulomb interaction U\[<a
@@ -204,7 +204,7 @@ capture many-body effects beyond the reach of DFT+U, such as
 quasiparticle mass renormalization, Hubbard bands, and the Mott
 metal–insulator transition. The interaction parameter entering DMFT can
 be determined as discussed in [estimating the on-site Coulomb
-interaction U](#Estimating_the_on-site_Coulomb_interaction_U).
+interaction U](#estimating-the-on-site-coulomb-interaction-u).
 
 - Workflow for [NiO DFT+DMFT
   calculations](../tutorials/DFT+DMFT_calculations.md).

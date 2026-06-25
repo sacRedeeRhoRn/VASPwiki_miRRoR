@@ -19,17 +19,17 @@ An important historic paper is Kirkwood 1936
 
 
 - [1 Basic
-  theory](#Basic_theory)
+  theory](#basic-theory)
 - [2 Thermodynamic
   integration with harmonic
-  reference](#Thermodynamic_integration_with_harmonic_reference)
+  reference](#thermodynamic-integration-with-harmonic-reference)
 - [3 Thermodynamic
   integration using internal
-  coordinates](#Thermodynamic_integration_using_internal_coordinates)
+  coordinates](#thermodynamic-integration-using-internal-coordinates)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Basic theory\[<a

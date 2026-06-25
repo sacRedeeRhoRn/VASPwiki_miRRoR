@@ -21,16 +21,16 @@ orbitals.
 
 
 - [1 Enabling
-  spin-orbit coupling](#Enabling_spin-orbit_coupling)
+  spin-orbit coupling](#enabling-spin-orbit-coupling)
 - [2 When to
   include spin-orbit
-  coupling](#When_to_include_spin-orbit_coupling)
+  coupling](#when-to-include-spin-orbit-coupling)
 - [3 Magnetic
-  anisotropy energy](#Magnetic_anisotropy_energy)
+  anisotropy energy](#magnetic-anisotropy-energy)
 - [4 Band structure
-  and spin texture](#Band_structure_and_spin_texture)
+  and spin texture](#band-structure-and-spin-texture)
 - [5
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 
 
 ## Enabling spin-orbit coupling\[<a

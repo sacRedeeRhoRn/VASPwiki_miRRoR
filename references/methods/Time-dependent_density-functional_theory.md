@@ -31,51 +31,51 @@ reproducing the same density (the time-dependent Kohn-Sham system).
 
 - [1
   Linear-response
-  formalism](#Linear-response_formalism)
+  formalism](#linear-response-formalism)
   - [1.1
     Approximation
-    hierarchy](#Approximation_hierarchy)
+    hierarchy](#approximation-hierarchy)
 - [2 Casida
   equation formalism for
-  TDDFT](#Casida_equation_formalism_for_TDDFT)
+  TDDFT](#casida-equation-formalism-for-tddft)
   - [2.1
     Tamm-Dancoff
-    approximation](#Tamm-Dancoff_approximation)
+    approximation](#tamm-dancoff-approximation)
   - [2.2 Connection
     to the dielectric
-    function](#Connection_to_the_dielectric_function)
+    function](#connection-to-the-dielectric-function)
 - [3 Time-evolution
-  or real-time TDDFT](#Time-evolution_or_real-time_TDDFT)
+  or real-time TDDFT](#time-evolution-or-real-time-tddft)
   - [3.1
     Propagation of the time-dependent
-    coefficients](#Propagation_of_the_time-dependent_coefficients)
+    coefficients](#propagation-of-the-time-dependent-coefficients)
   - [3.2 Connection
     to the dielectric
-    function](#Connection_to_the_dielectric_function_2)
+    function](#connection-to-the-dielectric-function-1)
 - [4 Dyson equation
   (Linear response)
   TDDFT](#Dyson_equation_(Linear_response)_TDDFT)
 - [5 Approximations
   for the exchange-correlation
-  kernel](#Approximations_for_the_exchange-correlation_kernel)
+  kernel](#approximations-for-the-exchange-correlation-kernel)
   - [5.1 Adiabatic
-    approximation](#Adiabatic_approximation)
+    approximation](#adiabatic-approximation)
   - [5.2 Local
     exchange-correlation
-    kernel](#Local_exchange-correlation_kernel)
+    kernel](#local-exchange-correlation-kernel)
   - [5.3
     Exchange-correlation kernel from exact
-    exchange](#Exchange-correlation_kernel_from_exact_exchange)
+    exchange](#exchange-correlation-kernel-from-exact-exchange)
   - [5.4 Nanoquanta
-    kernel](#Nanoquanta_kernel)
+    kernel](#nanoquanta-kernel)
 - [6 TDDFT compared
-  to BSE](#TDDFT_compared_to_BSE)
+  to BSE](#tddft-compared-to-bse)
   - [6.1 Casida
-    TDDFT and BSE](#Casida_TDDFT_and_BSE)
+    TDDFT and BSE](#casida-tddft-and-bse)
 - [7 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [8
-  References](#References)
+  References](#references)
 
 
 ## Linear-response formalism\[<a
@@ -350,7 +350,7 @@ the new states is essential, as it is a functional of the time-dependent
 density.
 
 The same approximation hierarchy described in the [Approximation
-hierarchy](#Approximation_hierarchy) section applies to the
+hierarchy](#approximation-hierarchy) section applies to the
 time-evolution approach. The tags [LHARTREE](../incar-tags/LHARTREE.md),
 [LFXC](../incar-tags/LFXC.md), and [LADDER](../incar-tags/LADDER.md) control
 which interaction terms are included in the time-dependent Hamiltonian:
@@ -378,7 +378,7 @@ $\varepsilon_{ij}(\omega) = \delta_{ij} - \frac{4\pi e^2}{\Omega}
 
 Here, $\mu_{cv\mathbf{k}}^j$ is the dipole matrix element defined in the
 [connection to the dielectric
-function](#Connection_to_the_dielectric_function) above.
+function](#connection-to-the-dielectric-function) above.
 
 ## Dyson equation (Linear response) TDDFT\[<a
 href="/wiki/index.php?title=Time-dependent_density-functional_theory&amp;veaction=edit&amp;section=9"

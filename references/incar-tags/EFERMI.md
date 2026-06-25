@@ -18,13 +18,13 @@ recommended to use EFERMI = MIDGAP.
 
 
 - [1 Fermi energy
-  in semiconductors](#Fermi_energy_in_semiconductors)
+  in semiconductors](#fermi-energy-in-semiconductors)
 - [2 Fermi energy
-  in metals](#Fermi_energy_in_metals)
+  in metals](#fermi-energy-in-metals)
 - [3 Fixed Fermi
-  energy](#Fixed_Fermi_energy)
+  energy](#fixed-fermi-energy)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Fermi energy in semiconductors\[<a href="/wiki/index.php?title=EFERMI&amp;veaction=edit&amp;section=1"

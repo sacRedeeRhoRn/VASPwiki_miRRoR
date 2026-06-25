@@ -51,26 +51,26 @@ the orthonormalization of the wave functions.
 
 - [1
   Hardware/Software
-  requirements](#Hardware/Software_requirements)
+  requirements](#hardwaresoftware-requirements)
   - [1.1 Hardware
-    requirements](#Hardware_requirements)
+    requirements](#hardware-requirements)
   - [1.2
     Recommended software
-    stack](#Recommended_software_stack)
+    stack](#recommended-software-stack)
 - [2
-  Usage](#Usage)
+  Usage](#usage)
   - [2.1
-    Building](#Building)
+    Building](#building)
   - [2.2
-    Running](#Running)
+    Running](#running)
 - [3
-  People](#People)
+  People](#people)
 - [4
-  Publications](#Publications)
+  Publications](#publications)
 - [5 Additional
-  information](#Additional_information)
+  information](#additional-information)
 - [6 Related Tags
-  and Sections](#Related_Tags_and_Sections)
+  and Sections](#related-tags-and-sections)
 
 
 ## Hardware/Software requirements\[<a

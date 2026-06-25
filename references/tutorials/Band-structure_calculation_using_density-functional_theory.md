@@ -28,48 +28,48 @@ functional](../categories/Category-Exchange-correlation_functionals.md).
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Option A:
-    Single run](#Option_A:_Single_run)
+    Single run](#option-a-single-run)
     - [1.1.1 Step
-      1: Prepare SCF settings](#Step_1:_Prepare_SCF_settings)
+      1: Prepare SCF settings](#step-1-prepare-scf-settings)
     - [1.1.2 Step
-      2: High-symmetry path](#Step_2:_High-symmetry_path)
+      2: High-symmetry path](#step-2-high-symmetry-path)
     - [1.1.3 Step
-      3: Run the calculation](#Step_3:_Run_the_calculation)
+      3: Run the calculation](#step-3-run-the-calculation)
     - [1.1.4 Step
       4: Plot the band
-      structure](#Step_4:_Plot_the_band_structure)
+      structure](#step-4-plot-the-band-structure)
   - [1.2 Option B:
-    Split run](#Option_B:_Split_run)
+    Split run](#option-b-split-run)
     - [1.2.1 Step
       1: Set up and perform a full SCF
-      calculation](#Step_1:_Set_up_and_perform_a_full_SCF_calculation)
+      calculation](#step-1-set-up-and-perform-a-full-scf-calculation)
     - [1.2.2 Step 2
       (optionally): Create a
       backup](#Step_2_(optionally):_Create_a_backup)
     - [1.2.3 Step
-      3: High-symmetry path](#Step_3:_High-symmetry_path)
+      3: High-symmetry path](#step-3-high-symmetry-path)
     - [1.2.4 Step
       4: Prepare a restart with fixed
-      density](#Step_4:_Prepare_a_restart_with_fixed_density)
+      density](#step-4-prepare-a-restart-with-fixed-density)
     - [1.2.5 Step
       5: Run the NSCF
-      calculation](#Step_5:_Run_the_NSCF_calculation)
+      calculation](#step-5-run-the-nscf-calculation)
     - [1.2.6 Step
       6: Plot the band
-      structure](#Step_6:_Plot_the_band_structure)
+      structure](#step-6-plot-the-band-structure)
 - [2 Choosing a
-  high-symmetry path](#Choosing_a_high-symmetry_path)
+  high-symmetry path](#choosing-a-high-symmetry-path)
 - [3
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [4 Practical
-  examples](#Practical_examples)
+  examples](#practical-examples)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Step-by-step instructions\[<a
@@ -79,8 +79,8 @@ title="Edit section: Step-by-step instructions">edit</a> \| (./index.php.md)\]
 
 |  |
 |----|
-| **Tip:** [Option A: Single run](#Option_A:_Single_run) is convenient, because it does not require restarting the calculation. On the other hand, there is less control, e.g., over the used algorithm ([ALGO](../incar-tags/ALGO.md)), and depending on the number of **k** points on the regular mesh and the <a href="/wiki/Parallelization" class="mw-redirect"
-title="Parallelization">parallelization</a>, it can be less performant than [Option B: Split run](#Option_B:_Split_run). |
+| **Tip:** [Option A: Single run](#option-a-single-run) is convenient, because it does not require restarting the calculation. On the other hand, there is less control, e.g., over the used algorithm ([ALGO](../incar-tags/ALGO.md)), and depending on the number of **k** points on the regular mesh and the <a href="/wiki/Parallelization" class="mw-redirect"
+title="Parallelization">parallelization</a>, it can be less performant than [Option B: Split run](#option-b-split-run). |
 
 ### Option A: Single run\[<a
 href="/wiki/index.php?title=Band-structure_calculation_using_density-functional_theory&amp;veaction=edit&amp;section=2"
@@ -110,7 +110,7 @@ href="/wiki/index.php?title=Band-structure_calculation_using_density-functional_
 class="mw-editsection-visualeditor"
 title="Edit section: Step 2: High-symmetry path">edit</a> \| (./index.php.md)\]
 
-[Choose a high-symmetry path](#Choosing_a_high-symmetry_path) and set it
+[Choose a high-symmetry path](#choosing-a-high-symmetry-path) and set it
 in the [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file. Both
 [KPOINTS](../input-files/KPOINTS.md) and
 [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) define crystal momenta:
@@ -169,7 +169,7 @@ of the electronic charge and possibly the magnetization density. Both
 are written to the [CHGCAR](../input-files/CHGCAR.md) file during an
 initial self-consistent-field (SCF) run. From this converged
 [CHGCAR](../input-files/CHGCAR.md) file, we can obtain the eigenvalues at
-the desired [high-symmetry path](#Choosing_a_high-symmetry_path) via a
+the desired [high-symmetry path](#choosing-a-high-symmetry-path) via a
 subsequent non-self-consistent-field (NSCF) run at fixed density.
 
 #### Step 1: Set up and perform a full SCF calculation\[<a
@@ -221,7 +221,7 @@ href="/wiki/index.php?title=Band-structure_calculation_using_density-functional_
 class="mw-editsection-visualeditor"
 title="Edit section: Step 3: High-symmetry path">edit</a> \| (./index.php.md)\]
 
-[Choose a high-symmetry path](#Choosing_a_high-symmetry_path) and set it
+[Choose a high-symmetry path](#choosing-a-high-symmetry-path) and set it
 in the [KPOINTS](../input-files/KPOINTS.md) file.
 
 #### Step 4: Prepare a restart with fixed density\[<a
@@ -274,7 +274,7 @@ Perform the NSCF calculation with the prepared files. This will read the
 
 |  |
 |----|
-| **Mind:** Any existing [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file triggers **[Option A](#Option_A:_Single_run)** unless you disable this by setting [`LKPOINTS_OPT`](../incar-tags/LKPOINTS_OPT.md)` = F`. |
+| **Mind:** Any existing [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file triggers **[Option A](#option-a-single-run)** unless you disable this by setting [`LKPOINTS_OPT`](../incar-tags/LKPOINTS_OPT.md)` = F`. |
 
 #### Step 6: Plot the band structure\[<a
 href="/wiki/index.php?title=Band-structure_calculation_using_density-functional_theory&amp;veaction=edit&amp;section=13"
@@ -372,11 +372,11 @@ class="mw-editsection-visualeditor"
 title="Edit section: Recommendations and advice">edit</a> \| (./index.php.md)\]
 
 In case a [KPOINTS_OPT](../input-files/KPOINTS_OPT.md) file is present
-([Option A](#Option_A:_Single_run)), VASP computes the band energies for
+([Option A](#option-a-single-run)), VASP computes the band energies for
 the **k** points of the [KPOINTS_OPT](../input-files/KPOINTS_OPT.md)
 file after SCF convergence is reached within the same submitted job.
 There may, however, be a **computational advantage** to splitting the
-run ([Option B](#Option_B:_Split_run)) because of different optimal
+run ([Option B](#option-b-split-run)) because of different optimal
 batching options for the **k** mesh.
 
 There are additional advantages to using the

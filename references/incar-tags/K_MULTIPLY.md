@@ -50,15 +50,15 @@ explicitly.
 
 
 - [1
-  Usage](#Usage)
+  Usage](#usage)
   - [1.1 Single
-    value](#Single_value)
+    value](#single-value)
   - [1.2 Three
-    values (anisotropic)](#Three_values_(anisotropic))
+    values (anisotropic)](#three-values-anisotropic))
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Usage\[<a

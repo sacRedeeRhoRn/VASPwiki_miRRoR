@@ -23,27 +23,27 @@ of point defects in semiconductors and insulators
 
 
 - [1 Vertical
-  absorption energies (VAE)](#Vertical_absorption_energies_(VAE))
+  absorption energies (VAE)](#vertical-absorption-energies-vae))
 - [2 Zero-phonon
-  lines (ZPL)](#Zero-phonon_lines_(ZPL))
+  lines (ZPL)](#zero-phonon-lines-zpl))
 - [3 Vertical
-  emission energies (VEE)](#Vertical_emission_energies_(VEE))
+  emission energies (VEE)](#vertical-emission-energies-vee))
 - [4 Electronic
   minimization with constrained electronic
-  occupation](#Electronic_minimization_with_constrained_electronic_occupation)
+  occupation](#electronic-minimization-with-constrained-electronic-occupation)
 - [5 Example: ZPL
   of $\mathrm{NV}^-$ center in
   diamond](#Example:_ZPL_of_%5Bmath%5D\displaystyle%7B_\mathrm%7BNV%7D%5E-_%7D%5B/math%5D_center_in_diamond)
   - [5.1 Step
-    1](#Step_1)
+    1](#step-1)
   - [5.2 Step
-    2](#Step_2)
+    2](#step-2)
   - [5.3 Step
-    3](#Step_3)
+    3](#step-3)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Vertical absorption energies (VAE)\[<a
@@ -69,7 +69,7 @@ system in its excited-state configuration following three steps:
     to obtain the total energy of the system in its ground-state
     configuration, $E_{gs}$.
 2.  Perform a full [SCF calculation with constrained electronic
-    occupancies](#Electronic_minimization_with_constrained_electronic_occupation)
+    occupancies](#electronic-minimization-with-constrained-electronic-occupation)
     to obtain the total energy of the system in its excited-state
     configuration, $E_{ex}$.
 3.  The VAE is then given by the difference between the total energies
@@ -90,7 +90,7 @@ three steps:
     to obtain the total energy of the system in its ground-state
     configuration, $E_{gs}$.
 2.  Set up a [constrained occupation
-    calculation](#Electronic_minimization_with_constrained_electronic_occupation)
+    calculation](#electronic-minimization-with-constrained-electronic-occupation)
     and perform a full [atomic
     relaxation](../tutorials/Structure_optimization.md)
     to obtain the total energy of the system in its excited-state
@@ -109,7 +109,7 @@ title="Edit section: Vertical emission energies (VEE)">edit</a> \| (./index.php.
 The VEE calculation can be performed in three steps:
 
 1.  Set up a [constrained occupation
-    calculation](#Electronic_minimization_with_constrained_electronic_occupation)
+    calculation](#electronic-minimization-with-constrained-electronic-occupation)
     to represent the excited state and perform a full [atomic
     relaxation](../tutorials/Structure_optimization.md)
     of the excited state to obtain the total energy

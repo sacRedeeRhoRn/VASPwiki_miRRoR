@@ -21,38 +21,38 @@ or a frozen-phonon scan.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Step 1:
     Compute phonon
-    frequencies](#Step_1:_Compute_phonon_frequencies)
+    frequencies](#step-1-compute-phonon-frequencies)
   - [1.2 Step 2:
-    Classify the modes](#Step_2:_Classify_the_modes)
+    Classify the modes](#step-2-classify-the-modes)
   - [1.3 Step 3
     (optional): Map instabilities to the primitive cell via the phonon
     band
     structure](#Step_3_(optional):_Map_instabilities_to_the_primitive_cell_via_the_phonon_band_structure)
   - [1.4 Step 4:
     Determine the working
-    supercell](#Step_4:_Determine_the_working_supercell)
+    supercell](#step-4-determine-the-working-supercell)
   - [1.5 Step 5:
     Extract the eigenvector and set up the IRC starting
-    structure](#Step_5:_Extract_the_eigenvector_and_set_up_the_IRC_starting_structure)
+    structure](#step-5-extract-the-eigenvector-and-set-up-the-irc-starting-structure)
   - [1.6 Step 6:
     Follow the IRC to the energy
-    minimum](#Step_6:_Follow_the_IRC_to_the_energy_minimum)
+    minimum](#step-6-follow-the-irc-to-the-energy-minimum)
   - [1.7 Step 7:
     Relax from the determined
-    minimum](#Step_7:_Relax_from_the_determined_minimum)
+    minimum](#step-7-relax-from-the-determined-minimum)
   - [1.8 Step 8:
     Verify the stability of the relaxed
-    structure](#Step_8:_Verify_the_stability_of_the_relaxed_structure)
+    structure](#step-8-verify-the-stability-of-the-relaxed-structure)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Step-by-step instructions\[<a

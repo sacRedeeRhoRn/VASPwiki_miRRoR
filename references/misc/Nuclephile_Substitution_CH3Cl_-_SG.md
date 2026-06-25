@@ -29,27 +29,27 @@ BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [2.3
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.4
-    ICONST](#ICONST)
+    ICONST](#iconst)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Running
-    the calculation](#Running_the_calculation)
+    the calculation](#running-the-calculation)
   - [3.2 Free
-    energy profile](#Free_energy_profile)
+    energy profile](#free-energy-profile)
 - [4
-  References](#References)
+  References](#references)
 - [5
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

@@ -14,24 +14,24 @@ minimization](Category-Electronic_minimization.md)
 and avoids [charge sloshing](../theory/Charge_sloshing.md).
 In many cases, VASP automatically selects suitable values, and it is
 unnecessary to [set the tags related to density mixing
-manually](#Improve_the_convergence).
+manually](#improve-the-convergence).
 
 
 ## Contents
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2 How
-  to](#How_to)
+  to](#how-to)
   - [2.1 Improve
-    the convergence](#Improve_the_convergence)
+    the convergence](#improve-the-convergence)
   - [2.2 Magnetic
-    calculations](#Magnetic_calculations)
+    calculations](#magnetic-calculations)
   - [2.3
-    MetaGGAs](#MetaGGAs)
+    MetaGGAs](#metaggas)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Theory\[<a

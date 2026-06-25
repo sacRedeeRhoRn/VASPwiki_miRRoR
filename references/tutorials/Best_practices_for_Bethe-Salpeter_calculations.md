@@ -9,13 +9,13 @@
 
 
 - [1 Optimizing
-  performance](#Optimizing_performance)
+  performance](#optimizing-performance)
   - [1.1 Small
-    cells](#Small_cells)
+    cells](#small-cells)
   - [1.2 Large
-    cells](#Large_cells)
+    cells](#large-cells)
 - [2 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 
 
 ## Optimizing performance\[<a

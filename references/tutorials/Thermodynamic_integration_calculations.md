@@ -57,18 +57,18 @@ anymore, instead the tag
 
 
 - [1 TI using
-  VCAIMAGES](#TI_using_VCAIMAGES)
+  VCAIMAGES](#ti-using-vcaimages)
 - [2 TI using
-  SCALEE](#TI_using_SCALEE)
+  SCALEE](#ti-using-scalee)
   - [2.1 Available
     options for reference
-    system](#Available_options_for_reference_system)
+    system](#available-options-for-reference-system)
 - [3 TI using
-  TILAMBDA](#TI_using_TILAMBDA)
+  TILAMBDA](#ti-using-tilambda)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## TI using VCAIMAGES\[<a

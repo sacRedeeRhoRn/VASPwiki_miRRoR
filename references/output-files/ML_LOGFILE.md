@@ -19,55 +19,55 @@ output in the [OUTCAR](OUTCAR.md) and
 
 
 - [1 File
-  layout](#File_layout)
+  layout](#file-layout)
   - [1.1 Memory
-    consumption estimation](#Memory_consumption_estimation)
+    consumption estimation](#memory-consumption-estimation)
   - [1.2 Machine
-    learning setup](#Machine_learning_setup)
+    learning setup](#machine-learning-setup)
   - [1.3 Existing
-    ab initio data](#Existing_ab_initio_data)
+    ab initio data](#existing-ab-initio-data)
   - [1.4 Main
-    loop](#Main_loop)
+    loop](#main-loop)
     - [1.4.1
-      Header](#Header)
+      Header](#header)
     - [1.4.2
-      Body](#Body)
+      Body](#body)
   - [1.5 Timing
-    information](#Timing_information)
+    information](#timing-information)
 - [2
   Post-processing
-  usage](#Post-processing_usage)
+  usage](#post-processing-usage)
 - [3 Collected
-  data](#Collected_data)
+  data](#collected-data)
   - [3.1 STDAB
-    line](#STDAB_line)
+    line](#stdab-line)
     - [3.1.1
-      Energies](#Energies)
+      Energies](#energies)
     - [3.1.2
-      Forces](#Forces)
+      Forces](#forces)
     - [3.1.3
-      Stress](#Stress)
+      Stress](#stress)
     - [3.1.4 Subset
-      standard deviation](#Subset_standard_deviation)
+      standard deviation](#subset-standard-deviation)
   - [3.2 ERR
-    line](#ERR_line)
+    line](#err-line)
     - [3.2.1
-      Energies](#Energies_2)
+      Energies](#energies-2)
     - [3.2.2
-      Forces](#Forces_2)
+      Forces](#forces-2)
     - [3.2.3
-      Stress](#Stress_2)
+      Stress](#stress-2)
   - [3.3 NORME
-    line](#NORME_line)
+    line](#norme-line)
     - [3.3.1
-      Energies](#Energies_3)
+      Energies](#energies-2)
     - [3.3.2
-      Forces](#Forces_3)
+      Forces](#forces-2)
     - [3.3.3
-      Stress](#Stress_3)
+      Stress](#stress-2)
   - [3.4
     Per-species quantities for
-    forces](#Per-species_quantities_for_forces)
+    forces](#per-species-quantities-for-forces)
 
 
 ## File layout\[<a
@@ -278,7 +278,7 @@ available data and present its arrangement in lines and columns. Then,
 the main loop body contains the actual data (mostly raw numbers) in the
 previously defined layout. The separation of data and its description
 avoids unnecessary repetition and simplifies
-[post-processing](#Post-processing_usage).
+[post-processing](#post-processing-usage).
 
 #### Header\[<a
 href="/wiki/index.php?title=ML_LOGFILE&amp;veaction=edit&amp;section=6"

@@ -107,22 +107,22 @@ be used thoughout:
 
 - [1 Restarting a
   finite difference
-  calculation](#Restarting_a_finite_difference_calculation)
+  calculation](#restarting-a-finite-difference-calculation)
 - [2 Splitting a
   finite difference
-  calculation](#Splitting_a_finite_difference_calculation)
+  calculation](#splitting-a-finite-difference-calculation)
   - [2.1 1.
-    Preparing the displacements](#1._Preparing_the_displacements)
+    Preparing the displacements](#1-preparing-the-displacements)
   - [2.2 2. Single
     displacement
-    calculations](#2._Single_displacement_calculations)
+    calculations](#2-single-displacement-calculations)
   - [2.3 3.
     Collected finite
-    differences](#3._Collected_finite_differences)
+    differences](#3-collected-finite-differences)
 - [3 Practical
-  hints](#Practical_hints)
+  hints](#practical-hints)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 
 
 ## Restarting a finite difference calculation\[<a

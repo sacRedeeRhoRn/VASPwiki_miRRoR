@@ -27,28 +27,28 @@ approaches available in VASP.
 
 - [1 One-shot
   Wannierization using a singular-value
-  decomposition](#One-shot_Wannierization_using_a_singular-value_decomposition)
+  decomposition](#one-shot-wannierization-using-a-singular-value-decomposition)
 - [2 LOCPROJ
-  method](#LOCPROJ_method)
+  method](#locproj-method)
   - [2.1 Example -
-    diamond](#Example_-_diamond)
+    diamond](#example---diamond)
 - [3 SCDM
-  method](#SCDM_method)
+  method](#scdm-method)
   - [3.1 Example -
-    diamond](#Example_-_diamond_2)
+    diamond](#example---diamond-1)
   - [3.2 Comparison
-    with LOCPROJ](#Comparison_with_LOCPROJ)
+    with LOCPROJ](#comparison-with-locproj)
 - [4
-  Disentanglement](#Disentanglement)
+  Disentanglement](#disentanglement)
   - [4.1 Example -
     SCDM Wannierization of
-    LiF](#Example_-_SCDM_Wannierization_of_LiF)
+    LiF](#example---scdm-wannierization-of-lif)
 - [5
-  Wannier90](#Wannier90)
+  Wannier90](#wannier90)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## One-shot Wannierization using a singular-value decomposition\[<a
@@ -115,7 +115,7 @@ title="Edit section: LOCPROJ method">edit</a> \| (./index.php.md)\]
 To generate Wannier orbitals using local projections, it is sufficient
 to specify the [LOCPROJ](../incar-tags/LOCPROJ.md) tag with suitable
 projection targets. VASP will then apply the [one-shot
-orthonormalization](#One-shot_Wannierization_using_a_singular-value_decomposition)
+orthonormalization](#one-shot-wannierization-using-a-singular-value-decomposition)
 internally to obtain the Wannier transformation matrix
 $U_{mn\mathbf{k}}$. The number of Wannier orbitals is
 the same as the total number of local functions.
@@ -288,7 +288,7 @@ use the information contained in the electronic one-particle density
 matrix to construct localized functions from the original Bloch
 (Kohn-Sham) orbitals. These localized functions are then orthonormalized
 using the [one-shot SVD
-approach](#One-shot_Wannierization_using_a_singular-value_decomposition)
+approach](#one-shot-wannierization-using-a-singular-value-decomposition)
 to obtain orthonormal Wannier orbitals.
 
 The number of Wannier orbitals obtained is controlled via the
@@ -418,7 +418,7 @@ ab-initio data and Wannier interpolation using SCDM method.</figcaption>
 
 LiF is an insulator with a wide band gap. The Wannierization of the
 valence states in isolation is as simple as shown
-[earlier](#Example_-_diamond). However, the lowest-lying conduction
+[earlier](#example---diamond). However, the lowest-lying conduction
 states are relatively dispersive and hybridize with higher-lying states.
 This renders the Wannierization of these conduction bands difficult
 without disentanglement.

@@ -53,15 +53,15 @@ respectively.
 
 
 - [1 Auxiliary
-  function](#Auxiliary_function)
+  function](#auxiliary-function)
 - [2 Probe-charge
-  Ewald](#Probe-charge_Ewald)
+  Ewald](#probe-charge-ewald)
 - [3 Spherical
-  truncation](#Spherical_truncation)
+  truncation](#spherical-truncation)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ### Auxiliary function\[<a

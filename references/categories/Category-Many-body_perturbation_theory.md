@@ -22,26 +22,26 @@ treats the interaction between electronic and ionic degrees of freedom.
 
 
 - [1 Available
-  methods](#Available_methods)
+  methods](#available-methods)
   - [1.1
     Random-phase approximation
-    (RPA)](#Random-phase_approximation_(RPA))
+    (RPA)](#random-phase-approximation-rpa))
   - [1.2
     Constrained random-phase approximation
-    (cRPA)](#Constrained_random-phase_approximation_(cRPA))
+    (cRPA)](#constrained-random-phase-approximation-crpa))
   - [1.3 GW
-    method](#GW_method)
+    method](#gw-method)
   - [1.4
     Bethe-Salpeter equations
-    (BSE)](#Bethe-Salpeter_equations_(BSE))
+    (BSE)](#bethe-salpeter-equations-bse))
     - [1.4.1 X-ray
-      absorption spectra](#X-ray_absorption_spectra)
+      absorption spectra](#x-ray-absorption-spectra)
   - [1.5
     Second-order Møller-Plesset perturbation
     theory
-    (MP2)](#Second-order_Møller-Plesset_perturbation_theory_(MP2))
+    (MP2)](#second-order-møller-plesset-perturbation-theory-mp2))
 - [2
-  References](#References)
+  References](#references)
 
 
 ## Available methods\[<a

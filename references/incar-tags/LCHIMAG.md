@@ -42,17 +42,17 @@ susceptibility](../tutorials/Calculating_the_magnetic_susceptibility.md).
 
 
 - [1
-  Definitions](#Definitions)
+  Definitions](#definitions)
 - [2
-  Output](#Output)
+  Output](#output)
   - [2.1 Magnetic
-    susceptibility](#Magnetic_susceptibility)
+    susceptibility](#magnetic-susceptibility)
   - [2.2 Chemical
-    shielding](#Chemical_shielding)
+    shielding](#chemical-shielding)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Definitions\[<a href="/wiki/index.php?title=LCHIMAG&amp;veaction=edit&amp;section=1"

@@ -56,59 +56,59 @@ relevant approximations needed in the two-particle Hamiltonian.
 
 
 - [1 The TDDFT
-  Schrödinger equation](#The_TDDFT_Schrödinger_equation)
+  Schrödinger equation](#the-tddft-schrödinger-equation)
 - [2 The
   macroscopic-dielectric function as a time-dependent
-  integral](#The_macroscopic-dielectric_function_as_a_time-dependent_integral)
+  integral](#the-macroscopic-dielectric-function-as-a-time-dependent-integral)
 - [3 Perturbing all
   transitions with a delta-like
-  potential](#Perturbing_all_transitions_with_a_delta-like_potential)
+  potential](#perturbing-all-transitions-with-a-delta-like-potential)
 - [4 The many-body
   terms in the
-  hamiltonian](#The_many-body_terms_in_the_hamiltonian)
+  hamiltonian](#the-many-body-terms-in-the-hamiltonian)
   - [4.1
     Independent-particle
-    approximation](#Independent-particle_approximation)
+    approximation](#independent-particle-approximation)
   - [4.2 Hartree
-    exchange potential](#Hartree_exchange_potential)
+    exchange potential](#hartree-exchange-potential)
   - [4.3 Screened
-    two-particle interaction](#Screened_two-particle_interaction)
+    two-particle interaction](#screened-two-particle-interaction)
     - [4.3.1
       Exchange-correlation effects from
       time-dependent density functional
-      theory](#Exchange-correlation_effects_from_time-dependent_density_functional_theory)
+      theory](#exchange-correlation-effects-from-time-dependent-density-functional-theory)
     - [4.3.2 Ladder
       diagrams from many-body perturbation
-      theory](#Ladder_diagrams_from_many-body_perturbation_theory)
+      theory](#ladder-diagrams-from-many-body-perturbation-theory)
 - [5 Step-by-step
-  instructions on bulk Si](#Step-by-step_instructions_on_bulk_Si)
+  instructions on bulk Si](#step-by-step-instructions-on-bulk-si)
   - [5.1 Step 1:
     ground state with extra empty
-    states](#Step_1:_ground_state_with_extra_empty_states)
+    states](#step-1-ground-state-with-extra-empty-states)
   - [5.2 Step 2:
-    time-evolution run](#Step_2:_time-evolution_run)
+    time-evolution run](#step-2-time-evolution-run)
     - [5.2.1
       Setting up the
-      bands](#Setting_up_the_bands)
+      bands](#setting-up-the-bands)
     - [5.2.2
       Setting up the
-      time-step](#Setting_up_the_time-step)
+      time-step](#setting-up-the-time-step)
     - [5.2.3
       Choosing the direction of
-      perturbation](#Choosing_the_direction_of_perturbation)
+      perturbation](#choosing-the-direction-of-perturbation)
   - [5.3 Analysing
-    the results](#Analysing_the_results)
+    the results](#analysing-the-results)
 - [6 Comparison to
-  other methods](#Comparison_to_other_methods)
+  other methods](#comparison-to-other-methods)
   - [6.1
     Bethe-Salpeter
-    equation](#Bethe-Salpeter_equation)
+    equation](#bethe-salpeter-equation)
   - [6.2 Casida
-    equation](#Casida_equation)
+    equation](#casida-equation)
 - [7 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [8
-  References](#References)
+  References](#references)
 
 
 ## The TDDFT Schrödinger equation\[<a

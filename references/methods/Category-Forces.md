@@ -68,23 +68,23 @@ $\mathbf{F}_{i} = -\frac{\partial V(\\\mathbf{r}_{i}\\)}{\partial
 
 
 - [1 DFT
-  forces](#DFT_forces)
+  forces](#dft-forces)
 - [2 RPA
-  forces](#RPA_forces)
+  forces](#rpa-forces)
 - [3
   Machine-learned
-  forces](#Machine-learned_forces)
+  forces](#machine-learned-forces)
 - [4 Applying
-  external forces](#Applying_external_forces)
+  external forces](#applying-external-forces)
 - [5 Related
-  concepts](#Related_concepts)
+  concepts](#related-concepts)
   - [5.1 Stress and
-    pressure](#Stress_and_pressure)
+    pressure](#stress-and-pressure)
   - [5.2
     Force-constant matrix and
-    phonons](#Force-constant_matrix_and_phonons)
+    phonons](#force-constant-matrix-and-phonons)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## DFT forces\[<a
@@ -230,7 +230,7 @@ control at each ionic step.
 
 |  |
 |----|
-| **Tip:** Depending on the method, an overall **drift** may be removed from the forces. See [\#DFT forces](#DFT_forces) For instance, for [structure optimization](../tutorials/Structure_optimization.md) and for the [Nosé-Hoover thermostat](../tutorials/Nosé-Hoover_thermostat.md) drifts are removed, but not for the stochastic [Langevin thermostat](../tutorials/Langevin_thermostat.md). |
+| **Tip:** Depending on the method, an overall **drift** may be removed from the forces. See [\#DFT forces](#dft-forces) For instance, for [structure optimization](../tutorials/Structure_optimization.md) and for the [Nosé-Hoover thermostat](../tutorials/Nosé-Hoover_thermostat.md) drifts are removed, but not for the stochastic [Langevin thermostat](../tutorials/Langevin_thermostat.md). |
 
 ## Related concepts\[<a
 href="/wiki/index.php?title=Category:Forces&amp;veaction=edit&amp;section=5"

@@ -18,19 +18,19 @@ mixing](../categories/Category-Density_mixing.md).
 
 
 - [1 IMIX=0: No
-  mixing](#IMIX=0:_No_mixing)
+  mixing](#imix0-no-mixing)
 - [2 IMIX=1: Kerker
-  mixing](#IMIX=1:_Kerker_mixing)
+  mixing](#imix1-kerker-mixing)
 - [3 IMIX=2:
   Variant of Tchebycheff
-  mixing](#IMIX=2:_Variant_of_Tchebycheff_mixing)
+  mixing](#imix2-variant-of-tchebycheff-mixing)
 - [4 IMIX=4:
   Broyden's 2<sup>nd</sup> method and Pulay-mixing method
   (default)](#IMIX=4:_Broyden's_2nd_method_and_Pulay-mixing_method_(default))
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## IMIX=0: No mixing\[<a href="/wiki/index.php?title=IMIX&amp;veaction=edit&amp;section=1"

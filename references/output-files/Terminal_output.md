@@ -16,35 +16,35 @@ important warnings and error messages.
 
 
 - [1 The
-  header](#The_header)
+  header](#the-header)
   - [1.1 No of
     nodes, MPI ranks, OpenMP threads, and
-    parallelization](#No_of_nodes,_MPI_ranks,_OpenMP_threads,_and_parallelization)
+    parallelization](#no-of-nodes-mpi-ranks-openmp-threads-and-parallelization)
   - [1.2 GPU
-    detection](#GPU_detection)
+    detection](#gpu-detection)
   - [1.3 Version
     number, build date, and executable
-    type](#Version_number,_build_date,_and_executable_type)
+    type](#version-number-build-date-and-executable-type)
   - [1.4 Structure
-    information](#Structure_information)
+    information](#structure-information)
   - [1.5
-    ScaLAPACK](#ScaLAPACK)
+    ScaLAPACK](#scalapack)
   - [1.6 LDA part
-    of correlation](#LDA_part_of_correlation)
+    of correlation](#lda-part-of-correlation)
   - [1.7 Reading
-    the WAVECAR header](#Reading_the_WAVECAR_header)
+    the WAVECAR header](#reading-the-wavecar-header)
   - [1.8 Input file
-    check](#Input_file_check)
+    check](#input-file-check)
   - [1.9 FFT
-    planning](#FFT_planning)
+    planning](#fft-planning)
   - [1.10 Reading
-    WAVECAR and/or CHGCAR](#Reading_WAVECAR_and/or_CHGCAR)
+    WAVECAR and/or CHGCAR](#reading-wavecar-andor-chgcar)
 - [2 The
-  body](#The_body)
+  body](#the-body)
 - [3 Error and
-  warning messages](#Error_and_warning_messages)
+  warning messages](#error-and-warning-messages)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## The header\[<a

@@ -22,13 +22,13 @@ the PBE [POTCAR](../input-files/POTCAR.md) files for hybrid functionals.
 
 - [1
   Range-separated hybrid
-  functionals](#Range-separated_hybrid_functionals)
+  functionals](#range-separated-hybrid-functionals)
 - [2 Unscreened
-  hybrid functionals](#Unscreened_hybrid_functionals)
+  hybrid functionals](#unscreened-hybrid-functionals)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ### Range-separated hybrid functionals\[<a

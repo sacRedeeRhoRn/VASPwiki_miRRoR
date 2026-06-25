@@ -22,14 +22,14 @@ from this file instead.
 
 
 - [1
-  Format](#Format)
+  Format](#format)
   - [1.1
-    Header](#Header)
+    Header](#header)
   - [1.2
     Transformation
-    matrix](#Transformation_matrix)
+    matrix](#transformation-matrix)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Format\[<a href="/wiki/index.php?title=WANPROJ&amp;veaction=edit&amp;section=1"

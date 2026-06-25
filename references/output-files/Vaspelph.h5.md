@@ -48,17 +48,17 @@ specific combinations of bands, modes and k/q-points.
 
 
 - [1 File
-  Layout](#File_Layout)
+  Layout](#file-layout)
   - [1.1 Group:
-    /kpoints](#Group:_/kpoints)
+    /kpoints](#group-kpoints)
     - [1.1.1
-      Datasets](#Datasets)
+      Datasets](#datasets)
   - [1.2 Group:
     /matrix_elements](#Group:_/matrix_elements)
     - [1.2.1
-      Datasets](#Datasets_2)
+      Datasets](#datasets-1)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## File Layout\[<a

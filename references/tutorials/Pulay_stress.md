@@ -38,13 +38,13 @@ the diagonal elements of the stress tensor by a constant amount.
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
 - [2 Further
-  explanation](#Further_explanation)
+  explanation](#further-explanation)
   - [2.1
-    References](#References)
+    References](#references)
   - [2.2 Related
-    tags and articles](#Related_tags_and_articles)
+    tags and articles](#related-tags-and-articles)
 
 
 # Introduction\[<a

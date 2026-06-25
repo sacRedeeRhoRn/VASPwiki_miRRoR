@@ -9,30 +9,30 @@
 
 
 - [1
-  Lectures](#Lectures)
+  Lectures](#lectures)
 - [2
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [3
-  Exercises](#Exercises)
+  Exercises](#exercises)
   - [3.1 Atoms and
-    molecules](#Atoms_and_molecules)
+    molecules](#atoms-and-molecules)
   - [3.2 Simple
-    bulk systems](#Simple_bulk_systems)
+    bulk systems](#simple-bulk-systems)
   - [3.3 A bit of
-    surface science](#A_bit_of_surface_science)
+    surface science](#a-bit-of-surface-science)
   - [3.4 Hybrid
-    functionals](#Hybrid_functionals)
+    functionals](#hybrid-functionals)
   - [3.5 Transition
-    State Search of Ammonia](#Transition_State_Search_of_Ammonia)
+    State Search of Ammonia](#transition-state-search-of-ammonia)
   - [3.6 Adsorption
     of H2O on TiO2 using standard relaxation and constrained
-    MD](#Adsorption_of_H2O_on_TiO2_using_standard_relaxation_and_constrained_MD)
+    MD](#adsorption-of-h2o-on-tio2-using-standard-relaxation-and-constrained-md)
   - [3.7 Magnetism
-    on NiO](#Magnetism_on_NiO)
+    on NiO](#magnetism-on-nio)
   - [3.8 Dielectric
-    properties and RPA](#Dielectric_properties_and_RPA)
+    properties and RPA](#dielectric-properties-and-rpa)
   - [3.9 NMR
-    calculations](#NMR_calculations)
+    calculations](#nmr-calculations)
 
 
 ## Lectures\[<a

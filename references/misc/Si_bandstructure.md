@@ -21,40 +21,40 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 Procedure 1:
   Standard procedure
-  (DFT)](#Procedure_1:_Standard_procedure_(DFT))
+  (DFT)](#procedure-1-standard-procedure-dft))
   - [2.1 Standard
     self-consistent (SC) run](#Standard_self-consistent_(SC)_run)
   - [2.2 Non-SC
-    calculation (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
+    calculation (ICHARG=11)](#non-sc-calculation-icharg11))
   - [2.3 Plot using
-    p4v](#Plot_using_p4v)
+    p4v](#plot-using-p4v)
 - [3 Procedure 2:
   0-weight (Fake) SC procedure (PBE &
   Hybrids)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(PBE_&_Hybrids))
   - [3.1 Standard
-    DFT run](#Standard_DFT_run)
+    DFT run](#standard-dft-run)
   - [3.2 Hybrid
     calculation using a suitably modified KPOINTS
-    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
+    file](#hybrid-calculation-using-a-suitably-modified-kpoints-file)
   - [3.3 Plot using
-    p4v](#Plot_using_p4v_2)
+    p4v](#plot-using-p4v-1)
 - [4 Procedure 3:
   VASP2WANNIER90 (GW, Hybrids,
-  PBE)](#Procedure_3:_VASP2WANNIER90_(GW,_Hybrids,_PBE))
+  PBE)](#procedure-3-vasp2wannier90-gw-hybrids-pbe))
   - [4.1 Standard
-    DFT run](#Standard_DFT_run_2)
+    DFT run](#standard-dft-run-1)
   - [4.2 HSE +
     LWANNIER90 run](#HSE_+_LWANNIER90_run)
   - [4.3 Compute
-    Wannier functions](#Compute_Wannier_functions)
+    Wannier functions](#compute-wannier-functions)
   - [4.4 Obtain
     bandstructure (Wannier interpolation) and plot using XMGRACE or
     GNUPLOT](#Obtain_bandstructure_(Wannier_interpolation)_and_plot_using_XMGRACE_or_GNUPLOT)
 - [5
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

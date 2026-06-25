@@ -51,23 +51,23 @@ the [POSCAR](../input-files/POSCAR.md) file.
 
 
 - [1
-  Format](#Format)
+  Format](#format)
 - [2 Symmetry and
   periodic boundary
-  conditions](#Symmetry_and_periodic_boundary_conditions)
+  conditions](#symmetry-and-periodic-boundary-conditions)
   - [2.1 Symmetry
-    considerations](#Symmetry_considerations)
+    considerations](#symmetry-considerations)
   - [2.2 Periodic
-    boundary conditions](#Periodic_boundary_conditions)
+    boundary conditions](#periodic-boundary-conditions)
 - [3 External
   forces during on-the-fly
-  learning](#External_forces_during_on-the-fly_learning)
+  learning](#external-forces-during-on-the-fly-learning)
 - [4
-  Output](#Output)
+  Output](#output)
 - [5
-  Example](#Example)
+  Example](#example)
 - [6 Related Tags
-  and Sections](#Related_Tags_and_Sections)
+  and Sections](#related-tags-and-sections)
 
 
 ## Format\[<a href="/wiki/index.php?title=EFOR&amp;veaction=edit&amp;section=1"

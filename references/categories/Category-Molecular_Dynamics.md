@@ -23,23 +23,23 @@ understanding the basics.
 
 
 - [1 Important
-  files](#Important_files)
+  files](#important-files)
 - [2
-  Theory](#Theory)
+  Theory](#theory)
 - [3 How
-  to](#How_to)
+  to](#how-to)
 - [4
-  Compilation](#Compilation)
+  Compilation](#compilation)
 - [5 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [5.1
-    Books](#Books)
+    Books](#books)
   - [5.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [5.3
-    Lectures](#Lectures)
+    Lectures](#lectures)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Important files\[<a

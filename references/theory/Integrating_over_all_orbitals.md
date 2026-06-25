@@ -32,17 +32,17 @@ we need robust smearing methods.
 
 
 - [1 Integrating
-  over **k** points](#Integrating_over_k_points)
+  over **k** points](#integrating-over-k-points)
 - [2 Integrating
-  near the Fermi energy](#Integrating_near_the_Fermi_energy)
+  near the Fermi energy](#integrating-near-the-fermi-energy)
 - [3 Tetrahedron
-  method](#Tetrahedron_method)
+  method](#tetrahedron-method)
 - [4 Determining
-  the Fermi energy](#Determining_the_Fermi_energy)
+  the Fermi energy](#determining-the-fermi-energy)
 - [5 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Integrating over **k** points\[<a

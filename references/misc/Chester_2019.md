@@ -9,23 +9,23 @@
 
 
 - [1
-  Lectures](#Lectures)
+  Lectures](#lectures)
 - [2 Allocating
   Computing Nodes and Environment
-  Setup](#Allocating_Computing_Nodes_and_Environment_Setup)
+  Setup](#allocating-computing-nodes-and-environment-setup)
 - [3 Submitting
-  jobs](#Submitting_jobs)
+  jobs](#submitting-jobs)
 - [4
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [5 Further
-  Examples](#Further_Examples)
+  Examples](#further-examples)
   - [5.1 Nudge
     Elastic Band Method and (constrained) Molecular
     Dynamics](#Nudge_Elastic_Band_Method_and_(constrained)_Molecular_Dynamics)
   - [5.2 Magnetism
-    in NiO](#Magnetism_in_NiO)
+    in NiO](#magnetism-in-nio)
   - [5.3 NMR
-    calculations](#NMR_calculations)
+    calculations](#nmr-calculations)
 
 
 ## Lectures\[<a

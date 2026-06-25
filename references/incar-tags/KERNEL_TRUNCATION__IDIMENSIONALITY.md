@@ -60,9 +60,9 @@ will be ignored.</li>
   KERNEL_TRUNCATION/IDIMENSIONALITY = 3
   (default)](#KERNEL_TRUNCATION/IDIMENSIONALITY_=_3_(default))
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## KERNEL_TRUNCATION/IDIMENSIONALITY = 0\[<a

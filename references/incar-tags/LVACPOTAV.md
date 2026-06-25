@@ -58,17 +58,17 @@ potential.
 
 - [1 Use in
   conjunction with the dipole
-  correction](#Use_in_conjunction_with_the_dipole_correction)
+  correction](#use-in-conjunction-with-the-dipole-correction)
 - [2
-  Warnings](#Warnings)
+  Warnings](#warnings)
   - [2.1 Vacuum
     region is likely too
-    small](#Vacuum_region_is_likely_too_small)
+    small](#vacuum-region-is-likely-too-small)
   - [2.2 The
     minimum charge density in your cell may be too
-    large](#The_minimum_charge_density_in_your_cell_may_be_too_large)
+    large](#the-minimum-charge-density-in-your-cell-may-be-too-large)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ### Use in conjunction with the dipole correction\[<a

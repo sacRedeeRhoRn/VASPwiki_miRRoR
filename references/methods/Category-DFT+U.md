@@ -37,17 +37,17 @@ More detail about the formalism is provided below.
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [2.1 How
-    to](#How_to)
+    to](#how-to)
   - [2.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [2.3
-    Lectures](#Lectures)
+    Lectures](#lectures)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Theory\[<a

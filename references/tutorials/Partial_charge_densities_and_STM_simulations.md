@@ -32,16 +32,16 @@ and bands, various options exist, which can be selected via the
 
 - [1 Input tags for
   selecting and writing the partial
-  charges](#Input_tags_for_selecting_and_writing_the_partial_charges)
+  charges](#input-tags-for-selecting-and-writing-the-partial-charges)
 - [2 Output
-  files](#Output_files)
+  files](#output-files)
 - [3 Step-by-step
   instructions for simulating an STM
-  picture](#Step-by-step_instructions_for_simulating_an_STM_picture)
+  picture](#step-by-step-instructions-for-simulating-an-stm-picture)
 - [4
-  Example](#Example)
+  Example](#example)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Input tags for selecting and writing the partial charges\[<a
@@ -115,7 +115,7 @@ the [vaspout.h5](../output-files/Vaspout.h5.md) file. In that case
 <a href="https://vasp.at/py4vasp/latest/index.html"
 class="external text" rel="nofollow">py4vasp</a> can be used to analyze
 the output and plot [simulated STM
-pictures](#Step-by-step_instructions_for_simulating_an_STM_picture).
+pictures](#step-by-step-instructions-for-simulating-an-stm-picture).
 
 |  |
 |----|
@@ -214,7 +214,7 @@ The simulated image was created with
 <a href="https://vasp.at/py4vasp/latest/index.html"
 class="external text" rel="nofollow">py4vasp</a> at very similar
 settings as described in the
-[section](#Step-by-step_instructions_for_simulating_an_STM_picture)
+[section](#step-by-step-instructions-for-simulating-an-stm-picture)
 above.
 
 <a href="/wiki/File:STM_Graphite_exp_sim.png"

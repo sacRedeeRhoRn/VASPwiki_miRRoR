@@ -9,19 +9,19 @@
 
 
 - [1 Spectral
-  Method](#Spectral_Method)
+  Method](#spectral-method)
 - [2 Direct
   calculation of the dielectric
-  function](#Direct_calculation_of_the_dielectric_function)
+  function](#direct-calculation-of-the-dielectric-function)
 - [3 Local field
-  effects](#Local_field_effects)
+  effects](#local-field-effects)
 - [4
-  Output](#Output)
+  Output](#output)
 - [5 Comparison
   with k-p and density perturbation
-  theory](#Comparison_with_k-p_and_density_perturbation_theory)
+  theory](#comparison-with-k-p-and-density-perturbation-theory)
 - [6 Technical
-  tips](#Technical_tips)
+  tips](#technical-tips)
 
 
 For GW calculations the frequency dependent dielectric matrix

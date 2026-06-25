@@ -9,22 +9,22 @@
 
 
 - [1 Modern Theory
-  of Polarization](#Modern_Theory_of_Polarization)
+  of Polarization](#modern-theory-of-polarization)
   - [1.1 Berry
     phase expression for the macroscopic
-    polarization](#Berry_phase_expression_for_the_macroscopic_polarization)
+    polarization](#berry-phase-expression-for-the-macroscopic-polarization)
   - [1.2
     Computational
-    aspects](#Computational_aspects)
+    aspects](#computational-aspects)
 - [2
   Self-consistent response to finite electric
-  fields](#Self-consistent_response_to_finite_electric_fields)
+  fields](#self-consistent-response-to-finite-electric-fields)
   - [2.1 Response
-    properties](#Response_properties)
+    properties](#response-properties)
 - [3 Related Tags
-  and Sections](#Related_Tags_and_Sections)
+  and Sections](#related-tags-and-sections)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Modern Theory of Polarization\[<a
@@ -322,7 +322,7 @@ E})}\\\],$
 
 where **P**\[{*ψ*<sup>(*ε*)</sup>}\]
 is the macroscopic polarization as defined in the [modern theory of
-polarization](#Modern_Theory_of_Polarization):
+polarization](#modern-theory-of-polarization):
 
  
 

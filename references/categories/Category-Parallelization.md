@@ -15,27 +15,27 @@ time.
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
   - [1.1 Basic
-    parallelization](#Basic_parallelization)
+    parallelization](#basic-parallelization)
   - [1.2
     Communication
-    patterns](#Communication_patterns)
+    patterns](#communication-patterns)
   - [1.3 MPI
-    setup](#MPI_setup)
+    setup](#mpi-setup)
   - [1.4 File
-    handling](#File_handling)
+    handling](#file-handling)
   - [1.5
     Terminology in high-performance computing
-    (HPC)](#Terminology_in_high-performance_computing_(HPC))
+    (HPC)](#terminology-in-high-performance-computing-hpc))
 - [2 How
-  to](#How_to)
+  to](#how-to)
   - [2.1 Optimizing
-    the parallelization](#Optimizing_the_parallelization)
+    the parallelization](#optimizing-the-parallelization)
   - [2.2
-    OpenMP/OpenACC](#OpenMP/OpenACC)
+    OpenMP/OpenACC](#openmpopenacc)
 - [3 Additional
-  parallelization options](#Additional_parallelization_options)
+  parallelization options](#additional-parallelization-options)
 
 
 ## Theory\[<a

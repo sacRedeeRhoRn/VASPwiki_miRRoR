@@ -31,15 +31,15 @@ cell.
 
 
 - [1
-  Input](#Input)
+  Input](#input)
 - [2
-  Output](#Output)
+  Output](#output)
 - [3 Practical
-  hints](#Practical_hints)
+  hints](#practical-hints)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Input\[<a

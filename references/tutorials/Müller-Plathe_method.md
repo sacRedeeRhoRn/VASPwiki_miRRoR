@@ -175,14 +175,14 @@ recommended.</li>
 
 
 - [1
-  Example](#Example)
+  Example](#example)
 - [2 Convergence
   Analysis for thermal
-  conductivity](#Convergence_Analysis_for_thermal_conductivity)
+  conductivity](#convergence-analysis-for-thermal-conductivity)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Example\[<a

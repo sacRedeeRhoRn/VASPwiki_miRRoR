@@ -15,27 +15,27 @@ as:
 
 
 - [1 Compiler
-  variables](#Compiler_variables)
+  variables](#compiler-variables)
   - [1.1
-    FC](#FC)
+    FC](#fc)
   - [1.2
-    FCL](#FCL)
+    FCL](#fcl)
   - [1.3
-    OFLAG](#OFLAG)
+    OFLAG](#oflag)
   - [1.4
-    FFLAGS](#FFLAGS)
+    FFLAGS](#fflags)
   - [1.5
     OFLAG_IN](#OFLAG_IN)
   - [1.6
-    DEBUG](#DEBUG)
+    DEBUG](#debug)
   - [1.7
-    INCS](#INCS)
+    INCS](#incs)
   - [1.8
-    FREE](#FREE)
+    FREE](#free)
   - [1.9 MPI +
     OpenMP parallelization](#MPI_+_OpenMP_parallelization)
 - [2 Special
-  rules](#Special_rules)
+  rules](#special-rules)
   - [2.1
     FFLAGS_x](#FFLAGS_x)
   - [2.2
@@ -43,7 +43,7 @@ as:
   - [2.3
     INCS_x](#INCS_x)
   - [2.4 Related
-    articles](#Related_articles)
+    articles](#related-articles)
 
 
 # Compiler variables\[<a

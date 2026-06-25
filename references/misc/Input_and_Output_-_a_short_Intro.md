@@ -9,31 +9,31 @@
 
 
 - [1
-  Input](#Input)
+  Input](#input)
   - [1.1
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [1.2
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [1.3
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [1.4
-    POTCAR](#POTCAR)
+    POTCAR](#potcar)
 - [2
-  Output](#Output)
+  Output](#output)
   - [2.1
-    OUTCAR](#OUTCAR)
+    OUTCAR](#outcar)
   - [2.2 OSZICAR
-    and stdout](#OSZICAR_and_stdout)
+    and stdout](#oszicar-and-stdout)
   - [2.3
-    CONTCAR](#CONTCAR)
+    CONTCAR](#contcar)
   - [2.4
-    XDATCAR](#XDATCAR)
+    XDATCAR](#xdatcar)
   - [2.5
-    DOSCAR](#DOSCAR)
+    DOSCAR](#doscar)
   - [2.6
-    CHGCAR](#CHGCAR)
+    CHGCAR](#chgcar)
   - [2.7
-    WAVECAR](#WAVECAR)
+    WAVECAR](#wavecar)
 
 
 # Input\[<a

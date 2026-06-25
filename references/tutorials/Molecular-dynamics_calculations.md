@@ -31,26 +31,26 @@ sampling</a>".
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Step 1:
     Prepare a stable starting
-    structure](#Step_1:_Prepare_a_stable_starting_structure)
+    structure](#step-1-prepare-a-stable-starting-structure)
   - [1.2 Step 2:
-    Set the core MD tags](#Step_2:_Set_the_core_MD_tags)
+    Set the core MD tags](#step-2-set-the-core-md-tags)
   - [1.3 Step 3:
     Select the ensemble and cell
-    dynamics](#Step_3:_Select_the_ensemble_and_cell_dynamics)
+    dynamics](#step-3-select-the-ensemble-and-cell-dynamics)
   - [1.4 Step 4:
     Choose how the forces are
-    computed](#Step_4:_Choose_how_the_forces_are_computed)
+    computed](#step-4-choose-how-the-forces-are-computed)
   - [1.5 Step 5:
     Test the run before extending
-    it](#Step_5:_Test_the_run_before_extending_it)
+    it](#step-5-test-the-run-before-extending-it)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Step-by-step instructions\[<a

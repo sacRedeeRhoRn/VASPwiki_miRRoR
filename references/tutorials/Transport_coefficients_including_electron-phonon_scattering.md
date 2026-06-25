@@ -57,26 +57,26 @@ accumulators](../misc/Electron-phonon_accumulators.md).
 
 
 - [1 Conductivity
-  for metals](#Conductivity_for_metals)
+  for metals](#conductivity-for-metals)
   - [1.1 Constant
     relaxation-time
-    approximation](#Constant_relaxation-time_approximation)
+    approximation](#constant-relaxation-time-approximation)
   - [1.2
     Self-energy relaxation-time
-    approximation](#Self-energy_relaxation-time_approximation)
+    approximation](#self-energy-relaxation-time-approximation)
 - [2 Mobility for
-  semiconductors](#Mobility_for_semiconductors)
+  semiconductors](#mobility-for-semiconductors)
   - [2.1 Constant
     relaxation-time
-    approximation](#Constant_relaxation-time_approximation_2)
+    approximation](#constant-relaxation-time-approximation-1)
   - [2.2
     Self-energy relaxation-time
-    approximation](#Self-energy_relaxation-time_approximation_2)
+    approximation](#self-energy-relaxation-time-approximation-1)
 - [3 Thermoelectric
   coefficients and the ZT figure of
-  merit](#Thermoelectric_coefficients_and_the_ZT_figure_of_merit)
+  merit](#thermoelectric-coefficients-and-the-zt-figure-of-merit)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Conductivity for metals\[<a

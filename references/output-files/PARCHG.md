@@ -29,14 +29,14 @@ contributions to the partial charge density.
 
 
 - [1 PARCHG.nb.nk
-  files](#PARCHG.nb.nk_files)
+  files](#parchgnbnk-files)
 - [2
-  Format](#Format)
+  Format](#format)
   - [2.1
     Spin-polarized
-    calculation](#Spin-polarized_calculation)
+    calculation](#spin-polarized-calculation)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## PARCHG.nb.nk files\[<a href="/wiki/index.php?title=PARCHG&amp;veaction=edit&amp;section=1"

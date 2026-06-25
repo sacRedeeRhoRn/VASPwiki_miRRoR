@@ -21,25 +21,25 @@ corresponding how-to's
 
 - [1
   Electron-phonon interactions from perturbation
-  theory](#Electron-phonon_interactions_from_perturbation_theory)
+  theory](#electron-phonon-interactions-from-perturbation-theory)
   - [1.1 Electron
-    self-energy](#Electron_self-energy)
+    self-energy](#electron-self-energy)
     - [1.1.1
       Band-structure
-      renormalization](#Band-structure_renormalization)
+      renormalization](#band-structure-renormalization)
     - [1.1.2
       Transport
-      coefficients](#Transport_coefficients)
+      coefficients](#transport-coefficients)
 - [2
   Electron-phonon interactions from statistical
-  sampling](#Electron-phonon_interactions_from_statistical_sampling)
+  sampling](#electron-phonon-interactions-from-statistical-sampling)
   - [2.1 Full Monte
-    Carlo sampling](#Full_Monte_Carlo_sampling)
+    Carlo sampling](#full-monte-carlo-sampling)
   - [2.2 ZG
     configuration (one-shot
-    method)](#ZG_configuration_(one-shot_method))
+    method)](#zg-configuration-one-shot-method))
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Electron-phonon interactions from perturbation theory\[<a

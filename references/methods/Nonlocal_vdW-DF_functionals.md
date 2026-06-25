@@ -106,20 +106,20 @@ the stress tensor for rVV10 is correct.</li>
 
 - [1 List of
   nonlocal vdW-DF
-  functionals](#List_of_nonlocal_vdW-DF_functionals)
+  functionals](#list-of-nonlocal-vdw-df-functionals)
 - [2 Important
-  technical remarks](#Important_technical_remarks)
+  technical remarks](#important-technical-remarks)
   - [2.1 Kernel
     file vdw_kernel.bindat](#Kernel_file_vdw_kernel.bindat)
   - [2.2 POTCAR
-    file](#POTCAR_file)
+    file](#potcar-file)
   - [2.3
     Computational
-    time](#Computational_time)
+    time](#computational-time)
 - [3 Related Tags
-  and Sections](#Related_Tags_and_Sections)
+  and Sections](#related-tags-and-sections)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## List of nonlocal vdW-DF functionals\[<a

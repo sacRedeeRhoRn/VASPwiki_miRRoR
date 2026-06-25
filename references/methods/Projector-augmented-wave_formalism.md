@@ -9,14 +9,14 @@
 
 
 - [1 Basics of the
-  PAW formalism](#Basics_of_the_PAW_formalism)
+  PAW formalism](#basics-of-the-paw-formalism)
 - [2 Charge and
-  overlap densities](#Charge_and_overlap_densities)
+  overlap densities](#charge-and-overlap-densities)
 - [3 The
   compensation or augmentation
-  density](#The_compensation_or_augmentation_density)
+  density](#the-compensation-or-augmentation-density)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Basics of the PAW formalism\[<a

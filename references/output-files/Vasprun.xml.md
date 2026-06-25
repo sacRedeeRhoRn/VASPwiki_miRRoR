@@ -22,50 +22,50 @@ preferred for reading large datasets.
 
 
 - [1 File
-  format](#File_format)
+  format](#file-format)
 - [2
-  Sections](#Sections)
+  Sections](#sections)
   - [2.1
-    Generator](#Generator)
+    Generator](#generator)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.3 Primitive
-    cell](#Primitive_cell)
+    cell](#primitive-cell)
   - [2.4 k
-    points](#k_points)
+    points](#k-points)
   - [2.5
-    Parameters](#Parameters)
+    Parameters](#parameters)
   - [2.6 Atom
-    info](#Atom_info)
+    info](#atom-info)
   - [2.7 Initial
-    structure](#Initial_structure)
+    structure](#initial-structure)
   - [2.8 Ionic
-    steps](#Ionic_steps)
+    steps](#ionic-steps)
   - [2.9
     Electronic-structure calculation
-    block](#Electronic-structure_calculation_block)
+    block](#electronic-structure-calculation-block)
   - [2.10 Final
-    structure](#Final_structure)
+    structure](#final-structure)
 - [3 Reading
-  vasprun.xml](#Reading_vasprun.xml)
+  vasprun.xml](#reading-vasprunxml)
   - [3.1
     pymatgen](#pymatgen)
   - [3.2
-    ASE](#ASE)
+    ASE](#ase)
   - [3.3 Direct XML
-    parsing](#Direct_XML_parsing)
+    parsing](#direct-xml-parsing)
     - [3.3.1
-      ElementTree](#ElementTree)
+      ElementTree](#elementtree)
     - [3.3.2
       lxml](#lxml)
   - [3.4 Terminal
-    commands](#Terminal_commands)
+    commands](#terminal-commands)
     - [3.4.1
       xmllint](#xmllint)
     - [3.4.2
       xmlstarlet](#xmlstarlet)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## File format\[<a
@@ -367,7 +367,7 @@ contains:
 
 |  |
 |----|
-| **Mind:** For [IBRION](../incar-tags/IBRION.md)=0 ([MD](../categories/Category-Molecular_Dynamics.md)) with a large number of steps ([NSW](../incar-tags/NSW.md) \>\> 1), vasprun.xml can become very large. Consider using [vaspout.h5](Vaspout.h5.md) instead, or reading with a streaming XML parser (see [below](#Direct_XML_parsing)). |
+| **Mind:** For [IBRION](../incar-tags/IBRION.md)=0 ([MD](../categories/Category-Molecular_Dynamics.md)) with a large number of steps ([NSW](../incar-tags/NSW.md) \>\> 1), vasprun.xml can become very large. Consider using [vaspout.h5](Vaspout.h5.md) instead, or reading with a streaming XML parser (see [below](#direct-xml-parsing)). |
 
 ### Electronic-structure calculation block\[<a
 href="/wiki/index.php?title=Vasprun.xml&amp;veaction=edit&amp;section=11"

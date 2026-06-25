@@ -26,27 +26,27 @@ calculations in solids.
 
 
 - [1 Solving
-  Bethe-Salpeter equation](#Solving_Bethe-Salpeter_equation)
+  Bethe-Salpeter equation](#solving-bethe-salpeter-equation)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
   - [2.1 BSE
-    solvers](#BSE_solvers)
+    solvers](#bse-solvers)
   - [2.2 Processing
-    the results](#Processing_the_results)
+    the results](#processing-the-results)
   - [2.3 Core
-    exciton wavefunction](#Core_exciton_wavefunction)
+    exciton wavefunction](#core-exciton-wavefunction)
   - [2.4 Beyond
     Tamm-Dancoff
-    approximation](#Beyond_Tamm-Dancoff_approximation)
+    approximation](#beyond-tamm-dancoff-approximation)
   - [2.5 Model BSE
-    and TDDFT](#Model_BSE_and_TDDFT)
+    and TDDFT](#model-bse-and-tddft)
 - [3 Comparing to
-  the SCH](#Comparing_to_the_SCH)
+  the SCH](#comparing-to-the-sch)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Solving Bethe-Salpeter equation\[<a

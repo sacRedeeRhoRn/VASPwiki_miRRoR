@@ -27,24 +27,24 @@ directly.
 
 
 - [1 Supported
-  features](#Supported_features)
+  features](#supported-features)
 - [2
-  Restrictions](#Restrictions)
+  Restrictions](#restrictions)
 - [3
-  Dependencies](#Dependencies)
+  Dependencies](#dependencies)
 - [4 Build
-  instructions](#Build_instructions)
+  instructions](#build-instructions)
 - [5 Standalone
-  build instructions](#Standalone_build_instructions)
+  build instructions](#standalone-build-instructions)
   - [5.1 Step 1:
     Separate VASPml
-    directory](#Step_1:_Separate_VASPml_directory)
+    directory](#step-1-separate-vaspml-directory)
   - [5.2 Step 2:
-    Modify makefile.include](#Step_2:_Modify_makefile.include)
+    Modify makefile.include](#step-2-modify-makefileinclude)
   - [5.3 Step 3:
-    Build](#Step_3:_Build)
+    Build](#step-3-build)
 - [6 Internal
-  validation tests](#Internal_validation_tests)
+  validation tests](#internal-validation-tests)
 
 
 # Supported features\[<a
@@ -136,7 +136,7 @@ libraries:
 These requirements are usually already covered by the [VASP
 requirements](../misc/Installing_VASP.6.X.X.md).
 Additionally, for compiling the optional [internal validation
-tests](#Internal_validation_tests) the following external library is
+tests](#internal-validation-tests) the following external library is
 required:
 
 - <a href="http://boost.org/libs/test" class="external text"
@@ -277,7 +277,7 @@ closest to your toolchain and copy it to the base directory, e.g.
 Next, modify the file according to your actual compiler and library
 paths. The most important variables here have a counterpart in VASP's
 `makefile.include`, please also review the [regular VASP build
-instructions](#Build_instructions) for details:
+instructions](#build-instructions) for details:
 
 - `CXX`: C++17-compatible C++ compiler with MPI support, corresponds to
   `CXX_ML` in VASP's `makefile.include`.
@@ -293,7 +293,7 @@ instructions](#Build_instructions) for details:
 Usually, these are all the variables requiring changes for a successful
 standalone build of the VASPml library and you may now proceed with step
 3 below. However, for more fine-grained control and other purposes, like
-the [internal validation tests](#Internal_validation_tests), it may be
+the [internal validation tests](#internal-validation-tests), it may be
 necessary to review also the remaining variables in the template files:
 
 - `LD`: Specifies the linker to use when building applications linked to
@@ -308,7 +308,7 @@ necessary to review also the remaining variables in the template files:
 - `ARFLAGS`: Flags passed to the archiver `AR`.
 
 Some additional variables are only used when the [internal validation
-tests of VASPml](#Internal_validation_tests) are compiled and executed:
+tests of VASPml](#internal-validation-tests) are compiled and executed:
 
 - `BOOST_ROOT`: If not already defined via a shell environment variable,
   you may specify the base path to the Boost.test library here.
@@ -358,7 +358,7 @@ located in the `test` subfolder relative to the base directory.
 
 |  |
 |----|
-| **Mind:** Currently, the VASPml internal tests are not executed as part of the [VASP validation tests](../misc/Validation_tests.md). They can only be built and executed with a [standalone build of VASPml](#Standalone_build_instructions). |
+| **Mind:** Currently, the VASPml internal tests are not executed as part of the [VASP validation tests](../misc/Validation_tests.md). They can only be built and executed with a [standalone build of VASPml](#standalone-build-instructions). |
 
 In addition to the regular dependencies of VASPml (CBLAS, LAPACKE) the
 tests require the external library
@@ -366,7 +366,7 @@ tests require the external library
 rel="nofollow">Boost.test</a> to be present on your system. The
 corresponding include and linking flags must be added to the
 `BOOST_INCLUDE` and `BOOST_LIB` variables in the `makefile.include` file
-(see [step 2](#Step_2:_Modify_makefile.include) above). Before
+(see [step 2](#step-2-modify-makefileinclude) above). Before
 continuing please make sure the VASPml library was correctly built. To
 build and execute the tests change to the `test` directory and run
 `make`:

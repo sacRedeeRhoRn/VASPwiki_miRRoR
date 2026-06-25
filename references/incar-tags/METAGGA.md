@@ -71,18 +71,18 @@ href="/wiki/ENCUT" title="ENCUT">ENCUT</a> above 800 eV.</li>
 
 
 - [1 Available
-  functionals](#Available_functionals)
+  functionals](#available-functionals)
 - [2 POTCAR files:
-  required information](#POTCAR_files:_required_information)
+  required information](#potcar-files-required-information)
 - [3 Aspherical
   contributions related to one-center
-  terms](#Aspherical_contributions_related_to_one-center_terms)
+  terms](#aspherical-contributions-related-to-one-center-terms)
 - [4 Convergence
-  issues](#Convergence_issues)
+  issues](#convergence-issues)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Available functionals\[<a href="/wiki/index.php?title=METAGGA&amp;veaction=edit&amp;section=1"

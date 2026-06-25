@@ -21,20 +21,20 @@ calculations](../tutorials/Spin-spiral_calculations.md).
 
 
 - [1 Generalized
-  Bloch condition](#Generalized_Bloch_condition)
+  Bloch condition](#generalized-bloch-condition)
   - [1.1
     Magnetization
-    density](#Magnetization_density)
+    density](#magnetization-density)
 - [2 Modified
-  Hamiltonian](#Modified_Hamiltonian)
+  Hamiltonian](#modified-hamiltonian)
 - [3 Basis-set
-  considerations](#Basis-set_considerations)
+  considerations](#basis-set-considerations)
 - [4
-  Symmetry](#Symmetry)
+  Symmetry](#symmetry)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Generalized Bloch condition\[<a

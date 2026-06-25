@@ -24,24 +24,24 @@ RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 Step 1: a DFT
   groundstate
-  calculation](#Step_1:_a_DFT_groundstate_calculation)
+  calculation](#step-1-a-dft-groundstate-calculation)
 - [3 Step 2: obtain
-  DFT virtual orbitals](#Step_2:_obtain_DFT_virtual_orbitals)
+  DFT virtual orbitals](#step-2-obtain-dft-virtual-orbitals)
 - [4 Step 3: GW
   calculation including LWANNIER90
-  TAG](#Step_3:_GW_calculation_including_LWANNIER90_TAG)
+  TAG](#step-3-gw-calculation-including-lwannier90-tag)
 - [5 Step 4:
-  WANNIER90](#Step_4:_WANNIER90)
+  WANNIER90](#step-4-wannier90)
   - [5.1 Compute
-    Wannier functions](#Compute_Wannier_functions)
+    Wannier functions](#compute-wannier-functions)
   - [5.2 Obtain
     bandstructure (Wannier
-    interpolation)](#Obtain_bandstructure_(Wannier_interpolation))
+    interpolation)](#obtain-bandstructure-wannier-interpolation))
 - [6
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

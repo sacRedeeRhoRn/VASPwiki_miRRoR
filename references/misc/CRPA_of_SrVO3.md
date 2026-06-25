@@ -29,26 +29,26 @@ which is available as of VASP 6.
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 DFT
-  groundstate calculation](#DFT_groundstate_calculation)
+  groundstate calculation](#dft-groundstate-calculation)
 - [3 Obtain DFT
   virtual orbitals and long-wave
-  limit](#Obtain_DFT_virtual_orbitals_and_long-wave_limit)
+  limit](#obtain-dft-virtual-orbitals-and-long-wave-limit)
 - [4 cRPA
-  Calculation](#cRPA_Calculation)
+  Calculation](#crpa-calculation)
   - [4.1 cRPA
     calculation on Matsubara
-    axis](#cRPA_calculation_on_Matsubara_axis)
+    axis](#crpa-calculation-on-matsubara-axis)
     - [4.1.1
       Optional: Analytic
-      continuation](#Optional:_Analytic_continuation)
+      continuation](#optional-analytic-continuation)
 - [5 Off-centre
-  Coulomb integrals](#Off-centre_Coulomb_integrals)
+  Coulomb integrals](#off-centre-coulomb-integrals)
 - [6
-  Downloads](#Downloads)
+  Downloads](#downloads)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Task\[<a

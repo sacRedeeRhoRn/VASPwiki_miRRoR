@@ -35,25 +35,25 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.3
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Volume
-    relaxation](#Volume_relaxation)
+    relaxation](#volume-relaxation)
   - [3.2
-    DOS](#DOS)
+    DOS](#dos)
   - [3.3
-    Bandstructure](#Bandstructure)
+    Bandstructure](#bandstructure)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a href="/wiki/index.php?title=Cd_Si&amp;veaction=edit&amp;section=1"

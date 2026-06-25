@@ -15,15 +15,15 @@ Born effective charges are one way of defining this dynamical charge.
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
 - [2 How to
-  calculate](#How_to_calculate)
+  calculate](#how-to-calculate)
 - [3 Excluding
-  local field effects](#Excluding_local_field_effects)
+  local field effects](#excluding-local-field-effects)
   - [3.1 Related
-    tags and articles](#Related_tags_and_articles)
+    tags and articles](#related-tags-and-articles)
   - [3.2
-    References](#References)
+    References](#references)
 
 
 # Introduction\[<a

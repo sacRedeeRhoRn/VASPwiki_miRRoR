@@ -55,15 +55,15 @@ interpolating the dynamical matrices in the unit cell.
 
 - [1
   Electron-phonon
-  interaction](#Electron-phonon_interaction)
+  interaction](#electron-phonon-interaction)
 - [2 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [2.1 How
-    to](#How_to)
+    to](#how-to)
   - [2.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [2.3
-    Lectures](#Lectures)
+    Lectures](#lectures)
 
 
 ## Electron-phonon interaction\[<a

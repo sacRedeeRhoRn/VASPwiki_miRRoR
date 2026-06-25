@@ -13,21 +13,21 @@ system.
 
 - [1 Taylor
   expansion in ionic
-  displacements](#Taylor_expansion_in_ionic_displacements)
+  displacements](#taylor-expansion-in-ionic-displacements)
 - [2 Dynamical
-  matrix and phonon modes](#Dynamical_matrix_and_phonon_modes)
+  matrix and phonon modes](#dynamical-matrix-and-phonon-modes)
 - [3 Long-range
   interatomic force constants (LO-TO
-  splitting)](#Long-range_interatomic_force_constants_(LO-TO_splitting))
+  splitting)](#long-range-interatomic-force-constants-lo-to-splitting))
 - [4 Finite
-  differences](#Finite_differences)
+  differences](#finite-differences)
 - [5 Density
   functional perturbation
-  theory](#Density_functional_perturbation_theory)
+  theory](#density-functional-perturbation-theory)
 - [6 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Taylor expansion in ionic displacements\[<a

@@ -26,59 +26,59 @@ tutorial.
 
 
 - [1
-  Input](#Input)
+  Input](#input)
   - [1.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [1.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [1.3
-    ICONST](#ICONST)
+    ICONST](#iconst)
   - [1.4
-    PENALTYPOT](#PENALTYPOT)
+    PENALTYPOT](#penaltypot)
   - [1.5
-    INCAR.mlff](#INCAR.mlff)
+    INCAR.mlff](#incarmlff)
   - [1.6
-    INCAR.refit](#INCAR.refit)
+    INCAR.refit](#incarrefit)
   - [1.7
     INCAR.md](#incarmd)
   - [1.8
-    INCAR.interactive](#INCAR.interactive)
+    INCAR.interactive](#incarinteractive)
 - [2 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [2.1 Step 0:
     Training the MLFF
-    (optional)](#Step_0:_Training_the_MLFF_(optional))
+    (optional)](#step-0-training-the-mlff-optional))
   - [2.2 Step 1:
-    Refitting the MLFF](#Step_1:_Refitting_the_MLFF)
+    Refitting the MLFF](#step-1-refitting-the-mlff)
   - [2.3 Step 2:
     Running the MD
-    simulation](#Step_2:_Running_the_MD_simulation)
+    simulation](#step-2-running-the-md-simulation)
     - [2.3.1 MD
-      analysis](#MD_analysis)
+      analysis](#md-analysis)
     - [2.3.2
-      Spilling factor](#Spilling_factor)
+      Spilling factor](#spilling-factor)
     - [2.3.3
       Extracting new training
-      structures](#Extracting_new_training_structures)
+      structures](#extracting-new-training-structures)
   - [2.4 Step 3:
-    Retrain the MLFF](#Step_3:_Retrain_the_MLFF)
+    Retrain the MLFF](#step-3-retrain-the-mlff)
   - [2.5 Step 4:
-    Refit the MLFF](#Step_4:_Refit_the_MLFF)
+    Refit the MLFF](#step-4-refit-the-mlff)
   - [2.6 Step 5:
-    Repeat the MD simulation](#Step_5:_Repeat_the_MD_simulation)
+    Repeat the MD simulation](#step-5-repeat-the-md-simulation)
     - [2.6.1 MD
-      analysis](#MD_analysis_2)
+      analysis](#md-analysis-1)
     - [2.6.2
-      Spilling factor](#Spilling_factor_2)
+      Spilling factor](#spilling-factor-1)
     - [2.6.3
       Plotting the biased
-      potential](#Plotting_the_biased_potential)
+      potential](#plotting-the-biased-potential)
 - [3 Practical
-  hints](#Practical_hints)
+  hints](#practical-hints)
 - [4
-  Download](#Download)
+  Download](#download)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Input\[<a

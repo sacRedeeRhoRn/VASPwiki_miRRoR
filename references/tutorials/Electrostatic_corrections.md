@@ -20,26 +20,26 @@ a more general approach, though).
 
 - [1 Suggested
   combination of tags for electrostatic
-  corrections](#Suggested_combination_of_tags_for_electrostatic_corrections)
+  corrections](#suggested-combination-of-tags-for-electrostatic-corrections)
   - [1.1
-    Bulk](#Bulk)
+    Bulk](#bulk)
   - [1.2
-    Surfaces](#Surfaces)
+    Surfaces](#surfaces)
   - [1.3
-    Wires](#Wires)
+    Wires](#wires)
   - [1.4
-    Molecules](#Molecules)
+    Molecules](#molecules)
 - [2 Current
-  limitations](#Current_limitations)
+  limitations](#current-limitations)
 - [3 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [3.1 Using the
     dipole correction for slab
-    calculations](#Using_the_dipole_correction_for_slab_calculations)
+    calculations](#using-the-dipole-correction-for-slab-calculations)
 - [4 Related Tags
-  and Sections](#Related_Tags_and_Sections)
+  and Sections](#related-tags-and-sections)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Suggested combination of tags for electrostatic corrections\[<a

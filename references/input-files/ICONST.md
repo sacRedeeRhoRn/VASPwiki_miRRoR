@@ -16,31 +16,31 @@ file.
 
 
 - [1
-  Overview](#Overview)
+  Overview](#overview)
 - [2 Settings for
-  flag](#Settings_for_flag)
+  flag](#settings-for-flag)
   - [2.1 In case of
-    primitive coordinates](#In_case_of_primitive_coordinates)
+    primitive coordinates](#in-case-of-primitive-coordinates)
   - [2.2 In case of
-    complex coordinates](#In_case_of_complex_coordinates)
+    complex coordinates](#in-case-of-complex-coordinates)
 - [3 Settings for
-  item(i)](#Settings_for_item(i))
+  item(i)](#settings-for-itemi))
 - [4 Settings for
-  status](#Settings_for_status)
+  status](#settings-for-status)
 - [5 Use cases and
-  examples](#Use_cases_and_examples)
+  examples](#use-cases-and-examples)
   - [5.1 Define two
-    constraints](#Define_two_constraints)
+    constraints](#define-two-constraints)
   - [5.2 Use
-    complex coordinates](#Use_complex_coordinates)
+    complex coordinates](#use-complex-coordinates)
   - [5.3
     Restrictions on the volume and/or shape of the
     simulation
-    cell](#Restrictions_on_the_volume_and/or_shape_of_the_simulation_cell)
+    cell](#restrictions-on-the-volume-andor-shape-of-the-simulation-cell)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Overview\[<a href="/wiki/index.php?title=ICONST&amp;veaction=edit&amp;section=1"

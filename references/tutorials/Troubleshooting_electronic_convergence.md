@@ -18,20 +18,20 @@ rel="nofollow">lecture covers electronic convergence in VASP</a>.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [2
   Method-specific
-  recommendations](#Method-specific_recommendations)
+  recommendations](#method-specific-recommendations)
   - [2.1 Magnetic
-    calculation with LDA+U](#Magnetic_calculation_with_LDA+U)
+    calculation with LDA+U](#magnetic-calculation-with-ldau)
   - [2.2 MBJ
-    calculation](#MBJ_calculation)
+    calculation](#mbj-calculation)
   - [2.3 Dipole
-    Correction](#Dipole_Correction)
+    Correction](#dipole-correction)
   - [2.4 Magnetic
-    calculations](#Magnetic_calculations)
+    calculations](#magnetic-calculations)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Step-by-step instructions\[<a
@@ -128,7 +128,7 @@ step):
     [ALGO](../incar-tags/ALGO.md)=All and [TIME](../incar-tags/TIME.md)=0.1
 
 Similar to the [recipe for magnetic calculation with
-LDA+U](#Magnetic_calculation_with_LDA+U), it might be helpful to run
+LDA+U](#magnetic-calculation-with-ldau), it might be helpful to run
 steps 1. to 3. with a low [ENCUT](../incar-tags/ENCUT.md) and then perform
 step 3. again with the desired [ENCUT](../incar-tags/ENCUT.md).
 

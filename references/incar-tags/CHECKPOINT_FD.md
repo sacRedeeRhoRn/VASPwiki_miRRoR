@@ -62,7 +62,7 @@ file.
 - [5 CHECKPOINT_FD
   = SINGLE](#CHECKPOINT_FD_=_SINGLE)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ### `CHECKPOINT_FD`` = CONTINUE`\[<a

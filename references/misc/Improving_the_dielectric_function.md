@@ -19,23 +19,23 @@ Si](Plotting_the_BSE_fatband_structure_of_Si.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Averaging
-    over multiple grids](#Averaging_over_multiple_grids)
+    over multiple grids](#averaging-over-multiple-grids)
   - [3.2
-    Model-BSE](#Model-BSE)
+    Model-BSE](#model-bse)
 - [4
-  Download](#Download)
+  Download](#download)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Task\[<a

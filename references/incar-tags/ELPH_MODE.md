@@ -36,7 +36,7 @@ overwritten by specifying them explicitly in the
 
 
 - [1 Tag
-  options](#Tag_options)
+  options](#tag-options)
   - [1.1 ELPH_MODE
     = renorm - Band-gap
     renormalization](#ELPH_MODE_=_renorm_-_Band-gap_renormalization)
@@ -44,7 +44,7 @@ overwritten by specifying them explicitly in the
     = transport - Transport
     calculation](#ELPH_MODE_=_transport_-_Transport_calculation)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Tag options\[<a

@@ -21,19 +21,19 @@ calculation are described in the following:
 
 
 - [1
-  OUTCAR](#OUTCAR)
+  OUTCAR](#outcar)
 - [2 OSZICAR and
-  stdout](#OSZICAR_and_stdout)
+  stdout](#oszicar-and-stdout)
 - [3
-  CONTCAR](#CONTCAR)
+  CONTCAR](#contcar)
 - [4
-  XDATCAR](#XDATCAR)
+  XDATCAR](#xdatcar)
 - [5
-  DOSCAR](#DOSCAR)
+  DOSCAR](#doscar)
 - [6
-  CHGCAR](#CHGCAR)
+  CHGCAR](#chgcar)
 - [7
-  WAVECAR](#WAVECAR)
+  WAVECAR](#wavecar)
 
 
 ## [OUTCAR](OUTCAR.md)\[<a href="/wiki/index.php?title=Output&amp;veaction=edit&amp;section=1"

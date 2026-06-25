@@ -37,19 +37,19 @@ listed separately for each version of VASP.
 
 
 - [1
-  VASP.6.6.0](#VASP.6.6.0)
+  VASP.6.6.0](#vasp660)
 - [2
-  VASP.6.5.1](#VASP.6.5.1)
+  VASP.6.5.1](#vasp651)
 - [3
-  VASP.6.4.3](#VASP.6.4.3)
+  VASP.6.4.3](#vasp643)
 - [4
-  VASP.6.3.0](#VASP.6.3.0)
+  VASP.6.3.0](#vasp630)
 - [5 Older versions
-  of VASP.6](#Older_versions_of_VASP.6)
+  of VASP.6](#older-versions-of-vasp6)
 - [6 Footnotes and
-  references](#Footnotes_and_references)
+  references](#footnotes-and-references)
 - [7 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 
 
 ## VASP.6.6.0\[<a

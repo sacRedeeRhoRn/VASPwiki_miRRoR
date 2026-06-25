@@ -44,19 +44,19 @@ real-time TDDFT) ([ALGO](ALGO.md)=TIMEEV).
   exchange-correlation
   kernel](#(Semi-)local_exchange-correlation_kernel)
   - [1.1 Casida
-    TDDFT](#Casida_TDDFT)
+    TDDFT](#casida-tddft)
   - [1.2
     Time-evolution TDDFT (Real-time
-    TDDFT)](#Time-evolution_TDDFT_(Real-time_TDDFT))
+    TDDFT)](#time-evolution-tddft-real-time-tddft))
 - [2 Hybrid
-  functionals](#Hybrid_functionals)
+  functionals](#hybrid-functionals)
 - [3 Compare Casida
   and time-evolution TDDFT
-  results](#Compare_Casida_and_time-evolution_TDDFT_results)
+  results](#compare-casida-and-time-evolution-tddft-results)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## (Semi-)local exchange-correlation kernel\[<a href="/wiki/index.php?title=LFXC&amp;veaction=edit&amp;section=1"

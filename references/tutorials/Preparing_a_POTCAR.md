@@ -19,15 +19,15 @@ for one element with subtle differences.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [3 Example for
   preparing a POTCAR for the Heusler alloy
   TiCo<sub>2</sub>Si](#Example_for_preparing_a_POTCAR_for_the_Heusler_alloy_TiCo2Si)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 
 
 ## Step-by-step instructions\[<a

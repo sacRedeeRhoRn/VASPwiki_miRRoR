@@ -24,19 +24,19 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.3
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

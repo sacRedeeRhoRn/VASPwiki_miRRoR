@@ -37,17 +37,17 @@ in your publication in addition to the standard VASP reference.*
 
 
 - [1 The INCAR
-  file](#The_INCAR_file)
+  file](#the-incar-file)
   - [1.1 NOMEGA
-    flag](#NOMEGA_flag)
+    flag](#nomega-flag)
   - [1.2 ESTOP
-    flag](#ESTOP_flag)
+    flag](#estop-flag)
   - [1.3 NSTORB
-    flag](#NSTORB_flag)
+    flag](#nstorb-flag)
 - [2
-  Parallelization](#Parallelization)
+  Parallelization](#parallelization)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## The INCAR file\[<a

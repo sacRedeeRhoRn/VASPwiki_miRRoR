@@ -65,13 +65,13 @@ respectively.
 
 
 - [1
-  Input](#Input)
+  Input](#input)
 - [2
-  Output](#Output)
+  Output](#output)
 - [3 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Input\[<a

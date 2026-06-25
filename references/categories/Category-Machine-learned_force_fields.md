@@ -41,23 +41,23 @@ MLFF](../misc/Liquid_Si_-_MLFF.md).
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2 How
-  to](#How_to)
+  to](#how-to)
   - [2.1
-    Input](#Input)
+    Input](#input)
   - [2.2
-    Output](#Output)
+    Output](#output)
   - [2.3
-    Hyperparameters](#Hyperparameters)
+    Hyperparameters](#hyperparameters)
 - [3 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [3.1 How
-    to](#How_to_2)
+    to](#how-to-1)
   - [3.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [3.3
-    Lectures](#Lectures)
+    Lectures](#lectures)
 
 
 ## Theory\[<a

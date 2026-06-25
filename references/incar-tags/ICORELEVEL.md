@@ -104,13 +104,13 @@ some cases, the VASP total energies might become even positive).
 
 
 - [1 Super-cell
-  core-hole method](#Super-cell_core-hole_method)
+  core-hole method](#super-cell-core-hole-method)
 - [2 Bethe-Salpeter
-  equation for XAS](#Bethe-Salpeter_equation_for_XAS)
+  equation for XAS](#bethe-salpeter-equation-for-xas)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Super-cell core-hole method\[<a

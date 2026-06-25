@@ -52,7 +52,7 @@ and more.
 
 
 - [1
-  Options](#Options)
+  Options](#options)
   - [1.1 MDALGO =
     1: Andersen thermostat](#MDALGO_=_1:_Andersen_thermostat)
   - [1.2 MDALGO =
@@ -76,9 +76,9 @@ and more.
   - [1.9 MDALGO =
     21 (deprecated)](#MDALGO_=_21_(deprecated))
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Options\[<a href="/wiki/index.php?title=MDALGO&amp;veaction=edit&amp;section=1"

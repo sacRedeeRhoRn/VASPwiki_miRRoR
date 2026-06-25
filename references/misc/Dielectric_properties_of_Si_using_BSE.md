@@ -20,33 +20,33 @@ Si](Plotting_the_BSE_fatband_structure_of_Si.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.3
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Step 1:
     DFT groundstate
-    calculation](#Step_1:_DFT_groundstate_calculation)
+    calculation](#step-1-dft-groundstate-calculation)
   - [3.2 Step 2:
     Obtain DFT "virtual" orbitals (empty
     states)](#Step_2:_Obtain_DFT_%22virtual%22_orbitals_(empty_states))
   - [3.3 Step 3:
     RPA quasiparticles with single-shot GW
-    (G0W0)](#Step_3:_RPA_quasiparticles_with_single-shot_GW_(G0W0))
+    (G0W0)](#step-3-rpa-quasiparticles-with-single-shot-gw-g0w0))
   - [3.4 Step 4
     (optional): Plot IPA dielectric function using GW0 quasiparticle
     energies](#Step_4_(optional):_Plot_IPA_dielectric_function_using_GW0_quasiparticle_energies)
   - [3.5 Step 5:
-    The BSE calculation](#Step_5:_The_BSE_calculation)
+    The BSE calculation](#step-5-the-bse-calculation)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

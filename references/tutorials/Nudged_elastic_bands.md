@@ -20,24 +20,24 @@ band, minimizing energy until a minimum energy pathway, known as the
 
 
 - [1 How to set up
-  an NEB calculation](#How_to_set_up_an_NEB_calculation)
+  an NEB calculation](#how-to-set-up-an-neb-calculation)
   - [1.1 Step
-    1](#Step_1)
+    1](#step-1)
   - [1.2 Step
-    2](#Step_2)
+    2](#step-2)
   - [1.3 Step
-    3](#Step_3)
+    3](#step-3)
   - [1.4 Step
-    4](#Step_4)
+    4](#step-4)
   - [1.5 Step
-    5](#Step_5)
+    5](#step-5)
 - [2 Possible
   issues and advice on how to address
-  it](#Possible_issues_and_advice_on_how_to_address_it)
+  it](#possible-issues-and-advice-on-how-to-address-it)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## How to set up an NEB calculation\[<a

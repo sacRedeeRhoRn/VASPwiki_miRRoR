@@ -9,20 +9,20 @@
 
 
 - [1
-  Lectures](#Lectures)
+  Lectures](#lectures)
 - [2 Environment
-  Setup](#Environment_Setup)
+  Setup](#environment-setup)
 - [3
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [4 Further
-  Examples](#Further_Examples)
+  Examples](#further-examples)
   - [4.1 Nudge
     Elastic Band Method and (constrained) Molecular
     Dynamics](#Nudge_Elastic_Band_Method_and_(constrained)_Molecular_Dynamics)
   - [4.2 Magnetism
-    in NiO](#Magnetism_in_NiO)
+    in NiO](#magnetism-in-nio)
   - [4.3 NMR
-    calculations](#NMR_calculations)
+    calculations](#nmr-calculations)
 
 
 ## Lectures\[<a

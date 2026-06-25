@@ -24,13 +24,13 @@ and the text based [GAMMA](GAMMA.md) is not present.
 
 
 - [1 Contents of
-  the file](#Contents_of_the_file)
+  the file](#contents-of-the-file)
 - [2
-  Usage](#Usage)
+  Usage](#usage)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Contents of the file\[<a

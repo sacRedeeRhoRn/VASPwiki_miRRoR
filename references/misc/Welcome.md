@@ -12,19 +12,19 @@ VASP user!
 
 
 - [1 Become a VASP
-  user](#Become_a_VASP_user)
+  user](#become-a-vasp-user)
 - [2 Install
-  VASP](#Install_VASP)
+  VASP](#install-vasp)
 - [3 Basic
-  usage](#Basic_usage)
+  usage](#basic-usage)
 - [4 Navigate the
-  VASP Wiki](#Navigate_the_VASP_Wiki)
+  VASP Wiki](#navigate-the-vasp-wiki)
 - [5 Learn a new
-  method](#Learn_a_new_method)
+  method](#learn-a-new-method)
 - [6 Analyze VASP
-  output](#Analyze_VASP_output)
+  output](#analyze-vasp-output)
 - [7 Get
-  help](#Get_help)
+  help](#get-help)
 
 
 ## Become a VASP user\[<a href="/wiki/index.php?title=Welcome&amp;veaction=edit&amp;section=1"

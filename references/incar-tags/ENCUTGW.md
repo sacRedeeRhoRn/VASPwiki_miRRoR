@@ -20,13 +20,13 @@ set for the response functions in exactly the same manner as
 
 
 - [1 FFT grid and
-  PRECFOCK](#FFT_grid_and_PRECFOCK)
+  PRECFOCK](#fft-grid-and-precfock)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [3 Further
-  reading](#Further_reading)
+  reading](#further-reading)
 - [4
-  References](#References)
+  References](#references)
 
 
 ------------------------------------------------------------------------

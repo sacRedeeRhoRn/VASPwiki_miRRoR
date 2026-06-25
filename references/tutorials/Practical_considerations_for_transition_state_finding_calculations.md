@@ -20,22 +20,22 @@ possible solutions.
 
 
 - [1 NEB
-  calculations](#NEB_calculations)
+  calculations](#neb-calculations)
   - [1.1 Restart
     with a better guess for the initial and final state
-    configurations](#Restart_with_a_better_guess_for_the_initial_and_final_state_configurations)
+    configurations](#restart-with-a-better-guess-for-the-initial-and-final-state-configurations)
   - [1.2 Band
     becomes "floppy"](#Band_becomes_%22floppy%22)
   - [1.3 Band does
-    not converge](#Band_does_not_converge)
+    not converge](#band-does-not-converge)
   - [1.4 Checking
-    convergence](#Checking_convergence)
+    convergence](#checking-convergence)
 - [2 IRC
-  calculations](#IRC_calculations)
+  calculations](#irc-calculations)
 - [3 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## NEB calculations\[<a

@@ -9,27 +9,27 @@
 
 
 - [1 How to set
-  ISMEAR](#How_to_set_ISMEAR)
+  ISMEAR](#how-to-set-ismear)
 - [2 Broadening
-  techniques](#Broadening_techniques)
+  techniques](#broadening-techniques)
   - [2.1 Gaussian
-    broadening](#Gaussian_broadening)
+    broadening](#gaussian-broadening)
   - [2.2
     Methfessel-Paxton
-    broadening](#Methfessel-Paxton_broadening)
+    broadening](#methfessel-paxton-broadening)
   - [2.3
     Fermi-Dirac
-    broadening](#Fermi-Dirac_broadening)
+    broadening](#fermi-dirac-broadening)
 - [3 Tetrahedron
-  methods](#Tetrahedron_methods)
+  methods](#tetrahedron-methods)
 - [4 Calculation of
-  the Fermi energy](#Calculation_of_the_Fermi_energy)
+  the Fermi energy](#calculation-of-the-fermi-energy)
 - [5 Which method
-  to use](#Which_method_to_use)
+  to use](#which-method-to-use)
 - [6 Other
-  methods](#Other_methods)
+  methods](#other-methods)
 - [7 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## How to set ISMEAR\[<a

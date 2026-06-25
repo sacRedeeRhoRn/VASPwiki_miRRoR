@@ -19,13 +19,13 @@ VASP basically needs 4 input files for standard production runs:
 
 
 - [1
-  INCAR](#INCAR)
+  INCAR](#incar)
 - [2
-  POSCAR](#POSCAR)
+  POSCAR](#poscar)
 - [3
-  KPOINTS](#KPOINTS)
+  KPOINTS](#kpoints)
 - [4
-  POTCAR](#POTCAR)
+  POTCAR](#potcar)
 
 
 ## [INCAR](../input-files/INCAR.md)\[<a href="/wiki/index.php?title=Input&amp;veaction=edit&amp;section=1"

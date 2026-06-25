@@ -10,35 +10,35 @@
 
 - [1 I can not
   compile the parallel version of VASP under
-  LINUX?](#I_can_not_compile_the_parallel_version_of_VASP_under_LINUX?)
+  LINUX?](#i-can-not-compile-the-parallel-version-of-vasp-under-linux)
 - [2 Why is the
   cohesive energy much larger than reported in other
-  papers?](#Why_is_the_cohesive_energy_much_larger_than_reported_in_other_papers?)
+  papers?](#why-is-the-cohesive-energy-much-larger-than-reported-in-other-papers)
 - [3 Which k-points
-  should I use?](#Which_k-points_should_I_use?)
+  should I use?](#which-k-points-should-i-use)
 - [4 Question Why
   is convergence to the ionic groundstate so
-  slow?](#Question_Why_is_convergence_to_the_ionic_groundstate_so_slow?)
+  slow?](#question-why-is-convergence-to-the-ionic-groundstate-so-slow)
 - [5 I am running
   molecular dynamics and observe a large drift in the total energy, that
   should be
-  conserved.](#I_am_running_molecular_dynamics_and_observe_a_large_drift_in_the_total_energy,_that_should_be_conserved.)
+  conserved.](#i-am-running-molecular-dynamics-and-observe-a-large-drift-in-the-total-energy-that-should-be-conserved)
 - [6 I am running
   VASP on a SGI Origin, and the simple
-  benchmark.](#I_am_running_VASP_on_a_SGI_Origin,_and_the_simple_benchmark.)
+  benchmark.](#i-am-running-vasp-on-a-sgi-origin-and-the-simple-benchmark)
 - [7 The parallel
   performance of VASP is not as good as
-  expected.](#The_parallel_performance_of_VASP_is_not_as_good_as_expected.)
+  expected.](#the-parallel-performance-of-vasp-is-not-as-good-as-expected)
 - [8 Why is the
   VASP performance so bad on a dual processor
-  machine?](#Why_is_the_VASP_performance_so_bad_on_a_dual_processor_machine?)
+  machine?](#why-is-the-vasp-performance-so-bad-on-a-dual-processor-machine)
 - [9 We are using
   the LINUX kernel X.X.X and LAM/MPICH X.X.X but VASP fails to
-  run.](#We_are_using_the_LINUX_kernel_X.X.X_and_LAM/MPICH_X.X.X_but_VASP_fails_to_run.)
+  run.](#we-are-using-the-linux-kernel-xxx-and-lammpich-xxx-but-vasp-fails-to-run)
 - [10 How to
   evaluate the total energy properly for and adsorbed ionic species on
   insulating
-  surface](#How_to_evaluate_the_total_energy_properly_for_and_adsorbed_ionic_species_on_insulating_surface)
+  surface](#how-to-evaluate-the-total-energy-properly-for-and-adsorbed-ionic-species-on-insulating-surface)
 
 
 ## I can not compile the parallel version of VASP under LINUX?\[<a href="/wiki/index.php?title=FAQ&amp;veaction=edit&amp;section=1"

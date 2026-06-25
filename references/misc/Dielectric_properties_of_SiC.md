@@ -21,30 +21,30 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 Static
-  dielectric properties](#Static_dielectric_properties)
+  dielectric properties](#static-dielectric-properties)
   - [2.1 Density
     functional perturbation
-    theory](#Density_functional_perturbation_theory)
+    theory](#density-functional-perturbation-theory)
   - [2.2 Response
     to finite electric
-    fields](#Response_to_finite_electric_fields)
+    fields](#response-to-finite-electric-fields)
   - [2.3 Ionic
     contributions to the static dielectric
-    properties](#Ionic_contributions_to_the_static_dielectric_properties)
+    properties](#ionic-contributions-to-the-static-dielectric-properties)
 - [3 Frequency
   dependent dielectric
-  response](#Frequency_dependent_dielectric_response)
+  response](#frequency-dependent-dielectric-response)
   - [3.1 The
     independent-particle
-    picture](#The_independent-particle_picture)
+    picture](#the-independent-particle-picture)
   - [3.2 Including
-    local field effects](#Including_local_field_effects)
+    local field effects](#including-local-field-effects)
 - [4
-  References](#References)
+  References](#references)
 - [5
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

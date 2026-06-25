@@ -36,15 +36,15 @@ in your publication in addition to the standard VASP reference.*
 
 
 - [1 The INCAR
-  file](#The_INCAR_file)
+  file](#the-incar-file)
   - [1.1 NOMEGA
-    flag](#NOMEGA_flag)
+    flag](#nomega-flag)
 - [2
-  Parallelization](#Parallelization)
+  Parallelization](#parallelization)
   - [2.1 Example
-    for 512 CPUs](#Example_for_512_CPUs)
+    for 512 CPUs](#example-for-512-cpus)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## The INCAR file\[<a

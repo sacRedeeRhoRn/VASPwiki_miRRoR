@@ -31,15 +31,15 @@ projections onto some localized-orbital basis.
 
 - [1 One-shot
   singular-value decomposition
-  (SVD)](#One-shot_singular-value_decomposition_(SVD))
+  (SVD)](#one-shot-singular-value-decomposition-svd))
 - [2 Selected
   columns of the density matrix
-  (SCDM)](#Selected_columns_of_the_density_matrix_(SCDM))
+  (SCDM)](#selected-columns-of-the-density-matrix-scdm))
 - [3 Maximally
   localized Wannier functions using
-  Wannier90](#Maximally_localized_Wannier_functions_using_Wannier90)
+  Wannier90](#maximally-localized-wannier-functions-using-wannier90)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## One-shot singular-value decomposition (SVD)\[<a

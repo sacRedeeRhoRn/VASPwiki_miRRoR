@@ -15,25 +15,25 @@ advice on how to optimize the parallelization.
 
 
 - [1 Optimizing the
-  parallelization](#Optimizing_the_parallelization)
+  parallelization](#optimizing-the-parallelization)
   - [1.1 Step 1:
     list of the relevant parallelization INCAR
-    tags](#Step_1:_list_of_the_relevant_parallelization_INCAR_tags)
+    tags](#step-1-list-of-the-relevant-parallelization-incar-tags)
   - [1.2 Step 2:
-    Dry run](#Step_2:_Dry_run)
+    Dry run](#step-2-dry-run)
   - [1.3 Step 3:
     Test candidate
-    parallelization](#Step_3:_Test_candidate_parallelization)
+    parallelization](#step-3-test-candidate-parallelization)
   - [1.4 Step 4:
     Use best performing
-    parallelization](#Step_4:_Use_best_performing_parallelization)
+    parallelization](#step-4-use-best-performing-parallelization)
 - [2 Tips to
   parallelize electronic
-  minimization](#Tips_to_parallelize_electronic_minimization)
+  minimization](#tips-to-parallelize-electronic-minimization)
 - [3 Understanding
-  the hardware](#Understanding_the_hardware)
+  the hardware](#understanding-the-hardware)
 - [4 Related tags
-  an articles](#Related_tags_an_articles)
+  an articles](#related-tags-an-articles)
 
 
 ## Optimizing the parallelization\[<a

@@ -83,7 +83,7 @@ post-processing step by restarting from a converged
 
 
 - [1 Options to
-  select](#Options_to_select)
+  select](#options-to-select)
   - [1.1
     total](#total)
   - [1.2
@@ -95,7 +95,7 @@ post-processing step by restarting from a converged
   - [1.5
     xcmu](#xcmu)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Options to select\[<a

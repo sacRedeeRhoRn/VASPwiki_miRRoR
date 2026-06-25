@@ -9,22 +9,22 @@
 
 
 - [1 Dielectric
-  function](#Dielectric_function)
+  function](#dielectric-function)
   - [1.1 Static
-    response](#Static_response)
+    response](#static-response)
     - [1.1.1
       LEPSILON: density-functional-perturbation
       theory
-      (DFPT)](#LEPSILON:_density-functional-perturbation_theory_(DFPT))
+      (DFPT)](#lepsilon-density-functional-perturbation-theory-dfpt))
     - [1.1.2
       LCALCEPS: finite differences
-      approach](#LCALCEPS:_finite_differences_approach)
+      approach](#lcalceps-finite-differences-approach)
   - [1.2 Dynamical
     response: Green-Kubo and many-body perturbation
-    theory](#Dynamical_response:_Green-Kubo_and_many-body_perturbation_theory)
+    theory](#dynamical-response-green-kubo-and-many-body-perturbation-theory)
     - [1.2.1
       LOPTICS: Green-Kubo
-      formula](#LOPTICS:_Green-Kubo_formula)
+      formula](#loptics-green-kubo-formula)
     - [1.2.2 ALGO =
       TDHF: Casida equation](#ALGO_=_TDHF:_Casida_equation)
     - [1.2.3 ALGO =
@@ -37,57 +37,57 @@
       BSE: macroscopic dielectric function including
       excitons](#ALGO_=_BSE:_macroscopic_dielectric_function_including_excitons)
 - [2 Level of
-  approximation](#Level_of_approximation)
+  approximation](#level-of-approximation)
   - [2.1
     Microscopic and macroscopic
-    quantities](#Microscopic_and_macroscopic_quantities)
+    quantities](#microscopic-and-macroscopic-quantities)
   - [2.2 Finite
     momentum dielectric
-    function](#Finite_momentum_dielectric_function)
+    function](#finite-momentum-dielectric-function)
   - [2.3 Local
-    fields in the Hamiltonian](#Local_fields_in_the_Hamiltonian)
+    fields in the Hamiltonian](#local-fields-in-the-hamiltonian)
   - [2.4
     Ion-clamped vs relaxed-ion/dressed dielectric
-    function](#Ion-clamped_vs_relaxed-ion/dressed_dielectric_function)
+    function](#ion-clamped-vs-relaxed-iondressed-dielectric-function)
   - [2.5
     Density-density versus current-current
     response
-    functions](#Density-density_versus_current-current_response_functions)
+    functions](#density-density-versus-current-current-response-functions)
 - [3 Other
-  dielectric properties](#Other_dielectric_properties)
+  dielectric properties](#other-dielectric-properties)
   - [3.1 Electron
     energy loss spectroscopy
-    (EELS)](#Electron_energy_loss_spectroscopy_(EELS))
+    (EELS)](#electron-energy-loss-spectroscopy-eels))
   - [3.2 Optical
-    conductivity](#Optical_conductivity)
+    conductivity](#optical-conductivity)
   - [3.3 Optical
-    absorption](#Optical_absorption)
+    absorption](#optical-absorption)
   - [3.4 X-ray
-    absorption](#X-ray_absorption)
+    absorption](#x-ray-absorption)
   - [3.5
-    Reflectance](#Reflectance)
+    Reflectance](#reflectance)
   - [3.6
     Magneto-optical Kerr effect
-    (MOKE)](#Magneto-optical_Kerr_effect_(MOKE))
+    (MOKE)](#magneto-optical-kerr-effect-moke))
 - [4 Electric
   response combined with perturbations of the ionic degrees of
-  freedom](#Electric_response_combined_with_perturbations_of_the_ionic_degrees_of_freedom)
+  freedom](#electric-response-combined-with-perturbations-of-the-ionic-degrees-of-freedom)
   - [4.1
     Low-frequency corrections from atomic
-    displacements](#Low-frequency_corrections_from_atomic_displacements)
+    displacements](#low-frequency-corrections-from-atomic-displacements)
     - [4.1.1 Polar
-      materials](#Polar_materials)
+      materials](#polar-materials)
   - [4.2
     Corrections from
-    strain](#Corrections_from_strain)
+    strain](#corrections-from-strain)
 - [5 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [5.1
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [5.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Dielectric function\[<a

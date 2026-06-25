@@ -26,17 +26,17 @@ set of parameters.
 
 
 - [1 How it
-  works](#How_it_works)
+  works](#how-it-works)
 - [2
-  Output](#Output)
+  Output](#output)
   - [2.1 Plain-text
     output in the OUTCAR
-    file](#Plain-text_output_in_the_OUTCAR_file)
+    file](#plain-text-output-in-the-outcar-file)
   - [2.2 Binary
     output in the vaspout.h5 HDF5
-    file](#Binary_output_in_the_vaspout.h5_HDF5_file)
+    file](#binary-output-in-the-vaspouth5-hdf5-file)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## How it works\[<a

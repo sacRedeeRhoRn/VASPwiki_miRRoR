@@ -17,72 +17,72 @@ GTO calculations.
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
   - [1.1
-    Hartree-Fock](#Hartree-Fock)
+    Hartree-Fock](#hartree-fock)
   - [1.2 Kohn-Sham
-    equations](#Kohn-Sham_equations)
+    equations](#kohn-sham-equations)
   - [1.3 Periodic
-    boundary conditions](#Periodic_boundary_conditions)
+    boundary conditions](#periodic-boundary-conditions)
     - [1.3.1 Plane
-      waves](#Plane_waves)
+      waves](#plane-waves)
   - [1.4
     Atom-centered
-    basis](#Atom-centered_basis)
+    basis](#atom-centered-basis)
 - [2 Integral
-  evaluation](#Integral_evaluation)
+  evaluation](#integral-evaluation)
   - [2.1 Gaussian
-    basis](#Gaussian_basis)
+    basis](#gaussian-basis)
     - [2.1.1
       Gaussian product
-      rule](#Gaussian_product_rule)
+      rule](#gaussian-product-rule)
     - [2.1.2
-      Overlap integral](#Overlap_integral)
+      Overlap integral](#overlap-integral)
     - [2.1.3
       Kinetic energy
-      integral](#Kinetic_energy_integral)
+      integral](#kinetic-energy-integral)
     - [2.1.4
       One-electron Coulomb
-      integral](#One-electron_Coulomb_integral)
+      integral](#one-electron-coulomb-integral)
     - [2.1.5
       Two-electron Coulomb
-      integral](#Two-electron_Coulomb_integral)
+      integral](#two-electron-coulomb-integral)
   - [2.2 Plane
-    waves](#Plane_waves_2)
+    waves](#plane-waves-1)
 - [3 Selecting the
-  basis](#Selecting_the_basis)
+  basis](#selecting-the-basis)
 - [4
-  Pseudopotentials](#Pseudopotentials)
+  Pseudopotentials](#pseudopotentials)
   - [4.1 Effective
-    core potentials](#Effective_core_potentials)
+    core potentials](#effective-core-potentials)
   - [4.2 Projector
-    augmented-wave approach](#Projector_augmented-wave_approach)
+    augmented-wave approach](#projector-augmented-wave-approach)
   - [4.3 Comparing
-    ECP and PAW](#Comparing_ECP_and_PAW)
+    ECP and PAW](#comparing-ecp-and-paw)
 - [5
-  Methods](#Methods)
+  Methods](#methods)
   - [5.1
-    Post-Hartree-Fock](#Post-Hartree-Fock)
+    Post-Hartree-Fock](#post-hartree-fock)
   - [5.2 Excited
-    states](#Excited_states)
+    states](#excited-states)
 - [6 Going from
   local to periodic
-  calculations](#Going_from_local_to_periodic_calculations)
+  calculations](#going-from-local-to-periodic-calculations)
   - [6.1
     k-points](#k-points)
   - [6.2
-    Smearing](#Smearing)
+    Smearing](#smearing)
   - [6.3
-    Vacuum](#Vacuum)
+    Vacuum](#vacuum)
   - [6.4 Pulay
-    stress](#Pulay_stress)
+    stress](#pulay-stress)
 - [7 Comparing
   Gaussian and plane-wave
-  approaches](#Comparing_Gaussian_and_plane-wave_approaches)
+  approaches](#comparing-gaussian-and-plane-wave-approaches)
 - [8
-  Acknowledgments](#Acknowledgments)
+  Acknowledgments](#acknowledgments)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Introduction\[<a

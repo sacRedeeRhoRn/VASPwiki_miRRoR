@@ -24,26 +24,26 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
   - [1.1 Step 1:
     DFT groundstate calculation with a “dense” mesh of
-    k-points](#Step_1:_DFT_groundstate_calculation_with_a_“dense”_mesh_of_k-points)
+    k-points](#step-1-dft-groundstate-calculation-with-a-dense-mesh-of-k-points)
   - [1.2 Step 2:
     Compute the Hartree-Fock energy using the DFT
-    orbitals](#Step_2:_Compute_the_Hartree-Fock_energy_using_the_DFT_orbitals)
+    orbitals](#step-2-compute-the-hartree-fock-energy-using-the-dft-orbitals)
   - [1.3 Step 3:
     DFT groundstate calculation with a “coarse” mesh of
-    k-points](#Step_3:_DFT_groundstate_calculation_with_a_“coarse”_mesh_of_k-points)
+    k-points](#step-3-dft-groundstate-calculation-with-a-coarse-mesh-of-k-points)
   - [1.4 Step 4:
     Obtain DFT "virtual" orbitals (empty
     states)](#Step_4:_Obtain_DFT_%22virtual%22_orbitals_(empty_states))
   - [1.5 Step 5:
     calculate the RPA correlation energy
-    (ACFDT)](#Step_5:_calculate_the_RPA_correlation_energy_(ACFDT))
+    (ACFDT)](#step-5-calculate-the-rpa-correlation-energy-acfdt))
 - [2 Running this
-  example](#Running_this_example)
+  example](#running-this-example)
 - [3
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

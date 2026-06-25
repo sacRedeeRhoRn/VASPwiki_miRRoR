@@ -28,7 +28,7 @@ be placed in subdirectories, e.g., 01, 02, 03, etc., or in the root
 directory. Files in subdirectories take precedence over those in the
 root directory.
 
-See [use cases](#Use_cases) described below.
+See [use cases](#use-cases) described below.
 
 ## File handling\[<a href="/wiki/index.php?title=IMAGES&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"

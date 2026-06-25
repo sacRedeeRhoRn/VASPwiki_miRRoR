@@ -39,46 +39,46 @@ More information about the theory behind the RPA is found
 
 - [1 General recipe
   to calculate ACFDT-RPA total
-  energies](#General_recipe_to_calculate_ACFDT-RPA_total_energies)
+  energies](#general-recipe-to-calculate-acfdt-rpa-total-energies)
   - [1.1 Four-step
     procedure to calculate ACFDT-RPA total
-    energy](#Four-step_procedure_to_calculate_ACFDT-RPA_total_energy)
+    energy](#four-step-procedure-to-calculate-acfdt-rpa-total-energy)
   - [1.2 All-in-one
     approach to calculate ACFDT-RPA total
-    energy](#All-in-one_approach_to_calculate_ACFDT-RPA_total_energy)
+    energy](#all-in-one-approach-to-calculate-acfdt-rpa-total-energy)
   - [1.3 Output of
-    ACFDT-RPA total energy](#Output_of_ACFDT-RPA_total_energy)
+    ACFDT-RPA total energy](#output-of-acfdt-rpa-total-energy)
 - [2 Low-scaling
-  ACFDT/RPA algorithm](#Low-scaling_ACFDT/RPA_algorithm)
+  ACFDT/RPA algorithm](#low-scaling-acfdtrpa-algorithm)
   - [2.1 Output of
-    low-scaling ACFDT/RPA](#Output_of_low-scaling_ACFDT/RPA)
+    low-scaling ACFDT/RPA](#output-of-low-scaling-acfdtrpa)
   - [2.2 Singles
     contribution to the correlation
-    energy](#Singles_contribution_to_the_correlation_energy)
+    energy](#singles-contribution-to-the-correlation-energy)
   - [2.3 Optional:
-    RPA Forces](#Optional:_RPA_Forces)
+    RPA Forces](#optional-rpa-forces)
   - [2.4 Caveats:
     Noise in Energies and RPA
-    Forces](#Caveats:_Noise_in_Energies_and_RPA_Forces)
+    Forces](#caveats-noise-in-energies-and-rpa-forces)
   - [2.5 Memory
     bottleneck and
-    Parallelization](#Memory_bottleneck_and_Parallelization)
+    Parallelization](#memory-bottleneck-and-parallelization)
 - [3 Some Issues
   Particular to ACFDT-RPA Calculations on
-  Metals](#Some_Issues_Particular_to_ACFDT-RPA_Calculations_on_Metals)
+  Metals](#some-issues-particular-to-acfdt-rpa-calculations-on-metals)
 - [4 Possible tests
-  and known issues](#Possible_tests_and_known_issues)
+  and known issues](#possible-tests-and-known-issues)
   - [4.1 Exact
-    one-centre density terms](#Exact_one-centre_density_terms)
+    one-centre density terms](#exact-one-centre-density-terms)
   - [4.2 Basis set
-    convergence](#Basis_set_convergence)
+    convergence](#basis-set-convergence)
   - [4.3 K-point
     convergence: Spline
-    interpolation](#K-point_convergence:_Spline_interpolation)
+    interpolation](#k-point-convergence-spline-interpolation)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## General recipe to calculate ACFDT-RPA total energies\[<a

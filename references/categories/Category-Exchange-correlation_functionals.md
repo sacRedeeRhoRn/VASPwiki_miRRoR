@@ -71,18 +71,18 @@ methods.
 
 - [1 Which
   exchange-correlation method to
-  choose?](#Which_exchange-correlation_method_to_choose?)
+  choose?](#which-exchange-correlation-method-to-choose)
 - [2 Types of
-  approximations](#Types_of_approximations)
+  approximations](#types-of-approximations)
   - [2.1 Local
     density approximation
-    (LDA)](#Local_density_approximation_(LDA))
+    (LDA)](#local-density-approximation-lda))
   - [2.2
     Generalized gradient approximation
-    (GGA)](#Generalized_gradient_approximation_(GGA))
+    (GGA)](#generalized-gradient-approximation-gga))
   - [2.3 Meta
     generalized gradient approximation
-    (meta-GGA)](#Meta_generalized_gradient_approximation_(meta-GGA))
+    (meta-GGA)](#meta-generalized-gradient-approximation-meta-gga))
   - [2.4
     Hartree-Fock (HF) and hybrid
     functionals](#Hartree-Fock_(HF)_and_hybrid_functionals)
@@ -92,13 +92,13 @@ methods.
     (KLI)](#Exact_exchange_optimized-effective_potential_(EXX-OEP),_localized_Hartree-Fock_(LHF),_and_Krieger-Li-Iafrate_(KLI))
   - [2.6 Density
     functional theory plus U
-    (DFT+U)](#Density_functional_theory_plus_U_(DFT+U))
+    (DFT+U)](#density-functional-theory-plus-u-dftu))
   - [2.7 van der
     Waals (vdW) functionals](#van_der_Waals_(vdW)_functionals)
   - [2.8 Many-body
-    methods](#Many-body_methods)
+    methods](#many-body-methods)
 - [3
-  References](#References)
+  References](#references)
 
 
 ### Which exchange-correlation method to choose?\[<a

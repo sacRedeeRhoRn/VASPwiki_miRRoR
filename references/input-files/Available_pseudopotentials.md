@@ -40,49 +40,49 @@ Also see:
 
 
 - [1 Available
-  pseudopotential sets](#Available_pseudopotential_sets)
+  pseudopotential sets](#available-pseudopotential-sets)
   - [1.1 potpaw.64
-    (latest, recommended)](#potpaw.64_(latest,_recommended))
+    (latest, recommended)](#potpaw64-latest-recommended))
     - [1.1.1
       Standard
-      potentials](#Standard_potentials)
+      potentials](#standard-potentials)
     - [1.1.2 GW
-      potentials](#GW_potentials)
+      potentials](#gw-potentials)
   - [1.2
-    potpaw.54](#potpaw.54)
+    potpaw.54](#potpaw54)
     - [1.2.1
       Standard
-      potentials](#Standard_potentials_2)
+      potentials](#standard-potentials-2)
     - [1.2.2 GW
-      potentials](#GW_potentials_2)
+      potentials](#gw-potentials-2)
   - [1.3
-    potpaw.52](#potpaw.52)
+    potpaw.52](#potpaw52)
     - [1.3.1
       Standard
-      potentials](#Standard_potentials_3)
+      potentials](#standard-potentials-3)
     - [1.3.2 GW
-      potentials](#GW_potentials_3)
+      potentials](#gw-potentials-3)
   - [1.4 LDA
     (2010), PW91 (2006) and PBE (2010) PAW
     potentials](#LDA_(2010),_PW91_(2006)_and_PBE_(2010)_PAW_potentials)
     - [1.4.1
       Standard
-      potentials](#Standard_potentials_4)
+      potentials](#standard-potentials-3)
     - [1.4.2 GW
-      potentials](#GW_potentials_4)
+      potentials](#gw-potentials-3)
   - [1.5 Ultrasoft
     pseudopotentials for LDA and PW91
-    (2002)](#Ultrasoft_pseudopotentials_for_LDA_and_PW91_(2002))
+    (2002)](#ultrasoft-pseudopotentials-for-lda-and-pw91-2002))
   - [1.6 LDA & PBE,
     5.2 & 5.4 (original univie release
     version)](#LDA_&_PBE,_5.2_&_5.4_(original_univie_release_version))
 - [2 Different
   variants specified by the
-  suffix](#Different_variants_specified_by_the_suffix)
+  suffix](#different-variants-specified-by-the-suffix)
 - [3 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Available pseudopotential sets\[<a
@@ -100,7 +100,7 @@ The tables list all available pseudopotentials split between
 
 - *GW potentials*: these are optimized for treating unoccupied states
   far above the Fermi level and have an [\_GW
-  suffix](#Different_variants_specified_by_the_suffix). GW potentials
+  suffix](#different-variants-specified-by-the-suffix). GW potentials
   are recommended for computing
   <a href="/wiki/Optical_properties" class="mw-redirect"
   title="Optical properties">optical properties</a> and calculations
@@ -120,7 +120,7 @@ pseudopotential](../tutorials/Choosing_pseudopotentials.md).
 
 |  |
 |----|
-| **Important:** Refer to the explanation of [different variants](#Different_variants_specified_by_the_suffix) to understand the suffix in the name of the potential. |
+| **Important:** Refer to the explanation of [different variants](#different-variants-specified-by-the-suffix) to understand the suffix in the name of the potential. |
 
 ### potpaw.64 (latest, recommended)\[<a
 href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=2"
@@ -3145,7 +3145,7 @@ title="Edit section: LDA &amp; PBE, 5.2 &amp; 5.4 (original univie release versi
 
 |  |
 |----|
-| **Mind:** *LDA & PBE, 5.2 & 5.4 (original univie release version)* potentials are equivalent to the [potpaw.52](#potpaw.52) and [potpaw.54](#potpaw.54) sets, other than some TITLE strings and missing hash keys. Thus, they are not listed explicitly here. Use them only if you need strictly identical files. |
+| **Mind:** *LDA & PBE, 5.2 & 5.4 (original univie release version)* potentials are equivalent to the [potpaw.52](#potpaw52) and [potpaw.54](#potpaw54) sets, other than some TITLE strings and missing hash keys. Thus, they are not listed explicitly here. Use them only if you need strictly identical files. |
 
 ## Different variants specified by the suffix\[<a
 href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=16"

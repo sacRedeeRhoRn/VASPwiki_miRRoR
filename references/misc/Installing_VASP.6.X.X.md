@@ -8,9 +8,9 @@ As a <a href="https://vasp.at%7C" class="external text"
 rel="nofollow">license holder</a>, you can download the source code of
 VASP from the
 <a href="https://vasp.at%7C" class="external text" rel="nofollow">VASP
-Portal</a>. If your system fulfills the [requirements](#Requirements),
+Portal</a>. If your system fulfills the [requirements](#requirements),
 you can install VASP.6.X.X by following the [steps
-below](#Install_VASP_with_makefile.include). There are two separate ways
+below](#install-vasp-with-makefileinclude). There are two separate ways
 to install VASP:
 
 1.  With the traditional makefile.include templates included in the
@@ -29,42 +29,42 @@ VASP.5.X.X](Installing_VASP.5.X.X.md).
 
 
 - [1
-  Requirements](#Requirements)
+  Requirements](#requirements)
 - [2 Install VASP
-  with makefile.include](#Install_VASP_with_makefile.include)
+  with makefile.include](#install-vasp-with-makefileinclude)
   - [2.1 Step 1:
-    Download](#Step_1:_Download)
+    Download](#step-1-download)
   - [2.2 Step 2:
-    Prepare makefile.include](#Step_2:_Prepare_makefile.include)
+    Prepare makefile.include](#step-2-prepare-makefileinclude)
   - [2.3 Step 3:
-    Make](#Step_3:_Make)
+    Make](#step-3-make)
   - [2.4 Step 4:
-    Test](#Step_4:_Test)
+    Test](#step-4-test)
   - [2.5 Step 5:
-    Install](#Step_5:_Install)
+    Install](#step-5-install)
 - [3 Install VASP
-  with CMake](#Install_VASP_with_CMake)
+  with CMake](#install-vasp-with-cmake)
   - [3.1 Step 1:
-    Download VASP](#Step_1:_Download_VASP)
+    Download VASP](#step-1-download-vasp)
   - [3.2 Step 2:
-    Download CMake files](#Step_2:_Download_CMake_files)
+    Download CMake files](#step-2-download-cmake-files)
   - [3.3 Step 3:
-    CMake Configure](#Step_3:_CMake_Configure)
+    CMake Configure](#step-3-cmake-configure)
   - [3.4 Step 4:
-    Build](#Step_4:_Build)
+    Build](#step-4-build)
   - [3.5 Step 5:
-    Test](#Step_5:_Test)
+    Test](#step-5-test)
   - [3.6 Step 6:
-    Install](#Step_6:_Install)
+    Install](#step-6-install)
 - [4 Subdirectories
-  in vasp.6.x.x](#Subdirectories_in_vasp.6.x.x)
+  in vasp.6.x.x](#subdirectories-in-vasp6xx)
 - [5 Validated
-  Toolchains via CI](#Validated_Toolchains_via_CI)
+  Toolchains via CI](#validated-toolchains-via-ci)
 - [6 Install on a
   common Linux
-  distribution](#Install_on_a_common_Linux_distribution)
+  distribution](#install-on-a-common-linux-distribution)
 - [7 Related
-  sections](#Related_sections)
+  sections](#related-sections)
 
 
 ## Requirements\[<a
@@ -164,7 +164,7 @@ Download the source code of VASP from the
 <a href="https://vasp.at%7C" class="external text" rel="nofollow">VASP
 Portal</a>, copy it to the desired location on your machine, and unzip
 the file to obtain the folder `/path/to/vasp.x.x.x` and reveal [its
-content](#Subdirectories_in_vasp.6.x.x).
+content](#subdirectories-in-vasp6xx).
 
 ### Step 2: Prepare [makefile.include](Makefile.include.md)\[<a
 href="/wiki/index.php?title=Installing_VASP.6.X.X&amp;veaction=edit&amp;section=4"

@@ -21,15 +21,15 @@ more options and features based on a known system.
 
 - [1 How to create
   a minimal reproducible
-  example](#How_to_create_a_minimal_reproducible_example)
+  example](#how-to-create-a-minimal-reproducible-example)
   - [1.1 Step
-    1](#Step_1)
+    1](#step-1)
   - [1.2 Step
-    2](#Step_2)
+    2](#step-2)
   - [1.3 Step
-    3](#Step_3)
+    3](#step-3)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## How to create a minimal reproducible example\[<a

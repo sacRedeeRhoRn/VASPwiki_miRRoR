@@ -22,15 +22,15 @@ al.*<sup>[\[4\]](#cite_note-fuchs:prb:2007-4)</sup>
 
 
 - [1 Single step
-  procedure: GW in one go](#Single_step_procedure:_GW_in_one_go)
+  procedure: GW in one go](#single-step-procedure-gw-in-one-go)
   - [1.1
-    Caveats](#Caveats)
+    Caveats](#caveats)
 - [2 First step:
-  DFT calculation](#First_step:_DFT_calculation)
+  DFT calculation](#first-step-dft-calculation)
   - [2.1 Optional:
-    Use Hybrid functionals](#Optional:_Use_Hybrid_functionals)
+    Use Hybrid functionals](#optional-use-hybrid-functionals)
 - [3 Second step:
-  GW calculation](#Second_step:_GW_calculation)
+  GW calculation](#second-step-gw-calculation)
   - [3.1 Single
     shot quasiparticle energies:
     G<sub>0</sub>W<sub>0</sub>](#Single_shot_quasiparticle_energies:_G0W0)
@@ -41,21 +41,21 @@ al.*<sup>[\[4\]](#cite_note-fuchs:prb:2007-4)</sup>
     self-consistent quasiparticle calculations:
     QPGW<sub>0</sub>](#Partially_self-consistent_quasiparticle_calculations:_QPGW0)
     - [3.3.1
-      Caveats](#Caveats_2)
+      Caveats](#caveats-2)
   - [3.4
     Self-consistent EVGW and QPGW
-    calculations](#Self-consistent_EVGW_and_QPGW_calculations)
+    calculations](#self-consistent-evgw-and-qpgw-calculations)
     - [3.4.1
-      Caveats](#Caveats_3)
+      Caveats](#caveats-3)
 - [4 Low scaling GW
-  algorithms](#Low_scaling_GW_algorithms)
+  algorithms](#low-scaling-gw-algorithms)
   - [4.1 Low
     scaling, single shot GW calculations:
     G<sub>0</sub>W<sub>0</sub>R](#Low_scaling,_single_shot_GW_calculations:_G0W0R)
     - [4.1.1 Output
-      description](#Output_description)
+      description](#output-description)
   - [4.2 Optional:
-    RPA Forces](#Optional:_RPA_Forces)
+    RPA Forces](#optional-rpa-forces)
   - [4.3 Low
     scaling, partially self-consistent GW calculations:
     EVGW<sub>0</sub>R](#Low_scaling,_partially_self-consistent_GW_calculations:_EVGW0R)
@@ -64,13 +64,13 @@ al.*<sup>[\[4\]](#cite_note-fuchs:prb:2007-4)</sup>
     GW<sub>0</sub>R](#Partially_self-consistent_GW_calculations:_GW0R)
   - [4.5 Fully
     self-consistent GW caluclations:
-    GWR](#Fully_self-consistent_GW_caluclations:_GWR)
+    GWR](#fully-self-consistent-gw-caluclations-gwr)
     - [4.5.1
-      Caveats](#Caveats_4)
+      Caveats](#caveats-3)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 # Single step procedure: GW in one go\[<a

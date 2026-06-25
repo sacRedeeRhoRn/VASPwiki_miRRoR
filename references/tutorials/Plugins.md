@@ -18,14 +18,14 @@ and link it with VASP.
 
 
 - [1 Compiling with
-  Plugins support](#Compiling_with_Plugins_support)
+  Plugins support](#compiling-with-plugins-support)
 - [2 Python
-  scripting](#Python_scripting)
+  scripting](#python-scripting)
 - [3 Exposing
   interfaces through entry-points
-  (advanced)](#Exposing_interfaces_through_entry-points_(advanced))
+  (advanced)](#exposing-interfaces-through-entry-points-advanced))
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Compiling with Plugins support\[<a href="/wiki/index.php?title=Plugins&amp;veaction=edit&amp;section=1"

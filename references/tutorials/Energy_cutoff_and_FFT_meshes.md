@@ -23,24 +23,24 @@ related tags like [PREC](../incar-tags/PREC.md) are provided below.
 
 - [1 Aspects to
   refine the choice of the cutoff energy, FFT mesh and related
-  parameters](#Aspects_to_refine_the_choice_of_the_cutoff_energy,_FFT_mesh_and_related_parameters)
+  parameters](#aspects-to-refine-the-choice-of-the-cutoff-energy-fft-mesh-and-related-parameters)
   - [1.1 Energy
-    cutoff](#Energy_cutoff)
+    cutoff](#energy-cutoff)
   - [1.2 FFT
-    mesh](#FFT_mesh)
+    mesh](#fft-mesh)
     - [1.2.1 Mesh
       for the KS orbitals (soft mesh or coarse
-      mesh)](#Mesh_for_the_KS_orbitals_(soft_mesh_or_coarse_mesh))
+      mesh)](#mesh-for-the-ks-orbitals-soft-mesh-or-coarse-mesh))
     - [1.2.2 Mesh
       for the densities (fine
-      mesh)](#Mesh_for_the_densities_(fine_mesh))
+      mesh)](#mesh-for-the-densities-fine-mesh))
     - [1.2.3
-      Support grid](#Support_grid)
+      Support grid](#support-grid)
 - [2 Example:
   volume relaxation and
-  pressure](#Example:_volume_relaxation_and_pressure)
+  pressure](#example-volume-relaxation-and-pressure)
   - [2.1 Related
-    tags and articles](#Related_tags_and_articles)
+    tags and articles](#related-tags-and-articles)
 
 
 # Aspects to refine the choice of the cutoff energy, FFT mesh and related parameters\[<a

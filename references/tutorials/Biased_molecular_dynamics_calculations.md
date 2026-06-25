@@ -9,27 +9,27 @@
 
 
 - [1 How
-  to](#How_to)
+  to](#how-to)
   - [1.1 Available
-    potentials](#Available_potentials)
+    potentials](#available-potentials)
     - [1.1.1
       Harmonic
-      potentials](#Harmonic_potentials)
+      potentials](#harmonic-potentials)
     - [1.1.2 Step
-      function](#Step_function)
+      function](#step-function)
     - [1.1.3
       Gaussian
-      potential](#Gaussian_potential)
+      potential](#gaussian-potential)
   - [1.2
-    Output](#Output)
+    Output](#output)
 - [2 Examples of
-  usage](#Examples_of_usage)
+  usage](#examples-of-usage)
 - [3 Related
-  methods in VASP](#Related_methods_in_VASP)
+  methods in VASP](#related-methods-in-vasp)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## How to\[<a

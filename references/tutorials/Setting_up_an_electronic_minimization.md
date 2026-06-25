@@ -24,34 +24,34 @@ tags. After running the calculation, the output can be analyzed.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Create the
-    input files](#Create_the_input_files)
+    input files](#create-the-input-files)
   - [1.2 Optimize
-    your settings](#Optimize_your_settings)
+    your settings](#optimize-your-settings)
   - [1.3 Run the
-    calculation](#Run_the_calculation)
+    calculation](#run-the-calculation)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [3
-  Example](#Example)
+  Example](#example)
   - [3.1 Setting up
-    the POSCAR file](#Setting_up_the_POSCAR_file)
+    the POSCAR file](#setting-up-the-poscar-file)
   - [3.2 Creating
-    the POTCAR file](#Creating_the_POTCAR_file)
+    the POTCAR file](#creating-the-potcar-file)
   - [3.3 Creating
-    the KPOINTS file](#Creating_the_KPOINTS_file)
+    the KPOINTS file](#creating-the-kpoints-file)
   - [3.4 Creating
-    the INCAR file](#Creating_the_INCAR_file)
+    the INCAR file](#creating-the-incar-file)
   - [3.5 Performing
-    a dryrun](#Performing_a_dryrun)
+    a dryrun](#performing-a-dryrun)
   - [3.6 Running
-    the calculation](#Running_the_calculation)
+    the calculation](#running-the-calculation)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Step-by-step instructions\[<a

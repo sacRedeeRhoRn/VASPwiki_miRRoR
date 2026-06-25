@@ -10,51 +10,51 @@
 
 - [1 Surfaces, thin
   films, and 2D
-  materials](#Surfaces,_thin_films,_and_2D_materials)
+  materials](#surfaces-thin-films-and-2d-materials)
   - [1.1
-    Nomenclature](#Nomenclature)
+    Nomenclature](#nomenclature)
     - [1.1.1
-      Surfaces](#Surfaces)
+      Surfaces](#surfaces)
     - [1.1.2 Thin
-      films](#Thin_films)
+      films](#thin-films)
     - [1.1.3 2D
-      materials](#2D_materials)
+      materials](#2d-materials)
   - [1.2 Slab
-    symmetry and stoichiometry](#Slab_symmetry_and_stoichiometry)
+    symmetry and stoichiometry](#slab-symmetry-and-stoichiometry)
     - [1.2.1 Slab
-      symmetry](#Slab_symmetry)
+      symmetry](#slab-symmetry)
     - [1.2.2 Slab
-      stoichiometry](#Slab_stoichiometry)
+      stoichiometry](#slab-stoichiometry)
   - [1.3 Advice and
-    recommendations](#Advice_and_recommendations)
+    recommendations](#advice-and-recommendations)
     - [1.3.1
       Creating slab
-      models](#Creating_slab_models)
+      models](#creating-slab-models)
     - [1.3.2
       In-plane lattice
-      parameters](#In-plane_lattice_parameters)
+      parameters](#in-plane-lattice-parameters)
     - [1.3.3
       Out-of-plane lattice
-      parameters](#Out-of-plane_lattice_parameters)
+      parameters](#out-of-plane-lattice-parameters)
     - [1.3.4
       Surface-energy
-      calculations](#Surface-energy_calculations)
+      calculations](#surface-energy-calculations)
     - [1.3.5
       Adsorption at a
-      surface](#Adsorption_at_a_surface)
+      surface](#adsorption-at-a-surface)
     - [1.3.6
       Computing the work
-      function](#Computing_the_work_function)
+      function](#computing-the-work-function)
     - [1.3.7
       Simulation of STM
-      pictures](#Simulation_of_STM_pictures)
+      pictures](#simulation-of-stm-pictures)
     - [1.3.8
       Electrostatic
-      corrections](#Electrostatic_corrections)
+      corrections](#electrostatic-corrections)
   - [1.4
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [1.5
-    References](#References)
+    References](#references)
 
 
 # Surfaces, thin films, and 2D materials\[<a
@@ -193,7 +193,7 @@ static calculation as a starting point.
 
 Slab symmetry is also important for surface calculations. If the two
 surfaces of a slab are not equal, the [computation of the surface
-energy](#surface-energy_calculations) becomes more cumbersome.
+energy](#surface-energy-calculations) becomes more cumbersome.
 
 ### Slab stoichiometry\[<a
 href="/wiki/index.php?title=Category:2D_materials&amp;veaction=edit&amp;section=8"
@@ -376,8 +376,8 @@ href="/wiki/index.php?title=Category:2D_materials&amp;veaction=edit&amp;section=
 class="mw-editsection-visualeditor"
 title="Edit section: Electrostatic corrections">edit</a> \| (./index.php.md)\]
 
-As mentioned, e.g., in the [slab symmetry](#Slab_symmetry) or
-[adsorption at a surface](#Adsorption_at_a_surface) sections,
+As mentioned, e.g., in the [slab symmetry](#slab-symmetry) or
+[adsorption at a surface](#adsorption-at-a-surface) sections,
 electrostatic corrections can be important for 2D materials, thin films,
 and surfaces. Please consult the
 [electrostatics](Category-Electrostatics.md)

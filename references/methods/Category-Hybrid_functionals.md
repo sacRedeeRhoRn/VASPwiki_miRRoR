@@ -70,21 +70,21 @@ method</a>.</li>
 
 
 - [1
-  Overview](#Overview)
+  Overview](#overview)
 - [2 Technical
-  points](#Technical_points)
+  points](#technical-points)
 - [3 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [3.1
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [3.2
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [3.3 How
-    to](#How_to)
+    to](#how-to)
   - [3.4 Further
-    reading](#Further_reading)
+    reading](#further-reading)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Overview\[<a

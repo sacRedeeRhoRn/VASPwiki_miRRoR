@@ -17,75 +17,75 @@ and
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
 - [2
-  Algorithms](#Algorithms)
+  Algorithms](#algorithms)
   - [2.1 On-the-fly
     machine-learning
-    algorithm](#On-the-fly_machine-learning_algorithm)
+    algorithm](#on-the-fly-machine-learning-algorithm)
   - [2.2 Sampling
     of training data and local reference
-    configurations](#Sampling_of_training_data_and_local_reference_configurations)
+    configurations](#sampling-of-training-data-and-local-reference-configurations)
   - [2.3 Threshold
     for uncertainty of
-    forces](#Threshold_for_uncertainty_of_forces)
+    forces](#threshold-for-uncertainty-of-forces)
 - [3 Local
-  energies](#Local_energies)
+  energies](#local-energies)
 - [4
-  Descriptors](#Descriptors)
+  Descriptors](#descriptors)
   - [4.1 Radial
-    descriptor](#Radial_descriptor)
+    descriptor](#radial-descriptor)
   - [4.2 Angular
-    descriptor](#Angular_descriptor)
+    descriptor](#angular-descriptor)
   - [4.3 Basis set
     expansion and
-    descriptors](#Basis_set_expansion_and_descriptors)
+    descriptors](#basis-set-expansion-and-descriptors)
     - [4.3.1
       Angular
-      filtering](#Angular_filtering)
+      filtering](#angular-filtering)
     - [4.3.2
       Reduced
-      descriptors](#Reduced_descriptors)
+      descriptors](#reduced-descriptors)
 - [5 Potential
-  energy fitting](#Potential_energy_fitting)
+  energy fitting](#potential-energy-fitting)
   - [5.1
-    Normalization](#Normalization)
+    Normalization](#normalization)
   - [5.2 Matrix
     vector form of linear
-    equations](#Matrix_vector_form_of_linear_equations)
+    equations](#matrix-vector-form-of-linear-equations)
 - [6 Bayesian
-  linear regression](#Bayesian_linear_regression)
+  linear regression](#bayesian-linear-regression)
   - [6.1
-    Regression](#Regression)
+    Regression](#regression)
     - [6.1.1
       Solution via
-      Inversion](#Solution_via_Inversion)
+      Inversion](#solution-via-inversion)
     - [6.1.2
       Solution via LU
-      factorization](#Solution_via_LU_factorization)
+      factorization](#solution-via-lu-factorization)
     - [6.1.3
       Solution via regularized
-      SVD](#Solution_via_regularized_SVD)
+      SVD](#solution-via-regularized-svd)
     - [6.1.4
       Evidence
-      approximation](#Evidence_approximation)
+      approximation](#evidence-approximation)
 - [7 Uncertainty
-  estimation](#Uncertainty_estimation)
+  estimation](#uncertainty-estimation)
   - [7.1
     Uncertainty estimates from Bayesian linear
-    regression](#Uncertainty_estimates_from_Bayesian_linear_regression)
+    regression](#uncertainty-estimates-from-bayesian-linear-regression)
   - [7.2 Spilling
-    factor](#Spilling_factor)
+    factor](#spilling-factor)
 - [8
-  Sparsification](#Sparsification)
+  Sparsification](#sparsification)
   - [8.1
     Sparsification of local reference
-    configurations](#Sparsification_of_local_reference_configurations)
+    configurations](#sparsification-of-local-reference-configurations)
   - [8.2
     Sparsification of angular
-    descriptors](#Sparsification_of_angular_descriptors)
+    descriptors](#sparsification-of-angular-descriptors)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Introduction\[<a
@@ -165,7 +165,7 @@ these structure datasets, the machine identifies **local
 configurations** around an atom to learn what force field is
 appropriate. The local configuration measures the radial and angular
 distribution of neighboring atoms around this given site and is captured
-in the so-called [**descriptors**](#Descriptors).
+in the so-called [**descriptors**](#descriptors).
 
 The on-the-fly force field generation scheme is given by the following
 steps (a flowchart of the algorithm is shown in Fig. 1):

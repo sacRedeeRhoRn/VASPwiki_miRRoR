@@ -27,22 +27,22 @@ electron-phonon tutorials, respectively.
 
 - [1
   Electron–phonon coupling matrix
-  elements](#Electron–phonon_coupling_matrix_elements)
+  elements](#electronphonon-coupling-matrix-elements)
 - [2 Scattering
-  rates and lifetimes](#Scattering_rates_and_lifetimes)
+  rates and lifetimes](#scattering-rates-and-lifetimes)
 - [3 Transport
-  distribution function](#Transport_distribution_function)
+  distribution function](#transport-distribution-function)
 - [4 Onsager
-  coefficients](#Onsager_coefficients)
+  coefficients](#onsager-coefficients)
 - [5 Transport
-  coefficients](#Transport_coefficients)
+  coefficients](#transport-coefficients)
 - [6 Electron and
   hole mobilities in
-  semiconductors](#Electron_and_hole_mobilities_in_semiconductors)
+  semiconductors](#electron-and-hole-mobilities-in-semiconductors)
 - [7 Approximations
-  and methods](#Approximations_and_methods)
+  and methods](#approximations-and-methods)
 - [8 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Electron–phonon coupling matrix elements\[<a

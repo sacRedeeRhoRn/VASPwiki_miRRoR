@@ -14,38 +14,38 @@ solids.
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2
-  Scaling](#Scaling)
+  Scaling](#scaling)
   - [2.1 Building
-    matrix](#Building_matrix)
+    matrix](#building-matrix)
   - [2.2 Solving
-    equation](#Solving_equation)
+    equation](#solving-equation)
     - [2.2.1 Exact
-      diagonalization](#Exact_diagonalization)
+      diagonalization](#exact-diagonalization)
     - [2.2.2
       Iterative
-      solution](#Iterative_solution)
+      solution](#iterative-solution)
 - [3 Exact
-  diagonalization](#Exact_diagonalization_2)
+  diagonalization](#exact-diagonalization-1)
 - [4 Time
-  evolution](#Time_evolution)
+  evolution](#time-evolution)
 - [5 Lanczos
-  algorithm](#Lanczos_algorithm)
+  algorithm](#lanczos-algorithm)
 - [6 X-ray
-  absorption spectra](#X-ray_absorption_spectra)
+  absorption spectra](#x-ray-absorption-spectra)
 - [7 Performing BSE
-  calculations on GPU](#Performing_BSE_calculations_on_GPU)
+  calculations on GPU](#performing-bse-calculations-on-gpu)
 - [8 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [8.1
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [8.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [8.3 How
-    to](#How_to)
+    to](#how-to)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Theory\[<a

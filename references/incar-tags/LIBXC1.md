@@ -49,13 +49,13 @@ meta-GGA-based hybrid functionals are possible since VASP.6.4.0.
 
 
 - [1 How
-  to](#How_to)
+  to](#how-to)
 - [2 Examples of
-  INCAR](#Examples_of_INCAR)
+  INCAR](#examples-of-incar)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## How to\[<a href="/wiki/index.php?title=LIBXC1&amp;veaction=edit&amp;section=1"

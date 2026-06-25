@@ -24,20 +24,20 @@ RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 Step 1: DFT
-  groundstate calculation](#Step_1:_DFT_groundstate_calculation)
+  groundstate calculation](#step-1-dft-groundstate-calculation)
 - [3 Step 2: obtain
-  DFT virtual orbitals](#Step_2:_obtain_DFT_virtual_orbitals)
+  DFT virtual orbitals](#step-2-obtain-dft-virtual-orbitals)
 - [4 Step 3: the
-  actual GW calculation](#Step_3:_the_actual_GW_calculation)
+  actual GW calculation](#step-3-the-actual-gw-calculation)
   - [4.1 Beyond the
-    random-phase-approximation](#Beyond_the_random-phase-approximation)
+    random-phase-approximation](#beyond-the-random-phase-approximation)
   - [4.2 Beyond
     G<sub>0</sub>W<sub>0</sub>:
     GW<sub>0</sub>](#Beyond_G0W0:_GW0)
 - [5
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

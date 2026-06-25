@@ -16,23 +16,23 @@ Born effective charges, and the piezoelectric tensor.
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
 - [2 Sternheimer
-  equations](#Sternheimer_equations)
+  equations](#sternheimer-equations)
 - [3 Computation of
-  physical quantities](#Computation_of_physical_quantities)
+  physical quantities](#computation-of-physical-quantities)
   - [3.1 Ionic
-    contributions](#Ionic_contributions)
+    contributions](#ionic-contributions)
     - [3.1.1
       Piezoelectric
-      tensor](#Piezoelectric_tensor)
+      tensor](#piezoelectric-tensor)
     - [3.1.2
       Dielectric
-      tensor](#Dielectric_tensor)
+      tensor](#dielectric-tensor)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Introduction\[<a

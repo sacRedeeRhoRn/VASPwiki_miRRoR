@@ -41,17 +41,17 @@ page](../theory/Electron-phonon_interactions_theory.md).
 
 
 - [1 Basic
-  usage](#Basic_usage)
+  usage](#basic-usage)
 - [2 Basis set
-  convergence](#Basis_set_convergence)
+  convergence](#basis-set-convergence)
 - [3 K-point
   sampling convergence and extrapolation to
-  infinity](#K-point_sampling_convergence_and_extrapolation_to_infinity)
+  infinity](#k-point-sampling-convergence-and-extrapolation-to-infinity)
 - [4 Special
   treatment of the dipole interaction for polar
-  materials](#Special_treatment_of_the_dipole_interaction_for_polar_materials)
+  materials](#special-treatment-of-the-dipole-interaction-for-polar-materials)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Basic usage\[<a

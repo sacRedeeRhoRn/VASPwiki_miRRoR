@@ -22,25 +22,25 @@ HDF5 library and Wannier90, are optional.
 
 
 - [1 Linker
-  variables](#Linker_variables)
+  variables](#linker-variables)
   - [1.1
-    FCL](#FCL)
+    FCL](#fcl)
   - [1.2
-    LLIBS](#LLIBS)
+    LLIBS](#llibs)
 - [2 Libraries for
   linear algebra
-  (mandatory)](#Libraries_for_linear_algebra_(mandatory))
+  (mandatory)](#libraries-for-linear-algebra-mandatory))
 - [3 fftw library
-  (mandatory)](#fftw_library_(mandatory))
+  (mandatory)](#fftw-library-mandatory))
   - [3.1
-    OBJECTS](#OBJECTS)
+    OBJECTS](#objects)
   - [3.2
-    INCS](#INCS)
+    INCS](#incs)
   - [3.3 Special
     rules for the optimization level of FFT related
-    objects](#Special_rules_for_the_optimization_level_of_FFT_related_objects)
+    objects](#special-rules-for-the-optimization-level-of-fft-related-objects)
 - [4 lib library
-  (mandatory)](#lib_library_(mandatory))
+  (mandatory)](#lib-library-mandatory))
   - [4.1
     CPP_LIB](#CPP_LIB)
   - [4.2
@@ -56,15 +56,15 @@ HDF5 library and Wannier90, are optional.
   - [4.7
     OBJECTS_LIB](#OBJECTS_LIB)
 - [5 parser library
-  (mandatory)](#parser_library_(mandatory))
+  (mandatory)](#parser-library-mandatory))
   - [5.1
     CXX_PARS](#CXX_PARS)
 - [6 QD
-  library](#QD_library)
+  library](#qd-library)
 - [7 Optional
-  libraries](#Optional_libraries)
+  libraries](#optional-libraries)
   - [7.1 Related
-    articles](#Related_articles)
+    articles](#related-articles)
 
 
 # Linker variables\[<a

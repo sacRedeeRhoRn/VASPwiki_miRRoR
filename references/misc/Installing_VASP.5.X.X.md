@@ -9,59 +9,59 @@
 
 
 - [1
-  Requirements](#Requirements)
+  Requirements](#requirements)
 - [2 Build
-  system](#Build_system)
+  system](#build-system)
 - [3 How to make
-  VASP](#How_to_make_VASP)
+  VASP](#how-to-make-vasp)
 - [4 Adapting
-  makefile.include](#Adapting_makefile.include)
+  makefile.include](#adapting-makefileinclude)
   - [4.1
     Precompiler
-    variables](#Precompiler_variables)
+    variables](#precompiler-variables)
   - [4.2 Compiler
-    variables](#Compiler_variables)
+    variables](#compiler-variables)
   - [4.3 Linking
-    against libraries](#Linking_against_libraries)
+    against libraries](#linking-against-libraries)
     - [4.3.1 Note
-      on LAPACK 3.6.0 and newer](#Note_on_LAPACK_3.6.0_and_newer)
+      on LAPACK 3.6.0 and newer](#note-on-lapack-360-and-newer)
   - [4.4 The list
-    of objects](#The_list_of_objects)
+    of objects](#the-list-of-objects)
   - [4.5
-    Fast-Fourier-Transforms](#Fast-Fourier-Transforms)
+    Fast-Fourier-Transforms](#fast-fourier-transforms)
   - [4.6 Special
-    rules](#Special_rules)
+    rules](#special-rules)
     - [4.6.1
       Special rules for the optimization level of
       FFT related
-      objects](#Special_rules_for_the_optimization_level_of_FFT_related_objects)
+      objects](#special-rules-for-the-optimization-level-of-fft-related-objects)
     - [4.6.2
       Special rules in
-      general](#Special_rules_in_general)
+      general](#special-rules-in-general)
   - [4.7 For the
-    VASP library (lib)](#For_the_VASP_library_(lib))
+    VASP library (lib)](#for-the-vasp-library-lib))
   - [4.8 For the
-    LOCPROJ-parser (parser)](#For_the_LOCPROJ-parser_(parser))
+    LOCPROJ-parser (parser)](#for-the-locproj-parser-parser))
   - [4.9 For the
     interface to Wannier90
-    (optional)](#For_the_interface_to_Wannier90_(optional))
+    (optional)](#for-the-interface-to-wannier90-optional))
   - [4.10 For
-    libbeef (optional)](#For_libbeef_(optional))
+    libbeef (optional)](#for-libbeef-optional))
   - [4.11 For the
-    GPU port](#For_the_GPU_port)
+    GPU port](#for-the-gpu-port)
 - [5
-  Examples](#Examples)
+  Examples](#examples)
 - [6
-  Patches](#Patches)
+  Patches](#patches)
   - [6.1 For
-    vasp.5.4.1.24Jun15](#For_vasp.5.4.1.24Jun15)
+    vasp.5.4.1.24Jun15](#for-vasp54124jun15)
   - [6.2 For
     vasp.5.4.1.05Feb16 (with GPU
-    support)](#For_vasp.5.4.1.05Feb16_(with_GPU_support))
+    support)](#for-vasp54105feb16-with-gpu-support))
   - [6.3 For
-    vasp.5.4.4.18Apr17-6-g9f103f2a35](#For_vasp.5.4.4.18Apr17-6-g9f103f2a35)
+    vasp.5.4.4.18Apr17-6-g9f103f2a35](#for-vasp54418apr17-6-g9f103f2a35)
 - [7 Related
-  Sections](#Related_Sections)
+  Sections](#related-sections)
 
 
 ## Requirements\[<a
@@ -151,7 +151,7 @@ Copy one of the `makefile.include.arch` files in `root/arch` to
 
 In many cases these `makefile.include` files will have to be adapted to
 the particulars of your system (see
-[below](#Adapting_makefile.include)).
+[below](#adapting-makefileinclude)).
 
 When you've finished setting up `makefile.include`, build VASP:
 
@@ -171,7 +171,7 @@ VASP](CUDA-C_GPU_port_of_VASP.md):
     cp arch/makefile.include.linux_intel_cuda ./makefile.include
 
 and adapt it to the particulars of your system (see
-[below](#For_the_GPU_port)), followed by:
+[below](#for-the-gpu-port)), followed by:
 
     make gpu
     make gpu_ncl
@@ -209,7 +209,7 @@ prcompiler flags</a>.
 - N.B.I: -DNGZhalf, -DwNGZhalf, -DNGXhalf, -DwNGXhalf are deprecated
   options. Building the standard, gamma-only, or non-collinear version
   of the code is specified through an additional argument to the make
-  command (see the [make](#How_to_make_VASP) section).
+  command (see the [make](#how-to-make-vasp) section).
 - N.B.II: CPP_OPTIONS is only used in this file, where it should be
   added to CPP (see next item).
 
@@ -334,7 +334,7 @@ compiling with CPP_OPTIONS= .. -DscaLAPACK ..):
 
 For other configurations please take a lead from the
 `makefile.include.arch` files under **/arch**, or look at the [examples
-below](#Examples).
+below](#examples).
 
 #### Note on LAPACK 3.6.0 and newer\[<a
 href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=8"
@@ -433,7 +433,7 @@ Common choices are:
 
 For other configurations please take lead from the
 `makefile.include.arch` files under **/arch** or look at the [examples
-below](#Examples).
+below](#examples).
 
 ### Special rules\[<a
 href="/wiki/index.php?title=Installing_VASP.5.X.X&amp;veaction=edit&amp;section=11"

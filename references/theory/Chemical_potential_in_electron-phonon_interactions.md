@@ -30,16 +30,16 @@ in $\mu$ can lead to large errors in transport properties.
 
 
 - [1
-  Definition](#Definition)
+  Definition](#definition)
 - [2 Carrier
-  density and doping](#Carrier_density_and_doping)
+  density and doping](#carrier-density-and-doping)
 - [3 Why the
   chemical potential
-  matters](#Why_the_chemical_potential_matters)
+  matters](#why-the-chemical-potential-matters)
 - [4 Different ways
-  to specify carriers](#Different_ways_to_specify_carriers)
+  to specify carriers](#different-ways-to-specify-carriers)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Definition\[<a

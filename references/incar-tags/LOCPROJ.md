@@ -11,14 +11,14 @@ Default: **LOCPROJ** = None 
 Description: The LOCPROJ tag
 specifies local functions on which the orbitals are projected. These
 projections are written to the [PROJCAR](PROJCAR.md) file,
-[LOCPROJ file](#LOCPROJ_file), and
+[LOCPROJ file](#locproj-file), and
 [vasprun.xml](../output-files/Vasprun.xml.md) file.
 
 ------------------------------------------------------------------------
 
 |  |
 |----|
-| **Disambiguation** May also refer to [LOCPROJ file](#LOCPROJ_file). |
+| **Disambiguation** May also refer to [LOCPROJ file](#locproj-file). |
 
 When the LOCPROJ tag is set,
 VASP performs the projection of the Kohn-Sham orbitals
@@ -55,15 +55,15 @@ on the first ionic position specified in the
 
 
 - [1 Specifying the
-  local basis](#Specifying_the_local_basis)
+  local basis](#specifying-the-local-basis)
 - [2 Example for
-  LOCPROJ tag](#Example_for_LOCPROJ_tag)
+  LOCPROJ tag](#example-for-locproj-tag)
 - [3 LOCPROJ
-  file](#LOCPROJ_file)
+  file](#locproj-file)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Specifying the local basis\[<a href="/wiki/index.php?title=LOCPROJ&amp;veaction=edit&amp;section=1"

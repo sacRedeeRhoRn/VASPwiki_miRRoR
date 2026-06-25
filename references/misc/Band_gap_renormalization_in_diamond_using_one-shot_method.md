@@ -16,37 +16,37 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [2.3
-    INCAR](#INCAR)
+    INCAR](#incar)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Obtain
     structure with special
-    displacements](#Obtain_structure_with_special_displacements)
+    displacements](#obtain-structure-with-special-displacements)
   - [3.2 Calculate
     electronic levels of structure with special
-    displacements](#Calculate_electronic_levels_of_structure_with_special_displacements)
+    displacements](#calculate-electronic-levels-of-structure-with-special-displacements)
   - [3.3 Extract
-    ZPR](#Extract_ZPR)
+    ZPR](#extract-zpr)
   - [3.4 Better
-    accuracy](#Better_accuracy)
+    accuracy](#better-accuracy)
   - [3.5
     Temperature dependence of the band
-    gap](#Temperature_dependence_of_the_band_gap)
+    gap](#temperature-dependence-of-the-band-gap)
 - [4 Temperature
   dependence of the band gap including volume
-  effects](#Temperature_dependence_of_the_band_gap_including_volume_effects)
+  effects](#temperature-dependence-of-the-band-gap-including-volume-effects)
 - [5
-  References](#References)
+  References](#references)
 - [6
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

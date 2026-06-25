@@ -9,17 +9,17 @@
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2 Practical
-  guides](#Practical_guides)
+  guides](#practical-guides)
 - [3 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [3.1
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [3.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [3.3 How
-    to](#How_to)
+    to](#how-to)
 
 
 ## Theory\[<a

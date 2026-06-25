@@ -17,11 +17,11 @@ three-body descriptor is calculated, and the following options are
 available:
 
 - `ML_DESC_TYPE`` = 0`:
-  [Standard three-body descriptor](#Standard_three-body_descriptor),
+  [Standard three-body descriptor](#standard-three-body-descriptor),
   where the number of descriptors in the calculation scales
   quadratically with the number of elements.
 - `ML_DESC_TYPE`` = 1`:
-  [Element-reduced descriptor](#Element-reduced_descriptor) for which
+  [Element-reduced descriptor](#element-reduced-descriptor) for which
   the number of descriptors is linearly scaling with respect to the
   number of chemical species.
 
@@ -38,16 +38,16 @@ available:
 
 
 - [1 Standard
-  three-body descriptor](#Standard_three-body_descriptor)
+  three-body descriptor](#standard-three-body-descriptor)
 - [2
   Element-reduced
-  descriptor](#Element-reduced_descriptor)
+  descriptor](#element-reduced-descriptor)
 - [3 Additional
-  sparsification](#Additional_sparsification)
+  sparsification](#additional-sparsification)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Standard three-body descriptor\[<a

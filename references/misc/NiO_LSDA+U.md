@@ -25,27 +25,27 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.3
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 On site
-    occupancies](#On_site_occupancies)
+    occupancies](#on-site-occupancies)
   - [3.2 Magnetic
-    moments](#Magnetic_moments)
+    moments](#magnetic-moments)
   - [3.3
-    DOS](#DOS)
+    DOS](#dos)
   - [3.4 Total
-    energy](#Total_energy)
+    energy](#total-energy)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

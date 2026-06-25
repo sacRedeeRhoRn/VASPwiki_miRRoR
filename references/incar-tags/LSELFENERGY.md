@@ -61,13 +61,13 @@ KS eigenenergies $\epsilon_{nk}$ and not the entire frequency range.
 
 
 - [1
-  Format](#Format)
+  Format](#format)
   - [1.1 Real
-    frequencies](#Real_frequencies)
+    frequencies](#real-frequencies)
   - [1.2 Imaginary
-    frequencies](#Imaginary_frequencies)
+    frequencies](#imaginary-frequencies)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Format\[<a

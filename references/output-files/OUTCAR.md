@@ -36,13 +36,13 @@ human-readable output of a VASP run with roughly the following format:
 
 
 - [1 INCAR
-  tags](#INCAR_tags)
+  tags](#incar-tags)
   - [1.1 Common
-    tags](#Common_tags)
+    tags](#common-tags)
   - [1.2 Property
-    tags](#Property_tags)
+    tags](#property-tags)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## INCAR tags\[<a href="/wiki/index.php?title=OUTCAR&amp;veaction=edit&amp;section=1"

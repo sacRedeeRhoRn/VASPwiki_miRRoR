@@ -20,14 +20,14 @@ simulation of absorption spectra.
 
 
 - [1
-  Theory](#Theory)
+  Theory](#theory)
 - [2
-  Implementation](#Implementation)
+  Implementation](#implementation)
   - [2.1
     Tamm-Dancoff
-    approximation](#Tamm-Dancoff_approximation)
+    approximation](#tamm-dancoff-approximation)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Theory\[<a

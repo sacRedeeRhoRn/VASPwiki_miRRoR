@@ -21,38 +21,38 @@ using procedure 2 or 3.
 
 - [1 Procedure 1:
   Standard procedure (suitable for DFT
-  calculations)](#Procedure_1:_Standard_procedure_(suitable_for_DFT_calculations))
+  calculations)](#procedure-1-standard-procedure-suitable-for-dft-calculations))
   - [1.1 Standard
     self-consistent (SC) run](#Standard_self-consistent_(SC)_run)
   - [1.2 Non-SC
-    calculation (ICHARG=11)](#Non-SC_calculation_(ICHARG=11))
+    calculation (ICHARG=11)](#non-sc-calculation-icharg11))
   - [1.3 Plot using
-    p4v](#Plot_using_p4v)
+    p4v](#plot-using-p4v)
 - [2 Procedure 2:
   0-weight (Fake) SC procedure (works DFT & hybrid
   functionals)](#Procedure_2:_0-weight_(Fake)_SC_procedure_(works_DFT_&_hybrid_functionals))
   - [2.1 Standard
-    DFT run](#Standard_DFT_run)
+    DFT run](#standard-dft-run)
   - [2.2 Hybrid
     calculation using a suitably modified KPOINTS
-    file](#Hybrid_calculation_using_a_suitably_modified_KPOINTS_file)
+    file](#hybrid-calculation-using-a-suitably-modified-kpoints-file)
   - [2.3 Plot using
-    p4v](#Plot_using_p4v_2)
+    p4v](#plot-using-p4v-1)
 - [3 Procedure 3:
   VASP2WANNIER90 (works for DFT, hybrid functionals, and
-  GW)](#Procedure_3:_VASP2WANNIER90_(works_for_DFT,_hybrid_functionals,_and_GW))
+  GW)](#procedure-3-vasp2wannier90-works-for-dft-hybrid-functionals-and-gw))
   - [3.1 Standard
-    DFT run](#Standard_DFT_run_2)
+    DFT run](#standard-dft-run-1)
   - [3.2 Increase
     the number of states to
-    24](#Increase_the_number_of_states_to_24)
+    24](#increase-the-number-of-states-to-24)
   - [3.3 HSE +
     LWANNIER90 run](#HSE_+_LWANNIER90_run)
   - [3.4 Plot
     bandstructure (Wannier interpolation) using XMGRACE or
     GNUPLOT](#Plot_bandstructure_(Wannier_interpolation)_using_XMGRACE_or_GNUPLOT)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Procedure 1: Standard procedure (suitable for DFT calculations)\[<a

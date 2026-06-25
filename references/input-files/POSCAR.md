@@ -39,17 +39,17 @@ class="external text" rel="nofollow">Atomic Simulation Environment</a>
 
 - [1 Basic
   introduction (minimal
-  example)](#Basic_introduction_(minimal_example))
+  example)](#basic-introduction-minimal-example))
 - [2 Full format
-  specification](#Full_format_specification)
+  specification](#full-format-specification)
 - [3 Precision and
-  symmetry](#Precision_and_symmetry)
+  symmetry](#precision-and-symmetry)
   - [3.1
-    Examples](#Examples)
+    Examples](#examples)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Basic introduction (minimal example)\[<a href="/wiki/index.php?title=POSCAR&amp;veaction=edit&amp;section=1"

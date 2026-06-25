@@ -16,33 +16,33 @@ approximations.
 
 
 - [1 Solving
-  Bethe-Salpeter equation](#Solving_Bethe-Salpeter_equation)
+  Bethe-Salpeter equation](#solving-bethe-salpeter-equation)
 - [2 Bethe-Salpeter
-  equation calculation](#Bethe-Salpeter_equation_calculation)
+  equation calculation](#bethe-salpeter-equation-calculation)
 - [3 Model BSE
-  (mBSE)](#Model_BSE_(mBSE))
+  (mBSE)](#model-bse-mbse))
 - [4 Calculations
   beyond Tamm-Dancoff
-  approximation](#Calculations_beyond_Tamm-Dancoff_approximation)
+  approximation](#calculations-beyond-tamm-dancoff-approximation)
 - [5 Calculations
-  at finite wavevectors](#Calculations_at_finite_wavevectors)
+  at finite wavevectors](#calculations-at-finite-wavevectors)
 - [6 Consistency
-  tests](#Consistency_tests)
+  tests](#consistency-tests)
   - [6.1 First
     test: IP dielectric
-    function](#First_test:_IP_dielectric_function)
+    function](#first-test-ip-dielectric-function)
   - [6.2 Second
     test: RPA dielectric
-    function](#Second_test:_RPA_dielectric_function)
+    function](#second-test-rpa-dielectric-function)
   - [6.3 Third
     test: RPA correlation
-    energy](#Third_test:_RPA_correlation_energy)
+    energy](#third-test-rpa-correlation-energy)
 - [7 Common
-  issues](#Common_issues)
+  issues](#common-issues)
 - [8 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Solving Bethe-Salpeter equation\[<a

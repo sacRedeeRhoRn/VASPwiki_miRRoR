@@ -22,18 +22,18 @@ rel="nofollow">TDDFT theory and calculations</a> on our YouTube channel.
   TDHF) to Casida's
   equation](#From_TDDFT_(or_TDHF)_to_Casida's_equation)
 - [2 Solving Casida
-  equation](#Solving_Casida_equation)
+  equation](#solving-casida-equation)
 - [3 Time-dependent
-  Hartree-Fock](#Time-dependent_Hartree-Fock)
+  Hartree-Fock](#time-dependent-hartree-fock)
 - [4 Time-dependent
-  DFT calculation](#Time-dependent_DFT_calculation)
+  DFT calculation](#time-dependent-dft-calculation)
 - [5 Calculations
   beyond Tamm-Dancoff
-  approximation](#Calculations_beyond_Tamm-Dancoff_approximation)
+  approximation](#calculations-beyond-tamm-dancoff-approximation)
 - [6 Calculations
-  at finite wavevectors](#Calculations_at_finite_wavevectors)
+  at finite wavevectors](#calculations-at-finite-wavevectors)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## From TDDFT (or TDHF) to Casida's equation\[<a

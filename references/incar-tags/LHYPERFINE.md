@@ -81,15 +81,15 @@ hyperfine coupling constant</a> is available.
 
 
 - [1
-  Output](#Output)
+  Output](#output)
 - [2
-  Units](#Units)
+  Units](#units)
 - [3
-  Advice](#Advice)
+  Advice](#advice)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Output\[<a

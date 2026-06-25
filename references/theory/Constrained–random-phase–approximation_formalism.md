@@ -19,15 +19,15 @@ theory, such as [dynamical mean-field
 theory](../tutorials/DFT+DMFT_calculations.md) (DMFT).
 
 This page introduces the theoretical foundations of cRPA. The [first
-section](#Tight-binding_model_Hamiltonian) presents the tight-binding
+section](#tight-binding-model-hamiltonian) presents the tight-binding
 model Hamiltonian and the
 <a href="/wiki/Wannier_basis" class="mw-redirect"
 title="Wannier basis">Wannier basis</a> used to represent the target
 states. The [second
-section](#Effective_Coulomb_kernel_in_constrained_random-phase_approximation)
+section](#effective-coulomb-kernel-in-constrained-random-phase-approximation)
 describes four methods for computing the effective Coulomb kernel by
 excluding screening contributions from the target space. The [final
-section](#Off-center_interactions) covers off-center Coulomb integrals
+section](#off-center-interactions) covers off-center Coulomb integrals
 for extended models.
 
 
@@ -35,42 +35,42 @@ for extended models.
 
 
 - [1 Tight-binding
-  model Hamiltonian](#Tight-binding_model_Hamiltonian)
+  model Hamiltonian](#tight-binding-model-hamiltonian)
   - [1.1 Wannier
-    basis and target space](#Wannier_basis_and_target_space)
+    basis and target space](#wannier-basis-and-target-space)
   - [1.2 Definition
     of model parameters: Hopping and Coulomb
-    repulsion](#Definition_of_model_parameters:_Hopping_and_Coulomb_repulsion)
+    repulsion](#definition-of-model-parameters-hopping-and-coulomb-repulsion)
 - [2 Effective
   Coulomb kernel in constrained random-phase
-  approximation](#Effective_Coulomb_kernel_in_constrained_random-phase_approximation)
+  approximation](#effective-coulomb-kernel-in-constrained-random-phase-approximation)
   - [2.1 Band
-    method](#Band_method)
+    method](#band-method)
   - [2.2
     Disentanglement-cRPA method
-    (d-cRPA)](#Disentanglement-cRPA_method_(d-cRPA))
+    (d-cRPA)](#disentanglement-crpa-method-d-crpa))
   - [2.3
     Weighted-cRPA method
-    (w-cRPA)](#Weighted-cRPA_method_(w-cRPA))
+    (w-cRPA)](#weighted-crpa-method-w-crpa))
   - [2.4
     Projector-cRPA method
-    (p-cRPA)](#Projector-cRPA_method_(p-cRPA))
+    (p-cRPA)](#projector-crpa-method-p-crpa))
     - [2.4.1
       Caveats of
-      p-cRPA](#Caveats_of_p-cRPA)
+      p-cRPA](#caveats-of-p-crpa)
   - [2.5
     Spectral-cRPA method
-    (s-cRPA)](#Spectral-cRPA_method_(s-cRPA))
+    (s-cRPA)](#spectral-crpa-method-s-crpa))
 - [3 Off-center
-  interactions](#Off-center_interactions)
+  interactions](#off-center-interactions)
 - [4 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [4.1
-    Lectures](#Lectures)
+    Lectures](#lectures)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Tight-binding model Hamiltonian\[<a

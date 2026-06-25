@@ -36,27 +36,27 @@ $\mathrm{EELS}(\mathbf q,\omega) =
 
 
 - [1 Inclusion of
-  local fields](#Inclusion_of_local_fields)
+  local fields](#inclusion-of-local-fields)
 - [2 Micro-macro
   connection and relation to measured
-  quantities](#Micro-macro_connection_and_relation_to_measured_quantities)
+  quantities](#micro-macro-connection-and-relation-to-measured-quantities)
 - [3 Computing EELS
-  with VASP](#Computing_EELS_with_VASP)
+  with VASP](#computing-eels-with-vasp)
   - [3.1 EELS from
     density functional theory
-    (DFT)](#EELS_from_density_functional_theory_(DFT))
+    (DFT)](#eels-from-density-functional-theory-dft))
   - [3.2 EELS from
     time-dependent density functional theory
-    (TDDFT)](#EELS_from_time-dependent_density_functional_theory_(TDDFT))
+    (TDDFT)](#eels-from-time-dependent-density-functional-theory-tddft))
   - [3.3 EELS from
     many-body perturbation theory
-    (MBPT)](#EELS_from_many-body_perturbation_theory_(MBPT))
+    (MBPT)](#eels-from-many-body-perturbation-theory-mbpt))
 - [4 Calculations
-  at finite momentum](#Calculations_at_finite_momentum)
+  at finite momentum](#calculations-at-finite-momentum)
   - [4.1 Related
-    Tags and Sections](#Related_Tags_and_Sections)
+    Tags and Sections](#related-tags-and-sections)
   - [4.2
-    References](#References)
+    References](#references)
 
 
 # Inclusion of local fields\[<a

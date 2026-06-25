@@ -32,16 +32,16 @@ found in Ref.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [2 ZG
   configuration (one-shot
-  sampling)](#ZG_configuration_(one-shot_sampling))
+  sampling)](#zg-configuration-one-shot-sampling))
 - [3 Full MC
-  sampling](#Full_MC_sampling)
+  sampling](#full-mc-sampling)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Step-by-step instructions\[<a

@@ -6,7 +6,7 @@
 
   
 Writing a `makefile.include` file from scratch is not easy, so we
-suggest taking one of [archetypical files](#Archetypical_files) that
+suggest taking one of [archetypical files](#archetypical-files) that
 closely resembles your system as a starting point. It is necessary to
 customize it anyways to set appropriate paths etc. Optionally, you can
 enable additional features by setting precompiler flags or linking VASP
@@ -15,57 +15,57 @@ support.
 
 |  |
 |----|
-| **Mind:** Always use `makefile.include` files released together with the version of VASP that you are compiling. Old [archetypical files](#Archetypical_files) may not work for newer releases and vice versa. |
+| **Mind:** Always use `makefile.include` files released together with the version of VASP that you are compiling. Old [archetypical files](#archetypical-files) may not work for newer releases and vice versa. |
 
 
 ## Contents
 
 
 - [1 Archetypical
-  files](#Archetypical_files)
+  files](#archetypical-files)
   - [1.1 Intel
     Composer suite and oneAPI HPC toolkit for CPU and
     GPU](#Intel_Composer_suite_and_oneAPI_HPC_toolkit_for_CPU_and_GPU)
   - [1.2 GNU
-    compilers for CPUs](#GNU_compilers_for_CPUs)
+    compilers for CPUs](#gnu-compilers-for-cpus)
   - [1.3 NVIDIA
     HPC-SDK for CPU and GPU](#NVIDIA_HPC-SDK_for_CPU_and_GPU)
   - [1.4 Cray
     compiler environment (CCE) for CPU and
     GPU](#Cray_compiler_environment_(CCE)_for_CPU_and_GPU)
   - [1.5
-    Others](#Others)
+    Others](#others)
 - [2
-  Customize](#Customize)
+  Customize](#customize)
   - [2.1 HDF5
     support (strongly recommended, and mandatory for some
-    features)](#HDF5_support_(strongly_recommended,_and_mandatory_for_some_features))
+    features)](#hdf5-support-strongly-recommended-and-mandatory-for-some-features))
   - [2.2 fftlib
     (recommended when using
-    OpenMP)](#fftlib_(recommended_when_using_OpenMP))
+    OpenMP)](#fftlib-recommended-when-using-openmp))
   - [2.3 Wannier90
-    (optional)](#Wannier90_(optional))
+    (optional)](#wannier90-optional))
   - [2.4 Libxc
-    (optional)](#Libxc_(optional))
+    (optional)](#libxc-optional))
   - [2.5 Libbeef
-    (optional)](#Libbeef_(optional))
+    (optional)](#libbeef-optional))
   - [2.6 DFT-D4 and
     simple-DFT-D3
-    (optional)](#DFT-D4_and_simple-DFT-D3_(optional))
+    (optional)](#dft-d4-and-simple-dft-d3-optional))
   - [2.7 ELPA
-    (optional)](#ELPA_(optional))
+    (optional)](#elpa-optional))
   - [2.8 libMBD
-    (optional)](#libMBD_(optional))
+    (optional)](#libmbd-optional))
   - [2.9 Plugins
-    (optional)](#Plugins_(optional))
+    (optional)](#plugins-optional))
   - [2.10 SCPC
-    (optional)](#SCPC_(optional))
+    (optional)](#scpc-optional))
   - [2.11 VASPml
-    (experimental)](#VASPml_(experimental))
+    (experimental)](#vaspml-experimental))
     - [2.11.1 GRACE
-      support](#GRACE_support)
+      support](#grace-support)
 - [3 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 
 
 ## Archetypical files\[<a
@@ -192,7 +192,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Customize">edit</a> \| (./index.php.md)\]
 
 Open the selected template of the [archetypical
-files](#Archetypical_files) and add the required information as
+files](#archetypical-files) and add the required information as
 explained in the comments towards the end of the file. Then, add any
 optional feature as listed below. For more details see the [list of
 precompiler options](Precompiler_options.md).
@@ -241,7 +241,7 @@ threads](Combining_MPI_and_OpenMP.md) and
 you are not using the FFTs from the Intel-MKL library, you should link
 against `fftlib` (included in the VASP distribution). To do so,
 uncomment the corresponding sections in the [makefile.include.\*\_omp
-files](#Archetypical_files). In
+files](#archetypical-files). In
 [makefile.include.gnu_omp](Makefile.include.gnu_omp.md),
 for instance, that would be:
 

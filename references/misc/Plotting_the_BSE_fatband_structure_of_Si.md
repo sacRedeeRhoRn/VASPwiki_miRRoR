@@ -20,24 +20,24 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    INCAR](#INCAR)
+    INCAR](#incar)
   - [2.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Step 1 DFT
-    calculation](#Step_1_DFT_calculation)
+    calculation](#step-1-dft-calculation)
   - [3.2 Step 2 BSE
     calculation with
-    fatbands](#Step_2_BSE_calculation_with_fatbands)
+    fatbands](#step-2-bse-calculation-with-fatbands)
 - [4
-  Download](#Download)
+  Download](#download)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Task\[<a

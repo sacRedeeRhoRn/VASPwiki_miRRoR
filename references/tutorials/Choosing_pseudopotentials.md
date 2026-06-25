@@ -19,9 +19,9 @@ balance computational cost, accuracy, and transferability.
   other hand, it could be necessary to opt for a computationally
   demanding setup to obtain correct results.
 - With the [aspects described in the next
-  section](#Aspects_to_refine_the_choice_of_pseudopotentials) in mind,
+  section](#aspects-to-refine-the-choice-of-pseudopotentials) in mind,
   carefully look over the [recommendations for each group in the
-  periodic table](#Recommendations_and_advice).
+  periodic table](#recommendations-and-advice).
 
 
 ## Contents
@@ -29,38 +29,38 @@ balance computational cost, accuracy, and transferability.
 
 - [1 Aspects to
   refine the choice of
-  pseudopotentials](#Aspects_to_refine_the_choice_of_pseudopotentials)
+  pseudopotentials](#aspects-to-refine-the-choice-of-pseudopotentials)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
   - [2.1
     Recommended PAW
-    potentials](#Recommended_PAW_potentials)
+    potentials](#recommended-paw-potentials)
     - [2.1.1
       Standard DFT without the need for many
       unoccupied
-      states](#Standard_DFT_without_the_need_for_many_unoccupied_states)
+      states](#standard-dft-without-the-need-for-many-unoccupied-states)
     - [2.1.2
       Calculation requiring a large number of
       unoccupied
-      states](#Calculation_requiring_a_large_number_of_unoccupied_states)
+      states](#calculation-requiring-a-large-number-of-unoccupied-states)
     - [2.1.3
       Reference calculation; extremely high
-      accuracy](#Reference_calculation;_extremely_high_accuracy)
+      accuracy](#reference-calculation-extremely-high-accuracy)
   - [2.2 Selecting
-    the release version](#Selecting_the_release_version)
+    the release version](#selecting-the-release-version)
   - [2.3
     Element-specific
-    recommendation](#Element-specific_recommendation)
+    recommendation](#element-specific-recommendation)
     - [2.3.1
       Hydrogen-like atoms with fractional
-      valence](#Hydrogen-like_atoms_with_fractional_valence)
+      valence](#hydrogen-like-atoms-with-fractional-valence)
     - [2.3.2
       First-row
-      elements](#First-row_elements)
+      elements](#first-row-elements)
     - [2.3.3 Alkali
       and alkali-earth elements (simple
-      metals)](#Alkali_and_alkali-earth_elements_(simple_metals))
+      metals)](#alkali-and-alkali-earth-elements-simple-metals))
     - [2.3.4
       p-elements](#p-elements)
     - [2.3.5
@@ -69,13 +69,13 @@ balance computational cost, accuracy, and transferability.
       f-elements](#f-elements)
       - [2.3.6.1
         Lanthanides with fixed
-        valence](#Lanthanides_with_fixed_valence)
+        valence](#lanthanides-with-fixed-valence)
 - [3 Example: NiO
-  equilibrium volume](#Example:_NiO_equilibrium_volume)
+  equilibrium volume](#example-nio-equilibrium-volume)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Aspects to refine the choice of pseudopotentials\[<a
@@ -91,7 +91,7 @@ elements, variants for specific valency exist; for example, the suffix
 [\_2 or
 \_3](../input-files/Available_pseudopotentials.md)
 can be used to describe [fixed divalent or trivalent
-Lanthanides](#Lanthanides_with_fixed_valence).
+Lanthanides](#lanthanides-with-fixed-valence).
 
 **Aspect 2:** The physical or chemical property of interest.
 

@@ -29,13 +29,13 @@ package ([IVDW](../incar-tags/IVDW.md)=15).
 
 
 - [1
-  DFT-D3(zero)](#DFT-D3(zero))
+  DFT-D3(zero)](#dft-d3zero))
 - [2
-  DFT-D3(BJ)](#DFT-D3(BJ))
+  DFT-D3(BJ)](#dft-d3bj))
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ### DFT-D3(zero)\[<a href="/wiki/index.php?title=DFT-D3&amp;veaction=edit&amp;section=1"

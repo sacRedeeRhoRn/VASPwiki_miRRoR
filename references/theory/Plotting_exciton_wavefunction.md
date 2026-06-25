@@ -33,16 +33,16 @@ the hole $\psi_\lambda(\mathbf{r}_e,r_h)$.
 
 - [1 How to fix the
   position of the
-  particle](#How_to_fix_the_position_of_the_particle)
+  particle](#how-to-fix-the-position-of-the-particle)
 - [2 How to plot
   the exciton
-  wavefunction](#How_to_plot_the_exciton_wavefunction)
+  wavefunction](#how-to-plot-the-exciton-wavefunction)
 - [3
-  Degeneracy](#Degeneracy)
+  Degeneracy](#degeneracy)
 - [4 Related tags
-  and sections](#Related_tags_and_sections)
+  and sections](#related-tags-and-sections)
 - [5
-  References](#References)
+  References](#references)
 
 
 ### How to fix the position of the particle\[<a

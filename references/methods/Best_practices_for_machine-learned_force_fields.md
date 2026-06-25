@@ -22,71 +22,71 @@ on machine learning force field calculations.
 
 
 - [1
-  Training](#Training)
+  Training](#training)
   - [1.1 Best
-    practice training modes](#Best_practice_training_modes)
+    practice training modes](#best-practice-training-modes)
     - [1.1.1
       Treatment of the same atomic species in
       different
-      enviroments](#Treatment_of_the_same_atomic_species_in_different_enviroments)
+      enviroments](#treatment-of-the-same-atomic-species-in-different-enviroments)
     - [1.1.2
       Ab-initio calculation
-      setup](#Ab-initio_calculation_setup)
+      setup](#ab-initio-calculation-setup)
     - [1.1.3
       Molecular dynamics
-      setup](#Molecular_dynamics_setup)
+      setup](#molecular-dynamics-setup)
     - [1.1.4
       General settings for on the fly
-      training](#General_settings_for_on_the_fly_training)
+      training](#general-settings-for-on-the-fly-training)
   - [1.2 Retraining
     with re-selection of local reference
-    configurations](#Retraining_with_re-selection_of_local_reference_configurations)
+    configurations](#retraining-with-re-selection-of-local-reference-configurations)
   - [1.3 Retraining
     with hyper-parameter
-    optimization](#Retraining_with_hyper-parameter_optimization)
+    optimization](#retraining-with-hyper-parameter-optimization)
   - [1.4
-    Accuracy](#Accuracy)
+    Accuracy](#accuracy)
   - [1.5 Accurate
-    force fields](#Accurate_force_fields)
+    force fields](#accurate-force-fields)
   - [1.6 Tuning
-    on-the-fly parameters](#Tuning_on-the-fly_parameters)
+    on-the-fly parameters](#tuning-on-the-fly-parameters)
   - [1.7 Monitoring
-    on-the-fly learning](#Monitoring_on-the-fly_learning)
+    on-the-fly learning](#monitoring-on-the-fly-learning)
 - [2 Testing and
-  application](#Testing_and_application)
+  application](#testing-and-application)
   - [2.1 Spilling
     factor: error estimates during production
-    runs](#Spilling_factor:_error_estimates_during_production_runs)
+    runs](#spilling-factor-error-estimates-during-production-runs)
   - [2.2 Test
-    errors](#Test_errors)
+    errors](#test-errors)
   - [2.3 Monitoring
     MLFF run with blocked
-    averages](#Monitoring_MLFF_run_with_blocked_averages)
+    averages](#monitoring-mlff-run-with-blocked-averages)
 - [3
-  Performance](#Performance)
+  Performance](#performance)
   - [3.1
     Computational efficiency in production
-    runs](#Computational_efficiency_in_production_runs)
+    runs](#computational-efficiency-in-production-runs)
   - [3.2 Memory
-    consumption](#Memory_consumption)
+    consumption](#memory-consumption)
   - [3.3 Reduction
     of memory consumption in on-the-fly
-    calculations](#Reduction_of_memory_consumption_in_on-the-fly_calculations)
+    calculations](#reduction-of-memory-consumption-in-on-the-fly-calculations)
   - [3.4 Descriptor
     reduction in production
-    runs](#Descriptor_reduction_in_production_runs)
+    runs](#descriptor-reduction-in-production-runs)
     - [3.4.1
       Reduced
-      descriptors](#Reduced_descriptors)
+      descriptors](#reduced-descriptors)
     - [3.4.2
       Descriptor
-      sparsification](#Descriptor_sparsification)
+      sparsification](#descriptor-sparsification)
 - [4
-  Example](#Example)
+  Example](#example)
 - [5 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Training\[<a

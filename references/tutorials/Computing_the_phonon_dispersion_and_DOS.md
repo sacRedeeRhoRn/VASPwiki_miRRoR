@@ -19,45 +19,45 @@ from a supercell calculation to the primitive cell.
 
 - [1 Phonon
   dispersion: Step-by-step
-  instructions](#Phonon_dispersion:_Step-by-step_instructions)
+  instructions](#phonon-dispersion-step-by-step-instructions)
   - [1.1 Step 1:
     Compute the force
-    constants](#Step_1:_Compute_the_force_constants)
+    constants](#step-1-compute-the-force-constants)
   - [1.2 Step 2:
     Provide **q**-points along a high-symmetry
-    path](#Step_2:_Provide_q-points_along_a_high-symmetry_path)
+    path](#step-2-provide-q-points-along-a-high-symmetry-path)
   - [1.3 Step 3:
     Compute the phonon
-    dispersion](#Step_3:_Compute_the_phonon_dispersion)
+    dispersion](#step-3-compute-the-phonon-dispersion)
   - [1.4 Reading of
-    force constants](#Reading_of_force_constants)
+    force constants](#reading-of-force-constants)
 - [2 Phonon DOS:
   Step-by-step
-  instructions](#Phonon_DOS:_Step-by-step_instructions)
+  instructions](#phonon-dos-step-by-step-instructions)
   - [2.1 Step 1:
     Compute the force
-    constants](#Step_1:_Compute_the_force_constants_2)
+    constants](#step-1-compute-the-force-constants-1)
   - [2.2 Step 2:
     Specify a uniform **q**-point
-    mesh](#Step_2:_Specify_a_uniform_q-point_mesh)
+    mesh](#step-2-specify-a-uniform-q-point-mesh)
   - [2.3 Step 3:
-    Compute the DOS](#Step_3:_Compute_the_DOS)
+    Compute the DOS](#step-3-compute-the-dos)
 - [3 Polar
-  materials](#Polar_materials)
+  materials](#polar-materials)
   - [3.1 Obtaining
     the dielectric
-    properties](#Obtaining_the_dielectric_properties)
+    properties](#obtaining-the-dielectric-properties)
   - [3.2 Specifying
     the dielectric properties as
-    input](#Specifying_the_dielectric_properties_as_input)
+    input](#specifying-the-dielectric-properties-as-input)
   - [3.3 LO-TO
-    splitting](#LO-TO_splitting)
+    splitting](#lo-to-splitting)
 - [4 Practical
-  hints](#Practical_hints)
+  hints](#practical-hints)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Phonon dispersion: Step-by-step instructions\[<a

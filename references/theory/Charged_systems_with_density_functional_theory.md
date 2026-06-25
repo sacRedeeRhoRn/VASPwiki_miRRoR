@@ -19,16 +19,16 @@ of charged bulk, surface and molecular systems.
 
 - [1 Treating
   divergence in charge neutral
-  calculations](#Treating_divergence_in_charge_neutral_calculations)
+  calculations](#treating-divergence-in-charge-neutral-calculations)
 - [2 Divergences in
-  charged calculations](#Divergences_in_charged_calculations)
+  charged calculations](#divergences-in-charged-calculations)
 - [3 Treating
   charged systems in
-  practice](#Treating_charged_systems_in_practice)
+  practice](#treating-charged-systems-in-practice)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Treating divergence in charge neutral calculations\[<a

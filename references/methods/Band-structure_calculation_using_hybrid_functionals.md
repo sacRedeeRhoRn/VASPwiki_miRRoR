@@ -17,17 +17,17 @@ and human effort.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [3 Example of
   **k** points for hybrid band-structure
-  calculation](#Example_of_k_points_for_hybrid_band-structure_calculation)
+  calculation](#example-of-k-points-for-hybrid-band-structure-calculation)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Step-by-step instructions\[<a

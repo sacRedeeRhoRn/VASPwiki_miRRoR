@@ -44,57 +44,57 @@ Specify the precompiler flags:
 
 
 - [1
-  Default](#Default)
+  Default](#default)
   - [1.1
     -DHOST=\[string\]](#-DHOST=%5Bstring%5D)
   - [1.2
-    -DMPI](#-DMPI)
+    -DMPI](#dmpi)
   - [1.3
     -Duse_collective](#-Duse_collective)
   - [1.4
     -DMPI_BLOCK=\[integer\]](#-DMPI_BLOCK=%5Binteger%5D)
   - [1.5
-    -DscaLAPACK](#-DscaLAPACK)
+    -DscaLAPACK](#dscalapack)
   - [1.6
     -DCACHE_SIZE=\[integer\]](#-DCACHE_SIZE=%5Binteger%5D)
   - [1.7
-    -Davoidalloc](#-Davoidalloc)
+    -Davoidalloc](#davoidalloc)
   - [1.8
-    -Dvasp6](#-Dvasp6)
+    -Dvasp6](#dvasp6)
   - [1.9
-    -Dtbdyn](#-Dtbdyn)
+    -Dtbdyn](#dtbdyn)
   - [1.10
     -Dfock_dblbuf](#-Dfock_dblbuf)
   - [1.11
     -D_OPENMP](#-D_OPENMP)
 - [2 Specific for
   the OpenACC port to NVIDIA
-  GPUs](#Specific_for_the_OpenACC_port_to_NVIDIA_GPUs)
+  GPUs](#specific-for-the-openacc-port-to-nvidia-gpus)
   - [2.1
     -DACC_OFFLOAD](#-DACC_OFFLOAD)
   - [2.2
-    -DNVCUDA](#-DNVCUDA)
+    -DNVCUDA](#dnvcuda)
   - [2.3
-    -DUSENCCL](#-DUSENCCL)
+    -DUSENCCL](#dusenccl)
   - [2.4
     -Dqd_emulate](#-Dqd_emulate)
   - [2.5
     -DCRAY_MPICH](#-DCRAY_MPICH)
 - [3 Specific for
   the OpenMP port to AMD and Intel
-  GPUs](#Specific_for_the_OpenMP_port_to_AMD_and_Intel_GPUs)
+  GPUs](#specific-for-the-openmp-port-to-amd-and-intel-gpus)
   - [3.1
     -DOMP_OFFLOAD](#-DOMP_OFFLOAD)
   - [3.2
     -D_OPENMP](#-D_OPENMP_2)
   - [3.3
-    -DINTELMKL](#-DINTELMKL)
+    -DINTELMKL](#dintelmkl)
   - [3.4
-    -DCRAYHIP](#-DCRAYHIP)
+    -DCRAYHIP](#dcrayhip)
   - [3.5
-    -DUSENCCL](#-DUSENCCL_2)
+    -DUSENCCL](#dusenccl-1)
 - [4
-  Optional](#Optional)
+  Optional](#optional)
   - [4.1
     -DVASP_HDF5](#-DVASP_HDF5)
   - [4.2
@@ -104,34 +104,34 @@ Specify the precompiler flags:
   - [4.4
     -Dshmem_rproj](#-Dshmem_rproj)
   - [4.5
-    -Dsysv](#-Dsysv)
+    -Dsysv](#dsysv)
   - [4.6
-    -DVASP2WANNIER90](#-DVASP2WANNIER90)
+    -DVASP2WANNIER90](#dvasp2wannier90)
   - [4.7
-    -Dlibbeef](#-Dlibbeef)
+    -Dlibbeef](#dlibbeef)
   - [4.8
-    -DDFTD4](#-DDFTD4)
+    -DDFTD4](#ddftd4)
   - [4.9
     -DDFTD4_API_V3](#-DDFTD4_API_V3)
   - [4.10
-    -DSDFTD3](#-DSDFTD3)
+    -DSDFTD3](#dsdftd3)
   - [4.11
-    -DLIBMBD](#-DLIBMBD)
+    -DLIBMBD](#dlibmbd)
   - [4.12
-    -DSCPC](#-DSCPC)
+    -DSCPC](#dscpc)
   - [4.13
-    -DPROFILING](#-DPROFILING)
+    -DPROFILING](#dprofiling)
   - [4.14
-    -DUSELIBXC](#-DUSELIBXC)
+    -DUSELIBXC](#duselibxc)
   - [4.15
-    -DELPA](#-DELPA)
+    -DELPA](#delpa)
   - [4.16
-    -DLAPACK36](#-DLAPACK36)
+    -DLAPACK36](#dlapack36)
 - [5 Specific to
   the experimental VASPml
-  library](#Specific_to_the_experimental_VASPml_library)
+  library](#specific-to-the-experimental-vaspml-library)
   - [5.1
-    -Dlibvaspml](#-Dlibvaspml)
+    -Dlibvaspml](#dlibvaspml)
   - [5.2
     -DVASPML_ENABLE_GRACE](#-DVASPML_ENABLE_GRACE)
   - [5.3
@@ -142,18 +142,18 @@ Specify the precompiler flags:
   - [5.5
     -DVASPML_USE_CBLAS](#-DVASPML_USE_CBLAS)
 - [6
-  Deprecated](#Deprecated)
+  Deprecated](#deprecated)
   - [6.1
     -D_OPENACC](#-D_OPENACC)
   - [6.2
-    -DUSENCCLP2P](#-DUSENCCLP2P)
+    -DUSENCCLP2P](#dusencclp2p)
   - [6.3
-    -DnoAugXCmeta](#-DnoAugXCmeta)
+    -DnoAugXCmeta](#dnoaugxcmeta)
   - [6.4
     -DVASP2WANNIER90 and
-    -DVASP2WANNIER90v2](#-DVASP2WANNIER90_and_-DVASP2WANNIER90v2)
+    -DVASP2WANNIER90v2](#dvasp2wannier90-and--dvasp2wannier90v2)
 - [7 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 
 
 ## Default\[<a
@@ -411,7 +411,7 @@ Set this to include the interface between VASP and Wannier90.
 
 |  |
 |----|
-| **Deprecated:** For VASP\<6.2.0, see [-DVASP2WANNIER90 and -DVASP2WANNIER90v2](#-DVASP2WANNIER90_and_-DVASP2WANNIER90v2) in the deprecated section below! |
+| **Deprecated:** For VASP\<6.2.0, see [-DVASP2WANNIER90 and -DVASP2WANNIER90v2](#dvasp2wannier90-and--dvasp2wannier90v2) in the deprecated section below! |
 
 ### -Dlibbeef\[<a
 href="/wiki/index.php?title=Precompiler_options&amp;veaction=edit&amp;section=32"

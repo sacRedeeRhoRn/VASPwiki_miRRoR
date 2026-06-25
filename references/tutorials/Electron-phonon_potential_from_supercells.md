@@ -49,15 +49,15 @@ rel="nofollow">phelel</a> python package. It helps guide you through the process
 
 - [1 Finite
   displacements in the
-  supercell](#Finite_displacements_in_the_supercell)
+  supercell](#finite-displacements-in-the-supercell)
   - [1.1 VASP
-    internal driver](#VASP_internal_driver)
+    internal driver](#vasp-internal-driver)
   - [1.2 VASP and
-    phelel](#VASP_and_phelel)
+    phelel](#vasp-and-phelel)
 - [2 Practical
-  hints](#Practical_hints)
+  hints](#practical-hints)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Finite displacements in the supercell\[<a

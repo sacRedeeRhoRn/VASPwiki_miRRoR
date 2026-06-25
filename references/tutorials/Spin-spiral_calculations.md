@@ -16,38 +16,38 @@ requirements) see [Spin spirals](../theory/Spin_spirals.md).
 
 
 - [1
-  Prerequisites](#Prerequisites)
+  Prerequisites](#prerequisites)
 - [2 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [2.1 Step 1:
     Start from a converged magnetic
-    state](#Step_1:_Start_from_a_converged_magnetic_state)
+    state](#step-1-start-from-a-converged-magnetic-state)
   - [2.2 Step 2:
     Set up the spin-spiral
-    INCAR](#Step_2:_Set_up_the_spin-spiral_INCAR)
+    INCAR](#step-2-set-up-the-spin-spiral-incar)
   - [2.3 Step 3:
     Constrain to a planar spiral
-    (optional)](#Step_3:_Constrain_to_a_planar_spiral_(optional))
+    (optional)](#step-3-constrain-to-a-planar-spiral-optional))
   - [2.4 Step 4:
     Extract local magnetic moments
-    (optional)](#Step_4:_Extract_local_magnetic_moments_(optional))
+    (optional)](#step-4-extract-local-magnetic-moments-optional))
   - [2.5 Step 5:
-    Run the calculation](#Step_5:_Run_the_calculation)
+    Run the calculation](#step-5-run-the-calculation)
 - [3
-  Examples](#Examples)
+  Examples](#examples)
   - [3.1 Example 1:
     Initializing the magnetic
-    configuration](#Example_1:_Initializing_the_magnetic_configuration)
+    configuration](#example-1-initializing-the-magnetic-configuration)
   - [3.2 Example 2:
     Spin-spiral energy of a NiI<sub>2</sub>
     monolayer](#Example_2:_Spin-spiral_energy_of_a_NiI2_monolayer)
 - [4 Magnon
   dispersion and exchange
-  interactions](#Magnon_dispersion_and_exchange_interactions)
+  interactions](#magnon-dispersion-and-exchange-interactions)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Prerequisites\[<a
@@ -153,7 +153,7 @@ initial moments *within* the cell using the
 [MAGMOM](../incar-tags/MAGMOM.md) tag, in the noncollinear
 (three-component-per-atom) format, and by how the magnetization rotates
 *between* cells (the [QSPIRAL](../incar-tags/QSPIRAL.md) vector). Worked
-examples are given in the [Examples](#Examples) section below. Choose
+examples are given in the [Examples](#examples) section below. Choose
 the remaining electronic-minimization tags as in step 1.
 
 |  |

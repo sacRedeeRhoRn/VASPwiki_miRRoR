@@ -21,28 +21,28 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Calculation](#Calculation)
+  Calculation](#calculation)
 - [3
-  Input](#Input)
+  Input](#input)
   - [3.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [3.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [3.3
-    INCAR](#INCAR)
+    INCAR](#incar)
 - [4
-  Results](#Results)
+  Results](#results)
   - [4.1 Further
     study on the three imaginary phonon
-    modes](#Further_study_on_the_three_imaginary_phonon_modes)
+    modes](#further-study-on-the-three-imaginary-phonon-modes)
 - [5
-  Plotting](#Plotting)
+  Plotting](#plotting)
 - [6
-  References](#References)
+  References](#references)
 - [7
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

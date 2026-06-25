@@ -47,9 +47,9 @@ much slower and will be deprecated in the future.
 
 
 - [1 Scientific
-  output](#Scientific_output)
+  output](#scientific-output)
 - [2 Performance
-  output](#Performance_output)
+  output](#performance-output)
   - [2.1 IBSE =
     0,2](#IBSE_=_0,2)
   - [2.2 IBSE =
@@ -57,7 +57,7 @@ much slower and will be deprecated in the future.
   - [2.3 IBSE =
     3](#IBSE_=_3)
 - [3 Related tag
-  and articles](#Related_tag_and_articles)
+  and articles](#related-tag-and-articles)
 
 
 ## Scientific output\[<a href="/wiki/index.php?title=IBSE&amp;veaction=edit&amp;section=1"

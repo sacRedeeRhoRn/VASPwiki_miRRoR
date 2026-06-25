@@ -43,7 +43,7 @@ structure.
 
 
 - [1 Available
-  options](#Available_options)
+  options](#available-options)
   - [1.1
     DAMP_NEWTON=1.0: No
     damping](#DAMP_NEWTON=1.0:_No_damping)
@@ -54,9 +54,9 @@ structure.
     DAMP_NEWTON\<0.8: Strong
     damping](#DAMP_NEWTON%3C0.8:_Strong_damping)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Available options\[<a

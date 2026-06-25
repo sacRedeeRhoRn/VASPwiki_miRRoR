@@ -30,29 +30,29 @@ several different available methods:
 
 
 - [1 Thermodynamic
-  integration](#Thermodynamic_integration)
+  integration](#thermodynamic-integration)
 - [2 Constrained
-  molecular dynamics](#Constrained_molecular_dynamics)
+  molecular dynamics](#constrained-molecular-dynamics)
 - [3 Biased
-  molecular dynamics](#Biased_molecular_dynamics)
+  molecular dynamics](#biased-molecular-dynamics)
 - [4
-  Metadynamics](#Metadynamics)
+  Metadynamics](#metadynamics)
 - [5 Blue moon
-  ensemble](#Blue_moon_ensemble)
+  ensemble](#blue-moon-ensemble)
 - [6 Slow-growth
-  approach](#Slow-growth_approach)
+  approach](#slow-growth-approach)
 - [7 Interface
-  pinning](#Interface_pinning)
+  pinning](#interface-pinning)
 - [8 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [8.1
-    Books](#Books)
+    Books](#books)
   - [8.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
   - [8.3
-    Lectures](#Lectures)
+    Lectures](#lectures)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Thermodynamic integration\[<a

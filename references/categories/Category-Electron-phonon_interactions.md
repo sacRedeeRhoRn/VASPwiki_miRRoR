@@ -29,23 +29,23 @@ Seebeck coefficient or electronic thermal conductivity, to name a few.
 
 
 - [1 Stochastic
-  displacements approach](#Stochastic_displacements_approach)
+  displacements approach](#stochastic-displacements-approach)
 - [2 Many-body
-  perturbation theory](#Many-body_perturbation_theory)
+  perturbation theory](#many-body-perturbation-theory)
   - [2.1
     Electron-phonon potential from
-    supercells](#Electron-phonon_potential_from_supercells)
+    supercells](#electron-phonon-potential-from-supercells)
   - [2.2 Physical
     observables (or electron-phonon matrix
-    elements)](#Physical_observables_(or_electron-phonon_matrix_elements))
+    elements)](#physical-observables-or-electron-phonon-matrix-elements))
 - [3 Choosing the
-  right approach](#Choosing_the_right_approach)
+  right approach](#choosing-the-right-approach)
 - [4 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [4.1
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Stochastic displacements approach\[<a

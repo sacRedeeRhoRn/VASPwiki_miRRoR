@@ -9,28 +9,28 @@
 
 
 - [1
-  Overview](#Overview)
+  Overview](#overview)
 - [2 Common
-  considerations](#Common_considerations)
+  considerations](#common-considerations)
 - [3
-  RMM-DIIS](#RMM-DIIS)
+  RMM-DIIS](#rmm-diis)
   - [3.1
     Understanding the
-    output](#Understanding_the_output)
+    output](#understanding-the-output)
 - [4 Conjugate
-  gradient](#Conjugate_gradient)
+  gradient](#conjugate-gradient)
   - [4.1
     Understanding the
-    output](#Understanding_the_output_2)
+    output](#understanding-the-output-2)
 - [5 Damped
-  molecular dynamics](#Damped_molecular_dynamics)
+  molecular dynamics](#damped-molecular-dynamics)
   - [5.1
     Understanding the
-    output](#Understanding_the_output_3)
+    output](#understanding-the-output-2)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Overview\[<a
@@ -82,18 +82,18 @@ Next, you need to decide on an algorithm by setting the
 [IBRION](../incar-tags/IBRION.md) tag. In Figure 1, we show some heuristic
 rules that may help to decide with this selection. These guidelines are
 a compromise between speed and robustness of the algorithms. The
-[RMM-DIIS algorithm](#RMM-DIIS)
+[RMM-DIIS algorithm](#rmm-diis)
 ([`IBRION`](../incar-tags/IBRION.md)` = 1`) is very efficient because it
 uses the history of many steps to obtain the best next guess. However,
 if your structure is still far from the minimum, it is not wise too
 include the information from these points far from the minimum and the
 algorithm struggles. The [conjugate-gradient (CG)
-algorithm](#Conjugate_gradient)
+algorithm](#conjugate-gradient)
 ([`IBRION`](../incar-tags/IBRION.md)` = 2`) chooses a search direction
 conjugate to previous ones. Then it selects an optimal step size along
 this search direction. This algorithm is a good default choice because
 of its robustness. Even simpler are [damped molcular
-dynamics](#Damped_molecular_dynamics)
+dynamics](#damped-molecular-dynamics)
 ([`IBRION`](../incar-tags/IBRION.md)` = 3`). This algorithm propagates
 through time using the forces and friction on the velocities.
 
@@ -134,7 +134,7 @@ The forces and the stress tensor determine the search directions for
 finding the equilibrium positions; the total energy is not taken into
 account. This algorithm is very fast and efficient close to a local
 minimum, but fails badly if the initial positions are a bad guess (use
-[conjugate gradient](#Conjugate_gradient) instead).
+[conjugate gradient](#conjugate-gradient) instead).
 
 RMM-DIIS implicitly calculates an approximation of the inverse Hessian
 matrix by taking into account information from previous iterations. The

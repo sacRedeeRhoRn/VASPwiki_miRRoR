@@ -29,13 +29,13 @@ supported as of VASP.4.5.
 
 
 - [1 Assumptions
-  and output](#Assumptions_and_output)
+  and output](#assumptions-and-output)
 - [2 Symmetry and
-  convergence](#Symmetry_and_convergence)
+  convergence](#symmetry-and-convergence)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Assumptions and output\[<a href="/wiki/index.php?title=LSORBIT&amp;veaction=edit&amp;section=1"

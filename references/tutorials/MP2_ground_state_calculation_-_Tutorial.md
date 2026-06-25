@@ -58,14 +58,14 @@ each algorithm is presented.
 
 - [1 Preparation:
   the Hartree-Fock ground
-  state](#Preparation:_the_Hartree-Fock_ground_state)
+  state](#preparation-the-hartree-fock-ground-state)
 - [2 Calculating
   the unoccupied Hartree-Fock
-  orbitals](#Calculating_the_unoccupied_Hartree-Fock_orbitals)
+  orbitals](#calculating-the-unoccupied-hartree-fock-orbitals)
 - [3 Actual MP2
-  calculations](#Actual_MP2_calculations)
+  calculations](#actual-mp2-calculations)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Preparation: the Hartree-Fock ground state\[<a

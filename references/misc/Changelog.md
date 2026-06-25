@@ -9,37 +9,37 @@
 
 
 - [1
-  6.6.0](#6.6.0)
+  6.6.0](#660)
   - [1.1
-    FEATURE](#FEATURE)
+    FEATURE](#feature)
   - [1.2
-    IMPROVEMENT](#IMPROVEMENT)
+    IMPROVEMENT](#improvement)
   - [1.3
-    BUGFIX](#BUGFIX)
+    BUGFIX](#bugfix)
 - [2
-  6.5.1](#6.5.1)
+  6.5.1](#651)
   - [2.1
-    FEATURE](#FEATURE_2)
+    FEATURE](#feature-2)
   - [2.2
-    IMPROVEMENT](#IMPROVEMENT_2)
+    IMPROVEMENT](#improvement-2)
   - [2.3
-    BUGFIX](#BUGFIX_2)
+    BUGFIX](#bugfix-2)
 - [3
-  6.5.0](#6.5.0)
+  6.5.0](#650)
   - [3.1
-    FEATURE](#FEATURE_3)
+    FEATURE](#feature-3)
   - [3.2
-    IMPROVEMENT](#IMPROVEMENT_3)
+    IMPROVEMENT](#improvement-3)
   - [3.3
-    BUGFIX](#BUGFIX_3)
+    BUGFIX](#bugfix-3)
 - [4
-  6.4.3](#6.4.3)
+  6.4.3](#643)
   - [4.1
-    FEATURE](#FEATURE_4)
+    FEATURE](#feature-3)
   - [4.2
-    IMPROVEMENT](#IMPROVEMENT_4)
+    IMPROVEMENT](#improvement-3)
   - [4.3
-    BUGFIX](#BUGFIX_4)
+    BUGFIX](#bugfix-3)
 
 
 ## 6.6.0\[<a

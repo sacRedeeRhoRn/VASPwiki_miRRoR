@@ -35,19 +35,19 @@ page:
 |----|----|----|----|----|----|
 | Operating system |  | VASP |  |  |  |
 | Name | Version | 6.3.0 - 6.3.1 | 6.3.2 | 6.4.X | 6.5.0 |
-| [Debian](#Debian) | 11 | [Link](#Building_VASP_6.3.X_to_6.4.X_on_Debian_11) |  |  |  |
-|  | 12 |  |  | [Link](#Building_VASP_6.4.X_to_6.5.0_on_Debian_12) |  |
-| [Ubuntu](#Ubuntu) | 20.04 | [Link](#Building_VASP_6.3.0_-_6.3.1_on_Ubuntu_20.04) |  |  |  |
-|  | 22.04 | [Link](#Building_VASP_6.3.X_to_6.4.X_on_Ubuntu_22.04) |  |  |  |
-|  | 24.04 |  |  |  | [Link](#Building_VASP_6.5.0_on_Ubuntu_24.04) |
-| [Fedora](#Fedora) | 35 | [Link](#Building_VASP_6.3.0_-_6.3.1_on_Fedora_35) |  |  |  |
-|  | 37 - 38 |  |  | [Link](#Building_VASP_6.4.X_on_Fedora_37_to_38) |  |
-|  | 41 |  |  |  | [Link](#Building_VASP_6.5.0_on_Fedora_41) |
-| [Rocky Linux](#Rocky_Linux) | 8.5 | [Link](#Building_VASP_6.3.0_-_6.3.1_on_Rocky_Linux_8.5) |  |  |  |
-|  | 9.0 |  | [Link](#Building_VASP_6.3.2_on_Rocky_Linux_9.0) |  |  |
-|  | 9.2 |  |  | [Link](#Building_VASP_6.4.X_on_Rocky_Linux_9.2) |  |
-|  | 9.3 |  |  |  | [Link](#Building_VASP_6.5.0_on_Rocky_Linux_9.3) |
-| [Mac OS X](#Mac_OS_X) | M1/2/3/4 |  |  |  | [Link](#Building_VASP_6.5.1_on_Mac_OS_X_(Apple_Silicon_M1/2/3/4)) |
+| [Debian](#debian) | 11 | [Link](#building-vasp-63x-to-64x-on-debian-11) |  |  |  |
+|  | 12 |  |  | [Link](#building-vasp-64x-to-650-on-debian-12) |  |
+| [Ubuntu](#ubuntu) | 20.04 | [Link](#building-vasp-630---631-on-ubuntu-2004) |  |  |  |
+|  | 22.04 | [Link](#building-vasp-63x-to-64x-on-ubuntu-2204) |  |  |  |
+|  | 24.04 |  |  |  | [Link](#building-vasp-650-on-ubuntu-2404) |
+| [Fedora](#fedora) | 35 | [Link](#building-vasp-630---631-on-fedora-35) |  |  |  |
+|  | 37 - 38 |  |  | [Link](#building-vasp-64x-on-fedora-37-to-38) |  |
+|  | 41 |  |  |  | [Link](#building-vasp-650-on-fedora-41) |
+| [Rocky Linux](#rocky-linux) | 8.5 | [Link](#building-vasp-630---631-on-rocky-linux-85) |  |  |  |
+|  | 9.0 |  | [Link](#building-vasp-632-on-rocky-linux-90) |  |  |
+|  | 9.2 |  |  | [Link](#building-vasp-64x-on-rocky-linux-92) |  |
+|  | 9.3 |  |  |  | [Link](#building-vasp-650-on-rocky-linux-93) |
+| [Mac OS X](#mac-os-x) | M1/2/3/4 |  |  |  | [Link](#building-vasp-651-on-mac-os-x-apple-silicon-m1234)) |
 
 A  red box background indicates
 that there are known issues with the used compiler/library versions (see
@@ -65,55 +65,55 @@ close-by tested combinations.
 
 
 - [1
-  Debian](#Debian)
+  Debian](#debian)
   - [1.1 Building
     VASP 6.3.X to 6.4.X on Debian
-    11](#Building_VASP_6.3.X_to_6.4.X_on_Debian_11)
+    11](#building-vasp-63x-to-64x-on-debian-11)
   - [1.2 Building
     VASP 6.4.X to 6.5.0 on Debian
-    12](#Building_VASP_6.4.X_to_6.5.0_on_Debian_12)
+    12](#building-vasp-64x-to-650-on-debian-12)
 - [2
-  Ubuntu](#Ubuntu)
+  Ubuntu](#ubuntu)
   - [2.1 Building
     VASP 6.3.0 - 6.3.1 on Ubuntu
-    20.04](#Building_VASP_6.3.0_-_6.3.1_on_Ubuntu_20.04)
+    20.04](#building-vasp-630---631-on-ubuntu-2004)
   - [2.2 Building
     VASP 6.3.X to 6.4.X on Ubuntu
-    22.04](#Building_VASP_6.3.X_to_6.4.X_on_Ubuntu_22.04)
+    22.04](#building-vasp-63x-to-64x-on-ubuntu-2204)
   - [2.3 Building
     VASP 6.5.0 on Ubuntu
-    24.04](#Building_VASP_6.5.0_on_Ubuntu_24.04)
+    24.04](#building-vasp-650-on-ubuntu-2404)
 - [3
-  Fedora](#Fedora)
+  Fedora](#fedora)
   - [3.1 Building
     VASP 6.3.0 - 6.3.1 on Fedora
-    35](#Building_VASP_6.3.0_-_6.3.1_on_Fedora_35)
+    35](#building-vasp-630---631-on-fedora-35)
   - [3.2 Building
     VASP 6.4.X on Fedora 37 to
-    38](#Building_VASP_6.4.X_on_Fedora_37_to_38)
+    38](#building-vasp-64x-on-fedora-37-to-38)
   - [3.3 Building
-    VASP 6.5.0 on Fedora 41](#Building_VASP_6.5.0_on_Fedora_41)
+    VASP 6.5.0 on Fedora 41](#building-vasp-650-on-fedora-41)
 - [4 Rocky
-  Linux](#Rocky_Linux)
+  Linux](#rocky-linux)
   - [4.1 Building
     VASP 6.3.0 - 6.3.1 on Rocky Linux
-    8.5](#Building_VASP_6.3.0_-_6.3.1_on_Rocky_Linux_8.5)
+    8.5](#building-vasp-630---631-on-rocky-linux-85)
   - [4.2 Building
     VASP 6.3.2 on Rocky Linux
-    9.0](#Building_VASP_6.3.2_on_Rocky_Linux_9.0)
+    9.0](#building-vasp-632-on-rocky-linux-90)
   - [4.3 Building
     VASP 6.4.X on Rocky Linux
-    9.2](#Building_VASP_6.4.X_on_Rocky_Linux_9.2)
+    9.2](#building-vasp-64x-on-rocky-linux-92)
   - [4.4 Building
     VASP 6.5.0 on Rocky Linux
-    9.3](#Building_VASP_6.5.0_on_Rocky_Linux_9.3)
+    9.3](#building-vasp-650-on-rocky-linux-93)
 - [5 Mac OS
-  X](#Mac_OS_X)
+  X](#mac-os-x)
   - [5.1 Building
     VASP 6.5.1 on Mac OS X (Apple Silicon
-    M1/2/3/4)](#Building_VASP_6.5.1_on_Mac_OS_X_(Apple_Silicon_M1/2/3/4))
+    M1/2/3/4)](#building-vasp-651-on-mac-os-x-apple-silicon-m1234))
 - [6 Footnotes and
-  references](#Footnotes_and_references)
+  references](#footnotes-and-references)
 
 
 ## Debian\[<a

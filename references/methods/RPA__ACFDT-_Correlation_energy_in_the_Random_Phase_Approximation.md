@@ -10,32 +10,32 @@
 
 - [1 Diagrammatic
   approach to the correlation
-  energy](#Diagrammatic_approach_to_the_correlation_energy)
+  energy](#diagrammatic-approach-to-the-correlation-energy)
   - [1.1 Gell-Mann
-    and Low theorem](#Gell-Mann_and_Low_theorem)
+    and Low theorem](#gell-mann-and-low-theorem)
   - [1.2
     Diagrammatic perturbation
-    theory](#Diagrammatic_perturbation_theory)
+    theory](#diagrammatic-perturbation-theory)
 - [2 The
-  random-phase approximation](#The_random-phase_approximation)
+  random-phase approximation](#the-random-phase-approximation)
 - [3 Computational
-  Complexity](#Computational_Complexity)
+  Complexity](#computational-complexity)
   - [3.1 Quartic
     scaling RPA: Direct
-    calculation](#Quartic_scaling_RPA:_Direct_calculation)
+    calculation](#quartic-scaling-rpa-direct-calculation)
   - [3.2 Cubic
     scaling RPA: Contraction of imaginary time Green's
-    functions](#Cubic_scaling_RPA:_Contraction_of_imaginary_time_Green's_functions)
+    functions](#cubic-scaling-rpa-contraction-of-imaginary-time-greens-functions)
 - [4 Basis set
   convergence of RPA-ACFDT
-  calculations](#Basis_set_convergence_of_RPA-ACFDT_calculations)
+  calculations](#basis-set-convergence-of-rpa-acfdt-calculations)
 - [5 Matsubara
   Formalism: Metallic systems at finite
-  Temperature](#Matsubara_Formalism:_Metallic_systems_at_finite_Temperature)
+  Temperature](#matsubara-formalism-metallic-systems-at-finite-temperature)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ACFDT stands for the adiabatic connection fluctuation dissipation

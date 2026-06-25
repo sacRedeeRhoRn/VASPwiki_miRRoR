@@ -37,34 +37,34 @@ as temperature dependence.
 
 
 - [1 Phonon spectra
-  step-by-setp](#Phonon_spectra_step-by-setp)
+  step-by-setp](#phonon-spectra-step-by-setp)
   - [1.1 Step 1:
     Generate thermalized initial
-    structures](#Step_1:_Generate_thermalized_initial_structures)
+    structures](#step-1-generate-thermalized-initial-structures)
   - [1.2 Step 2:
     Sample velocities from NVE simulations for each initial
-    structure](#Step_2:_Sample_velocities_from_NVE_simulations_for_each_initial_structure)
+    structure](#step-2-sample-velocities-from-nve-simulations-for-each-initial-structure)
   - [1.3 Step 3:
     Compute normalized velocity autocorrelation function for each NVE
-    simulation](#Step_3:_Compute_normalized_velocity_autocorrelation_function_for_each_NVE_simulation)
+    simulation](#step-3-compute-normalized-velocity-autocorrelation-function-for-each-nve-simulation)
   - [1.4 Step 4:
     Compute the power spectrum for each normalized velocity
     autocorrelation
-    function](#Step_4:_Compute_the_power_spectrum_for_each_normalized_velocity_autocorrelation_function)
+    function](#step-4-compute-the-power-spectrum-for-each-normalized-velocity-autocorrelation-function)
   - [1.5 Step 5:
     Compute averages and check for
-    convergence](#Step_5:_Compute_averages_and_check_for_convergence)
+    convergence](#step-5-compute-averages-and-check-for-convergence)
 - [2
-  Example](#Example)
+  Example](#example)
   - [2.1 Setup and
-    auxilary scripts](#Setup_and_auxilary_scripts)
+    auxilary scripts](#setup-and-auxilary-scripts)
   - [2.2 Anharmonic
     ratteling in
     CsPbBr\$_{3}\$](#Anharmonic_ratteling_in_CsPbBr$_%7B3%7D$)
 - [3
-  References](#References)
+  References](#references)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Phonon spectra step-by-setp\[<a

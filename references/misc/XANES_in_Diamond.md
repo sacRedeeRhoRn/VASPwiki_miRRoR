@@ -17,28 +17,28 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    INCAR](#INCAR)
+    INCAR](#incar)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Step 1
-    build a supercell](#Step_1_build_a_supercell)
+    build a supercell](#step-1-build-a-supercell)
   - [3.2 Step 2
-    Prepare input files](#Step_2_Prepare_input_files)
+    Prepare input files](#step-2-prepare-input-files)
   - [3.3 Step 3
-    Running Calculation](#Step_3_Running_Calculation)
+    Running Calculation](#step-3-running-calculation)
   - [3.4 Step 4
     Extraction of XAS
-    Spectrum](#Step_4_Extraction_of_XAS_Spectrum)
+    Spectrum](#step-4-extraction-of-xas-spectrum)
 - [4
-  Download](#Download)
+  Download](#download)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Task\[<a

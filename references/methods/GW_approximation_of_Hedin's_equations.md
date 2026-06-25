@@ -9,7 +9,7 @@
 
 
 - [1 Green's
-  functions](#Green's_functions)
+  functions](#greens-functions)
 - [2 Single Shot:
   G<sub>0</sub>W<sub>0</sub>](#Single_Shot:_G0W0)
 - [3 Partially
@@ -20,13 +20,13 @@
   scQPGW<sub>0</sub>](#Self-consistent_Quasi-particle_approximation:_scQPGW0)
 - [5 Low-scaling
   GW: The Space-time
-  Formalism](#Low-scaling_GW:_The_Space-time_Formalism)
+  Formalism](#low-scaling-gw-the-space-time-formalism)
 - [6
-  Theory](#Theory)
+  Theory](#theory)
 - [7 Limitations of
-  GW](#Limitations_of_GW)
+  GW](#limitations-of-gw)
 - [8
-  References](#References)
+  References](#references)
 
 
 ## Green's functions\[<a

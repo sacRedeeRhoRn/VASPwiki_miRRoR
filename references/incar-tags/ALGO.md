@@ -10,7 +10,7 @@ Default: **ALGO** = Normal 
 Description: Selects the electronic-minimization algorithm and/or the
 many-body method:
 
-- [Electronic minimization](#Electronic-minimization_algorithms) (ground
+- [Electronic minimization](#electronic-minimization-algorithms) (ground
   state)
   - *Self-consistency cycle*: `Normal` (default), `Fast`, `VeryFast`,
     `Exact`, `Subrot`
@@ -31,7 +31,7 @@ many-body method:
 The ALGO tag has two kinds of
 settings: For a ground-state calculation, it selects the
 **electronic-minimization algorithm** (see [Electronic-minimization
-algorithms](#Electronic-minimization_algorithms) section below); that
+algorithms](#electronic-minimization-algorithms) section below); that
 may be one of the self-consistency-cycle minimizers, the direct
 optimizers, or the postprocessing modes. For
 <a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
@@ -40,7 +40,7 @@ it instead selects the [algorithm for response functions, the GW
 variant, BSE, time evolution, and ACFDT/RPA](#GWALGOS). The stopping
 criterion is set using [EDIFF](EDIFF.md) and
 [NELM](NELM.md). We recommend checking the [output during the
-electronic minimization](#Output_during_the_electronic_minimization) as
+electronic minimization](#output-during-the-electronic-minimization) as
 described below to judge the convergence.
 
 |  |
@@ -53,20 +53,20 @@ described below to judge the convergence.
 
 - [1
   Electronic-minimization
-  algorithms](#Electronic-minimization_algorithms)
+  algorithms](#electronic-minimization-algorithms)
   - [1.1
-    Recommendations](#Recommendations)
+    Recommendations](#recommendations)
 - [2 Output during
   the electronic
-  minimization](#Output_during_the_electronic_minimization)
+  minimization](#output-during-the-electronic-minimization)
   - [2.1
     Line-search output (direct
-    optimizers)](#Line-search_output_(direct_optimizers))
+    optimizers)](#line-search-output-direct-optimizers))
 - [3 ALGO for
   response functions, GW, and
   ACFDT/RPA](#ALGO_for_response_functions,_GW,_and_ACFDT/RPA)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Electronic-minimization algorithms\[<a href="/wiki/index.php?title=ALGO&amp;veaction=edit&amp;section=1"

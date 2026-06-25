@@ -126,13 +126,13 @@ to the correct transition state).
 
 
 - [1 Initial dimer
-  axis](#Initial_dimer_axis)
+  axis](#initial-dimer-axis)
 - [2 Practical
-  example](#Practical_example)
+  example](#practical-example)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Initial dimer axis\[<a

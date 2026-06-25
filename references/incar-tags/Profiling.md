@@ -15,13 +15,13 @@ level at which it was called.
 
 
 - [1
-  Compilation](#Compilation)
+  Compilation](#compilation)
 - [2 Support for
-  new routines](#Support_for_new_routines)
+  new routines](#support-for-new-routines)
 - [3
-  Output](#Output)
+  Output](#output)
 - [4 INCAR
-  Flags](#INCAR_Flags)
+  Flags](#incar-flags)
 
 
 ## Compilation\[<a

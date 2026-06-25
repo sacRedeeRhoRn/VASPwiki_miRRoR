@@ -9,21 +9,21 @@
 
 
 - [1
-  Lectures](#Lectures)
+  Lectures](#lectures)
 - [2
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [3
-  Exercises](#Exercises)
+  Exercises](#exercises)
   - [3.1 Atoms and
-    molecules](#Atoms_and_molecules)
+    molecules](#atoms-and-molecules)
   - [3.2 Simple
-    bulk systems](#Simple_bulk_systems)
+    bulk systems](#simple-bulk-systems)
   - [3.3 A bit of
-    surface science](#A_bit_of_surface_science)
+    surface science](#a-bit-of-surface-science)
   - [3.4 Hybrid
-    functionals](#Hybrid_functionals)
+    functionals](#hybrid-functionals)
   - [3.5 Dielectric
-    properties and RPA](#Dielectric_properties_and_RPA)
+    properties and RPA](#dielectric-properties-and-rpa)
 
 
 ## Lectures\[<a

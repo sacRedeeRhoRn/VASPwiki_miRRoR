@@ -31,35 +31,35 @@ external electric field.
 
 - [1 Polarization,
   berry phases, and finite electric
-  fields](#Polarization,_berry_phases,_and_finite_electric_fields)
+  fields](#polarization-berry-phases-and-finite-electric-fields)
 - [2 Static
-  response](#Static_response)
+  response](#static-response)
   - [2.1 Dielectric
-    tensor](#Dielectric_tensor)
+    tensor](#dielectric-tensor)
   - [2.2 Born
-    effective charges](#Born_effective_charges)
+    effective charges](#born-effective-charges)
   - [2.3
     Piezolectric
-    tensor](#Piezolectric_tensor)
+    tensor](#piezolectric-tensor)
   - [2.4 Elastic
-    tensor](#Elastic_tensor)
+    tensor](#elastic-tensor)
   - [2.5 Internal
-    strain tensor](#Internal_strain_tensor)
+    strain tensor](#internal-strain-tensor)
 - [3 Dynamic
-  response](#Dynamic_response)
+  response](#dynamic-response)
 - [4 X-ray
   absorption spectroscopy
-  (XAS)](#X-ray_absorption_spectroscopy_(XAS))
+  (XAS)](#x-ray-absorption-spectroscopy-xas))
 - [5 Nuclear
-  magnetic resonance (NMR)](#Nuclear_magnetic_resonance_(NMR))
+  magnetic resonance (NMR)](#nuclear-magnetic-resonance-nmr))
 - [6 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [6.1 How
-    to](#How_to)
+    to](#how-to)
   - [6.2
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [6.3
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
 
 
 ## Polarization, berry phases, and finite electric fields\[<a

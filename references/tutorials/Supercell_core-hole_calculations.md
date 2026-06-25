@@ -30,29 +30,29 @@ method.
 
 
 - [1
-  Pre-calculation](#Pre-calculation)
+  Pre-calculation](#pre-calculation)
 - [2
-  Calculation](#Calculation)
+  Calculation](#calculation)
 - [3 INCAR
-  tags](#INCAR_tags)
+  tags](#incar-tags)
   - [3.1 Example
-    INCAR](#Example_INCAR)
+    INCAR](#example-incar)
   - [3.2 Core hole
-    tags](#Core_hole_tags)
+    tags](#core-hole-tags)
   - [3.3 XAS
-    tags](#XAS_tags)
+    tags](#xas-tags)
   - [3.4 Other
-    important tags](#Other_important_tags)
+    important tags](#other-important-tags)
 - [4
-  Output](#Output)
+  Output](#output)
   - [4.1
-    OUTCAR](#OUTCAR)
+    OUTCAR](#outcar)
   - [4.2
-    vaspout.h5](#vaspout.h5)
+    vaspout.h5](#vaspouth5)
   - [4.3
-    vasprun.xml](#vasprun.xml)
+    vasprun.xml](#vasprunxml)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Pre-calculation\[<a

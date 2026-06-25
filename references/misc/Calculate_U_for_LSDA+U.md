@@ -9,24 +9,24 @@
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  POSCAR](#POSCAR)
+  POSCAR](#poscar)
 - [3
-  KPOINTS](#KPOINTS)
+  KPOINTS](#kpoints)
 - [4 The DFT
-  groudstate](#The_DFT_groudstate)
+  groudstate](#the-dft-groudstate)
 - [5
   Non-selfconsistent
-  response](#Non-selfconsistent_response)
+  response](#non-selfconsistent-response)
 - [6 Selfconsistent
-  response](#Selfconsistent_response)
+  response](#selfconsistent-response)
 - [7 The final
-  result](#The_final_result)
+  result](#the-final-result)
 - [8
-  Download](#Download)
+  Download](#download)
 - [9
-  References](#References)
+  References](#references)
 
 
 ## Task\[<a
@@ -420,7 +420,7 @@ To get a more accurate result, one should repeat the previous
 calculations for a series of different additional potentials (for
 instance, [LDAUU](../incar-tags/LDAUU.md) = [LDAUJ](../incar-tags/LDAUJ.md) =
 -0.2, -0.15, -0.10, -0.05, 0.05, 0.10 ,0.15, and 0.20 eV). All necessary
-steps are scripted in `doall.sh` in the [tgz-file below](#Download).
+steps are scripted in `doall.sh` in the [tgz-file below](#download).
 
 The relevant response functions are then easily found from a linear fit
 of the number of *d*-electrons on atomic site 1 as a function of the

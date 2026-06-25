@@ -35,37 +35,37 @@ stresses.
 
 
 - [1 Model
-  selection](#Model_selection)
+  selection](#model-selection)
 - [2 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [2.1 Step 1:
     Compiling with Plugins
-    support](#Step_1:_Compiling_with_Plugins_support)
+    support](#step-1-compiling-with-plugins-support)
   - [2.2 Step 2:
     Setting up
     vasp_plugin.py](#Step_2:_Setting_up_vasp_plugin.py)
     - [2.2.1
       Example A: Model inference with the
       tensorpotential package
-      (GRACE)](#Example_A:_Model_inference_with_the_tensorpotential_package_(GRACE))
+      (GRACE)](#example-a-model-inference-with-the-tensorpotential-package-grace))
     - [2.2.2
       Example B: Model inference with the UPET
-      package](#Example_B:_Model_inference_with_the_UPET_package)
+      package](#example-b-model-inference-with-the-upet-package)
     - [2.2.3
       Example C: Model inference with the
       DeePMD-Kit
-      package](#Example_C:_Model_inference_with_the_DeePMD-Kit_package)
+      package](#example-c-model-inference-with-the-deepmd-kit-package)
   - [2.3 Step 3:
-    Setting up your INCAR](#Step_3:_Setting_up_your_INCAR)
+    Setting up your INCAR](#step-3-setting-up-your-incar)
   - [2.4 Step 4:
-    Run calculation](#Step_4:_Run_calculation)
+    Run calculation](#step-4-run-calculation)
 - [3
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Model selection\[<a

@@ -26,7 +26,7 @@ page](../categories/Category-NMR.md) and
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Step 1
     (optional): Calculate the chemical shielding using a previously
     converged
@@ -36,33 +36,33 @@ page](../categories/Category-NMR.md) and
     value](#Step_2_(optional):_Determine_a_suitable_energetic_break_value)
   - [1.3 Step 3:
     Converge the plane-wave
-    basis](#Step_3:_Converge_the_plane-wave_basis)
+    basis](#step-3-converge-the-plane-wave-basis)
   - [1.4 Step 4:
     Converge the **k** point
-    mesh](#Step_4:_Converge_the_k_point_mesh)
+    mesh](#step-4-converge-the-k-point-mesh)
   - [1.5 Step 5:
-    Compare to experiment](#Step_5:_Compare_to_experiment)
+    Compare to experiment](#step-5-compare-to-experiment)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
   - [2.1 PAW
-    pseudopotentials](#PAW_pseudopotentials)
+    pseudopotentials](#paw-pseudopotentials)
   - [2.2
     Insufficient
-    memory](#Insufficient_memory)
+    memory](#insufficient-memory)
   - [2.3 Additional
-    tags](#Additional_tags)
+    tags](#additional-tags)
 - [3 Example
   scripts for convergence
-  tests](#Example_scripts_for_convergence_tests)
+  tests](#example-scripts-for-convergence-tests)
   - [3.1 Energetic
-    break criterion tests](#Energetic_break_criterion_tests)
+    break criterion tests](#energetic-break-criterion-tests)
   - [3.2
-    **k**-points tests](#k-points_tests)
+    **k**-points tests](#k-points-tests)
   - [3.3 Energy
-    cutoff tests](#Energy_cutoff_tests)
+    cutoff tests](#energy-cutoff-tests)
   - [3.4
-    References](#References)
+    References](#references)
 
 
 ## Step-by-step instructions\[<a

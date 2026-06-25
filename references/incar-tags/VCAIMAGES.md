@@ -39,13 +39,13 @@ set internally). The two calculations are performed in subdirectories
 
 - [1 Description of
   reading a writing during the
-  calculation](#Description_of_reading_a_writing_during_the_calculation)
+  calculation](#description-of-reading-a-writing-during-the-calculation)
 - [2 Finding the
-  energies](#Finding_the_energies)
+  energies](#finding-the-energies)
 - [3 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ### Description of reading a writing during the calculation\[<a

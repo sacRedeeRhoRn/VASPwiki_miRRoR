@@ -28,16 +28,16 @@ many-body dispersion extensions.
 
 
 - [1 Types of
-  approximations](#Types_of_approximations)
+  approximations](#types-of-approximations)
   - [1.1
     Atom-pairwise
-    methods](#Atom-pairwise_methods)
+    methods](#atom-pairwise-methods)
   - [1.2 Many-body
-    dispersion methods](#Many-body_dispersion_methods)
+    dispersion methods](#many-body-dispersion-methods)
   - [1.3 Nonlocal
-    vdW-DF functionals](#Nonlocal_vdW-DF_functionals)
+    vdW-DF functionals](#nonlocal-vdw-df-functionals)
 - [2
-  References](#References)
+  References](#references)
 
 
 ## Types of approximations\[<a

@@ -45,13 +45,13 @@ combined with [`ISYM`](ISYM.md)` = 1`, or `2`.
 
 
 - [1
-  Output](#Output)
+  Output](#output)
 - [2
-  Advice](#Advice)
+  Advice](#advice)
 - [3 Related tags
-  an articles](#Related_tags_an_articles)
+  an articles](#related-tags-an-articles)
 - [4
-  References](#References)
+  References](#references)
 
 
 ## Output\[<a href="/wiki/index.php?title=LDMATRIX&amp;veaction=edit&amp;section=1"

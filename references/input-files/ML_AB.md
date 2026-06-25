@@ -49,13 +49,13 @@ reused as input for
 
 
 - [1
-  Example](#Example)
+  Example](#example)
 - [2 General format
-  remarks](#General_format_remarks)
+  remarks](#general-format-remarks)
 - [3 Header
-  specification](#Header_specification)
+  specification](#header-specification)
 - [4 Training
-  structure data format](#Training_structure_data_format)
+  structure data format](#training-structure-data-format)
 - [5 Merging
   different ML_AB files](#Merging_different_ML_AB_files)
 

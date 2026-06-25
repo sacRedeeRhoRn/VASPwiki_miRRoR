@@ -51,28 +51,28 @@ title="Electronic minimization">electronic minimization</a> is often hard to con
 
 
 - [1 Spin-polarized
-  calculation](#Spin-polarized_calculation)
+  calculation](#spin-polarized-calculation)
 - [2 Noncollinear
-  calculation](#Noncollinear_calculation)
+  calculation](#noncollinear-calculation)
 - [3 Advanced
-  methods](#Advanced_methods)
+  methods](#advanced-methods)
   - [3.1
     Constrained magnetic
-    moments](#Constrained_magnetic_moments)
+    moments](#constrained-magnetic-moments)
   - [3.2 Spin
-    spirals](#Spin_spirals)
+    spirals](#spin-spirals)
   - [3.3 Spin-orbit
-    coupling](#Spin-orbit_coupling)
+    coupling](#spin-orbit-coupling)
   - [3.4 Nuclear
-    magnetic resonance](#Nuclear_magnetic_resonance)
+    magnetic resonance](#nuclear-magnetic-resonance)
   - [3.5 External
-    magnetic field](#External_magnetic_field)
+    magnetic field](#external-magnetic-field)
 - [4 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [4.1
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Spin-polarized calculation\[<a

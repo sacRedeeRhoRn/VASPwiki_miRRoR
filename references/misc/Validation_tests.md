@@ -15,31 +15,31 @@ As of VASP.6.1.0, each release contains a testsuite for validation.
 
 
 - [1
-  Testsuite](#Testsuite)
+  Testsuite](#testsuite)
 - [2 Running the
-  tests](#Running_the_tests)
+  tests](#running-the-tests)
   - [2.1 Run the
     tests with make
-    (recommended)](#Run_the_tests_with_make_(recommended))
+    (recommended)](#run-the-tests-with-make-recommended))
   - [2.2
     Configuring the testsuite
-    manually](#Configuring_the_testsuite_manually)
+    manually](#configuring-the-testsuite-manually)
     - [2.2.1
-      Categories](#Categories)
+      Categories](#categories)
   - [2.3 Directly
     execute the runtest
-    script](#Directly_execute_the_runtest_script)
+    script](#directly-execute-the-runtest-script)
     - [2.3.1
       Configuration
-      templates](#Configuration_templates)
+      templates](#configuration-templates)
 - [3 The output of
-  the tests](#The_output_of_the_tests)
+  the tests](#the-output-of-the-tests)
 - [4 What if tests
-  fail](#What_if_tests_fail)
+  fail](#what-if-tests-fail)
 - [5 Known
-  issues](#Known_issues)
+  issues](#known-issues)
 - [6 Related
-  Sections](#Related_Sections)
+  Sections](#related-sections)
 
 
 ## Testsuite\[<a

@@ -46,13 +46,13 @@ $\mathbf{r}_{i}(t+\Delta t) = \mathbf{r}_{i}(t)+
 
 - [1
   Velocity-Verlet integration
-  scheme](#Velocity-Verlet_integration_scheme)
+  scheme](#velocity-verlet-integration-scheme)
 - [2 Leap-Frog
-  integration scheme](#Leap-Frog_integration_scheme)
+  integration scheme](#leap-frog-integration-scheme)
 - [3 Thermostats
-  and used integrators](#Thermostats_and_used_integrators)
+  and used integrators](#thermostats-and-used-integrators)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Velocity-Verlet integration scheme\[<a
@@ -105,13 +105,13 @@ title="Edit section: Thermostats and used integrators">edit</a> \| (./index.php.
 |  |  |  |
 |----|----|----|
 | MDALGO | thermostat | integration algorithm |
-| 0 | [Nosé-Hoover](../tutorials/Nosé-Hoover_thermostat.md) | [Velocity-Verlet](#Velocity-Verlet_integration_scheme) |
-| 1 | [Andersen](../tutorials/Andersen_thermostat.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
-| 2 | [Nosé-Hoover](../tutorials/Nosé-Hoover_thermostat.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
-| 3 | [Langevin](../tutorials/Langevin_thermostat.md) | [Velocity-Verlet](#Velocity-Verlet_Integration_scheme) |
-| 4 | [Nosé-Hoover chain](../misc/Nosé-Hoover_chain_thermostat.md) | [Velocity-Verlet](#Velocity-Verlet_integration_scheme) |
-| 5 | [CSVR](CSVR_thermostat.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
-| 5 | [Multiple Andersen](../incar-tags/MDALGO.md) | [Leap-Frog](#Leap-Frog_integration_scheme) |
+| 0 | [Nosé-Hoover](../tutorials/Nosé-Hoover_thermostat.md) | [Velocity-Verlet](#velocity-verlet-integration-scheme) |
+| 1 | [Andersen](../tutorials/Andersen_thermostat.md) | [Leap-Frog](#leap-frog-integration-scheme) |
+| 2 | [Nosé-Hoover](../tutorials/Nosé-Hoover_thermostat.md) | [Leap-Frog](#leap-frog-integration-scheme) |
+| 3 | [Langevin](../tutorials/Langevin_thermostat.md) | [Velocity-Verlet](#velocity-verlet-integration-scheme) |
+| 4 | [Nosé-Hoover chain](../misc/Nosé-Hoover_chain_thermostat.md) | [Velocity-Verlet](#velocity-verlet-integration-scheme) |
+| 5 | [CSVR](CSVR_thermostat.md) | [Leap-Frog](#leap-frog-integration-scheme) |
+| 5 | [Multiple Andersen](../incar-tags/MDALGO.md) | [Leap-Frog](#leap-frog-integration-scheme) |
 
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=Time-propagation_algorithms_in_molecular_dynamics&amp;veaction=edit&amp;section=4"

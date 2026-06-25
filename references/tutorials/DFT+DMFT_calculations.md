@@ -28,34 +28,34 @@ $A(\omega)$ of NiO using DMFT.
 
 
 - [1 Theory
-  overview](#Theory_overview)
+  overview](#theory-overview)
 - [2 Technical
-  requirements](#Technical_requirements)
+  requirements](#technical-requirements)
 - [3 Step-by-step
-  tutorial](#Step-by-step_tutorial)
+  tutorial](#step-by-step-tutorial)
   - [3.1 Step 1:
     Perform a SCF DFT
-    calculation](#Step_1:_Perform_a_SCF_DFT_calculation)
+    calculation](#step-1-perform-a-scf-dft-calculation)
   - [3.2 Step 2:
     Convert the VASP output to TRIQS
-    input](#Step_2:_Convert_the_VASP_output_to_TRIQS_input)
+    input](#step-2-convert-the-vasp-output-to-triqs-input)
   - [3.3 Step 3:
     Perform a DMFT
-    calculation](#Step_3:_Perform_a_DMFT_calculation)
+    calculation](#step-3-perform-a-dmft-calculation)
   - [3.4 Step 4:
     Perform a CSC DFT+DMFT
-    calculation](#Step_4:_Perform_a_CSC_DFT+DMFT_calculation)
+    calculation](#step-4-perform-a-csc-dftdmft-calculation)
   - [3.5 Step 5:
     calculating the local spectral
-    function](#Step_5:_calculating_the_local_spectral_function)
+    function](#step-5-calculating-the-local-spectral-function)
   - [3.6 Further
-    reading](#Further_reading)
+    reading](#further-reading)
   - [3.7 Helper
-    functions for python](#Helper_functions_for_python)
+    functions for python](#helper-functions-for-python)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Theory overview\[<a

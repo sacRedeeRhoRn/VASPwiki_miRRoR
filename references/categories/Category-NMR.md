@@ -20,25 +20,25 @@ be computed and are relevant to interpret NMR spectra.
 
 
 - [1 Chemical
-  shielding](#Chemical_shielding)
+  shielding](#chemical-shielding)
   - [1.1
     Nuclear-independent chemical
-    shielding](#Nuclear-independent_chemical_shielding)
+    shielding](#nuclear-independent-chemical-shielding)
 - [2 Magnetic
-  susceptibility](#Magnetic_susceptibility)
+  susceptibility](#magnetic-susceptibility)
 - [3 Quadrupolar
   nuclei - electric field
-  gradient](#Quadrupolar_nuclei_-_electric_field_gradient)
+  gradient](#quadrupolar-nuclei---electric-field-gradient)
 - [4 Hyperfine
-  coupling](#Hyperfine_coupling)
+  coupling](#hyperfine-coupling)
 - [5 Additional
-  resources](#Additional_resources)
+  resources](#additional-resources)
   - [5.1
-    Lectures](#Lectures)
+    Lectures](#lectures)
   - [5.2
-    Tutorials](#Tutorials)
+    Tutorials](#tutorials)
 - [6
-  References](#References)
+  References](#references)
 
 
 ## Chemical shielding\[<a

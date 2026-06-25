@@ -9,14 +9,14 @@
 
 
 - [1
-  Downsampling](#Downsampling)
+  Downsampling](#downsampling)
   - [1.1 Caveat:
     when one should not use
-    downsampling](#Caveat:_when_one_should_not_use_downsampling)
+    downsampling](#caveat-when-one-should-not-use-downsampling)
 - [2 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [3
-  References](#References)
+  References](#references)
 
 
 ### Downsampling\[<a

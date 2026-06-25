@@ -34,16 +34,16 @@ convergence compared to the k-p perturbation theory approach.
 
 
 - [1
-  Algorithm](#Algorithm)
+  Algorithm](#algorithm)
 - [2
   ESF-interpolation method vs k-p perturbation
-  theory](#ESF-interpolation_method_vs_k-p_perturbation_theory)
+  theory](#esf-interpolation-method-vs-k-p-perturbation-theory)
 - [3
-  Output](#Output)
+  Output](#output)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [5
-  References](#References)
+  References](#references)
 
 
 ## Algorithm\[<a

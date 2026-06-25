@@ -15,27 +15,27 @@ tutorials](../categories/Category-Tutorials.md)
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2
-  Input](#Input)
+  Input](#input)
   - [2.1
-    POSCAR](#POSCAR)
+    POSCAR](#poscar)
   - [2.2
-    KPOINTS](#KPOINTS)
+    KPOINTS](#kpoints)
   - [2.3
-    INCAR](#INCAR)
+    INCAR](#incar)
 - [3
-  Calculation](#Calculation)
+  Calculation](#calculation)
   - [3.1 Creating
-    the liquid structure](#Creating_the_liquid_structure)
+    the liquid structure](#creating-the-liquid-structure)
   - [3.2 Structral
     properties of the force
-    field](#Structral_properties_of_the_force_field)
+    field](#structral-properties-of-the-force-field)
   - [3.3 Obtaining
     a more accurate force
-    field](#Obtaining_a_more_accurate_force_field)
+    field](#obtaining-a-more-accurate-force-field)
 - [4
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a
@@ -199,7 +199,7 @@ the ab initio steps will be replaced by very fast force-field ones.
 Within 10000 steps equivalent to 30 ps, we have obtained a good starting
 position for the subsequent simulations in the
 [CONTCAR](../output-files/CONTCAR.md) file. You can copy the [input
-files](#Input) or [download them](#Download).
+files](#input) or [download them](#download).
 
 After running the calculation, we obtained a force field, but its
 initial trajectory might be tainted but the unreasonable starting
@@ -603,7 +603,7 @@ initio calculations since bad reference data can limit the accuracy or
 even inhibit the learning of a force field.
 
 We restart from the liquid structure obtained
-[before](#Creating_the_liquid_structure)
+[before](#creating-the-liquid-structure)
 
     cp POSCAR.T2000_relaxed POSCAR
 

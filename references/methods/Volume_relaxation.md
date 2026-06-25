@@ -9,40 +9,40 @@
 
 
 - [1
-  Introduction](#Introduction)
+  Introduction](#introduction)
 - [2 How to
-  correct](#How_to_correct)
+  correct](#how-to-correct)
   - [2.1 1. Volume
-    relaxation](#1._Volume_relaxation)
+    relaxation](#1-volume-relaxation)
     - [2.1.1 Step
-      1.](#Step_1.)
+      1.](#step-1)
     - [2.1.2 Step
-      2.](#Step_2.)
+      2.](#step-2)
     - [2.1.3 Step
-      3.](#Step_3.)
+      3.](#step-3)
     - [2.1.4
-      (Optional)](#(Optional))
+      (Optional)](#optional))
     - [2.1.5 Step
-      4a.](#Step_4a.)
+      4a.](#step-4a)
     - [2.1.6 Step
-      4b.](#Step_4b.)
+      4b.](#step-4b)
   - [2.2 2.
-    Equation of state fitting](#2._Equation_of_state_fitting)
+    Equation of state fitting](#2-equation-of-state-fitting)
     - [2.2.1 Step
-      0.](#Step_0.)
+      0.](#step-0)
     - [2.2.2 Step
-      1.](#Step_1._2)
+      1.](#step-1-1)
     - [2.2.3 Step
-      2.](#Step_2._2)
+      2.](#step-2-1)
     - [2.2.4 Step
-      3.](#Step_3._2)
+      3.](#step-3-1)
     - [2.2.5 Step
-      4.](#Step_4.)
+      4.](#step-4)
 - [3 Possible
   issues and advice on how to address
-  them](#Possible_issues_and_advice_on_how_to_address_them)
+  them](#possible-issues-and-advice-on-how-to-address-them)
   - [3.1
-    References](#References)
+    References](#references)
 
 
 # Introduction\[<a

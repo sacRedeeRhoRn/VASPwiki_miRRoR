@@ -23,47 +23,47 @@ page.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Step 1
     (optional): Calculate the electric field gradient using a previously
     converged
     calculation](#Step_1_(optional):_Calculate_the_electric_field_gradient_using_a_previously_converged_calculation)
   - [1.2 Step 2a:
     Define the nuclear quadrupolar
-    moments](#Step_2a:_Define_the_nuclear_quadrupolar_moments)
+    moments](#step-2a-define-the-nuclear-quadrupolar-moments)
   - [1.3 Step 2b
     (optional): Determine a suitable energetic break
     value](#Step_2b_(optional):_Determine_a_suitable_energetic_break_value)
   - [1.4 Step 3:
     Converge the plane-wave energy
-    cutoff](#Step_3:_Converge_the_plane-wave_energy_cutoff)
+    cutoff](#step-3-converge-the-plane-wave-energy-cutoff)
   - [1.5 Step 4:
     Converge the **k** point
-    mesh](#Step_4:_Converge_the_k_point_mesh)
+    mesh](#step-4-converge-the-k-point-mesh)
   - [1.6 Step 5:
-    Compare to experiment](#Step_5:_Compare_to_experiment)
+    Compare to experiment](#step-5-compare-to-experiment)
 - [2
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
   - [2.1
-    Structure](#Structure)
+    Structure](#structure)
   - [2.2 PAW
-    pseudopotentials](#PAW_pseudopotentials)
+    pseudopotentials](#paw-pseudopotentials)
   - [2.3 Additional
-    tags](#Additional_tags)
+    tags](#additional-tags)
 - [3 Example
   scripts for convergence
-  tests](#Example_scripts_for_convergence_tests)
+  tests](#example-scripts-for-convergence-tests)
   - [3.1 Energetic
-    break criterion tests](#Energetic_break_criterion_tests)
+    break criterion tests](#energetic-break-criterion-tests)
   - [3.2
-    **k**-points tests](#k-points_tests)
+    **k**-points tests](#k-points-tests)
   - [3.3 Energy
-    cutoff tests](#Energy_cutoff_tests)
+    cutoff tests](#energy-cutoff-tests)
   - [3.4 Related
-    tags and articles](#Related_tags_and_articles)
+    tags and articles](#related-tags-and-articles)
   - [3.5
-    References](#References)
+    References](#references)
 
 
 ## Step-by-step instructions\[<a

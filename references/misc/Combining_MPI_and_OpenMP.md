@@ -14,25 +14,25 @@ parallelization over MPI ranks. This is beneficial on some hardware.
 - [1 When to use
   MPI + OpenMP](#When_to_use_MPI_+_OpenMP)
 - [2
-  Compilation](#Compilation)
+  Compilation](#compilation)
 - [3 Running
   multiple OpenMP threads per MPI
-  rank](#Running_multiple_OpenMP_threads_per_MPI_rank)
+  rank](#running-multiple-openmp-threads-per-mpi-rank)
   - [3.1 For the
-    OpenMP runtime](#For_the_OpenMP_runtime)
+    OpenMP runtime](#for-the-openmp-runtime)
   - [3.2 Using
-    OpenMPI](#Using_OpenMPI)
+    OpenMPI](#using-openmpi)
   - [3.3 Using
-    IntelMPI](#Using_IntelMPI)
+    IntelMPI](#using-intelmpi)
 - [4 MPI versus
   MPI/OpenMP: the main
-  difference](#MPI_versus_MPI/OpenMP:_the_main_difference)
+  difference](#mpi-versus-mpiopenmp-the-main-difference)
 - [5 Further
-  reading](#Further_reading)
+  reading](#further-reading)
 - [6
-  Credits](#Credits)
+  Credits](#credits)
 - [7 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## When to use MPI + OpenMP\[<a

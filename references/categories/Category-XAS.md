@@ -33,20 +33,20 @@ between the core state and the valence states.
 
 
 - [1 Theoretical
-  background](#Theoretical_background)
+  background](#theoretical-background)
   - [1.1
-    Nomenclature](#Nomenclature)
+    Nomenclature](#nomenclature)
   - [1.2 Supercell
-    core-hole (SCH)](#Supercell_core-hole_(SCH))
+    core-hole (SCH)](#supercell-core-hole-sch))
   - [1.3
     Bethe-Salpeter
-    equation](#Bethe-Salpeter_equation)
+    equation](#bethe-salpeter-equation)
   - [1.4 Comparing
-    BSE and SCH](#Comparing_BSE_and_SCH)
+    BSE and SCH](#comparing-bse-and-sch)
 - [2
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [3
-  References](#References)
+  References](#references)
 
 
 ## Theoretical background\[<a

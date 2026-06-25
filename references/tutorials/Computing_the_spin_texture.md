@@ -35,41 +35,41 @@ identified.
 
 
 - [1 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
   - [1.1 Step 1:
     Compute the self-consistent ground
-    state](#Step_1:_Compute_the_self-consistent_ground_state)
+    state](#step-1-compute-the-self-consistent-ground-state)
   - [1.2 Step 2:
     Compute the band structure and identify the Rashba-split
-    bands](#Step_2:_Compute_the_band_structure_and_identify_the_Rashba-split_bands)
+    bands](#step-2-compute-the-band-structure-and-identify-the-rashba-split-bands)
   - [1.3 Step 3:
     Choose the **k** plane from the crystal
-    symmetry](#Step_3:_Choose_the_k_plane_from_the_crystal_symmetry)
+    symmetry](#step-3-choose-the-k-plane-from-the-crystal-symmetry)
   - [1.4 Step 4:
     Run the non-self-consistent calculation on the planar
-    mesh](#Step_4:_Run_the_non-self-consistent_calculation_on_the_planar_mesh)
+    mesh](#step-4-run-the-non-self-consistent-calculation-on-the-planar-mesh)
   - [1.5 Step 5:
     Plot the spin texture with
-    py4vasp](#Step_5:_Plot_the_spin_texture_with_py4vasp)
+    py4vasp](#step-5-plot-the-spin-texture-with-py4vasp)
 - [2
-  Troubleshooting](#Troubleshooting)
+  Troubleshooting](#troubleshooting)
   - [2.1 Probe
     explicit **k** points near the
-    center](#Probe_explicit_k_points_near_the_center)
+    center](#probe-explicit-k-points-near-the-center)
 - [3 Symmetry
   requirements and cell
-  orientation](#Symmetry_requirements_and_cell_orientation)
+  orientation](#symmetry-requirements-and-cell-orientation)
   - [3.1 Which
     symmetry allows a spin
-    texture](#Which_symmetry_allows_a_spin_texture)
+    texture](#which-symmetry-allows-a-spin-texture)
   - [3.2 Locating
     the axis and orienting the
-    cell](#Locating_the_axis_and_orienting_the_cell)
+    cell](#locating-the-axis-and-orienting-the-cell)
 - [4
   Recommendations and
-  advice](#Recommendations_and_advice)
+  advice](#recommendations-and-advice)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Step-by-step instructions\[<a
@@ -179,7 +179,7 @@ center.
 For how to find that axis for your crystal from its symmetry, and what
 to do when the cell is not oriented with the axis along a Cartesian
 direction, see [Symmetry requirements and cell
-orientation](#Symmetry_requirements_and_cell_orientation) below.
+orientation](#symmetry-requirements-and-cell-orientation) below.
 
 ### Step 4: Run the non-self-consistent calculation on the planar mesh\[<a
 href="/wiki/index.php?title=Computing_the_spin_texture&amp;veaction=edit&amp;section=5"
@@ -313,7 +313,7 @@ $\pm x$ and $\pm y$:
 
 Set the third component so that the points lie on the plane of the
 extremum, as in Step 4, and mind the Cartesian-unit caveat noted under
-[Recommendations](#Recommendations_and_advice). Run this with the same
+[Recommendations](#recommendations-and-advice). Run this with the same
 restart [INCAR](../input-files/INCAR.md) as Step 4.
 
 Then read the spin components and print one of them for the band of
@@ -423,7 +423,7 @@ Two points therefore need checking:
   pair of in-plane components. This concerns the orientation of the
   real-space cell, which is separate from the units of an explicit
   `Cartesian` [KPOINTS](../input-files/KPOINTS.md) list discussed under
-  [Recommendations and advice](#Recommendations_and_advice).
+  [Recommendations and advice](#recommendations-and-advice).
 
 As an example, BiTeI is trigonal (space group
 $P3m1$, point group $C_{3v}$), so

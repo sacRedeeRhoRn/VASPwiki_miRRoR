@@ -30,18 +30,18 @@ band, otherwise, a warning is given.
 
 
 - [1 Electronic
-  minimization](#Electronic_minimization)
+  minimization](#electronic-minimization)
 - [2 Many-body
   perturbation theory
-  calculations](#Many-body_perturbation_theory_calculations)
+  calculations](#many-body-perturbation-theory-calculations)
 - [3
-  Parallelization](#Parallelization)
+  Parallelization](#parallelization)
 - [4 Spin-polarized
-  calculation](#Spin-polarized_calculation)
+  calculation](#spin-polarized-calculation)
 - [5 Noncollinear
-  calculation](#Noncollinear_calculation)
+  calculation](#noncollinear-calculation)
 - [6 Related tags
-  and article](#Related_tags_and_article)
+  and article](#related-tags-and-article)
 
 
 #### Electronic minimization\[<a href="/wiki/index.php?title=NBANDS&amp;veaction=edit&amp;section=1"

@@ -43,22 +43,22 @@ issues](../misc/Known_issues.md).
 
 
 - [1 Projection
-  methods](#Projection_methods)
+  methods](#projection-methods)
   - [1.1 For LORBIT
     \< 10](#For_LORBIT_%3C_10)
   - [1.2 For LORBIT
     \>= 10](#For_LORBIT_%3E=_10)
   - [1.3 Phase
-    factors](#Phase_factors)
+    factors](#phase-factors)
 - [2 On-site
   partial charge densities and
-  magnetization](#On-site_partial_charge_densities_and_magnetization)
+  magnetization](#on-site-partial-charge-densities-and-magnetization)
 - [3 Partial
-  density of states (pDOS)](#Partial_density_of_states_(pDOS))
+  density of states (pDOS)](#partial-density-of-states-pdos))
 - [4
-  References](#References)
+  References](#references)
 - [5 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Projection methods\[<a href="/wiki/index.php?title=LORBIT&amp;veaction=edit&amp;section=1"

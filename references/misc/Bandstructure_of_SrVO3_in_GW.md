@@ -23,32 +23,32 @@ RPA](Equilibrium_volume_of_Si_in_the_RPA.md) \>
 
 
 - [1
-  Task](#Task)
+  Task](#task)
 - [2 DFT
-  groundstate calculation](#DFT_groundstate_calculation)
+  groundstate calculation](#dft-groundstate-calculation)
 - [3 Obtain DFT
   virtual orbitals and long-wave
-  limit](#Obtain_DFT_virtual_orbitals_and_long-wave_limit)
+  limit](#obtain-dft-virtual-orbitals-and-long-wave-limit)
   - [3.1 The
-    dielectric function](#The_dielectric_function)
+    dielectric function](#the-dielectric-function)
 - [4 GW
-  Step](#GW_Step)
+  Step](#gw-step)
 - [5 HSE hybrid
-  functional](#HSE_hybrid_functional)
+  functional](#hse-hybrid-functional)
 - [6
   Post-processing: Density of states and
   Bandstructure for PBE, GW and
-  HSE](#Post-processing:_Density_of_states_and_Bandstructure_for_PBE,_GW_and_HSE)
+  HSE](#post-processing-density-of-states-and-bandstructure-for-pbe-gw-and-hse)
   - [6.1 Density of
-    States](#Density_of_States)
+    States](#density-of-states)
   - [6.2
     Bandstructure with
-    wannier90](#Bandstructure_with_wannier90)
+    wannier90](#bandstructure-with-wannier90)
   - [6.3 The
     preferred way to calculate the PBE
-    bandstructure](#The_preferred_way_to_calculate_the_PBE_bandstructure)
+    bandstructure](#the-preferred-way-to-calculate-the-pbe-bandstructure)
 - [7
-  Download](#Download)
+  Download](#download)
 
 
 ## Task\[<a

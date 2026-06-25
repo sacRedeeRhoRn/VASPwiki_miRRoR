@@ -35,46 +35,46 @@ substantial amount of code has been optimized for the specific vendors.
 
 
 - [1
-  Requirements](#Requirements)
+  Requirements](#requirements)
   - [1.1 Software
-    stacks](#Software_stacks)
+    stacks](#software-stacks)
     - [1.1.1 NVIDIA
-      GPUs](#NVIDIA_GPUs)
+      GPUs](#nvidia-gpus)
     - [1.1.2 AMD
-      GPUs](#AMD_GPUs)
+      GPUs](#amd-gpus)
     - [1.1.3 Intel
-      GPUs](#Intel_GPUs)
+      GPUs](#intel-gpus)
   - [1.2
-    Hardware](#Hardware)
+    Hardware](#hardware)
     - [1.2.1 NVIDIA
-      GPUs](#NVIDIA_GPUs_2)
+      GPUs](#nvidia-gpus-1)
     - [1.2.2 AMD
-      GPUs](#AMD_GPUs_2)
+      GPUs](#amd-gpus-1)
     - [1.2.3 Intel
-      GPUs](#Intel_GPUs_2)
+      GPUs](#intel-gpus-1)
 - [2
-  Building](#Building)
+  Building](#building)
 - [3 Features and
-  limitations](#Features_and_limitations)
+  limitations](#features-and-limitations)
 - [4 Running the
-  GPU versions](#Running_the_GPU_versions)
+  GPU versions](#running-the-gpu-versions)
   - [4.1
     Environment
-    variables](#Environment_variables)
+    variables](#environment-variables)
     - [4.1.1
-      MPI](#MPI)
+      MPI](#mpi)
     - [4.1.2 OpenMP
-      Offloading](#OpenMP_Offloading)
+      Offloading](#openmp-offloading)
       - [4.1.2.1
-        AMD](#AMD)
+        AMD](#amd)
       - [4.1.2.2
-        Intel](#Intel)
+        Intel](#intel)
 - [5
-  Credits](#Credits)
+  Credits](#credits)
 - [6 Related
-  articles](#Related_articles)
+  articles](#related-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Requirements\[<a

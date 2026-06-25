@@ -26,13 +26,13 @@ and possible pitfalls.
 
 
 - [1 Required
-  quantities](#Required_quantities)
+  quantities](#required-quantities)
 - [2 Step-by-step
-  instructions](#Step-by-step_instructions)
+  instructions](#step-by-step-instructions)
 - [3
-  Example](#Example)
+  Example](#example)
 - [4 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 
 
 ## Required quantities\[<a

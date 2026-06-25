@@ -26,19 +26,19 @@ algorithm to optimize the orbitals.
 
 
 - [1 Conjugate
-  gradient algorithms](#Conjugate_gradient_algorithms)
+  gradient algorithms](#conjugate-gradient-algorithms)
 - [2 The
-  blocked-Davidson scheme](#The_blocked-Davidson_scheme)
+  blocked-Davidson scheme](#the-blocked-davidson-scheme)
 - [3
-  RMM-DIIS](#RMM-DIIS)
+  RMM-DIIS](#rmm-diis)
 - [4 Direct
-  optimization](#Direct_optimization)
+  optimization](#direct-optimization)
 - [5
-  Miscellaneous](#Miscellaneous)
+  Miscellaneous](#miscellaneous)
 - [6 Related tags
-  and articles](#Related_tags_and_articles)
+  and articles](#related-tags-and-articles)
 - [7
-  References](#References)
+  References](#references)
 
 
 ## Conjugate gradient algorithms\[<a href="/wiki/index.php?title=IALGO&amp;veaction=edit&amp;section=1"

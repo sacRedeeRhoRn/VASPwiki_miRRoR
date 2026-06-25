@@ -9,28 +9,28 @@
 
 
 - [1
-  Lectures](#Lectures)
+  Lectures](#lectures)
 - [2 Allocating
   Computing Nodes and Environment
-  Setup](#Allocating_Computing_Nodes_and_Environment_Setup)
+  Setup](#allocating-computing-nodes-and-environment-setup)
 - [3 Submitting
-  jobs](#Submitting_jobs)
+  jobs](#submitting-jobs)
 - [4 Install sumo
-  for post processing](#Install_sumo_for_post_processing)
+  for post processing](#install-sumo-for-post-processing)
 - [5
-  Tutorials](#Tutorials)
+  Tutorials](#tutorials)
 - [6 Further
-  Examples](#Further_Examples)
+  Examples](#further-examples)
   - [6.1
     Optimisation in the
-    bulk](#Optimisation_in_the_bulk)
+    bulk](#optimisation-in-the-bulk)
   - [6.2 Nudge
     Elastic Band Method and (constrained) Molecular
     Dynamics](#Nudge_Elastic_Band_Method_and_(constrained)_Molecular_Dynamics)
   - [6.3 Magnetism
-    in NiO](#Magnetism_in_NiO)
+    in NiO](#magnetism-in-nio)
   - [6.4 Surfaces
-    and Interfaces](#Surfaces_and_Interfaces)
+    and Interfaces](#surfaces-and-interfaces)
 
 
 ## Lectures\[<a

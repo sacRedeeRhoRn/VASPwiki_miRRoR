@@ -32,15 +32,15 @@ a LAMMPS script.
 
 
 - [1 Building
-  LAMMPS with VASPml patch](#Building_LAMMPS_with_VASPml_patch)
+  LAMMPS with VASPml patch](#building-lammps-with-vaspml-patch)
   - [1.1 Using
     traditional make (only for VASP
-    6.5.X)](#Using_traditional_make_(only_for_VASP_6.5.X))
+    6.5.X)](#using-traditional-make-only-for-vasp-65x))
   - [1.2 Using
     CMake (VASP 6.6.0 and
-    later)](#Using_CMake_(VASP_6.6.0_and_later))
+    later)](#using-cmake-vasp-660-and-later))
 - [2 Setting up a
-  LAMMPS MD run](#Setting_up_a_LAMMPS_MD_run)
+  LAMMPS MD run](#setting-up-a-lammps-md-run)
 
 
 # Building LAMMPS with VASPml patch\[<a
