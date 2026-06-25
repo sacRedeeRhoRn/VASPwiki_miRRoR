@@ -59,7 +59,7 @@ calculations](../categories/Category-Band_structure.md)
 generally compute the Kohn-Sham orbitals and eigenenergies along a path
 in reciprocal space which usually connects high-symmetry points in the
 first Brillouin zone. Some external
-tools<sup>[\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2)</sup>
+tools[^bilbao:kvec-1][^seekpath-2]
 help to identify the high-symmetry points and **k** points along a
 high-symmetry path for materials of any symmetry.
 
@@ -294,14 +294,5 @@ href="/wiki/index.php?title=Band-structure_calculation_using_hybrid_functionals&
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-bilbao:kvec_1-0)
-    <a href="https://www.cryst.ehu.es/cryst/get_kvec.html"
-    class="external text"
-    rel="nofollow">www.cryst.ehu.es/cryst/get_kvec.html (2022).</a>
-2.  [↑](#cite_ref-seekpath_2-0)
-    <a href="https://www.materialscloud.org/work/tools/seekpath"
-    class="external text"
-    rel="nofollow">www.materialscloud.org/work/tools/seekpath (2022).</a>
-
-
+[^bilbao:kvec-1]: [www.cryst.ehu.es/cryst/get_kvec.html (2022).](https://www.cryst.ehu.es/cryst/get_kvec.html)
+[^seekpath-2]: [www.materialscloud.org/work/tools/seekpath (2022).](https://www.materialscloud.org/work/tools/seekpath)

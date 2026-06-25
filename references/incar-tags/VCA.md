@@ -50,14 +50,14 @@ If VCA is set to
 
 the Ge atoms are weighted with a weight of 0.99, whereas the Sn atoms
 are weighted by 0.01 (see
-<sup>[\[1\]](#cite_note-eckhardt:prb:2014-1)</sup>
+[^eckhardt:prb:2014-1]
 for an example application). The implementation in VASP closely follows
 the methodology suggested by Bellaiche and Vanderbilt
-<sup>[\[2\]](#cite_note-bellaiche:prb:2000-2)</sup>.
+[^bellaiche:prb:2000-2].
 
 |  |
 |----|
-| **Important:** Caveats: Unfortunately, results of this kind of VCA calculations are often not very reliable. The problems are even apparent in the original publications <sup>[\[2\]](#cite_note-bellaiche:prb:2000-2)</sup>. The key point is that the used PAW potentials need to be constructed so that the pseudo atomic waves are very similar for the potentials that are "mixed" (in the example above, this would be the Ge and Sn potentials). This can be achieved by carefully optimizing the radial cutoffs. Furthermore, the local potentials of the two [POTCAR](../input-files/POTCAR.md) files need to be very similar. This means that results for many standard potentials are not accurate. For instance, Vegard's law is often not even approximately observed (instead, the volume is too large at 50 % mixing). The problem is particularly severe if semi-core states are treated as valence states. For instance, for the Ge and Sn alloy, the d electrons had to be treated as core electrons to obtain reasonable results. Any attempts to treat the d electrons as valence states lead to grossly incorrect results. |
+| **Important:** Caveats: Unfortunately, results of this kind of VCA calculations are often not very reliable. The problems are even apparent in the original publications [^bellaiche:prb:2000-2]. The key point is that the used PAW potentials need to be constructed so that the pseudo atomic waves are very similar for the potentials that are "mixed" (in the example above, this would be the Ge and Sn potentials). This can be achieved by carefully optimizing the radial cutoffs. Furthermore, the local potentials of the two [POTCAR](../input-files/POTCAR.md) files need to be very similar. This means that results for many standard potentials are not accurate. For instance, Vegard's law is often not even approximately observed (instead, the volume is too large at 50 % mixing). The problem is particularly severe if semi-core states are treated as valence states. For instance, for the Ge and Sn alloy, the d electrons had to be treated as core electrons to obtain reasonable results. Any attempts to treat the d electrons as valence states lead to grossly incorrect results. |
 
 |  |
 |----|
@@ -74,16 +74,5 @@ class="new" title="LVCADER (page does not exist)">LVCADER</a>
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-eckhardt:prb:2014_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.89.165201"
-    class="external text" rel="nofollow">C. Eckhardt , K. Hummer, and G.
-    Kresse, Phys. Rev. B <strong>89</strong>, 165201 (2014).</a>
-2.  ↑
-    <sup>[a](#cite_ref-bellaiche:prb:2000_2-0)</sup>
-    <sup>[b](#cite_ref-bellaiche:prb:2000_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.61.7877" class="external text"
-    rel="nofollow">L. Bellaiche and D. Vanderbilt, Phys. Rev. B
-    <strong>61</strong>, 7877 (2000).</a>
-
-
+[^eckhardt:prb:2014-1]: [C. Eckhardt , K. Hummer, and G. Kresse, Phys. Rev. B **89**, 165201 (2014).](https://doi.org/10.1103/PhysRevB.89.165201)
+[^bellaiche:prb:2000-2]: [L. Bellaiche and D. Vanderbilt, Phys. Rev. B **61**, 7877 (2000).](https://doi.org/10.1103/PhysRevB.61.7877)

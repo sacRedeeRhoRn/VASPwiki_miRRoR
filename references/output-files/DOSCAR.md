@@ -47,9 +47,9 @@ This method conserves the total number of electrons exactly. For the
 tetrahedron method ([ISMEAR](../incar-tags/ISMEAR.md)=-4 or -5), the total
 integrated DOS is computed using the formulas in Appendix A and B of
 Bloechl's paper
-<sup>[\[1\]](#cite_note-bloechl:prb:1994-1)</sup>
+[^bloechl:prb:1994-1]
 and the DOS using the formulas from Appendix C
-<sup>[\[1\]](#cite_note-bloechl:prb:1994-1)</sup>.
+[^bloechl:prb:1994-1].
 In this case, it is not guaranteed that integrating the DOS will
 conserve the number of electrons. This can however be systematically
 improved by increasing [NEDOS](../incar-tags/NEDOS.md).
@@ -121,12 +121,4 @@ is not equal 1 (contrary to previous releases).
 
 ------------------------------------------------------------------------
 
-
-1.  ↑
-    <sup>[a](#cite_ref-bloechl:prb:1994_1-0)</sup>
-    <sup>[b](#cite_ref-bloechl:prb:1994_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.49.16223"
-    class="external text" rel="nofollow">P.E. Blöchl, O. Jepsen, and O.K.
-    Andersen, Phys. Rev. B <strong>49</strong>, 16223 (1994).</a>
-
-
+[^bloechl:prb:1994-1]: [P.E. Blöchl, O. Jepsen, and O.K. Andersen, Phys. Rev. B **49**, 16223 (1994).](https://doi.org/10.1103/PhysRevB.49.16223)

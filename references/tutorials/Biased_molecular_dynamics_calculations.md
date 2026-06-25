@@ -132,7 +132,7 @@ every MD step at a constant rate defined via the
 
 This form of bias potential is employed in several simulation protocols,
 such as the umbrella
-sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>,
+sampling[^torrie:jcp:1977-1],
 umbrella integration, or steered MD, and is useful also in cases where
 the $\xi_{\mu}$
 values need to be restrained.
@@ -317,10 +317,4 @@ href="/wiki/index.php?title=Biased_molecular_dynamics_calculations&amp;veaction=
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-torrie:jcp:1977_1-0)
-    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
-    class="external text" rel="nofollow">G. M. Torrie and J. P. Valleau, J.
-    Comp. Phys. <strong>23</strong>, 187 (1977).</a>
-
-
+[^torrie:jcp:1977-1]: [G. M. Torrie and J. P. Valleau, J. Comp. Phys. **23**, 187 (1977).](http://doi.org/10.1016/0021-9991(77)90121-8)

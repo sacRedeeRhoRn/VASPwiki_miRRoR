@@ -134,19 +134,19 @@ title="Edit section: In case of complex coordinates">edit</a> \| (./index.php.md
 - `flag` = C: norm of the vector of primitive coordinates, which reads
   $\left( \xi=\sqrt{\sum_{i=1}^{M} \\(c_i\\q_i)^2} \right)$.
 - `flag` = D: coordination
-  number<sup>[\[1\]](#cite_note-1)</sup>,
+  number[^1],
   i.e., $\left( \xi=\sum_{i=1}^{M}
   \frac{1-\left(q_{i}/c_{i}\right)^9}{1-\left(q_{i}/c_{i}\right)^{14}}
   \right)$.
 - `flag` = IS: path-based
-  coordinate<sup>[\[2\]](#cite_note-branduardi:jcp:07-2)</sup>
+  coordinate[^branduardi:jcp:07-2]
   measuring progress along discretized path represented by
   $N$ points $\tilde{q}(j)$ predefined in file [IRCCAR](IRCCAR.md),
   i.e., $\xi=\frac{1}{N-1}\frac{\sum_{i=1}^{N}(i-1)\exp\left(-\sum_{j=1}^{M}c_{j}(q_{j}-\tilde{q}_{j}(i))^2
   \right) }{\sum_{i=1}^{N}
   \exp\left(-\sum_{j=1}^{M}c_{j}(q_{j}-\tilde{q}_{j}(i))^2 \right)}$
 - `flag` = IZ: path-based
-  coordinate<sup>[\[2\]](#cite_note-branduardi:jcp:07-2)</sup>
+  coordinate[^branduardi:jcp:07-2]
   measuring orthogonal distance from the path
   $\tilde{q}$ predefined in file
   [IRCCAR](IRCCAR.md), i.e., $\xi=-\frac{1}{c_1} \log
@@ -341,17 +341,5 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-1)
-    <a
-    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.238302"
-    class="external text" rel="nofollow">M. Iannuzzi, A. Laio, M.
-    Parrinello, Phys. Rev. Lett. 90, 238302 (2003)</a>
-2.  ↑
-    <sup>[a](#cite_ref-branduardi:jcp:07_2-0)</sup>
-    <sup>[b](#cite_ref-branduardi:jcp:07_2-1)</sup>
-    <a href="https://aip.scitation.org/doi/abs/10.1063/1.2432340"
-    class="external text" rel="nofollow">D. Branduardi, F. L. Gervasio, M.
-    Parinello, J. Chem. Phys. 126, 54103 (2007)</a>
-
-
+[^1]: [M. Iannuzzi, A. Laio, M. Parrinello, Phys. Rev. Lett. 90, 238302 (2003)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.238302)
+[^branduardi:jcp:07-2]: [D. Branduardi, F. L. Gervasio, M. Parinello, J. Chem. Phys. 126, 54103 (2007)](https://aip.scitation.org/doi/abs/10.1063/1.2432340)

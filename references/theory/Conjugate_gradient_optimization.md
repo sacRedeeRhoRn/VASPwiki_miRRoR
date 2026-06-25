@@ -20,29 +20,14 @@ href="/wiki/index.php?title=Efficient_single_band_eigenvalue-minimization&amp;ac
 class="new"
 title="Efficient single band eigenvalue-minimization (page does not exist)">Efficient
 single band eigenvalue-minimization</a>. For further reading see
-<sup>[\[1\]](#cite_note-teter:prb:1989-1)[\[2\]](#cite_note-bylander:prb:1990-2)[\[3\]](#cite_note-press:book:1986-3)</sup>.
+[^teter:prb:1989-1][^bylander:prb:1990-2][^press:book:1986-3].
 
 ## References\[<a
 href="/wiki/index.php?title=Conjugate_gradient_optimization&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-teter:prb:1989_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.40.12255"
-    class="external text" rel="nofollow">M. P. Teter, M. C. Payne, and D. C.
-    Allan, Phys. Rev. B <strong>40</strong>, 12255 (1989).</a>
-2.  [↑](#cite_ref-bylander:prb:1990_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.42.1394" class="external text"
-    rel="nofollow">D. M. Bylander, L. Kleinman, and S. Lee, Phys Rev. B
-    <strong>42</strong>, 1394 (1990).</a>
-3.  [↑](#cite_ref-press:book:1986_3-0)
-    <a href="https://archive.org/details/numericalrecipes00pres"
-    class="external text" rel="nofollow">W. H. Press, B. P. Flannery, S. A.
-    Teukolsky, and W. T. Vetterling, em Numerical Recipes (Cambridge
-    University Press, New York, 1986).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^teter:prb:1989-1]: [M. P. Teter, M. C. Payne, and D. C. Allan, Phys. Rev. B **40**, 12255 (1989).](https://doi.org/10.1103/PhysRevB.40.12255)
+[^bylander:prb:1990-2]: [D. M. Bylander, L. Kleinman, and S. Lee, Phys Rev. B **42**, 1394 (1990).](https://doi.org/10.1103/PhysRevB.42.1394)
+[^press:book:1986-3]: [W. H. Press, B. P. Flannery, S. A. Teukolsky, and W. T. Vetterling, em Numerical Recipes (Cambridge University Press, New York, 1986).](https://archive.org/details/numericalrecipes00pres)

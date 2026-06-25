@@ -19,7 +19,7 @@ dynamics (MD) simulations to be performed with e.g. different
 files or different exchange-correlation functionals, and averages the
 energies and forces between the two calculations. This is known as
 thermodynamic integration (TI)
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+[^dorner:PRL:2018-1].
 
 The tag VCAIMAGES internally
 splits the available nodes into two groups, and each group then performs
@@ -111,7 +111,7 @@ cores.</p></td>
 
 The usage of this tag is also explained in the supplementary information
 of reference
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+[^dorner:PRL:2018-1].
 
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=VCAIMAGES&amp;veaction=edit&amp;section=3"
@@ -128,12 +128,4 @@ href="/wiki/index.php?title=VCAIMAGES&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-dorner:PRL:2018_1-0)</sup>
-    <sup>[b](#cite_ref-dorner:PRL:2018_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.121.195701"
-    class="external text" rel="nofollow">F. Dorner, Z. Sukurma, C. Dellago,
-    and G. Kresse, Phys. Rev. Lett. <strong>121</strong>, 195701 (2018).</a>
-
-
+[^dorner:PRL:2018-1]: [F. Dorner, Z. Sukurma, C. Dellago, and G. Kresse, Phys. Rev. Lett. **121**, 195701 (2018).](https://doi.org/10.1103/PhysRevLett.121.195701)

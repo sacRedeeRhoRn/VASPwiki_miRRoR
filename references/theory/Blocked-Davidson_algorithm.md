@@ -6,7 +6,7 @@
 
 The workflow of the blocked-Davidson iterative matrix diagonalization
 scheme implemented in VASP is as
-follows:<sup>[\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2)</sup>
+follows:[^kresse:cms:1996-1][^kresse:prb:96-2]
 
 - Take a subset (block) of $n_1$
   orbitals out of the total set of [NBANDS](../incar-tags/NBANDS.md)
@@ -103,18 +103,7 @@ than the [RMM-DIIS](RMM-DIIS.md), but more robust.
 href="/wiki/index.php?title=Blocked-Davidson_algorithm&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-kresse:cms:1996_1-0)
-    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
-    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
-2.  [↑](#cite_ref-kresse:prb:96_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.54.11169"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Phys.
-    Rev. B <strong>54</strong>, 11169 (1996).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kresse:cms:1996-1]: [G. Kresse and J. Furthmüller, Comp. Mater. Sci. **6**, 15 (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
+[^kresse:prb:96-2]: [G. Kresse and J. Furthmüller, Phys. Rev. B **54**, 11169 (1996).](https://doi.org/10.1103/PhysRevB.54.11169)

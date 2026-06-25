@@ -25,7 +25,7 @@ algorithm. It is based on the work: "Toward a Universal Random Number
 Generator" by George Marsaglia and Arif Zaman. Florida State University
 Report: FSU-SCRI-87-50 (1987) and was later modified by F. James and
 publisheed
-<sup>[\[1\]](#cite_note-james:rpng:1990-1)</sup>.
+[^james:rpng:1990-1].
 This algorithm is programmed in serial, not utilizing any threading or
 parallelism. For normal system the time to initialize wave functions is
 negligible, but for large systems with many bands
@@ -60,10 +60,4 @@ href="/wiki/index.php?title=RANDOM_GENERATOR&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-james:rpng:1990_1-0)
-    <a href="https://doi.org/10.1016/0010-4655(90)90032-V"
-    class="external text" rel="nofollow">F. James, Computer Physics Comm.
-    <strong>49</strong>, 329 (1990).</a>
-
-
+[^james:rpng:1990-1]: [F. James, Computer Physics Comm. **49**, 329 (1990).](https://doi.org/10.1016/0010-4655(90)90032-V)

@@ -27,7 +27,7 @@ title="Molecular dynamics">molecular-dynamics calculations</a> within
 the [NpT ensemble](../misc/NpT_ensemble.md),
 PSTRESS controls the target
 pressure for the
-Parinello-Rahman<sup>[\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2)</sup>
+Parinello-Rahman[^parrinello:prl:1980-1][^parrinello:jap:1981-2]
 barostat.
 
 Generally, if a negative value is supplied, the system is under
@@ -55,14 +55,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-PSTRESS-_incategory-Examples
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-parrinello:prl:1980_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.45.1196"
-    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
-    Rev. Lett. <strong>45</strong>, 1196 (1980).</a>
-2.  [↑](#cite_ref-parrinello:jap:1981_2-0)
-    <a href="https://doi.org/10.1063/1.328693" class="external text"
-    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys.
-    <strong>52</strong>, 7182 (1981).</a>
-
-
+[^parrinello:prl:1980-1]: [M. Parrinello and A. Rahman, Phys. Rev. Lett. **45**, 1196 (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
+[^parrinello:jap:1981-2]: [M. Parrinello and A. Rahman, J. Appl. Phys. **52**, 7182 (1981).](https://doi.org/10.1063/1.328693)

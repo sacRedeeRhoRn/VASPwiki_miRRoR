@@ -46,22 +46,22 @@ $\Delta \mathbf{P}= \frac{1}{\Omega_{0}} \int_{\Omega_{0}} \mathbf{r}
 
 without introducing a dependency on the shape of Ω<sub>0</sub>, the
 chosen unit
-cell.<sup>[\[1\]](#cite_note-Vogl78-1)</sup>
+cell.[^Vogl78-1]
 
 Recently King-Smith and
-Vanderbilt<sup>[\[2\]](#cite_note-Vanderbilt93I-2)</sup>,
+Vanderbilt[^Vanderbilt93I-2],
 building on the work of
-Resta<sup>[\[3\]](#cite_note-Resta92-3)</sup>,
+Resta[^Resta92-3],
 showed that the electronic contribution to the difference in
 polarization Δ**P**<sub>e</sub>, due to a finite adiabatic change in the
 Hamiltonian of a system, can be identified as a *geometric quantum
 phase* or *Berry phase* of the valence wave functions. We will briefly
 summarize the essential results (for a review of geometric quantum
 phases in polarization theory see the papers of
-Resta<sup>[\[4\]](#cite_note-Resta94-4)[\[5\]](#cite_note-Resta96-5)</sup>).
+Resta[^Resta94-4][^Resta96-5]).
 
 Central to the modern theory of polarization is the proposition of
-Resta<sup>[\[3\]](#cite_note-Resta92-3)</sup>
+Resta[^Resta92-3]
 to write the electronic contribution to the change in polarization due
 to a finite adiabatic change in the Kohn-Sham Hamiltonian of the
 crystalline solid, as
@@ -96,7 +96,7 @@ where λ parameterizes some change in this potential, for instance due to
 the displacement of an atom in the unit cell.
 
 King-Smith and
-Vanderbilt<sup>[\[2\]](#cite_note-Vanderbilt93I-2)</sup>
+Vanderbilt[^Vanderbilt93I-2]
 have cast this expression in a form in which the conduction band states
 ψ<sup>(λ)</sup><sub>m**k**</sub> no longer explicitly appear, and they
 show that [the change in polarization](#PolarizationChange1) along an
@@ -208,12 +208,12 @@ where the lattice vectors **R**<sub>i</sub> obey the relationship
 The integration over *A* in [the above](#Polarization2), is
 straightforward and can be performed by sampling a 2D Monkhorst-Pack
 mesh of
-*k*-points,<sup>[\[6\]](#cite_note-MonkhorstPack-6)</sup>
+*k*-points,[^MonkhorstPack-6]
 termed the *perpendicular mesh* or **k**<sub>⊥</sub>-mesh by King-Smith
 and Vanderbilt. However, to remove the influence of the random phase of
 the functions u<sup>(λ)</sup><sub>n**k**</sub>, introduced by the
 diagonalization routine, King-Smith and
-Vanderbilt<sup>[\[2\]](#cite_note-Vanderbilt93I-2)</sup>
+Vanderbilt[^Vanderbilt93I-2]
 propose to replace the line integral alias integration in the *parallel*
 or **G**<sub>\|\|</sub> direction by,
 
@@ -303,9 +303,9 @@ As of version 5.2, VASP can calculate the ground state of an insulating
 system under the application of a finite homogeneous electric field. The
 VASP implementation closely follows the *PEAD* (Perturbation Expression
 After Discretization) approach of Nunes and
-Gonze<sup>[\[7\]](#cite_note-nunes:prb:01-7)</sup>
+Gonze[^nunes:prb:01-7]
 and the work of Souza *et
-al.*.<sup>[\[8\]](#cite_note-souza:prl:02-8)</sup>
+al.*.[^souza:prl:02-8]
 
 In short: to determine the ground state of an insulating system under
 the application of a finite homogeneous electric field
@@ -349,7 +349,7 @@ E})}_{n\mathbf{k}}\rangle -\Omega {\mathcal E}\cdot \frac{\delta
 \psi^{({\mathcal E})}_{n\mathbf{k}}|}.$
 
 Following the work of Nunes and
-Gonze<sup>[\[7\]](#cite_note-nunes:prb:01-7)</sup>
+Gonze[^nunes:prb:01-7]
 we write,
 
 $\frac{\delta \mathbf{P}\left\[\\\psi^{({\mathcal E})} \\\right\]}{\delta
@@ -385,13 +385,13 @@ S^{-1}_{mn}(\mathbf{k}_j,\mathbf{k}_{j-1})\right\]$
 
 in the sense of a first-order finite difference scheme (higher-order
 stencils may be similarly
-defined).<sup>[\[7\]](#cite_note-nunes:prb:01-7)</sup>
+defined).[^nunes:prb:01-7]
 
 **Note**: One should be aware that when the electric field is chosen to
 be too large, the electric enthalpy functional will lose its minima, and
 VASP will not be able to find a stationary solution for the
 field-polarized orbitals. This is discussed in some detail by Souza *et
-al.*.<sup>[\[8\]](#cite_note-souza:prl:02-8)</sup>
+al.*.[^souza:prl:02-8]
 VASP will produce a warning if:
 
 $e|\mathcal{E}\cdot \mathbf{a}_i|>\frac{1}{10}E_{\mathrm{gap}}/N_i,$
@@ -449,52 +449,13 @@ title="Edit section: Related Tags and Sections">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=Berry_phases_and_finite_electric_fields&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Vogl78_1-0)
-    <a href="http://dx.doi.org/10.1088/0022-3719/11/2/011"
-    class="external text" rel="nofollow">P. Vogl, J. Phys. C: Solid State
-    Phys. 11, 251 (1978).</a>
-2.  ↑
-    <sup>[a](#cite_ref-Vanderbilt93I_2-0)</sup>
-    <sup>[b](#cite_ref-Vanderbilt93I_2-1)</sup>
-    <sup>[c](#cite_ref-Vanderbilt93I_2-2)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.47.1651"
-    class="external text" rel="nofollow">R. D. King-Smith and D. Vanderbilt,
-    Phys. Rev. B 47, 1651 (1993).</a>
-3.  ↑
-    <sup>[a](#cite_ref-Resta92_3-0)</sup>
-    <sup>[b](#cite_ref-Resta92_3-1)</sup>
-    <a href="http://dx.doi.org/10.1080/00150199208016065"
-    class="external text" rel="nofollow">R. Resta, Ferroelectrics 136, 51
-    (1992).</a>
-4.  [↑](#cite_ref-Resta94_4-0)
-    <a href="http://link.aps.org/doi/10.1103/RevModPhys.66.899"
-    class="external text" rel="nofollow">R. Resta, Rev. Mod. Phys. 66, 899
-    (1994).</a>
-5.  [↑](#cite_ref-Resta96_5-0)
-    R. Resta, in *Berry Phase in Electronic
-    Wavefunctions*, Troisième Cycle de la Physique en Suisse Romande,
-    Année Academique 1995-96, (1996).
-6.  [↑](#cite_ref-MonkhorstPack_6-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.13.5188"
-    class="external text" rel="nofollow">H. J. Monkhorst and J. D. Pack,
-    Phys. Rev. B 13, 5188 (1976).</a>
-7.  ↑
-    <sup>[a](#cite_ref-nunes:prb:01_7-0)</sup>
-    <sup>[b](#cite_ref-nunes:prb:01_7-1)</sup>
-    <sup>[c](#cite_ref-nunes:prb:01_7-2)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.63.155107"
-    class="external text" rel="nofollow">R. W. Nunes and X. Gonze, Phys.
-    Rev. B 63, 155107 (2001).</a>
-8.  ↑
-    <sup>[a](#cite_ref-souza:prl:02_8-0)</sup>
-    <sup>[b](#cite_ref-souza:prl:02_8-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevLett.89.117602"
-    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Vogl78-1]: [P. Vogl, J. Phys. C: Solid State Phys. 11, 251 (1978).](http://dx.doi.org/10.1088/0022-3719/11/2/011)
+[^Vanderbilt93I-2]: [R. D. King-Smith and D. Vanderbilt, Phys. Rev. B 47, 1651 (1993).](http://link.aps.org/doi/10.1103/PhysRevB.47.1651)
+[^Resta92-3]: [R. Resta, Ferroelectrics 136, 51 (1992).](http://dx.doi.org/10.1080/00150199208016065)
+[^Resta94-4]: [R. Resta, Rev. Mod. Phys. 66, 899 (1994).](http://link.aps.org/doi/10.1103/RevModPhys.66.899)
+[^Resta96-5]: R. Resta, in *Berry Phase in Electronic Wavefunctions*, Troisième Cycle de la Physique en Suisse Romande, Année Academique 1995-96, (1996).
+[^MonkhorstPack-6]: [H. J. Monkhorst and J. D. Pack, Phys. Rev. B 13, 5188 (1976).](http://link.aps.org/doi/10.1103/PhysRevB.13.5188)
+[^nunes:prb:01-7]: [R. W. Nunes and X. Gonze, Phys. Rev. B 63, 155107 (2001).](http://link.aps.org/doi/10.1103/PhysRevB.63.155107)
+[^souza:prl:02-8]: [I. Souza, J. Íñiguez, and D. Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).](http://link.aps.org/doi/10.1103/PhysRevLett.89.117602)

@@ -19,7 +19,7 @@ however possible to switch to the computationally somewhat simpler
 transversal expressions by selecting
 LNABLA=.TRUE. (Eqs. 17 and 20
 in
-Ref.<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>).
+Ref.[^gajdos:prb:06-1]).
 In this simplification the imaginary part of the macroscopic dielectric
 function is given by
 
@@ -47,14 +47,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LNABLA-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LNABLA&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-gajdos:prb:06_1-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^gajdos:prb:06-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).](http://link.aps.org/doi/10.1103/PhysRevB.73.045112)

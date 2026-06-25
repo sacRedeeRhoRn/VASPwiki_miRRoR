@@ -102,7 +102,7 @@ title="Edit section: Calculation">edit</a> \| (./index.php.md)\]
 
 - In this example we will calculate and plot the first "bright" BSE
   eigenstates of silicon, also called
-  fatbands<sup>[\[1\]](#cite_note-bokdam:scr:6-1)</sup>.
+  fatbands[^bokdam:scr:6-1].
   In this tutorial the modelBSE setup from the previous tutorial is used
   in combination with a 10x10x10 gamma centered k-point grid (Note: This
   calculation takes ~ 50 min. on 16 cores, if you don't want to wait
@@ -271,14 +271,6 @@ title="Si BSEfatbands.tgz">Si_BSEfatbands.tgz</a>
 href="/wiki/index.php?title=Plotting_the_BSE_fatband_structure_of_Si&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-bokdam:scr:6_1-0)
-    <a href="https://www.nature.com/articles/srep28618"
-    class="external text" rel="nofollow">M.Bokdam et al., Scientific Reports
-    6, 28618 (2016).</a>
-
-
 [Overview](../tutorials/BSE_-_Tutorial.md) \>
 [Dielectric properties of Si using
 BSE](Dielectric_properties_of_Si_using_BSE.md) \>
@@ -289,4 +281,4 @@ Plotting the BSE fatband structure of
 Si \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^bokdam:scr:6-1]: [M.Bokdam et al., Scientific Reports 6, 28618 (2016).](https://www.nature.com/articles/srep28618)

@@ -176,7 +176,7 @@ Alternatively, it is possible to use the time-evolution algorithm which
 applies a short Dirac delta pulse of electric field and then follows the
 evolution of the dipole moments. The dielectric function is found via a
 Fourier transform
-<sup>[\[1\]](#cite_note-sander:jcp:2017-1)</sup>
+[^sander:jcp:2017-1]
 
 $\epsilon_M(\omega)=1-\frac{4\pi}{\Omega}\int_0^{\infty} \mathrm{d} t
 \sum_{c,v,\mathbf{k}}\left(\langle\mu_{cv\mathbf{k}}|
@@ -359,12 +359,4 @@ href="/wiki/index.php?title=Category:Bethe-Salpeter_equations&amp;veaction=edit&
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-sander:jcp:2017_1-0)
-    <a href="http://doi.org/10.1063/1.4975193" class="external text"
-    rel="nofollow">T. Sander, G. Kresse, <em>Macroscopic dielectric function
-    within time-dependent density functional theory—Real time evolution
-    versus the Casida approach</em> , J. Chem. Phys. <em>146</em>, 064110
-    (2017)</a>
-
-
+[^sander:jcp:2017-1]: [T. Sander, G. Kresse, *Macroscopic dielectric function within time-dependent density functional theory—Real time evolution versus the Casida approach* , J. Chem. Phys. *146*, 064110 (2017)](http://doi.org/10.1063/1.4975193)

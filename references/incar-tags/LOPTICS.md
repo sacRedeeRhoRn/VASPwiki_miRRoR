@@ -39,7 +39,7 @@ $\epsilon^{(1)}_{\alpha \beta} (\omega) = 1 + \frac{2}{ \pi} P
 
 where *P* denotes the principle value. The method is explained in detail
 in the paper by Gajdoš *et al.* (see Eqs. 15, 29, and
-30).<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>
+30).[^gajdos:prb:06-1]
 The complex shift η is determined by the parameter
 [CSHIFT](CSHIFT.md).
 
@@ -134,14 +134,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LOPTICS-_incategory-Examples
 ## References\[<a href="/wiki/index.php?title=LOPTICS&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-gajdos:prb:06_1-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^gajdos:prb:06-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).](http://link.aps.org/doi/10.1103/PhysRevB.73.045112)

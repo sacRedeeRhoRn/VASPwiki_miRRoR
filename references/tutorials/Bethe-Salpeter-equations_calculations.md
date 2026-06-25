@@ -5,7 +5,7 @@
 
 
 VASP offers a powerful module for solving the Bethe-Salpeter (BSE)
-equation<sup>[\[1\]](#cite_note-albrecht:prl:98-1)[\[2\]](#cite_note-rohlfing:prl:98-2)</sup>.
+equation[^albrecht:prl:98-1][^rohlfing:prl:98-2].
 The BSE can be used for obtaining the frequency-dependent dielectric
 function with the excitonic effects and can be based on the ground-state
 electronic structure in the DFT, hybrid-functional or *GW*
@@ -164,7 +164,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Model BSE (mBSE)">edit</a> \| (./index.php.md)")\]
 
 BSE calculations can be performed using a model dielectric
-function<sup>[\[3\]](#cite_note-bokdam:scr:2016-3)[\[4\]](#cite_note-tal:prr:2020-4)</sup>.
+function[^bokdam:scr:2016-3][^tal:prr:2020-4].
 In this approach the calculation of the screened Coulomb potential is
 not required. Instead, the model dielectric function can be used to
 describe the screening of the Coulomb potential by setting the tag
@@ -179,7 +179,7 @@ Model BSE calculation can be performed the following steps:
 
 For example, an optical absorption calculation of bulk Si can be
 performed using a model dielectric function as described in Ref.
-<sup>[\[4\]](#cite_note-tal:prr:2020-4)</sup>.
+[^tal:prr:2020-4].
 
     SYSTEM    = Si
     ISMEAR    = 0 
@@ -216,7 +216,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Calculations beyond Tamm-Dancoff approximation">edit</a> \| (./index.php.md)\]
 
 The TDHF and BSE calculations beyond the Tamm-Dancoff approximation
-(TDA)<sup>[\[5\]](#cite_note-sander:prb:15-5)</sup>
+(TDA)[^sander:prb:15-5]
 can be performed by setting the [ANTIRES](../incar-tags/ANTIRES.md) = 2
 in the [INCAR](../input-files/INCAR.md) file
 
@@ -414,38 +414,10 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=Bethe-Salpeter-equations_calculations&amp;veaction=edit&amp;section=12"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-albrecht:prl:98_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.80.4510"
-    class="external text" rel="nofollow">S. Albrecht, L. Reining, R. Del
-    Sole, and G. Onida, Phys. Rev. Lett. <strong>80</strong>, 4510-4513
-    (1998).</a>
-2.  [↑](#cite_ref-rohlfing:prl:98_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.81.2312"
-    class="external text" rel="nofollow">M. Rohlfing and S. G. Louie, Phys.
-    Rev. Lett. <strong>81</strong>, 2312-2315 (1998).</a>
-3.  [↑](#cite_ref-bokdam:scr:2016_3-0)
-    <a href="https://doi.org/10.1038/srep28618" class="external text"
-    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
-    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
-    (2016).</a>
-4.  ↑
-    <sup>[a](#cite_ref-tal:prr:2020_4-0)</sup>
-    <sup>[b](#cite_ref-tal:prr:2020_4-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevResearch.2.032019"
-    class="external text" rel="nofollow">A. Tal, P. Liu, G. Kresse, A.
-    Pasquarello, <em>Accurate optical spectra through time-dependent density
-    functional theory based on screening-dependent hybrid functionals</em>,
-    Phys. Rev. Research <em>2</em>, 032019 (2020)</a>
-5.  [↑](#cite_ref-sander:prb:15_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^albrecht:prl:98-1]: [S. Albrecht, L. Reining, R. Del Sole, and G. Onida, Phys. Rev. Lett. **80**, 4510-4513 (1998).](https://doi.org/10.1103/PhysRevLett.80.4510)
+[^rohlfing:prl:98-2]: [M. Rohlfing and S. G. Louie, Phys. Rev. Lett. **81**, 2312-2315 (1998).](https://doi.org/10.1103/PhysRevLett.81.2312)
+[^bokdam:scr:2016-3]: [M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci. Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)
+[^tal:prr:2020-4]: [A. Tal, P. Liu, G. Kresse, A. Pasquarello, *Accurate optical spectra through time-dependent density functional theory based on screening-dependent hybrid functionals*, Phys. Rev. Research *2*, 032019 (2020)](http://doi.org/10.1103/PhysRevResearch.2.032019)
+[^sander:prb:15-5]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)

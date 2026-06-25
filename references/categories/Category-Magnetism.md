@@ -26,7 +26,7 @@ principles using ab-initio simulations.
 In VASP, the electronic spin can be treated either within a so-called
 *spin-polarized calculation* ([ISPIN](../incar-tags/ISPIN.md)=2) or a
 *noncollinear calculation*
-([LNONCOLLINEAR](../incar-tags/LNONCOLLINEAR.md)=T)<sup>[\[1\]](#cite_note-hobbs:prb:00-1)</sup>.
+([LNONCOLLINEAR](../incar-tags/LNONCOLLINEAR.md)=T)[^hobbs:prb:00-1].
 The aim is to solve the Kohn-Sham (KS) equations including the spin
 degree of freedom to yield spin-dependent KS orbitals, thus fulfilling
 quantum mechanical statistics. In this context it is important to choose
@@ -39,7 +39,7 @@ title="Exchange-correlation functional">exchange-correlation
 functional</a>. For a general introduction to magnetism in the context
 of density-functional theory (DFT), we recommend the book *Theory of
 itinerant electron magnetism* by Jürgen Kübler
-<sup>[\[2\]](#cite_note-kuebler2000:book-2)</sup>.
+[^kuebler2000:book-2].
 
 |  |
 |----|
@@ -210,7 +210,7 @@ title="Edit section: Spin-orbit coupling">edit</a> \| (./index.php.md)\]
 
 Spin-orbit coupling (SOC) is supported as of VASP.4.5 and later
 described in Ref.
-<sup>[\[3\]](#cite_note-Steiner:2016-3)</sup>.
+[^Steiner:2016-3].
 The main tag is [LSORBIT](../incar-tags/LSORBIT.md), which automatically
 sets [LNONCOLLINEAR](../incar-tags/LNONCOLLINEAR.md) and requires
 using `vasp_ncl`. SOC couples the spin degrees of freedom with the
@@ -257,21 +257,6 @@ href="/wiki/index.php?title=Category:Magnetism&amp;veaction=edit&amp;section=11"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-hobbs:prb:00_1-0)
-    <a href="http://doi.org/10.1103/PhysRevB.62.11556" class="external text"
-    rel="nofollow">Hobbs, D., G. Kresse, and J. Hafner, <em>Fully
-    unconstrained noncollinear magnetism within the projector augmented-wave
-    method.</em>, Phys. Rev. B <strong>62</strong>, 11556 (2000).</a>
-2.  [↑](#cite_ref-kuebler2000:book_2-0)
-    <a
-    href="https://books.google.at/books?id=voGKDgAAQBAJ&amp;lpg=PP1&amp;ots=4gJEMsQUYo&amp;dq=itinerant%20electrons%20magnetism&amp;lr&amp;pg=PP1#v=onepage&amp;q=itinerant%20electrons%20magnetism&amp;f=false"
-    class="external text" rel="nofollow">J. Kübler, <em>Theory of itinerant
-    electron magnetism</em>, Vol. 106. Oxford University Press (2000).</a>
-3.  [↑](#cite_ref-Steiner:2016_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.93.224425"
-    class="external text" rel="nofollow">S. Steiner, S. Khmelevskyi, M.
-    Marsman, and G. Kresse, Phys. Rev. B <strong>93</strong>, 224425
-    (2016).</a>
-
-
+[^hobbs:prb:00-1]: [Hobbs, D., G. Kresse, and J. Hafner, *Fully unconstrained noncollinear magnetism within the projector augmented-wave method.*, Phys. Rev. B **62**, 11556 (2000).](http://doi.org/10.1103/PhysRevB.62.11556)
+[^kuebler2000:book-2]: [J. Kübler, *Theory of itinerant electron magnetism*, Vol. 106. Oxford University Press (2000).](https://books.google.at/books?id=voGKDgAAQBAJ&lpg=PP1&ots=4gJEMsQUYo&dq=itinerant%20electrons%20magnetism&lr&pg=PP1#v=onepage&q=itinerant%20electrons%20magnetism&f=false)
+[^Steiner:2016-3]: [S. Steiner, S. Khmelevskyi, M. Marsman, and G. Kresse, Phys. Rev. B **93**, 224425 (2016).](https://doi.org/10.1103/PhysRevB.93.224425)

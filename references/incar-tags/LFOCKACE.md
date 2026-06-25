@@ -14,7 +14,7 @@ Default: **LFOCKACE** = .TRUE. 
 
 Description: LFOCKACE
 determines whether the Adaptively Compressed Exchange Operator is
-used.<sup>[\[1\]](#cite_note-linlin:jctc:2016-1)</sup>
+used.[^linlin:jctc:2016-1]
 
 - N.B.:Available for CPU and OpenACC version of VASP.6 when compiled
   with <a href="/wiki/Precompiler_flags" class="mw-redirect"
@@ -41,7 +41,7 @@ conventional orbital representation is used.
 
 Note: it is good scientific practice to cite the original publication
 (Ref.
-<sup>[\[1\]](#cite_note-linlin:jctc:2016-1)</sup>)
+[^linlin:jctc:2016-1])
 if you use this feature. The feature is used by default, if the Davidson
 algorithm ([ALGO](ALGO.md) = Normal) is used; ACE is not used
 for [ALGO](ALGO.md) = Damped or [ALGO](ALGO.md) =
@@ -64,16 +64,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LHFCALC-_incategory-Examples
 ## References\[<a href="/wiki/index.php?title=LFOCKACE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-linlin:jctc:2016_1-0)</sup>
-    <sup>[b](#cite_ref-linlin:jctc:2016_1-1)</sup>
-    <a href="https://doi.org/10.1021/acs.jctc.6b00092" class="external text"
-    rel="nofollow">L. Lin, J. Chem. Theory Comput. <strong>12</strong>,
-    2242-2249 (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^linlin:jctc:2016-1]: [L. Lin, J. Chem. Theory Comput. **12**, 2242-2249 (2016).](https://doi.org/10.1021/acs.jctc.6b00092)

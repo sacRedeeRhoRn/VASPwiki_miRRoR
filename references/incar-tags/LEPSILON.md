@@ -23,9 +23,9 @@ level, i.e. including changes of the Hartree potential. To include
 microscopic changes of the exchange-correlation potential the tag
 [LRPA](LRPA.md)=.FALSE. must be set. The method is explained
 in detail in paper by Gajdoš *et al.*
-<sup>[\[1\]](#cite_note-gajdos:hummer:2006-1)</sup>
+[^gajdos:hummer:2006-1]
 and closely follows the original work of Baroni and Resta
-<sup>[\[2\]](#cite_note-baroni:resta:1986-2)</sup>.
+[^baroni:resta:1986-2].
 A summation over empty conduction band states is not required, instead
 the usual expressions in perturbation theory
 ([LOPTICS](LOPTICS.md)=.TRUE.),
@@ -146,17 +146,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LEPSILON-_incategory-HowTo)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-gajdos:hummer:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, <em>Linear optical properties in the
-    projector-augmented wave methodology</em>, Phys. Rev. B
-    <strong>73</strong>, 045112 (2006).</a>
-2.  [↑](#cite_ref-baroni:resta:1986_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.33.7017" class="external text"
-    rel="nofollow">S. Baroni and R. Resta, <em>Ab initio calculation of the
-    macroscopic dielectric constant in silicon</em>, Phys. Rev. B
-    <strong>33</strong>, 7017 (1986).</a>
-
-
+[^gajdos:hummer:2006-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, *Linear optical properties in the projector-augmented wave methodology*, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
+[^baroni:resta:1986-2]: [S. Baroni and R. Resta, *Ab initio calculation of the macroscopic dielectric constant in silicon*, Phys. Rev. B **33**, 7017 (1986).](https://doi.org/10.1103/PhysRevB.33.7017)

@@ -6,9 +6,9 @@
 
 To get an idea about what basically molecular dynamics is and what the
 main contents are we refer the reader to references
-<sup>[\[1\]](#cite_note-frenkel:book:1996-1)</sup>
+[^frenkel:book:1996-1]
 and
-<sup>[\[2\]](#cite_note-allen:book:1991-2)</sup>.
+[^allen:book:1991-2].
 After understanding the theory behind molecular dynamics we refer the
 reader to
 <a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
@@ -144,10 +144,10 @@ title="Edit section: Books">edit</a> \| (./index.php.md)\]
 
 - *Statistical Mechanics: Theory and Molecular Simulation* by M.
   Tuckerman
-  <sup>[\[3\]](#cite_note-tuckerman:book:2023-3)</sup>.
+  [^tuckerman:book:2023-3].
 - *Understanding Molecular Simulation - From Algorithms to Applications*
   by D. Frenkel and B. Smit
-  <sup>[\[4\]](#cite_note-frenkel:smit:2023-4)</sup>.
+  [^frenkel:smit:2023-4].
 
 ### Tutorials\[<a
 href="/wiki/index.php?title=Category:Molecular_dynamics&amp;veaction=edit&amp;section=7"
@@ -184,32 +184,9 @@ title="Edit section: Lectures">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=Category:Molecular_dynamics&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-frenkel:book:1996_1-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    Understanding Molecular Simulation (Academic Press, London, 1996).</a>
-2.  [↑](#cite_ref-allen:book:1991_2-0)
-    <a
-    href="https://books.google.co.jp/books?id=WFExDwAAQBAJ&amp;lpg=PP1&amp;hl=ja&amp;pg=PP1#v=onepage&amp;q&amp;f=false"
-    class="external text" rel="nofollow">M. P. Allen and D. J. Tildesley,
-    <em>Computer simulation of liquids</em> (Oxford university press: New
-    York, 1991).</a>
-3.  [↑](#cite_ref-tuckerman:book:2023_3-0)
-    <a href="https://doi.org/10.1093/oso/9780198825562.001.0001"
-    class="external text" rel="nofollow">M. Tuckerman, <em>Statistical
-    Mechanics: Theory and Molecular Simulation (2nd edn)</em>, Oxford
-    University Press (2023).</a>
-4.  [↑](#cite_ref-frenkel:smit:2023_4-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel, B. Smit,
-    <em>Understanding Molecular Simulation - From Algorithms to Applications
-    (2nd edn)</em>, Elsevier Science (2023).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^frenkel:book:1996-1]: [D. Frenkel and B. Smit, Understanding Molecular Simulation (Academic Press, London, 1996).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)
+[^allen:book:1991-2]: [M. P. Allen and D. J. Tildesley, *Computer simulation of liquids* (Oxford university press: New York, 1991).](https://books.google.co.jp/books?id=WFExDwAAQBAJ&lpg=PP1&hl=ja&pg=PP1#v=onepage&q&f=false)
+[^tuckerman:book:2023-3]: [M. Tuckerman, *Statistical Mechanics: Theory and Molecular Simulation (2nd edn)*, Oxford University Press (2023).](https://doi.org/10.1093/oso/9780198825562.001.0001)
+[^frenkel:smit:2023-4]: [D. Frenkel, B. Smit, *Understanding Molecular Simulation - From Algorithms to Applications (2nd edn)*, Elsevier Science (2023).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)

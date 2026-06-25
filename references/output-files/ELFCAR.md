@@ -8,7 +8,7 @@ The ELFCAR file is created
 when the [LELF](../incar-tags/LELF.md)=*.TRUE.* in the
 [INCAR](../input-files/INCAR.md) file is set and contains the electron
 localization function denoted by $ELF$ in Ref.
-<sup>[\[1\]](#cite_note-silvi:nature:371-1)</sup>.
+[^silvi:nature:371-1].
 
 The same file format is used as for the [CHGCAR](../input-files/CHGCAR.md)
 file. That is, lattice vectors, atomic coordinates and number of
@@ -31,15 +31,6 @@ by specifying [PREC](../incar-tags/PREC.md)=*High* in the
 ## References\[<a href="/wiki/index.php?title=ELFCAR&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-silvi:nature:371_1-0)
-    <a
-    href="http://www.nature.com/nature/journal/v371/n6499/pdf/371683a0.pdf"
-    class="external text" rel="nofollow">B. Silvi and A. Savin, Nature 371,
-    683-686 (1994).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^silvi:nature:371-1]: [B. Silvi and A. Savin, Nature 371, 683-686 (1994).](http://www.nature.com/nature/journal/v371/n6499/pdf/371683a0.pdf)

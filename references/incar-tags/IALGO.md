@@ -129,7 +129,7 @@ title="Edit section: RMM-DIIS">edit</a> \| (./index.php.md)\]
   hybrid functionals.
 
 The RMM-DIIS
-algorithm<sup>[\[1\]](#cite_note-wood:jpa:1985-1)[\[2\]](#cite_note-pulay:cpl:1980-2)</sup>
+algorithm[^wood:jpa:1985-1][^pulay:cpl:1980-2]
 reduces the number of orthonormalization steps
 ($O(N^3)$) considerably and is therefore much faster than
 IALGO=8 and
@@ -262,7 +262,7 @@ title="Edit section: Direct optimization">edit</a> \| (./index.php.md)\]
 - IALGO=53-58: Treat total
   free energy as variational quantity and minimize the functional
   completely
-  selfconsistently<sup>[\[3\]](#cite_note-stich:prb:89-3)[\[4\]](#cite_note-gillan:jpc:89-4)[\[5\]](#cite_note-arias:prl:92-5)</sup>.
+  selfconsistently[^stich:prb:89-3][^gillan:jpc:89-4][^arias:prl:92-5].
 
 These algorithms have been carefully optimized and should be selected
 for Hartree-Fock type as well as meta-GGA functionals. The present
@@ -289,7 +289,7 @@ steps during the direct optimization steps in order to determine an
 optimal rotation matrix between occupied and unoccupied orbitals. For
 hybrid functionals, [LSUBROT](LSUBROT.md)=.TRUE. is
 generally faster, however, in rare cases, it can lead to
-instabilities<sup>[\[6\]](#cite_note-kresse:prb:96-6)</sup>.
+instabilities[^kresse:prb:96-6].
 
 The preconditioned conjugate gradient
 (IALGO= 58,
@@ -415,34 +415,11 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-IALGO-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=IALGO&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-wood:jpa:1985_1-0)
-    <a href="https://doi.org/10.1088/0305-4470/18/9/018"
-    class="external text" rel="nofollow">D. M. Wood and A. Zunger, J. Phys.
-    A <strong>18</strong>, 1343 (1985).</a>
-2.  [↑](#cite_ref-pulay:cpl:1980_2-0)
-    <a href="https://doi.org/10.1016/0009-2614(80)80396-4"
-    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett.
-    <strong>73</strong>, 393 (1980).</a>
-3.  [↑](#cite_ref-stich:prb:89_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.39.4997" class="external text"
-    rel="nofollow">I. Stich, R. Car, M. Parrinello, and S. Baroni, Phys.
-    Rev. B <strong>39</strong>, 4997 (1989).</a>
-4.  [↑](#cite_ref-gillan:jpc:89_4-0)
-    <a href="https://doi.org/10.1088/0953-8984/1/4/005"
-    class="external text" rel="nofollow">M. J. Gillan, J. Phys.: Condens.
-    Matter <strong>1</strong>, 689 (1989).</a>
-5.  [↑](#cite_ref-arias:prl:92_5-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.69.1077"
-    class="external text" rel="nofollow">T.A. Arias, M.C. Payne, and J.D.
-    Joannopoulos, Phys. Rev. Lett. <strong>69</strong>, 1077 (1992).</a>
-6.  [↑](#cite_ref-kresse:prb:96_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.54.11169"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Phys.
-    Rev. B <strong>54</strong>, 11169 (1996).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^wood:jpa:1985-1]: [D. M. Wood and A. Zunger, J. Phys. A **18**, 1343 (1985).](https://doi.org/10.1088/0305-4470/18/9/018)
+[^pulay:cpl:1980-2]: [P. Pulay, Chem. Phys. Lett. **73**, 393 (1980).](https://doi.org/10.1016/0009-2614(80)80396-4)
+[^stich:prb:89-3]: [I. Stich, R. Car, M. Parrinello, and S. Baroni, Phys. Rev. B **39**, 4997 (1989).](https://doi.org/10.1103/PhysRevB.39.4997)
+[^gillan:jpc:89-4]: [M. J. Gillan, J. Phys.: Condens. Matter **1**, 689 (1989).](https://doi.org/10.1088/0953-8984/1/4/005)
+[^arias:prl:92-5]: [T.A. Arias, M.C. Payne, and J.D. Joannopoulos, Phys. Rev. Lett. **69**, 1077 (1992).](https://doi.org/10.1103/PhysRevLett.69.1077)
+[^kresse:prb:96-6]: [G. Kresse and J. Furthmüller, Phys. Rev. B **54**, 11169 (1996).](https://doi.org/10.1103/PhysRevB.54.11169)

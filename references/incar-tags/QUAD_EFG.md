@@ -31,11 +31,11 @@ nuclear quadrupole moment in millibarns for each atomic species, in the
 same order as in the [POTCAR](../input-files/POTCAR.md) file. The output
 *C*<sub>q</sub> is in MHz. An online compilation of nuclear quadrupole
 moments can be found online in a database
-<sup>[\[1\]](#cite_note-pyykko:web-1)</sup>
+[^pyykko:web-1]
 or in Ref.
-<sup>[\[2\]](#cite_note-pyykko:molphys:2008-2)</sup>
+[^pyykko:molphys:2008-2]
 (updated numbers in Ref.
-<sup>[\[3\]](#cite_note-pyykko:molphys:2017-3)</sup>).
+[^pyykko:molphys:2017-3]).
 
 Suppose a solid contains Al, C, and Si, then the
 QUAD_EFG tag could read:
@@ -66,20 +66,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-QUAD_EFG-_incategory-Example
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-pyykko:web_1-0)
-    <a href="http://www.chem.helsinki.fi/~pyykko/Q2008.pdf"
-    class="external text" rel="nofollow">Year-2008 Nuclear Quadrupole
-    Moments, https://www.chem.helsinki.fi (2025)</a>
-2.  [↑](#cite_ref-pyykko:molphys:2008_2-0)
-    <a href="https://doi.org/10.1080/00268970802018367"
-    class="external text" rel="nofollow">P. Pyykkö, <em>Year-2008 nuclear
-    quadrupole moments</em>, Mol. Phys. <strong>106</strong>, 1965-1974
-    (2008).</a>
-3.  [↑](#cite_ref-pyykko:molphys:2017_3-0)
-    <a href="https://doi.org/10.1080/00268976.2018.1426131"
-    class="external text" rel="nofollow">P. Pyykkö, <em>Year-2017 nuclear
-    quadrupole moments</em>, Mol. Phys. <strong>116</strong>, 1328-1338
-    (2018).</a>
-
-
+[^pyykko:web-1]: [Year-2008 Nuclear Quadrupole Moments, https://www.chem.helsinki.fi (2025)](http://www.chem.helsinki.fi/~pyykko/Q2008.pdf)
+[^pyykko:molphys:2008-2]: [P. Pyykkö, *Year-2008 nuclear quadrupole moments*, Mol. Phys. **106**, 1965-1974 (2008).](https://doi.org/10.1080/00268970802018367)
+[^pyykko:molphys:2017-3]: [P. Pyykkö, *Year-2017 nuclear quadrupole moments*, Mol. Phys. **116**, 1328-1338 (2018).](https://doi.org/10.1080/00268976.2018.1426131)

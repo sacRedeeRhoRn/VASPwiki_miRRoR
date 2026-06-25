@@ -35,7 +35,7 @@ insulators with non-vanishing Born effective charge.
 
 `ELPH_LR`` = 1`  
 Dipole corrections are applied to the electron-phonon
-coupling<sup>[\[1\]](#cite_note-engel:prb:2022-1)</sup>.
+coupling[^engel:prb:2022-1].
 
 ## Related tags and articles\[<a href="/wiki/index.php?title=ELPH_LR&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
@@ -52,13 +52,4 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-engel:prb:2022_1-0)
-    <a href="https://link.aps.org/doi/10.1103/PhysRevB.106.094316"
-    class="external text" rel="nofollow">M. Engel, H. Miranda, L. Chaput, A.
-    Togo, C. Verdi, M. Marsman, and G. Kresse, <em>Zero-point
-    renormalization of the band gap of semiconductors and insulators using
-    the projector augmented wave method</em>, Phys. Rev. B
-    <strong>106</strong>, 094316 (2022).</a>
-
-
+[^engel:prb:2022-1]: [M. Engel, H. Miranda, L. Chaput, A. Togo, C. Verdi, M. Marsman, and G. Kresse, *Zero-point renormalization of the band gap of semiconductors and insulators using the projector augmented wave method*, Phys. Rev. B **106**, 094316 (2022).](https://link.aps.org/doi/10.1103/PhysRevB.106.094316)

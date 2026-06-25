@@ -10,7 +10,7 @@ LIBXC1 = \[string\] or
 Description: LIBXC1 specifies
 the exchange or exchange-correlation functional from the library of
 exchange-correlation functionals
-Libxc<sup>[\[1\]](#cite_note-marques:cpc:2012-1)[\[2\]](#cite_note-lehtola:sx:2018-2)[\[3\]](#cite_note-tran:arxiv:2026-3)[\[4\]](#cite_note-libxc-4)</sup>.
+Libxc[^marques:cpc:2012-1][^lehtola:sx:2018-2][^tran:arxiv:2026-3][^libxc-4].
 
 ------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ Libxc<sup>[\[1\]](#cite_note-marques:cpc:2012-1)[\[2\]](#cite_note-lehtola:sx:20
 LIBXC1 and
 [LIBXC2](LIBXC2.md) can be set to a label (string) or number
 (integer) associated with a functional listed on the Libxc
-website<sup>[\[5\]](#cite_note-libxc_list-5)</sup>,
+website[^libxc_list-5],
 e.g., `GGA_X_PBE` and `101` for PBE exchange. The label indicates if
 this is an exchange (X), correlation (C), or exchange-correlation (XC)
 functional, and which family it belongs to, namely LDA (LDA or HYB_LDA),
@@ -31,7 +31,7 @@ exchange functional, then it can be used in combination with
 [LIBXC2](LIBXC2.md) for the correlation functional.
 
 Libxc is a separate library package that has to be
-downloaded<sup>[\[4\]](#cite_note-libxc-4)</sup>
+downloaded[^libxc-4]
 and compiled before VASP is compiled with the corresponding [precompiler
 options](../misc/Precompiler_options.md) and
 [links to the
@@ -139,7 +139,7 @@ n=0)$.
 class="mw-editsection-visualeditor"
 title="Edit section: Examples of INCAR">edit</a> \| (./index.php.md)\]
 
-- PBE<sup>[\[6\]](#cite_note-perdew:prl:1996-6)</sup>
+- PBE[^perdew:prl:1996-6]
 
 <!-- -->
 
@@ -147,7 +147,7 @@ title="Edit section: Examples of INCAR">edit</a> \| (./index.php.md)\]
     LIBXC1 = GGA_X_PBE # or 101
     LIBXC2 = GGA_C_PBE # or 130
 
-- SCAN<sup>[\[7\]](#cite_note-sun:prl:15-7)</sup>
+- SCAN[^sun:prl:15-7]
 
 <!-- -->
 
@@ -156,7 +156,7 @@ title="Edit section: Examples of INCAR">edit</a> \| (./index.php.md)\]
     LIBXC2 = MGGA_C_SCAN # or 267
 
 - PBEh
-  (PBE0)<sup>[\[8\]](#cite_note-adamo:jcp:1999-8)</sup>
+  (PBE0)[^adamo:jcp:1999-8]
 
 <!-- -->
 
@@ -197,45 +197,13 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LIBXC1-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LIBXC1&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-marques:cpc:2012_1-0)
-    <a href="https://doi.org/10.1016/j.cpc.2012.05.007"
-    class="external text" rel="nofollow">M. A. L. Marques, M. J. T.
-    Oliveira, and T. Burnus, Comput. Phys. Commun., <strong>183</strong>,
-    2272 (2012).</a>
-2.  [↑](#cite_ref-lehtola:sx:2018_2-0)
-    <a href="https://doi.org/10.1016/j.softx.2017.11.002"
-    class="external text" rel="nofollow">S. Lehtola, C. Steigemann, M. J. T.
-    Oliveira, and M. A. L. Marques, SoftwareX, <strong>7</strong>, 1
-    (2018).</a>
-3.  [↑](#cite_ref-tran:arxiv:2026_3-0)
-    <a href="https://doi.org/10.48550/arXiv.2602.17333"
-    class="external text" rel="nofollow">F. Tran, S. Lehtola, S. Pittalis,
-    and M. A. L. Marques, <em>Semi-Local Exchange-Correlation Approximations
-    in Density Functional Theory</em>, arXiv <strong>2602.17333</strong>
-    (2026).</a>
-4.  ↑ <sup>[a](#cite_ref-libxc_4-0)</sup>
-    <sup>[b](#cite_ref-libxc_4-1)</sup>
-    <a href="https://libxc.gitlab.io" class="external text"
-    rel="nofollow">https://libxc.gitlab.io</a>
-5.  [↑](#cite_ref-libxc_list_5-0)
-    <a href="https://libxc.gitlab.io/functionals/" class="external text"
-    rel="nofollow">https://libxc.gitlab.io/functionals/</a>
-6.  [↑](#cite_ref-perdew:prl:1996_6-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.77.3865"
-    class="external text" rel="nofollow">J. P. Perdew, K. Burke, and M.
-    Ernzerhof, Phys. Rev. Lett., <strong>77</strong>, 3865 (1996).</a>
-7.  [↑](#cite_ref-sun:prl:15_7-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.115.036402"
-    class="external text" rel="nofollow">J. Sun, A. Ruzsinszky, and J. P.
-    Perdew, Phys. Rev. Lett. <strong>115</strong>, 036402 (2015).</a>
-8.  [↑](#cite_ref-adamo:jcp:1999_8-0)
-    <a href="https://doi.org/10.1063/1.478522" class="external text"
-    rel="nofollow">C. Adamo and V. Barone, Phys. Rev. Lett.,
-    <strong>110</strong>, 6158 (1999).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^marques:cpc:2012-1]: [M. A. L. Marques, M. J. T. Oliveira, and T. Burnus, Comput. Phys. Commun., **183**, 2272 (2012).](https://doi.org/10.1016/j.cpc.2012.05.007)
+[^lehtola:sx:2018-2]: [S. Lehtola, C. Steigemann, M. J. T. Oliveira, and M. A. L. Marques, SoftwareX, **7**, 1 (2018).](https://doi.org/10.1016/j.softx.2017.11.002)
+[^tran:arxiv:2026-3]: [F. Tran, S. Lehtola, S. Pittalis, and M. A. L. Marques, *Semi-Local Exchange-Correlation Approximations in Density Functional Theory*, arXiv **2602.17333** (2026).](https://doi.org/10.48550/arXiv.2602.17333)
+[^libxc-4]: [https://libxc.gitlab.io](https://libxc.gitlab.io)
+[^libxc_list-5]: [https://libxc.gitlab.io/functionals/](https://libxc.gitlab.io/functionals/)
+[^perdew:prl:1996-6]: [J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett., **77**, 3865 (1996).](https://doi.org/10.1103/PhysRevLett.77.3865)
+[^sun:prl:15-7]: [J. Sun, A. Ruzsinszky, and J. P. Perdew, Phys. Rev. Lett. **115**, 036402 (2015).](https://doi.org/10.1103/PhysRevLett.115.036402)
+[^adamo:jcp:1999-8]: [C. Adamo and V. Barone, Phys. Rev. Lett., **110**, 6158 (1999).](https://doi.org/10.1063/1.478522)

@@ -164,7 +164,7 @@ looking at the analytic form of the ion-ion contribution to the total
 energy.
 
 For that, follow the approach outlined in Ref.
-<sup>[\[1\]](#cite_note-gonze:prb:1997-1)</sup>
+[^gonze:prb:1997-1]
 and start by splitting the second-order force constants into short-range
 and long-range parts,
 
@@ -350,7 +350,7 @@ $\Xi_{I\alpha l}=\frac{\partial^2 E}{\partial u_{I\alpha} \partial
 where $\mathbf{\sigma}\[\psi_{n\mathbf{k}}\]$ computes the
 strain tensor given the $\psi_{n\mathbf{k}}$ KS orbitals. The Born effective charges are then
 computed using Eq. (42) of Ref.
-<sup>[\[1\]](#cite_note-gonze:prb:1997-1)</sup>.
+[^gonze:prb:1997-1].
 
  
 
@@ -364,7 +364,7 @@ direction of the displacement of the atom, $\gamma$ the
 polarization direction, and $| \vec{\beta}_{n\mathbf{k}}
 \rangle$ is the polarization vector defined in Eq. (30)
 in Ref.
-<sup>[\[2\]](#cite_note-gajdos:prb:2006-2)</sup>.
+[^gajdos:prb:2006-2].
 The results should be equivalent to the ones obtained using
 [LCALCEPS](../incar-tags/LCALCEPS.md) and
 [LEPSILON](../incar-tags/LEPSILON.md).
@@ -386,19 +386,5 @@ href="/wiki/index.php?title=Phonons:_Theory&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-gonze:prb:1997_1-0)</sup>
-    <sup>[b](#cite_ref-gonze:prb:1997_1-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.55.10355" class="external text"
-    rel="nofollow">X. Gonze and C. Lee, <em>Dynamical matrices, Born
-    effective charges, dielectric permittivity tensors, and interatomic
-    force constants from density-functional perturbation theory</em>, Phys.
-    Rev. B <strong>55</strong>, 10355 (1997).</a>
-2.  [↑](#cite_ref-gajdos:prb:2006_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
-    (2006).</a>
-
-
+[^gonze:prb:1997-1]: [X. Gonze and C. Lee, *Dynamical matrices, Born effective charges, dielectric permittivity tensors, and interatomic force constants from density-functional perturbation theory*, Phys. Rev. B **55**, 10355 (1997).](http://doi.org/10.1103/PhysRevB.55.10355)
+[^gajdos:prb:2006-2]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)

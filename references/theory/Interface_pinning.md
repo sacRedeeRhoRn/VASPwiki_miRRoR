@@ -5,7 +5,7 @@
 
 
 **Interface
-pinning**<sup>[\[1\]](#cite_note-pedersen:prb:13-1)</sup>
+pinning**[^pedersen:prb:13-1]
 is used to determine the melting point from a
 [molecular-dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
 simulation of the interface between a liquid and a solid phase. The
@@ -16,7 +16,7 @@ preferred simulating above the melting point because the bias potential
 prevents melting better than freezing.
 
 The
-Steinhardt-Nelson<sup>[\[2\]](#cite_note-steinhardt:prb:83-2)</sup>
+Steinhardt-Nelson[^steinhardt:prb:83-2]
 order parameter $Q_6$
 discriminates between the solid and the liquid phase. With the bias
 potential
@@ -85,21 +85,7 @@ calculations](../tutorials/Interface_pinning_calculations.md)
 href="/wiki/index.php?title=Interface_pinning&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-pedersen:prb:13_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.88.094101"
-    class="external text" rel="nofollow">U. R. Pedersen, F. Hummel, G.
-    Kresse, G. Kahl, and C. Dellago, Phys. Rev. B <strong>88</strong>,
-    094101 (2013).</a>
-2.  [↑](#cite_ref-steinhardt:prb:83_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.28.784" class="external text"
-    rel="nofollow">P. J. Steinhardt, D. R. Nelson, and M. Ronchetti, Phys.
-    Rev. B <strong>28</strong>, 784 (1983).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^pedersen:prb:13-1]: [U. R. Pedersen, F. Hummel, G. Kresse, G. Kahl, and C. Dellago, Phys. Rev. B **88**, 094101 (2013).](https://doi.org/10.1103/PhysRevB.88.094101)
+[^steinhardt:prb:83-2]: [P. J. Steinhardt, D. R. Nelson, and M. Ronchetti, Phys. Rev. B **28**, 784 (1983).](https://doi.org/10.1103/PhysRevB.28.784)

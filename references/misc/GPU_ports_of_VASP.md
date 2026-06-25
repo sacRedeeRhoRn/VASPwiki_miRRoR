@@ -167,7 +167,7 @@ title="Edit section: AMD GPUs">edit</a> \| (./index.php.md)\]
   class="external text" rel="nofollow">HPE Cray compiler environment</a>
   (CCE \>= 19.0) is needed. This compiler is only available on HPE HPC
   clusters and cannot be obtained as a stand-alone product.
-  <sup>[\[1\]](#cite_note-1)</sup>
+  [^1]
 
 <u>*Libraries*</u>
 
@@ -532,13 +532,4 @@ href="/wiki/index.php?title=GPU_ports_of_VASP&amp;veaction=edit&amp;section=20"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-1)
-    We are working alongside AMD to also
-    support <a
-    href="https://rocm.blogs.amd.com/ecosystems-and-partners/fortran-journey/README.html"
-    class="external text" rel="nofollow">AMDs next-gen Fortran compiler</a>,
-    to offer an open-source alternative to CCE, but this effort is still
-    in the very early stages.
-
-
+[^1]: We are working alongside AMD to also support [AMDs next-gen Fortran compiler](https://rocm.blogs.amd.com/ecosystems-and-partners/fortran-journey/README.html), to offer an open-source alternative to CCE, but this effort is still in the very early stages.

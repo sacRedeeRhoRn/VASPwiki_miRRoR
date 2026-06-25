@@ -14,10 +14,10 @@ within linear response theory.
 
 For `LCHIMAG`` = True`, the
 chemical shift tensors and magnetic susceptibility is computed. The
-implementation<sup>[\[1\]](#cite_note-dewijs:laskowski:jcp:2017-1)</sup>
+implementation[^dewijs:laskowski:jcp:2017-1]
 is based on linear response theory using the gauge-invariant PAW method
 of Yates, Pickard, and Mauri
-<sup>[\[2\]](#cite_note-pickard:prb:2001-2)[\[3\]](#cite_note-yates:prb:2007-3)</sup>,
+[^pickard:prb:2001-2][^yates:prb:2007-3],
 that is an extension to the standard
 <a href="/wiki/PAW_method" class="mw-redirect" title="PAW method">PAW
 method</a> to account for the effects of a vector gauge field
@@ -83,12 +83,12 @@ series of compounds and references them to the experimental series.
 
 VASP calculates chemical "shifts" for non-metallic crystalline systems
 using the linear response method of Yates, Pickard, and Mauri
-<sup>[\[2\]](#cite_note-pickard:prb:2001-2)[\[3\]](#cite_note-yates:prb:2007-3)</sup>.
+[^pickard:prb:2001-2][^yates:prb:2007-3].
 
 The isotropic chemical "shift" $\sigma_{iso}$, span $\Omega$, and
 skew $\kappa$ are
 also reported, according to the following Herzfeld-Berger convention
-<sup>[\[4\]](#cite_note-mason:ssn:1993-4)</sup>:
+[^mason:ssn:1993-4]:
 
 $\sigma_{iso} = (\sigma_{11} + \sigma_{22} + \sigma_{33})/3$
 
@@ -105,11 +105,11 @@ where $F_{ij}(q)=(2-\delta_{ij})Q_{ij}(q)$.
 
 *Q<sub>ij</sub>* is approximated in two ways. The so-called
 *pGv*-approximation is used by default
-<sup>[\[3\]](#cite_note-yates:prb:2007-3)</sup>,
+[^yates:prb:2007-3],
 where *p* is momentum, *v* is velocity, and *G* is a Green's function.
 An alternative approach, the *vGv*-approximation is also used to
 calculate an alternative susceptibility since VASP 6.4.0
-<sup>[\[5\]](#cite_note-avezac:prb:2007-5)</sup>.
+[^avezac:prb:2007-5].
 *Q* is defined for the *pGv*-approximation as:
 
 $Q(q) = - \frac{1}{c^2 N_k V_c} \sum_{i=x,y,z} \sum_{o,\textbf{k}}
@@ -211,7 +211,7 @@ diagonalized. From the three diagonal values the isotropic chemical
 "shift" $\delta_{\mathrm{iso}}\mathrm{\[VASP\]}$, span
 $\Omega$, and skew $\kappa$ are
 calculated and printed see Ref.
-<sup>[\[4\]](#cite_note-mason:ssn:1993-4)</sup>
+[^mason:ssn:1993-4]
 for unambiguous definitions. Note that $\kappa$ is
 ill-defined if $\Omega = 0$.
 Units are ppm, except for the skew. A typical output is given below:
@@ -269,10 +269,7 @@ contribution are for crystals.</li>
 <li>The upper block gives the shielding due to only the electrons
 included in the SCF calculation.</li>
 <li>The lower block has the contributions due to the frozen PAW cores
-added. These core contributions are rigid <sup><a
-href="#cite_note-gregor:jcp:1999-6"><span
-class="cite-bracket">[</span>6<span
-class="cite-bracket">]</span></a></sup>. They depend on <a
+added. These core contributions are rigid [^gregor:jcp:1999-6]. They depend on <a
 href="/wiki/POTCAR" title="POTCAR">POTCAR</a> and are isotropic, i.e.
 affect neither SPAN nor SKEW.</li>
 </ul></td>
@@ -287,7 +284,7 @@ ion, its number, the isotropic shielding, the shielding tensor and the
 symmetrized shielding tensor. Next the principal components and the
 principal axes are printed (from the symmetrized tensor). They are
 ordered following Mason
-<sup>[\[4\]](#cite_note-mason:ssn:1993-4)</sup>,
+[^mason:ssn:1993-4],
 i.e. σ<sub>11</sub> \< σ<sub>22</sub> \< σ<sub>33</sub>. Finally a line
 is printed with (again) the isotropic shielding σ<sub>iso</sub>, the
 span Ω & skew κ (Herzfeld-Berger, Mason sections 2.2 and 2.3) and the
@@ -341,49 +338,9 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LCHIMAG-_incategory-Examples
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-dewijs:laskowski:jcp:2017_1-0)
-    <a href="https://doi.org/10.1063/1.4975122" class="external text"
-    rel="nofollow">G. A. de Wijs, R. Laskowski, P. Blaha, R. W. A. Havenith,
-    G. Kresse, and M. Marsman, <em>NMR shieldings from density functional
-    perturbation theory: GIPAW versus all-electron calculations</em>, J.
-    Chem. Phys. <strong>146</strong>, 064115 (2017).</a>
-2.  ↑
-    <sup>[a](#cite_ref-pickard:prb:2001_2-0)</sup>
-    <sup>[b](#cite_ref-pickard:prb:2001_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.63.245101"
-    class="external text" rel="nofollow">C. J. Pickard and F. Mauri,
-    <em>All-electron magnetic response with pseudopotentials: NMR chemical
-    shifts</em>, Phys. Rev. B <strong>63</strong>, 245101 (2001).</a>
-3.  ↑
-    <sup>[a](#cite_ref-yates:prb:2007_3-0)</sup>
-    <sup>[b](#cite_ref-yates:prb:2007_3-1)</sup>
-    <sup>[c](#cite_ref-yates:prb:2007_3-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.76.024401"
-    class="external text" rel="nofollow">J. R. Yates, C. J. Pickard, and F.
-    Mauri, <em>Calculation of NMR chemical shifts for extended systems using
-    ultrasoft pseudopotentials</em>, Phys. Rev. B <strong>76</strong>,
-    024401 (2007).</a>
-4.  ↑
-    <sup>[a](#cite_ref-mason:ssn:1993_4-0)</sup>
-    <sup>[b](#cite_ref-mason:ssn:1993_4-1)</sup>
-    <sup>[c](#cite_ref-mason:ssn:1993_4-2)</sup>
-    <a href="https://doi.org/10.1016/0926-2040(93)90010-K"
-    class="external text" rel="nofollow">J. Mason, <em>Conventions for the
-    reporting of nuclear magnetic shielding (or shift) tensors suggested by
-    participants in the NATO ARW on NMR shielding constants at the
-    University of Maryland, College Park, July 1992</em>, Solid State Nucl.
-    Magn. Reson. <strong>2</strong>, 285 (1993).</a>
-5.  [↑](#cite_ref-avezac:prb:2007_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.165122"
-    class="external text" rel="nofollow">M. d'Avezac, N. Marzari, and F.
-    Mauri, <em>Spin and orbital magnetic response in metals: Susceptibility
-    and NMR shifts</em>, Phys. Rev. B <strong>76</strong>, 165122
-    (2007).</a>
-6.  [↑](#cite_ref-gregor:jcp:1999_6-0)
-    <a href="https://doi.org/10.1063/1.479451" class="external text"
-    rel="nofollow">T. Gregor, F. Mauri, and R. Car, <em>A comparison of
-    methods for the calculation of NMR chemical shifts</em>, J. Chem. Phys.
-    <strong>111</strong>, 1815 (1999).</a>
-
-
+[^dewijs:laskowski:jcp:2017-1]: [G. A. de Wijs, R. Laskowski, P. Blaha, R. W. A. Havenith, G. Kresse, and M. Marsman, *NMR shieldings from density functional perturbation theory: GIPAW versus all-electron calculations*, J. Chem. Phys. **146**, 064115 (2017).](https://doi.org/10.1063/1.4975122)
+[^pickard:prb:2001-2]: [C. J. Pickard and F. Mauri, *All-electron magnetic response with pseudopotentials: NMR chemical shifts*, Phys. Rev. B **63**, 245101 (2001).](https://doi.org/10.1103/PhysRevB.63.245101)
+[^yates:prb:2007-3]: [J. R. Yates, C. J. Pickard, and F. Mauri, *Calculation of NMR chemical shifts for extended systems using ultrasoft pseudopotentials*, Phys. Rev. B **76**, 024401 (2007).](https://doi.org/10.1103/PhysRevB.76.024401)
+[^mason:ssn:1993-4]: [J. Mason, *Conventions for the reporting of nuclear magnetic shielding (or shift) tensors suggested by participants in the NATO ARW on NMR shielding constants at the University of Maryland, College Park, July 1992*, Solid State Nucl. Magn. Reson. **2**, 285 (1993).](https://doi.org/10.1016/0926-2040(93)90010-K)
+[^avezac:prb:2007-5]: [M. d'Avezac, N. Marzari, and F. Mauri, *Spin and orbital magnetic response in metals: Susceptibility and NMR shifts*, Phys. Rev. B **76**, 165122 (2007).](https://doi.org/10.1103/PhysRevB.76.165122)
+[^gregor:jcp:1999-6]: [T. Gregor, F. Mauri, and R. Car, *A comparison of methods for the calculation of NMR chemical shifts*, J. Chem. Phys. **111**, 1815 (1999).](https://doi.org/10.1063/1.479451)

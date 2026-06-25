@@ -395,9 +395,9 @@ literature to look at the relative peak positions in the spectra and
 their relative intensity.
 
 We compare the results obtained with VASP to
-experimental<sup>[\[1\]](#cite_note-Ma.PRL-1)</sup>
+experimental[^Ma.PRL-1]
 and
-theoretical<sup>[\[2\]](#cite_note-Tallefumier.PRB-2)</sup>
+theoretical[^Tallefumier.PRB-2]
 XAS spectra from literature provided in the files
 *C_XAS_aligned_to_VASP.dat* and *C_PARATEC_aligned_to_VASP.dat*,
 respectively. The theoretical reference calculation was obtained using
@@ -478,23 +478,10 @@ title="XANES Diamond.tgz">XANES_Diamond.tgz</a>
 href="/wiki/index.php?title=XANES_in_Diamond&amp;veaction=edit&amp;section=11"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Ma.PRL_1-0)
-    <a
-    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.69.2598"
-    class="external text" rel="nofollow">Y.Ma et al., Phys. Rev. Lett 69,
-    2598 (1992).</a>
-2.  [↑](#cite_ref-Tallefumier.PRB_2-0)
-    <a
-    href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.195107"
-    class="external text" rel="nofollow">M.Tallefumier et al., Phys. Rev. B
-    66, 195107 (2002).</a>
-
-
 [Overview](../tutorials/XAS_-_Tutorial.md) \>
 XANES in
 Diamond \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^Ma.PRL-1]: [Y.Ma et al., Phys. Rev. Lett 69, 2598 (1992).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.69.2598)
+[^Tallefumier.PRB-2]: [M.Tallefumier et al., Phys. Rev. B 66, 195107 (2002).](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.195107)

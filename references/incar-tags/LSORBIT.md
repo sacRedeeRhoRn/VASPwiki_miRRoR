@@ -13,7 +13,7 @@ Description: Switch on spin-orbit coupling.
 
 LSORBIT = True switches on
 spin-orbit coupling
-(SOC)<sup>[\[1\]](#cite_note-Steiner:2016-1)</sup>
+(SOC)[^Steiner:2016-1]
 and automatically sets
 [LNONCOLLINEAR](LNONCOLLINEAR.md) = True. It requires
 using `vasp_ncl`. SOC couples the spin degrees of freedom with the
@@ -45,7 +45,7 @@ title="Edit section: Assumptions and output">edit</a> \| (./index.php.md)\]
 - Switching on spin-orbit coupling (SOC) adds an additional term
   $H^{\alpha\beta}_{soc}\propto\mathbf{\sigma}\cdot\mathbf{L}$ to the Hamiltonian that couples the Pauli-spin
   operator $\mathbf{\sigma}$ with the angular momentum operator
-  $\mathbf{L}$.<sup>[\[1\]](#cite_note-Steiner:2016-1)</sup>
+  $\mathbf{L}$.[^Steiner:2016-1]
   As a relativistic correction, SOC acts predominantly in the immediate
   vicinity of the nuclei. Therefore, it is assumed that contributions of
   $H_{soc}$ outside the PAW spheres are negligible.
@@ -67,7 +67,7 @@ $\alpha=\uparrow,\downarrow$ of the pseudo-orbital with
 band-index *n* and Bloch vector **k**, and $f_{n\bf k}$
 and $w_{\bf k}$
 are the Fermi- and **k**-point weights,
-respectively.<sup>[\[1\]](#cite_note-Steiner:2016-1)</sup>
+respectively.[^Steiner:2016-1]
 
 - It is possible to write the partial magnetization by setting
   [LORBIT](LORBIT.md), i.e., the site- and orbital-resolved
@@ -187,18 +187,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSORBIT-_incategory-Examples
 ## References\[<a href="/wiki/index.php?title=LSORBIT&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-Steiner:2016_1-0)</sup>
-    <sup>[b](#cite_ref-Steiner:2016_1-1)</sup>
-    <sup>[c](#cite_ref-Steiner:2016_1-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.93.224425"
-    class="external text" rel="nofollow">S. Steiner, S. Khmelevskyi, M.
-    Marsman, and G. Kresse, Phys. Rev. B <strong>93</strong>, 224425
-    (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Steiner:2016-1]: [S. Steiner, S. Khmelevskyi, M. Marsman, and G. Kresse, Phys. Rev. B **93**, 224425 (2016).](https://doi.org/10.1103/PhysRevB.93.224425)

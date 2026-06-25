@@ -7,10 +7,10 @@
 Here we present the theory for on-the-fly machine learning force fields.
 The theory will be presented in a very condensed manner and for a more
 detailed description of the methods, we refer the readers to Refs.
-<sup>[\[1\]](#cite_note-jinnouchi:prl:2019-1)</sup>,
-<sup>[\[2\]](#cite_note-jinnouchi2:arx:2019-2)</sup>
+[^jinnouchi:prl:2019-1],
+[^jinnouchi2:arx:2019-2]
 and
-<sup>[\[3\]](#cite_note-jinnouchi:jcm:20-3)</sup>.
+[^jinnouchi:jcm:20-3].
 
 
 ## Contents
@@ -330,7 +330,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Descriptors">edit</a> \| (./index.php.md)\]
 
 Similar to the Smooth Overlap of Atomic
-Positions<sup>[\[4\]](#cite_note-bartok:prb:2013-4)</sup>
+Positions[^bartok:prb:2013-4]
 (SOAP) method the delta function $g(\mathbf{r})$ is approximated as
 
 $g\left(\mathbf{r}\right)=\frac{1}{\sigma_{\mathrm{atom}}\sqrt{2\pi}}\mathrm{exp}\left(-\frac{|\mathbf{r}|^{2}}{2\sigma_{\mathrm{atom}}^{2}}\right).$
@@ -389,12 +389,12 @@ denotes the angle between two vectors $\mathbf{r}_{ij}$ and $\mathbf{r}_{ik}$ \[
 function $\rho_{i}^{(3)}$ compared to the angular distribution function (also
 called power spectrum within the Gaussian Approximation Potential) used
 in reference
-<sup>[\[5\]](#cite_note-bartok:prl:2010-5)</sup>
+[^bartok:prl:2010-5]
 is that no self interaction is included, where
 $j$ and $k$ have the
 same distance from $i$ and the
 angle between the two is zero. It can be shown
-<sup>[\[3\]](#cite_note-jinnouchi:jcm:20-3)</sup>
+[^jinnouchi:jcm:20-3]
 that the self-interaction component is equivalent to the two body
 descriptors. This means that our angular descriptor is a pure angular
 descriptor, containing no two-body components and it cannot be expressed
@@ -469,7 +469,7 @@ title="Edit section: Angular filtering">edit</a> \| (./index.php.md)\]
 
 In many cases $\chi_{nl}$
 is multiplied with an angular filtering
-function<sup>[\[6\]](#cite_note-boyd:book:2000-6)</sup>
+function[^boyd:book:2000-6]
 $\eta$ ([ML_IAFILT2](../incar-tags/ML_IAFILT2.md)),
 which can noticably reduce the necessary basis set size without losing
 accuracy in the calculations
@@ -488,7 +488,7 @@ title="Edit section: Reduced descriptors">edit</a> \| (./index.php.md)\]
 
 A descriptor that reduces the number of descriptors with respect to the
 number of
-elements<sup>[\[7\]](#cite_note-csanyi:npj:2022-7)</sup>
+elements[^csanyi:npj:2022-7]
 is written as
 
 $p_{n\nu l}^{iJ}=\sqrt{\frac{8\pi^{2}}{2l+1}} \sum\limits_{m=-l}^{l}
@@ -567,7 +567,7 @@ The size of $\mathbf{Y}$
 is $N_{\mathrm{st}} \times (1+3N^{\alpha}_{a}+6)$.
 
 The matrix $\mathbf{\Phi}$ is also called as *design*
-matrix<sup>[\[8\]](#cite_note-bishop:book:2006-8)</sup>.
+matrix[^bishop:book:2006-8].
 The rows of this matrix are blocked for each structure
 $\alpha$, where the first line of each block consists of
 the kernel used to calculate the energy. The subsequent
@@ -682,7 +682,7 @@ $p\left( \mathbf{Y} \right) = \int p\left( \mathbf{Y} | \mathbf{w}
 \right) p\left( \mathbf{w} \right) d\mathbf{w}.$
 
 Using the equations from above and the completing square
-method<sup>[\[8\]](#cite_note-bishop:book:2006-8)</sup>
+method[^bishop:book:2006-8]
 $p\left( \mathbf{w} | \mathbf{Y} \right)$ is obtained
 as follows
 
@@ -803,7 +803,7 @@ title="Edit section: Evidence approximation">edit</a> \| (./index.php.md)\]
 Finally to get the best results and to prevent overfitting the
 parameters $s_{\mathrm{v}}$ and $s_{\mathrm{w}}$ have to be optimized. To achieve this, we use the
 evidence
-approximation<sup>[\[9\]](#cite_note-gull:book:1989-9)[\[10\]](#cite_note-mackay:neu:2012-10)[\[11\]](#cite_note-jinnouchi:pcl:2017-11)</sup>
+approximation[^gull:book:1989-9][^mackay:neu:2012-10][^jinnouchi:pcl:2017-11]
 (also called as empirical bayes, 2 maximum likelihood or generalized
 maximum likelihood), which maximizes the evidence function (also called
 model evidence) defined as
@@ -856,7 +856,7 @@ $p
 \mathbf{w} \right) p \left( \mathbf{w} | \mathbf{Y} \right) d\mathbf{w}$
 
 and the completing square
-method<sup>[\[8\]](#cite_note-bishop:book:2006-8)</sup>
+method[^bishop:book:2006-8]
 the distribution of $p \left( \mathbf{y} |
 \mathbf{Y} \right)$ is written as
 
@@ -896,7 +896,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Spilling factor">edit</a> \| (./index.php.md)\]
 
 The spilling
-factor<sup>[\[2\]](#cite_note-jinnouchi2:arx:2019-2)[\[12\]](#cite_note-miwa:prb:2016-12)</sup>
+factor[^jinnouchi2:arx:2019-2][^miwa:prb:2016-12]
 $s_{i}$ is a measure of the overlap (or similarity) of
 a given structural environment on an atom $\mathbf{X}_{i}$ with the local reference configurations
 $\mathbf{X}_{i_{\mathrm{B}}}$ written as
@@ -955,7 +955,7 @@ $\mathbf{U} = (\mathbf{u}_{1},\mathbf{u}_{2},...,\mathbf{u}_{N_{B}}),
 \\... \\ u_{N_{B}j} \end{array} \right)$
 
 In contrast to the original CUR
-algorithm<sup>[\[13\]](#cite_note-mahoney:pnas:2009-13)</sup>
+algorithm[^mahoney:pnas:2009-13]
 that was developed to efficiently select a few significant columns of
 the matrix $\mathbf{K}$,
 we search for (few) insignificant local configurations and remove them.
@@ -1035,75 +1035,18 @@ $x_{\mathrm{spars}}$ (see also
 href="/wiki/index.php?title=Machine_learning_force_field:_Theory&amp;veaction=edit&amp;section=28"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-jinnouchi:prl:2019_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.122.225701"
-    class="external text" rel="nofollow">R. Jinnouchi, J. Lahnsteiner, F.
-    Karsai, G. Kresse, and M. Bokdam, Phys. Rev. Lett. <strong>122</strong>,
-    225701 (2019).</a>
-2.  ↑
-    <sup>[a](#cite_ref-jinnouchi2:arx:2019_2-0)</sup>
-    <sup>[b](#cite_ref-jinnouchi2:arx:2019_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.100.014105"
-    class="external text" rel="nofollow">R. Jinnouchi, F. Karsai, and G.
-    Kresse, Phys. Rev. B <strong>100</strong>, 014105 (2019).</a>
-3.  ↑
-    <sup>[a](#cite_ref-jinnouchi:jcm:20_3-0)</sup>
-    <sup>[b](#cite_ref-jinnouchi:jcm:20_3-1)</sup>
-    <a href="https://doi.org/10.1063/5.0009491" class="external text"
-    rel="nofollow">R. Jinnouchi, F. Karsai, C. Verdi, R. Asahi, and G.
-    Kresse, J. Chem. Phys. <strong>152</strong>, 234102 (2020).</a>
-4.  [↑](#cite_ref-bartok:prb:2013_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.87.184115"
-    class="external text" rel="nofollow">A. P. Bartók, R. Kondor, and G.
-    Csányi, Phys. Rev. B <strong>87</strong>, 184115 (2013).</a>
-5.  [↑](#cite_ref-bartok:prl:2010_5-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.104.136403"
-    class="external text" rel="nofollow">A. P. Bartók, M.C. Payne, R.
-    Kondor, and G. Csányi, Phys. Rev. Lett <strong>104</strong>, 136403
-    (2010).</a>
-6.  [↑](#cite_ref-boyd:book:2000_6-0)
-    <a href="https://link.springer.com/gp/book/9783540514879"
-    class="external text" rel="nofollow">J. P. Boyd, Chebyshev and Fourier
-    Spectral Methods (Dover Publications, New York, 2000).</a>
-7.  [↑](#cite_ref-csanyi:npj:2022_7-0)
-    <a href="https://doi.org/10.1038/s41524-022-00847-y"
-    class="external text" rel="nofollow">J. P. Darby, J. R. Kermode, and G.
-    Csanyi, <em>Compressing local atomic neighbourhood descriptors</em>, New
-    Phys. J. <strong>8</strong>, 166 (2022).</a>
-8.  ↑
-    <sup>[a](#cite_ref-bishop:book:2006_8-0)</sup>
-    <sup>[b](#cite_ref-bishop:book:2006_8-1)</sup>
-    <sup>[c](#cite_ref-bishop:book:2006_8-2)</sup>
-    <a href="https://www.springer.com/gp/book/9780387310732"
-    class="external text" rel="nofollow">C. M. Bishop, Pattern Recognition
-    and Machine Learning, (New York: Springer), (2006).</a>
-9.  [↑](#cite_ref-gull:book:1989_9-0)
-    <a href="https://doi.org/10.1007/978-94-015-7860-8"
-    class="external text" rel="nofollow">S.F. Gull and J. Skilling, Maximum
-    Entropy Bayesian Methods, Fundam. Theor. Phys., 28th ed. (Springer,
-    Dordrecht, 1989).</a>
-10. [↑](#cite_ref-mackay:neu:2012_10-0)
-    <a href="https://doi.org/10.1162/neco.1992.4.3.415"
-    class="external text" rel="nofollow">D. J. C. Mackay, Neural Computation
-    <strong>4</strong>, 415 (1992).</a>
-11. [↑](#cite_ref-jinnouchi:pcl:2017_11-0)
-    <a href="https://doi.org/10.1021/acs.jpclett.7b02010"
-    class="external text" rel="nofollow">R. Jinnouchi and R. Asahi, J. Phys.
-    Chem. Lett. <strong>8</strong>, 4279 (2017).</a>
-12. [↑](#cite_ref-miwa:prb:2016_12-0)
-    <a href="https://doi.org/10.1103/PhysRevB.94.184109"
-    class="external text" rel="nofollow">K. Miwa and H. Ohno, Phys. Rev. B
-    <strong>94</strong>, 184109 (2016).</a>
-13. [↑](#cite_ref-mahoney:pnas:2009_13-0)
-    <a href="https://doi.org/10.1063/5.0009491" class="external text"
-    rel="nofollow">M. W. Mahoney and P. Drineas, Proc. Natl. Acad. Sci. USA
-    <strong>106</strong>, 697 (2009).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^jinnouchi:prl:2019-1]: [R. Jinnouchi, J. Lahnsteiner, F. Karsai, G. Kresse, and M. Bokdam, Phys. Rev. Lett. **122**, 225701 (2019).](https://doi.org/10.1103/PhysRevLett.122.225701)
+[^jinnouchi2:arx:2019-2]: [R. Jinnouchi, F. Karsai, and G. Kresse, Phys. Rev. B **100**, 014105 (2019).](https://doi.org/10.1103/PhysRevB.100.014105)
+[^jinnouchi:jcm:20-3]: [R. Jinnouchi, F. Karsai, C. Verdi, R. Asahi, and G. Kresse, J. Chem. Phys. **152**, 234102 (2020).](https://doi.org/10.1063/5.0009491)
+[^bartok:prb:2013-4]: [A. P. Bartók, R. Kondor, and G. Csányi, Phys. Rev. B **87**, 184115 (2013).](https://doi.org/10.1103/PhysRevB.87.184115)
+[^bartok:prl:2010-5]: [A. P. Bartók, M.C. Payne, R. Kondor, and G. Csányi, Phys. Rev. Lett **104**, 136403 (2010).](https://doi.org/10.1103/PhysRevLett.104.136403)
+[^boyd:book:2000-6]: [J. P. Boyd, Chebyshev and Fourier Spectral Methods (Dover Publications, New York, 2000).](https://link.springer.com/gp/book/9783540514879)
+[^csanyi:npj:2022-7]: [J. P. Darby, J. R. Kermode, and G. Csanyi, *Compressing local atomic neighbourhood descriptors*, New Phys. J. **8**, 166 (2022).](https://doi.org/10.1038/s41524-022-00847-y)
+[^bishop:book:2006-8]: [C. M. Bishop, Pattern Recognition and Machine Learning, (New York: Springer), (2006).](https://www.springer.com/gp/book/9780387310732)
+[^gull:book:1989-9]: [S.F. Gull and J. Skilling, Maximum Entropy Bayesian Methods, Fundam. Theor. Phys., 28th ed. (Springer, Dordrecht, 1989).](https://doi.org/10.1007/978-94-015-7860-8)
+[^mackay:neu:2012-10]: [D. J. C. Mackay, Neural Computation **4**, 415 (1992).](https://doi.org/10.1162/neco.1992.4.3.415)
+[^jinnouchi:pcl:2017-11]: [R. Jinnouchi and R. Asahi, J. Phys. Chem. Lett. **8**, 4279 (2017).](https://doi.org/10.1021/acs.jpclett.7b02010)
+[^miwa:prb:2016-12]: [K. Miwa and H. Ohno, Phys. Rev. B **94**, 184109 (2016).](https://doi.org/10.1103/PhysRevB.94.184109)
+[^mahoney:pnas:2009-13]: [M. W. Mahoney and P. Drineas, Proc. Natl. Acad. Sci. USA **106**, 697 (2009).](https://doi.org/10.1063/5.0009491)

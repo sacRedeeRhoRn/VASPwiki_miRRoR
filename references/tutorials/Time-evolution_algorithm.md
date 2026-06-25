@@ -20,7 +20,7 @@ time-dependent density-functional theory (TDDFT).
 
 For both frameworks, BSE and TDDFT, users can select two different
 strategies to compute $\epsilon_{ij}(\omega)$. The first is based on the eigendecomposition of the
-electron-hole hamiltonian, $H^\mathrm{exc}$<sup>[\[1\]](#cite_note-sander:prb:15-1)</sup>.
+electron-hole hamiltonian, $H^\mathrm{exc}$[^sander:prb:15-1].
 It allows for the evaluation of $\epsilon_{ij}(\omega)$ by initially obtaining the eigenvalues and
 eigenvectors of $H^\mathrm{exc}$ and then using both to evaluate
 $\epsilon_{ij}(\omega)$. This strategy is based on the
@@ -30,7 +30,7 @@ title="Bethe-Salpeter equations">Bethe-Salpeter equation</a> or the
 equation](../methods/Time-dependent_density-functional_theory_calculations.md).
 The second strategy transforms the mathematical expression of
 $\epsilon_{ij}(\omega)$ into a time-dependent
-integral<sup>[\[2\]](#cite_note-sander:jcp:2017-2)</sup>.
+integral[^sander:jcp:2017-2].
 By propagating the dipolar moments in time and then applying a Fourier
 transform, VASP can compute $\epsilon_{ij}(\omega)$.
 
@@ -175,7 +175,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: The macroscopic-dielectric function as a time-dependent integral">edit</a> \| (./index.php.md)\]
 
 The starting point is that one can re-write $\epsilon_{ij}(\omega)$ as a time-dependent
-integral<sup>[\[3\]](#cite_note-schmidt:prb:2003-3)</sup>.
+integral[^schmidt:prb:2003-3].
 It starts from its expression, given by
 
 $\epsilon^M(\omega)=1+\frac{4 \pi}{\Omega_0} \sum_\lambda\left|\sum_{c
@@ -247,7 +247,7 @@ title="Edit section: Perturbing all transitions with a delta-like potential">edi
 
 In order to probe all possible $v\to c$
 transitions, a time-dependent term is added to the
-hamiltonian<sup>[\[2\]](#cite_note-sander:jcp:2017-2)</sup>
+hamiltonian[^sander:jcp:2017-2]
 
 $V_\mathrm{ext}(\mathbf r, t) = \lambda \mathbf r\cdot \mathbf
 D\delta(t),$
@@ -353,7 +353,7 @@ By setting [LADDER](../incar-tags/LADDER.md)=.TRUE. the interaction
 hamiltonian will include the screened exchange interaction potential,
 $W(\mathbf r,\mathbf r';\omega)$. This treats the
 electron-hole interaction by including the ladder diagrams from
-MBPT<sup>[\[1\]](#cite_note-sander:prb:15-1)</sup>.
+MBPT[^sander:prb:15-1].
 This term also has the correct long-range behaviour, meaning that it can
 properly describe bound electron-hole pairs in solids and large
 molecules.
@@ -672,28 +672,6 @@ href="/wiki/index.php?title=Time-evolution_algorithm&amp;veaction=edit&amp;secti
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-sander:prb:15_1-0)</sup>
-    <sup>[b](#cite_ref-sander:prb:15_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-2.  ↑
-    <sup>[a](#cite_ref-sander:jcp:2017_2-0)</sup>
-    <sup>[b](#cite_ref-sander:jcp:2017_2-1)</sup>
-    <a href="http://doi.org/10.1063/1.4975193" class="external text"
-    rel="nofollow">T. Sander, G. Kresse, <em>Macroscopic dielectric function
-    within time-dependent density functional theory—Real time evolution
-    versus the Casida approach</em> , J. Chem. Phys. <em>146</em>, 064110
-    (2017)</a>
-3.  [↑](#cite_ref-schmidt:prb:2003_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.67.08530"
-    class="external text" rel="nofollow">W. G. Schmidt, S. Glutsch, P. H.
-    Hahn, and F. Bechstedt, <em>Efficient O(N2) method to solve the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>67</strong>, 085307
-    (2003)</a>
-
-
+[^sander:prb:15-1]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)
+[^sander:jcp:2017-2]: [T. Sander, G. Kresse, *Macroscopic dielectric function within time-dependent density functional theory—Real time evolution versus the Casida approach* , J. Chem. Phys. *146*, 064110 (2017)](http://doi.org/10.1063/1.4975193)
+[^schmidt:prb:2003-3]: [W. G. Schmidt, S. Glutsch, P. H. Hahn, and F. Bechstedt, *Efficient O(N2) method to solve the Bethe-Salpeter equation*, Phys. Rev. B **67**, 085307 (2003)](https://doi.org/10.1103/PhysRevB.67.08530)

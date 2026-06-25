@@ -89,7 +89,7 @@ atomic cores). Thus, NMR calculations
 version of the
 <a href="/wiki/PAW_method" class="mw-redirect" title="PAW method">PAW
 method</a>, the gauge-invariant PAW (GIPAW)
-method<sup>[\[1\]](#cite_note-pickard:prb:2001-1)[\[2\]](#cite_note-yates:prb:2007-2)</sup>
+method[^pickard:prb:2001-1][^yates:prb:2007-2]
 that properly ensures the gauge invariance. The NMR currents
 ([WRT_NMRCUR](../incar-tags/WRT_NMRCUR.md)) are computed using linear
 response theory.
@@ -107,7 +107,7 @@ Nuclear-independent chemical shielding (NICS) is a computational method
 used to quantify aromaticity in molecules by calculating the magnetic
 shielding at a virtual point (not at a nucleus) in space, typically at
 the center of a ring or above it
-<sup>[\[3\]](#cite_note-schleyer:1996-3)[\[4\]](#cite_note-chen:schleyer:2005-4)</sup>.
+[^schleyer:1996-3][^chen:schleyer:2005-4].
 See [NUCIND](../incar-tags/NUCIND.md) for more information.
 
 ## Magnetic susceptibility\[<a
@@ -117,7 +117,7 @@ title="Edit section: Magnetic susceptibility">edit</a> \| (./index.php.md)\]
 
 The macroscopic magnetic susceptibility $\chi$ is
 defined by
-<sup>[\[5\]](#cite_note-mauri:louie:1996-5)</sup>
+[^mauri:louie:1996-5]
 
 $\textbf{B}_{\textrm{in}}^{(1)}(\textbf{G}=0) = \frac{8 \pi}{3} \chi
 \textbf{B}_{ext},$
@@ -131,11 +131,11 @@ It is calculated within linear response theory
 ([`LCHIMAG`](../incar-tags/LCHIMAG.md)` = True`), where a key variable
 *Q<sub>ij</sub>* is approximated in two ways. The so-called *pGv*
 approximation is used by default
-<sup>[\[2\]](#cite_note-yates:prb:2007-2)</sup>,
+[^yates:prb:2007-2],
 where *p* is momentum, *v* is velocity, and *G* is a Green's function.
 An alternative approach, the *vGv* approximation is available to
 calculate the susceptibility
-<sup>[\[6\]](#cite_note-avezac:prb:2007-6)</sup>.
+[^avezac:prb:2007-6].
 See [LVGVCALC](../incar-tags/LVGVCALC.md) and
 [LVGVAPPL](../incar-tags/LVGVAPPL.md) to control the approximation.
 
@@ -164,7 +164,7 @@ Nuclei with **I** \> ± ½ have a non-zero electric field gradient (EFG)
 and an electronic quadrupolar moment. The electric quadrupolar moment
 couples with the EFG and so the chemical environment of the nucleus may
 be probed using nuclear quadrupole resonance (NQR)
-<sup>[\[7\]](#cite_note-nqr:web-7)</sup>
+[^nqr:web-7]
 (sometimes called zero-field NMR spectroscopy). The EFG is the second
 derivative of the potential $V$:
 
@@ -183,7 +183,7 @@ In VASP, the EFG is calculated using the [LEFG](../incar-tags/LEFG.md) tag.
 The commonly reported nuclear quadrupolar coupling constant
 *C<sub>q</sub>* is then printed using isotope-specific quadrupole moment
 defined using [QUAD_EFG](../incar-tags/QUAD_EFG.md)
-<sup>[\[8\]](#cite_note-petrilli:prb:1998-8)</sup>.
+[^petrilli:prb:1998-8].
 
 - Learn [how to perform an electric field gradient
   calculation](../tutorials/Calculating_the_electric_field_gradient.md).
@@ -211,7 +211,7 @@ describes the interaction between a nuclear spin
 $S^I$ and the electronic spin distribution
 $S^e$. In most cases associated with a paramagnetic
 defect state measureable by electron paramagnetic resonance (EPR)
-<sup>[\[9\]](#cite_note-weil:bolton:2007-9)</sup>:
+[^weil:bolton:2007-9]:
 
 $E=\sum_{ij} S^e_i A^I_{ij} S^I_j.$
 
@@ -222,7 +222,7 @@ and anisotropic (or dipolar contributions) $A^I_{ani}$:
 $A^I_{i,j} = (A^I_{iso})_{i,j} + (A^I_{ani})_{i,j}.$
 
 $A^I_{iso}$ is calculated based on the
-spin-density<sup>[\[10\]](#cite_note-szasz:prb:2013-10)</sup>
+spin-density[^szasz:prb:2013-10]
 and $A^I_{ani}$
 is calculated based on the dipolar-dipolar contribution terms
 $W_{i,j}(\textbf{R})$. The hyperfine tensor calculation
@@ -273,63 +273,13 @@ href="/wiki/index.php?title=Category:NMR&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-pickard:prb:2001_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.63.245101"
-    class="external text" rel="nofollow">C. J. Pickard and F. Mauri,
-    <em>All-electron magnetic response with pseudopotentials: NMR chemical
-    shifts</em>, Phys. Rev. B <strong>63</strong>, 245101 (2001).</a>
-2.  ↑
-    <sup>[a](#cite_ref-yates:prb:2007_2-0)</sup>
-    <sup>[b](#cite_ref-yates:prb:2007_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.76.024401"
-    class="external text" rel="nofollow">J. R. Yates, C. J. Pickard, and F.
-    Mauri, <em>Calculation of NMR chemical shifts for extended systems using
-    ultrasoft pseudopotentials</em>, Phys. Rev. B <strong>76</strong>,
-    024401 (2007).</a>
-3.  [↑](#cite_ref-schleyer:1996_3-0)
-    <a href="https://doi.org/10.1021/ja960582d" class="external text"
-    rel="nofollow">P. von Ragué Schleyer, C. Maerker, A. Dransfeld, H. Jiao,
-    and N. J. R. van Eikema Hommes, <em>Nucleus-Independent Chemical
-    Shifts:  A Simple and Efficient Aromaticity Probe</em>, J. Am. Chem.
-    Soc. <strong>118</strong>, 6317 (1996).</a>
-4.  [↑](#cite_ref-chen:schleyer:2005_4-0)
-    <a href="https://doi.org/10.1021/cr030088+" class="external text"
-    rel="nofollow">Z. Chen, C. S. Wannere, C. Corminboeuf, R. Puchta, and P.
-    von Ragué Schleyer, <em>Nucleus-Independent Chemical Shifts (NICS) as an
-    Aromaticity Criterion</em>, Chem. Rev. 10, <strong>105</strong>,
-    3842–3888 (2005).</a>
-5.  [↑](#cite_ref-mauri:louie:1996_5-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.76.4246"
-    class="external text" rel="nofollow">F. Mauri and S. G. Louie,
-    <em>Magnetic Susceptibility of Insulators from First Principles</em>,
-    Phys. Rev. Lett. <strong>76</strong>, 4246 (1996).</a>
-6.  [↑](#cite_ref-avezac:prb:2007_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.165122"
-    class="external text" rel="nofollow">M. d'Avezac, N. Marzari, and F.
-    Mauri, <em>Spin and orbital magnetic response in metals: Susceptibility
-    and NMR shifts</em>, Phys. Rev. B <strong>76</strong>, 165122
-    (2007).</a>
-7.  [↑](#cite_ref-nqr:web_7-0)
-    <a href="https://en.wikipedia.org/wiki/Nuclear_quadrupole_resonance"
-    class="external text" rel="nofollow">Nuclear quadrupole resonance,
-    www.wikipedia.org (2025)</a>
-8.  [↑](#cite_ref-petrilli:prb:1998_8-0)
-    <a href="https://doi.org/10.1103/PhysRevB.57.14690"
-    class="external text" rel="nofollow">H. M. Petrilli, P. E. Blöchl, P.
-    Blaha, and K. Schwarz, <em>Electric-field-gradient calculations using
-    the projector augmented wave method</em>, Phys. Rev. B
-    <strong>57</strong>, 14690 (1998).</a>
-9.  [↑](#cite_ref-weil:bolton:2007_9-0)
-    <a href="https://doi.org/10.1002/0470084987" class="external text"
-    rel="nofollow">J. Weil and J. Bolton, <em>Electron Paramagnetic
-    Resonance: Elementary Theory and Practical Applications</em>,
-    (2007).</a>
-10. [↑](#cite_ref-szasz:prb:2013_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.88.075202"
-    class="external text" rel="nofollow">K. Szasz, T. Hornos, M. Marsman,
-    and A. Gali, <em>Hyperfine coupling of point defects in semiconductors
-    by hybrid density functional calculations: The role of core spin
-    polarization</em>, Phys. Rev. B, <strong>88</strong>, 075202 (2013).</a>
-
-
+[^pickard:prb:2001-1]: [C. J. Pickard and F. Mauri, *All-electron magnetic response with pseudopotentials: NMR chemical shifts*, Phys. Rev. B **63**, 245101 (2001).](https://doi.org/10.1103/PhysRevB.63.245101)
+[^yates:prb:2007-2]: [J. R. Yates, C. J. Pickard, and F. Mauri, *Calculation of NMR chemical shifts for extended systems using ultrasoft pseudopotentials*, Phys. Rev. B **76**, 024401 (2007).](https://doi.org/10.1103/PhysRevB.76.024401)
+[^schleyer:1996-3]: [P. von Ragué Schleyer, C. Maerker, A. Dransfeld, H. Jiao, and N. J. R. van Eikema Hommes, *Nucleus-Independent Chemical Shifts:  A Simple and Efficient Aromaticity Probe*, J. Am. Chem. Soc. **118**, 6317 (1996).](https://doi.org/10.1021/ja960582d)
+[^chen:schleyer:2005-4]: [Z. Chen, C. S. Wannere, C. Corminboeuf, R. Puchta, and P. von Ragué Schleyer, *Nucleus-Independent Chemical Shifts (NICS) as an Aromaticity Criterion*, Chem. Rev. 10, **105**, 3842–3888 (2005).](https://doi.org/10.1021/cr030088+)
+[^mauri:louie:1996-5]: [F. Mauri and S. G. Louie, *Magnetic Susceptibility of Insulators from First Principles*, Phys. Rev. Lett. **76**, 4246 (1996).](https://doi.org/10.1103/PhysRevLett.76.4246)
+[^avezac:prb:2007-6]: [M. d'Avezac, N. Marzari, and F. Mauri, *Spin and orbital magnetic response in metals: Susceptibility and NMR shifts*, Phys. Rev. B **76**, 165122 (2007).](https://doi.org/10.1103/PhysRevB.76.165122)
+[^nqr:web-7]: [Nuclear quadrupole resonance, www.wikipedia.org (2025)](https://en.wikipedia.org/wiki/Nuclear_quadrupole_resonance)
+[^petrilli:prb:1998-8]: [H. M. Petrilli, P. E. Blöchl, P. Blaha, and K. Schwarz, *Electric-field-gradient calculations using the projector augmented wave method*, Phys. Rev. B **57**, 14690 (1998).](https://doi.org/10.1103/PhysRevB.57.14690)
+[^weil:bolton:2007-9]: [J. Weil and J. Bolton, *Electron Paramagnetic Resonance: Elementary Theory and Practical Applications*, (2007).](https://doi.org/10.1002/0470084987)
+[^szasz:prb:2013-10]: [K. Szasz, T. Hornos, M. Marsman, and A. Gali, *Hyperfine coupling of point defects in semiconductors by hybrid density functional calculations: The role of core spin polarization*, Phys. Rev. B, **88**, 075202 (2013).](https://doi.org/10.1103/PhysRevB.88.075202)

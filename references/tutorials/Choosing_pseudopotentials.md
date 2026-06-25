@@ -547,10 +547,10 @@ following set of potentials. These are mostly [hard pseudopotentials
 of the GW variant, which were used with a 1000 eV plane-wave cutoff in a
 recent comparison study of DFT codes to reproduce all-electron results
 as accurately as
-possible<sup>[\[1\]](#cite_note-bosoni:natphysrev:2023-1)</sup>.
+possible[^bosoni:natphysrev:2023-1].
 However, in most cases, the results should be comparable with the
 standard potentials, while the computational effort will increase
-significantly<sup>[\[2\]](#cite_note-2)</sup>.
+significantly[^2].
 
 |  |
 |----|
@@ -885,9 +885,9 @@ calculation for NiO are given in the section on [NiO
 LSDA+U](../misc/NiO_LSDA+U.md). Here, we will focus on the
 effect of the choice of the Ni pseudopotential on the equation of state
 (EOS). We compare the results to reference Wien2K
-calculations<sup>[\[3\]](#cite_note-tran:prb:2006-3)</sup>,
+calculations[^tran:prb:2006-3],
 which do not use pseudopotentials, as Wien2K is an all-electron (AE)
-code<sup>[\[4\]](#cite_note-blaha:2020-4)</sup>.
+code[^blaha:2020-4].
 
 The Ni, Ni_pv, and Ni_sv_GW pseudopotentials of the
 [potpaw_PBE.64](../input-files/Available_pseudopotentials.md) "Available pseudopotentials")
@@ -949,40 +949,7 @@ href="/wiki/index.php?title=Choosing_pseudopotentials&amp;veaction=edit&amp;sect
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-bosoni:natphysrev:2023_1-0)
-    <a href="https://doi.org/10.1038/s42254-023-00655-3"
-    class="external text" rel="nofollow">Emanuele Bosoni, Louis Beal, Marnik
-    Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin Callsen, Stefaan
-    Cottenier, Augustin Degomme, Vladimir Dikan, Kristjan Eimre, Espen
-    Flage-Larsen, Marco Fornari, Alberto Garcia, Luigi Genovese, Matteo
-    Giantomassi, Sebastiaan P. Huber, Henning Janssen, Georg Kastlunger,
-    Matthias Krack, Georg Kresse, Thomas D. Kühne, Kurt Lejaeghere, Georg K.
-    H. Madsen, Martijn Marsman, Nicola Marzari, Gregor Michalicek, Hossein
-    Mirhosseini, Tiziano M. A. Müller, Guido Petretto, Chris J. Pickard,
-    Samuel Poncé, Gian-Marco Rignanese, Oleg Rubel, Thomas Ruh, Michael
-    Sluydts, Danny E. P. Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel
-    Wortmann, Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu,
-    Giovanni Pizzi, <em>How to verify the precision of
-    density-functional-theory implementations via reproducible and universal
-    workflows</em>, Nat Rev Phys 6, 45–58 (2024).</a>
-2.  [↑](#cite_ref-2)
-    For the potpaw_PBE.64 potential set,
-    <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> is
-    on average ~26 eV (~11%) and [EAUG](../incar-tags/EAUG.md) ~210 eV
-    (~42%) larger for the GW potentials compared to their standard
-    counterparts with the same valency.
-3.  [↑](#cite_ref-tran:prb:2006_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.74.155108"
-    class="external text" rel="nofollow">F. Tran, P. Blaha, and K. Schwarz,
-    <em>Hybrid exchange-correlation energy functionals for strongly
-    correlated electrons: Applications to transition-metal monoxides</em>,
-    Phys. Rev. B <strong>74</strong>, 155108 (2006).</a>
-4.  [↑](#cite_ref-blaha:2020_4-0)
-    <a href="https://doi.org/10.1063/1.5143061" class="external text"
-    rel="nofollow">P. Blaha, K. Schwarz. F. Tran, R. Laskowski, G. K. H.
-    Madsen, and L. D. Marks, <em>WIEN2k: An APW+lo program for calculating
-    the properties of solids</em>, J. Chem. Phys. <strong>152</strong>,
-    074101 (2020).</a>
-
-
+[^bosoni:natphysrev:2023-1]: [Emanuele Bosoni, Louis Beal, Marnik Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin Callsen, Stefaan Cottenier, Augustin Degomme, Vladimir Dikan, Kristjan Eimre, Espen Flage-Larsen, Marco Fornari, Alberto Garcia, Luigi Genovese, Matteo Giantomassi, Sebastiaan P. Huber, Henning Janssen, Georg Kastlunger, Matthias Krack, Georg Kresse, Thomas D. Kühne, Kurt Lejaeghere, Georg K. H. Madsen, Martijn Marsman, Nicola Marzari, Gregor Michalicek, Hossein Mirhosseini, Tiziano M. A. Müller, Guido Petretto, Chris J. Pickard, Samuel Poncé, Gian-Marco Rignanese, Oleg Rubel, Thomas Ruh, Michael Sluydts, Danny E. P. Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel Wortmann, Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu, Giovanni Pizzi, *How to verify the precision of density-functional-theory implementations via reproducible and universal workflows*, Nat Rev Phys 6, 45–58 (2024).](https://doi.org/10.1038/s42254-023-00655-3)
+[^2]: For the potpaw_PBE.64 potential set, [ENMAX](/wiki/ENMAX "ENMAX") is on average ~26 eV (~11%) and [EAUG](/wiki/EAUG "EAUG") ~210 eV (~42%) larger for the GW potentials compared to their standard counterparts with the same valency.
+[^tran:prb:2006-3]: [F. Tran, P. Blaha, and K. Schwarz, *Hybrid exchange-correlation energy functionals for strongly correlated electrons: Applications to transition-metal monoxides*, Phys. Rev. B **74**, 155108 (2006).](https://doi.org/10.1103/PhysRevB.74.155108)
+[^blaha:2020-4]: [P. Blaha, K. Schwarz. F. Tran, R. Laskowski, G. K. H. Madsen, and L. D. Marks, *WIEN2k: An APW+lo program for calculating the properties of solids*, J. Chem. Phys. **152**, 074101 (2020).](https://doi.org/10.1063/1.5143061)

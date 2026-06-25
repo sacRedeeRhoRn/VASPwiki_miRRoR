@@ -106,7 +106,7 @@ title="Edit section: Micro-macro connection and relation to measured quantities"
 It is important to note that the actual measured quantity,
 $\epsilon_\mathrm{M}(\mathbf q, \omega)$, does not
 depend on the microscopic
-fields<sup>[\[1\]](#cite_note-onida:revmodphys:2002-1)</sup>.
+fields[^onida:revmodphys:2002-1].
 To connect both the microscopic and macroscopic quantities, an averaging
 procedure is taken out, so that
 
@@ -585,12 +585,4 @@ href="/wiki/index.php?title=Electron-energy-loss_spectrum&amp;veaction=edit&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-onida:revmodphys:2002_1-0)
-    <a href="https://link.aps.org/doi/10.1103/RevModPhys.74.601"
-    class="external text" rel="nofollow">G. Onida, L. Reining, and A. Rubio,
-    <em>Electronic excitations: density-functional versus many-body
-    Green's-function approaches</em>, Rev. Mod. Phys. <strong>74</strong>, 2
-    (2002).</a>
-
-
+[^onida:revmodphys:2002-1]: [G. Onida, L. Reining, and A. Rubio, *Electronic excitations: density-functional versus many-body Green's-function approaches*, Rev. Mod. Phys. **74**, 2 (2002).](https://link.aps.org/doi/10.1103/RevModPhys.74.601)

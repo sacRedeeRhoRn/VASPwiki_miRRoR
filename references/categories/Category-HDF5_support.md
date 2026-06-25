@@ -6,7 +6,7 @@
 
 Since VASP 6.2.0 we started supporting the feature of reading and
 writing hdf5 files. The HDF5 file format
-<sup>[\[1\]](#cite_note-hdf5format:web-1)</sup>
+[^hdf5format:web-1]
 is a hierarchical data file designed to store large amounts of numeric
 data. This file format combines the flexibility and hierarchy of an XML
 file with the speed and size economy of binary files. The writing and
@@ -72,22 +72,12 @@ screen. For example:
 The meaning of each of the energy values can be printed by replacing
 `energies` by `energies_tags` in the command above. For a complete list
 of HDF5 tools, the user is referred to the official HDF5 documentation
-<sup>[\[2\]](#cite_note-hdf5tools:web-2)</sup>.
+[^hdf5tools:web-2].
 
 ## References\[<a
 href="/wiki/index.php?title=Category:HDF5_support&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-hdf5format:web_1-0)
-    <a href="https://www.hdfgroup.org/solutions/hdf5/" class="external text"
-    rel="nofollow">https://www.hdfgroup.org/solutions/hdf5/ (2023).</a>
-2.  [↑](#cite_ref-hdf5tools:web_2-0)
-    <a
-    href="https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools"
-    class="external text"
-    rel="nofollow">https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools
-    (2023).</a>
-
-
+[^hdf5format:web-1]: [https://www.hdfgroup.org/solutions/hdf5/ (2023).](https://www.hdfgroup.org/solutions/hdf5/)
+[^hdf5tools:web-2]: [https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools (2023).](https://portal.hdfgroup.org/display/hdf5/hdf5+command-line+tools)

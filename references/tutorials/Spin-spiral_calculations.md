@@ -383,7 +383,7 @@ relative to the ferromagnet. The Γ–M minimum at **q** ≈ (0.21, 0, 0) is
 in good agreement with the helimagnetic propagation vector **q** =
 (0.220, 0, 0) measured for monolayer NiI<sub>2</sub> by spin-polarized
 scanning tunneling
-microscopy.<sup>[\[1\]](#cite_note-miao:pnas:25-1)</sup>
+microscopy.[^miao:pnas:25-1]
 
 |  |
 |----|
@@ -398,7 +398,7 @@ title="Edit section: Magnon dispersion and exchange interactions">edit</a> \| (.
 Scanning the spin-spiral energy *E*(**q**) as in [Example
 2](#Example_2:_Spin-spiral_energy_of_a_NiI2_monolayer) is the basis of
 the *frozen-magnon* method for extracting magnetic
-interactions.<sup>[\[2\]](#cite_note-marsman:prb:02-2)</sup>
+interactions.[^marsman:prb:02-2]
 Mapping the computed energies onto a classical Heisenberg model,
 
 $E({\bf q}) = E_0 - \sum_{\bf R} J({\bf R})\\ \cos({\bf q}\cdot{\bf R}),$
@@ -452,17 +452,5 @@ href="/wiki/index.php?title=Spin-spiral_calculations&amp;veaction=edit&amp;secti
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-miao:pnas:25_1-0)
-    <a href="https://doi.org/10.1073/pnas.2422868122" class="external text"
-    rel="nofollow">M.-P. Miao, N. Liu, W.-H. Zhang, D.-B. Wang, W. Ji, and
-    Y.-S. Fu, <em>Spin-resolved imaging of atomic-scale helimagnetism in
-    mono- and bilayer NiI<sub>2</sub></em>, Proc. Natl. Acad. Sci. U.S.A.
-    <strong>122</strong>, e2422868122 (2025).</a>
-2.  [↑](#cite_ref-marsman:prb:02_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.66.224409"
-    class="external text" rel="nofollow">M. Marsman and J. Hafner,
-    <em>Broken symmetries in the crystalline and magnetic structures of
-    γ-iron</em>, Phys. Rev. B <strong>66</strong>, 224409 (2002).</a>
-
-
+[^miao:pnas:25-1]: [M.-P. Miao, N. Liu, W.-H. Zhang, D.-B. Wang, W. Ji, and Y.-S. Fu, *Spin-resolved imaging of atomic-scale helimagnetism in mono- and bilayer NiI₂*, Proc. Natl. Acad. Sci. U.S.A. **122**, e2422868122 (2025).](https://doi.org/10.1073/pnas.2422868122)
+[^marsman:prb:02-2]: [M. Marsman and J. Hafner, *Broken symmetries in the crystalline and magnetic structures of γ-iron*, Phys. Rev. B **66**, 224409 (2002).](https://doi.org/10.1103/PhysRevB.66.224409)

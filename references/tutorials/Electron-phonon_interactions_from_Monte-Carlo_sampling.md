@@ -21,11 +21,11 @@ phonon calculations.
 
 The first implementation of electron-phonon interactions from MC
 sampling in VASP is found in Ref.
-<sup>[\[1\]](#cite_note-karsai:njp:2018-1)</sup>.
+[^karsai:njp:2018-1].
 
 The original publication of the ZG configuration (one-shot method) is
 found in Ref.
-<sup>[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>.
+[^zacharias:prb:2016-2].
 
 
 ## Contents
@@ -99,7 +99,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: ZG configuration (one-shot sampling)">edit</a> \| (./index.php.md)")\]
 
 M. Zacharias and F.
-Giustino<sup>[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>
+Giustino[^zacharias:prb:2016-2]
 introduced a one-shot method (named ZG configuration after the authors).
 This method is an approximation to full MC sampling. It only uses a
 single distorted structure and hence it is computationally much cheaper
@@ -107,7 +107,7 @@ than the full MC sampling. It retains an accuracy very close to the full
 MC sampling for converged supercell sizes. For example, we showed that
 for the zero-point renormalization of the band gap, the accuracy is
 within 5 meV between the ZG configurations and the full MC
-sampling<sup>[\[1\]](#cite_note-karsai:njp:2018-1)</sup>.
+sampling[^karsai:njp:2018-1].
 Hence we suggest using this method preferably, when convergence of the
 supercell size is hard to achieve or the 5 meV accuracy is enough.
 
@@ -184,22 +184,7 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=Electron-phonon_interactions_from_Monte-Carlo_sampling&amp;veaction=edit&amp;section=5"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-karsai:njp:2018_1-0)</sup>
-    <sup>[b](#cite_ref-karsai:njp:2018_1-1)</sup>
-    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
-    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
-    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
-2.  ↑
-    <sup>[a](#cite_ref-zacharias:prb:2016_2-0)</sup>
-    <sup>[b](#cite_ref-zacharias:prb:2016_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
-    Rev. B <strong>94</strong>, 075125 (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^karsai:njp:2018-1]: [F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008 (2018).](https://doi.org/10.1088/1367-2630/aaf53f)
+[^zacharias:prb:2016-2]: [M. Zacharias and F. Giustino, Phys. Rev. B **94**, 075125 (2016).](https://doi.org/10.1103/PhysRevB.94.075125)

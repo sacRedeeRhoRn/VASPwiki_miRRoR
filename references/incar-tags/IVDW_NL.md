@@ -19,9 +19,9 @@ select the kernel of the nonlocal van der Waals part of a functional
 
 IVDW_NL=1 corresponds to the
 kernel of Dion *et
-al.*<sup>[\[1\]](#cite_note-dion:prl:2004-1)</sup>
+al.*[^dion:prl:2004-1]
 and IVDW_NL=2 to the kernel
-rVV10<sup>[\[2\]](#cite_note-sabatini:prb:2013-2)</sup>.
+rVV10[^sabatini:prb:2013-2].
 Note that the kernel of Dion *et al.* contains one adjustable parameter
 ([ZAB_VDW](../redirects/ZAB_VDW.md)), while the rVV10 kernel contains
 two such parameters ([BPARAM](BPARAM.md) and
@@ -42,15 +42,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-IVDW_NL-_incategory-Examples
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-dion:prl:2004_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.92.246401"
-    class="external text" rel="nofollow">M. Dion, H. Rydberg, E. Schröder,
-    D. C. Langreth, and B. I. Lundqvist, Phys. Rev. Lett.
-    <strong>92</strong>, 246401 (2004).</a>
-2.  [↑](#cite_ref-sabatini:prb:2013_2-0)
-    <a href="http://doi.org/10.1103/PhysRevB.87.041108"
-    class="external text" rel="nofollow">R. Sabatini, T. Gorni, and S. de
-    Gironcoli, Phys. Rev. B <strong>87</strong>, 041108(R) (2013).</a>
-
-
+[^dion:prl:2004-1]: [M. Dion, H. Rydberg, E. Schröder, D. C. Langreth, and B. I. Lundqvist, Phys. Rev. Lett. **92**, 246401 (2004).](https://doi.org/10.1103/PhysRevLett.92.246401)
+[^sabatini:prb:2013-2]: [R. Sabatini, T. Gorni, and S. de Gironcoli, Phys. Rev. B **87**, 041108(R) (2013).](http://doi.org/10.1103/PhysRevB.87.041108)

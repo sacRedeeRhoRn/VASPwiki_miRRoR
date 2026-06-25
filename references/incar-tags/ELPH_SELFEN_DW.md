@@ -30,7 +30,7 @@ the [vaspout.h5](../output-files/Vaspout.h5.md) file as
 
 |  |
 |----|
-| **Mind:** The Debye-Waller self-energy is computed using the rigid-ion approximation<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>. |
+| **Mind:** The Debye-Waller self-energy is computed using the rigid-ion approximation[^giustino:rmp:2017-1]. |
 
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=ELPH_SELFEN_DW&amp;veaction=edit&amp;section=1"
@@ -50,11 +50,4 @@ href="/wiki/index.php?title=ELPH_SELFEN_DW&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-giustino:rmp:2017_1-0)
-    <a href="https://doi.org/10.1103/RevModPhys.89.015003"
-    class="external text" rel="nofollow">F. Giustino, <em>Electron-phonon
-    interactions from first principles</em>, Rev. Mod. Phys.
-    <strong>89</strong>, 015003 (2017).</a>
-
-
+[^giustino:rmp:2017-1]: [F. Giustino, *Electron-phonon interactions from first principles*, Rev. Mod. Phys. **89**, 015003 (2017).](https://doi.org/10.1103/RevModPhys.89.015003)

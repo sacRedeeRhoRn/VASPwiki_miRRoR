@@ -6,7 +6,7 @@
 
 
 Constrained molecular dynamics is performed using the
-SHAKE<sup>[\[1\]](#cite_note-ryckaertt:jcp:1977-1)</sup>
+SHAKE[^ryckaertt:jcp:1977-1]
 algorithm. In this algorithm, the Lagrangian for the system
 $\mathcal{L}$ is extended as follows:
 
@@ -98,10 +98,4 @@ href="/wiki/index.php?title=Constrained_molecular_dynamics&amp;veaction=edit&amp
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ryckaertt:jcp:1977_1-0)
-    <a href="http://dx.doi.org/10.1016/0021-9991(77)90098-5"
-    class="external text" rel="nofollow">J. P. Ryckaert, G. Ciccotti, and H.
-    J. C. Berendsen, J. Comp. Phys. <strong>23</strong>, 327 (1977).</a>
-
-
+[^ryckaertt:jcp:1977-1]: [J. P. Ryckaert, G. Ciccotti, and H. J. C. Berendsen, J. Comp. Phys. **23**, 327 (1977).](http://dx.doi.org/10.1016/0021-9991(77)90098-5)

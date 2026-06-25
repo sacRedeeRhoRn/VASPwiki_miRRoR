@@ -7,10 +7,10 @@
 This page details a few practical considerations for obtaining accurate
 and reliable transition state energies using the [Nudged Elastic
 Band](Nudged_elastic_bands.md)
-(NEB)<sup>[\[1\]](#cite_note-mills:surf-sci:1995-1)[\[2\]](#cite_note-jonsson:book:1998-2)</sup>
+(NEB)[^mills:surf-sci:1995-1][^jonsson:book:1998-2]
 and <a href="/wiki/IRC_calculations" class="mw-redirect"
 title="IRC calculations">Intrinsic Reaction Coordinate</a> (IRC)
-<sup>[\[3\]](#cite_note-hratchian:jpc:2002-3)</sup>
+[^hratchian:jpc:2002-3]
 methods implemented in VASP. We list a few common issues encountered
 when running calculations with the NEB and IRC methods and identify
 possible solutions.
@@ -168,24 +168,6 @@ href="/wiki/index.php?title=Practical_considerations_for_transition_state_findin
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-mills:surf-sci:1995_1-0)
-    <a href="http://doi.org/10.1016/0039-6028(94)00731-4"
-    class="external text" rel="nofollow">G. Mills, H. Jonsson and G. K.
-    Schenter, <em>Reversible work transition state theory: application to
-    dissociative adsorption of hydrogen</em>, Surf. Sci.,
-    <strong>324</strong>, 305 (1995).</a>
-2.  [↑](#cite_ref-jonsson:book:1998_2-0)
-    <a href="https://doi.org/10.1142/9789812839664_0016"
-    class="external text" rel="nofollow">H. Jonsson, G. Mills and K. W.
-    Jacobsen, <em>Nudged Elastic Band Method for Finding Minimum Energy
-    Paths of Transitions</em>, in <em>Classical and Quantum Dynamics in
-    Condensed Phase Simulations</em>, ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998).</a>
-3.  [↑](#cite_ref-hratchian:jpc:2002_3-0)
-    <a href="https://doi.org/10.1021/jp012125b" class="external text"
-    rel="nofollow">H. P. Hratchian and H. B. Schlegel, <em>Following
-    Reaction Pathways Using a Damped Classical Trajectory Algorithm</em>, J.
-    Phys. Chem. A <strong>106</strong>, 165 (2002).</a>
-
-
+[^mills:surf-sci:1995-1]: [G. Mills, H. Jonsson and G. K. Schenter, *Reversible work transition state theory: application to dissociative adsorption of hydrogen*, Surf. Sci., **324**, 305 (1995).](http://doi.org/10.1016/0039-6028(94)00731-4)
+[^jonsson:book:1998-2]: [H. Jonsson, G. Mills and K. W. Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions*, in *Classical and Quantum Dynamics in Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F. Coker (World Scientific, 1998).](https://doi.org/10.1142/9789812839664_0016)
+[^hratchian:jpc:2002-3]: [H. P. Hratchian and H. B. Schlegel, *Following Reaction Pathways Using a Damped Classical Trajectory Algorithm*, J. Phys. Chem. A **106**, 165 (2002).](https://doi.org/10.1021/jp012125b)

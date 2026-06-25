@@ -18,7 +18,7 @@ energy contributions using stochastic LTMP2</a> \>
 
 
 On this page, we explain how to perform a calculation using the
-**LTMP2**<sup>[\[1\]](#cite_note-schaefer2017-1)</sup>
+**LTMP2**[^schaefer2017-1]
 algorithm. Make sure you successfully completed the preparation steps <a
 href="/wiki/MP2_ground_state_calculation#Preparation:_the_Hartree-Fock_ground_state"
 class="mw-redirect" title="MP2 ground state calculation">Hartree-Fock
@@ -28,7 +28,7 @@ class="mw-redirect" title="MP2 ground state calculation">Hartree-Fock
 virtuals</a>.
 
 **NOTE:** *If you use this algorithm, please cite reference
-<sup>[\[1\]](#cite_note-schaefer2017-1)</sup>
+[^schaefer2017-1]
 in your publication in addition to the standard VASP reference.*
 
 
@@ -79,7 +79,7 @@ title="Edit section: NOMEGA flag">edit</a> \| (./index.php.md)\]
 The number of $\tau$-points
 is controlled by the NOMEGA flag. This is necessary to calculate the
 Laplace transformed energy denominator (see Ref
-<sup>[\[1\]](#cite_note-schaefer2017-1)</sup>
+[^schaefer2017-1]
 for details),
 
 $\frac{1}{\varepsilon_i + \varepsilon_j - \varepsilon_a -\varepsilon_b}
@@ -132,17 +132,6 @@ OpenMP threads per rank: 2
 href="/wiki/index.php?title=LTMP2_-_Tutorial&amp;veaction=edit&amp;section=5"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-schaefer2017_1-0)</sup>
-    <sup>[b](#cite_ref-schaefer2017_1-1)</sup>
-    <sup>[c](#cite_ref-schaefer2017_1-2)</sup>
-    <a href="http://dx.doi.org/10.1063/1.4976937" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    146, 104101 (2017).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^schaefer2017-1]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. 146, 104101 (2017).](http://dx.doi.org/10.1063/1.4976937)

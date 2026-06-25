@@ -8,7 +8,7 @@ The chemical shielding tensor *σ* is the relation between the induced
 and external magnetic fields and describes how much the electrons shield
 the nuclei from an external field. The absolute chemical shielding is
 calculated by linear response using [LCHIMAG](../incar-tags/LCHIMAG.md)
-<sup>[\[1\]](#cite_note-pickard:prb:2001-1)[\[2\]](#cite_note-yates:prb:2007-2)</sup>.
+[^pickard:prb:2001-1][^yates:prb:2007-2].
 The chemical shielding is directly related to the chemical shift *δ*
 recorded in nuclear magnetic resonance (NMR), cf. [NMR category
 page](../categories/Category-NMR.md) and
@@ -133,7 +133,7 @@ bias from any single calculation, a series of calculated and their
 corresponding experimental values are used. The experimental chemical
 shifts are plotted against the calculated chemical shieldings as is
 found in Fig. 3 of Ref.
-<sup>[\[3\]](#cite_note-dewijs:laskowski:jcp:2017-3)</sup>.
+[^dewijs:laskowski:jcp:2017-3].
 
 ## Recommendations and advice\[<a
 href="/wiki/index.php?title=Calculating_the_chemical_shieldings&amp;veaction=edit&amp;section=7"
@@ -204,7 +204,7 @@ containing H or first-row elements, and short bonds, the two-center
 contributions to the augmentation currents in the PAW spheres are
 important. In this case, [LLRAUG](../incar-tags/LLRAUG.md) = .TRUE. should
 be used
-<sup>[\[4\]](#cite_note-dewijs:jcp:2013-4)[\[5\]](#cite_note-dewijs:jcp:2021-5)</sup>.
+[^dewijs:jcp:2013-4][^dewijs:jcp:2021-5].
 
 Calculating the chemical shift can also be sped up by utilizing
 parallelisation. If you are using multiple k-points, then you can treat
@@ -348,36 +348,8 @@ href="/wiki/index.php?title=Calculating_the_chemical_shieldings&amp;veaction=edi
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-pickard:prb:2001_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.63.245101"
-    class="external text" rel="nofollow">C. J. Pickard and F. Mauri,
-    <em>All-electron magnetic response with pseudopotentials: NMR chemical
-    shifts</em>, Phys. Rev. B <strong>63</strong>, 245101 (2001).</a>
-2.  [↑](#cite_ref-yates:prb:2007_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.024401"
-    class="external text" rel="nofollow">J. R. Yates, C. J. Pickard, and F.
-    Mauri, <em>Calculation of NMR chemical shifts for extended systems using
-    ultrasoft pseudopotentials</em>, Phys. Rev. B <strong>76</strong>,
-    024401 (2007).</a>
-3.  [↑](#cite_ref-dewijs:laskowski:jcp:2017_3-0)
-    <a href="https://doi.org/10.1063/1.4975122" class="external text"
-    rel="nofollow">G. A. de Wijs, R. Laskowski, P. Blaha, R. W. A. Havenith,
-    G. Kresse, and M. Marsman, <em>NMR shieldings from density functional
-    perturbation theory: GIPAW versus all-electron calculations</em>, J.
-    Chem. Phys. <strong>146</strong>, 064115 (2017).</a>
-4.  [↑](#cite_ref-dewijs:jcp:2013_4-0)
-    <a href="https://doi.org/10.1063/1.4810799" class="external text"
-    rel="nofollow">F. Vasconcelos, G.A. de Wijs, R. W. A. Havenith, M.
-    Marsman, and G. Kresse, <em>Finite-field implementation of NMR chemical
-    shieldings for molecules: Direct and converse gauge-including
-    projector-augmented-wave methods</em>, J. Chem. Phys.
-    <strong>139</strong>, 014109 (2013).</a>
-5.  [↑](#cite_ref-dewijs:jcp:2021_5-0)
-    <a href="https://doi.org/10.1063/5.0069637" class="external text"
-    rel="nofollow">G.A. de Wijs, G. Kresse, R. W. A. Havenith, and M.
-    Marsman, <em>Comparing GIPAW with numerically exact chemical shieldings:
-    The role of two-center contributions to the induced current</em>, J.
-    Chem. Phys. <strong>155</strong>, 234101 (2021).</a>
-
-
+[^pickard:prb:2001-1]: [C. J. Pickard and F. Mauri, *All-electron magnetic response with pseudopotentials: NMR chemical shifts*, Phys. Rev. B **63**, 245101 (2001).](https://doi.org/10.1103/PhysRevB.63.245101)
+[^yates:prb:2007-2]: [J. R. Yates, C. J. Pickard, and F. Mauri, *Calculation of NMR chemical shifts for extended systems using ultrasoft pseudopotentials*, Phys. Rev. B **76**, 024401 (2007).](https://doi.org/10.1103/PhysRevB.76.024401)
+[^dewijs:laskowski:jcp:2017-3]: [G. A. de Wijs, R. Laskowski, P. Blaha, R. W. A. Havenith, G. Kresse, and M. Marsman, *NMR shieldings from density functional perturbation theory: GIPAW versus all-electron calculations*, J. Chem. Phys. **146**, 064115 (2017).](https://doi.org/10.1063/1.4975122)
+[^dewijs:jcp:2013-4]: [F. Vasconcelos, G.A. de Wijs, R. W. A. Havenith, M. Marsman, and G. Kresse, *Finite-field implementation of NMR chemical shieldings for molecules: Direct and converse gauge-including projector-augmented-wave methods*, J. Chem. Phys. **139**, 014109 (2013).](https://doi.org/10.1063/1.4810799)
+[^dewijs:jcp:2021-5]: [G.A. de Wijs, G. Kresse, R. W. A. Havenith, and M. Marsman, *Comparing GIPAW with numerically exact chemical shieldings: The role of two-center contributions to the induced current*, J. Chem. Phys. **155**, 234101 (2021).](https://doi.org/10.1063/5.0069637)

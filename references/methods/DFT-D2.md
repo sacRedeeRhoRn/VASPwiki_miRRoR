@@ -5,7 +5,7 @@
 
 
 In the DFT-D2 method of
-Grimme<sup>[\[1\]](#cite_note-grimme:jcc:06-1)</sup>
+Grimme[^grimme:jcc:06-1]
 the correction term takes the form:
 
 $E_{\mathrm{disp}} = -\frac{1}{2} \sum_{i=1}^{N_{at}}
@@ -56,11 +56,11 @@ usually fixed at 1.00.
 
 The performance of PBE-D2 method in optimization of various crystalline
 systems has been tested systematically in reference
-<sup>[\[2\]](#cite_note-bucko:jpca:10-2)</sup>.
+[^bucko:jpca:10-2].
 
 |  |
 |----|
-| **Important:** It is recommended to use the more advanced and more accurate method [DFT-D3](DFT-D3.md).<sup>[\[3\]](#cite_note-grimme:jcp:10-3)</sup> |
+| **Important:** It is recommended to use the more advanced and more accurate method [DFT-D3](DFT-D3.md).[^grimme:jcp:10-3] |
 
 ## Usage\[<a href="/wiki/index.php?title=DFT-D2&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
@@ -128,9 +128,7 @@ title="VDW RADIUS">VDW_RADIUS</a> has been increased from 30 to 50
 <li>Ewald's summation in the calculation of <span class="smj-container"
 style="opacity:.5">$E_{\mathrm{disp}}$</span> calculation (controlled via <a href="/wiki/LVDW_EWALD"
 title="LVDW EWALD">LVDW_EWALD</a>) is implemented according to reference
-<sup><a href="#cite_note-kerber:jcc:08-4"><span
-class="cite-bracket">[</span>4<span
-class="cite-bracket">]</span></a></sup> and is available as of
+[^kerber:jcc:08-4] and is available as of
 VASP.5.3.4.</li>
 </ul></td>
 </tr>
@@ -153,26 +151,9 @@ title="VDW SCALING">VDW_SCALING</a>, [VDW_D](../incar-tags/VDW_D.md),
 ## References\[<a href="/wiki/index.php?title=DFT-D2&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-grimme:jcc:06_1-0)
-    <a href="https://doi.org/10.1002/jcc.20495" class="external text"
-    rel="nofollow">S. Grimme, J. Comput. Chem. <strong>27</strong>, 1787
-    (2006).</a>
-2.  [↑](#cite_ref-bucko:jpca:10_2-0)
-    <a href="https://doi.org/10.1021/jp106469x" class="external text"
-    rel="nofollow">T. Bučko, J. Hafner, S. Lebègue, and J. G. Ángyán, J.
-    Phys. Chem. A <strong>114</strong>, 11814 (2010).</a>
-3.  [↑](#cite_ref-grimme:jcp:10_3-0)
-    <a href="https://doi.org/10.1063/1.3382344" class="external text"
-    rel="nofollow">S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem.
-    Phys. <strong>132</strong>, 154104 (2010).</a>
-4.  [↑](#cite_ref-kerber:jcc:08_4-0)
-    <a href="https://doi.org/10.1002/jcc.21069" class="external text"
-    rel="nofollow">T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem.
-    <strong>29</strong>, 2088 (2008).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^grimme:jcc:06-1]: [S. Grimme, J. Comput. Chem. **27**, 1787 (2006).](https://doi.org/10.1002/jcc.20495)
+[^bucko:jpca:10-2]: [T. Bučko, J. Hafner, S. Lebègue, and J. G. Ángyán, J. Phys. Chem. A **114**, 11814 (2010).](https://doi.org/10.1021/jp106469x)
+[^grimme:jcp:10-3]: [S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem. Phys. **132**, 154104 (2010).](https://doi.org/10.1063/1.3382344)
+[^kerber:jcc:08-4]: [T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem. **29**, 2088 (2008).](https://doi.org/10.1002/jcc.21069)

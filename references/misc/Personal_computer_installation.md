@@ -136,7 +136,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-10.2.1 | openmpi-4.1.0 | fftw-3.3.8 | openblas-0.3.13 |  | netlib-scalapack-2.1.0 | hdf5-1.10.6 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-10.2.1 | openmpi-4.1.0 | fftw-3.3.8 | openblas-0.3.13 |  | netlib-scalapack-2.1.0 | hdf5-1.10.6 | Memory-leak[^ompi-bug-1-1] |
 
 These packages can be installed directly from the command line like
 this:
@@ -551,7 +551,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.19 |  | netlib-scalapack-2.1.0 | hdf5-1.10.7 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.19 |  | netlib-scalapack-2.1.0 | hdf5-1.10.7 | Memory-leak[^ompi-bug-1-1] |
 
 These packages can be installed directly from the command line like
 this:
@@ -827,7 +827,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.5 | openblas-0.3.12 |  | netlib-scalapack-2.0.2 | hdf5-1.10.5 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.5 | openblas-0.3.12 |  | netlib-scalapack-2.0.2 | hdf5-1.10.5 | Memory-leak[^ompi-bug-1-1] |
 
 Some of these packages are available from the default package sources:
 
@@ -934,7 +934,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.15 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-11.2.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.15 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak[^ompi-bug-1-1] |
 
 Some of these packages are available from the default package sources:
 
@@ -1032,7 +1032,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.3.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.21 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-11.3.1 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.21 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak[^ompi-bug-1-1] |
 
 Some of these packages are available from the default package sources:
 
@@ -1131,7 +1131,7 @@ libraries from the system's package manager:
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
 | Compiler | MPI | FFT | BLAS | LAPACK | ScaLAPACK | HDF5 | Known issues |
-| gcc-11.5.0 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.26 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak<sup>[\[1\]](#cite_note-ompi-bug-1-1)</sup> |
+| gcc-11.5.0 | openmpi-4.1.1 | fftw-3.3.8 | openblas-0.3.26 |  | netlib-scalapack-2.2.0 | hdf5-1.12.1 | Memory-leak[^ompi-bug-1-1] |
 
 Some of these packages are available from the default package sources:
 
@@ -1329,18 +1329,4 @@ href="/wiki/index.php?title=Personal_computer_installation&amp;veaction=edit&amp
 class="mw-editsection-visualeditor"
 title="Edit section: Footnotes and references">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-ompi-bug-1_1-0)</sup>
-    <sup>[b](#cite_ref-ompi-bug-1_1-1)</sup>
-    <sup>[c](#cite_ref-ompi-bug-1_1-2)</sup>
-    <sup>[d](#cite_ref-ompi-bug-1_1-3)</sup>
-    <sup>[e](#cite_ref-ompi-bug-1_1-4)</sup>
-    <sup>[f](#cite_ref-ompi-bug-1_1-5)</sup>
-    A bug in OpenMPI versions 4.0.4-4.1.1
-    causes a memory leak in some ScaLAPACK calls. This mainly affects
-    long
-    [molecular-dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
-    runs. This issue is fixed as of openmpi-4.1.2.
-
-
+[^ompi-bug-1-1]: A bug in OpenMPI versions 4.0.4-4.1.1 causes a memory leak in some ScaLAPACK calls. This mainly affects long [molecular-dynamics](/wiki/Category:Molecular_dynamics "Category:Molecular dynamics") runs. This issue is fixed as of openmpi-4.1.2.

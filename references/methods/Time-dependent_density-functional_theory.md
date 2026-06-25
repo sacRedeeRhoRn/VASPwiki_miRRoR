@@ -8,7 +8,7 @@ Time-dependent density-functional theory (TDDFT) is an extension of
 density-functional theory (DFT) to systems with time-varying external
 potentials, enabling the computation of excited-state properties and
 response
-functions<sup>[\[1\]](#cite_note-onida:revmodphys:2002-1)</sup>.
+functions[^onida:revmodphys:2002-1].
 TDDFT calculations can be based on ground-state electronic structures
 obtained from DFT,
 <a href="/wiki/Hybrid_functionals" class="mw-redirect"
@@ -16,7 +16,7 @@ title="Hybrid functionals">hybrid functionals</a>, or even *GW*
 approximations.
 
 The theoretical foundation of TDDFT is the Runge-Gross
-theorem<sup>[\[2\]](#cite_note-runge:gross:1984-2)</sup>,
+theorem[^runge:gross:1984-2],
 which is the time-dependent analog of the Hohenberg-Kohn theorem of
 density-functional theory. It states that the time-dependent density
 $n(\mathbf r, t)$ is uniquely determined by the
@@ -196,7 +196,7 @@ Working within the frequency domain and using a basis set that considers
 transitions from valence to conduction states at the same **k** point
 (transition basis) makes it possible to recast the equation for
 $\chi(1,2)$ into an eigenvalue
-problem<sup>[\[3\]](#cite_note-casida:1995-3)</sup>
+problem[^casida:1995-3]
 
 $\left(\begin{array}{cc} \mathbf{A} & \mathbf{B} \\ \mathbf{B}^\* &
 \mathbf{A}^\* \end{array}\right)\left(\begin{array}{l}
@@ -283,7 +283,7 @@ title="Edit section: Time-evolution or real-time TDDFT">edit</a> \| (./index.php
 An alternative to solving the Casida equation is to compute the
 frequency-dependent response via real-time propagation of the Kohn-Sham
 orbitals
-([ALGO](../incar-tags/ALGO.md)=TIMEEV)<sup>[\[4\]](#cite_note-sander:jcp:2017-4)</sup>.
+([ALGO](../incar-tags/ALGO.md)=TIMEEV)[^sander:jcp:2017-4].
 The starting point is the time-dependent Kohn-Sham equation,
 
 $\mathrm i \frac{\partial}{\partial t}\left|\phi_{v\mathbf
@@ -369,7 +369,7 @@ title="Edit section: Connection to the dielectric function">edit</a> \| (./index
 The dielectric function is obtained by propagating the time-dependent
 coefficients $c_{cv\mathbf k}(t)$ and accumulating their overlap with the dipole vector
 $|\mu\rangle$ at each time step, followed by a Fourier
-transform<sup>[\[4\]](#cite_note-sander:jcp:2017-4)</sup>:
+transform[^sander:jcp:2017-4]:
 
 $\varepsilon_{ij}(\omega) = \delta_{ij} - \frac{4\pi e^2}{\Omega}
 \int_0^\infty \mathrm d t \sum_{cv\mathbf k}
@@ -478,7 +478,7 @@ $W(\mathbf r,\mathbf r';\omega)$ from
 title="Many-body perturbation theory">many-body perturbation theory</a>
 can be used. This treats the electron-hole interaction by including the
 ladder diagrams from many-body perturbation
-theory<sup>[\[5\]](#cite_note-sander:prb:15-5)</sup>,
+theory[^sander:prb:15-5],
 providing an alternative route to the correct long-range physics.
 
 ### Nanoquanta kernel\[<a
@@ -492,7 +492,7 @@ title="Many-body perturbation theory">many-body perturbation theory</a>
 that maps the [Bethe-Salpeter
 equation](../theory/Bethe-Salpeter_equation.md) (BSE)
 onto a TDDFT-like
-equation<sup>[\[6\]](#cite_note-sottile:prl:2003-6)</sup>.
+equation[^sottile:prl:2003-6].
 Rather than being a simple analytical form, it is constructed by
 requiring that the TDDFT response function reproduces the BSE response
 function. This leads to a kernel of the form
@@ -609,42 +609,9 @@ href="/wiki/index.php?title=Time-dependent_density-functional_theory&amp;veactio
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-onida:revmodphys:2002_1-0)
-    <a href="https://link.aps.org/doi/10.1103/RevModPhys.74.601"
-    class="external text" rel="nofollow">G. Onida, L. Reining, and A. Rubio,
-    <em>Electronic excitations: density-functional versus many-body
-    Green's-function approaches</em>, Rev. Mod. Phys. <strong>74</strong>, 2
-    (2002).</a>
-2.  [↑](#cite_ref-runge:gross:1984_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.52.997"
-    class="external text" rel="nofollow">E. Runge and E. K. U. Gross,
-    <em>Density-Functional Theory for Time-Dependent Systems</em>, Phys.
-    Rev. Lett. <strong>52</strong>, 997 (1984).</a>
-3.  [↑](#cite_ref-casida:1995_3-0)
-    <a href="https://doi.org/10.1142/9789812830586_0005"
-    class="external text" rel="nofollow">M. E. Casida, in <em>Recent
-    Advances in Density Functional Methods, Part I</em>, edited by D. P.
-    Chong (World Scientific, Singapore, 1995), p. 155.</a>
-4.  ↑
-    <sup>[a](#cite_ref-sander:jcp:2017_4-0)</sup>
-    <sup>[b](#cite_ref-sander:jcp:2017_4-1)</sup>
-    <a href="http://doi.org/10.1063/1.4975193" class="external text"
-    rel="nofollow">T. Sander, G. Kresse, <em>Macroscopic dielectric function
-    within time-dependent density functional theory—Real time evolution
-    versus the Casida approach</em> , J. Chem. Phys. <em>146</em>, 064110
-    (2017)</a>
-5.  [↑](#cite_ref-sander:prb:15_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-6.  [↑](#cite_ref-sottile:prl:2003_6-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.91.056402"
-    class="external text" rel="nofollow">F. Sottile, V. Olevano, and L.
-    Reining, <em>Parameter-Free Calculation of Response Functions in
-    Time-Dependent Density-Functional Theory</em>, Phys. Rev. Lett.
-    <strong>91</strong>, 056402 (2003).</a>
-
-
+[^onida:revmodphys:2002-1]: [G. Onida, L. Reining, and A. Rubio, *Electronic excitations: density-functional versus many-body Green's-function approaches*, Rev. Mod. Phys. **74**, 2 (2002).](https://link.aps.org/doi/10.1103/RevModPhys.74.601)
+[^runge:gross:1984-2]: [E. Runge and E. K. U. Gross, *Density-Functional Theory for Time-Dependent Systems*, Phys. Rev. Lett. **52**, 997 (1984).](https://doi.org/10.1103/PhysRevLett.52.997)
+[^casida:1995-3]: [M. E. Casida, in *Recent Advances in Density Functional Methods, Part I*, edited by D. P. Chong (World Scientific, Singapore, 1995), p. 155.](https://doi.org/10.1142/9789812830586_0005)
+[^sander:jcp:2017-4]: [T. Sander, G. Kresse, *Macroscopic dielectric function within time-dependent density functional theory—Real time evolution versus the Casida approach* , J. Chem. Phys. *146*, 064110 (2017)](http://doi.org/10.1063/1.4975193)
+[^sander:prb:15-5]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)
+[^sottile:prl:2003-6]: [F. Sottile, V. Olevano, and L. Reining, *Parameter-Free Calculation of Response Functions in Time-Dependent Density-Functional Theory*, Phys. Rev. Lett. **91**, 056402 (2003).](https://doi.org/10.1103/PhysRevLett.91.056402)

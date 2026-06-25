@@ -7,7 +7,7 @@
 The change in polarization from the displacement of an atom is not
 uniquely defined in periodic systems, where atoms are repeated in
 different cells and the charge can be
-generalized.<sup>[\[1\]](#cite_note-ghosez:michenaud:gonze:1998-1)</sup>
+generalized.[^ghosez:michenaud:gonze:1998-1]
 Born effective charges are one way of defining this dynamical charge.
 
 
@@ -42,7 +42,7 @@ $\mathcal{E}_i$ fixed by the periodic boundary
 conditions. The Born effective charge **Z\*** is the partial derivative
 of the polarization with respect to position *u* for zero macroscopic
 electric
-field.<sup>[\[2\]](#cite_note-gonze:prb:1997-2)</sup>
+field.[^gonze:prb:1997-2]
 As polarization is the first derivative of the total energy with respect
 to the macroscopic electric field, **Z\*** may be rearranged in terms of
 the partial derivative of the force **F** in direction *j* on atom *κ*
@@ -153,17 +153,5 @@ href="/wiki/index.php?title=Born_effective_charges&amp;veaction=edit&amp;section
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ghosez:michenaud:gonze:1998_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.58.6224" class="external text"
-    rel="nofollow">Ph. Ghosez, J.-P. Michenaud, and X. Gonze, <em>Dynamical
-    atomic charges: The case of AB⁢O3 compounds</em>, Phys. Rev. B
-    <strong>58</strong>, 6224 (1998).</a>
-2.  [↑](#cite_ref-gonze:prb:1997_2-0)
-    <a href="http://doi.org/10.1103/PhysRevB.55.10355" class="external text"
-    rel="nofollow">X. Gonze and C. Lee, <em>Dynamical matrices, Born
-    effective charges, dielectric permittivity tensors, and interatomic
-    force constants from density-functional perturbation theory</em>, Phys.
-    Rev. B <strong>55</strong>, 10355 (1997).</a>
-
-
+[^ghosez:michenaud:gonze:1998-1]: [Ph. Ghosez, J.-P. Michenaud, and X. Gonze, *Dynamical atomic charges: The case of AB⁢O3 compounds*, Phys. Rev. B **58**, 6224 (1998).](https://doi.org/10.1103/PhysRevB.58.6224)
+[^gonze:prb:1997-2]: [X. Gonze and C. Lee, *Dynamical matrices, Born effective charges, dielectric permittivity tensors, and interatomic force constants from density-functional perturbation theory*, Phys. Rev. B **55**, 10355 (1997).](http://doi.org/10.1103/PhysRevB.55.10355)

@@ -59,7 +59,7 @@ from field-polarized calculations, use
 | **Important:** One should be aware that when the electric field is chosen to be too large, the electric enthalpy functional will lose its minima, and VASP will not be able to find a stationary solution for the field-polarized orbitals. |
 
 This is discussed in some detail by Souza *et
-al.*.<sup>[\[1\]](#cite_note-souza:prl:02-1)</sup>
+al.*.[^souza:prl:02-1]
 VASP will produce a warning if:
 
 $e|\mathcal{E}\cdot \mathbf{a}_i|>\frac{1}{10}E_{\mathrm{gap}}/N_i,$
@@ -248,10 +248,4 @@ href="/wiki/index.php?title=EFIELD_PEAD&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-souza:prl:02_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.89.117602"
-    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. <strong>89</strong>, 117602 (2002).</a>
-
-
+[^souza:prl:02-1]: [I. Souza, J. Íñiguez, and D. Vanderbilt, Phys. Rev. Lett. **89**, 117602 (2002).](https://doi.org/10.1103/PhysRevLett.89.117602)

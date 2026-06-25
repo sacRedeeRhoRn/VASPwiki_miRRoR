@@ -9,7 +9,7 @@ magnetization rotates continuously from one unit cell to the next. In
 VASP they are modeled with a generalization of the Bloch condition,
 which captures incommensurate magnetic order in the primitive cell and
 avoids the need for large
-supercells.<sup>[\[1\]](#cite_note-marsman:prb:02-1)</sup>
+supercells.[^marsman:prb:02-1]
 
 This page describes the underlying formalism. For step-by-step
 instructions on setting up, running, and analyzing a spin-spiral
@@ -44,7 +44,7 @@ title="Edit section: Generalized Bloch condition">edit</a> \| (./index.php.md)\]
 
 Spin spirals may be conveniently modeled using a generalization of the
 Bloch
-condition<sup>[\[2\]](#cite_note-sandratskii:pssb:86-2)[\[1\]](#cite_note-marsman:prb:02-1)</sup>
+condition[^sandratskii:pssb:86-2][^marsman:prb:02-1]
 (set [`LNONCOLLINEAR`](../incar-tags/LNONCOLLINEAR.md)` = .TRUE.`
 and [`LSPIRAL`](../incar-tags/LSPIRAL.md)` = .TRUE.`):
 
@@ -134,7 +134,7 @@ $H^{\downarrow\downarrow}:\qquad |{\bf k} + {\bf G}|^2 \rightarrow
 Because the only change to the off-diagonal exchange-correlation
 potential is a phase modulation, a spin-spiral calculation has
 approximately the same computational cost as a standard noncollinear
-calculation<sup>[\[3\]](#cite_note-hobbs:prb:00-3)</sup>
+calculation[^hobbs:prb:00-3]
 of the primitive cell.
 
 ## Basis-set considerations\[<a
@@ -194,23 +194,6 @@ href="/wiki/index.php?title=Spin_spirals&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-marsman:prb:02_1-0)</sup>
-    <sup>[b](#cite_ref-marsman:prb:02_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.66.224409"
-    class="external text" rel="nofollow">M. Marsman and J. Hafner,
-    <em>Broken symmetries in the crystalline and magnetic structures of
-    γ-iron</em>, Phys. Rev. B <strong>66</strong>, 224409 (2002).</a>
-2.  [↑](#cite_ref-sandratskii:pssb:86_2-0)
-    <a href="https://doi.org/10.1002/pssb.2221360119" class="external text"
-    rel="nofollow">L. M. Sandratskii, <em>Energy band structure calculations
-    for crystals with spiral magnetic structure</em>, Phys. Status Solidi B
-    <strong>136</strong>, 167 (1986).</a>
-3.  [↑](#cite_ref-hobbs:prb:00_3-0)
-    <a href="http://doi.org/10.1103/PhysRevB.62.11556" class="external text"
-    rel="nofollow">Hobbs, D., G. Kresse, and J. Hafner, <em>Fully
-    unconstrained noncollinear magnetism within the projector augmented-wave
-    method.</em>, Phys. Rev. B <strong>62</strong>, 11556 (2000).</a>
-
-
+[^marsman:prb:02-1]: [M. Marsman and J. Hafner, *Broken symmetries in the crystalline and magnetic structures of γ-iron*, Phys. Rev. B **66**, 224409 (2002).](https://doi.org/10.1103/PhysRevB.66.224409)
+[^sandratskii:pssb:86-2]: [L. M. Sandratskii, *Energy band structure calculations for crystals with spiral magnetic structure*, Phys. Status Solidi B **136**, 167 (1986).](https://doi.org/10.1002/pssb.2221360119)
+[^hobbs:prb:00-3]: [Hobbs, D., G. Kresse, and J. Hafner, *Fully unconstrained noncollinear magnetism within the projector augmented-wave method.*, Phys. Rev. B **62**, 11556 (2000).](http://doi.org/10.1103/PhysRevB.62.11556)

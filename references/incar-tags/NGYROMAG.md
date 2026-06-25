@@ -31,15 +31,15 @@ many total atoms there are.
 
 NGYROMAG is given in units of
 MHz/T, see Ref.
-<sup>[\[1\]](#cite_note-gyromag:web-1)</sup>
+[^gyromag:web-1]
 for a table of different gyromagnetic ratios. A more extensive list is
 available on
-<sup>[\[2\]](#cite_note-gyromag:database:web-2)</sup>
+[^gyromag:database:web-2]
 which converts isotopic magnetic moments from Ref.
-<sup>[\[3\]](#cite_note-gyromag:book:2019-3)</sup>
+[^gyromag:book:2019-3]
 and converts them using the definition of the gyromagnetic ratio defined
 in Ref.
-<sup>[\[4\]](#cite_note-tiesinga:revmodphys:2021-4)</sup>.
+[^tiesinga:revmodphys:2021-4].
 
 ## Related tags and articles\[<a href="/wiki/index.php?title=NGYROMAG&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
@@ -57,25 +57,7 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-NGYROMAG-_incategory-Example
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-gyromag:web_1-0)
-    <a href="https://en.wikipedia.org/wiki/Gyromagnetic_ratio#For_a_nucleus"
-    class="external text" rel="nofollow">Gyromagnetic ratio,
-    www.wikipedia.org (2025)</a>
-2.  [↑](#cite_ref-gyromag:database:web_2-0)
-    <a href="https://www.kherb.io/docs/nmr_table.html" class="external text"
-    rel="nofollow">Konstantin's gyromagnetic ratio table,
-    https://www.kherb.io (2025)</a>
-3.  [↑](#cite_ref-gyromag:book:2019_3-0)
-    <a href="https://www-nds.iaea.org/publications/indc/indc-nds-0794.pdf"
-    class="external text" rel="nofollow">N. J. Stone, <em>TABLE OF
-    RECOMMENDED NUCLEAR MAGNETIC DIPOLE MOMENTS: PART I, LONG-LIVED
-    STATES</em>, (2019), p.13-43.</a>
-4.  [↑](#cite_ref-tiesinga:revmodphys:2021_4-0)
-    <a href="https://doi.org/10.1103/RevModPhys.93.025010"
-    class="external text" rel="nofollow">E. Tiesinga, P. Mohr, P. Newell,
-    and B. Taylor, <em>CODATA recommended values of the fundamental physical
-    constants: 2018*</em>, Rev. Mod. Phys. <strong>93</strong>, 025010
-    (2021).</a>
-
-
+[^gyromag:web-1]: [Gyromagnetic ratio, www.wikipedia.org (2025)](https://en.wikipedia.org/wiki/Gyromagnetic_ratio#For_a_nucleus)
+[^gyromag:database:web-2]: [Konstantin's gyromagnetic ratio table, https://www.kherb.io (2025)](https://www.kherb.io/docs/nmr_table.html)
+[^gyromag:book:2019-3]: [N. J. Stone, *TABLE OF RECOMMENDED NUCLEAR MAGNETIC DIPOLE MOMENTS: PART I, LONG-LIVED STATES*, (2019), p.13-43.](https://www-nds.iaea.org/publications/indc/indc-nds-0794.pdf)
+[^tiesinga:revmodphys:2021-4]: [E. Tiesinga, P. Mohr, P. Newell, and B. Taylor, *CODATA recommended values of the fundamental physical constants: 2018\**, Rev. Mod. Phys. **93**, 025010 (2021).](https://doi.org/10.1103/RevModPhys.93.025010)

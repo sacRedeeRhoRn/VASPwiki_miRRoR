@@ -26,7 +26,7 @@ dense image spacing around the saddle point to obtain a finer resolution
 around this point.
 
 The nudged elastic band
-method<sup>[\[1\]](#cite_note-jons95-1)[\[2\]](#cite_note-jons98-2)</sup>
+method[^jons95-1][^jons98-2]
 is applied when SPRING is set
 to a negative value e.g.
 
@@ -67,20 +67,7 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-SPRING-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=SPRING&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-jons95_1-0)
-    <a href="http://dx.doi.org/10.1016/0039-6028(94)00731-4"
-    class="external text" rel="nofollow">G. Mills, H. Jonsson and G. K.
-    Schenter, Surface Science, 324, 305 (1995).</a>
-2.  [↑](#cite_ref-jons98_2-0)
-    H. Jonsson, G. Mills and K. W.
-    Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy
-    Paths of Transitions*, in *Classical and Quantum Dynamics in
-    Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998).
-
-
 ------------------------------------------------------------------------
 
-
+[^jons95-1]: [G. Mills, H. Jonsson and G. K. Schenter, Surface Science, 324, 305 (1995).](http://dx.doi.org/10.1016/0039-6028(94)00731-4)
+[^jons98-2]: H. Jonsson, G. Mills and K. W. Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions*, in *Classical and Quantum Dynamics in Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F. Coker (World Scientific, 1998).

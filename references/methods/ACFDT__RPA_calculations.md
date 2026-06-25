@@ -130,7 +130,7 @@ other choices, e.g., local-density-approximation (LDA) or
 [hybrids](Category-Hybrid_functionals.md),
 are possible as well. For hybrid functionals, we suggest carefully
 considering the caveats mentioned in Ref.
-<sup>[\[1\]](#cite_note-paier:2008-1)</sup>.
+[^paier:2008-1].
 Specifically, the RPA dielectric matrix yields too weak screening for
 hybrid functionals, which potentially deteriorates RPA results.
 
@@ -311,7 +311,7 @@ title="Edit section: Low-scaling ACFDT/RPA algorithm">edit</a> \| (./index.php.m
 
 Virtually the same tags and procedures apply to the low-scaling RPA
 algorithm implemented in VASP 6
-<sup>[\[2\]](#cite_note-kaltak:prb:2014-2)</sup>.
+[^kaltak:prb:2014-2].
 However, [ALGO](../incar-tags/ALGO.md)=ACFDT or
 [ALGO](../incar-tags/ALGO.md)=RPA needs to be replaced by either
 [ALGO](../incar-tags/ALGO.md)=ACFDTR or [ALGO](../incar-tags/ALGO.md)=RPAR.
@@ -320,7 +320,7 @@ With this setting VASP calculates the independent-particle
 polarizability $\chi(i\omega)$ using Green's functions $G(i\tau)$ on
 the imaginary time axis $i\tau$ by the
 contraction formula
-<sup>[\[3\]](#cite_note-rojas:prl:1995-3)</sup>
+[^rojas:prl:1995-3]
 
 $\chi(i\tau_m) = -G(i\tau_m)G(-i\tau_m)$
 
@@ -401,7 +401,7 @@ title="Edit section: Singles contribution to the correlation energy">edit</a> \|
 
 The low-scaling RPA algorithm also allows for the determination of the
 so-called singles
-contribution,<sup>[\[4\]](#cite_note-klimes:jcp:143-4)[\[5\]](#cite_note-ren:prb:88-5)</sup>
+contribution,[^klimes:jcp:143-4][^ren:prb:88-5]
 to the total energy represented by following diagrams:
 
 <a href="/wiki/File:SinglesDiagrams.png"
@@ -412,9 +412,9 @@ srcset="/wiki/images/thumb/e/eb/SinglesDiagrams.png/480px-SinglesDiagrams.png 1.
 width="320" height="97" /></a>
 
 In most
-textbooks<sup>[\[6\]](#cite_note-mattuck:2012-6)</sup>
+textbooks[^mattuck:2012-6]
 this contribution is assumed to be zero. Ren et
-al.<sup>[\[5\]](#cite_note-ren:prb:88-5)</sup>
+al.[^ren:prb:88-5]
 pointed out that this is true only in the Hartree-Fock basis set. The
 singles contribution is non-vanishing for other basis sets.
 
@@ -427,12 +427,12 @@ additional lines can be found in OUTCAR:
 
 Here, the first line contains the value of the singles as proposed by
 Klimeš et
-al.,<sup>[\[4\]](#cite_note-klimes:jcp:143-4)</sup>
+al.,[^klimes:jcp:143-4]
 while the second line contains the singles contribution of Ren et
-al.<sup>[\[5\]](#cite_note-ren:prb:88-5)</sup>.
+al.[^ren:prb:88-5].
 In most cases we found that the two values are exceedingly close to each
 other, which can be understood in the way how the propagator is
-renormalized.<sup>[\[4\]](#cite_note-klimes:jcp:143-4)</sup>
+renormalized.[^klimes:jcp:143-4]
  
 
 ### Optional: RPA Forces\[<a
@@ -446,7 +446,7 @@ Optionally, RPA forces can be calculated by adding following line to the
      LRPAFORCE = .TRUE. 
 
 For RPA forces the change in the one-electron density is
-required.<sup>[\[7\]](#cite_note-ramberger:prl:118-7)</sup>
+required.[^ramberger:prl:118-7]
 This is automatically performed with the linear-response routine within
 VASP. After a successful run, the following block of data is found in
 the [OUTCAR](../output-files/OUTCAR.md) file.
@@ -578,16 +578,16 @@ title="Edit section: Some Issues Particular to ACFDT-RPA Calculations on Metals"
 
 For metals, the RPA groundstate energy converges the fastest with
 respect to k-points, if the exchange (Eq. (12) in reference
-<sup>[\[8\]](#cite_note-harl:2010-8)</sup>)
+[^harl:2010-8])
 and correlation energy are calculated on the same k-point grid,
 [HFRCUT](../incar-tags/HFRCUT.md) is not set, and the long-wavelength
 contributions from the polarizability are not considered (see reference
-<sup>[\[8\]](#cite_note-harl:2010-8)</sup>).
+[^harl:2010-8]).
 
 To evaluate Eq. (12), a correction energy for
 $E_{\mathrm{EXX}}$ related to partial occupancies has
 to be added to the RPA groundstate
-energy:<sup>[\[8\]](#cite_note-harl:2010-8)</sup>
+energy:[^harl:2010-8]
 
 $E_{\mathrm{RPA}}=E_{\mathrm{c}}+E_{\mathrm{EXX}}+E_{\mathrm{HFc}}$.
 
@@ -657,7 +657,7 @@ Since correlation energies converge very slowly with respect to
 $\mathbf{G}_{\rm max }$, VASP automatically
 extrapolates to the infinite basis set limit using a linear regression
 to the equation:
-<sup>[\[9\]](#cite_note-harl:2008-9)[\[8\]](#cite_note-harl:2010-8)[\[10\]](#cite_note-klimes:2014-10)</sup>
+[^harl:2008-9][^harl:2010-8][^klimes:2014-10]
 
 $E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}$.
 
@@ -667,7 +667,7 @@ Furthermore, the Coulomb kernel is smoothly truncated between
 function (Hann window function). Alternatively, the basis set
 extrapolation can be performed by setting
 [LSCK](../incar-tags/LSCK.md)=.TRUE., using the squeezed Coulomb kernel
-method.<sup>[\[11\]](#cite_note-riemelmoser:jcp:2020-11)</sup>
+method.[^riemelmoser:jcp:2020-11]
 
 The default for [ENCUTGWSOFT](../incar-tags/ENCUTGWSOFT.md) is
 0.8$\times$[ENCUTGW](../incar-tags/ENCUTGW.md) (again we do
@@ -675,7 +675,7 @@ not recommend to change this default).
 
 The integral over $\omega$ is
 evaluated by means of a highly accurate minimax
-integration.<sup>[\[12\]](#cite_note-kaltak:2014-12)</sup>
+integration.[^kaltak:2014-12]
 The number of $\omega$
 points is determined by the flag [NOMEGA](../incar-tags/NOMEGA.md),
 whereas the energy range of transitions is determined by the band gap
@@ -827,68 +827,17 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=ACFDT/RPA_calculations&amp;veaction=edit&amp;section=17"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-paier:2008_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.78.121201"
-    class="external text" rel="nofollow">J. Paier, M. Marsman, and G.
-    Kresse, Phys. Rev. B <strong>78</strong>, 121201 (2008).</a>
-2.  [↑](#cite_ref-kaltak:prb:2014_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.054115"
-    class="external text" rel="nofollow">M. Kaltak, J. Klimeš, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 054115 (2014).</a>
-3.  [↑](#cite_ref-rojas:prl:1995_3-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
-    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
-    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
-4.  ↑
-    <sup>[a](#cite_ref-klimes:jcp:143_4-0)</sup>
-    <sup>[b](#cite_ref-klimes:jcp:143_4-1)</sup>
-    <sup>[c](#cite_ref-klimes:jcp:143_4-2)</sup>
-    <a href="https://doi.org/10.1063/1.4929346" class="external text"
-    rel="nofollow">J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>143</strong>, 102816 (2015).</a>
-5.  ↑
-    <sup>[a](#cite_ref-ren:prb:88_5-0)</sup>
-    <sup>[b](#cite_ref-ren:prb:88_5-1)</sup>
-    <sup>[c](#cite_ref-ren:prb:88_5-2)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.88.035120"
-    class="external text" rel="nofollow">X. Ren, P. Rinke, G. E. Scuseria,
-    and M. Scheffler, Phys. Rev. B <strong>88</strong>, 035120 (2013).</a>
-6.  [↑](#cite_ref-mattuck:2012_6-0)
-    <a href="https://books.google.at/books?id=1P_DAgAAQBAJ&amp;hl=en"
-    class="external text" rel="nofollow">R. D. Mattuck, Dover Books on
-    Physics (2012).</a>
-7.  [↑](#cite_ref-ramberger:prl:118_7-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
-    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
-    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
-8.  ↑
-    <sup>[a](#cite_ref-harl:2010_8-0)</sup>
-    <sup>[b](#cite_ref-harl:2010_8-1)</sup>
-    <sup>[c](#cite_ref-harl:2010_8-2)</sup>
-    <sup>[d](#cite_ref-harl:2010_8-3)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
-    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
-9.  [↑](#cite_ref-harl:2008_9-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-10. [↑](#cite_ref-klimes:2014_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
-    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
-11. [↑](#cite_ref-riemelmoser:jcp:2020_11-0)
-    <a href="https://doi.org/10.1063/5.0002246" class="external text"
-    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>152(13)</strong>, 134103 (2020).</a>
-12. [↑](#cite_ref-kaltak:2014_12-0)
-    <a href="https://doi.org/10.1021/ct5001268" class="external text"
-    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
-    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^paier:2008-1]: [J. Paier, M. Marsman, and G. Kresse, Phys. Rev. B **78**, 121201 (2008).](https://doi.org/10.1103/PhysRevB.78.121201)
+[^kaltak:prb:2014-2]: [M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **90**, 054115 (2014).](https://doi.org/10.1103/PhysRevB.90.054115)
+[^rojas:prl:1995-3]: [H. N. Rojas, R. W. Godby, and R. J. Needs, Phys. Rev. Lett. **74**, 1827 (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
+[^klimes:jcp:143-4]: [J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys. **143**, 102816 (2015).](https://doi.org/10.1063/1.4929346)
+[^ren:prb:88-5]: [X. Ren, P. Rinke, G. E. Scuseria, and M. Scheffler, Phys. Rev. B **88**, 035120 (2013).](http://doi.org/10.1103/PhysRevB.88.035120)
+[^mattuck:2012-6]: [R. D. Mattuck, Dover Books on Physics (2012).](https://books.google.at/books?id=1P_DAgAAQBAJ&hl=en)
+[^ramberger:prl:118-7]: [B. Ramberger, T. Schäfer and G. Kresse, Phys. Rev. Lett **118**, 106403 (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)
+[^harl:2010-8]: [J. Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126 (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^harl:2008-9]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^klimes:2014-10]: [J. Klimeš, M. Kaltak, and G. Kresse, Phys. Rev. B **90**, 075125 (2014).](https://doi.org/10.1103/PhysRevB.90.075125)
+[^riemelmoser:jcp:2020-11]: [S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys. **152(13)**, 134103 (2020).](https://doi.org/10.1063/5.0002246)
+[^kaltak:2014-12]: [M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory Comput. **10**, 2498-2507 (2014).](https://doi.org/10.1021/ct5001268)

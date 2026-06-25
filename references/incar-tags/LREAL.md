@@ -67,10 +67,10 @@ potentially very inaccurate. For the outdated
 LREAL=On, the real space
 projectors are optimized by VASP using an algorithm proposed by
 King-Smith et
-al.<sup>[\[1\]](#cite_note-king-smith:prb:1991-1)</sup>
+al.[^king-smith:prb:1991-1]
 For the recommended
 LREAL=Auto, an unpublished
-scheme<sup>[\[2\]](#cite_note-kresse:tobepublished-2)</sup>
+scheme[^kresse:tobepublished-2]
 is used which results in simultaneously more accurate and localized
 projector functions than for the King-Smith et al. method. To fine-tune
 the optimization procedure, the tag [ROPT](ROPT.md) can and
@@ -176,18 +176,7 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LREAL-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LREAL&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-king-smith:prb:1991_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.44.13063"
-    class="external text" rel="nofollow">R. D. King-Smith, M. C. Payne, and
-    J. S. Lin, <em>Real-space implementation of nonlocal pseudopotentials
-    for first-principles total-energy calculations</em>, Phys. Rev. B
-    <strong>44</strong>, 13063 (1991).</a>
-2.  [↑](#cite_ref-kresse:tobepublished_2-0)
-    G. Kresse, Unpublished.
-
-
 ------------------------------------------------------------------------
 
-
+[^king-smith:prb:1991-1]: [R. D. King-Smith, M. C. Payne, and J. S. Lin, *Real-space implementation of nonlocal pseudopotentials for first-principles total-energy calculations*, Phys. Rev. B **44**, 13063 (1991).](https://doi.org/10.1103/PhysRevB.44.13063)
+[^kresse:tobepublished-2]: G. Kresse, Unpublished.

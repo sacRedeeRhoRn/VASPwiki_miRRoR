@@ -27,7 +27,7 @@ The mixing $a_{\mathrm{LR}}$ and screening $\mu$ are
 controlled by the [AEXX](AEXX.md) and
 [HFSCREEN](HFSCREEN.md) tags, respectively. The RSHXLDA or
 RSHXPBE
-functionals<sup>[\[1\]](#cite_note-iikura:jcp:2001-1)[\[2\]](#cite_note-gerber:cpl:2005-2)[\[3\]](#cite_note-gerber:jcp:2007-3)</sup>
+functionals[^iikura:jcp:2001-1][^gerber:cpl:2005-2][^gerber:jcp:2007-3]
 are examples of such functionals and their settings are shown on the
 [page listing the hybrid
 functionals](../methods/List_of_hybrid_functionals.md).
@@ -74,23 +74,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LRHFCALC-_incategory-Example
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-iikura:jcp:2001_1-0)
-    <a href="http://doi.org/10.1063/1.1383587" class="external text"
-    rel="nofollow">H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, <em>A
-    long-range correction scheme for generalized-gradient-approximation
-    exchange functionals</em>, J. Chem. Phys. <strong>115</strong>, 3540
-    (2001).</a>
-2.  [↑](#cite_ref-gerber:cpl:2005_2-0)
-    <a href="http://doi.org/10.1016/j.cplett.2005.08.060"
-    class="external text" rel="nofollow">I. C. Gerber and J. G. Ángyán,
-    <em>Hybrid functional with separated range</em>, Chem. Phys. Lett.
-    <strong>415</strong>, 100 (2005).</a>
-3.  [↑](#cite_ref-gerber:jcp:2007_3-0)
-    <a href="http://doi.org/10.1063/1.2759209" class="external text"
-    rel="nofollow">I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse,
-    <em>Range separated hybrid density functional with long-range
-    Hartree-Fock exchange applied to solids</em>, J. Chem. Phys.
-    <strong>127</strong>, 054101 (2007).</a>
-
-
+[^iikura:jcp:2001-1]: [H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, *A long-range correction scheme for generalized-gradient-approximation exchange functionals*, J. Chem. Phys. **115**, 3540 (2001).](http://doi.org/10.1063/1.1383587)
+[^gerber:cpl:2005-2]: [I. C. Gerber and J. G. Ángyán, *Hybrid functional with separated range*, Chem. Phys. Lett. **415**, 100 (2005).](http://doi.org/10.1016/j.cplett.2005.08.060)
+[^gerber:jcp:2007-3]: [I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse, *Range separated hybrid density functional with long-range Hartree-Fock exchange applied to solids*, J. Chem. Phys. **127**, 054101 (2007).](http://doi.org/10.1063/1.2759209)

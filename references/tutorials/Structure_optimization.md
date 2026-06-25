@@ -129,7 +129,7 @@ For [`IBRION`](../incar-tags/IBRION.md)` = 1`, VASP uses a RMM-DIIS
 algorithm to relax the ions into their instantaneous groundstate.
 RMM-DIIS stands for *residual-minimization method, direct inversion in
 the iterative
-subspace*.<sup>[\[1\]](#cite_note-pulay:cpl:1980-1)</sup>
+subspace*.[^pulay:cpl:1980-1]
 The forces and the stress tensor determine the search directions for
 finding the equilibrium positions; the total energy is not taken into
 account. This algorithm is very fast and efficient close to a local
@@ -201,7 +201,7 @@ stress; in subsequent steps, we require that the search is conjugate
 chosen, a line search along this direction determines the optimal step
 size. *Numerical Recipes* by Press *et al.* contains more details about
 conjugate
-gradient.<sup>[\[2\]](#cite_note-press:book:1986-2)</sup>
+gradient.[^press:book:1986-2]
 
 In VASP, the line search along the search direction uses the following
 steps
@@ -217,7 +217,7 @@ steps
     current search direction vanish, we perform the next trial step.
     Otherwise, we improve the line minimization by further corrector
     steps using a variant of Brent's
-    algorithm.<sup>[\[2\]](#cite_note-press:book:1986-2)</sup>
+    algorithm.[^press:book:1986-2]
 
 |  |
 |----|
@@ -367,17 +367,5 @@ href="/wiki/index.php?title=Structure_optimization&amp;veaction=edit&amp;section
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-pulay:cpl:1980_1-0)
-    <a href="https://doi.org/10.1016/0009-2614(80)80396-4"
-    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett.
-    <strong>73</strong>, 393 (1980).</a>
-2.  ↑
-    <sup>[a](#cite_ref-press:book:1986_2-0)</sup>
-    <sup>[b](#cite_ref-press:book:1986_2-1)</sup>
-    <a href="https://archive.org/details/numericalrecipes00pres"
-    class="external text" rel="nofollow">W. H. Press, B. P. Flannery, S. A.
-    Teukolsky, and W. T. Vetterling, em Numerical Recipes (Cambridge
-    University Press, New York, 1986).</a>
-
-
+[^pulay:cpl:1980-1]: [P. Pulay, Chem. Phys. Lett. **73**, 393 (1980).](https://doi.org/10.1016/0009-2614(80)80396-4)
+[^press:book:1986-2]: [W. H. Press, B. P. Flannery, S. A. Teukolsky, and W. T. Vetterling, em Numerical Recipes (Cambridge University Press, New York, 1986).](https://archive.org/details/numericalrecipes00pres)

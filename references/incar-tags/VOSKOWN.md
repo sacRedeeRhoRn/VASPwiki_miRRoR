@@ -19,10 +19,10 @@ For the LDA and some "older" gradient corrected functionals such as
 PW91, VASP interpolates the correlation energy from the
 non-spinpolarized to the fully spinpolarized case in the same way as the
 exchange energy (Barth-Hedin spin
-interpolation<sup>[\[1\]](#cite_note-barth:jpc:1972-1)</sup>.
+interpolation[^barth:jpc:1972-1].
 If VOSKOWN is set to 1, the
 interpolation formula according to Vosko, Wilk and
-Nusair<sup>[\[2\]](#cite_note-vosko1980-2)</sup>
+Nusair[^vosko1980-2]
 is used (this interpolation is based on the RPA correlation energy of
 partially spin polarized systems). The Vosko, Wilk and Nusair
 interpolation usually enhances the magnetic moments and the magnetic
@@ -38,21 +38,10 @@ is interpolated according to Vosko, Wilk and Nusair).
 ## References\[<a href="/wiki/index.php?title=VOSKOWN&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-barth:jpc:1972_1-0)
-    <a href="https://doi.org/10.1088/0022-3719/5/13/012"
-    class="external text" rel="nofollow">U. V. Barth and L. Hedin, J. Phys.
-    C <strong>5</strong>, 1629 (1972).</a>
-2.  [↑](#cite_ref-vosko1980_2-0)
-    <a href="https://doi.org/10.1139/p80-159" class="external text"
-    rel="nofollow">S. H. Vosko, L. Wilk, and M. Nusair, Can. J. Phys.
-    <strong>58</strong>, 1200 (1980).</a>
-
-
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-VOSKOWN-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
+[^barth:jpc:1972-1]: [U. V. Barth and L. Hedin, J. Phys. C **5**, 1629 (1972).](https://doi.org/10.1088/0022-3719/5/13/012)
+[^vosko1980-2]: [S. H. Vosko, L. Wilk, and M. Nusair, Can. J. Phys. **58**, 1200 (1980).](https://doi.org/10.1139/p80-159)

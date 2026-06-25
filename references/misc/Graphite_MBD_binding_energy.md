@@ -65,7 +65,7 @@ Semilocal DFT at the GGA level underestimates long-range dispersion
 interactions. In the case of graphite, PBE predicts the interlayer
 binding energy of ~1 meV/atom which is too small compared to the RPA
 reference of 0.048 eV/atom
-<sup>[\[1\]](#cite_note-lebegue-1)</sup>.
+[^lebegue-1].
 In contrast, the pairwise correction scheme of Tkatchenko and Scheffler,
 overestimates this quantity strongly (0.083 eV/atom, see the [Graphite
 TS binding
@@ -219,7 +219,7 @@ needs to be available.)
 
 The computed value of 0.050 eV/A is now fairly close to the RPA
 reference of 0.048 eV/atom
-<sup>[\[1\]](#cite_note-lebegue-1)</sup>.
+[^lebegue-1].
 
 ## Download\[<a
 href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=7"
@@ -233,18 +233,6 @@ title="GraphiteBinding mbd.tgz">graphiteBinding_mdb.tgz</a>
 href="/wiki/index.php?title=Graphite_MBD_binding_energy&amp;veaction=edit&amp;section=8"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-lebegue_1-0)</sup>
-    <sup>[b](#cite_ref-lebegue_1-1)</sup>
-    <a
-    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.196401"
-    class="external text" rel="nofollow">S. Lebègue, J. Harl, Tim Gould, J.
-    G. Ángyán, G. Kresse, and J. F. Dobson, Phys. Rev. Lett. 105, 196401
-    (2010).</a>
-
-
 [Overview](../tutorials/Bulk_Systems_-_Tutorial.md) \>
 [fcc
 Si](Fcc_Si.md) \>
@@ -270,4 +258,4 @@ distance](Graphite_interlayer_distance.md)
  \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^lebegue-1]: [S. Lebègue, J. Harl, Tim Gould, J. G. Ángyán, G. Kresse, and J. F. Dobson, Phys. Rev. Lett. 105, 196401 (2010).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.196401)

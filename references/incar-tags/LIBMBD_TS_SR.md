@@ -12,21 +12,21 @@ exchange-correlation functional set with
 Description: LIBMBD_TS_SR sets
 the value of the scaling factor $s_R$ in the
 Tkatchenko-Scheffler
-method<sup>[\[1\]](#cite_note-tkatchenko:prl:09-1)</sup>
+method[^tkatchenko:prl:09-1]
 as implemented in the library libMBD of many-body dispersion
-methods<sup>[\[2\]](#cite_note-libmbd_1-2)[\[3\]](#cite_note-libmbd_2-3)[\[4\]](#cite_note-hermann:jcp:2023-4)</sup>.
+methods[^libmbd_1-2][^libmbd_2-3][^hermann:jcp:2023-4].
 
 ------------------------------------------------------------------------
 
 LIBMBD_TS_SR allows to choose
 the value of the scaling factor $s_R$ in the
 Tkatchenko-Scheffler
-method<sup>[\[1\]](#cite_note-tkatchenko:prl:09-1)</sup>
+method[^tkatchenko:prl:09-1]
 as implemented in the library libMBD of many-body dispersion
-methods<sup>[\[2\]](#cite_note-libmbd_1-2)[\[3\]](#cite_note-libmbd_2-3)[\[4\]](#cite_note-hermann:jcp:2023-4)</sup>.
+methods[^libmbd_1-2][^libmbd_2-3][^hermann:jcp:2023-4].
 The value is internally passed to the libMBD input **ts_sr** described
 at the page
-<sup>[\[5\]](#cite_note-libmbd_input-5)</sup>.
+[^libmbd_input-5].
 LIBMBD_TS_SR is similar to the
 [VDW_SR](VDW_SR.md) tag that is used for the VASP
 implementation of the Tkatchenko-Scheffler method.
@@ -40,7 +40,7 @@ implementation of the Tkatchenko-Scheffler method.
 | **Important:** This feature is available from VASP.6.4.3 onwards that needs to be compiled with [-DLIBMBD](../misc/Precompiler_options.md). |
 
 libMBD is a separate library package that has to be
-downloaded<sup>[\[3\]](#cite_note-libmbd_2-3)</sup>
+downloaded[^libmbd_2-3]
 and compiled before VASP is compiled with the corresponding [precompiler
 options](../misc/Precompiler_options.md) and
 [links to the
@@ -63,39 +63,10 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LIBMBD_TS_SR-_incategory-Exa
 href="/wiki/index.php?title=LIBMBD_TS_SR&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-tkatchenko:prl:09_1-0)</sup>
-    <sup>[b](#cite_ref-tkatchenko:prl:09_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.102.073005"
-    class="external text" rel="nofollow">A. Tkatchenko and M. Scheffler,
-    Phys. Rev. Lett. <strong>102</strong>, 073005 (2009).</a>
-2.  ↑
-    <sup>[a](#cite_ref-libmbd_1_2-0)</sup>
-    <sup>[b](#cite_ref-libmbd_1_2-1)</sup>
-    <a href="https://libmbd.github.io/" class="external text"
-    rel="nofollow">https://libmbd.github.io/</a>
-3.  ↑
-    <sup>[a](#cite_ref-libmbd_2_3-0)</sup>
-    <sup>[b](#cite_ref-libmbd_2_3-1)</sup>
-    <sup>[c](#cite_ref-libmbd_2_3-2)</sup>
-    <a href="https://github.com/libmbd/" class="external text"
-    rel="nofollow">https://github.com/libmbd/</a>
-4.  ↑
-    <sup>[a](#cite_ref-hermann:jcp:2023_4-0)</sup>
-    <sup>[b](#cite_ref-hermann:jcp:2023_4-1)</sup>
-    <a href="https://doi.org/10.1063/5.0170972" class="external text"
-    rel="nofollow">J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi,
-    R. J. Maurer, and A. Tkatchenko, <em>libMBD: A general-purpose package
-    for scalable quantum many-body dispersion calculations</em>, J. Chem.
-    Phys. <strong>159</strong>, 174802 (2023).</a>
-5.  [↑](#cite_ref-libmbd_input_5-0)
-    <a href="https://libmbd.github.io/type/mbd_input_t.html"
-    class="external text"
-    rel="nofollow">https://libmbd.github.io/type/mbd_input_t.html</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^tkatchenko:prl:09-1]: [A. Tkatchenko and M. Scheffler, Phys. Rev. Lett. **102**, 073005 (2009).](https://doi.org/10.1103/PhysRevLett.102.073005)
+[^libmbd_1-2]: [https://libmbd.github.io/](https://libmbd.github.io/)
+[^libmbd_2-3]: [https://github.com/libmbd/](https://github.com/libmbd/)
+[^hermann:jcp:2023-4]: [J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi, R. J. Maurer, and A. Tkatchenko, *libMBD: A general-purpose package for scalable quantum many-body dispersion calculations*, J. Chem. Phys. **159**, 174802 (2023).](https://doi.org/10.1063/5.0170972)
+[^libmbd_input-5]: [https://libmbd.github.io/type/mbd_input_t.html](https://libmbd.github.io/type/mbd_input_t.html)

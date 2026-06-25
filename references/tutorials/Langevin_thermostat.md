@@ -5,7 +5,7 @@
 
 
 The Langevin
-thermostat<sup>[\[1\]](#cite_note-allen:book:1991-1)[\[2\]](#cite_note-hoover:prl:1982-2)[\[3\]](#cite_note-evans:jcp:1983-3)</sup>
+thermostat[^allen:book:1991-1][^hoover:prl:1982-2][^evans:jcp:1983-3]
 maintains the temperature through a modification of Newton's equations
 of motion
 
@@ -63,26 +63,8 @@ thermostat](../misc/Nosé-Hoover_chain_thermostat.md),
 href="/wiki/index.php?title=Langevin_thermostat&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-allen:book:1991_1-0)
-    <a
-    href="https://books.google.co.jp/books?id=WFExDwAAQBAJ&amp;lpg=PP1&amp;hl=ja&amp;pg=PP1#v=onepage&amp;q&amp;f=false"
-    class="external text" rel="nofollow">M. P. Allen and D. J. Tildesley,
-    <em>Computer simulation of liquids</em> (Oxford university press: New
-    York, 1991).</a>
-2.  [↑](#cite_ref-hoover:prl:1982_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.48.1818"
-    class="external text" rel="nofollow">W. G. Hoover, A. J. C. Ladd, and B.
-    Moran, Phys. Rev. Lett. <strong>48</strong>, 1818 (1982).</a>
-3.  [↑](#cite_ref-evans:jcp:1983_3-0)
-    <a href="https://doi.org/10.1063/1.445195" class="external text"
-    rel="nofollow">D. J. Evans, J. Chem. Phys. <strong>78</strong>, 3297
-    (1983).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^allen:book:1991-1]: [M. P. Allen and D. J. Tildesley, *Computer simulation of liquids* (Oxford university press: New York, 1991).](https://books.google.co.jp/books?id=WFExDwAAQBAJ&lpg=PP1&hl=ja&pg=PP1#v=onepage&q&f=false)
+[^hoover:prl:1982-2]: [W. G. Hoover, A. J. C. Ladd, and B. Moran, Phys. Rev. Lett. **48**, 1818 (1982).](https://doi.org/10.1103/PhysRevLett.48.1818)
+[^evans:jcp:1983-3]: [D. J. Evans, J. Chem. Phys. **78**, 3297 (1983).](https://doi.org/10.1063/1.445195)

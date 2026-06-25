@@ -17,7 +17,7 @@ KERNEL_TRUNCATION/IPAD
 controls the padding strategy used for the Coulomb kernel truncation in
 reciprocal space. Padding defines how much additional empty space is
 introduced around the charge density before applying
-truncation.<sup>[\[1\]](#cite_note-vijay:prb:2025-1)</sup>
+truncation.[^vijay:prb:2025-1]
 This affects both the accuracy of the truncated Coulomb potential and
 the computational cost.
 
@@ -104,13 +104,4 @@ href="/wiki/index.php?title=KERNEL_TRUNCATION/IPAD&amp;veaction=edit&amp;section
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-vijay:prb:2025_1-0)
-    <a href="https://doi.org/10.1103/cd6s-cdkf" class="external text"
-    rel="nofollow">S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak,
-    M. Marsman, and G. Kresse, <em>Efficient periodic density functional
-    theory calculations of charged molecules and surfaces using Coulomb
-    kernel truncation</em>, Phys. Rev. B <strong>112</strong>, 045409
-    (2025).</a>
-
-
+[^vijay:prb:2025-1]: [S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak, M. Marsman, and G. Kresse, *Efficient periodic density functional theory calculations of charged molecules and surfaces using Coulomb kernel truncation*, Phys. Rev. B **112**, 045409 (2025).](https://doi.org/10.1103/cd6s-cdkf)

@@ -14,7 +14,7 @@ method](../theory/Constrained–random-phase–approximation_formalism.md) "Cons
 ------------------------------------------------------------------------
 
 Selects the cRPA method of Sasioglu, Friedrich and
-Blügel<sup>[\[1\]](#cite_note-sasioglu:prb:83-1)</sup>
+Blügel[^sasioglu:prb:83-1]
 where the following screening contribution is subtracted from the full
 RPA polarizability:
 
@@ -42,10 +42,4 @@ href="/wiki/index.php?title=LWEIGHTED&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-sasioglu:prb:83_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.83.121101"
-    class="external text" rel="nofollow">E. Sasioglu, C. Friedrich, and S.
-    Blügel, Phys. Rev. B <strong>83</strong>, 121101 (2011).</a>
-
-
+[^sasioglu:prb:83-1]: [E. Sasioglu, C. Friedrich, and S. Blügel, Phys. Rev. B **83**, 121101 (2011).](https://doi.org/10.1103/PhysRevB.83.121101)

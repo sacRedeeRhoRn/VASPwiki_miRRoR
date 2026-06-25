@@ -7,7 +7,7 @@
 The zero-temperature formalism of many-body perturbation theory breaks
 down for metals (systems with zero energy band-gap) as pointed out by
 Kohn and
-Luttinger.<sup>[\[1\]](#cite_note-KohnLuttinger:PR:1960-1)</sup>
+Luttinger.[^KohnLuttinger:PR:1960-1]
 This conundrum is lifted by considering diagrammatic perturbation theory
 at finite temperature $T>0$, which
 may be understood by an analytical continuation of the real-time
@@ -16,7 +16,7 @@ Matsubara has shown that this Wick rotation in time
 $t\to-i\tau$ reveals an intriguing connection to the
 inverse temperature $\beta=1/T$ of
 the
-system.<sup>[\[2\]](#cite_note-Matsubara:PTP:1955-2)</sup>
+system.[^Matsubara:PTP:1955-2]
 More precisely, Matsubara has shown that all terms in perturbation
 theory at finite temperature can be expressed as integrals of imaginary
 time quantities (such as the polarizability $\chi(-i\tau)$) over the fundamental interval
@@ -48,22 +48,10 @@ Although formally convenient, the Matsubara series converges poorly with
 the number of considered terms in practice. VASP, therefore, uses a
 compressed representation of the Fourier modes by employing the
 Minimax-Isometry
-method.<sup>[\[3\]](#cite_note-Kaltak:PRB:2020-3)</sup>
+method.[^Kaltak:PRB:2020-3]
 This approach converges exponentially with the number of considered
 frequency points.
 
-
-1.  [↑](#cite_ref-KohnLuttinger:PR:1960_1-0)
-    <a href="https://doi.org/10.1103/PhysRev.118.41" class="external text"
-    rel="nofollow">W. Kohn and J. M. Luttinger, Phys. Rev.
-    <strong>118</strong>, 41 (1960).</a>
-2.  [↑](#cite_ref-Matsubara:PTP:1955_2-0)
-    <a href="https://doi.org/10.1143/PTP.14.351" class="external text"
-    rel="nofollow">T. Matsubara, Prog. Theor. Phys. <strong>14</strong>, 351
-    (1955).</a>
-3.  [↑](#cite_ref-Kaltak:PRB:2020_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-
-
+[^KohnLuttinger:PR:1960-1]: [W. Kohn and J. M. Luttinger, Phys. Rev. **118**, 41 (1960).](https://doi.org/10.1103/PhysRev.118.41)
+[^Matsubara:PTP:1955-2]: [T. Matsubara, Prog. Theor. Phys. **14**, 351 (1955).](https://doi.org/10.1143/PTP.14.351)
+[^Kaltak:PRB:2020-3]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)

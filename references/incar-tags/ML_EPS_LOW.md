@@ -21,7 +21,7 @@ This value sets the threshold for the eigenvalues that contribute to the
 leverage scoring used in the CUR algorithm for the rank compression
 ("sparsification") of the local configurations (for details see appendix
 E of reference
-<sup>[\[1\]](#cite_note-jinnouchi2:arx:2019-1)</sup>).
+[^jinnouchi2:arx:2019-1]).
 Small eigenvalues and those columns (local configurations) that are
 strongly connected with these small eigenvalues are removed by the
 sparsification routines. The default value is fairly well balanced, and
@@ -54,16 +54,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_EPS_LOW-_incategory-Examp
 href="/wiki/index.php?title=ML_EPS_LOW&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-jinnouchi2:arx:2019_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.100.014105"
-    class="external text" rel="nofollow">R. Jinnouchi, F. Karsai, and G.
-    Kresse, Phys. Rev. B <strong>100</strong>, 014105 (2019).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^jinnouchi2:arx:2019-1]: [R. Jinnouchi, F. Karsai, and G. Kresse, Phys. Rev. B **100**, 014105 (2019).](https://doi.org/10.1103/PhysRevB.100.014105)

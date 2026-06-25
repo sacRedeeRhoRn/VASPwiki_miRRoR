@@ -19,7 +19,7 @@ Baldereschi, which is activated by [HFRCUT](HFRCUT.md)=0.
 HFALPHA sets the decay
 constant in the error-function-like charge distribution for the method
 of Massida, Posternak, and
-Baldereschi<sup>[\[1\]](#cite_note-massidda:prb:93-1)</sup>.
+Baldereschi[^massidda:prb:93-1].
 The error-function-like charge distribution is used to calculate the
 difference between the isolated probe charge and the periodically
 repeated probe charge in a homogenous background. The default for
@@ -60,10 +60,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-HFALPHA-_incategory-Examples
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-massidda:prb:93_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.48.5058" class="external text"
-    rel="nofollow">S. Massidda, M. Posternak, and A. Baldereschi, Phys. Rev.
-    B <strong>48</strong>, 5058 (1993).</a>
-
-
+[^massidda:prb:93-1]: [S. Massidda, M. Posternak, and A. Baldereschi, Phys. Rev. B **48**, 5058 (1993).](https://doi.org/10.1103/PhysRevB.48.5058)

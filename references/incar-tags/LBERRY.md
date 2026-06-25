@@ -22,7 +22,7 @@ Setting LBERRY=*.TRUE.* in the
 [INCAR](../input-files/INCAR.md) file switches on the evaluation of the
 Berry phase expression for the electronic polarization of an insulating
 system, as modified for the application of USPP's and PAW datasets
-<sup>[\[1\]](#cite_note-berryformalism1-1)[\[2\]](#cite_note-berryformalism2-2)[\[3\]](#cite_note-berryformalism3-3)[\[4\]](#cite_note-berryformalism4-4)[\[5\]](#cite_note-berryformalism5-5)[\[6\]](#cite_note-berryultrasoft-6)[\[7\]](#cite_note-berrymmars-7)</sup>.
+[^berryformalism1-1][^berryformalism2-2][^berryformalism3-3][^berryformalism4-4][^berryformalism5-5][^berryultrasoft-6][^berrymmars-7].
 In addition, the following keywords must be specified in order to
 generate the mesh of k-points:
 
@@ -216,7 +216,7 @@ orbitals, the volume of the unit cell, the number of k-point in the
 "perpendicular" grid, and some aspects of the symmetry of the system.
 More information on this particular aspect of the Berry phase
 calculations can be found in references
-<sup>[\[1\]](#cite_note-berryformalism1-1)[\[2\]](#cite_note-berryformalism2-2)[\[3\]](#cite_note-berryformalism3-3)[\[4\]](#cite_note-berryformalism4-4)[\[5\]](#cite_note-berryformalism5-5)[\[7\]](#cite_note-berrymmars-7)</sup>.
+[^berryformalism1-1][^berryformalism2-2][^berryformalism3-3][^berryformalism4-4][^berryformalism5-5][^berrymmars-7].
 
   
 
@@ -236,51 +236,12 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LBERRY-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LBERRY&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-berryformalism1_1-0)</sup>
-    <sup>[b](#cite_ref-berryformalism1_1-1)</sup>
-    <a href="http://journals.aps.org/prb/abstract/10.1103/PhysRevB.47.1651"
-    class="external text" rel="nofollow">R. D. King-Smith and D. Vanderbilt,
-    Phys. Rev. B 47, 1651 (1993).</a>
-2.  ↑
-    <sup>[a](#cite_ref-berryformalism2_2-0)</sup>
-    <sup>[b](#cite_ref-berryformalism2_2-1)</sup>
-    <a href="http://journals.aps.org/prb/abstract/10.1103/PhysRevB.48.4442"
-    class="external text" rel="nofollow">D. Vanderbilt and R. D. King-Smith,
-    Phys. Rev. B 48, 4442 (1993).</a>
-3.  ↑
-    <sup>[a](#cite_ref-berryformalism3_3-0)</sup>
-    <sup>[b](#cite_ref-berryformalism3_3-1)</sup>
-    <a href="http://www.tandfonline.com/doi/abs/10.1080/00150199208016065"
-    class="external text" rel="nofollow">R. Resta, Ferroelectrtics 136, 51
-    (1992).</a>
-4.  ↑
-    <sup>[a](#cite_ref-berryformalism4_4-0)</sup>
-    <sup>[b](#cite_ref-berryformalism4_4-1)</sup>
-    <a href="http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.66.899"
-    class="external text" rel="nofollow">R. Resta, Rev. Mod. Phys. 66, 899
-    (1994).</a>
-5.  ↑
-    <sup>[a](#cite_ref-berryformalism5_5-0)</sup>
-    <sup>[b](#cite_ref-berryformalism5_5-1)</sup>
-    \[R. Resta, in Berry Phase in
-    Electronic Wavefunctions, Troisième Cycle de la Physique en Suisse
-    Romande, Année Academique 1995-96, (1996).\]
-6.  [↑](#cite_ref-berryultrasoft_6-0)
-    \[D. Vanderbilt and R. D. King-Smith,
-    in Electronic polarization in the ultrasoft pseudopotential
-    formalism, Unpublished report, (1998).\]
-7.  ↑
-    <sup>[a](#cite_ref-berrymmars_7-0)</sup>
-    <sup>[b](#cite_ref-berrymmars_7-1)</sup>
-    \[Available online at
-    <a href="http://cms.mpi.univie.ac.at/vasp/Welcome.html"
-    class="external free"
-    rel="nofollow">http://cms.mpi.univie.ac.at/vasp/Welcome.html</a>.\]
-
-
 ------------------------------------------------------------------------
 
-
+[^berryformalism1-1]: [R. D. King-Smith and D. Vanderbilt, Phys. Rev. B 47, 1651 (1993).](http://journals.aps.org/prb/abstract/10.1103/PhysRevB.47.1651)
+[^berryformalism2-2]: [D. Vanderbilt and R. D. King-Smith, Phys. Rev. B 48, 4442 (1993).](http://journals.aps.org/prb/abstract/10.1103/PhysRevB.48.4442)
+[^berryformalism3-3]: [R. Resta, Ferroelectrtics 136, 51 (1992).](http://www.tandfonline.com/doi/abs/10.1080/00150199208016065)
+[^berryformalism4-4]: [R. Resta, Rev. Mod. Phys. 66, 899 (1994).](http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.66.899)
+[^berryformalism5-5]: \[R. Resta, in Berry Phase in Electronic Wavefunctions, Troisième Cycle de la Physique en Suisse Romande, Année Academique 1995-96, (1996).\]
+[^berryultrasoft-6]: \[D. Vanderbilt and R. D. King-Smith, in Electronic polarization in the ultrasoft pseudopotential formalism, Unpublished report, (1998).\]
+[^berrymmars-7]: \[Available online at [http://cms.mpi.univie.ac.at/vasp/Welcome.html](http://cms.mpi.univie.ac.at/vasp/Welcome.html).\]

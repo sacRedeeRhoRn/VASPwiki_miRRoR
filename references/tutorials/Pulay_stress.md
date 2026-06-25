@@ -56,7 +56,7 @@ The energy for a periodic system, e.g., band structures, is calculated
 using a finite number of plane waves and a finite number of k-points. A
 fixed number of plane waves or plane-wave energy cutoff may be used to
 set a constant basis
-<sup>[\[1\]](#cite_note-gomesdacosta:nielsen:kunc:1986-1)</sup>.
+[^gomesdacosta:nielsen:kunc:1986-1].
 In VASP, a constant energy cutoff is used, cf.
 [ENCUT](../incar-tags/ENCUT.md). The number of plane waves
 ***N****<sub>PW</sub>* (Note: the number of plane waves in VASP can be
@@ -78,7 +78,7 @@ shape of the cutoff region changes from a sphere to an ellipsoid. This
 can be solved by using an infinite number of k-points and plane waves.
 In practice, a large enough plane wave energy cutoff and number of
 k-points leads to converged energies
-<sup>[\[2\]](#cite_note-payne:francis:1990-2)</sup>.
+[^payne:francis:1990-2].
 All energy changes are strictly consistent with the stress tensor;
 however, when the basis set is too small, i.e., prematurely truncated,
 this results in discontinuities in the total energy between cells of
@@ -180,22 +180,6 @@ spherical basis returns.</figcaption>
 href="/wiki/index.php?title=Pulay_stress&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-gomesdacosta:nielsen:kunc:1986_1-0)
-    <a href="https://doi.org/10.1088/0953-8984/2/19/007"
-    class="external text" rel="nofollow">P. Gomes Dacosta, O. Nielsen, and
-    K. Kunc, <em>Stress theorem in the determination of static equilibrium
-    by the density functional method</em>, J. Phys. C: Solid State Phys.
-    <strong>19</strong>, 3163 (1986).</a>
-2.  [↑](#cite_ref-payne:francis:1990_2-0)
-    <a href="https://doi.org/10.1088/0953-8984/2/19/007"
-    class="external text" rel="nofollow">G. P. Francis and M. C. Payne,
-    <em>Finite basis set corrections to total energy pseudopotential
-    calculations</em>, J. Condens. Matter Phys. <strong>2</strong>, 4395
-    (1990).</a>
-
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=Pulay_stress&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
@@ -207,4 +191,5 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 [energy cutoff and FFT
 meshes](Energy_cutoff_and_FFT_meshes.md)
 
-
+[^gomesdacosta:nielsen:kunc:1986-1]: [P. Gomes Dacosta, O. Nielsen, and K. Kunc, *Stress theorem in the determination of static equilibrium by the density functional method*, J. Phys. C: Solid State Phys. **19**, 3163 (1986).](https://doi.org/10.1088/0953-8984/2/19/007)
+[^payne:francis:1990-2]: [G. P. Francis and M. C. Payne, *Finite basis set corrections to total energy pseudopotential calculations*, J. Condens. Matter Phys. **2**, 4395 (1990).](https://doi.org/10.1088/0953-8984/2/19/007)

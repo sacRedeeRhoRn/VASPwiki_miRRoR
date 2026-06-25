@@ -5,7 +5,7 @@
 
 
 In the approach by Nosé and
-Hoover<sup>[\[1\]](#cite_note-nose:jcp:1984-1)[\[2\]](#cite_note-nose:ptp:1991-2)[\[3\]](#cite_note-hoover:pra:1985-3)[\[4\]](#cite_note-frenkel:book:1996-4)</sup>,
+Hoover[^nose:jcp:1984-1][^nose:ptp:1991-2][^hoover:pra:1985-3][^frenkel:book:1996-4],
 an extra degree of freedom is introduced in the Hamiltonian. The heat
 bath is considered as an integral part of the system and has a fictious
 coordinate $s$ which is
@@ -56,28 +56,9 @@ thermostat](../misc/Nosé-Hoover_chain_thermostat.md),
 href="/wiki/index.php?title=Nos%C3%A9-Hoover_thermostat&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-nose:jcp:1984_1-0)
-    <a href="https://doi.org/10.1063/1.447334" class="external text"
-    rel="nofollow">S. Nosé, J. Chem. Phys. <strong>81</strong>, 511
-    (1984).</a>
-2.  [↑](#cite_ref-nose:ptp:1991_2-0)
-    <a href="https://doi.org/10.1143/PTPS.103.1" class="external text"
-    rel="nofollow">S. Nosé, Prog. Theor. Phys. Suppl. <strong>103</strong>,
-    1 (1991).</a>
-3.  [↑](#cite_ref-hoover:pra:1985_3-0)
-    <a href="https://doi.org/10.1103/PhysRevA.31.1695" class="external text"
-    rel="nofollow">W. G. Hoover, Phys. Rev. A <strong>31</strong>, 1695
-    (1985).</a>
-4.  [↑](#cite_ref-frenkel:book:1996_4-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    Understanding Molecular Simulation (Academic Press, London, 1996).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^nose:jcp:1984-1]: [S. Nosé, J. Chem. Phys. **81**, 511 (1984).](https://doi.org/10.1063/1.447334)
+[^nose:ptp:1991-2]: [S. Nosé, Prog. Theor. Phys. Suppl. **103**, 1 (1991).](https://doi.org/10.1143/PTPS.103.1)
+[^hoover:pra:1985-3]: [W. G. Hoover, Phys. Rev. A **31**, 1695 (1985).](https://doi.org/10.1103/PhysRevA.31.1695)
+[^frenkel:book:1996-4]: [D. Frenkel and B. Smit, Understanding Molecular Simulation (Academic Press, London, 1996).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)

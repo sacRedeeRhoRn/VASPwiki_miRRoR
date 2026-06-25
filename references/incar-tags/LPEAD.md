@@ -11,7 +11,7 @@ Description: for LPEAD=.TRUE.,
 the derivative of the cell-periodic part of the orbitals w.r.t. **k**,
 \|∇<sub>**k**</sub>u<sub>n**k**</sub>⟩, is calculated using finite
 differences ("perturbation expansion after discretization"
-(PEAD)<sup>[\[1\]](#cite_note-nunes:prb:01-1)[\[2\]](#cite_note-souza:prl:02-2)</sup>).
+(PEAD)[^nunes:prb:01-1][^souza:prl:02-2]).
 
 ------------------------------------------------------------------------
 
@@ -96,20 +96,9 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LPEAD-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LPEAD&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-nunes:prb:01_1-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.63.155107"
-    class="external text" rel="nofollow">R. W. Nunes and X. Gonze, Phys.
-    Rev. B 63, 155107 (2001).</a>
-2.  [↑](#cite_ref-souza:prl:02_2-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevLett.89.117602"
-    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).</a>
-
-
 ------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
-
+[^nunes:prb:01-1]: [R. W. Nunes and X. Gonze, Phys. Rev. B 63, 155107 (2001).](http://link.aps.org/doi/10.1103/PhysRevB.63.155107)
+[^souza:prl:02-2]: [I. Souza, J. Íñiguez, and D. Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).](http://link.aps.org/doi/10.1103/PhysRevLett.89.117602)

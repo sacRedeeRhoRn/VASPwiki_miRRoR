@@ -32,7 +32,7 @@ can be used. See table for the corresponding
 
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
-| NVT ensemble | Nosé-Hoover<sup>[\[1\]](#cite_note-legacy-nh-1)</sup> | Andersen | Nosé-Hoover | Langevin | Nosé-Hoover chain | CSVR | Multiple Andersen |
+| NVT ensemble | Nosé-Hoover[^legacy-nh-1] | Andersen | Nosé-Hoover | Langevin | Nosé-Hoover chain | CSVR | Multiple Andersen |
 | [MDALGO](../incar-tags/MDALGO.md) | 0 | 1 | 2 | 3 | 4 | 5 | 13 |
 | additional tags to set | [SMASS](../incar-tags/SMASS.md) | [ANDERSEN_PROB](../incar-tags/ANDERSEN_PROB.md) | [SMASS](../incar-tags/SMASS.md) | [LANGEVIN_GAMMA](../incar-tags/LANGEVIN_GAMMA.md) | [NHC_NCHAINS](../incar-tags/NHC_NCHAINS.md), [NHC_PERIOD](NHC_PERIOD.md), [NHC_NRESPA](../incar-tags/NHC_NRESPA.md), [NHC_NS](../incar-tags/NHC_NS.md) | [CSVR_PERIOD](CSVR_PERIOD.md) | [NSUBSYS](../incar-tags/NSUBSYS.md), [TSUBSYS](../incar-tags/TSUBSYS.md), [PSUBSYS](../incar-tags/PSUBSYS.md) |
 
@@ -91,11 +91,4 @@ href="/wiki/index.php?title=NVT_ensemble&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: Footnotes and references">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-legacy-nh_1-0)
-    If possible, use another Nosé–Hoover
-    thermostat implementation, e.g.
-    [`MDALGO`](../incar-tags/MDALGO.md)` = 2`, see also comments
-    [here](../incar-tags/MDALGO.md).
-
-
+[^legacy-nh-1]: If possible, use another Nosé–Hoover thermostat implementation, e.g. [`MDALGO`](/wiki/MDALGO "MDALGO")` = 2`, see also comments [here](/wiki/MDALGO#MDALGO=0:_Standard_molecular_dynamics "MDALGO").

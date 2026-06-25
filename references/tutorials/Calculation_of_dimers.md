@@ -54,22 +54,12 @@ the total energy is used as a variational quantity (i.e.
 $\sigma \to 0$). Within the finite temperature LDA these
 difficulties are avoided, but interpreting the results is not easy
 because of the finite entropy (for C<sub>2</sub> see Ref.
-<sup>[\[1\]](#cite_note-pederson:prb:1991-1)</sup>).
+[^pederson:prb:1991-1]).
 
 ## References\[<a
 href="/wiki/index.php?title=Calculation_of_dimers&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-pederson:prb:1991_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.43.7312" class="external text"
-    rel="nofollow">M.R. Pederson and K.A. Jackson, Phys. Rev. B
-    <strong>43</strong>, 7312 (1991).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^pederson:prb:1991-1]: [M.R. Pederson and K.A. Jackson, Phys. Rev. B **43**, 7312 (1991).](https://doi.org/10.1103/PhysRevB.43.7312)

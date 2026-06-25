@@ -17,19 +17,19 @@ The following variants of the
 
 - LDAUTYPE=1: The rotationally
   invariant DFT+U introduced by Liechtenstein *et
-  al.*<sup>[\[1\]](#cite_note-liechtenstein:prb:95-1)</sup>
+  al.*[^liechtenstein:prb:95-1]
 
 <!-- -->
 
 - LDAUTYPE=2: The simplified
   (rotationally invariant) approach to DFT+U, introduced by Dudarev *et
-  al.*<sup>[\[2\]](#cite_note-dudarev:prb:98-2)</sup>
+  al.*[^dudarev:prb:98-2]
 
 <!-- -->
 
 - LDAUTYPE=3: Linear response
   ansatz of Cococcioni et al.
-  <sup>[\[3\]](#cite_note-cococcioni:2005-3)</sup>
+  [^cococcioni:2005-3]
   to compute U. See [how to calculate
   U](../misc/Calculate_U_for_LSDA+U.md).
 
@@ -87,24 +87,8 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LDAUTYPE-_incategory-Example
 ## References\[<a href="/wiki/index.php?title=LDAUTYPE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-liechtenstein:prb:95_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.52.R5467"
-    class="external text" rel="nofollow">A. I. Liechtenstein, V. I.
-    Anisimov, and J. Zaanen, Phys. Rev. B <strong>52</strong>, R5467
-    (1995).</a>
-2.  [↑](#cite_ref-dudarev:prb:98_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.57.1505" class="external text"
-    rel="nofollow">S. L. Dudarev, G. A. Botton, S. Y. Savrasov, C. J.
-    Humphreys, and A. P. Sutton, Phys. Rev. B <strong>57</strong>, 1505
-    (1998).</a>
-3.  [↑](#cite_ref-cococcioni:2005_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.71.035105"
-    class="external text" rel="nofollow">M. Cococcioni and S. de Gironcoli,
-    Phys. Rev. B <strong>71</strong>, 035105 (2005).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^liechtenstein:prb:95-1]: [A. I. Liechtenstein, V. I. Anisimov, and J. Zaanen, Phys. Rev. B **52**, R5467 (1995).](https://doi.org/10.1103/PhysRevB.52.R5467)
+[^dudarev:prb:98-2]: [S. L. Dudarev, G. A. Botton, S. Y. Savrasov, C. J. Humphreys, and A. P. Sutton, Phys. Rev. B **57**, 1505 (1998).](https://doi.org/10.1103/PhysRevB.57.1505)
+[^cococcioni:2005-3]: [M. Cococcioni and S. de Gironcoli, Phys. Rev. B **71**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.71.035105)

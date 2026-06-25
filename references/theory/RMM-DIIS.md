@@ -6,9 +6,9 @@
 
 The implementation of the Residual Minimization Method with Direct
 Inversion in the Iterative Subspace (RMM-DIIS) in
-VASP<sup>[\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2)</sup>
+VASP[^kresse:cms:1996-1][^kresse:prb:96-2]
 is based on the original work of
-Pulay:<sup>[\[3\]](#cite_note-pulay:cpl:1980-3)</sup>
+Pulay:[^pulay:cpl:1980-3]
 
 - The procedure starts with the evaluation of the preconditioned
   residual vector for some selected orbital $\psi^0_m$:
@@ -87,7 +87,7 @@ minimization of the Rayleigh quotient along the search direction in *the
 first step*, this optimal $\lambda$ is
 then used for a particular orbital until the algorithm moves on to the
 next
-orbital.<sup>[\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2)</sup>
+orbital.[^kresse:cms:1996-1][^kresse:prb:96-2]
 
 As mentioned before, the optimization of an orbital is stopped when
 either the maximum number of iterations per orbital
@@ -119,7 +119,7 @@ converge without any explicit subspace diagonalization and/or
 re-orthonormalization. However, in our experience their inclusion speeds
 up convergence so substantially that it shortens the time-to-solution of
 most calculations, even though these operations scale as
-$O(N^3)$.<sup>[\[1\]](#cite_note-kresse:cms:1996-1)[\[2\]](#cite_note-kresse:prb:96-2)</sup>
+$O(N^3)$.[^kresse:cms:1996-1][^kresse:prb:96-2]
 
 A drawback of the RMM-DIIS
 method is that it always converges toward the eigenstates which are
@@ -147,28 +147,8 @@ but less robust.
 ## References\[<a href="/wiki/index.php?title=RMM-DIIS&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-kresse:cms:1996_1-0)</sup>
-    <sup>[b](#cite_ref-kresse:cms:1996_1-1)</sup>
-    <sup>[c](#cite_ref-kresse:cms:1996_1-2)</sup>
-    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
-    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
-2.  ↑
-    <sup>[a](#cite_ref-kresse:prb:96_2-0)</sup>
-    <sup>[b](#cite_ref-kresse:prb:96_2-1)</sup>
-    <sup>[c](#cite_ref-kresse:prb:96_2-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.54.11169"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Phys.
-    Rev. B <strong>54</strong>, 11169 (1996).</a>
-3.  [↑](#cite_ref-pulay:cpl:1980_3-0)
-    <a href="https://doi.org/10.1016/0009-2614(80)80396-4"
-    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett.
-    <strong>73</strong>, 393 (1980).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kresse:cms:1996-1]: [G. Kresse and J. Furthmüller, Comp. Mater. Sci. **6**, 15 (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
+[^kresse:prb:96-2]: [G. Kresse and J. Furthmüller, Phys. Rev. B **54**, 11169 (1996).](https://doi.org/10.1103/PhysRevB.54.11169)
+[^pulay:cpl:1980-3]: [P. Pulay, Chem. Phys. Lett. **73**, 393 (1980).](https://doi.org/10.1016/0009-2614(80)80396-4)

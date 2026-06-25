@@ -129,7 +129,7 @@ ensemble](../misc/NpT_ensemble.md) and [NpH
 ensemble](../misc/NpH_ensemble.md). The Langevin dynamics in
 the [NpT ensemble](../misc/NpT_ensemble.md) is calculated by
 the method of Parrinello and
-Rahman<sup>[\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2)</sup>
+Rahman[^parrinello:prl:1980-1][^parrinello:jap:1981-2]
 combined with a [Langevin
 thermostat](../tutorials/Langevin_thermostat.md).
 
@@ -191,7 +191,7 @@ title="Edit section: MDALGO = 13: Multiple Andersen thermostats">edit</a> \| (./
 
 Up to three user-defined atomic subsystems may be coupled with
 independent [Andersen
-thermostats](../tutorials/Andersen_thermostat.md)<sup>[\[3\]](#cite_note-andersen:jcp:1980-3)</sup>
+thermostats](../tutorials/Andersen_thermostat.md)[^andersen:jcp:1980-3]
 (`MDALGO`` = 1`). The
 [POSCAR](../input-files/POSCAR.md) file must be organized such that the
 positions of atoms of subsystem *i+1* are defined after those for the
@@ -265,18 +265,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-MDALGO-_incategory-Howto)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-parrinello:prl:1980_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.45.1196"
-    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
-    Rev. Lett. <strong>45</strong>, 1196 (1980).</a>
-2.  [↑](#cite_ref-parrinello:jap:1981_2-0)
-    <a href="https://doi.org/10.1063/1.328693" class="external text"
-    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys.
-    <strong>52</strong>, 7182 (1981).</a>
-3.  [↑](#cite_ref-andersen:jcp:1980_3-0)
-    <a href="https://doi.org/10.1063/1.439486" class="external text"
-    rel="nofollow">H. C. Andersen, J. Chem. Phys. <strong>72</strong>, 2384
-    (1980).</a>
-
-
+[^parrinello:prl:1980-1]: [M. Parrinello and A. Rahman, Phys. Rev. Lett. **45**, 1196 (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
+[^parrinello:jap:1981-2]: [M. Parrinello and A. Rahman, J. Appl. Phys. **52**, 7182 (1981).](https://doi.org/10.1063/1.328693)
+[^andersen:jcp:1980-3]: [H. C. Andersen, J. Chem. Phys. **72**, 2384 (1980).](https://doi.org/10.1063/1.439486)

@@ -30,7 +30,7 @@ $A$.
 
 The following example [INCAR](../input-files/INCAR.md) file calculates the
 interface pinning in
-sodium<sup>[\[1\]](#cite_note-pedersen:prb:13-1)</sup>:
+sodium[^pedersen:prb:13-1]:
 
     TEBEG = 400                   # temperature in K
     POTIM = 4                     # timestep in fs
@@ -63,17 +63,6 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=Interface_pinning_calculations&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-pedersen:prb:13_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.88.094101"
-    class="external text" rel="nofollow">U. R. Pedersen, F. Hummel, G.
-    Kresse, G. Kahl, and C. Dellago, Phys. Rev. B <strong>88</strong>,
-    094101 (2013).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^pedersen:prb:13-1]: [U. R. Pedersen, F. Hummel, G. Kresse, G. Kahl, and C. Dellago, Phys. Rev. B **88**, 094101 (2013).](https://doi.org/10.1103/PhysRevB.88.094101)

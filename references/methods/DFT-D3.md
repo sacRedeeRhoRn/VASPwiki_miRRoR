@@ -5,7 +5,7 @@
 
 
 In the DFT-D3 method of Grimme et
-al.<sup>[\[1\]](#cite_note-grimme:jcp:10-1)</sup>,
+al.[^grimme:jcp:10-1],
 the following expression for the vdW dispersion energy-correction term
 is used:
 
@@ -43,7 +43,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: DFT-D3(zero)">edit</a> \| (./index.php.md)")\]
 
 In the zero-damping variant of
-DFT-D3,<sup>[\[1\]](#cite_note-grimme:jcp:10-1)</sup>
+DFT-D3,[^grimme:jcp:10-1]
 invoked by setting [IVDW](../incar-tags/IVDW.md)=11, the damping function
 reads
 
@@ -77,7 +77,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: DFT-D3(BJ)">edit</a> \| (./index.php.md)")\]
 
 In the rational Becke-Johnson (BJ) damping variant of
-DFT-D3,<sup>[\[2\]](#cite_note-grimme:jcc:11-2)</sup>,
+DFT-D3,[^grimme:jcc:11-2],
 invoked by setting [IVDW](../incar-tags/IVDW.md)=12, the damping function is
 given by
 
@@ -134,15 +134,8 @@ and follow the link "List of parametrized functionals".</li>
 <li>The DFT-D3 method has been implemented in VASP by Jonas Moellmann
 based on the dftd3 program written by Stefan Grimme, Stephan Ehrlich and
 Helge Krieg. If you make use of the DFT-D3 method, please cite reference
-<sup><a href="#cite_note-grimme:jcp:10-1"><span
-class="cite-bracket">[</span>1<span
-class="cite-bracket">]</span></a></sup>. When using DFT-D3(BJ)
-references <sup><a href="#cite_note-grimme:jcp:10-1"><span
-class="cite-bracket">[</span>1<span
-class="cite-bracket">]</span></a></sup> and <sup><a
-href="#cite_note-grimme:jcc:11-2"><span
-class="cite-bracket">[</span>2<span
-class="cite-bracket">]</span></a></sup> should also be cited. Also
+[^grimme:jcp:10-1]. When using DFT-D3(BJ)
+references [^grimme:jcp:10-1] and [^grimme:jcc:11-2] should also be cited. Also
 carefully check the more extensive list of references found on <a
 href="https://www.chemie.uni-bonn.de/grimme/de/software/dft-d3/"
 class="external free"
@@ -169,24 +162,7 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=DFT-D3&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-grimme:jcp:10_1-0)</sup>
-    <sup>[b](#cite_ref-grimme:jcp:10_1-1)</sup>
-    <sup>[c](#cite_ref-grimme:jcp:10_1-2)</sup>
-    <sup>[d](#cite_ref-grimme:jcp:10_1-3)</sup>
-    <a href="https://doi.org/10.1063/1.3382344" class="external text"
-    rel="nofollow">S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem.
-    Phys. <strong>132</strong>, 154104 (2010).</a>
-2.  ↑
-    <sup>[a](#cite_ref-grimme:jcc:11_2-0)</sup>
-    <sup>[b](#cite_ref-grimme:jcc:11_2-1)</sup>
-    <a href="https://doi.org/10.1002/jcc.21759" class="external text"
-    rel="nofollow">S. Grimme, S. Ehrlich, and L. Goerigk, J. Comput. Chem.
-    <strong>32</strong>, 1456 (2011).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^grimme:jcp:10-1]: [S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem. Phys. **132**, 154104 (2010).](https://doi.org/10.1063/1.3382344)
+[^grimme:jcc:11-2]: [S. Grimme, S. Ehrlich, and L. Goerigk, J. Comput. Chem. **32**, 1456 (2011).](https://doi.org/10.1002/jcc.21759)

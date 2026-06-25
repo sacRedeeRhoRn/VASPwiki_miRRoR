@@ -35,7 +35,7 @@ rotations, violating the equipartition principle.
 
 The canonical sampling through velocity rescaling (CSVR) proposed by
 Bussi et
-al.<sup>[\[1\]](#cite_note-:0-1)</sup>
+al.[^:0-1]
 removes most of the difficulties of the naïve rescaling approach. Here,
 the term $\bar{K}$ is
 replaced by $K_{t}$
@@ -62,7 +62,7 @@ $\tilde{H}(t) = H(t) - \int_0^{t'} (\bar{K}-K)\frac{dt'}{\tau} -
 2\int_0^{t} \sqrt{\frac{K{t'}\bar{K}}{N_f}} \frac{dW(t')}{\sqrt{\tau}}$
 
 As shown by Bussi et
-al.<sup>[\[1\]](#cite_note-:0-1)</sup>,
+al.[^:0-1],
 the CSVR thermostat does not significantly affect the evaluation of
 dynamical properties, such as the velocity autocorrelation functions or
 diffusion coefficients.
@@ -91,11 +91,4 @@ href="/wiki/index.php?title=CSVR_thermostat&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑ <sup>[a](#cite_ref-:0_1-0)</sup>
-    <sup>[b](#cite_ref-:0_1-1)</sup> <a
-    href="https://pubs.aip.org/aip/jcp/article-abstract/126/1/014101/186581/Canonical-sampling-through-velocity-rescaling?redirected"
-    class="external text" rel="nofollow">G. Bussi, D. Donadio, and M.
-    Parrinello, <em>J. Chem. Phys.</em> 126, 014101 (2007)</a>
-
-
+[^:0-1]: [G. Bussi, D. Donadio, and M. Parrinello, *J. Chem. Phys.* 126, 014101 (2007)](https://pubs.aip.org/aip/jcp/article-abstract/126/1/014101/186581/Canonical-sampling-through-velocity-rescaling?redirected)

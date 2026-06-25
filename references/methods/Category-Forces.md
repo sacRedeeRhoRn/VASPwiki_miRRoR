@@ -138,7 +138,7 @@ used to yield estimates for the [exchange-correlation
 energy](../categories/Category-Exchange-correlation_functionals.md)
 as well as forces ([LRPAFORCE](../incar-tags/LRPAFORCE.md)) within
 <a href="/wiki/Many-body_perturbation_theory" class="mw-redirect"
-title="Many-body perturbation theory">many-body perturbation theory</a>.<sup>[\[1\]](#cite_note-ramberger:prl:118-1)</sup>
+title="Many-body perturbation theory">many-body perturbation theory</a>.[^ramberger:prl:118-1]
 Note that the RPA is a correction to the underlying functional.
 Therefore, the choice of the proper [exchange-correlation
 functional](../categories/Category-Exchange-correlation_functionals.md)
@@ -327,10 +327,4 @@ href="/wiki/index.php?title=Category:Forces&amp;veaction=edit&amp;section=8"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ramberger:prl:118_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
-    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
-    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
-
-
+[^ramberger:prl:118-1]: [B. Ramberger, T. Schäfer and G. Kresse, Phys. Rev. Lett **118**, 106403 (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)

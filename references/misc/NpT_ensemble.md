@@ -18,7 +18,7 @@ title="Molecular dynamics calculations">molecular-dynamics</a> run.
 **Instructions for setting up an NpT ensemble**
 
 The Parinello-Rahman
-algorithm<sup>[\[1\]](#cite_note-parrinello:prl:1980-1)[\[2\]](#cite_note-parrinello:jap:1981-2)</sup>
+algorithm[^parrinello:prl:1980-1][^parrinello:jap:1981-2]
 is the method of choice when setting up an NpT
 <a href="/wiki/Molecular_dynamics_calculations" class="mw-redirect"
 title="Molecular dynamics calculations">molecular-dynamics</a> run. To
@@ -95,14 +95,5 @@ href="/wiki/index.php?title=NpT_ensemble&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-parrinello:prl:1980_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.45.1196"
-    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
-    Rev. Lett. <strong>45</strong>, 1196 (1980).</a>
-2.  [↑](#cite_ref-parrinello:jap:1981_2-0)
-    <a href="https://doi.org/10.1063/1.328693" class="external text"
-    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys.
-    <strong>52</strong>, 7182 (1981).</a>
-
-
+[^parrinello:prl:1980-1]: [M. Parrinello and A. Rahman, Phys. Rev. Lett. **45**, 1196 (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
+[^parrinello:jap:1981-2]: [M. Parrinello and A. Rahman, J. Appl. Phys. **52**, 7182 (1981).](https://doi.org/10.1063/1.328693)

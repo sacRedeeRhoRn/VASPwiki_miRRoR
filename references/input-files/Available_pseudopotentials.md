@@ -12,14 +12,14 @@ rel="nofollow">VASP Portal</a>. The
 available pseudopotentials are
 mostly so-called PAW potentials that are based on the
 [projector-augmented-wave (PAW)
-method](../methods/Projector-augmented-wave_formalism.md)<sup>[\[1\]](#cite_note-bloechl:prb:94b-1)</sup>.
+method](../methods/Projector-augmented-wave_formalism.md)[^bloechl:prb:94b-1].
 The PAW potentials have been created following the recipes discussed in
 Ref.
-<sup>[\[2\]](#cite_note-kresse:prb:99-2)</sup>.
+[^kresse:prb:99-2].
 Cite Ref.
-<sup>[\[1\]](#cite_note-bloechl:prb:94b-1)</sup>
+[^bloechl:prb:94b-1]
 and Ref.
-<sup>[\[2\]](#cite_note-kresse:prb:99-2)</sup>
+[^kresse:prb:99-2]
 when using any PAW potential.
 
 Also see:
@@ -3168,7 +3168,7 @@ every element or in all pseudopotential sets.
 | **\_d** | Semicore *d* states are considered valence states. Additionally these type of potentials are a bit harder. Computational cost increases, but accuracy and transferability as well. | The Ge potential has four valence electrons, two in the 4*s* shell, and two in the 4*p* shell. Ge_d adds ten electrons in the *3d* shell. |
 | **\_2** or **\_3** | Pseudopotentials with an integer suffix denote a specific valence state. These potentials are only provided for the Lanthanides. Some 4*f* electrons for these potentials are put in the frozen core, although they are higher in energy than other valence states. Be careful when using these potentials and read [the section about lanthanides with fixed valence](../tutorials/Choosing_pseudopotentials.md) beforehand. | The Er potential has 22 valence electrons with the configuration 4*f*<sup>12</sup>5*s*<sup>2</sup>5*p*<sup>6</sup>6*s*<sup>2</sup> and an energy cutoff of ~350 eV. Er_2 has 8 valence electrons with the configuration 5*p*<sup>6</sup>6*s*<sup>2</sup> and a recommended cutoff energy of ~120 eV, while Er_3 has 9 valence electrons and the configuration 5*p*<sup>6</sup>5*d*<sup>1</sup>6*s*<sup>2</sup> and a cutoff of ~155 eV. |
 | **\_AE** | These potentials are only provided for H, He, and Li. They are very hard and contain all electrons (AE). These potentials are optimized to reproduce the wave functions in the atomic core region as well as possible. | Both the He and the HE_AE pseudopotentials contain two electrons, but the \_AE variant has an extremely small core radius of 0.6 a.u. (compared to 1.1 a.u. for He), and <a href="/wiki/ENMAX" class="mw-redirect" title="ENMAX">ENMAX</a> of ~2135 eV, and [EAUG](../incar-tags/EAUG.md) of ~2900 eV. |
-| **\_GW** | These potentials are optimized for calculations requiring a large number of unoccupied states well above the Fermi level. This is achieved by using different projectors and taking care to reproduce the all-electron scattering properties for high energies. They are superior for excited-state properties and any calculation considering [electron-electron correlation](../categories/Category-Many-body_perturbation_theory.md) like GW, RPA, BSE, and MP2. There are some results that indicate that the \_GW potentials are also more accurate for ground-state-DFT calculations<sup>[\[3\]](#cite_note-bosoni:natphysrev:2023-3)</sup>, but the results should be very comparable with the standard potentials in most cases. Note that the \_GW suffix is the only one that is often combined with other suffixes. | The Ge and the Ge_GW potential do not differ in core-radius, recommended plane-wave-energy cutoff, or the reference configuration of the atom. However, the partial waves and projector functions used in the generation of the potential are different. |
+| **\_GW** | These potentials are optimized for calculations requiring a large number of unoccupied states well above the Fermi level. This is achieved by using different projectors and taking care to reproduce the all-electron scattering properties for high energies. They are superior for excited-state properties and any calculation considering [electron-electron correlation](../categories/Category-Many-body_perturbation_theory.md) like GW, RPA, BSE, and MP2. There are some results that indicate that the \_GW potentials are also more accurate for ground-state-DFT calculations[^bosoni:natphysrev:2023-3], but the results should be very comparable with the standard potentials in most cases. Note that the \_GW suffix is the only one that is often combined with other suffixes. | The Ge and the Ge_GW potential do not differ in core-radius, recommended plane-wave-energy cutoff, or the reference configuration of the atom. However, the partial waves and projector functions used in the generation of the potential are different. |
 
 ## Related tags and sections\[<a
 href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;section=17"
@@ -3197,34 +3197,6 @@ href="/wiki/index.php?title=Available_pseudopotentials&amp;veaction=edit&amp;sec
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-bloechl:prb:94b_1-0)</sup>
-    <sup>[b](#cite_ref-bloechl:prb:94b_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.50.17953"
-    class="external text" rel="nofollow">P. E. Blöchl, Phys. Rev. B
-    <strong>50</strong>, 17953 (1994).</a>
-2.  ↑
-    <sup>[a](#cite_ref-kresse:prb:99_2-0)</sup>
-    <sup>[b](#cite_ref-kresse:prb:99_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.59.1758" class="external text"
-    rel="nofollow">I. G. Kresse and D. Joubert, Phys. Rev. B
-    <strong>59</strong>, 1758 (1999).</a>
-3.  [↑](#cite_ref-bosoni:natphysrev:2023_3-0)
-    <a href="https://doi.org/10.1038/s42254-023-00655-3"
-    class="external text" rel="nofollow">Emanuele Bosoni, Louis Beal, Marnik
-    Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin Callsen, Stefaan
-    Cottenier, Augustin Degomme, Vladimir Dikan, Kristjan Eimre, Espen
-    Flage-Larsen, Marco Fornari, Alberto Garcia, Luigi Genovese, Matteo
-    Giantomassi, Sebastiaan P. Huber, Henning Janssen, Georg Kastlunger,
-    Matthias Krack, Georg Kresse, Thomas D. Kühne, Kurt Lejaeghere, Georg K.
-    H. Madsen, Martijn Marsman, Nicola Marzari, Gregor Michalicek, Hossein
-    Mirhosseini, Tiziano M. A. Müller, Guido Petretto, Chris J. Pickard,
-    Samuel Poncé, Gian-Marco Rignanese, Oleg Rubel, Thomas Ruh, Michael
-    Sluydts, Danny E. P. Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel
-    Wortmann, Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu,
-    Giovanni Pizzi, <em>How to verify the precision of
-    density-functional-theory implementations via reproducible and universal
-    workflows</em>, Nat Rev Phys 6, 45–58 (2024).</a>
-
-
+[^bloechl:prb:94b-1]: [P. E. Blöchl, Phys. Rev. B **50**, 17953 (1994).](https://doi.org/10.1103/PhysRevB.50.17953)
+[^kresse:prb:99-2]: [I. G. Kresse and D. Joubert, Phys. Rev. B **59**, 1758 (1999).](https://doi.org/10.1103/PhysRevB.59.1758)
+[^bosoni:natphysrev:2023-3]: [Emanuele Bosoni, Louis Beal, Marnik Bercx, Peter Blaha, Stefan Blügel, Jens Bröder, Martin Callsen, Stefaan Cottenier, Augustin Degomme, Vladimir Dikan, Kristjan Eimre, Espen Flage-Larsen, Marco Fornari, Alberto Garcia, Luigi Genovese, Matteo Giantomassi, Sebastiaan P. Huber, Henning Janssen, Georg Kastlunger, Matthias Krack, Georg Kresse, Thomas D. Kühne, Kurt Lejaeghere, Georg K. H. Madsen, Martijn Marsman, Nicola Marzari, Gregor Michalicek, Hossein Mirhosseini, Tiziano M. A. Müller, Guido Petretto, Chris J. Pickard, Samuel Poncé, Gian-Marco Rignanese, Oleg Rubel, Thomas Ruh, Michael Sluydts, Danny E. P. Vanpoucke, Sudarshan Vijay, Michael Wolloch, Daniel Wortmann, Aliaksandr V. Yakutovich, Jusong Yu, Austin Zadoks, Bonan Zhu, Giovanni Pizzi, *How to verify the precision of density-functional-theory implementations via reproducible and universal workflows*, Nat Rev Phys 6, 45–58 (2024).](https://doi.org/10.1038/s42254-023-00655-3)

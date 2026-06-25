@@ -16,9 +16,9 @@ title="Precompiler flags">-Dtbdyn</a>).
 ------------------------------------------------------------------------
 
 When running *NpT* simulations with a [Langevin
-thermostat](MDALGO.md)<sup>[\[1\]](#cite_note-allen:book:1991-1)</sup>
+thermostat](MDALGO.md)[^allen:book:1991-1]
 ([MDALGO](MDALGO.md)=3), using the method of [Parrinello and
-Rahman](MDALGO.md)<sup>[\[2\]](#cite_note-parrinello:prl:1980-2)[\[3\]](#cite_note-parrinello:jap:1981-3)</sup>,
+Rahman](MDALGO.md)[^parrinello:prl:1980-2][^parrinello:jap:1981-3],
 the friction coefficient for lattice degrees-of-freedom have to be
 specified (in ps<sup>-1</sup>) by means of the
 LANGEVIN_GAMMA_L-tag. A
@@ -47,20 +47,6 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-allen:book:1991_1-0)
-    <a
-    href="https://books.google.co.jp/books?id=WFExDwAAQBAJ&amp;lpg=PP1&amp;hl=ja&amp;pg=PP1#v=onepage&amp;q&amp;f=false"
-    class="external text" rel="nofollow">M. P. Allen and D. J. Tildesley,
-    <em>Computer simulation of liquids</em> (Oxford university press: New
-    York, 1991).</a>
-2.  [↑](#cite_ref-parrinello:prl:1980_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.45.1196"
-    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
-    Rev. Lett. <strong>45</strong>, 1196 (1980).</a>
-3.  [↑](#cite_ref-parrinello:jap:1981_3-0)
-    <a href="https://doi.org/10.1063/1.328693" class="external text"
-    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys.
-    <strong>52</strong>, 7182 (1981).</a>
-
-
+[^allen:book:1991-1]: [M. P. Allen and D. J. Tildesley, *Computer simulation of liquids* (Oxford university press: New York, 1991).](https://books.google.co.jp/books?id=WFExDwAAQBAJ&lpg=PP1&hl=ja&pg=PP1#v=onepage&q&f=false)
+[^parrinello:prl:1980-2]: [M. Parrinello and A. Rahman, Phys. Rev. Lett. **45**, 1196 (1980).](https://doi.org/10.1103/PhysRevLett.45.1196)
+[^parrinello:jap:1981-3]: [M. Parrinello and A. Rahman, J. Appl. Phys. **52**, 7182 (1981).](https://doi.org/10.1063/1.328693)

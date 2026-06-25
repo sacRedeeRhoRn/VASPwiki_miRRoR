@@ -21,13 +21,13 @@ where $E_{\text{dc}}\[\hat{n}\]$ is the double-counting term and
 $\hat{n}$ is the on-site occupancy matrix of the
 $d$ or $f$ electrons.
 This approach is known as the DFT+U method (traditionally called
-LSDA+U<sup>[\[1\]](#cite_note-anisimov:prb:91-1)</sup>).
+LSDA+U[^anisimov:prb:91-1]).
 
 The first VASP DFT+U calculations, including some additional technical
 details on the VASP implementation, can be found in Ref.
-<sup>[\[2\]](#cite_note-rohrbach:jcp:03-2)</sup>
+[^rohrbach:jcp:03-2]
 (the original implementation was done by Olivier Bengone
-<sup>[\[3\]](#cite_note-Bengone:prb:00-3)</sup>
+[^Bengone:prb:00-3]
 and Georg Kresse).
 
 More detail about the formalism is provided below.
@@ -59,16 +59,16 @@ DFT+U is a method that was proposed to improve the description of
 systems with strongly correlated $d$ or
 $f$ electrons, like antiferromagnetic NiO for instance,
 that are usually inaccurately described with the standard LDA and GGA
-functionals<sup>[\[1\]](#cite_note-anisimov:prb:91-1)</sup>.
+functionals[^anisimov:prb:91-1].
 Several variants of the DFT+U method exist (see Refs.
-<sup>[\[4\]](#cite_note-Ylvisaker:prb:2009-4)[\[5\]](#cite_note-Himmetoglu:ijqc:2014-5)</sup>
+[^Ylvisaker:prb:2009-4][^Himmetoglu:ijqc:2014-5]
 for reviews) that differ for instance in the way the double counting
 term $E_{\text{dc}}\[\hat{n}\]$ is calculated. Three variants of them are implemented
 in VASP, whose formalism is briefly summarized below.
 
 - [LDAUTYPE](../incar-tags/LDAUTYPE.md)=1: The rotationally invariant
   DFT+U introduced by Liechtenstein *et
-  al.*<sup>[\[6\]](#cite_note-liechtenstein:prb:95-6)</sup>
+  al.*[^liechtenstein:prb:95-6]
 
 This particular flavour of DFT+U is of the form
 
@@ -110,7 +110,7 @@ and exchange parameters, $U$ and
 $J$ ([LDAUU](../incar-tags/LDAUU.md) and
 [LDAUJ](../incar-tags/LDAUJ.md), respectively). $U$ and
 $J$ can also be extracted from constrained-DFT
-calculations<sup>[\[7\]](#cite_note-vaugier:prb:2012-7)[\[8\]](#cite_note-kaltak:thesis2015-8)</sup>.
+calculations[^vaugier:prb:2012-7][^kaltak:thesis2015-8].
 
 These translate into values for the Slater integrals in the following
 way (as implemented in VASP at the moment):
@@ -140,7 +140,7 @@ n}^\sigma_{\mathrm{tot}}({\hat n}^\sigma_{\mathrm{tot}}-1).$
 
 - [LDAUTYPE](../incar-tags/LDAUTYPE.md)=2: The simplified (rotationally
   invariant) approach to the DFT+U, introduced by Dudarev *et
-  al.*<sup>[\[9\]](#cite_note-dudarev:prb:98-9)</sup>
+  al.*[^dudarev:prb:98-9]
 
 This flavour of DFT+U is of the following form:
 
@@ -166,7 +166,7 @@ meaningful.
 - [LDAUTYPE](../incar-tags/LDAUTYPE.md)=3: This option is for the
   calculation of the parameter $U$ using
   the linear response approach from Ref.
-  <sup>[\[10\]](#cite_note-cococcioni:2005-10)</sup>.
+  [^cococcioni:2005-10].
   The steps to use this method are shown for [the example of
   NiO](../misc/Calculate_U_for_LSDA+U.md).
 
@@ -232,50 +232,13 @@ href="/wiki/index.php?title=Category:DFT%2BU&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-anisimov:prb:91_1-0)</sup>
-    <sup>[b](#cite_ref-anisimov:prb:91_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.44.943" class="external text"
-    rel="nofollow">V. I. Anisimov, J. Zaanen, and O. K. Andersen, Phys. Rev.
-    B <strong>44</strong>, 943 (1991).</a>
-2.  [↑](#cite_ref-rohrbach:jcp:03_2-0)
-    <a href="https://doi.org/10.1088/0953-8984/15/6/325"
-    class="external text" rel="nofollow">A. Rohrbach, J. Hafner, and G.
-    Kresse J. Phys.: Condens. Matter <strong>15</strong>, 979 (2003).</a>
-3.  [↑](#cite_ref-Bengone:prb:00_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.62.16392"
-    class="external text" rel="nofollow">O. Bengone, M. Alouani, P. Blöchl,
-    and J. Hugel, Phys. Rev. B <strong>62</strong>, 16392 (2000).</a>
-4.  [↑](#cite_ref-Ylvisaker:prb:2009_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.79.035103"
-    class="external text" rel="nofollow">E. R. Ylvisaker and W. E. Pickett,
-    Phys. Rev. B <strong>79</strong>, 035103 (2009).</a>
-5.  [↑](#cite_ref-Himmetoglu:ijqc:2014_5-0)
-    <a href="https://doi.org/10.1002/qua.24521" class="external text"
-    rel="nofollow">B. Himmetoglu, A. Floris, S. de Gironcoli, and M.
-    Cococcioni, Int. J. Quantum Chem. <strong>114</strong>. 14 (2014).</a>
-6.  [↑](#cite_ref-liechtenstein:prb:95_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.52.R5467"
-    class="external text" rel="nofollow">A. I. Liechtenstein, V. I.
-    Anisimov, and J. Zaanen, Phys. Rev. B <strong>52</strong>, R5467
-    (1995).</a>
-7.  [↑](#cite_ref-vaugier:prb:2012_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.86.165105"
-    class="external text" rel="nofollow">L. Vaugier, H. Jiang, and S.
-    Biermann, Phys. Rev. B <strong>86</strong>, 165105 (2012).</a>
-8.  [↑](#cite_ref-kaltak:thesis2015_8-0)
-    <a href="https://utheses.univie.ac.at/detail/33771#"
-    class="external text" rel="nofollow">M. Kaltak, Thesis: Merging GW with
-    DMFT (2015).</a>
-9.  [↑](#cite_ref-dudarev:prb:98_9-0)
-    <a href="https://doi.org/10.1103/PhysRevB.57.1505" class="external text"
-    rel="nofollow">S. L. Dudarev, G. A. Botton, S. Y. Savrasov, C. J.
-    Humphreys, and A. P. Sutton, Phys. Rev. B <strong>57</strong>, 1505
-    (1998).</a>
-10. [↑](#cite_ref-cococcioni:2005_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.71.035105"
-    class="external text" rel="nofollow">M. Cococcioni and S. de Gironcoli,
-    Phys. Rev. B <strong>71</strong>, 035105 (2005).</a>
-
-
+[^anisimov:prb:91-1]: [V. I. Anisimov, J. Zaanen, and O. K. Andersen, Phys. Rev. B **44**, 943 (1991).](https://doi.org/10.1103/PhysRevB.44.943)
+[^rohrbach:jcp:03-2]: [A. Rohrbach, J. Hafner, and G. Kresse J. Phys.: Condens. Matter **15**, 979 (2003).](https://doi.org/10.1088/0953-8984/15/6/325)
+[^Bengone:prb:00-3]: [O. Bengone, M. Alouani, P. Blöchl, and J. Hugel, Phys. Rev. B **62**, 16392 (2000).](https://doi.org/10.1103/PhysRevB.62.16392)
+[^Ylvisaker:prb:2009-4]: [E. R. Ylvisaker and W. E. Pickett, Phys. Rev. B **79**, 035103 (2009).](https://doi.org/10.1103/PhysRevB.79.035103)
+[^Himmetoglu:ijqc:2014-5]: [B. Himmetoglu, A. Floris, S. de Gironcoli, and M. Cococcioni, Int. J. Quantum Chem. **114**. 14 (2014).](https://doi.org/10.1002/qua.24521)
+[^liechtenstein:prb:95-6]: [A. I. Liechtenstein, V. I. Anisimov, and J. Zaanen, Phys. Rev. B **52**, R5467 (1995).](https://doi.org/10.1103/PhysRevB.52.R5467)
+[^vaugier:prb:2012-7]: [L. Vaugier, H. Jiang, and S. Biermann, Phys. Rev. B **86**, 165105 (2012).](https://doi.org/10.1103/PhysRevB.86.165105)
+[^kaltak:thesis2015-8]: [M. Kaltak, Thesis: Merging GW with DMFT (2015).](https://utheses.univie.ac.at/detail/33771#)
+[^dudarev:prb:98-9]: [S. L. Dudarev, G. A. Botton, S. Y. Savrasov, C. J. Humphreys, and A. P. Sutton, Phys. Rev. B **57**, 1505 (1998).](https://doi.org/10.1103/PhysRevB.57.1505)
+[^cococcioni:2005-10]: [M. Cococcioni and S. de Gironcoli, Phys. Rev. B **71**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.71.035105)

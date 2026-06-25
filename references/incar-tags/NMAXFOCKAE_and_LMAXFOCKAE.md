@@ -122,9 +122,9 @@ with *L*-quantum numbers up to 4), whereas for f elements, users should
 test whether **LMAXFOCKAE**= 6 is required.
 
 More details on shape restoration are explained in
-Ref.<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)</sup>
+Ref.[^shishkin:prb:2006-1]
 and
-<sup>[\[2\]](#cite_note-unzog:prb:2022-2)</sup>.
+[^unzog:prb:2022-2].
 
 ## Usefull Settings\[<a
 href="/wiki/index.php?title=NMAXFOCKAE_and_LMAXFOCKAE&amp;veaction=edit&amp;section=2"
@@ -158,16 +158,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-NMAXFOCKAE-_incategory-Examp
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-shishkin:prb:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>74</strong>, 035101 (2006).</a>
-2.  [↑](#cite_ref-unzog:prb:2022_2-0)
-    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
-    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
-    <em>X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
-    (2022).</a>
-
-
+[^shishkin:prb:2006-1]: [M. Shishkin and G. Kresse, Phys. Rev. B **74**, 035101 (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
+[^unzog:prb:2022-2]: [M. Unzog, A. Tal, G. Kresse, *X-ray absorption using the projector augmented-wave method and the Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133 (2022).](http://doi.org/10.1103/PhysRevB.106.155133)

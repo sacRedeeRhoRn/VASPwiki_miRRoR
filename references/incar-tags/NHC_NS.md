@@ -19,7 +19,7 @@ The RESPA steps used in in propagation of thermostat variables in the
 [Nosé-Hoover chain
 thermostat](../misc/Nosé-Hoover_chain_thermostat.md)
 are treated by Suzuki-Yoshida
-scheme<sup>[\[1\]](#cite_note-1)[\[2\]](#cite_note-2)</sup>,
+scheme[^1][^2],
 whereby each step is subdivided further into
 NHC_NS parts. First, fourth,
 and sixth order schemes with, 1, 3, and 7 steps, respectively, are
@@ -37,16 +37,5 @@ thermostat](../misc/Nosé-Hoover_chain_thermostat.md)
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-1)
-    <a
-    href="https://pubs.aip.org/aip/jmp/article/26/4/601/227573/Decomposition-formulas-of-exponential-operators"
-    class="external text" rel="nofollow">M. Suzuki, J. Math. Phys. 26, 601
-    (1985).</a>
-2.  [↑](#cite_ref-2)
-    <a
-    href="https://www.sciencedirect.com/science/article/abs/pii/0375960190900923"
-    class="external text" rel="nofollow">H. Yoshida, Phys. Lett. A 150, 262
-    (1990).</a>
-
-
+[^1]: [M. Suzuki, J. Math. Phys. 26, 601 (1985).](https://pubs.aip.org/aip/jmp/article/26/4/601/227573/Decomposition-formulas-of-exponential-operators)
+[^2]: [H. Yoshida, Phys. Lett. A 150, 262 (1990).](https://www.sciencedirect.com/science/article/abs/pii/0375960190900923)

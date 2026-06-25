@@ -5,7 +5,7 @@
 
 
 Density-functional theory plus dynamical mean-field theory
-(DFT+DMFT)<sup>[\[1\]](#cite_note-kotliar:rmp:2006-1)</sup>
+(DFT+DMFT)[^kotliar:rmp:2006-1]
 is an advanced extension of DFT that provides a more accurate treatment
 of strongly correlated materials including dynamical effects at finite
 temperature compared to
@@ -13,9 +13,9 @@ temperature compared to
 are not within VASP, but VASP allows to interface external DMFT codes.
 Here, we will guide through the steps to perform a DFT+DMFT calculation
 using the TRIQS software
-library<sup>[\[2\]](#cite_note-parcollet:cpc:196-2)</sup>,
+library[^parcollet:cpc:196-2],
 more specifically the TRIQS/solid_dmft
-software<sup>[\[3\]](#cite_note-merkel:joss:7-3)</sup>.
+software[^merkel:joss:7-3].
 In this following HowTo, we will calculate the local spectral function
 $A(\omega)$ of NiO using DMFT.
 
@@ -85,7 +85,7 @@ $|
 $L$ is a compound index of local quantum numbers. The raw
 projectors are orthonormalized and connect the KS basis
 $\nu$ with the localized orbitals
-$m$: $P^{\mathbf{R}}_{m,\nu}(\mathbf{k})$.<sup>[\[4\]](#cite_note-Schuler:JPCM:2018-4)</sup>
+$m$: $P^{\mathbf{R}}_{m,\nu}(\mathbf{k})$.[^Schuler:JPCM:2018-4]
 
 In DFT+DMFT theory the central quantity is the lattice Green's function:
 
@@ -164,7 +164,7 @@ From the final self-energy or Green's function the spectral function
 (similar to the DOS in DFT) can be computed, which can be compared to
 photoemission spectroscopy. DFT+DMFT also allows to calculate other
 spectral properties and structural properties. See
-Ref.<sup>[\[1\]](#cite_note-kotliar:rmp:2006-1)</sup>
+Ref.[^kotliar:rmp:2006-1]
 for more information.
 
 ## Technical requirements\[<a
@@ -721,7 +721,7 @@ Similar to DFT, DMFT calculations have many parameters that can be
 tuned. Here, all parameters were carefully chosen to converge the DMFT
 calculation properly, and close to experiment. Especially, the double
 counting correction was chosen such that it best fits the experimental
-data.<sup>[\[5\]](#cite_note-karolak:2010-5)</sup>
+data.[^karolak:2010-5]
 To learn more about TRIQS visit the <a
 href="https://triqs.github.io/triqs/latest/userguide.html#python-tutorials"
 class="external text" rel="nofollow">TRIQS Python tutorials</a> page.
@@ -808,34 +808,8 @@ href="/wiki/index.php?title=DFT%2BDMFT_calculations&amp;veaction=edit&amp;sectio
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-kotliar:rmp:2006_1-0)</sup>
-    <sup>[b](#cite_ref-kotliar:rmp:2006_1-1)</sup>
-    <a href="https://link.aps.org/doi/10.1103/RevModPhys.78.865"
-    class="external text" rel="nofollow">G. Kotliar, S. Y. Savrasov, K.
-    Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti,
-    <em>Electronic structure calculations with dynamical mean-field
-    theory</em>, Rev. Mod. Phys. <strong>78</strong>, 865 (2006)</a>
-2.  [↑](#cite_ref-parcollet:cpc:196_2-0)
-    <a href="http://dx.doi.org/10.1016/j.cpc.2015.04.023"
-    class="external text" rel="nofollow">O. Parcollet, M. Ferrero, T. Ayral,
-    H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics
-    Communications <strong>196</strong>, 398 (2015).</a>
-3.  [↑](#cite_ref-merkel:joss:7_3-0)
-    <a href="https://doi.org/10.21105/joss.04623" class="external text"
-    rel="nofollow">M. E. Merkel, A. Carta, S. Beck and Alexander Hampel,
-    Journal of Open Source Software <strong>7</strong>, 77 (2022).</a>
-4.  [↑](#cite_ref-Schuler:JPCM:2018_4-0)
-    <a href="https://doi.org/10.1088/1361-648X/aae80a" class="external text"
-    rel="nofollow">M. Schüler, O.E. Peil, G.J. Kraberger, R. Pordzik, M.
-    Marsman, G. Kresse, T.O. Wehling, and M. Aichhorn, J. Phys.: Condens.
-    Matter <strong>30</strong>, 475901 (2018).</a>
-5.  [↑](#cite_ref-karolak:2010_5-0)
-    <a href="https://doi.org/10.1016/j.elspec.2010.05.021"
-    class="external text" rel="nofollow">M. Karolak, G. Ulm, T. Wehling, V.
-    Mazurenko, A. Poteryaev, and A. Lichtenstein, <em>Double counting in
-    LDA+DMFT—The example of NiO</em>, J. Electron Spectros. Relat. Phenomena
-    <strong>118</strong>, 11 (2010).</a>
-
-
+[^kotliar:rmp:2006-1]: [G. Kotliar, S. Y. Savrasov, K. Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti, *Electronic structure calculations with dynamical mean-field theory*, Rev. Mod. Phys. **78**, 865 (2006)](https://link.aps.org/doi/10.1103/RevModPhys.78.865)
+[^parcollet:cpc:196-2]: [O. Parcollet, M. Ferrero, T. Ayral, H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics Communications **196**, 398 (2015).](http://dx.doi.org/10.1016/j.cpc.2015.04.023)
+[^merkel:joss:7-3]: [M. E. Merkel, A. Carta, S. Beck and Alexander Hampel, Journal of Open Source Software **7**, 77 (2022).](https://doi.org/10.21105/joss.04623)
+[^Schuler:JPCM:2018-4]: [M. Schüler, O.E. Peil, G.J. Kraberger, R. Pordzik, M. Marsman, G. Kresse, T.O. Wehling, and M. Aichhorn, J. Phys.: Condens. Matter **30**, 475901 (2018).](https://doi.org/10.1088/1361-648X/aae80a)
+[^karolak:2010-5]: [M. Karolak, G. Ulm, T. Wehling, V. Mazurenko, A. Poteryaev, and A. Lichtenstein, *Double counting in LDA+DMFT—The example of NiO*, J. Electron Spectros. Relat. Phenomena **118**, 11 (2010).](https://doi.org/10.1016/j.elspec.2010.05.021)

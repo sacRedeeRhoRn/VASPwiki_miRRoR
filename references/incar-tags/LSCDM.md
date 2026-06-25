@@ -30,7 +30,7 @@ href="/wiki/Wannier_Functions#One-shot_single_value_decomposition_(SVD)"
 class="mw-redirect" title="Wannier Functions">one-shot method</a>
 through a singular-value decomposition as proposed by A. Damle and L.
 Lin
-<sup>[\[1\]](#cite_note-damle:mms:2018-1)</sup>.
+[^damle:mms:2018-1].
 
 In order to obtain a good Wannierization, a certain level of freedom
 should be given to the localized orbitals to adequately accommodate the
@@ -56,10 +56,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSCDM-_incategory-Examples)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-damle:mms:2018_1-0)
-    <a href="https://doi.org/10.1137/17M1129696" class="external text"
-    rel="nofollow">A. Damle and L. Lin, Multiscale Model. Simul.,
-    <strong>16(3)</strong>, 1392–1410 (2018).</a>
-
-
+[^damle:mms:2018-1]: [A. Damle and L. Lin, Multiscale Model. Simul., **16(3)**, 1392–1410 (2018).](https://doi.org/10.1137/17M1129696)

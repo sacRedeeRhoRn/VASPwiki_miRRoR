@@ -15,7 +15,7 @@ holes in the semiconductor valence band, and the n-type Schottky barrier
 height $\varphi_{\mathrm{n}}$ describes the barrier seen by electrons in the
 conduction band. In VASP, the potential alignment method can be used to
 estimate the Schottky
-barrier<sup>[\[1\]](#cite_note-baldereschi:prl:1988-1)[\[2\]](#cite_note-peressi:1998-2)</sup>.
+barrier[^baldereschi:prl:1988-1][^peressi:1998-2].
 
 
 ## Contents
@@ -44,7 +44,7 @@ maximum $E_{\mathrm{VBM}}$ and band gap $E_{\mathrm{g}}$ of the semiconductor, a
 In addition, the macroscopic electrostatic potential difference
 $\Delta\bar{V}$ across the interface is extracted from a
 separate interface slab
-calculation<sup>[\[3\]](#cite_note-3)</sup>.
+calculation[^3].
 
 ## Step-by-step instructions\[<a
 href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&amp;section=2"
@@ -112,9 +112,9 @@ class="external text" rel="nofollow">py4vasp</a>:
 
 Building a lattice-matched metal–semiconductor interface slab is outside
 the scope of this page. Tools such as the `CoherentInterfaceBuilder` in
-pymatgen<sup>[\[4\]](#cite_note-pymatgen-4)</sup>
+pymatgen[^pymatgen-4]
 and the interface construction utilities in
-ASE<sup>[\[5\]](#cite_note-ase-5)</sup>
+ASE[^ase-5]
 can be used to construct the initial geometry. An interface structure
 for a Schottky barrier calculation should satisfy the following
 requirements:
@@ -712,7 +712,7 @@ E_{\mathrm{VBM}} = -1.886 + 8.085 - 5.449 = 0.75$ eV,
 
 which fits well to the experimental values that vary between 0.68 and
 0.81 eV, depending on sample and experimental
-conditions<sup>[\[6\]](#cite_note-altindal:2007-6)</sup>,
+conditions[^altindal:2007-6],
 and
 
 $\varphi_{\mathrm{n}} = E_{\mathrm{g}} - \varphi_{\mathrm{p}} =
@@ -733,44 +733,9 @@ href="/wiki/index.php?title=Calculating_the_Schottky_barrier&amp;veaction=edit&a
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-baldereschi:prl:1988_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.61.734"
-    class="external text" rel="nofollow">A. Baldereschi, S. Baroni, and R.
-    Resta <em>Band offsets in lattice-matched heterojunctions: A model and
-    first-principles calculations for GaAs/AlAs</em>, Phys. Rev. Lett.
-    <strong>61</strong>, 734 (1988).</a>
-2.  [↑](#cite_ref-peressi:1998_2-0)
-    <a href="https://doi.org/10.1088/0022-3727/31/11/002"
-    class="external text" rel="nofollow">M. Peressi, M. Binggeli, and A.
-    Baldereschi <em>Band engineering at interfaces: theory and numerical
-    experiments</em>, J. Phys. D: Appl. Phys. <strong>31</strong>, 1273
-    (1998).</a>
-3.  [↑](#cite_ref-3)
-    In VASP, the
-    $\mathbf{G}=0$ Fourier component of the Hartree potential is set
-    to zero by convention, so all single-particle eigenvalues are
-    already referenced to the average electrostatic potential of their
-    respective unit cell. As a consequence, $E_{\mathrm{F}}$ and $E_{\mathrm{VBM}}$ can be read directly from the bulk
-    [OUTCAR](../output-files/OUTCAR.md) files without any further potential
-    referencing, and only the interface calculation requires the
-    electrostatic potential to be written out — to
-    [vaspout.h5](../output-files/Vaspout.h5.md) via
-    [WRT_POTENTIAL](../incar-tags/WRT_POTENTIAL.md) (recommended)
-    or to [LOCPOT](../output-files/LOCPOT.md) via
-    [LVHAR](../incar-tags/LVHAR.md) (legacy).
-4.  [↑](#cite_ref-pymatgen_4-0)
-    <a href="https://pymatgen.org/" class="external text"
-    rel="nofollow">https://pymatgen.org/ (2022).</a>
-5.  [↑](#cite_ref-ase_5-0)
-    <a href="https://wiki.fysik.dtu.dk/ase/" class="external text"
-    rel="nofollow">https://wiki.fysik.dtu.dk/ase/ (2025).</a>
-6.  [↑](#cite_ref-altindal:2007_6-0)
-    <a href="https://doi.org/10.1016/j.physb.2007.06.002"
-    class="external text" rel="nofollow">Ş. Altındal, H. Kanbur, A.
-    Tataroğlu, and M.M. Bülbül, <em>The barrier height distribution in
-    identically prepared Al/p-Si Schottky diodes with the native interfacial
-    insulator layer (SiO2)</em>, Physica B: Condensed Matter
-    <strong>399</strong>, 146-154 (2007).</a>
-
-
+[^baldereschi:prl:1988-1]: [A. Baldereschi, S. Baroni, and R. Resta *Band offsets in lattice-matched heterojunctions: A model and first-principles calculations for GaAs/AlAs*, Phys. Rev. Lett. **61**, 734 (1988).](https://doi.org/10.1103/PhysRevLett.61.734)
+[^peressi:1998-2]: [M. Peressi, M. Binggeli, and A. Baldereschi *Band engineering at interfaces: theory and numerical experiments*, J. Phys. D: Appl. Phys. **31**, 1273 (1998).](https://doi.org/10.1088/0022-3727/31/11/002)
+[^3]: In VASP, the \[math\]\displaystyle{ \mathbf{G}=0 }\[/math\]
+[^pymatgen-4]: [https://pymatgen.org/ (2022).](https://pymatgen.org/)
+[^ase-5]: [https://wiki.fysik.dtu.dk/ase/ (2025).](https://wiki.fysik.dtu.dk/ase/)
+[^altindal:2007-6]: [Ş. Altındal, H. Kanbur, A. Tataroğlu, and M.M. Bülbül, *The barrier height distribution in identically prepared Al/p-Si Schottky diodes with the native interfacial insulator layer (SiO2)*, Physica B: Condensed Matter **399**, 146-154 (2007).](https://doi.org/10.1016/j.physb.2007.06.002)

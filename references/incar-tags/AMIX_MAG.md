@@ -27,7 +27,7 @@ convergence turns out to be very slow. In particular, for slabs,
 magnetic systems, and insulating systems (e.g. molecules and clusters),
 an initial "linear mixing" can result in faster convergence than the
 Kerker model
-function.<sup>[\[1\]](#cite_note-kerker:prb:1981-1)</sup>
+function.[^kerker:prb:1981-1]
 One can therefore try to use the following setting
 
     AMIX     = 0.2
@@ -52,11 +52,4 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-AMIX_MAG-_incategory-Examples)
 
-
-1.  [↑](#cite_ref-kerker:prb:1981_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.23.3082" class="external text"
-    rel="nofollow">G. P. Kerker, <em>Efficient iteration scheme for
-    self-consistent pseudopotential calculations</em>, Phys. Rev. B
-    <strong>23</strong>, 3082 (1981).</a>
-
-
+[^kerker:prb:1981-1]: [G. P. Kerker, *Efficient iteration scheme for self-consistent pseudopotential calculations*, Phys. Rev. B **23**, 3082 (1981).](https://doi.org/10.1103/PhysRevB.23.3082)

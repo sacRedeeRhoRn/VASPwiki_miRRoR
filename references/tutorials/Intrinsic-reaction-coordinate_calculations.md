@@ -6,7 +6,7 @@
 
 The potential energy profiles along the **intrinsic reaction
 coordinate** (IRC) can be computed via the method of Hratchian and
-Schlegel<sup>[\[1\]](#cite_note-hratchian:jpc:2002-1)</sup>.
+Schlegel[^hratchian:jpc:2002-1].
 The algorithm starts from the transition state and propagates the system
 via the damped-velocity-Verlet algorithm. The damping is realized via
 rescaling the velocity vector to a constant value
@@ -191,11 +191,4 @@ href="/wiki/index.php?title=Intrinsic-reaction-coordinate_calculations&amp;veact
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-hratchian:jpc:2002_1-0)
-    <a href="https://doi.org/10.1021/jp012125b" class="external text"
-    rel="nofollow">H. P. Hratchian and H. B. Schlegel, <em>Following
-    Reaction Pathways Using a Damped Classical Trajectory Algorithm</em>, J.
-    Phys. Chem. A <strong>106</strong>, 165 (2002).</a>
-
-
+[^hratchian:jpc:2002-1]: [H. P. Hratchian and H. B. Schlegel, *Following Reaction Pathways Using a Damped Classical Trajectory Algorithm*, J. Phys. Chem. A **106**, 165 (2002).](https://doi.org/10.1021/jp012125b)

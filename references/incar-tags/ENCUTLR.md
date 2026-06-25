@@ -19,7 +19,7 @@ contribution.
 Similar to the [treatment of the long-range part of the
 force-constants](../theory/Phonons-_Theory.md) "Phonons: Theory"),
 the potential and the PAW strengths also require a special
-treatment<sup>[\[1\]](#cite_note-engel:prb:2022-1)</sup>
+treatment[^engel:prb:2022-1]
 in polar materials. The correction scheme involves an Ewald summation
 over reciprocal lattice vectors that converges rapidly in reciprocal
 space. ENCUTLR controls the
@@ -39,13 +39,4 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-engel:prb:2022_1-0)
-    <a href="https://link.aps.org/doi/10.1103/PhysRevB.106.094316"
-    class="external text" rel="nofollow">M. Engel, H. Miranda, L. Chaput, A.
-    Togo, C. Verdi, M. Marsman, and G. Kresse, <em>Zero-point
-    renormalization of the band gap of semiconductors and insulators using
-    the projector augmented wave method</em>, Phys. Rev. B
-    <strong>106</strong>, 094316 (2022).</a>
-
-
+[^engel:prb:2022-1]: [M. Engel, H. Miranda, L. Chaput, A. Togo, C. Verdi, M. Marsman, and G. Kresse, *Zero-point renormalization of the band gap of semiconductors and insulators using the projector augmented wave method*, Phys. Rev. B **106**, 094316 (2022).](https://link.aps.org/doi/10.1103/PhysRevB.106.094316)

@@ -7,9 +7,9 @@
 A variant of [Many-body dispersion
 energy](Many-body_dispersion_energy.md)
 method based on fractionally ionic model for polarizability of
-Gould<sup>[\[1\]](#cite_note-gould:jctc:2016_a-1)</sup>,
+Gould[^gould:jctc:2016_a-1],
 hereafter dubbed MBD@rsSCS/FI, has been introduced in
-Ref.<sup>[\[2\]](#cite_note-gould:jctc:2016_b-2)</sup>
+Ref.[^gould:jctc:2016_b-2]
 Just like in the original MBD@rsSCS, dispersion energy in MBD@rsSCS/FI
 is computed using
 
@@ -30,21 +30,21 @@ $\alpha_p^{\text{AIM}} = \alpha_p^{\text{atom}}
 whereby the volume ratios between interacting and non-interacting atoms
 ($\frac{V^{\text{eff}}_p}{V^{\text{atom}}_p}$) is
 obtained using conventional Hirshfeld
-partitioning<sup>[\[3\]](#cite_note-hirshfeld:tca:1977-3)</sup>.
+partitioning[^hirshfeld:tca:1977-3].
 Although the MBD@rsSCS/FI employs a similar scaling relation:
 
 $\alpha_p^{\text{AIM}}(\omega) = \alpha_p^{\text{FI}}(\omega)
 \frac{V^{\text{eff}}_p}{V^{\text{FI}}_p}$,
 
 it relies on Gould's
-model<sup>[\[1\]](#cite_note-gould:jctc:2016_a-1)</sup>
+model[^gould:jctc:2016_a-1]
 of frequency-dependent polarizabilities ($\alpha_p^{\text{FI}}(\omega)$) and charge densities of non-interacting fractional
 ions combined with iterative Hirshfeld
-partitioning<sup>[\[4\]](#cite_note-bultinck:jcp:07-4)</sup>.
+partitioning[^bultinck:jcp:07-4].
 Obviously, the MBD@rsSCS and the MBD@rsSCS/FI are equivalent for
 non-polar systems, such as graphite, but typically yield distinctly
 different results for polar and ionic
-materials<sup>[\[2\]](#cite_note-gould:jctc:2016_b-2)</sup>.
+materials[^gould:jctc:2016_b-2].
 
 ## Usage\[<a
 href="/wiki/index.php?title=Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability&amp;veaction=edit&amp;section=1"
@@ -72,7 +72,7 @@ be user-defined (the given values are the default ones):
   eigenvalues of the matrix $\left(1-\mathbf{A}^{(0)}_{LR}(\omega)
   {\mathbf{T}}_{LR}({\mathbf{k}})\right)$ are
   non-positive, see
-  reference<sup>[\[2\]](#cite_note-gould:jctc:2016_b-2)</sup>
+  reference[^gould:jctc:2016_b-2]
   for details
 
   
@@ -109,9 +109,7 @@ terminates with an error message
 that this problem is not caused by a bug, but rather it is due to a
 limitation of the underlying physical model.</li>
 <li>Analytical gradients of the energy are implemented (fore details see
-reference <sup><a href="#cite_note-bucko:jpcm:16-5"><span
-class="cite-bracket">[</span>5<span
-class="cite-bracket">]</span></a></sup>) and hence the atomic and
+reference [^bucko:jpcm:16-5]) and hence the atomic and
 lattice relaxations can be performed.</li>
 <li>Due to the long-range nature of dispersion interactions, the
 convergence of energy with respect to the number of k-points should be
@@ -150,41 +148,10 @@ energy](Many-body_dispersion_energy.md)
 href="/wiki/index.php?title=Many-body_dispersion_energy_with_fractionally_ionic_model_for_polarizability&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-gould:jctc:2016_a_1-0)</sup>
-    <sup>[b](#cite_ref-gould:jctc:2016_a_1-1)</sup>
-    <a href="https://doi.org/10.1021/acs.jctc.6b00361" class="external text"
-    rel="nofollow">T. Gould and T. Bučko, <em>C6 Coefficients and Dipole
-    Polarizabilities for All Atoms and Many Ions in Rows 1–6 of the Periodic
-    Table</em>, J. Chem. Theory Comput. <strong>12</strong>, 3603
-    (2016).</a>
-2.  ↑
-    <sup>[a](#cite_ref-gould:jctc:2016_b_2-0)</sup>
-    <sup>[b](#cite_ref-gould:jctc:2016_b_2-1)</sup>
-    <sup>[c](#cite_ref-gould:jctc:2016_b_2-2)</sup>
-    <a href="https://doi.org/10.1021/acs.jctc.6b00925" class="external text"
-    rel="nofollow">T. Gould, S. Lebègue, J. G. Ángyán, and T. Bučko, <em>A
-    Fractionally Ionic Approach to Polarizability and van der Waals
-    Many-Body Dispersion Calculations</em>, J. Chem. Theory Comput.
-    <strong>12</strong>, 5920 (2016).</a>
-3.  [↑](#cite_ref-hirshfeld:tca:1977_3-0)
-    <a href="https://doi.org/10.1007/BF00549096" class="external text"
-    rel="nofollow">F. Hirshfeld, <em>Bonded-atom fragments for describing
-    molecular charge densities</em>, Theor. Chim. Acta <strong>44</strong>,
-    129 (1977).</a>
-4.  [↑](#cite_ref-bultinck:jcp:07_4-0)
-    <a href="https://doi.org/10.1063/1.2715563" class="external text"
-    rel="nofollow">P. Bultinck, C. Van Alsenoy, P. W. Ayers, and R. Carbó
-    Dorca, J. Chem. Phys. <strong>126</strong>, 144111 (2007).</a>
-5.  [↑](#cite_ref-bucko:jpcm:16_5-0)
-    <a href="https://doi.org/10.1088/0953-8984/28/4/045201"
-    class="external text" rel="nofollow">T. Bučko, S. Lebègue, T. Gould, and
-    J. G. Ángyán, J. Phys.: Condens. Matter <strong>28</strong>, 045201
-    (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^gould:jctc:2016_a-1]: [T. Gould and T. Bučko, *C6 Coefficients and Dipole Polarizabilities for All Atoms and Many Ions in Rows 1–6 of the Periodic Table*, J. Chem. Theory Comput. **12**, 3603 (2016).](https://doi.org/10.1021/acs.jctc.6b00361)
+[^gould:jctc:2016_b-2]: [T. Gould, S. Lebègue, J. G. Ángyán, and T. Bučko, *A Fractionally Ionic Approach to Polarizability and van der Waals Many-Body Dispersion Calculations*, J. Chem. Theory Comput. **12**, 5920 (2016).](https://doi.org/10.1021/acs.jctc.6b00925)
+[^hirshfeld:tca:1977-3]: [F. Hirshfeld, *Bonded-atom fragments for describing molecular charge densities*, Theor. Chim. Acta **44**, 129 (1977).](https://doi.org/10.1007/BF00549096)
+[^bultinck:jcp:07-4]: [P. Bultinck, C. Van Alsenoy, P. W. Ayers, and R. Carbó Dorca, J. Chem. Phys. **126**, 144111 (2007).](https://doi.org/10.1063/1.2715563)
+[^bucko:jpcm:16-5]: [T. Bučko, S. Lebègue, T. Gould, and J. G. Ángyán, J. Phys.: Condens. Matter **28**, 045201 (2016).](https://doi.org/10.1088/0953-8984/28/4/045201)

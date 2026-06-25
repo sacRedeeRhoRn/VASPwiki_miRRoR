@@ -235,7 +235,7 @@ An alternative way to avoid relaxing the volume is to relax the ionic
 positions and cell shape for a fixed set of volumes, i.e., multiple
 [POSCAR](../input-files/POSCAR.md) files. These are then fitted to an
 equation of state (EOS), e.g., Murnaghan
-<sup>[\[1\]](#cite_note-murnaghan:web-1)</sup>.
+[^murnaghan:web-1].
 As the Pulay stress is almost isotropic, only a constant value is added
 to the diagonal elements of the stress tensor. Therefore, the relaxation
 for a fixed volume will yield highly accurate structures. This approach
@@ -244,7 +244,7 @@ it may be used safely with the default energy cutoff.
 
 To fit the equation of state, you need to do calculations for a set of
 fixed volumes
-<sup>[\[2\]](#cite_note-2)</sup>.
+[^2].
 The following steps are required:
 
 ### Step 0.\[<a
@@ -428,7 +428,7 @@ jagged curves, cf. Fig. 1 and 2. This is commonly due to two reasons:
     different FFT grid is used, causing the energy to jump
     discontinuously between different volumes. For more details on FFT
     grids, see
-    <sup>[\[3\]](#cite_note-vasp:intro:lecture:web-3)</sup>.
+    [^vasp:intro:lecture:web-3].
 
     1.  Use [PREC](../incar-tags/PREC.md)=Accurate
     2.  Increase the plane wave cutoff.
@@ -440,30 +440,6 @@ href="/wiki/index.php?title=Volume_relaxation&amp;veaction=edit&amp;section=17"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-murnaghan:web_1-0)
-    <a href="https://en.wikipedia.org/wiki/Murnaghan_equation_of_state"
-    class="external text" rel="nofollow">Murnaghan Equation of State,
-    www.wikipedia.org (2024)</a>
-2.  [↑](#cite_ref-2)
-    This, of course, implies that the
-    number of basis vectors is different at each volume. Calculations
-    with many plane-wave codes have shown that such calculations yield
-    reliable results for the lattice constants and the bulk modulus and
-    other elastic properties even at relatively modest energy cutoffs.
-    Constant energy cut-off calculations are less prone to errors caused
-    by the basis set incompleteness than constant basis set
-    calculations. But it should be kept in mind that volume and cell
-    shape changes must be rather large in order to obtain reliable
-    results from this method, because within the limit of very small
-    distortions, the energy changes obtained with this method are
-    equivalent to those obtained from the stress tensor and are
-    therefore affected by the Pulay stress. Only volume changes of the
-    order of 5-10 % guarantee that the errors introduced by the basis
-    set incompleteness are averaged out.
-3.  [↑](#cite_ref-vasp:intro:lecture:web_3-0)
-    <a href="https://youtu.be/Fv3F4LHGPuc?si=dJlZD9dTuxQz__R9"
-    class="external text" rel="nofollow">Introduction to ab-initio
-    simulation in VASP</a>
-
-
+[^murnaghan:web-1]: [Murnaghan Equation of State, www.wikipedia.org (2024)](https://en.wikipedia.org/wiki/Murnaghan_equation_of_state)
+[^2]: This, of course, implies that the number of basis vectors is different at each volume. Calculations with many plane-wave codes have shown that such calculations yield reliable results for the lattice constants and the bulk modulus and other elastic properties even at relatively modest energy cutoffs. Constant energy cut-off calculations are less prone to errors caused by the basis set incompleteness than constant basis set calculations. But it should be kept in mind that volume and cell shape changes must be rather large in order to obtain reliable results from this method, because within the limit of very small distortions, the energy changes obtained with this method are equivalent to those obtained from the stress tensor and are therefore affected by the Pulay stress. Only volume changes of the order of 5-10 % guarantee that the errors introduced by the basis set incompleteness are averaged out.
+[^vasp:intro:lecture:web-3]: [Introduction to ab-initio simulation in VASP](https://youtu.be/Fv3F4LHGPuc?si=dJlZD9dTuxQz__R9)

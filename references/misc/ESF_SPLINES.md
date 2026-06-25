@@ -52,7 +52,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Algorithm">edit</a> \| (./index.php.md)\]
 
 This feature follows the same idea as in coupled cluster
-calculations.<sup>[\[1\]](#cite_note-liao:jcp:2016-1)</sup>
+calculations.[^liao:jcp:2016-1]
 To compute the RPA-correlation energy, the electronic structure factor
 in the RPA
 
@@ -64,7 +64,7 @@ $S({\bf q}+{\bf G}) =\int {\rm d}\omega
 is evaluated on the k-point grid defined in
 [KPOINTS](../input-files/KPOINTS.md) and the correlation energy (as its
 trace) is
-stored.<sup>[\[2\]](#cite_note-gelbenegger:thesis2018-2)</sup>
+stored.[^gelbenegger:thesis2018-2]
 To obtain the correlation energy on a finer k-point grid, more q-points
 are added using tricubic spline interpolation. The resulting energy is
 compared to the previous correlation energy. This procedure is repeated
@@ -138,14 +138,5 @@ href="/wiki/index.php?title=ESF_SPLINES&amp;veaction=edit&amp;section=5"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-liao:jcp:2016_1-0)
-    <a href="https://doi.org/10.1063/1.4964307" class="external text"
-    rel="nofollow">K. Liao and A. Grueneis, J. Chem. Phys.
-    <strong>145</strong>, 141102 (2016).</a>
-2.  [↑](#cite_ref-gelbenegger:thesis2018_2-0)
-    <a href="https://utheses.univie.ac.at/detail/47275#"
-    class="external text" rel="nofollow">K. Gelbenegger, Thesis: Finite size
-    corrections in the RPA (2018).</a>
-
-
+[^liao:jcp:2016-1]: [K. Liao and A. Grueneis, J. Chem. Phys. **145**, 141102 (2016).](https://doi.org/10.1063/1.4964307)
+[^gelbenegger:thesis2018-2]: [K. Gelbenegger, Thesis: Finite size corrections in the RPA (2018).](https://utheses.univie.ac.at/detail/47275#)

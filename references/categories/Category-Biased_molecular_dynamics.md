@@ -13,12 +13,12 @@ Depending on the type of sampling and in combination with the
 corresponding statistical methods one then has access to important
 thermodynamic quantities like, e.g., free energies. Biased molecular
 dynamics comes in very different flavors such as, e.g., umbrella
-sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>
+sampling[^torrie:jcp:1977-1]
 and umbrella
-integration<sup>[\[2\]](#cite_note-kaestner:jcp:2005-2)</sup>,
+integration[^kaestner:jcp:2005-2],
 to name a few. For a comprehensive description (especially about
 umbrella sampling), we refer the interested user to Ref.
-<sup>[\[3\]](#cite_note-frenkel:ap-book:2002-3)</sup>
+[^frenkel:ap-book:2002-3]
 written by D. Frenkel and B. Smit.
 
 The probability density for a geometric parameter ξ of the system driven
@@ -71,7 +71,7 @@ $\langle A \rangle_{H} =\frac{\langle A(q)
 \exp\left\\\tilde{V}(\xi)/k_B\\T\right\\ \rangle_{\tilde{H}}}.$
 
 One of the most popular methods using bias potentials is umbrella
-sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>.
+sampling[^torrie:jcp:1977-1].
 This method uses a bias potential to enhance sampling of ξ in regions
 with low *P*(ξ<sub>*i*</sub>), e.g., transition regions of chemical
 reactions. The correct distributions are recovered afterward using the
@@ -203,7 +203,7 @@ every MD step at a constant rate defined via the
 
 This form of bias potential is employed in several simulation protocols,
 such as the umbrella
-sampling<sup>[\[1\]](#cite_note-torrie:jcp:1977-1)</sup>,
+sampling[^torrie:jcp:1977-1],
 umbrella integration, or steered MD, and is useful also in cases where
 the $\xi_{\mu}$
 values need to be restrained.
@@ -371,24 +371,6 @@ href="/wiki/index.php?title=Category:Biased_molecular_dynamics&amp;veaction=edit
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-torrie:jcp:1977_1-0)</sup>
-    <sup>[b](#cite_ref-torrie:jcp:1977_1-1)</sup>
-    <sup>[c](#cite_ref-torrie:jcp:1977_1-2)</sup>
-    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
-    class="external text" rel="nofollow">G. M. Torrie and J. P. Valleau, J.
-    Comp. Phys. <strong>23</strong>, 187 (1977).</a>
-2.  [↑](#cite_ref-kaestner:jcp:2005_2-0)
-    <a href="https://doi.org/10.1063/1.2052648" class="external text"
-    rel="nofollow">J. Kästner, and W. Thiel, <em>Bridging the gap between
-    thermodynamic integration and umbrella sampling provides a novel
-    analysis method: “Umbrella integration”</em>, J. Chem. Phys.
-    <strong>123</strong>, 144104 (2005).</a>
-3.  [↑](#cite_ref-frenkel:ap-book:2002_3-0)
-    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    <em>Understanding molecular simulations: from algorithms to
-    applications</em>, Academic Press: San Diego, 2002.</a>
-
-
+[^torrie:jcp:1977-1]: [G. M. Torrie and J. P. Valleau, J. Comp. Phys. **23**, 187 (1977).](http://doi.org/10.1016/0021-9991(77)90121-8)
+[^kaestner:jcp:2005-2]: [J. Kästner, and W. Thiel, *Bridging the gap between thermodynamic integration and umbrella sampling provides a novel analysis method: “Umbrella integration”*, J. Chem. Phys. **123**, 144104 (2005).](https://doi.org/10.1063/1.2052648)
+[^frenkel:ap-book:2002-3]: [D. Frenkel and B. Smit, *Understanding molecular simulations: from algorithms to applications*, Academic Press: San Diego, 2002.](http://doi.org/10.1016/0021-9991(77)90121-8)

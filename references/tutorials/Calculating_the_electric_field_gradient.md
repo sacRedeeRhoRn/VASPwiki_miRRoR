@@ -8,7 +8,7 @@ Nuclei with a spin \> ± ½ are called quadrupolar nuclei. They have a
 non-spherical shape and therefore a non-zero electric field gradient
 (EFG) at the nucleus. The EFG is calculated using
 [LEFG](../incar-tags/LEFG.md)
-<sup>[\[1\]](#cite_note-petrilli:prb:1998-1)</sup>.
+[^petrilli:prb:1998-1].
 By including the quadrupole moment of the isotopes, the quadrupole
 coupling constants *C<sub>q</sub>* can be calculated (multiple
 definitions exist in the literature, ensure that you are correctly
@@ -78,7 +78,7 @@ sensitive to several input parameters that must all be independently
 tested. In particular, small differences in the structure can make big
 differences to $V_{zz}$, up
 to 50 %
-<sup>[\[1\]](#cite_note-petrilli:prb:1998-1)</sup>;
+[^petrilli:prb:1998-1];
 see the Advice section for more details. Make sure to have a
 well-optimized structure before you begin the convergence tests.
 
@@ -106,7 +106,7 @@ so long as the nuclear quadrupolar moments are defined in
 [POSCAR](../input-files/POSCAR.md) file should be defined; there is no need
 to define each individual ion. A short table of values can be found in
 Ref.
-<sup>[\[2\]](#cite_note-pyykko:molphys:2017-2)</sup>.
+[^pyykko:molphys:2017-2].
 
 ### Step 2b (optional): Determine a suitable energetic break value\[<a
 href="/wiki/index.php?title=Calculating_the_electric_field_gradient&amp;veaction=edit&amp;section=4"
@@ -195,7 +195,7 @@ A small difference in the positions of atoms can make a huge difference
 to the EFG. For the O in TiO<sub>2</sub> rutile, a shift in position
 from 0.305 in internal coordinates to 0.3025 made a difference of 50 %
 to $V_{zz}$ for the Ti
-<sup>[\[1\]](#cite_note-petrilli:prb:1998-1)</sup>.
+[^petrilli:prb:1998-1].
 This is an atypical case but highlights the importance of using a
 [well-optimized
 structure](Structure_optimization.md),
@@ -351,20 +351,5 @@ href="/wiki/index.php?title=Calculating_the_electric_field_gradient&amp;veaction
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-petrilli:prb:1998_1-0)</sup>
-    <sup>[b](#cite_ref-petrilli:prb:1998_1-1)</sup>
-    <sup>[c](#cite_ref-petrilli:prb:1998_1-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.57.14690"
-    class="external text" rel="nofollow">H. M. Petrilli, P. E. Blöchl, P.
-    Blaha, and K. Schwarz, <em>Electric-field-gradient calculations using
-    the projector augmented wave method</em>, Phys. Rev. B
-    <strong>57</strong>, 14690 (1998).</a>
-2.  [↑](#cite_ref-pyykko:molphys:2017_2-0)
-    <a href="https://doi.org/10.1080/00268976.2018.1426131"
-    class="external text" rel="nofollow">P. Pyykkö, <em>Year-2017 nuclear
-    quadrupole moments</em>, Mol. Phys. <strong>116</strong>, 1328-1338
-    (2018).</a>
-
-
+[^petrilli:prb:1998-1]: [H. M. Petrilli, P. E. Blöchl, P. Blaha, and K. Schwarz, *Electric-field-gradient calculations using the projector augmented wave method*, Phys. Rev. B **57**, 14690 (1998).](https://doi.org/10.1103/PhysRevB.57.14690)
+[^pyykko:molphys:2017-2]: [P. Pyykkö, *Year-2017 nuclear quadrupole moments*, Mol. Phys. **116**, 1328-1338 (2018).](https://doi.org/10.1080/00268976.2018.1426131)

@@ -14,7 +14,7 @@ exchange-correlation kernel $f_\mathrm{xc}$ ([LFXC](../incar-tags/LFXC.md),
 [LADDER](../incar-tags/LADDER.md)) and if the nonlocal limit of
 $f_\mathrm{xc}$ is properly treated, excitonic effects
 can be captured with good
-accuracy<sup>[\[1\]](#cite_note-tal:prr:2020-1)</sup>.
+accuracy[^tal:prr:2020-1].
 VASP provides multiple implementations of TDDFT, each with its own
 advantages and disadvantages, so that the best algorithm can be selected
 based on the problem at hand. The detailed theoretical background is
@@ -121,7 +121,7 @@ $|\mu_{cv\mathbf k}(t)\rangle$ is propagated forward
 in time using the fixed Hamiltonian.
 
 The dielectric function is found via a Fourier
-transform<sup>[\[2\]](#cite_note-sander:jcp:2017-2)</sup>:
+transform[^sander:jcp:2017-2]:
 
 $\varepsilon_M(\omega)=1-\frac{4\pi}{\Omega}\int_0^{\infty} \mathrm{d} t
 \sum_{c,v,\mathbf{k}}\left(\langle\mu_{cv\mathbf{k}}|
@@ -170,7 +170,7 @@ title="Edit section: Time-evolution or real-time TDDFT (ALGO = TIMEEV)">edit</a>
 An alternative to solving the Casida equation is to compute the
 frequency-dependent response via real-time propagation of the Kohn-Sham
 orbitals
-<sup>[\[2\]](#cite_note-sander:jcp:2017-2)</sup>.
+[^sander:jcp:2017-2].
 The starting point is the time-dependent Kohn-Sham equation,
 
 $\mathrm i \frac{\partial}{\partial t}\left|\phi_{v\mathbf
@@ -277,20 +277,5 @@ href="/wiki/index.php?title=Category:Time-dependent_density_functional_theory&am
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-tal:prr:2020_1-0)
-    <a href="http://doi.org/10.1103/PhysRevResearch.2.032019"
-    class="external text" rel="nofollow">A. Tal, P. Liu, G. Kresse, A.
-    Pasquarello, <em>Accurate optical spectra through time-dependent density
-    functional theory based on screening-dependent hybrid functionals</em>,
-    Phys. Rev. Research <em>2</em>, 032019 (2020)</a>
-2.  ↑
-    <sup>[a](#cite_ref-sander:jcp:2017_2-0)</sup>
-    <sup>[b](#cite_ref-sander:jcp:2017_2-1)</sup>
-    <a href="http://doi.org/10.1063/1.4975193" class="external text"
-    rel="nofollow">T. Sander, G. Kresse, <em>Macroscopic dielectric function
-    within time-dependent density functional theory—Real time evolution
-    versus the Casida approach</em> , J. Chem. Phys. <em>146</em>, 064110
-    (2017)</a>
-
-
+[^tal:prr:2020-1]: [A. Tal, P. Liu, G. Kresse, A. Pasquarello, *Accurate optical spectra through time-dependent density functional theory based on screening-dependent hybrid functionals*, Phys. Rev. Research *2*, 032019 (2020)](http://doi.org/10.1103/PhysRevResearch.2.032019)
+[^sander:jcp:2017-2]: [T. Sander, G. Kresse, *Macroscopic dielectric function within time-dependent density functional theory—Real time evolution versus the Casida approach* , J. Chem. Phys. *146*, 064110 (2017)](http://doi.org/10.1063/1.4975193)

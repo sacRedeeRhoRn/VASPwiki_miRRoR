@@ -50,28 +50,28 @@ input vector $\rho_{in}$
 and the residual $R = \rho_{out} - \rho_{in}$. The optimal solution is obtained within the subspace
 spanned by the input vectors. The most efficient density-mixing schemes
 are the
-Broyden<sup>[\[1\]](#cite_note-broyden:mc:1965-1)</sup>
+Broyden[^broyden:mc:1965-1]
 and the
-Pulay<sup>[\[2\]](#cite_note-pulay:cpl:1980-2)</sup>
+Pulay[^pulay:cpl:1980-2]
 mixing ([IMIX](../incar-tags/IMIX.md)=4). In the
-Broyden<sup>[\[1\]](#cite_note-broyden:mc:1965-1)</sup>
+Broyden[^broyden:mc:1965-1]
 mixing, an approximate of the Jacobian matrix is iteratively improved to
 find the optimal solution. In the
-Pulay<sup>[\[2\]](#cite_note-pulay:cpl:1980-2)</sup>
+Pulay[^pulay:cpl:1980-2]
 mixing, the input vectors are combined assuming linearity to minimize
 the residual.
 
 The implementation in VASP is based on the work of
-Johnson<sup>[\[3\]](#cite_note-johnson:prb:1988-3)</sup>.
+Johnson[^johnson:prb:1988-3].
 Kresse and
-Furthmüller<sup>[\[4\]](#cite_note-kresse:cms:1996-4)</sup>
+Furthmüller[^kresse:cms:1996-4]
 extended on it and demonstrated that the Broyden and Pulay schemes
 transform into each other for certain choices of weights for the
 previous iterations. They also introduced an efficient metric putting
 additional weight on the long-range components of the density (small
 $\mathbf G$ vectors), resulting in a more robust
 convergence. Furthermore, VASP uses a Kerker
-preconditioning<sup>[\[5\]](#cite_note-kerker:prb:1981-5)</sup>
+preconditioning[^kerker:prb:1981-5]
 to improve the choice of the input density for the next iteration.
 
 ## How to\[<a
@@ -138,31 +138,8 @@ href="/wiki/index.php?title=Category:Density_mixing&amp;veaction=edit&amp;sectio
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-broyden:mc:1965_1-0)</sup>
-    <sup>[b](#cite_ref-broyden:mc:1965_1-1)</sup>
-    <a href="https://doi.org/10.1090/S0025-5718-1965-0198670-6"
-    class="external text" rel="nofollow">C. G. Broyden, Math. Comput.
-    <strong>19</strong>, 577 (1965)</a>
-2.  ↑
-    <sup>[a](#cite_ref-pulay:cpl:1980_2-0)</sup>
-    <sup>[b](#cite_ref-pulay:cpl:1980_2-1)</sup>
-    <a href="https://doi.org/10.1016/0009-2614(80)80396-4"
-    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett.
-    <strong>73</strong>, 393 (1980).</a>
-3.  [↑](#cite_ref-johnson:prb:1988_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.38.12807"
-    class="external text" rel="nofollow">D. D. Johnson, Phys. Rev. B
-    <strong>38</strong>, 12807 (1988)</a>
-4.  [↑](#cite_ref-kresse:cms:1996_4-0)
-    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
-    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
-5.  [↑](#cite_ref-kerker:prb:1981_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.23.3082" class="external text"
-    rel="nofollow">G. P. Kerker, <em>Efficient iteration scheme for
-    self-consistent pseudopotential calculations</em>, Phys. Rev. B
-    <strong>23</strong>, 3082 (1981).</a>
-
-
+[^broyden:mc:1965-1]: [C. G. Broyden, Math. Comput. **19**, 577 (1965)](https://doi.org/10.1090/S0025-5718-1965-0198670-6)
+[^pulay:cpl:1980-2]: [P. Pulay, Chem. Phys. Lett. **73**, 393 (1980).](https://doi.org/10.1016/0009-2614(80)80396-4)
+[^johnson:prb:1988-3]: [D. D. Johnson, Phys. Rev. B **38**, 12807 (1988)](https://doi.org/10.1103/PhysRevB.38.12807)
+[^kresse:cms:1996-4]: [G. Kresse and J. Furthmüller, Comp. Mater. Sci. **6**, 15 (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
+[^kerker:prb:1981-5]: [G. P. Kerker, *Efficient iteration scheme for self-consistent pseudopotential calculations*, Phys. Rev. B **23**, 3082 (1981).](https://doi.org/10.1103/PhysRevB.23.3082)

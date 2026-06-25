@@ -35,7 +35,7 @@ When chosen, cRPA matrix elements in
 <a href="https://vasp.at/py4vasp/latest/index.html"
 class="external text" rel="nofollow">py4vasp</a> to analyze the spatial
 decay of the Coulomb interaction using the Ohno
-potential<sup>[\[1\]](#cite_note-kaltak:prb:2025-1)</sup>
+potential[^kaltak:prb:2025-1]
 
 $U(R) = \frac{U(R=0)}{\sqrt{\frac{R}\delta + 1}}$
 
@@ -72,10 +72,4 @@ href="/wiki/index.php?title=LTWO_CENTRE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-kaltak:prb:2025_1-0)
-    <a href="https://doi.org/10.1103/m3gh-g6r6" class="external text"
-    rel="nofollow">M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and
-    G. Kresse, Phys. Rev. B <strong>112</strong>, 245102 (2025).</a>
-
-
+[^kaltak:prb:2025-1]: [M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and G. Kresse, Phys. Rev. B **112**, 245102 (2025).](https://doi.org/10.1103/m3gh-g6r6)

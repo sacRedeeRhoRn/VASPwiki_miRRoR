@@ -5,7 +5,7 @@
 
 
 The expression for the density-dependent energy correction
-dDsC<sup>[\[1\]](#cite_note-steinmann:jcp:11-1)[\[2\]](#cite_note-steinmann:jctc:11-2)</sup>
+dDsC[^steinmann:jcp:11-1][^steinmann:jctc:11-2]
 is very similar to that of the [DFT-D2](DFT-D2.md) method
 (see the equation for $E_{disp}$
 for the [DFT-D2](DFT-D2.md) method). The important
@@ -16,9 +16,9 @@ their local chemical environment. In this method, polarizability,
 dispersion coefficients, charge and charge-overlap of an atom in a
 molecule or solid are computed in the basis of a simplified
 exchange-hole dipole moment
-formalism<sup>[\[1\]](#cite_note-steinmann:jcp:11-1)</sup>
+formalism[^steinmann:jcp:11-1]
 pioneered by Becke and
-Johnson<sup>[\[3\]](#cite_note-becke:jcp:05-3)</sup>.
+Johnson[^becke:jcp:05-3].
 
 The dDsC dispersion energy is expressed as follows:
 
@@ -77,7 +77,7 @@ distance-dependent ionic bond index.
 
 The Performance of PBE-dDsC in the description of the adsorption of
 hydrocarbons on Pt(111) has been examined in reference
-<sup>[\[4\]](#cite_note-gautier:pccp:15-4)</sup>.
+[^gautier:pccp:15-4].
 
 ## Usage\[<a
 href="/wiki/index.php?title=DDsC_dispersion_correction&amp;veaction=edit&amp;section=1"
@@ -91,7 +91,7 @@ functionals PBE ([GGA](../incar-tags/GGA.md)=*PE*}) and revPBE
 has to define these parameters via corresponding tags in the
 [INCAR](../input-files/INCAR.md) file (parameters for common DFT functionals
 can be found in reference
-<sup>[\[2\]](#cite_note-steinmann:jctc:11-2)</sup>.
+[^steinmann:jctc:11-2].
 The following parameters can be optionally defined in the
 [INCAR](../input-files/INCAR.md) file (the given values are the default
 ones):
@@ -132,9 +132,7 @@ title="PREC">PREC</a>=<em>Accurate</em> for this type of calculations
 title="PREC">PREC</a>=<em>Low</em>).</li>
 <li>The charge-density dependence of gradients is neglected. This
 approximation has been thoroughly investigated and validated in
-reference <sup><a href="#cite_note-bremond:jcp:14-5"><span
-class="cite-bracket">[</span>5<span
-class="cite-bracket">]</span></a></sup>.</li>
+reference [^bremond:jcp:14-5].</li>
 </ul></td>
 </tr>
 </tbody>
@@ -153,35 +151,10 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=DDsC_dispersion_correction&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-steinmann:jcp:11_1-0)</sup>
-    <sup>[b](#cite_ref-steinmann:jcp:11_1-1)</sup>
-    <a href="https://doi.org/10.1063/1.3545985" class="external text"
-    rel="nofollow">S. N. Steinmann and C. Corminboeuf, J. Chem. Phys.
-    <strong>134</strong>, 044117 (2011).</a>
-2.  ↑
-    <sup>[a](#cite_ref-steinmann:jctc:11_2-0)</sup>
-    <sup>[b](#cite_ref-steinmann:jctc:11_2-1)</sup>
-    <a href="https://doi.org/10.1021/ct200602x" class="external text"
-    rel="nofollow">S. N. Steinmann and C. Corminboeuf, J. Chem. Theory
-    Comput. <strong>7</strong>, 3567 (2011).</a>
-3.  [↑](#cite_ref-becke:jcp:05_3-0)
-    <a href="https://doi.org/10.1063/1.2795701" class="external text"
-    rel="nofollow">A. D. Becke and E. R. Johnson, J. Chem. Phys.
-    <strong>122</strong>, 154104 (2005).</a>
-4.  [↑](#cite_ref-gautier:pccp:15_4-0)
-    <a href="https://doi.org/10.1039/C5CP04534G" class="external text"
-    rel="nofollow">S. Gautier, S. N. Steinmann, C. Michel, P.
-    Fleurat-Lessard, and P. Sautet, Phys. Chem. Chem. Phys.
-    <strong>17</strong>, 28921 (2015).</a>
-5.  [↑](#cite_ref-bremond:jcp:14_5-0)
-    <a href="https://doi.org/10.1063/1.4867195" class="external text"
-    rel="nofollow">E. Bremond, N. Golubev, S. N. Steinmann, and C.
-    Corminboeuf, J. Chem. Phys. <strong>140</strong>, 18A516 (2014).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^steinmann:jcp:11-1]: [S. N. Steinmann and C. Corminboeuf, J. Chem. Phys. **134**, 044117 (2011).](https://doi.org/10.1063/1.3545985)
+[^steinmann:jctc:11-2]: [S. N. Steinmann and C. Corminboeuf, J. Chem. Theory Comput. **7**, 3567 (2011).](https://doi.org/10.1021/ct200602x)
+[^becke:jcp:05-3]: [A. D. Becke and E. R. Johnson, J. Chem. Phys. **122**, 154104 (2005).](https://doi.org/10.1063/1.2795701)
+[^gautier:pccp:15-4]: [S. Gautier, S. N. Steinmann, C. Michel, P. Fleurat-Lessard, and P. Sautet, Phys. Chem. Chem. Phys. **17**, 28921 (2015).](https://doi.org/10.1039/C5CP04534G)
+[^bremond:jcp:14-5]: [E. Bremond, N. Golubev, S. N. Steinmann, and C. Corminboeuf, J. Chem. Phys. **140**, 18A516 (2014).](https://doi.org/10.1063/1.4867195)

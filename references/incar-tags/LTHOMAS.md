@@ -96,7 +96,7 @@ values reported by VASP are often not recommended.
 
 Another important detail concerns the implementation of the local LDA
 part in VASP. Literature \[see Eqs. (3.10), (3.14), and (3.15) in Ref.
-<sup>[\[1\]](#cite_note-seidl:prb:96-1)</sup>\]
+[^seidl:prb:96-1]\]
 suggests to use in the enhancement factor $F(z)$ a
 position-independent variable $z=k_{\rm TF}/\bar{k}_{\rm F}$ where $\bar{k}_{\rm F}$ is as defined above but using the average density
 $\bar{n}$ in the unit cell. However, implemented in VASP
@@ -124,10 +124,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LTHOMAS-_incategory-Examples
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-seidl:prb:96_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.53.3764" class="external text"
-    rel="nofollow">A. Seidl, A. Görling, P. Vogl, J.A. Majewski, and M.
-    Levy, Phys. Rev. B <strong>53</strong>, 3764 (1996).</a>
-
-
+[^seidl:prb:96-1]: [A. Seidl, A. Görling, P. Vogl, J.A. Majewski, and M. Levy, Phys. Rev. B **53**, 3764 (1996).](https://doi.org/10.1103/PhysRevB.53.3764)

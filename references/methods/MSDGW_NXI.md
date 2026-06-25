@@ -9,7 +9,7 @@ Default: **MSDGW_NXI** = 2 
 
 Description: Number of pseudo orbitals per compressed energy of mixed
 stochastic-deterministic compression
-algorithm.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
+algorithm.[^altman:prl:2024-1]
 
 |  |
 |----|
@@ -54,16 +54,6 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 href="/wiki/index.php?title=MSDGW_NXI&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-altman:prl:2024_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.132.086401"
-    class="external text" rel="nofollow">Altman, A. R. and Kundu, S. and da
-    Jornada, F. H., <em>Mixed Stochastic-Deterministic Approach for
-    Many-Body Perturbation Theory Calculations</em>, Phys. Rev. Lett.
-    <strong>132</strong>, 086401 (2024).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^altman:prl:2024-1]: [Altman, A. R. and Kundu, S. and da Jornada, F. H., *Mixed Stochastic-Deterministic Approach for Many-Body Perturbation Theory Calculations*, Phys. Rev. Lett. **132**, 086401 (2024).](https://doi.org/10.1103/PhysRevLett.132.086401)

@@ -29,7 +29,7 @@ V<sub>cor</sub> = V<sub>iso</sub> - V<sub>per</sub> is added to the
 total electronic potential in each step of the iterative solution of the
 Kohn-Sham equation. For more information regarding the method, please
 refer to the SCPC
-paper.<sup>[\[1\]](#cite_note-scpc:deSilva:2021-1)</sup>
+paper.[^scpc:deSilva:2021-1]
 
 ## Usage\[<a
 href="/wiki/index.php?title=Self-Consistent_Potential_Correction&amp;veaction=edit&amp;section=1"
@@ -70,12 +70,4 @@ href="/wiki/index.php?title=Self-Consistent_Potential_Correction&amp;veaction=ed
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-scpc:deSilva:2021_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.126.076401"
-    class="external text" rel="nofollow">M. Chagas de Silva, M. Lorke, B.
-    Aradi, M. Farzalipour Tabriz, T. Frauenheim, Angel Rubio, D. Rocca and
-    P. Deák, <em>Self-consistent potential correction for charged periodic
-    systems</em>, Phys. Rev. Lett. <strong>126</strong>, 076401 (2021).</a>
-
-
+[^scpc:deSilva:2021-1]: [M. Chagas de Silva, M. Lorke, B. Aradi, M. Farzalipour Tabriz, T. Frauenheim, Angel Rubio, D. Rocca and P. Deák, *Self-consistent potential correction for charged periodic systems*, Phys. Rev. Lett. **126**, 076401 (2021).](https://doi.org/10.1103/PhysRevLett.126.076401)

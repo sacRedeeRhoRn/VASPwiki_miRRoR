@@ -38,12 +38,12 @@ where
   range (SR) and long range (LR).
 
 Examples of such functionals are those proposed in Refs.
-<sup>[\[1\]](#cite_note-skone:prb:2016-1)[\[2\]](#cite_note-chen2018nonempirical-2)[\[3\]](#cite_note-cui2018doubly-3)</sup>.
+[^skone:prb:2016-1][^chen2018nonempirical-2][^cui2018doubly-3].
 These hybrid functionals are based on a common model for the dielectric
 function, but differ in the way how the range-separation parameters are
 obtained from first-principles calculations. Their connection and
 performance have been discussed for instance in Ref.
-<sup>[\[4\]](#cite_note-liu2019assessing-4)</sup>.
+[^liu2019assessing-4].
 In principle, they can be considered to be a smartly constructed
 approximation to COH-SEX (local Coulomb hole plus screened exchange),
 albeit fulfilling many important constraints that the exact exchange
@@ -54,16 +54,16 @@ released in 2009 (before the two publications), although the gradient
 contribution had been erroneously implemented in all VASP.5 releases and
 is only correct in VASP.6. The related bug fix has been made available
 by the authors of Ref.
-<sup>[\[3\]](#cite_note-cui2018doubly-3)</sup>.
+[^cui2018doubly-3].
 The nonlocal exchange part of the functional has also been used and
 documented in Ref.
-<sup>[\[5\]](#cite_note-bokdam:scr:2016-5)</sup>
+[^bokdam:scr:2016-5]
 and is covered in [Improving the dielectric
 function](../misc/Improving_the_dielectric_function.md).
 
 An example of tags to specify in the [INCAR](../input-files/INCAR.md) file
 is given for the DD-RSH-CAM
-functional:<sup>[\[2\]](#cite_note-chen2018nonempirical-2)[\[3\]](#cite_note-cui2018doubly-3)</sup>
+functional:[^chen2018nonempirical-2][^cui2018doubly-3]
 
     LHFCALC = .TRUE.
     LMODELHF = .TRUE.
@@ -83,7 +83,7 @@ nonlocal exchange changes from [AEXX](AEXX.md) to
 
 Other examples of dielectric-dependent range-separated functionals
 proposed in the
-literature<sup>[\[1\]](#cite_note-skone:prb:2016-1)[\[2\]](#cite_note-chen2018nonempirical-2)[\[3\]](#cite_note-cui2018doubly-3)</sup>
+literature[^skone:prb:2016-1][^chen2018nonempirical-2][^cui2018doubly-3]
 can be found
 [here](../methods/Hybrid_functionals-_formalism.md)_with_different_mixings "Hybrid functionals: formalism")
 and their corresponding INCAR files at [list of hybrid
@@ -163,7 +163,7 @@ the table below
 These values have been obtained from fits of the dielectric function
 using the Nanoquanta kernel and partially self-consistent GW
 calculations as used in Ref.
-<sup>[\[6\]](#cite_note-grueneis2014ionization-6)</sup>.
+[^grueneis2014ionization-6].
 The values can be also estimated from simple dimensional scaling
 relations of the valence electron density. Furthermore band gap
 predictions are not very sensitive to the choice of
@@ -185,49 +185,9 @@ formalism](../methods/Hybrid_functionals-_formalism.md),
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-skone:prb:2016_1-0)</sup>
-    <sup>[b](#cite_ref-skone:prb:2016_1-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.93.235106"
-    class="external text" rel="nofollow">J. H. Skone, M. Govoni, and G.
-    Galli, <em>Nonempirical range-separated hybrid functionals for solids
-    and molecules</em>, Phys. Rev. B <strong>93</strong>, 235106 (2016).</a>
-2.  ↑
-    <sup>[a](#cite_ref-chen2018nonempirical_2-0)</sup>
-    <sup>[b](#cite_ref-chen2018nonempirical_2-1)</sup>
-    <sup>[c](#cite_ref-chen2018nonempirical_2-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevMaterials.2.073803"
-    class="external text" rel="nofollow">W. Chen, G. Miceli, G.M. Rignanese,
-    and A. Pasquarello, <em>Nonempirical dielectric-dependent hybrid
-    functional with range separation for semiconductors and insulators</em>,
-    Phys. Rev. Mater. <strong>2</strong>, 073803 (2018).</a>
-3.  ↑
-    <sup>[a](#cite_ref-cui2018doubly_3-0)</sup>
-    <sup>[b](#cite_ref-cui2018doubly_3-1)</sup>
-    <sup>[c](#cite_ref-cui2018doubly_3-2)</sup>
-    <sup>[d](#cite_ref-cui2018doubly_3-3)</sup>
-    <a href="https://doi.org/10.1021/acs.jpclett.8b00919"
-    class="external text" rel="nofollow">Z.H. Cui, Y.C. Wang, M.Y. Zhang, X.
-    Xu, and H. Jiang, <em>Doubly Screened Hybrid Functional: An Accurate
-    First-Principles Approach for Both Narrow- and Wide-Gap
-    Semiconductors</em> J. Phys. Chem. Lett., <strong>9</strong>, 2338-2345
-    (2018).</a>
-4.  [↑](#cite_ref-liu2019assessing_4-0)
-    <a href="https://doi.org/10.1088/1361-648x/ab4150" class="external text"
-    rel="nofollow">P. Liu, C. Franchini, M. Marsman, and G. Kresse,
-    <em>Assessing model-dielectric-dependent hybrid functionals on the
-    antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and
-    NiO</em>, J. Phys.: Condens. Matter <strong>32</strong>, 015502
-    (2020).</a>
-5.  [↑](#cite_ref-bokdam:scr:2016_5-0)
-    <a href="https://doi.org/10.1038/srep28618" class="external text"
-    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
-    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
-    (2016).</a>
-6.  [↑](#cite_ref-grueneis2014ionization_6-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.112.096401"
-    class="external text" rel="nofollow">A. Grüneis, G. Kresse, Y. Hinuma,
-    and F. Oba, Phys. Rev. Lett. <strong>112</strong>, 096401 (2014).</a>
-
-
+[^skone:prb:2016-1]: [J. H. Skone, M. Govoni, and G. Galli, *Nonempirical range-separated hybrid functionals for solids and molecules*, Phys. Rev. B **93**, 235106 (2016).](http://doi.org/10.1103/PhysRevB.93.235106)
+[^chen2018nonempirical-2]: [W. Chen, G. Miceli, G.M. Rignanese, and A. Pasquarello, *Nonempirical dielectric-dependent hybrid functional with range separation for semiconductors and insulators*, Phys. Rev. Mater. **2**, 073803 (2018).](https://doi.org/10.1103/PhysRevMaterials.2.073803)
+[^cui2018doubly-3]: [Z.H. Cui, Y.C. Wang, M.Y. Zhang, X. Xu, and H. Jiang, *Doubly Screened Hybrid Functional: An Accurate First-Principles Approach for Both Narrow- and Wide-Gap Semiconductors* J. Phys. Chem. Lett., **9**, 2338-2345 (2018).](https://doi.org/10.1021/acs.jpclett.8b00919)
+[^liu2019assessing-4]: [P. Liu, C. Franchini, M. Marsman, and G. Kresse, *Assessing model-dielectric-dependent hybrid functionals on the antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and NiO*, J. Phys.: Condens. Matter **32**, 015502 (2020).](https://doi.org/10.1088/1361-648x/ab4150)
+[^bokdam:scr:2016-5]: [M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci. Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)
+[^grueneis2014ionization-6]: [A. Grüneis, G. Kresse, Y. Hinuma, and F. Oba, Phys. Rev. Lett. **112**, 096401 (2014).](https://doi.org/10.1103/PhysRevLett.112.096401)

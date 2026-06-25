@@ -6,7 +6,7 @@
 
 The expression for the dispersion energy within the method of Tkatchenko
 and
-Scheffler<sup>[\[1\]](#cite_note-tkatchenko:prl:09-1)</sup>
+Scheffler[^tkatchenko:prl:09-1]
 is formally identical to that of the [DFT-D2](DFT-D2.md)
 method. The important difference is, however, that the dispersion
 coefficients and damping function are charge-density dependent. The
@@ -60,7 +60,7 @@ $R_{0ij} = R_{0i} + R_{0j}.$
 
 The performance of the Tkatchenko-Scheffler method in optimization of
 various crystalline systems has been examined in reference
-<sup>[\[2\]](#cite_note-bucko:prb:13-2)</sup>.
+[^bucko:prb:13-2].
 
 ## Usage\[<a
 href="/wiki/index.php?title=Tkatchenko-Scheffler_method&amp;veaction=edit&amp;section=1"
@@ -110,7 +110,7 @@ the default ones):
   replaced by the one designed to enable reliable modeling of structure
   and stability for a broad class of organic molecules adsorbed on metal
   surfaces is
-  activated<sup>[\[3\]](#cite_note-3)</sup>
+  activated[^3]
 
   
 
@@ -155,9 +155,7 @@ the <a href="/wiki/INCAR" title="INCAR">INCAR</a> file.</li>
 style="opacity:.5">$E_{disp}$</span>
 (controlled via <a href="/wiki/LVDW_EWALD"
 title="LVDW EWALD">LVDW_EWALD</a>) implemented according to reference
-<sup><a href="#cite_note-kerber:jcc:08-4"><span
-class="cite-bracket">[</span>4<span
-class="cite-bracket">]</span></a></sup> is available as of
+[^kerber:jcc:08-4] is available as of
 VASP.5.3.4.</li>
 <li>Parameters <a href="/wiki/VDW_C6AU" title="VDW C6AU">VDW_C6AU</a>
 and <a href="/wiki/VDW_R0AU" title="VDW R0AU">VDW_R0AU</a> are available
@@ -195,27 +193,9 @@ polarizability](Many-body_dispersion_energy_with_fractionally_ionic_model_for_po
 href="/wiki/index.php?title=Tkatchenko-Scheffler_method&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-tkatchenko:prl:09_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.102.073005"
-    class="external text" rel="nofollow">A. Tkatchenko and M. Scheffler,
-    Phys. Rev. Lett. <strong>102</strong>, 073005 (2009).</a>
-2.  [↑](#cite_ref-bucko:prb:13_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.87.064110"
-    class="external text" rel="nofollow">T. Bučko, S. Lebègue, J. Hafner,
-    and J. G. Ángyán, Phys. Rev. B <strong>87</strong>, 064110 (2013).</a>
-3.  [↑](#cite_ref-3)
-    <a
-    href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.035118"
-    class="external text" rel="nofollow">V. G. Ruiz, W. Liu, and A.
-    Tkatchenko, Phys. Rev. B 93, 035118 (2016).</a>
-4.  [↑](#cite_ref-kerber:jcc:08_4-0)
-    <a href="https://doi.org/10.1002/jcc.21069" class="external text"
-    rel="nofollow">T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem.
-    <strong>29</strong>, 2088 (2008).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^tkatchenko:prl:09-1]: [A. Tkatchenko and M. Scheffler, Phys. Rev. Lett. **102**, 073005 (2009).](https://doi.org/10.1103/PhysRevLett.102.073005)
+[^bucko:prb:13-2]: [T. Bučko, S. Lebègue, J. Hafner, and J. G. Ángyán, Phys. Rev. B **87**, 064110 (2013).](https://doi.org/10.1103/PhysRevB.87.064110)
+[^3]: [V. G. Ruiz, W. Liu, and A. Tkatchenko, Phys. Rev. B 93, 035118 (2016).](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.035118)
+[^kerber:jcc:08-4]: [T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem. **29**, 2088 (2008).](https://doi.org/10.1002/jcc.21069)

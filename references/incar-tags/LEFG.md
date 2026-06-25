@@ -15,7 +15,7 @@ the electric field gradient (EFG) at positions of the atomic nuclei.
 For LEFG=.TRUE., the electric
 field gradient tensors at the positions of the atomic nuclei are
 calculated using the method of Petrilli *et al.*
-<sup>[\[1\]](#cite_note-petrilli:prb:1998-1)</sup>.
+[^petrilli:prb:1998-1].
 
 The EFG tensors are symmetric. The principal components *V*<sub>ii</sub>
 and asymmetry parameter η are printed for each atom. Following
@@ -96,12 +96,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LEFG-_incategory-Examples)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-petrilli:prb:1998_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.57.14690"
-    class="external text" rel="nofollow">H. M. Petrilli, P. E. Blöchl, P.
-    Blaha, and K. Schwarz, <em>Electric-field-gradient calculations using
-    the projector augmented wave method</em>, Phys. Rev. B
-    <strong>57</strong>, 14690 (1998).</a>
-
-
+[^petrilli:prb:1998-1]: [H. M. Petrilli, P. E. Blöchl, P. Blaha, and K. Schwarz, *Electric-field-gradient calculations using the projector augmented wave method*, Phys. Rev. B **57**, 14690 (1998).](https://doi.org/10.1103/PhysRevB.57.14690)

@@ -128,7 +128,7 @@ title="Edit section: INCAR">edit</a> \| (./index.php.md)\]
 
 - [INCAR](../input-files/INCAR.md) electronic contributions to the frequency
   dependent dielectric
-  function<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)</sup>
+  function[^gajdos:prb:2006-1]
 
 (see other tutorials for more advanced options:
 [Dielectric_properties_of_SiC](Dielectric_properties_of_SiC.md).
@@ -146,7 +146,7 @@ example.)
 
 - [INCAR](../input-files/INCAR.md) ionic contributions to the frequency
   dependent dielectric
-  function<sup>[\[2\]](#cite_note-bokdam:scr:2016-2)</sup>:
+  function[^bokdam:scr:2016-2]:
 
 <!-- -->
 
@@ -282,22 +282,6 @@ collumn files (diel.electron.dat and diel.electron.dat):
 href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=10"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
-    (2006).</a>
-2.  [↑](#cite_ref-bokdam:scr:2016_2-0)
-    <a href="https://doi.org/10.1038/srep28618" class="external text"
-    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
-    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
-    (2016).</a>
-
-
-  
-
 ## Download\[<a
 href="/wiki/index.php?title=Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl&amp;veaction=edit&amp;section=11"
 class="mw-editsection-visualeditor"
@@ -318,4 +302,5 @@ dependent dielectric function of NaCl
  \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^gajdos:prb:2006-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
+[^bokdam:scr:2016-2]: [M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci. Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)

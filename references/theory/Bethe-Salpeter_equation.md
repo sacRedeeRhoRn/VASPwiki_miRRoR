@@ -6,9 +6,9 @@
 
 The Bethe-Salpeter equation (BSE) was first derived and applied in the
 context of particle physics and QED in 1951
-<sup>[\[1\]](#cite_note-salpeter:pr:1951-1)</sup>.
+[^salpeter:pr:1951-1].
 The first application of BSE in solids was done by Hanke and Sham
-<sup>[\[2\]](#cite_note-hanke:prl:1979-2)</sup>,
+[^hanke:prl:1979-2],
 who calculated the absorption spectrum of bulk silicon in qualitative
 agreement with experiment. Since then numerous works have shown
 successful applications of BSE for describing optical properties of
@@ -103,7 +103,7 @@ to the excitation energies including the excitonic effects. For
 practical reasons, it is more efficient to reformulate the
 Bethe-Salpeter equation in the the transition space and solve it as a
 non-hermitian eigenvalue problem, where the excitation energies
-correspond to the eigenvalues $\omega_\lambda$<sup>[\[3\]](#cite_note-sander:prb:15-3)</sup>
+correspond to the eigenvalues $\omega_\lambda$[^sander:prb:15-3]
 
 $\left(\begin{array}{cc} \mathbf{A} & \mathbf{B} \\ \mathbf{B}^\* &
 \mathbf{A}^\* \end{array}\right)\left(\begin{array}{l}
@@ -196,23 +196,6 @@ href="/wiki/index.php?title=Bethe-Salpeter_equation&amp;veaction=edit&amp;sectio
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-salpeter:pr:1951_1-0)
-    <a href="http://dx.doi.org/10.1103/PhysRev.84.1232"
-    class="external text" rel="nofollow">E. E. Salpeter and H. A. Bethe,
-    <em>A Relativistic Equation for Bound-State Problems</em>, Phys. Rev.
-    <strong>84</strong>, 1232-1242 (1951)</a>
-2.  [↑](#cite_ref-hanke:prl:1979_2-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevLett.43.387"
-    class="external text" rel="nofollow">W. Hanke and L. J. Sham,
-    <em>Many-Particle Effects in the Optical Excitations of a
-    Semiconductor</em>, Phys. Rev. Lett. <strong>43</strong>, 387-390
-    (1979)</a>
-3.  [↑](#cite_ref-sander:prb:15_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-
-
+[^salpeter:pr:1951-1]: [E. E. Salpeter and H. A. Bethe, *A Relativistic Equation for Bound-State Problems*, Phys. Rev. **84**, 1232-1242 (1951)](http://dx.doi.org/10.1103/PhysRev.84.1232)
+[^hanke:prl:1979-2]: [W. Hanke and L. J. Sham, *Many-Particle Effects in the Optical Excitations of a Semiconductor*, Phys. Rev. Lett. **43**, 387-390 (1979)](http://dx.doi.org/10.1103/PhysRevLett.43.387)
+[^sander:prb:15-3]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)

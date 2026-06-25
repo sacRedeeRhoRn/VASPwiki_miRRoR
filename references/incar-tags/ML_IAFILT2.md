@@ -35,7 +35,7 @@ title="On-the-fly machine learning force field generation using Bayesian linear 
   filtering function is described as $\eta_{l}=\frac{1}{(2l+1)^{1/4}}$.
 - ML_IAFILT2=2: The angular
   filtering
-  function<sup>[\[1\]](#cite_note-boyd:book:2000-1)</sup>
+  function[^boyd:book:2000-1]
   is described as $\eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} \[l
   (l+1)\]^{2}}$. Using this function the parameter
   $a_{\mathrm{FILT}}$ has to be defined too. It is set
@@ -67,16 +67,6 @@ number can be reduced to [ML_LMAX2](ML_LMAX2.md)=4.
 href="/wiki/index.php?title=ML_IAFILT2&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-boyd:book:2000_1-0)
-    <a href="https://link.springer.com/gp/book/9783540514879"
-    class="external text" rel="nofollow">J. P. Boyd, Chebyshev and Fourier
-    Spectral Methods (Dover Publications, New York, 2000).</a>
-
-
-  
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=ML_IAFILT2&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
@@ -91,4 +81,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_IAFILT2-_incategory-Examp
 
 ------------------------------------------------------------------------
 
-
+[^boyd:book:2000-1]: [J. P. Boyd, Chebyshev and Fourier Spectral Methods (Dover Publications, New York, 2000).](https://link.springer.com/gp/book/9783540514879)

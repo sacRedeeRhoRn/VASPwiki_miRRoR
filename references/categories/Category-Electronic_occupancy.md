@@ -38,7 +38,7 @@ This approach connects closely to experimental observables such as the
 the [optical
 spectroscopy](Category-Dielectric_properties.md)
 of point defects in semiconductors and insulators
-<sup>[\[1\]](#cite_note-Freysoldt2014-1)</sup>.
+[^Freysoldt2014-1].
 
 - [$\Delta\mathrm{SCF}$
   calculations](/wiki/Delta_self-consistent_field "Delta self-consistent field"):
@@ -50,7 +50,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Density-functional theory plus dynamical mean-field theory">edit</a> \| (./index.php.md)\]
 
 **Density-functional theory plus dynamical mean-field theory
-(DFT+DMFT)**<sup>[\[2\]](#cite_note-kotliar:rmp:2006-2)</sup>
+(DFT+DMFT)**[^kotliar:rmp:2006-2]
 is a method that provides a more accurate treatment of [**strongly
 correlated
 materials**](../methods/Category-Strongly_correlated_electrons.md)
@@ -76,32 +76,14 @@ file [vaspgamma.h5](../input-files/Vaspgamma.h5.md) /
   calculations](../tutorials/DFT+DMFT_calculations.md):
   example of performing DFT+DMFT calculations using the
   <a href="https://triqs.github.io/triqs" class="external text"
-  rel="nofollow">TRIQS software</a><sup>[\[3\]](#cite_note-parcollet:cpc:196-3)</sup>
+  rel="nofollow">TRIQS software</a>[^parcollet:cpc:196-3]
 
 ## References\[<a
 href="/wiki/index.php?title=Category:Electronic_occupancy&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Freysoldt2014_1-0)
-    <a href="http://dx.doi.org/10.1103/RevModPhys.86.253"
-    class="external text" rel="nofollow">Christoph Freysoldt, Blazej
-    Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and Anderson
-    Janotti, Rev. Mod. Phys. (2014).</a>
-2.  [↑](#cite_ref-kotliar:rmp:2006_2-0)
-    <a href="https://link.aps.org/doi/10.1103/RevModPhys.78.865"
-    class="external text" rel="nofollow">G. Kotliar, S. Y. Savrasov, K.
-    Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti,
-    <em>Electronic structure calculations with dynamical mean-field
-    theory</em>, Rev. Mod. Phys. <strong>78</strong>, 865 (2006)</a>
-3.  [↑](#cite_ref-parcollet:cpc:196_3-0)
-    <a href="http://dx.doi.org/10.1016/j.cpc.2015.04.023"
-    class="external text" rel="nofollow">O. Parcollet, M. Ferrero, T. Ayral,
-    H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics
-    Communications <strong>196</strong>, 398 (2015).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Freysoldt2014-1]: [Christoph Freysoldt, Blazej Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and Anderson Janotti, Rev. Mod. Phys. (2014).](http://dx.doi.org/10.1103/RevModPhys.86.253)
+[^kotliar:rmp:2006-2]: [G. Kotliar, S. Y. Savrasov, K. Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti, *Electronic structure calculations with dynamical mean-field theory*, Rev. Mod. Phys. **78**, 865 (2006)](https://link.aps.org/doi/10.1103/RevModPhys.78.865)
+[^parcollet:cpc:196-3]: [O. Parcollet, M. Ferrero, T. Ayral, H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics Communications **196**, 398 (2015).](http://dx.doi.org/10.1016/j.cpc.2015.04.023)

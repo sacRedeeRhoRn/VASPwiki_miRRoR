@@ -9,11 +9,11 @@ non-equilibrium system to equilibrium. Examples of such simulations
 include the impact problems when a particle with large kinetic energy
 hits a surface or calculation of friction force between two surfaces
 sliding with respect to each other. As shown by Toton *et
-al.*<sup>[\[1\]](#cite_note-Toton10-1)</sup>,
+al.*[^Toton10-1],
 this type of problems can be studied using the stochastic boundary
 conditions (SBC) derived from the generalized Langevin equation by
 Kantorovich and
-Rompotis.<sup>[\[2\]](#cite_note-Kantorovich08-2)</sup>
+Rompotis.[^Kantorovich08-2]
 In this approach, the system of interest is divided into three regions:
 (a) fixed atoms, (b) the internal (Newtonian) atoms moving according to
 Newtonian dynamics, and (c) a buffer region of Langevin atoms (*i.e.*,
@@ -77,15 +77,5 @@ href="/wiki/index.php?title=Stochastic_boundary_conditions&amp;veaction=edit&amp
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-Toton10_1-0)
-    <a href="http://dx.doi.org/10.1088/0953-8984/22/7/074205"
-    class="external text" rel="nofollow">D. Toton, C. D. Lorenz, N.
-    Rompotis, N. Martsinovich, and L. Kantorovich, J. Phys.: Condens. Matter
-    22, 074205 (2010).</a>
-2.  [↑](#cite_ref-Kantorovich08_2-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.78.094305"
-    class="external text" rel="nofollow">L. Kantorovich and N. Rompotis,
-    Phys. Rev. B 78, 094305 (2008).</a>
-
-
+[^Toton10-1]: [D. Toton, C. D. Lorenz, N. Rompotis, N. Martsinovich, and L. Kantorovich, J. Phys.: Condens. Matter 22, 074205 (2010).](http://dx.doi.org/10.1088/0953-8984/22/7/074205)
+[^Kantorovich08-2]: [L. Kantorovich and N. Rompotis, Phys. Rev. B 78, 094305 (2008).](http://dx.doi.org/10.1103/PhysRevB.78.094305)

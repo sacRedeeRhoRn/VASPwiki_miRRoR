@@ -4,7 +4,7 @@
 # DFT-D4
 
 
-DFT-D4<sup>[\[1\]](#cite_note-caldeweyher:jcp:2019-1)[\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3)</sup>
+DFT-D4[^caldeweyher:jcp:2019-1][^dftd4_1-2][^dftd4_2-3]
 is an external package that can be [linked to
 VASP](../misc/Makefile.include.md).
 DFT-D4 adds to the DFT energy expression a term that accounts for the
@@ -17,9 +17,9 @@ which allows for a fast computation. Since every functional has
 different interactions between atoms, DFT-D4 tailors its adjustable
 parameters to the functional. For more information regarding these
 parameters, please refer to the DFT-D4
-paper<sup>[\[1\]](#cite_note-caldeweyher:jcp:2019-1)</sup>
+paper[^caldeweyher:jcp:2019-1]
 and
-websites.<sup>[\[2\]](#cite_note-dftd4_1-2)[\[3\]](#cite_note-dftd4_2-3)</sup>
+websites.[^dftd4_1-2][^dftd4_2-3]
 
 ## Usage\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
@@ -94,27 +94,6 @@ VASP allows setting the following tags in the
 ## References\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-caldeweyher:jcp:2019_1-0)</sup>
-    <sup>[b](#cite_ref-caldeweyher:jcp:2019_1-1)</sup>
-    <a href="https://doi.org/10.1063/1.5090222" class="external text"
-    rel="nofollow">E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S.
-    Spicher, C. Bannwarth, and S. Grimme, J. Chem. Phys.
-    <strong>150</strong>, 154122 (2019).</a>
-2.  ↑
-    <sup>[a](#cite_ref-dftd4_1_2-0)</sup>
-    <sup>[b](#cite_ref-dftd4_1_2-1)</sup>
-    <a href="https://dftd4.readthedocs.io/" class="external text"
-    rel="nofollow">https://dftd4.readthedocs.io</a>
-3.  ↑
-    <sup>[a](#cite_ref-dftd4_2_3-0)</sup>
-    <sup>[b](#cite_ref-dftd4_2_3-1)</sup>
-    <a href="https://github.com/dftd4/" class="external text"
-    rel="nofollow">https://github.com/dftd4</a>
-
-
 ## Related tags and articles\[<a href="/wiki/index.php?title=DFT-D4&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
@@ -129,4 +108,6 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 [DFT-D3](DFT-D3.md),
 [simple-DFT-D3](Simple-DFT-D3.md)
 
-
+[^caldeweyher:jcp:2019-1]: [E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S. Spicher, C. Bannwarth, and S. Grimme, J. Chem. Phys. **150**, 154122 (2019).](https://doi.org/10.1063/1.5090222)
+[^dftd4_1-2]: [https://dftd4.readthedocs.io](https://dftd4.readthedocs.io/)
+[^dftd4_2-3]: [https://github.com/dftd4](https://github.com/dftd4/)

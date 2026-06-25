@@ -8,7 +8,7 @@ A computationally efficient way to account for electrodynamic response
 effects, in particular the interaction of atoms with the dynamic
 electric field due to the surrounding polarizable atoms, was proposed by
 Tkatchenko et
-al<sup>[\[1\]](#cite_note-tkatchenko:prl:12-1)</sup>.
+al[^tkatchenko:prl:12-1].
 In this method, termed TS+SCS, the frequency-dependent screened
 polarizabilities $\alpha^{SCS}(\omega)$ are obtained by solving the self-consistent screening
 equation:
@@ -43,7 +43,7 @@ but with corrected parameters $C_{6ii}^{SCS}$, $\alpha_{i}^{SCS}$, and $R_{0i}^{
 Details of the implementation of the TS+SCS method in VASP and the
 performance tests made on various crystalline systems are presented in
 reference
-<sup>[\[2\]](#cite_note-bucko:prb:13-2)</sup>.
+[^bucko:prb:13-2].
 
 ## Usage\[<a
 href="/wiki/index.php?title=Self-consistent_screening_in_Tkatchenko-Scheffler_method&amp;veaction=edit&amp;section=1"
@@ -125,19 +125,7 @@ polarizability](Many-body_dispersion_energy_with_fractionally_ionic_model_for_po
 href="/wiki/index.php?title=Self-consistent_screening_in_Tkatchenko-Scheffler_method&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-tkatchenko:prl:12_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.108.236402"
-    class="external text" rel="nofollow">A. Tkatchenko, R. A. DiStasio, Jr.,
-    R. Car, and M. Scheffler, Phys. Rev. Lett. <strong>108</strong>, 236402
-    (2012).</a>
-2.  [↑](#cite_ref-bucko:prb:13_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.87.064110"
-    class="external text" rel="nofollow">T. Bučko, S. Lebègue, J. Hafner,
-    and J. G. Ángyán, Phys. Rev. B <strong>87</strong>, 064110 (2013).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^tkatchenko:prl:12-1]: [A. Tkatchenko, R. A. DiStasio, Jr., R. Car, and M. Scheffler, Phys. Rev. Lett. **108**, 236402 (2012).](https://doi.org/10.1103/PhysRevLett.108.236402)
+[^bucko:prb:13-2]: [T. Bučko, S. Lebègue, J. Hafner, and J. G. Ángyán, Phys. Rev. B **87**, 064110 (2013).](https://doi.org/10.1103/PhysRevB.87.064110)

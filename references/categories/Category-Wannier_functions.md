@@ -79,7 +79,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Selected columns of the density matrix (SCDM)">edit</a> \| (./index.php.md)")\]
 
 The SCDM method
-<sup>[\[1\]](#cite_note-damle:mms:2018-1)</sup>
+[^damle:mms:2018-1]
 is switched on using [LSCDM](../incar-tags/LSCDM.md). It has the advantage
 that the specification of a local basis in terms of atomic quantum
 numbers is omitted.
@@ -90,7 +90,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Maximally localized Wannier functions using Wannier90">edit</a> \| (./index.php.md)\]
 
 The interface of VASP with the Wannier90
-code<sup>[\[2\]](#cite_note-mostofi:cpc:2014-2)[\[3\]](#cite_note-pizzi:jpcm:2020-3)</sup>
+code[^mostofi:cpc:2014-2][^pizzi:jpcm:2020-3]
 is mainly controlled by [LWANNIER90](../incar-tags/LWANNIER90.md) and
 [LWANNIER90_RUN](../incar-tags/LWANNIER90_RUN.md). First, the
 initial guess for $A_{mn\mathbf{k}}$ can be created by providing the *projections block* in
@@ -113,22 +113,6 @@ href="/wiki/index.php?title=Category:Wannier_functions&amp;veaction=edit&amp;sec
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-damle:mms:2018_1-0)
-    <a href="https://doi.org/10.1137/17M1129696" class="external text"
-    rel="nofollow">A. Damle and L. Lin, Multiscale Model. Simul.,
-    <strong>16(3)</strong>, 1392–1410 (2018).</a>
-2.  [↑](#cite_ref-mostofi:cpc:2014_2-0)
-    <a href="https://doi.org/10.1016/j.cpc.2014.05.003"
-    class="external text" rel="nofollow">A. A. Mostofi, J. R. Yates, G.
-    Pizzi, Y.-S. Lee, I. Souza, D. Vanderbilt, and N. Marzari, <em>An
-    Updated Version of Wannier90: A Tool for Obtaining Maximally-Localised
-    Wannier Functions</em>, Computer Physics Communications
-    <strong>185</strong>, 2309 (2014).</a>
-3.  [↑](#cite_ref-pizzi:jpcm:2020_3-0)
-    <a href="https://doi.org/10.1088/1361-648X/ab51ff" class="external text"
-    rel="nofollow">G. Pizzi et al., <em>Wannier90 as a community code: new
-    features and applications</em>, J. Phys.: Condens. Matter
-    <strong>32</strong>, 165902 (2020).</a>
-
-
+[^damle:mms:2018-1]: [A. Damle and L. Lin, Multiscale Model. Simul., **16(3)**, 1392–1410 (2018).](https://doi.org/10.1137/17M1129696)
+[^mostofi:cpc:2014-2]: [A. A. Mostofi, J. R. Yates, G. Pizzi, Y.-S. Lee, I. Souza, D. Vanderbilt, and N. Marzari, *An Updated Version of Wannier90: A Tool for Obtaining Maximally-Localised Wannier Functions*, Computer Physics Communications **185**, 2309 (2014).](https://doi.org/10.1016/j.cpc.2014.05.003)
+[^pizzi:jpcm:2020-3]: [G. Pizzi et al., *Wannier90 as a community code: new features and applications*, J. Phys.: Condens. Matter **32**, 165902 (2020).](https://doi.org/10.1088/1361-648X/ab51ff)

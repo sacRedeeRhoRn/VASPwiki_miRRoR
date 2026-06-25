@@ -878,7 +878,7 @@ statistical methods. For that block averages are a very good method.
 Explaining the method here would go beyond the scope of this paragraph,
 but the theory and the implementation of the method are nicely explained
 in appendix D3 of Ref.
-<sup>[\[1\]](#cite_note-frenkel:book:1996-1)</sup>.
+[^frenkel:book:1996-1].
 At the moment the user has to implement this post-calculation analysis
 himself, but we strongly advise to do so. The requirement of having
 properly relaxed structures is further intensified for [advanced
@@ -1533,10 +1533,4 @@ href="/wiki/index.php?title=Best_practices_for_machine-learned_force_fields&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-frenkel:book:1996_1-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    Understanding Molecular Simulation (Academic Press, London, 1996).</a>
-
-
+[^frenkel:book:1996-1]: [D. Frenkel and B. Smit, Understanding Molecular Simulation (Academic Press, London, 1996).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)

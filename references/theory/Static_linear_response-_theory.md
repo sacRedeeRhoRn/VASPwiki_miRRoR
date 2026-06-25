@@ -14,7 +14,7 @@ Let’s consider three types of static perturbations
 
 By performing a Taylor expansion of the total energy
 $E$ in terms of these perturbations we
-obtain<sup>[\[1\]](#cite_note-wu:prb:2005-1)</sup>
+obtain[^wu:prb:2005-1]
 
 $\begin{aligned} E(u,\mathcal{E},\eta) = &E_0 + \\ &\frac{\partial
 E}{\partial u_m} u_m + \frac{\partial E}{\partial \mathcal{E}_\alpha}
@@ -100,10 +100,4 @@ href="/wiki/index.php?title=Static_linear_response:_theory&amp;veaction=edit&amp
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-wu:prb:2005_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.72.035105"
-    class="external text" rel="nofollow">X. Wu, D. Vanderbilt, and D. R.
-    Hamann, Phys. Rev. B <strong>72</strong>, 035105 (2005).</a>
-
-
+[^wu:prb:2005-1]: [X. Wu, D. Vanderbilt, and D. R. Hamann, Phys. Rev. B **72**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.72.035105)

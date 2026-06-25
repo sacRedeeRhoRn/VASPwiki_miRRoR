@@ -7,7 +7,7 @@
 TITEL = \[string\] 
 
 Definition: The
-TITEL<sup>[\[1\]](#cite_note-1)</sup>
+TITEL[^1]
 tag specifies the title of a specific [POTCAR](../input-files/POTCAR.md)
 file. It is also the first line of any [POTCAR](../input-files/POTCAR.md)
 file. It is not possible nor necessary to set this tag in the
@@ -76,9 +76,4 @@ pseudopotentials](../input-files/Available_pseudopotentials.md)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-1)
-    Note that "Titel" is the German
-    translation of the English word "title"
-
-
+[^1]: Note that "Titel" is the German translation of the English word "title"

@@ -18,7 +18,7 @@ Laplace transformed MP2 algorithm.
 If LMP2LT=.TRUE. and
 [ALGO](ALGO.md)=ACFTDRK is set, a quartic scaling Laplace
 transformed MP2 algorithm is
-selected.<sup>[\[1\]](#cite_note-schaefer:JCP2017-1)</sup>
+selected.[^schaefer:JCP2017-1]
 
 This tag should be used in combination with [KPAR](KPAR.md) to
 tweak parallelization as described in this
@@ -36,10 +36,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LMP2LT-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-schaefer:JCP2017_1-0)
-    <a href="https://doi.org/10.1063/1.4976937" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    <strong>146</strong>, 104101 (2017).</a>
-
-
+[^schaefer:JCP2017-1]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. **146**, 104101 (2017).](https://doi.org/10.1063/1.4976937)

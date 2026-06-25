@@ -29,7 +29,7 @@ RPA/ACFDT correlation energies converge very slowly with respect to
 $\mathbf{G}_{\rm max }$. Thus VASP automatically
 extrapolates to the infinite basis set limit using a linear regression
 to the equation:
-<sup>[\[1\]](#cite_note-harl:2008-1)[\[2\]](#cite_note-harl:2010-2)[\[3\]](#cite_note-klimes:2014-3)</sup>
+[^harl:2008-1][^harl:2010-2][^klimes:2014-3]
 
 $E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}$.
 
@@ -45,7 +45,7 @@ G^2 }{2 m_e} - \mathrm{ ENCUTGWSOFT} }{ \mathrm{ENCUTGW} -
 
 If [LSCK](LSCK.md) is set to .TRUE., the squeezed Coulomb
 kernel is used instead of the cosine
-window:<sup>[\[4\]](#cite_note-riemelmoser:jcp:2020-4)</sup>
+window:[^riemelmoser:jcp:2020-4]
 
 $v_{G} = 4 \pi e^2 \frac{ (G_{max}-G_{min})(G_{max}-G) }{
 (G_{min}^2 - G(2G_{min}-G_{max}))^2 } \qquad \mbox{for} \quad
@@ -88,22 +88,7 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ENCUTGWSOFT-_incategory-Exam
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-harl:2008_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-2.  [↑](#cite_ref-harl:2010_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
-    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
-3.  [↑](#cite_ref-klimes:2014_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
-    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
-4.  [↑](#cite_ref-riemelmoser:jcp:2020_4-0)
-    <a href="https://doi.org/10.1063/5.0002246" class="external text"
-    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>152(13)</strong>, 134103 (2020).</a>
-
-
+[^harl:2008-1]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^harl:2010-2]: [J. Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126 (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^klimes:2014-3]: [J. Klimeš, M. Kaltak, and G. Kresse, Phys. Rev. B **90**, 075125 (2014).](https://doi.org/10.1103/PhysRevB.90.075125)
+[^riemelmoser:jcp:2020-4]: [S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys. **152(13)**, 134103 (2020).](https://doi.org/10.1063/5.0002246)

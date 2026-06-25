@@ -15,7 +15,7 @@ to calculate the magnetic susceptibility.
 ICHIBARE specifies the order
 of the finite difference stencil used to calculate the magnetic
 susceptibility (second order derivative in Eq. 47 of Yates *et
-al.*<sup>[\[1\]](#cite_note-yates:prb:2007-1)</sup>).
+al.*[^yates:prb:2007-1]).
 ICHIBARE may be set to 1, 2,
 or 3. Often the default
 (ICHIBARE=1) is sufficient. A
@@ -37,12 +37,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ICHIBARE-_incategory-Example
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-yates:prb:2007_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.024401"
-    class="external text" rel="nofollow">J. R. Yates, C. J. Pickard, and F.
-    Mauri, <em>Calculation of NMR chemical shifts for extended systems using
-    ultrasoft pseudopotentials</em>, Phys. Rev. B <strong>76</strong>,
-    024401 (2007).</a>
-
-
+[^yates:prb:2007-1]: [J. R. Yates, C. J. Pickard, and F. Mauri, *Calculation of NMR chemical shifts for extended systems using ultrasoft pseudopotentials*, Phys. Rev. B **76**, 024401 (2007).](https://doi.org/10.1103/PhysRevB.76.024401)

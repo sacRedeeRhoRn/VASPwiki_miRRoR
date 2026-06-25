@@ -63,7 +63,7 @@ extrapolation of the correlation energy by varying the value of
 ENCUTGW inside VASP between
 the largest value given in the [INCAR](../input-files/INCAR.md) file and
 smaller values
-<sup>[\[1\]](#cite_note-harl:prb:08-1)</sup>.
+[^harl:prb:08-1].
 Mind: The extrapolated value is only reliable, if
 ENCUTGW is smaller then
 [ENCUT](ENCUT.md). The cutoff extrapolation with respect to
@@ -151,7 +151,7 @@ title="Edit section: Further reading">edit</a> \| (./index.php.md)\]
   and one over the number of plane waves in the response function. For
   basis set converged calculations, we recommend using the strategies
   outlined in Ref.
-  <sup>[\[2\]](#cite_note-klimes:prb:14-2)</sup>,
+  [^klimes:prb:14-2],
   which contains a comprehensive study of the performance of the
   convergence of GW calculations.
 
@@ -161,14 +161,5 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-harl:prb:08_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.77.045136"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-2.  [↑](#cite_ref-klimes:prb:14_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
-    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
-
-
+[^harl:prb:08-1]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.77.045136)
+[^klimes:prb:14-2]: [J. Klimeš, M. Kaltak, and G. Kresse, Phys. Rev. B **90**, 075125 (2014).](https://doi.org/10.1103/PhysRevB.90.075125)

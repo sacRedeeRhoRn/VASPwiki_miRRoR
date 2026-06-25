@@ -21,7 +21,7 @@ determines the boundary condition that is used to compute the local
 potential. Setting
 KERNEL_TRUNCATION/IDIMENSIONALITY
 to either 0 or 2 uses the 0D and 2D truncated kernel
-respectively.<sup>[\[1\]](#cite_note-vijay:prb:2025-1)[\[2\]](#cite_note-rozzi:prb:2006-2)[\[3\]](#cite_note-sohier:prb:2017-3)</sup>
+respectively.[^vijay:prb:2025-1][^rozzi:prb:2006-2][^sohier:prb:2017-3]
 These kernels create 0D (i.e. no periodic interactions, as is the case
 of molecules) and 2D (i.e. periodic interactions only in two dimensions,
 as in the case for surfaces).
@@ -117,22 +117,6 @@ href="/wiki/index.php?title=KERNEL_TRUNCATION/IDIMENSIONALITY&amp;veaction=edit&
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-vijay:prb:2025_1-0)
-    <a href="https://doi.org/10.1103/cd6s-cdkf" class="external text"
-    rel="nofollow">S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak,
-    M. Marsman, and G. Kresse, <em>Efficient periodic density functional
-    theory calculations of charged molecules and surfaces using Coulomb
-    kernel truncation</em>, Phys. Rev. B <strong>112</strong>, 045409
-    (2025).</a>
-2.  [↑](#cite_ref-rozzi:prb:2006_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.205119"
-    class="external text" rel="nofollow">C. A. Rozzi, D. Varsano, A. Marini,
-    E. K. Gross, A. J. Rubio, Phys. Rev. B <strong>73</strong>, 20511
-    (2006).</a>
-3.  [↑](#cite_ref-sohier:prb:2017_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.96.075448"
-    class="external text" rel="nofollow">T. Sohier, M. Calandra, and F.
-    Mauri, Phys. Rev. B 96, 75448 (2017).</a>
-
-
+[^vijay:prb:2025-1]: [S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak, M. Marsman, and G. Kresse, *Efficient periodic density functional theory calculations of charged molecules and surfaces using Coulomb kernel truncation*, Phys. Rev. B **112**, 045409 (2025).](https://doi.org/10.1103/cd6s-cdkf)
+[^rozzi:prb:2006-2]: [C. A. Rozzi, D. Varsano, A. Marini, E. K. Gross, A. J. Rubio, Phys. Rev. B **73**, 20511 (2006).](https://doi.org/10.1103/PhysRevB.73.205119)
+[^sohier:prb:2017-3]: [T. Sohier, M. Calandra, and F. Mauri, Phys. Rev. B 96, 75448 (2017).](https://doi.org/10.1103/PhysRevB.96.075448)

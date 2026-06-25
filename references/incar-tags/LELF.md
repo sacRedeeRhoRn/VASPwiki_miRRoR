@@ -13,7 +13,7 @@ whether to create an [ELFCAR](../output-files/ELFCAR.md) file or not.
 ------------------------------------------------------------------------
 
 This file contains the so-called ELF (electron localization function)
-<sup>[\[1\]](#cite_note-silvi:nature:371-1)</sup>
+[^silvi:nature:371-1]
 
 If LELF is set,
 [NPAR](NPAR.md)=1 has to be set explicitely in the
@@ -32,11 +32,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LELF-_incategory-Examples)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-silvi:nature:371_1-0)
-    <a
-    href="http://www.nature.com/nature/journal/v371/n6499/pdf/371683a0.pdf"
-    class="external text" rel="nofollow">B. Silvi and A. Savin, Nature 371,
-    683-686 (1994).</a>
-
-
+[^silvi:nature:371-1]: [B. Silvi and A. Savin, Nature 371, 683-686 (1994).](http://www.nature.com/nature/journal/v371/n6499/pdf/371683a0.pdf)

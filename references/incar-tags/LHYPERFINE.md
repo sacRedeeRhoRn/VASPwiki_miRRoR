@@ -29,7 +29,7 @@ The hyperfine tensor A<sup>I</sup> describes the interaction between a
 nuclear spin S<sup>I</sup> (located at site **R**<sub>I</sub>) and the
 electronic spin distribution S<sup>e</sup> (in most cases associated
 with a paramagnetic defect state)
-<sup>[\[1\]](#cite_note-szasz:prb:2013-1)</sup>:
+[^szasz:prb:2013-1]:
 
 $E=\sum_{ij} S^e_i A^I_{ij} S^I_j$
 
@@ -51,7 +51,7 @@ total electronic spin.
 
 δ<sub>T</sub>(**r**) is a smeared out δ function, as described in the
 Appendix of Ref.
-<sup>[\[2\]](#cite_note-bloechl:prb:2000-2)</sup>.
+[^bloechl:prb:2000-2].
 
 The dipolar contributions to the hyperfine tensor are given by
 
@@ -128,17 +128,12 @@ style="color: var(--vpurple);">Important:</span></strong> We have chosen
 <strong>NOT</strong> to include the core contributions A<sub>1c</sub> in
 A<sub>tot</sub>. These are important to add when comparing to experiment
 where they can contribute a significant proportion to the hyperfine
-coupling constant (up to ~50 % for <sup>13</sup>C <sup><a
-href="#cite_note-szasz:prb:2013-1"><span
-class="cite-bracket">[</span>1<span
-class="cite-bracket">]</span></a></sup>). If you want them to be
+coupling constant (up to ~50 % for <sup>13</sup>C [^szasz:prb:2013-1]). If you want them to be
 included, you should add them by hand to A<sub>tot</sub>:
 <span class="smj-container" style="opacity:.5">$A_{tot + 1c} = A_{tot} + A_{1c} = (A_{pw} + A_{PS} + A_{AE}) + A_{1c}$</span>
 <p>Core electronic contributions to the Fermi contact term are
 calculated in the frozen valence approximation as proposed by Yazyev
-<em>et al.</em><sup><a href="#cite_note-yazyev:prb:2005-3"><span
-class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup>.</p></td>
+<em>et al.</em>[^yazyev:prb:2005-3].</p></td>
 </tr>
 </tbody>
 </table>
@@ -250,25 +245,6 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  ↑
-    <sup>[a](#cite_ref-szasz:prb:2013_1-0)</sup>
-    <sup>[b](#cite_ref-szasz:prb:2013_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.88.075202"
-    class="external text" rel="nofollow">K. Szasz, T. Hornos, M. Marsman,
-    and A. Gali, <em>Hyperfine coupling of point defects in semiconductors
-    by hybrid density functional calculations: The role of core spin
-    polarization</em>, Phys. Rev. B, <strong>88</strong>, 075202 (2013).</a>
-2.  [↑](#cite_ref-bloechl:prb:2000_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.62.6158" class="external text"
-    rel="nofollow">P. Bloechl, <em>First-principles calculations of defects
-    in oxygen-deficient silica exposed to hydrogen</em>, Phys. Rev. B,
-    <strong>62</strong>, 6158 (2000).</a>
-3.  [↑](#cite_ref-yazyev:prb:2005_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.71.115110"
-    class="external text" rel="nofollow">O. V. Yazyev, I. Tavernelli, L.
-    Helm, and U. R. Roethlisberger, <em>Core spin-polarization correction in
-    pseudopotential-based electronic structure calculations</em>, Phys. Rev.
-    B <strong>71</strong>, 115110 (2006).</a>
-
-
+[^szasz:prb:2013-1]: [K. Szasz, T. Hornos, M. Marsman, and A. Gali, *Hyperfine coupling of point defects in semiconductors by hybrid density functional calculations: The role of core spin polarization*, Phys. Rev. B, **88**, 075202 (2013).](https://doi.org/10.1103/PhysRevB.88.075202)
+[^bloechl:prb:2000-2]: [P. Bloechl, *First-principles calculations of defects in oxygen-deficient silica exposed to hydrogen*, Phys. Rev. B, **62**, 6158 (2000).](https://doi.org/10.1103/PhysRevB.62.6158)
+[^yazyev:prb:2005-3]: [O. V. Yazyev, I. Tavernelli, L. Helm, and U. R. Roethlisberger, *Core spin-polarization correction in pseudopotential-based electronic structure calculations*, Phys. Rev. B **71**, 115110 (2006).](https://doi.org/10.1103/PhysRevB.71.115110)

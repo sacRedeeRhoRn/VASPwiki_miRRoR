@@ -35,7 +35,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Green&#39;s functions">edit</a> \| (./index.php.md)\]
 
 The GW method can be understood in terms of the following eigenvalue
-equation<sup>[\[1\]](#cite_note-HybertsenLouie-1)</sup>
+equation[^HybertsenLouie-1]
 
  $(T+V_{ext}+V_h)\phi_{n{\bf
 k}}({\bf r})+\int d{\bf r}\Sigma({\bf r},{\bf r}',\omega=E_{n{\bf
@@ -53,7 +53,7 @@ irreducible polarizability $\chi$, the
 screened Coulomb interaction $W$ and the
 irreducible vertex function $\Gamma$ in a
 self-consistent procedure. For completeness, these equations
-are<sup>[\[2\]](#cite_note-Hedin-2)</sup>
+are[^Hedin-2]
 
  $G(1,2)=G_0(1,2)+\int d(3,4)
 G_0(1,3)\Sigma(3,4)G(4,2)$ 
@@ -131,7 +131,7 @@ self-consistent GW calculations are available as of VASP 6 only).
 On the other hand, one observes that by keeping the screened potential
 $W$ in the first iteration to the DFT level one benefits
 from error
-cancelling,<sup>[\[3\]](#cite_note-shishkin:prl:07-3)</sup>
+cancelling,[^shishkin:prl:07-3]
 which is the reason why often the screening is kept on the DFT level and
 one aims at self-consistency in Green's function only.
 
@@ -147,7 +147,7 @@ Performing only one GW iteration step is commonly referred to the
 G<sub>0</sub>W<sub>0</sub> method. Here the self-energy
 $\Sigma^{(0)}$ is determined and the corresponding
 eigenvalue equation is
-solved.<sup>[\[1\]](#cite_note-HybertsenLouie-1)</sup>
+solved.[^HybertsenLouie-1]
 Formally, this is a five step precedure
 
 - Determine the independent particle polarizability
@@ -175,7 +175,7 @@ and the renormalization factor $Z^{(0)}_{n{\bf k}}=\left\[
 1-{\rm Re}\left( \left.\frac{\partial\Sigma^{(0)}}{\partial \omega}({\bf
 r,r'},\omega)\right|_{\omega=\epsilon_{n{\bf k}}}\right)\right\]^{-1}$ is introduced. This allows to obtain the
 G<sub>0</sub>W<sub>0</sub> quasi-particle energies from following
-equation<sup>[\[1\]](#cite_note-HybertsenLouie-1)</sup>
+equation[^HybertsenLouie-1]
 
 $E^{(1)}_{n\bf k}=\epsilon_{n\bf k}+ Z_{n\bf k}^{(0)} {\rm Re}\left\[
 \langle \phi_{n\bf k}|
@@ -199,7 +199,7 @@ Note that avoiding self-consistency might seem a drastic step at first
 sight. However, the G<sub>0</sub>W<sub>0</sub> method often yields
 satisfactory results with band-gaps close to experimental measurements
 and is often employed for realistic band gap
-calculations.<sup>[\[4\]](#cite_note-shishkin-PRB74-4)[\[5\]](#cite_note-shishkin-PRB75-5)</sup>
+calculations.[^shishkin-PRB74-4][^shishkin-PRB75-5]
 
 ## Partially self-consistent: GW<sub>0</sub> or EVGW<sub>0</sub>\[<a
 href="/wiki/index.php?title=GW_approximation_of_Hedin%27s_equations&amp;veaction=edit&amp;section=3"
@@ -233,7 +233,7 @@ GW<sub>0</sub> method is computationally slightly more expensive than
 the single-shot approach, but yields often excellent agreement with
 experimentally measured band gaps while being computationally affordable
 at the same
-time.<sup>[\[4\]](#cite_note-shishkin-PRB74-4)[\[5\]](#cite_note-shishkin-PRB75-5)</sup>
+time.[^shishkin-PRB74-4][^shishkin-PRB75-5]
 
 Note that the GW<sub>0</sub> and its single-shot approach do not allow
 for updates in the Kohn-Sham orbitals $\phi_{n\bf k}$, merely the eigenvalues are updated. Furthermore, the
@@ -255,7 +255,7 @@ In addition to eigenvalues one can use the self-consistent
 Quasi-particle GW0 approach (scQPGW0) to update the orbitals
 $\phi_{n\bf k}\to \psi^{(j)}_{n\bf k}$ as well. This
 approach was presented first by Faleev et.
-al,<sup>[\[6\]](#cite_note-Faleev-6)</sup>
+al,[^Faleev-6]
 and used a hermitized self-energy $\Sigma^{\rm
 herm}=\frac{\Sigma+\Sigma^\dagger}2$ in the eigenvalue
 equation to determine both, quasi-particle energies
@@ -267,7 +267,7 @@ eigenvalue problem instead that is obtained consistently from the
 linearization of the self-energy $\Sigma(E^{(j+1)})\approx
 \Sigma(E^{(j)}) + \xi(E^{(j)})(E^{(j+1)}-E^{(j)})$
 (where $\xi(E^{(j)})=\partial\Sigma(E^{(j)})/ \partial E^{(j)}$) and
-reads<sup>[\[3\]](#cite_note-shishkin:prl:07-3)</sup>
+reads[^shishkin:prl:07-3]
 
 $\underbrace{\left\[ T + V_{ext}+V_h + \Sigma\left(E_{n\bf
 k}^{(j)}\right) - \xi\left(E^{(j)}_{n\bf k}\right) E^{(j)}_{n\bf
@@ -304,9 +304,9 @@ class="mw-editsection-visualeditor"
 title="Edit section: Low-scaling GW: The Space-time Formalism">edit</a> \| (./index.php.md)\]
 
 Available as of VASP.6 are low-scaling algorithms for
-[ACFDT/RPA](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md).<sup>[\[7\]](#cite_note-kaltak:prb:2014-7)</sup>
+[ACFDT/RPA](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md).[^kaltak:prb:2014-7]
 This page describes the formalism of the corresponding low-scaling GW
-approach.<sup>[\[8\]](#cite_note-liu:prb:2016-8)</sup>
+approach.[^liu:prb:2016-8]
 A theoretical description of the ACFDT/RPA total energies is found
 [here](ACFDT__RPA_calculations.md).
 A brief summary regarding GW theory is given below, while a practical
@@ -320,7 +320,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Theory">edit</a> \| (./index.php.md)\]
 
 The GW implementations in VASP described in the papers of Shishkin *et
-al.*<sup>[\[9\]](#cite_note-shishkin:prb:2006-9)[\[10\]](#cite_note-shishkin:prb:2007-10)</sup>
+al.*[^shishkin:prb:2006-9][^shishkin:prb:2007-10]
 avoid storage of the Green's function $G$ as well as
 Fourier transformations between time and frequency domain entirely. That
 is, all calculations are performed solely on the real frequency axis
@@ -332,7 +332,7 @@ of electrons).
 
 The scaling with system size can, however, be reduced to
 $N^3$ by performing a so-called Wick-rotation to
-imaginary time $t\to i\tau$.<sup>[\[11\]](#cite_note-rojas:prl:1995-11)</sup>
+imaginary time $t\to i\tau$.[^rojas:prl:1995-11]
 This rotation changes the signature of the Minkowski space-time
 $\eta=(-+++)$ to the euclidean one
 $\eta=(++++)$, where correlation functions, like the
@@ -359,7 +359,7 @@ coarse grid $\tau_{m}$,
 where the number of time points can be selected in VASP via the
 [NOMEGA](../incar-tags/NOMEGA.md) tag. Usually 12 to 16 points are
 sufficient for insulators and small band gap
-systems.<sup>[\[12\]](#cite_note-kaltak:2014-12)</sup>
+systems.[^kaltak:2014-12]
 
 Subsequently, the irreducible polarizability is calculated from a
 contraction of two imaginary time Green's functions
@@ -374,7 +374,7 @@ title="Groundstate in the Random Phase Approximation">low scaling
 ACFDT/RPA algorithms</a> is employed to obtain the irreducible
 polarizability in reciprocal space on the imaginary frequency axis
 $\chi({\bf r},{\bf r}',i\tau_m) \to \chi_{{\bf G}{\bf G}'}({\bf q},i
-\omega_n)$.<sup>[\[12\]](#cite_note-kaltak:2014-12)[\[8\]](#cite_note-liu:prb:2016-8)</sup>
+\omega_n)$.[^kaltak:2014-12][^liu:prb:2016-8]
 
 The next step is the computation of the screened potential
 
@@ -417,11 +417,11 @@ $\Sigma(z)$ of the self-energy can be determined with
 high accuracy. The analytical continuation typically yields energies
 that differ less than 20 meV from quasi-particle energies obtained from
 the real-frequency
-calculation.<sup>[\[8\]](#cite_note-liu:prb:2016-8)</sup>
+calculation.[^liu:prb:2016-8]
 
 In addition, the space-time formulation allows to solve the full Dyson
 equation for $G({\bf r,r'},i\tau)$ with decent computational
-cost.<sup>[\[13\]](#cite_note-grumet:prb:2018-13)</sup>
+cost.[^grumet:prb:2018-13]
 This approach is known as the self-consistent GW approach (scGW) and is
 available as of VASP6.  
 
@@ -434,7 +434,7 @@ From a physical point of view, the scGW method yields mostly
 unsatisfactory results compared to experiment. Notably, the band gaps
 are significantly overestimated compared to experiment, and plasmonic
 satellites are entirely missing in the spectral
-function.<sup>[\[14\]](#cite_note-grumet-14)</sup>
+function.[^grumet-14]
 
 The fact that "sloppier" GW flavours, such as EVGW<sub>0</sub> or even
 the single-shot approach yield more accurate results is due to
@@ -451,91 +451,25 @@ The rather disappointing results of the self-consistent GW approximation
 shows the general limitations of Hedin's equations in the absence of
 vertex corrections. It can be shown that inclusion of vertex corrections
 yields band gaps that are again in agreement with
-experiment.<sup>[\[3\]](#cite_note-shishkin:prl:07-3)</sup>
+experiment.[^shishkin:prl:07-3]
 
 ## References\[<a
 href="/wiki/index.php?title=GW_approximation_of_Hedin%27s_equations&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-HybertsenLouie_1-0)</sup>
-    <sup>[b](#cite_ref-HybertsenLouie_1-1)</sup>
-    <sup>[c](#cite_ref-HybertsenLouie_1-2)</sup>
-    <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.34.5390"
-    class="external text" rel="nofollow">M. S. Hybertsen, S. G. Louie Phys.
-    Ref. B 34, 5390 (1986)</a>
-2.  [↑](#cite_ref-Hedin_2-0)
-    <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.139.A796"
-    class="external text" rel="nofollow">L. Hedin, Phys. Rev. 139, A796
-    (1965)</a>
-3.  ↑
-    <sup>[a](#cite_ref-shishkin:prl:07_3-0)</sup>
-    <sup>[b](#cite_ref-shishkin:prl:07_3-1)</sup>
-    <sup>[c](#cite_ref-shishkin:prl:07_3-2)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevLett.99.246403"
-    class="external text" rel="nofollow">M. Shishkin, M. Marsman, and G.
-    Kresse, Phys. Rev. Lett. 99, 246403 (2007).</a>
-4.  ↑
-    <sup>[a](#cite_ref-shishkin-PRB74_4-0)</sup>
-    <sup>[b](#cite_ref-shishkin-PRB74_4-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B 74, 035101 (2006).</a>
-5.  ↑
-    <sup>[a](#cite_ref-shishkin-PRB75_5-0)</sup>
-    <sup>[b](#cite_ref-shishkin-PRB75_5-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.75.235102"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B 75, 235102 (2007).</a>
-6.  [↑](#cite_ref-Faleev_6-0)
-    <a
-    href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.93.126406"
-    class="external text" rel="nofollow">S. V. Faleev, M. Schilfgaarde and
-    T. Kotani, Phys. Rev. Lett. 93, 126406 (2004).</a>
-7.  [↑](#cite_ref-kaltak:prb:2014_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.054115"
-    class="external text" rel="nofollow">M. Kaltak, J. Klimeš, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 054115 (2014).</a>
-8.  ↑
-    <sup>[a](#cite_ref-liu:prb:2016_8-0)</sup>
-    <sup>[b](#cite_ref-liu:prb:2016_8-1)</sup>
-    <sup>[c](#cite_ref-liu:prb:2016_8-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.94.165109"
-    class="external text" rel="nofollow">P. Liu, M. Kaltak, J. Klimes, and
-    G. Kresse, Phys. Rev. B <strong>94</strong>, 165109 (2016).</a>
-9.  [↑](#cite_ref-shishkin:prb:2006_9-0)
-    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>74</strong>, 035101 (2006).</a>
-10. [↑](#cite_ref-shishkin:prb:2007_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.75.235102"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>75</strong>, 235102 (2007).</a>
-11. [↑](#cite_ref-rojas:prl:1995_11-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
-    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
-    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
-12. ↑
-    <sup>[a](#cite_ref-kaltak:2014_12-0)</sup>
-    <sup>[b](#cite_ref-kaltak:2014_12-1)</sup>
-    <a href="https://doi.org/10.1021/ct5001268" class="external text"
-    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
-    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
-13. [↑](#cite_ref-grumet:prb:2018_13-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.155143"
-    class="external text" rel="nofollow">M. Grumet, P. Liu, M. Kaltak, J.
-    Klimeš, and G. Kresse, Phys. Rev. B <strong>98</strong>, 155143
-    (2018).</a>
-14. [↑](#cite_ref-grumet_14-0)
-    <a
-    href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.155143"
-    class="external text" rel="nofollow">M. Grumet, P. Liu, M. Kaltak, J.
-    Klimeš and Georg Kresse, Phys. Ref. B 98, 155143 (2018).</a>
-    
-
-
 ------------------------------------------------------------------------
 
-
+[^HybertsenLouie-1]: [M. S. Hybertsen, S. G. Louie Phys. Ref. B 34, 5390 (1986)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.34.5390)
+[^Hedin-2]: [L. Hedin, Phys. Rev. 139, A796 (1965)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.139.A796)
+[^shishkin:prl:07-3]: [M. Shishkin, M. Marsman, and G. Kresse, Phys. Rev. Lett. 99, 246403 (2007).](http://link.aps.org/doi/10.1103/PhysRevLett.99.246403)
+[^shishkin-PRB74-4]: [M. Shishkin and G. Kresse, Phys. Rev. B 74, 035101 (2006).](http://link.aps.org/doi/10.1103/PhysRevB.74.035101)
+[^shishkin-PRB75-5]: [M. Shishkin and G. Kresse, Phys. Rev. B 75, 235102 (2007).](http://link.aps.org/doi/10.1103/PhysRevB.75.235102)
+[^Faleev-6]: [S. V. Faleev, M. Schilfgaarde and T. Kotani, Phys. Rev. Lett. 93, 126406 (2004).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.93.126406)
+[^kaltak:prb:2014-7]: [M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **90**, 054115 (2014).](https://doi.org/10.1103/PhysRevB.90.054115)
+[^liu:prb:2016-8]: [P. Liu, M. Kaltak, J. Klimes, and G. Kresse, Phys. Rev. B **94**, 165109 (2016).](https://doi.org/10.1103/PhysRevB.94.165109)
+[^shishkin:prb:2006-9]: [M. Shishkin and G. Kresse, Phys. Rev. B **74**, 035101 (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
+[^shishkin:prb:2007-10]: [M. Shishkin and G. Kresse, Phys. Rev. B **75**, 235102 (2007).](https://doi.org/10.1103/PhysRevB.75.235102)
+[^rojas:prl:1995-11]: [H. N. Rojas, R. W. Godby, and R. J. Needs, Phys. Rev. Lett. **74**, 1827 (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
+[^kaltak:2014-12]: [M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory Comput. **10**, 2498-2507 (2014).](https://doi.org/10.1021/ct5001268)
+[^grumet:prb:2018-13]: [M. Grumet, P. Liu, M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **98**, 155143 (2018).](https://doi.org/10.1103/PhysRevB.98.155143)
+[^grumet-14]: [M. Grumet, P. Liu, M. Kaltak, J. Klimeš and Georg Kresse, Phys. Ref. B 98, 155143 (2018).](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.155143)

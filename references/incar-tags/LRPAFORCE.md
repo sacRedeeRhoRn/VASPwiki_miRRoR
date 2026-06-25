@@ -20,7 +20,7 @@ calculations](../methods/ACFDT__RPA_calculations.md)
 or <a href="/wiki/GW_calculations#RPAFORCES" class="mw-redirect"
 title="GW calculations">GW calculations</a>. It allows computing the
 <a href="/wiki/Forces#RPA-forces" class="mw-redirect" title="Forces">RPA
-forces</a><sup>[\[1\]](#cite_note-ramberger:prl:118-1)</sup>
+forces</a>[^ramberger:prl:118-1]
 on each ion. Setting
 
     ALGO = RPAR ;  LRPAFORCE = .TRUE. 
@@ -90,10 +90,4 @@ href="/wiki/index.php?title=LRPAFORCE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ramberger:prl:118_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
-    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
-    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
-
-
+[^ramberger:prl:118-1]: [B. Ramberger, T. Schäfer and G. Kresse, Phys. Rev. Lett **118**, 106403 (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)

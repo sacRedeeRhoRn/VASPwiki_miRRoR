@@ -25,7 +25,7 @@ resonance (ESR) experiments and provides insights into the local
 electronic environment of defect centers.
 
 The implementation follows the formalism of Rayson and Briddon
-(2008)<sup>[\[1\]](#cite_note-rayson:prb:2008-1)</sup>,
+(2008)[^rayson:prb:2008-1],
 which efficiently evaluates the spin-spin interaction within periodic
 density-functional theory (DFT) using reciprocal space methods. This
 approach avoids expensive six-dimensional real-space integrations,
@@ -126,12 +126,4 @@ title="Edit section: Related tags an articles">edit</a> \| (./index.php.md)\]
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-rayson:prb:2008_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.77.035119"
-    class="external text" rel="nofollow">Rayson, M. J., and Briddon, P. R.,
-    <em>First principles method for the calculation of zero-field splitting
-    tensors in periodic systems</em>, Phys. Rev. B, <strong>77</strong>,
-    035119 (2008).</a>
-
-
+[^rayson:prb:2008-1]: [Rayson, M. J., and Briddon, P. R., *First principles method for the calculation of zero-field splitting tensors in periodic systems*, Phys. Rev. B, **77**, 035119 (2008).](https://doi.org/10.1103/PhysRevB.77.035119)

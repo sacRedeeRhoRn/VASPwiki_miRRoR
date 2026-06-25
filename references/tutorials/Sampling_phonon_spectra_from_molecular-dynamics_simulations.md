@@ -18,7 +18,7 @@ Convergence analysis of phonon DOS.</figcaption>
 [Phonon](../categories/Category-Phonons.md) spectra can be
 obtained as the power spectrum of the normalized
 velocity-autocorrelation function
-<sup>[\[1\]](#cite_note-reissland:book:1973-1)[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup>.
+[^reissland:book:1973-1][^lahnsteiner:prb:2022-2].
 The velocities of the ions and hence the velocity-autocorrelation
 function are recorded during a [molecular dynamics (MD)
 simulation](https://vasp.at/wiki/index.php/Category:Molecular_dynamics).
@@ -176,7 +176,7 @@ repeated to generate additional data to reach the desired accuracy.
 
 |  |
 |----|
-| **Tip:** For further information on phonon signal analysis Ref<sup>[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup> might be a helpful source. |
+| **Tip:** For further information on phonon signal analysis Ref[^lahnsteiner:prb:2022-2] might be a helpful source. |
 
 ## Example\[<a
 href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=7"
@@ -498,9 +498,9 @@ frequencies coupling to optical phonon modes formed by the oscillations
 of the lead bromide framework.
 
 For further information it is advised to take a look at
-Ref<sup>[\[2\]](#cite_note-lahnsteiner:prb:2022-2)</sup>
+Ref[^lahnsteiner:prb:2022-2]
 or
-Ref<sup>[\[3\]](#cite_note-lahnsteiner:jpcc:2024-3)</sup>
+Ref[^lahnsteiner:jpcc:2024-3]
 in which Cs\$^{+}\$ rattling modes were tuned to adjust the thermal
 conductivity of the material.
 
@@ -523,28 +523,6 @@ normalized velocity autocorrelation function for CsPbBr$_{3}$ at 500K.
 href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=10"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-reissland:book:1973_1-0)
-    <a
-    href="https://www.abebooks.com/9780471715856/Physics-Phonons-J.A-Reissland-0471715859/plp"
-    class="external text" rel="nofollow">J. A. <em>Reissland The Physics of
-    Phonons</em></a>
-2.  ↑
-    <sup>[a](#cite_ref-lahnsteiner:prb:2022_2-0)</sup>
-    <sup>[b](#cite_ref-lahnsteiner:prb:2022_2-1)</sup>
-    <sup>[c](#cite_ref-lahnsteiner:prb:2022_2-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.105.024302"
-    class="external text" rel="nofollow">J. Lahnsteiner and M. Bokdam, Phys.
-    Rev. B <strong>105</strong>, 024302 (2022).</a>
-3.  [↑](#cite_ref-lahnsteiner:jpcc:2024_3-0)
-    <a href="https://doi.org/10.1021/acs.jpcc.3c06590" class="external text"
-    rel="nofollow">J. Lahnsteiner, M. Rang, and M. Bokdam, J. Phys. Chem. C
-    <strong>128</strong>, 1341 (2024).</a>
-
-
-  
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=Sampling_phonon_spectra_from_molecular-dynamics_simulations&amp;veaction=edit&amp;section=11"
 class="mw-editsection-visualeditor"
@@ -562,4 +540,6 @@ DOS](Computing_the_phonon_dispersion_and_DOS.md)
 <a href="/wiki/Ensembles" class="mw-redirect"
 title="Ensembles">Ensembles</a>
 
-
+[^reissland:book:1973-1]: [J. A. *Reissland The Physics of Phonons*](https://www.abebooks.com/9780471715856/Physics-Phonons-J.A-Reissland-0471715859/plp)
+[^lahnsteiner:prb:2022-2]: [J. Lahnsteiner and M. Bokdam, Phys. Rev. B **105**, 024302 (2022).](https://doi.org/10.1103/PhysRevB.105.024302)
+[^lahnsteiner:jpcc:2024-3]: [J. Lahnsteiner, M. Rang, and M. Bokdam, J. Phys. Chem. C **128**, 1341 (2024).](https://doi.org/10.1021/acs.jpcc.3c06590)

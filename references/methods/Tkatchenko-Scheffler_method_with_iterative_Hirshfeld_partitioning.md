@@ -10,13 +10,13 @@ which uses fixed neutral atoms as a reference to estimate the effective
 volumes of atoms-in-molecule (AIM) and to calibrate their
 polarizabilities and dispersion coefficients, fails to describe the
 structure and the energetics of ionic solids. As shown in references
-<sup>[\[1\]](#cite_note-bucko:jctc:13-1)</sup>
+[^bucko:jctc:13-1]
 and
-<sup>[\[2\]](#cite_note-bucko:jcp:14-2)</sup>,
+[^bucko:jcp:14-2],
 this problem can be solved by replacing the conventional Hirshfeld
 partitioning used to compute properties of interacting atoms by the
 iterative scheme proposed by
-Bultinck<sup>[\[3\]](#cite_note-bultinck:jcp:07-3)</sup>.
+Bultinck[^bultinck:jcp:07-3].
 In this iterative Hirshfeld algorithm (HI), the neutral reference atoms
 are replaced with ions with fractional charges determined together with
 the AIM charge densities in a single iterative procedure. The algorithm
@@ -56,10 +56,10 @@ dispersion energy (see [Tkatchenko-Scheffler
 method](Tkatchenko-Scheffler_method.md)).
 
 The TS-HI method is described in detail in reference
-<sup>[\[1\]](#cite_note-bucko:jctc:13-1)</sup>
+[^bucko:jctc:13-1]
 and its performance in optimization of various crystalline systems is
 examined in reference
-<sup>[\[2\]](#cite_note-bucko:jcp:14-2)</sup>.
+[^bucko:jcp:14-2].
 
 ## Usage\[<a
 href="/wiki/index.php?title=Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning&amp;veaction=edit&amp;section=1"
@@ -121,9 +121,7 @@ title="INCAR">INCAR</a> file.</li>
 style="opacity:.5">$E_{disp}$</span>
 (controlled via <a href="/wiki/LVDW_EWALD"
 title="LVDW EWALD">LVDW_EWALD</a>) implemented according to reference
-<sup><a href="#cite_note-kerber:jcc:08-4"><span
-class="cite-bracket">[</span>4<span
-class="cite-bracket">]</span></a></sup> is available as of
+[^kerber:jcc:08-4] is available as of
 VASP.5.3.4.</li>
 <li>Hirshfeld charges for all configurations generated in a calculation
 are written out in the <a href="/wiki/OUTCAR" title="OUTCAR">OUTCAR</a>
@@ -157,30 +155,9 @@ polarizability](Many-body_dispersion_energy_with_fractionally_ionic_model_for_po
 href="/wiki/index.php?title=Tkatchenko-Scheffler_method_with_iterative_Hirshfeld_partitioning&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-bucko:jctc:13_1-0)</sup>
-    <sup>[b](#cite_ref-bucko:jctc:13_1-1)</sup>
-    <a href="https://doi.org/10.1021/ct400694h" class="external text"
-    rel="nofollow">T. Bučko, S. Lebègue, J. Hafner, and J. G. Ángyán, J.
-    Chem. Theory Comput. <strong>9</strong>, 4293 (2013)</a>
-2.  ↑
-    <sup>[a](#cite_ref-bucko:jcp:14_2-0)</sup>
-    <sup>[b](#cite_ref-bucko:jcp:14_2-1)</sup>
-    <a href="https://doi.org/10.1063/1.4890003" class="external text"
-    rel="nofollow">T. Bučko, S. Lebègue, J. G. Ángyán, and J. Hafner, J.
-    Chem. Phys. <strong>141</strong>, 034114 (2014).</a>
-3.  [↑](#cite_ref-bultinck:jcp:07_3-0)
-    <a href="https://doi.org/10.1063/1.2715563" class="external text"
-    rel="nofollow">P. Bultinck, C. Van Alsenoy, P. W. Ayers, and R. Carbó
-    Dorca, J. Chem. Phys. <strong>126</strong>, 144111 (2007).</a>
-4.  [↑](#cite_ref-kerber:jcc:08_4-0)
-    <a href="https://doi.org/10.1002/jcc.21069" class="external text"
-    rel="nofollow">T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem.
-    <strong>29</strong>, 2088 (2008).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^bucko:jctc:13-1]: [T. Bučko, S. Lebègue, J. Hafner, and J. G. Ángyán, J. Chem. Theory Comput. **9**, 4293 (2013)](https://doi.org/10.1021/ct400694h)
+[^bucko:jcp:14-2]: [T. Bučko, S. Lebègue, J. G. Ángyán, and J. Hafner, J. Chem. Phys. **141**, 034114 (2014).](https://doi.org/10.1063/1.4890003)
+[^bultinck:jcp:07-3]: [P. Bultinck, C. Van Alsenoy, P. W. Ayers, and R. Carbó Dorca, J. Chem. Phys. **126**, 144111 (2007).](https://doi.org/10.1063/1.2715563)
+[^kerber:jcc:08-4]: [T. Kerber, M. Sierka, and J. Sauer, J. Comput. Chem. **29**, 2088 (2008).](https://doi.org/10.1002/jcc.21069)

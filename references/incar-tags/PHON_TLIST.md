@@ -9,7 +9,7 @@ Default: **PHON_TLIST** = none 
 
 Description: Provides the list of temperatures for that the
 electron-phonon interaction using the ZG
-configuration<sup>[\[1\]](#cite_note-zacharias:prb:2016-1)</sup>
+configuration[^zacharias:prb:2016-1]
 is evaluated.
 
 ------------------------------------------------------------------------
@@ -39,14 +39,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-PHON_TLIST-_incategory-Examp
 href="/wiki/index.php?title=PHON_TLIST&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-zacharias:prb:2016_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
-    Rev. B <strong>94</strong>, 075125 (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^zacharias:prb:2016-1]: [M. Zacharias and F. Giustino, Phys. Rev. B **94**, 075125 (2016).](https://doi.org/10.1103/PhysRevB.94.075125)

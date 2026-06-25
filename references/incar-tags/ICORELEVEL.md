@@ -32,7 +32,7 @@ states and added to the valence/conduction bands but no change of the
 potential (by e.g. relaxation of the valence electrons) is allowed. The
 core-level binding energy can then be directly calculated by the
 Kohn-Sham
-eigenvalues<sup>[\[1\]](#cite_note-koehler:prb:04-1)[\[2\]](#cite_note-lizzit:prb:2001-2)</sup>
+eigenvalues[^koehler:prb:04-1][^lizzit:prb:2001-2]
 of the core level $\epsilon_{c}$ and the Fermi energy $\epsilon_{F}$
 
 $E_{CL}^{\mathrm{i}}=\epsilon_{c} - \epsilon_{F}$.
@@ -173,22 +173,7 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ICORELEVEL-_incategory-Examp
 href="/wiki/index.php?title=ICORELEVEL&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-koehler:prb:04_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.70.165405"
-    class="external text" rel="nofollow">L. Köhler and G. Kresse, Phys. Rev.
-    B <strong>70</strong>, 165405 (2004).</a>
-2.  [↑](#cite_ref-lizzit:prb:2001_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.63.205419"
-    class="external text" rel="nofollow">S. Lizzit, A. Baraldi, A. Groso, K.
-    Reuter, M. V. Ganduglia-Pirovano, C. Stampfl, M. Scheffler, M. Stichler,
-    C. Keller, W. Wurth, and D. Menzel, Phys. Rev. B <strong>63</strong>,
-    205419 (2001).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^koehler:prb:04-1]: [L. Köhler and G. Kresse, Phys. Rev. B **70**, 165405 (2004).](https://doi.org/10.1103/PhysRevB.70.165405)
+[^lizzit:prb:2001-2]: [S. Lizzit, A. Baraldi, A. Groso, K. Reuter, M. V. Ganduglia-Pirovano, C. Stampfl, M. Scheffler, M. Stichler, C. Keller, W. Wurth, and D. Menzel, Phys. Rev. B **63**, 205419 (2001).](https://doi.org/10.1103/PhysRevB.63.205419)

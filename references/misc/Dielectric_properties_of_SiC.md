@@ -176,7 +176,7 @@ charges in the RPA tend to be nonsensical.
 - The [LPEAD](../incar-tags/LPEAD.md)-tag
 
 As an alternative to solving a linear Sternheimer equation (Eq. 32 of
-<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>),
+[^gajdos:prb:06-1]),
 one may compute $| \nabla_{\mathbf{k}}
 \tilde{u}_{n\mathbf{k}} \rangle$ from finite
 differences by specifying
@@ -188,7 +188,7 @@ in the [INCAR](../input-files/INCAR.md) file. The derivative of the
 cell-periodic part of the wave function w.r.t. the Bloch vector is then
 computed by means of a fourth-order finite difference stencil, in the
 spirit of Eqs. 96 and 97 of
-<sup>[\[2\]](#cite_note-nunes:prb:01-2)</sup>.
+[^nunes:prb:01-2].
 The results of the calculation of static dielectric properties by means
 of [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. tend to converge more
 rapidly w.r.t. **k**-point sampling with
@@ -214,7 +214,7 @@ title="Edit section: Response to finite electric fields">edit</a> \| (./index.ph
 
 The second way one may compute the static dielectric properties is from
 [self-consistent response of the system to a finite electric
-field](../theory/Berry_phases_and_finite_electric_fields.md).<sup>[\[3\]](#cite_note-souza:prl:02-3)</sup>
+field](../theory/Berry_phases_and_finite_electric_fields.md).[^souza:prl:02-3]
 
 - [INCAR](../input-files/INCAR.md)
 
@@ -366,7 +366,7 @@ or run the following bash-script (`plotoptics2`)
 - [LPEAD](../incar-tags/LPEAD.md)-tag
 
 As an alternative to the perturbative expression (Eq. 31 of
-<sup>[\[1\]](#cite_note-gajdos:prb:06-1)</sup>),
+[^gajdos:prb:06-1]),
 one may compute $| \nabla_{\mathbf{k}}
 \tilde{u}_{n\mathbf{k}} \rangle$ from finite
 differences by specifying
@@ -377,7 +377,7 @@ in the [INCAR](../input-files/INCAR.md) file. The derivative of the
 cell-periodic part of the wave function w.r.t. the Bloch vector is then
 computed by means of a fourth-order finite difference stencil, in the
 spirit of Eqs. 96 and 97 of
-<sup>[\[2\]](#cite_note-nunes:prb:01-2)</sup>.
+[^nunes:prb:01-2].
 
 **Mind**: keep the [WAVECAR](../input-files/WAVECAR.md) and
 [WAVEDER](../input-files/WAVEDER.md) files, you're going to need them in
@@ -560,26 +560,6 @@ width="600" height="367" /></a>
 href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-gajdos:prb:06_1-0)</sup>
-    <sup>[b](#cite_ref-gajdos:prb:06_1-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).</a>
-2.  ↑
-    <sup>[a](#cite_ref-nunes:prb:01_2-0)</sup>
-    <sup>[b](#cite_ref-nunes:prb:01_2-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.63.155107"
-    class="external text" rel="nofollow">R. W. Nunes and X. Gonze, Phys.
-    Rev. B 63, 155107 (2001).</a>
-3.  [↑](#cite_ref-souza:prl:02_3-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevLett.89.117602"
-    class="external text" rel="nofollow">I. Souza, J. Íñiguez, and D.
-    Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).</a>
-
-
 ## Download\[<a
 href="/wiki/index.php?title=Dielectric_properties_of_SiC&amp;veaction=edit&amp;section=10"
 class="mw-editsection-visualeditor"
@@ -600,4 +580,6 @@ NaCl](Ionic_contributions_to_the_frequency_dependent_dielectric_function_of_NaCl
  \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^gajdos:prb:06-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B 73, 045112 (2006).](http://link.aps.org/doi/10.1103/PhysRevB.73.045112)
+[^nunes:prb:01-2]: [R. W. Nunes and X. Gonze, Phys. Rev. B 63, 155107 (2001).](http://link.aps.org/doi/10.1103/PhysRevB.63.155107)
+[^souza:prl:02-3]: [I. Souza, J. Íñiguez, and D. Vanderbilt, Phys. Rev. Lett. 89, 117602 (2002).](http://link.aps.org/doi/10.1103/PhysRevLett.89.117602)

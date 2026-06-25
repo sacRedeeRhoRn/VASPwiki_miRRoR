@@ -16,7 +16,7 @@ title="Precompiler flags">-Dtbdyn</a>).
 
 Up to three user-defined atomic subsystems may be coupled with
 independent Andersen
-thermostats<sup>[\[1\]](#cite_note-Andersen80-1)</sup>
+thermostats[^Andersen80-1]
 ([MDALGO](MDALGO.md)=13).
 
 These subsystems are defined by specifying the last atom for each
@@ -46,13 +46,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-NSUBSYS-_incategory-Examples
 ## References\[<a href="/wiki/index.php?title=NSUBSYS&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Andersen80_1-0)
-    <a href="http://dx.doi.org/10.1063/1.439486" class="external text"
-    rel="nofollow">H. C. Andersen, J. Chem. Phys. 72, 2384 (1980).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Andersen80-1]: [H. C. Andersen, J. Chem. Phys. 72, 2384 (1980).](http://dx.doi.org/10.1063/1.439486)

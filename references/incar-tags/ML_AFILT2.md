@@ -18,7 +18,7 @@ This tag is only used if
 [ML_IAFILT2](ML_IAFILT2.md)=2 are used.
 
 The angular filtering
-function<sup>[\[1\]](#cite_note-boyd:book:2000-1)</sup>
+function[^boyd:book:2000-1]
 for [ML_IAFILT2](ML_IAFILT2.md)=2 is described as
 $\eta_{l,a_{\mathrm{FILT}}}=\frac{1}{1+a_{\mathrm{FILT}} \[l
 (l+1)\]^{2}}$. The tag
@@ -29,16 +29,6 @@ $a_{\mathrm{FILT}}$.
 href="/wiki/index.php?title=ML_AFILT2&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-boyd:book:2000_1-0)
-    <a href="https://link.springer.com/gp/book/9783540514879"
-    class="external text" rel="nofollow">J. P. Boyd, Chebyshev and Fourier
-    Spectral Methods (Dover Publications, New York, 2000).</a>
-
-
-  
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=ML_AFILT2&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
@@ -53,4 +43,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_AFILT2-_incategory-Exampl
 
 ------------------------------------------------------------------------
 
-
+[^boyd:book:2000-1]: [J. P. Boyd, Chebyshev and Fourier Spectral Methods (Dover Publications, New York, 2000).](https://link.springer.com/gp/book/9783540514879)

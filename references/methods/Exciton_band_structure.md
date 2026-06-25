@@ -18,7 +18,7 @@ hBN</figcaption>
 Exciton band dispersion serves as a powerful tool for characterizing
 excitations in a system and can be directly linked to the measured
 dynamical structure
-factor<sup>[\[1\]](#cite_note-gatti:prb:2013-1)</sup>.
+factor[^gatti:prb:2013-1].
 The exciton band structure is a band structure plot where the exciton
 energies are presented for different q-points. To find the exciton
 energies at the required \$q\$-points, [the Bethe-Salpeter equation
@@ -119,10 +119,4 @@ href="/wiki/index.php?title=Exciton_band_structure&amp;veaction=edit&amp;section
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-gatti:prb:2013_1-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.88.155113"
-    class="external text" rel="nofollow">Matteo Gatti and Francesco Sottile,
-    Phys. Rev. B <strong>88</strong>, 155113 (2013).</a>
-
-
+[^gatti:prb:2013-1]: [Matteo Gatti and Francesco Sottile, Phys. Rev. B **88**, 155113 (2013).](http://dx.doi.org/10.1103/PhysRevB.88.155113)

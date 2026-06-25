@@ -20,7 +20,7 @@ determines whether the Tamm-Dancoff approximation is used or not.
   Tamm-Dancoff, coupling between positive and negative frequencies
 
 VASP uses the procedures outlined in reference
-<sup>[\[1\]](#cite_note-Sander-1)</sup>
+[^Sander-1]
 to include contributions beyond TDA. Beyond-TDA calculations increase
 the computational time and memory requirements by typically a factor of
 2.
@@ -38,15 +38,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ANTIRES-_incategory-Examples
 ## References\[<a href="/wiki/index.php?title=ANTIRES&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Sander_1-0)
-    <a
-    href="http://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio and G. Kresse,
-    Phys. Rev. B 92, 045209 (2015).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Sander-1]: [T. Sander, E. Maggio and G. Kresse, Phys. Rev. B 92, 045209 (2015).](http://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.045209)

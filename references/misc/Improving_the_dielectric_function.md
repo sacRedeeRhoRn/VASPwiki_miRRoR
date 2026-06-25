@@ -104,7 +104,7 @@ over the results.
 - Model-BSE:
 
 Use a parametrized
-model<sup>[\[1\]](#cite_note-bokdam:scr:6-1)[\[2\]](#cite_note-liu:bse-2)</sup>
+model[^bokdam:scr:6-1][^liu:bse-2]
 for the dielectric screening, and DFT eigenenergies moved with a
 *scissor* operator, instead of RPA screening and GW quasiparticle
 energies.
@@ -301,19 +301,6 @@ title="Si improve eps.tgz">Si_improve_eps.tgz</a>
 href="/wiki/index.php?title=Improving_the_dielectric_function&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-bokdam:scr:6_1-0)
-    <a href="https://www.nature.com/articles/srep28618"
-    class="external text" rel="nofollow">M.Bokdam et al., Scientific Reports
-    6, 28618 (2016).</a>
-2.  [↑](#cite_ref-liu:bse_2-0)
-    <a
-    href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.2.075003"
-    class="external text" rel="nofollow">P.Liu et al., Phys. Rev. Materials
-    2, 075003 (2018).</a>
-
-
 [Overview](../tutorials/BSE_-_Tutorial.md) \>
 [Dielectric properties of Si using
 BSE](Dielectric_properties_of_Si_using_BSE.md) \>
@@ -323,4 +310,5 @@ the BSE fatband structure of
 Si](Plotting_the_BSE_fatband_structure_of_Si.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
-
+[^bokdam:scr:6-1]: [M.Bokdam et al., Scientific Reports 6, 28618 (2016).](https://www.nature.com/articles/srep28618)
+[^liu:bse-2]: [P.Liu et al., Phys. Rev. Materials 2, 075003 (2018).](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.2.075003)

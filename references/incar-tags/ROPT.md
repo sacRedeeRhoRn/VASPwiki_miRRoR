@@ -27,8 +27,8 @@ Description: ROPT determines
 how accurately the projectors are represented in real space. With
 [LREAL](LREAL.md)=On, the real space projectors are optimized
 using an algorithm proposed by King-Smith et
-al.<sup>[\[1\]](#cite_note-king-smith:prb:1991-1)</sup>
-[LREAL](LREAL.md)=Auto<sup>[\[2\]](#cite_note-kresse:tobepublished-2)</sup>
+al.[^king-smith:prb:1991-1]
+[LREAL](LREAL.md)=Auto[^kresse:tobepublished-2]
 is the recommended scheme since it is considerably more accurate,
 resulting in more localized projector functions than with the King-Smith
 et al. method.
@@ -161,14 +161,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ROPT-_incategory-Examples)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-king-smith:prb:1991_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.44.13063"
-    class="external text" rel="nofollow">R. D. King-Smith, M. C. Payne, and
-    J. S. Lin, <em>Real-space implementation of nonlocal pseudopotentials
-    for first-principles total-energy calculations</em>, Phys. Rev. B
-    <strong>44</strong>, 13063 (1991).</a>
-2.  [↑](#cite_ref-kresse:tobepublished_2-0)
-    G. Kresse, Unpublished.
-
-
+[^king-smith:prb:1991-1]: [R. D. King-Smith, M. C. Payne, and J. S. Lin, *Real-space implementation of nonlocal pseudopotentials for first-principles total-energy calculations*, Phys. Rev. B **44**, 13063 (1991).](https://doi.org/10.1103/PhysRevB.44.13063)
+[^kresse:tobepublished-2]: G. Kresse, Unpublished.

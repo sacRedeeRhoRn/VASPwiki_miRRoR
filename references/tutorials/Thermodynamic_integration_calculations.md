@@ -38,16 +38,16 @@ integration](../theory/Thermodynamic_integration.md)
 (TI):
 
 - TI between any two states using
-  [VCAIMAGES](../incar-tags/VCAIMAGES.md)<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+  [VCAIMAGES](../incar-tags/VCAIMAGES.md)[^dorner:PRL:2018-1].
 - TI with a harmonic solid or ideal gas as a reference state using
-  [SCALEE](../incar-tags/SCALEE.md)<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+  [SCALEE](../incar-tags/SCALEE.md)[^dorner:PRL:2018-1].
 - TI with a harmonic solid as a reference state using
   [TILAMBDA](../incar-tags/TILAMBDA.md).
 
 Details on choosing the ensemble size and how to perform the integration
 are described in the main text and especially the supplementary
 information of reference
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+[^dorner:PRL:2018-1].
 **Caution:** the tag *ISPECIAL*=0 used in that reference is not valid
 anymore, instead the tag
 [PHON_NSTRUCT](../incar-tags/PHON_NSTRUCT.md)=-1 is used.
@@ -216,7 +216,7 @@ volume of the system, $N$ is the
 number of particles in the system and $\Alpha$ is
 the de Broglie wavelength. The Stirling approximation applies in
 principle only in the limes of infinitely many particles. In reference
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>
+[^dorner:PRL:2018-1]
 the exact ideal gas equation was used since it helped to speed up the
 convergence of the final free energy of liquid Si with respect to the
 system size.
@@ -306,14 +306,4 @@ href="/wiki/index.php?title=Thermodynamic_integration_calculations&amp;veaction=
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-dorner:PRL:2018_1-0)</sup>
-    <sup>[b](#cite_ref-dorner:PRL:2018_1-1)</sup>
-    <sup>[c](#cite_ref-dorner:PRL:2018_1-2)</sup>
-    <sup>[d](#cite_ref-dorner:PRL:2018_1-3)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.121.195701"
-    class="external text" rel="nofollow">F. Dorner, Z. Sukurma, C. Dellago,
-    and G. Kresse, Phys. Rev. Lett. <strong>121</strong>, 195701 (2018).</a>
-
-
+[^dorner:PRL:2018-1]: [F. Dorner, Z. Sukurma, C. Dellago, and G. Kresse, Phys. Rev. Lett. **121**, 195701 (2018).](https://doi.org/10.1103/PhysRevLett.121.195701)

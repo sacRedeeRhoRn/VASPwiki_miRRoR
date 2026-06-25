@@ -41,7 +41,7 @@ hollow-top-hollow (hth, eg along \[1-10\]) or hollow-bridge-hollow (hbh,
 eg along \[100\]). A collective jump mechanism involving 2 Pt atoms
 diffusing along \[1-10\] is proposed to be the diffusion mechanism with
 the lowest energy barrier
-<sup>[\[1\]](#cite_note-kellog:prl64:3143-1)</sup>
+[^kellog:prl64:3143-1]
 
 The calculation of the barrier heights involves the following steps:
 
@@ -57,7 +57,7 @@ position
 4\. a [Nudged Elastic
 Bands](../tutorials/Nudged_elastic_bands.md) (NEB)
 calculation
-<sup>[\[2\]](#cite_note-NEB-2)</sup>
+[^NEB-2]
 for the proposed collective jump mechanism
 
 steps 1-3 are straightforward
@@ -461,20 +461,6 @@ title="Pt NEB fast.tgz">Pt_NEB_fast.tgz</a>
 href="/wiki/index.php?title=Collective_jumps_of_a_Pt_adatom_on_fcc-Pt_(001):_Nudged_Elastic_Band_Calculation&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md):_Nudged_Elastic_Band_Calculation&action=edit&section=2 "Edit section's source code: References")\]
-
-
-1.  [↑](#cite_ref-kellog:prl64:3143_1-0)
-     G.L.Kellogg and Peter J.Feibelman,
-    Phys. Rev. Lett. **64** (26), 3143 (1990) 
-2.  [↑](#cite_ref-NEB_2-0)
-    G. Mills, H. Jonsson and G. K.
-    Schenter, Surface Science, **324**, 305 (1995); H. Jonsson, G. Mills
-    and K. W. Jacobsen, \`Nudged Elastic Band Method for Finding Minimum
-    Energy Paths of Transitions', in \`Classical and Quantum Dynamics in
-    Condensed Phase Simulations', ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998) 
-
-
 [Overview](../tutorials/Surface_Science_-_Tutorial.md) \>
 [Ni 100 surface
 relaxation](Ni_100_surface_relaxation.md) \>
@@ -504,4 +490,5 @@ tutorials](../categories/Category-Tutorials.md)
 
 Back to the [main page](The_VASP_Manual.md).
 
-
+[^kellog:prl64:3143-1]: G.L.Kellogg and Peter J.Feibelman, Phys. Rev. Lett. **64** (26), 3143 (1990)
+[^NEB-2]: G. Mills, H. Jonsson and G. K. Schenter, Surface Science, **324**, 305 (1995); H. Jonsson, G. Mills and K. W. Jacobsen, \`Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions', in \`Classical and Quantum Dynamics in Condensed Phase Simulations', ed. B. J. Berne, G. Ciccotti and D. F. Coker (World Scientific, 1998)

@@ -5,7 +5,7 @@
 
 
 The vdW-DF method originally proposed by Dion *et
-al.*<sup>[\[1\]](#cite_note-dion:prl:2004-1)</sup>
+al.*[^dion:prl:2004-1]
 consists of a semilocal or hybrid exchange-correlation functional
 $E_{\text{xc}}^{\text{SL/hybrid}}$ that is augmented
 with a nonlocal correlation functional $E_{\text{c,disp}}$ that approximately accounts for dispersion
@@ -24,7 +24,7 @@ depends on the electronic density $n$, its
 derivative $\nabla n$ as
 well as on the interelectronic distance $\left\vert\bf{r}-\bf{r}'\right\vert$. In VASP, the
 calculation of $E_{\text{c,disp}}$ is done using the algorithm of Román-Pérez and
-Soler<sup>[\[2\]](#cite_note-romanperez:prl:09-2)</sup>
+Soler[^romanperez:prl:09-2]
 that is based on FFTs and the convolution theorem to calculate
 efficiently the double real-space integral. Several versions of the
 vdW-DF functionals proposed in the literature can be used (see list
@@ -38,11 +38,11 @@ tensor calculation for the cell optimization
 spin-polarized systems. They have been implemented by J. Klimeš. If you
 make use of the vdW-DF functionals presented in this section, we ask you
 to cite Ref.
-<sup>[\[3\]](#cite_note-klimes:prb:2011-3)</sup>.
+[^klimes:prb:2011-3].
 Please also cite the original vdW-DF paper of Dion *et
-al.*<sup>[\[1\]](#cite_note-dion:prl:2004-1)</sup>
+al.*[^dion:prl:2004-1]
 and the paper of Román-Pérez and
-Soler<sup>[\[2\]](#cite_note-romanperez:prl:09-2)</sup>.
+Soler[^romanperez:prl:09-2].
 
 In versions of VASP prior to 6.4.0, a meta-GGA functional (e.g., SCAN)
 could be combined only with the rVV10 nonlocal functional. Conversely, a
@@ -51,7 +51,7 @@ functional of Dion *et al.*. This restriction is lifted since VASP.6.4.0
 thanks to the introduction of the [IVDW_NL](../incar-tags/IVDW_NL.md)
 tag. Since VASP.6.4.0, the spin-polarized formulation of the nonlocal
 vdW correlation
-term<sup>[\[4\]](#cite_note-thonhauser:prl:2015-4)</sup>
+term[^thonhauser:prl:2015-4]
 is available. It can be switched on with the logical tag
 [LSPIN_VDW](../incar-tags/LSPIN_VDW.md) (.FALSE. by default), however
 its use is limited to the the functional of Dion *et al.* (not available
@@ -62,7 +62,7 @@ of the spin-up and spin-down electron densities.
 
 An overview of the performance of the vdW-DF functionals can be found
 for instance in Ref.
-<sup>[\[3\]](#cite_note-klimes:prb:2011-3)[\[5\]](#cite_note-berland:rpp:2015-5)[\[6\]](#cite_note-tran:prm:19-6)</sup>.
+[^klimes:prb:2011-3][^berland:rpp:2015-5][^tran:prm:19-6].
 
   
 
@@ -144,7 +144,7 @@ title="Edit section: List of nonlocal vdW-DF functionals">edit</a> \| (./index.p
 Examples of [INCAR](../input-files/INCAR.md) files are shown below.
 
 - **vdW-DF** of Dion *et
-  al.*<sup>[\[1\]](#cite_note-dion:prl:2004-1)</sup>:
+  al.*[^dion:prl:2004-1]:
 
 <!-- -->
 
@@ -154,7 +154,7 @@ Examples of [INCAR](../input-files/INCAR.md) files are shown below.
     LASPH     = .TRUE.
 
 - **vdW-DF2** of Lee *et al.* (2nd version of
-  vdW-DF)<sup>[\[7\]](#cite_note-lee:prb:2010-7)</sup>:
+  vdW-DF)[^lee:prb:2010-7]:
 
 <!-- -->
 
@@ -165,7 +165,7 @@ Examples of [INCAR](../input-files/INCAR.md) files are shown below.
     LASPH     = .TRUE.
 
 - **optPBE-vdW** of Klimeš *et
-  al.*<sup>[\[8\]](#cite_note-klimes:jpcm:2010-8)</sup>:
+  al.*[^klimes:jpcm:2010-8]:
 
 <!-- -->
 
@@ -175,7 +175,7 @@ Examples of [INCAR](../input-files/INCAR.md) files are shown below.
     LASPH     = .TRUE.
 
 - **optB88-vdW** of Klimeš *et
-  al.*<sup>[\[8\]](#cite_note-klimes:jpcm:2010-8)</sup>:
+  al.*[^klimes:jpcm:2010-8]:
 
 <!-- -->
 
@@ -187,7 +187,7 @@ Examples of [INCAR](../input-files/INCAR.md) files are shown below.
     LASPH     = .TRUE.
 
 - **optB86b-vdW** of Klimeš *et
-  al.*<sup>[\[3\]](#cite_note-klimes:prb:2011-3)</sup>:
+  al.*[^klimes:prb:2011-3]:
 
 <!-- -->
 
@@ -199,7 +199,7 @@ Examples of [INCAR](../input-files/INCAR.md) files are shown below.
     LASPH     = .TRUE.
 
 - **BEEF-vdW** of Wellendorff *et
-  al.*<sup>[\[9\]](#cite_note-beef2012-9)</sup>:
+  al.*[^beef2012-9]:
 
 <!-- -->
 
@@ -217,14 +217,14 @@ or
     LASPH     = .TRUE.
 
 Note that the GGA functional
-BEEF<sup>[\[9\]](#cite_note-beef2012-9)</sup>
+BEEF[^beef2012-9]
 is available only via an external library, either libbeef
 ([-Dlibbeef](../misc/Precompiler_options.md))
 or Libxc
 ([-DUSELIBXC](../misc/Precompiler_options.md)).
 
 - **rev-vdW-DF2** (also known as vdW-DF2-B86R) of
-  Hamada<sup>[\[10\]](#cite_note-hamada:prb:14-10)</sup>:
+  Hamada[^hamada:prb:14-10]:
 
 <!-- -->
 
@@ -243,7 +243,7 @@ is changed from -0.8491 (the default value in VASP) to -1.8867 by
 setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
 
 - **vdW-DF-cx** of Berland and
-  Hyldgaard<sup>[\[11\]](#cite_note-berland:prb:2014-11)</sup>:
+  Hyldgaard[^berland:prb:2014-11]:
 
 <!-- -->
 
@@ -253,7 +253,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **vdW-DF3-opt1** of Chakraborty *et al.*
-  <sup>[\[12\]](#cite_note-chakraborty:jctc:2020-12)</sup>:
+  [^chakraborty:jctc:2020-12]:
 
 <!-- -->
 
@@ -268,7 +268,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **vdW-DF3-opt2** of Chakraborty *et al.*
-  <sup>[\[12\]](#cite_note-chakraborty:jctc:2020-12)</sup>:
+  [^chakraborty:jctc:2020-12]:
 
 <!-- -->
 
@@ -284,7 +284,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **rVV10** of Sabatini *et al.*
-  <sup>[\[13\]](#cite_note-sabatini:prb:2013-13)</sup>:
+  [^sabatini:prb:2013-13]:
 
 <!-- -->
 
@@ -296,7 +296,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **SCAN+rVV10** of Peng *et al.*
-  <sup>[\[14\]](#cite_note-peng:prx:2016-14)</sup>:
+  [^peng:prx:2016-14]:
 
 <!-- -->
 
@@ -307,7 +307,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **PBE+rVV10L** of Peng and Perdew
-  <sup>[\[15\]](#cite_note-peng:prb:2017-15)</sup>:
+  [^peng:prb:2017-15]:
 
 <!-- -->
 
@@ -318,7 +318,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **r$^2$SCAN+rVV10** of Ning *et al.*
-  <sup>[\[16\]](#cite_note-ning:prb:2022-16)</sup>:
+  [^ning:prb:2022-16]:
 
 <!-- -->
 
@@ -329,7 +329,7 @@ setting [ZAB_VDW](../redirects/ZAB_VDW.md)=-1.8867.
     LASPH     = .TRUE.
 
 - **Opt(MS+rVV10)** of Kothakonda *et al.*
-  <sup>[\[17\]](#cite_note-kothakonda:jpcc:26-17)</sup>:
+  [^kothakonda:jpcc:26-17]:
 
 <!-- -->
 
@@ -397,7 +397,7 @@ title="Edit section: POTCAR file">edit</a> \| (./index.php.md)\]
   correlation functional is not done fully within the PAW method, but
   the sum of the pseudo-valence density and partial core density is
   used. This approximation works rather well, as is discussed in
-  <sup>[\[3\]](#cite_note-klimes:prb:2011-3)</sup>,
+  [^klimes:prb:2011-3],
   and the accuracy generally increases when the number of valence
   electrons is increased or when harder PAW datasets are used. For
   example, for adsorption it is recommended to compare the adsorption
@@ -442,108 +442,22 @@ See also the alternative atom-pairwise and many-body dispersion methods:
 href="/wiki/index.php?title=Nonlocal_vdW-DF_functionals&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-dion:prl:2004_1-0)</sup>
-    <sup>[b](#cite_ref-dion:prl:2004_1-1)</sup>
-    <sup>[c](#cite_ref-dion:prl:2004_1-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.92.246401"
-    class="external text" rel="nofollow">M. Dion, H. Rydberg, E. Schröder,
-    D. C. Langreth, and B. I. Lundqvist, Phys. Rev. Lett.
-    <strong>92</strong>, 246401 (2004).</a>
-2.  ↑
-    <sup>[a](#cite_ref-romanperez:prl:09_2-0)</sup>
-    <sup>[b](#cite_ref-romanperez:prl:09_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.103.096102"
-    class="external text" rel="nofollow">G. Román-Pérez and J. M. Soler,
-    Phys. Rev. Lett. <strong>103</strong>, 096102 (2009).</a>
-3.  ↑
-    <sup>[a](#cite_ref-klimes:prb:2011_3-0)</sup>
-    <sup>[b](#cite_ref-klimes:prb:2011_3-1)</sup>
-    <sup>[c](#cite_ref-klimes:prb:2011_3-2)</sup>
-    <sup>[d](#cite_ref-klimes:prb:2011_3-3)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.83.195131"
-    class="external text" rel="nofollow">J. Klimeš, D. R. Bowler, and A.
-    Michaelides, Phys. Rev. B <strong>83</strong>, 195131 (2011).</a>
-4.  [↑](#cite_ref-thonhauser:prl:2015_4-0)
-    <a href="http://doi.org/10.1103/PhysRevLett.115.136402"
-    class="external text" rel="nofollow">T. Thonhauser, S. Zuluaga, C. A.
-    Arter, K. Berland, E. Schröder, and P. Hyldgaard, Phys. Rev. Lett.
-    <strong>115</strong>, 136402 (2015).</a>
-5.  [↑](#cite_ref-berland:rpp:2015_5-0)
-    <a href="https://doi.org/10.1088/0034-4885/78/6/066501"
-    class="external text" rel="nofollow">K. Berland, V. R. Cooper, K. Lee,
-    E. Schröder, T. Thonhauser, P. Hyldgaard, and B. I. Lundqvist, Rep.
-    Prog. Phys. <strong>78</strong>, 066501 (2015).</a>
-6.  [↑](#cite_ref-tran:prm:19_6-0)
-    <a href="https://doi.org/10.1103/PhysRevMaterials.3.063602"
-    class="external text" rel="nofollow">F. Tran, L. Kalantari, B. Traoré,
-    X. Rocquefelte, and P. Blaha, Phys. Rev. Mater. <strong>3</strong>,
-    0637602 (2019).</a>
-7.  [↑](#cite_ref-lee:prb:2010_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.82.081101"
-    class="external text" rel="nofollow">K. Lee, E. D. Murray, L. Kong, B.
-    I. Lundqvist, and D. C. Langreth, Phys. Rev. B <strong>82</strong>,
-    081101(R) (2010).</a>
-8.  ↑
-    <sup>[a](#cite_ref-klimes:jpcm:2010_8-0)</sup>
-    <sup>[b](#cite_ref-klimes:jpcm:2010_8-1)</sup>
-    <a href="https://doi.org/10.1088/0953-8984/22/2/022201"
-    class="external text" rel="nofollow">J. Klimeš, D. R. Bowler, and A.
-    Michaelides, J. Phys.: Condens. Matter <strong>22</strong>, 022201
-    (2010).</a>
-9.  ↑
-    <sup>[a](#cite_ref-beef2012_9-0)</sup>
-    <sup>[b](#cite_ref-beef2012_9-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.85.235149"
-    class="external text" rel="nofollow">J. Wellendorff, K. T. Lundgaard, A.
-    Møgelhøj, V. Petzold, D. D. Landis, Jens K. Nørskov, T. Bligaard, and K.
-    W. Jacobsen, Phys. Rev. B <strong>85</strong>, 235149 (2012).</a>
-10. [↑](#cite_ref-hamada:prb:14_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.89.121103"
-    class="external text" rel="nofollow">I. Hamada, Phys. Rev. B
-    <strong>89</strong>, 121103 (2014).</a>
-11. [↑](#cite_ref-berland:prb:2014_11-0)
-    <a href="https://doi.org/10.1103/PhysRevB.89.035412"
-    class="external text" rel="nofollow">K. Berland and P. Hyldgaard, Phys.
-    Rev. B <strong>89</strong>, 035412 (2014).</a>
-12. ↑
-    <sup>[a](#cite_ref-chakraborty:jctc:2020_12-0)</sup>
-    <sup>[b](#cite_ref-chakraborty:jctc:2020_12-1)</sup>
-    <a href="https://doi.org/10.1021/acs.jctc.0c00471" class="external text"
-    rel="nofollow">D. Chakraborty, K. Berland, and T. Thonhauser,
-    <em>Next-Generation Nonlocal van der Waals Density Functional</em>, J.
-    Chem. Theory Comput. <strong>16</strong>, 5893 (2020).</a>
-13. [↑](#cite_ref-sabatini:prb:2013_13-0)
-    <a href="http://doi.org/10.1103/PhysRevB.87.041108"
-    class="external text" rel="nofollow">R. Sabatini, T. Gorni, and S. de
-    Gironcoli, Phys. Rev. B <strong>87</strong>, 041108(R) (2013).</a>
-14. [↑](#cite_ref-peng:prx:2016_14-0)
-    <a href="https://doi.org/10.1103/PhysRevX.6.041005"
-    class="external text" rel="nofollow">H. Peng, Z.-H. Yang, J. P. Perdew,
-    and J. Sun, Phys. Rev. X <strong>6</strong>, 041005 (2016).</a>
-15. [↑](#cite_ref-peng:prb:2017_15-0)
-    <a href="https://doi.org/10.1103/PhysRevB.95.081105"
-    class="external text" rel="nofollow">H. Peng and J. P. Perdew,
-    <em>Rehabilitation of the Perdew-Burke-Ernzerhof generalized gradient
-    approximation for layered materials</em>, Phys. Rev. B
-    <strong>95</strong>, 081105(R) (2017).</a>
-16. [↑](#cite_ref-ning:prb:2022_16-0)
-    <a href="https://doi.org/10.1103/PhysRevB.106.075422"
-    class="external text" rel="nofollow">J. Ning, M. Kothakonda, J. W.
-    Furness, A. D. Kaplan, S. Ehlert, J. G. Brandenburg, J. P. Perdew, and
-    J. Sun, <em>Workhorse minimally empirical dispersion-corrected density
-    functional with tests for weakly bound systems: r²SCAN+rVV⁢10</em>, Phys.
-    Rev. B <strong>106</strong>, 075422 (2022).</a>
-17. [↑](#cite_ref-kothakonda:jpcc:26_17-0)
-    <a href="https://doi.org/10.1021/acs.jpcc.5c08744" class="external text"
-    rel="nofollow">M. Kothakonda, A. Patra, R. Zhang, J. Ning, J. Furness,
-    Q. Zhao, and J. Sun, <em>Toward Chemical Accuracy for Chemi- and
-    Physisorption with an Efficient Density Functional</em>, J. Phys. Chem.
-    C <strong>130</strong>, 2997 (2026).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^dion:prl:2004-1]: [M. Dion, H. Rydberg, E. Schröder, D. C. Langreth, and B. I. Lundqvist, Phys. Rev. Lett. **92**, 246401 (2004).](https://doi.org/10.1103/PhysRevLett.92.246401)
+[^romanperez:prl:09-2]: [G. Román-Pérez and J. M. Soler, Phys. Rev. Lett. **103**, 096102 (2009).](https://doi.org/10.1103/PhysRevLett.103.096102)
+[^klimes:prb:2011-3]: [J. Klimeš, D. R. Bowler, and A. Michaelides, Phys. Rev. B **83**, 195131 (2011).](https://doi.org/10.1103/PhysRevB.83.195131)
+[^thonhauser:prl:2015-4]: [T. Thonhauser, S. Zuluaga, C. A. Arter, K. Berland, E. Schröder, and P. Hyldgaard, Phys. Rev. Lett. **115**, 136402 (2015).](http://doi.org/10.1103/PhysRevLett.115.136402)
+[^berland:rpp:2015-5]: [K. Berland, V. R. Cooper, K. Lee, E. Schröder, T. Thonhauser, P. Hyldgaard, and B. I. Lundqvist, Rep. Prog. Phys. **78**, 066501 (2015).](https://doi.org/10.1088/0034-4885/78/6/066501)
+[^tran:prm:19-6]: [F. Tran, L. Kalantari, B. Traoré, X. Rocquefelte, and P. Blaha, Phys. Rev. Mater. **3**, 0637602 (2019).](https://doi.org/10.1103/PhysRevMaterials.3.063602)
+[^lee:prb:2010-7]: [K. Lee, E. D. Murray, L. Kong, B. I. Lundqvist, and D. C. Langreth, Phys. Rev. B **82**, 081101(R) (2010).](https://doi.org/10.1103/PhysRevB.82.081101)
+[^klimes:jpcm:2010-8]: [J. Klimeš, D. R. Bowler, and A. Michaelides, J. Phys.: Condens. Matter **22**, 022201 (2010).](https://doi.org/10.1088/0953-8984/22/2/022201)
+[^beef2012-9]: [J. Wellendorff, K. T. Lundgaard, A. Møgelhøj, V. Petzold, D. D. Landis, Jens K. Nørskov, T. Bligaard, and K. W. Jacobsen, Phys. Rev. B **85**, 235149 (2012).](https://doi.org/10.1103/PhysRevB.85.235149)
+[^hamada:prb:14-10]: [I. Hamada, Phys. Rev. B **89**, 121103 (2014).](https://doi.org/10.1103/PhysRevB.89.121103)
+[^berland:prb:2014-11]: [K. Berland and P. Hyldgaard, Phys. Rev. B **89**, 035412 (2014).](https://doi.org/10.1103/PhysRevB.89.035412)
+[^chakraborty:jctc:2020-12]: [D. Chakraborty, K. Berland, and T. Thonhauser, *Next-Generation Nonlocal van der Waals Density Functional*, J. Chem. Theory Comput. **16**, 5893 (2020).](https://doi.org/10.1021/acs.jctc.0c00471)
+[^sabatini:prb:2013-13]: [R. Sabatini, T. Gorni, and S. de Gironcoli, Phys. Rev. B **87**, 041108(R) (2013).](http://doi.org/10.1103/PhysRevB.87.041108)
+[^peng:prx:2016-14]: [H. Peng, Z.-H. Yang, J. P. Perdew, and J. Sun, Phys. Rev. X **6**, 041005 (2016).](https://doi.org/10.1103/PhysRevX.6.041005)
+[^peng:prb:2017-15]: [H. Peng and J. P. Perdew, *Rehabilitation of the Perdew-Burke-Ernzerhof generalized gradient approximation for layered materials*, Phys. Rev. B **95**, 081105(R) (2017).](https://doi.org/10.1103/PhysRevB.95.081105)
+[^ning:prb:2022-16]: [J. Ning, M. Kothakonda, J. W. Furness, A. D. Kaplan, S. Ehlert, J. G. Brandenburg, J. P. Perdew, and J. Sun, *Workhorse minimally empirical dispersion-corrected density functional with tests for weakly bound systems: r²SCAN+rVV⁢10*, Phys. Rev. B **106**, 075422 (2022).](https://doi.org/10.1103/PhysRevB.106.075422)
+[^kothakonda:jpcc:26-17]: [M. Kothakonda, A. Patra, R. Zhang, J. Ning, J. Furness, Q. Zhao, and J. Sun, *Toward Chemical Accuracy for Chemi- and Physisorption with an Efficient Density Functional*, J. Phys. Chem. C **130**, 2997 (2026).](https://doi.org/10.1021/acs.jpcc.5c08744)

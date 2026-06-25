@@ -161,7 +161,7 @@ profiles computed for the forward (i.e. reactant -\> product) and
 reverse (i.e. product -\> reactant) transformations. Alternatively, free
 energies can be computed from a series of slow-growth simulations using
 the Jarzyski
-identity<sup>[\[1\]](#cite_note-jarzynski:prl:1997-1)</sup>.
+identity[^jarzynski:prl:1997-1].
 
 **The method is most useful as a quick test of the quality of the
 collective variable before launching any more accurate and
@@ -323,16 +323,6 @@ energy profile of a material.
 href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_SG&amp;veaction=edit&amp;section=10"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-jarzynski:prl:1997_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.78.2690"
-    class="external text" rel="nofollow">C. Jarzynski, Phys. Rev. Lett.
-    <strong>78</strong>, 2690 (1997).</a>
-
-
-  
-
 ## Download\[<a
 href="/wiki/index.php?title=Nuclephile_Substitution_CH3Cl_-_SG&amp;veaction=edit&amp;section=11"
 class="mw-editsection-visualeditor"
@@ -361,4 +351,4 @@ Substitution CH3Cl -
 BM](Nuclephile_Substitution_CH3Cl_-_BM.md) \>
 [List of tutorials](../categories/Category-Tutorials.md)
 
-
+[^jarzynski:prl:1997-1]: [C. Jarzynski, Phys. Rev. Lett. **78**, 2690 (1997).](https://doi.org/10.1103/PhysRevLett.78.2690)

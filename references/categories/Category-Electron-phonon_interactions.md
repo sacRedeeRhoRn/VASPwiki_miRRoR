@@ -83,7 +83,7 @@ class="mw-selflink-fragment">perturbation theory</a>).
 
 To displace the atoms along a set of random or a single specially chosen
 direction
-<sup>[\[1\]](#cite_note-zacharias:prb:2016-1)</sup>,
+[^zacharias:prb:2016-1],
 this approach requires the knowledge of the
 <a href="/wiki/Phonons" class="mw-redirect" title="Phonons">phonons</a>
 on a supercell. The displacement length is determined by the temperature
@@ -295,7 +295,7 @@ PA, this is currently not supported. Therefore, when the quasiparticle
 shifts due to electron-electron interactions become important, it is
 possible to use the PA method in combination with the [GW
 approximation](../theory/Category-GW.md)
-<sup>[\[2\]](#cite_note-karsai:njp:2018-2)</sup>.
+[^karsai:njp:2018-2].
 
 Another key difference is how PA and SA handle polar materials: In polar
 materials, longitudinal optical phonons can induce [long-range
@@ -356,14 +356,5 @@ href="/wiki/index.php?title=Category:Electron-phonon_interactions&amp;veaction=e
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-zacharias:prb:2016_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
-    Rev. B <strong>94</strong>, 075125 (2016).</a>
-2.  [↑](#cite_ref-karsai:njp:2018_2-0)
-    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
-    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
-    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
-
-
+[^zacharias:prb:2016-1]: [M. Zacharias and F. Giustino, Phys. Rev. B **94**, 075125 (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
+[^karsai:njp:2018-2]: [F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008 (2018).](https://doi.org/10.1088/1367-2630/aaf53f)

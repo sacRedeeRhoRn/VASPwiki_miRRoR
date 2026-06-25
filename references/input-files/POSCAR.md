@@ -480,14 +480,14 @@ possible.
 If you have a POSCAR file with
 the positions written with low precision and would like to reconstruct
 with higher precision, we recommend using a symmetry package, such as
-spglib<sup>[\[1\]](#cite_note-spglib-1)</sup>,
+spglib[^spglib-1],
 to find the symmetries given a certain precision, symmetrizing the
 lattice vectors and positions and writing the
 POSCAR file with a higher
 number of significant digits. This can be done using
-pymatgen<sup>[\[2\]](#cite_note-pymatgen-2)</sup>
+pymatgen[^pymatgen-2]
 (which interfaces with
-spglib<sup>[\[1\]](#cite_note-spglib-1)</sup>)
+spglib[^spglib-1])
 to symmetrize the structure and write it to a
 POSCAR file, see <a
 href="https://gist.github.com/henriquemiranda/e4a1b616693aac339ef011af6484f890"
@@ -548,17 +548,7 @@ optimization](../tutorials/Structure_optimization.md),
 ## References\[<a href="/wiki/index.php?title=POSCAR&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑ <sup>[a](#cite_ref-spglib_1-0)</sup>
-    <sup>[b](#cite_ref-spglib_1-1)</sup>
-    <a href="https://spglib.github.io/spglib/" class="external text"
-    rel="nofollow">https://spglib.github.io/spglib/ (2022).</a>
-2.  [↑](#cite_ref-pymatgen_2-0)
-    <a href="https://pymatgen.org/" class="external text"
-    rel="nofollow">https://pymatgen.org/ (2022).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^spglib-1]: [https://spglib.github.io/spglib/ (2022).](https://spglib.github.io/spglib/)
+[^pymatgen-2]: [https://pymatgen.org/ (2022).](https://pymatgen.org/)

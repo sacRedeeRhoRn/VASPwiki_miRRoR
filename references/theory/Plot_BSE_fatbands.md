@@ -6,7 +6,7 @@
 
 It can be useful to inspect which electron-hole pairs or transitions
 contribute the most to a particular exciton
-<sup>[\[1\]](#cite_note-bokdam:scr:2016-1)</sup>.
+[^bokdam:scr:2016-1].
 In VASP it is possible to write the lowest
 [NBSEEIG](../incar-tags/NBSEEIG.md) eigenvectors into the
 [BSEFATBAND](../output-files/BSEFATBAND.md) file, which can be used for
@@ -105,11 +105,4 @@ href="/wiki/index.php?title=Plot_BSE_fatbands&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-bokdam:scr:2016_1-0)
-    <a href="https://doi.org/10.1038/srep28618" class="external text"
-    rel="nofollow">M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D.
-    Sarma, C. Franchini, and G. Kresse, Sci. Rep. <strong>6</strong>, 28618
-    (2016).</a>
-
-
+[^bokdam:scr:2016-1]: [M. Bokdam, T. Sander, A. Stroppa, S. Picozzi, D. D. Sarma, C. Franchini, and G. Kresse, Sci. Rep. **6**, 28618 (2016).](https://doi.org/10.1038/srep28618)

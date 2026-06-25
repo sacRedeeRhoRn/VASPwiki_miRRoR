@@ -5,9 +5,9 @@
 
 
 Available as of VASP.6 are low-scaling algorithms for
-[ACFDT/RPA](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md).<sup>[\[1\]](#cite_note-kaltak:prb:2014-1)</sup>
+[ACFDT/RPA](RPA__ACFDT-_Correlation_energy_in_the_Random_Phase_Approximation.md).[^kaltak:prb:2014-1]
 This page describes the formalism of the corresponding low-scaling GW
-approach.<sup>[\[2\]](#cite_note-liu:prb:2016-2)</sup>
+approach.[^liu:prb:2016-2]
 A theoretical description of the ACFDT/RPA total energies is found
 [here](ACFDT__RPA_calculations.md).
 A brief summary regarding GW theory is given below, while a practical
@@ -21,7 +21,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Theory">edit</a> \| (./index.php.md)\]
 
 The GW implementations in VASP described in the papers of Shishkin *et
-al.*<sup>[\[3\]](#cite_note-shishkin:prb:2006-3)[\[4\]](#cite_note-shishkin:prb:2007-4)</sup>
+al.*[^shishkin:prb:2006-3][^shishkin:prb:2007-4]
 avoid storage of the Green's function $G$ as well as
 Fourier transformations between time and frequency domain entirely. That
 is, all calculations are performed solely on the real frequency axis
@@ -33,7 +33,7 @@ of electrons).
 
 The scaling with system size can, however, be reduced to
 $N^3$ by performing a so-called Wick-rotation to
-imaginary time $t\to i\tau$.<sup>[\[5\]](#cite_note-rojas:prl:1995-5)</sup>
+imaginary time $t\to i\tau$.[^rojas:prl:1995-5]
 This rotation changes the signature of the Minkowski space-time
 $\eta=(-+++)$ to the euclidean one
 $\eta=(++++)$, where correlation functions, like the
@@ -60,7 +60,7 @@ coarse grid $\tau_{m}$,
 where the number of time points can be selected in VASP via the
 [NOMEGA](../incar-tags/NOMEGA.md) tag. Usually 12 to 16 points are
 sufficient for insulators and small band gap
-systems.<sup>[\[6\]](#cite_note-kaltak:2014-6)</sup>
+systems.[^kaltak:2014-6]
 
 Subsequently, the irreducible polarizability is calculated from a
 contraction of two imaginary time Green's functions
@@ -75,7 +75,7 @@ title="Groundstate in the Random Phase Approximation">low scaling
 ACFDT/RPA algorithms</a> is employed to obtain the irreducible
 polarizability in reciprocal space on the imaginary frequency axis
 $\chi({\bf r},{\bf r}',i\tau_m) \to \chi_{{\bf G}{\bf G}'}({\bf q},i
-\omega_n)$.<sup>[\[6\]](#cite_note-kaltak:2014-6)[\[2\]](#cite_note-liu:prb:2016-2)</sup>
+\omega_n)$.[^kaltak:2014-6][^liu:prb:2016-2]
 
 The next step is the computation of the screened potential
 
@@ -118,11 +118,11 @@ $\Sigma(z)$ of the self-energy can be determined with
 high accuracy. The analytical continuation typically yields energies
 that differ less than 20 meV from quasi-particle energies obtained from
 the real-frequency
-calculation.<sup>[\[2\]](#cite_note-liu:prb:2016-2)</sup>
+calculation.[^liu:prb:2016-2]
 
 In addition, the space-time formulation allows to solve the full Dyson
 equation for $G({\bf r,r'},i\tau)$ with decent computational
-cost.<sup>[\[7\]](#cite_note-grumet:prb:2018-7)</sup>
+cost.[^grumet:prb:2018-7]
 This approach is known as the self-consistent GW approach (scGW) and is
 available as of VASP6.
 
@@ -134,7 +134,7 @@ title="Edit section: Finite temperature formalism">edit</a> \| (./index.php.md)\
 The zero-temperature formalism of many-body perturbation theory breaks
 down for metals (systems with zero energy band-gap) as pointed out by
 Kohn and
-Luttinger.<sup>[\[8\]](#cite_note-KohnLuttinger:PR:1960-8)</sup>
+Luttinger.[^KohnLuttinger:PR:1960-8]
 This conundrum is lifted by considering diagrammatic perturbation theory
 at finite temperature $T>0$, which
 may be understood by an analytical continuation of the real-time
@@ -143,7 +143,7 @@ Matsubara has shown that this Wick rotation in time
 $t\to-i\tau$ reveals an intriguing connection to the
 inverse temperature $\beta=1/T$ of
 the
-system.<sup>[\[9\]](#cite_note-Matsubara:PTP:1955-9)</sup>
+system.[^Matsubara:PTP:1955-9]
 More precisely, Matsubara has shown that all terms in perturbation
 theory at finite temperature can be expressed as integrals of imaginary
 time quantities (such as the polarizability $\chi(-i\tau)$) over the fundamental interval
@@ -175,7 +175,7 @@ Although formally convenient, the Matsubara series converges poorly with
 the number of considered terms in practice. VASP, therefore, uses a
 compressed representation of the Fourier modes by employing the
 Minimax-Isometry
-method.<sup>[\[10\]](#cite_note-Kaltak:PRB:2020-10)</sup>
+method.[^Kaltak:PRB:2020-10]
 This approach converges exponentially with the number of considered
 frequency points.
 
@@ -184,52 +184,13 @@ href="/wiki/index.php?title=Low-scaling_GW:_The_space-time_formalism&amp;veactio
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-kaltak:prb:2014_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.054115"
-    class="external text" rel="nofollow">M. Kaltak, J. Klimeš, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 054115 (2014).</a>
-2.  ↑
-    <sup>[a](#cite_ref-liu:prb:2016_2-0)</sup>
-    <sup>[b](#cite_ref-liu:prb:2016_2-1)</sup>
-    <sup>[c](#cite_ref-liu:prb:2016_2-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.94.165109"
-    class="external text" rel="nofollow">P. Liu, M. Kaltak, J. Klimes, and
-    G. Kresse, Phys. Rev. B <strong>94</strong>, 165109 (2016).</a>
-3.  [↑](#cite_ref-shishkin:prb:2006_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>74</strong>, 035101 (2006).</a>
-4.  [↑](#cite_ref-shishkin:prb:2007_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.75.235102"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>75</strong>, 235102 (2007).</a>
-5.  [↑](#cite_ref-rojas:prl:1995_5-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
-    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
-    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
-6.  ↑
-    <sup>[a](#cite_ref-kaltak:2014_6-0)</sup>
-    <sup>[b](#cite_ref-kaltak:2014_6-1)</sup>
-    <a href="https://doi.org/10.1021/ct5001268" class="external text"
-    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
-    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
-7.  [↑](#cite_ref-grumet:prb:2018_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.155143"
-    class="external text" rel="nofollow">M. Grumet, P. Liu, M. Kaltak, J.
-    Klimeš, and G. Kresse, Phys. Rev. B <strong>98</strong>, 155143
-    (2018).</a>
-8.  [↑](#cite_ref-KohnLuttinger:PR:1960_8-0)
-    <a href="https://doi.org/10.1103/PhysRev.118.41" class="external text"
-    rel="nofollow">W. Kohn and J. M. Luttinger, Phys. Rev.
-    <strong>118</strong>, 41 (1960).</a>
-9.  [↑](#cite_ref-Matsubara:PTP:1955_9-0)
-    <a href="https://doi.org/10.1143/PTP.14.351" class="external text"
-    rel="nofollow">T. Matsubara, Prog. Theor. Phys. <strong>14</strong>, 351
-    (1955).</a>
-10. [↑](#cite_ref-Kaltak:PRB:2020_10-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-
-
+[^kaltak:prb:2014-1]: [M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **90**, 054115 (2014).](https://doi.org/10.1103/PhysRevB.90.054115)
+[^liu:prb:2016-2]: [P. Liu, M. Kaltak, J. Klimes, and G. Kresse, Phys. Rev. B **94**, 165109 (2016).](https://doi.org/10.1103/PhysRevB.94.165109)
+[^shishkin:prb:2006-3]: [M. Shishkin and G. Kresse, Phys. Rev. B **74**, 035101 (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
+[^shishkin:prb:2007-4]: [M. Shishkin and G. Kresse, Phys. Rev. B **75**, 235102 (2007).](https://doi.org/10.1103/PhysRevB.75.235102)
+[^rojas:prl:1995-5]: [H. N. Rojas, R. W. Godby, and R. J. Needs, Phys. Rev. Lett. **74**, 1827 (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
+[^kaltak:2014-6]: [M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory Comput. **10**, 2498-2507 (2014).](https://doi.org/10.1021/ct5001268)
+[^grumet:prb:2018-7]: [M. Grumet, P. Liu, M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **98**, 155143 (2018).](https://doi.org/10.1103/PhysRevB.98.155143)
+[^KohnLuttinger:PR:1960-8]: [W. Kohn and J. M. Luttinger, Phys. Rev. **118**, 41 (1960).](https://doi.org/10.1103/PhysRev.118.41)
+[^Matsubara:PTP:1955-9]: [T. Matsubara, Prog. Theor. Phys. **14**, 351 (1955).](https://doi.org/10.1143/PTP.14.351)
+[^Kaltak:PRB:2020-10]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)

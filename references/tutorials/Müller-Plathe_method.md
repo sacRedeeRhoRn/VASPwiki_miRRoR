@@ -18,7 +18,7 @@ where $\mathbf{J}$
 is the heat-flux vector and $\nabla T=\partial T/\partial
 \mathbf{a}_i$ is the temperature gradient. In reverse
 nonequilibrium molecular dynamics proposed by
-Müller-Plathe<sup>[\[1\]](#cite_note-mueller-plathe:jcp:1997-1)</sup>,
+Müller-Plathe[^mueller-plathe:jcp:1997-1],
 a temperature gradient ($\partial T/\partial
 \mathbf{a}_i$) along selected lattice axis
 $\mathbf{a}_i$ is created by splitting the simulation
@@ -7913,11 +7913,4 @@ href="/wiki/index.php?title=M%C3%BCller-Plathe_method&amp;veaction=edit&amp;sect
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-mueller-plathe:jcp:1997_1-0)
-    <a href="https://doi.org/10.1063/1.473271" class="external text"
-    rel="nofollow">F. Müller-Plathe, <em>A simple nonequilibrium molecular
-    dynamics method for calculating the thermal conductivity</em>, J. Chem.
-    Phys. <strong>106</strong>, 6082 (1997).</a>
-
-
+[^mueller-plathe:jcp:1997-1]: [F. Müller-Plathe, *A simple nonequilibrium molecular dynamics method for calculating the thermal conductivity*, J. Chem. Phys. **106**, 6082 (1997).](https://doi.org/10.1063/1.473271)

@@ -122,7 +122,7 @@ For
 [meta-GGA](../categories/Category-Exchange-correlation_functionals.md)
 functionals, the dependence of $\varepsilon_\mathrm{xc}$ on the kinetic-energy density
 $\tau(\mathbf r)$ makes $\delta v_\mathrm{xc}/\delta n$ non-local through the orbital dependence of
-$\tau$<sup>[\[1\]](#cite_note-nazarov:vignale:2011-1)</sup>.
+$\tau$[^nazarov:vignale:2011-1].
 These non-local contributions are not implemented in VASP, so the
 $1/q^2$ long-range component of
 $f_\mathrm{xc}$ responsible for excitonic effects is
@@ -136,7 +136,7 @@ For a [hybrid
 functional](../categories/Category-Exchange-correlation_functionals.md),
 a fraction $c_\mathrm{x}$ of the (semi-)local exchange is replaced by exact
 (Fock) exchange in both
-solvers<sup>[\[2\]](#cite_note-sander:prb:15-2)</sup>,
+solvers[^sander:prb:15-2],
 
 $f_\mathrm{xc}(\mathbf r, \mathbf r') = \left(1-c_\mathrm{x}\right)
 \frac{\partial^2 \varepsilon_\mathrm{x}}{\partial n(\mathbf r) \\
@@ -184,19 +184,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LFXC-_incategory-Howto)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-nazarov:vignale:2011_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.107.216402"
-    class="external text" rel="nofollow">V. U. Nazarov, G. Vignale,
-    <em>Optics of semiconductors from
-    meta-generalized-gradient-approximation-based time-dependent
-    density-functional theory</em>, Phys. Rev. Lett. <strong>107</strong>,
-    216402 (2011).</a>
-2.  [↑](#cite_ref-sander:prb:15_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-
-
+[^nazarov:vignale:2011-1]: [V. U. Nazarov, G. Vignale, *Optics of semiconductors from meta-generalized-gradient-approximation-based time-dependent density-functional theory*, Phys. Rev. Lett. **107**, 216402 (2011).](https://doi.org/10.1103/PhysRevLett.107.216402)
+[^sander:prb:15-2]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)

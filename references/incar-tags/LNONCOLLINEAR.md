@@ -20,7 +20,7 @@ For noncollinear magnetic calculations, set
 LNONCOLLINEAR = True in the
 [INCAR](../input-files/INCAR.md) file and use the `vasp_ncl` executable. The
 electronic minimization treats the full 2x2 spin
-density<sup>[\[1\]](#cite_note-hobbs:prb:00-1)</sup>
+density[^hobbs:prb:00-1]
 
 $n_{\sigma\sigma'}(\mathbf{r}) = \sum_{n=1}^N
 \psi_{n\sigma}(\mathbf{r})\psi^\*_{n\sigma'}(\mathbf{r}),$
@@ -93,11 +93,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LNONCOLLINEAR-_incategory-Ex
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-hobbs:prb:00_1-0)
-    <a href="http://doi.org/10.1103/PhysRevB.62.11556" class="external text"
-    rel="nofollow">Hobbs, D., G. Kresse, and J. Hafner, <em>Fully
-    unconstrained noncollinear magnetism within the projector augmented-wave
-    method.</em>, Phys. Rev. B <strong>62</strong>, 11556 (2000).</a>
-
-
+[^hobbs:prb:00-1]: [Hobbs, D., G. Kresse, and J. Hafner, *Fully unconstrained noncollinear magnetism within the projector augmented-wave method.*, Phys. Rev. B **62**, 11556 (2000).](http://doi.org/10.1103/PhysRevB.62.11556)

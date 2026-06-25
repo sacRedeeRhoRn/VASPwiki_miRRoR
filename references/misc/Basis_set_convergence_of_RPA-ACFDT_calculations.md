@@ -30,7 +30,7 @@ Since correlation energies converge very slowly with respect to
 $\mathbf{G}_{\rm max }$, VASP automatically
 extrapolates to the infinite basis set limit using a linear regression
 to the equation:
-<sup>[\[1\]](#cite_note-harl:2008-1)[\[2\]](#cite_note-harl:2010-2)[\[3\]](#cite_note-klimes:2014-3)</sup>
+[^harl:2008-1][^harl:2010-2][^klimes:2014-3]
 
 $E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}$.
 
@@ -40,7 +40,7 @@ Furthermore, the Coulomb kernel is smoothly truncated between
 function (Hann window function). Alternatively, the basis set
 extrapolation can be performed by setting
 [LSCK](../incar-tags/LSCK.md)=.TRUE., using the squeezed Coulomb kernel
-method.<sup>[\[4\]](#cite_note-riemelmoser:jcp:2020-4)</sup>
+method.[^riemelmoser:jcp:2020-4]
 
 The default for [ENCUTGWSOFT](../incar-tags/ENCUTGWSOFT.md) is
 0.8$\times$[ENCUTGW](../incar-tags/ENCUTGW.md) (again we do
@@ -48,7 +48,7 @@ not recommend to change this default).
 
 The integral over $\omega$ is
 evaluated by means of a highly accurate minimax
-integration.<sup>[\[5\]](#cite_note-kaltak:2014-5)</sup>
+integration.[^kaltak:2014-5]
 The number of $\omega$
 points is determined by the flag [NOMEGA](../incar-tags/NOMEGA.md),
 whereas the energy range of transitions is determined by the band gap
@@ -75,26 +75,8 @@ href="/wiki/index.php?title=Basis_set_convergence_of_RPA-ACFDT_calculations&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-harl:2008_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-2.  [↑](#cite_ref-harl:2010_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
-    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
-3.  [↑](#cite_ref-klimes:2014_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
-    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
-4.  [↑](#cite_ref-riemelmoser:jcp:2020_4-0)
-    <a href="https://doi.org/10.1063/5.0002246" class="external text"
-    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>152(13)</strong>, 134103 (2020).</a>
-5.  [↑](#cite_ref-kaltak:2014_5-0)
-    <a href="https://doi.org/10.1021/ct5001268" class="external text"
-    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
-    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
-
-
+[^harl:2008-1]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^harl:2010-2]: [J. Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126 (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^klimes:2014-3]: [J. Klimeš, M. Kaltak, and G. Kresse, Phys. Rev. B **90**, 075125 (2014).](https://doi.org/10.1103/PhysRevB.90.075125)
+[^riemelmoser:jcp:2020-4]: [S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys. **152(13)**, 134103 (2020).](https://doi.org/10.1063/5.0002246)
+[^kaltak:2014-5]: [M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory Comput. **10**, 2498-2507 (2014).](https://doi.org/10.1021/ct5001268)

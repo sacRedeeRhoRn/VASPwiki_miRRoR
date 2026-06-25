@@ -374,7 +374,7 @@ where the first point is always $\omega=0$:
 The complete matrix at zero frequency is also written to
 [UIJKL](../output-files/UIJKL.md), while the result at the first frequency
 point of the minimax
-grid<sup>[\[1\]](#cite_note-Kaltak:PRB:2020-1)</sup>
+grid[^Kaltak:PRB:2020-1]
 is found in [UIJKL](../output-files/UIJKL.md).1 and so on.
 
 #### Optional: Analytic continuation\[<a
@@ -440,7 +440,7 @@ href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.AAA
 class="external text" rel="nofollow">AAA algorithm</a> (a rational
 approximation algorithm). The tolerance parameter `rtol` can lead to
 Froissart doublets
-<sup>[\[2\]](#cite_note-gilewicz:kryakin:2003-2)</sup>,
+[^gilewicz:kryakin:2003-2],
 i.e., non-physical poles, if `rtol` is set too tight, e.g., the pole at
 $\omega \approx 13$ eV. The parameter should be changed
 in order to ensure that the poles do not disappear when it is modified.
@@ -523,15 +523,5 @@ href="/wiki/index.php?title=CRPA_of_SrVO3&amp;veaction=edit&amp;section=9"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-Kaltak:PRB:2020_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-2.  [↑](#cite_ref-gilewicz:kryakin:2003_2-0)
-    <a href="https://doi.org/10.1016/S0377-0427(02)00674-X"
-    class="external text" rel="nofollow">J. Gilewicz, Y. Kryakin,
-    <em>Froissart doublets in Padé approximation in the case of polynomial
-    noise</em>, J. Comput. Appl. Math. <strong>153</strong>, 235 (2003).</a>
-
-
+[^Kaltak:PRB:2020-1]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)
+[^gilewicz:kryakin:2003-2]: [J. Gilewicz, Y. Kryakin, *Froissart doublets in Padé approximation in the case of polynomial noise*, J. Comput. Appl. Math. **153**, 235 (2003).](https://doi.org/10.1016/S0377-0427(02)00674-X)

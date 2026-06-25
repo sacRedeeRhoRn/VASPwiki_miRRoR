@@ -25,7 +25,7 @@ the denominator of the Fan-Migdal self-energy to zero.
 
 |  |
 |----|
-| **Warning:** The adiabatic approximation is ill-suited for polar materials where it may introduce large errors <sup>[\[1\]](#cite_note-ponce:jcp:2015-1)</sup>. |
+| **Warning:** The adiabatic approximation is ill-suited for polar materials where it may introduce large errors [^ponce:jcp:2015-1]. |
 
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=ELPH_SELFEN_STATIC&amp;veaction=edit&amp;section=1"
@@ -41,12 +41,4 @@ href="/wiki/index.php?title=ELPH_SELFEN_STATIC&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ponce:jcp:2015_1-0)
-    <a href="https://doi.org/10.1063/1.4927081" class="external text"
-    rel="nofollow">S. Poncé, Y. Gillet, J. Laflamme Janssen, A. Marini, M.
-    Verstraete, and X. Gonze, <em>Temperature dependence of the electronic
-    structure of semiconductors and insulators</em>, J. Chem. Phys.
-    <strong>143 (10)</strong>, 102813 (2015).</a>
-
-
+[^ponce:jcp:2015-1]: [S. Poncé, Y. Gillet, J. Laflamme Janssen, A. Marini, M. Verstraete, and X. Gonze, *Temperature dependence of the electronic structure of semiconductors and insulators*, J. Chem. Phys. **143 (10)**, 102813 (2015).](https://doi.org/10.1063/1.4927081)

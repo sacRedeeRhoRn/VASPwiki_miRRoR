@@ -44,7 +44,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: IMIX=1: Kerker mixing">edit</a> \| (./index.php.md)\]
 
 For Kerker
-mixing<sup>[\[1\]](#cite_note-kerker:prb:81-1)</sup>,
+mixing[^kerker:prb:81-1],
 the mixed density is given by
 
 $\rho_{\rm mix}\left(G\right)=\rho_{\rm in}\left(G\right)+A
@@ -65,7 +65,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: IMIX=2: Variant of Tchebycheff mixing">edit</a> \| (./index.php.md)\]
 
 VASP uses a variant of the popular Tchebycheff-mixing
-scheme<sup>[\[2\]](#cite_note-akai:jpc:85-2)</sup>.
+scheme[^akai:jpc:85-2].
 Here, the following second order equation of motion is used:
 
 $\ddot{\rho}_{\rm in}\left(G\right) = 2\*A
@@ -117,13 +117,13 @@ class="mw-editsection-visualeditor"
 title="Edit section: IMIX=4: Broyden&#39;s 2nd method and Pulay-mixing method (default)">edit</a> \| (./index.php.md)")\]
 
 For [WC](WC.md)=0, VASP uses Broyden's 2<sup>nd</sup>
-method,<sup>[\[3\]](#cite_note-bluegel:thesis:88-3)[\[4\]](#cite_note-johnson:prb:88-4)</sup>
+method,[^bluegel:thesis:88-3][^johnson:prb:88-4]
 and, for [WC](WC.md)\>0, VASP uses Pulay-mixing
-method<sup>[\[5\]](#cite_note-pulay:cpl:80-5)</sup>.
+method[^pulay:cpl:80-5].
 
 The default is a Pulay mixer with an initial approximation for the
 charge-dielectric function according to
-Kerker<sup>[\[1\]](#cite_note-kerker:prb:81-1)</sup>
+Kerker[^kerker:prb:81-1]
 
 $A\times\max\left(\frac{G^2}{G^2+B^2},A_{\rm min}\right)$
 
@@ -155,31 +155,10 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-IMIX-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=IMIX&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-kerker:prb:81_1-0)</sup>
-    <sup>[b](#cite_ref-kerker:prb:81_1-1)</sup>
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.23.3082"
-    class="external text" rel="nofollow">G. P. Kerker, Phys. Rev. B 23, 3082
-    (1981).</a>
-2.  [↑](#cite_ref-akai:jpc:85_2-0)
-    <a href="http://dx.doi.org/10.1088/0022-3719/18/12/009"
-    class="external text" rel="nofollow">H. Akai and P.H. Dederichs, J.
-    Phys. C 18 (1985).</a>
-3.  [↑](#cite_ref-bluegel:thesis:88_3-0)
-    S. Blügel, PhD Thesis, RWTH Aachen
-    (1988).
-4.  [↑](#cite_ref-johnson:prb:88_4-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.38.12807"
-    class="external text" rel="nofollow">D. D. Johnson, Phys. Rev. B38,
-    12807 (1988).</a>
-5.  [↑](#cite_ref-pulay:cpl:80_5-0)
-    <a href="http://dx.doi.org/10.1016/0009-2614(80)80396-4"
-    class="external text" rel="nofollow">P. Pulay, Chem. Phys. Lett. 73, 393
-    (1980).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kerker:prb:81-1]: [G. P. Kerker, Phys. Rev. B 23, 3082 (1981).](http://link.aps.org/doi/10.1103/PhysRevB.23.3082)
+[^akai:jpc:85-2]: [H. Akai and P.H. Dederichs, J. Phys. C 18 (1985).](http://dx.doi.org/10.1088/0022-3719/18/12/009)
+[^bluegel:thesis:88-3]: S. Blügel, PhD Thesis, RWTH Aachen (1988).
+[^johnson:prb:88-4]: [D. D. Johnson, Phys. Rev. B38, 12807 (1988).](http://link.aps.org/doi/10.1103/PhysRevB.38.12807)
+[^pulay:cpl:80-5]: [P. Pulay, Chem. Phys. Lett. 73, 393 (1980).](http://dx.doi.org/10.1016/0009-2614(80)80396-4)

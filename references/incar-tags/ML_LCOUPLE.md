@@ -52,7 +52,7 @@ $\rho (\mathbf{r},\lambda) = \sum\limits_{j\notin M} f_{\mathrm{cut}}
 
   
 Further details on the implementation can be found in reference
-<sup>[\[1\]](#cite_note-jinnouchiti:prb:2020-1)</sup>.
+[^jinnouchiti:prb:2020-1].
 
 For thermodynamic integration the following parameters have to be set:
 
@@ -97,14 +97,6 @@ like this:
 href="/wiki/index.php?title=ML_LCOUPLE&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-jinnouchiti:prb:2020_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.060201"
-    class="external text" rel="nofollow">R. Jinnouchi, F. Karsai, and G.
-    Kresse, Phys. Rev. B <strong>101</strong>, 060201 (2020).</a>
-
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=ML_LCOUPLE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
@@ -120,4 +112,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_LCOUPLE-_incategory-Examp
 
 ------------------------------------------------------------------------
 
-
+[^jinnouchiti:prb:2020-1]: [R. Jinnouchi, F. Karsai, and G. Kresse, Phys. Rev. B **101**, 060201 (2020).](https://doi.org/10.1103/PhysRevB.101.060201)

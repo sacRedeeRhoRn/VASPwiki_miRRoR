@@ -5,7 +5,7 @@
 
 
 In the approach proposed by Andersen
-<sup>[\[1\]](#cite_note-andersen:jcp:1980-1)</sup>
+[^andersen:jcp:1980-1]
 the system is thermally coupled to a fictitious heat bath with the
 desired temperature. The coupling is represented by stochastic
 collisions that act occasionally on randomly selected particles. In
@@ -28,7 +28,7 @@ step.
 
 A very good implementation of the Andersen thermostat can be found in
 chapter 6.1.1 of reference
-<sup>[\[2\]](#cite_note-frenkel:book:1996-2)</sup>.
+[^frenkel:book:1996-2].
 
 The Andersen thermostat is selected by setting
 [MDALGO](../incar-tags/MDALGO.md)=1.
@@ -53,20 +53,7 @@ thermostat](../misc/Nosé-Hoover_chain_thermostat.md),
 href="/wiki/index.php?title=Andersen_thermostat&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-andersen:jcp:1980_1-0)
-    <a href="https://doi.org/10.1063/1.439486" class="external text"
-    rel="nofollow">H. C. Andersen, J. Chem. Phys. <strong>72</strong>, 2384
-    (1980).</a>
-2.  [↑](#cite_ref-frenkel:book:1996_2-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    Understanding Molecular Simulation (Academic Press, London, 1996).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^andersen:jcp:1980-1]: [H. C. Andersen, J. Chem. Phys. **72**, 2384 (1980).](https://doi.org/10.1063/1.439486)
+[^frenkel:book:1996-2]: [D. Frenkel and B. Smit, Understanding Molecular Simulation (Academic Press, London, 1996).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)

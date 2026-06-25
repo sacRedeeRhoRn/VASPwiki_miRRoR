@@ -11,9 +11,9 @@ approximation</a> is an approximation to the self-energy. GW
 calculations are available as of VASP.5.X. For details on the
 implementation and use of the *GW* routines, we recommend the papers by
 Shishkin *et al.*
-<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)[\[2\]](#cite_note-shishkin:prb:2007-2)[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>
+[^shishkin:prb:2006-1][^shishkin:prb:2007-2][^shishkin:prl:2007-3]
 and Fuchs *et
-al.*<sup>[\[4\]](#cite_note-fuchs:prb:2007-4)</sup>
+al.*[^fuchs:prb:2007-4]
 
  
 
@@ -298,7 +298,7 @@ r})\phi^{(0)}_{n{\bf k}} ({\bf r}')}{\omega-E^{(i)}_{n{\bf k}}}$
 but keeping $W$ and the
 orbitals $\phi^{(0)}_{n{\bf q}}$ fixed to the initial DFT level. This method goes back
 to Hybertsen and Louie
-<sup>[\[5\]](#cite_note-hybertsen:prb:1986-5)</sup>
+[^hybertsen:prb:1986-5]
 and can be achieved in two ways.
 
 If the spectral method is not selected
@@ -372,10 +372,10 @@ setting can be used:
 
 In this case, the orbitals are updated as well by constructing a
 hermitian (energy independent) approximation to the self-energy
-<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
+[^shishkin:prl:2007-3].
 The "static" COHSEX approximation can be selected by setting
 [NOMEGA](../incar-tags/NOMEGA.md) = 1
-<sup>[\[6\]](#cite_note-bruneval:prb:06-6)</sup>.
+[^bruneval:prb:06-6].
 To improve convergence to the ground-state, the charge density (and the
 charge density only) is mixed using a Kerker type mixing in VASP.5.3.2
 and more recent versions (see [IMIX](../incar-tags/IMIX.md)). The mixing
@@ -467,7 +467,7 @@ calculations can be performed by simply repeatedly calling VASP using:
 For QPGW0 or QPGW, nondiagonal terms in the Hamiltonian are accounted
 for, *e.g.* the linearized QP equation is diagonalized, and the
 one-electron orbitals are updated
-<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
+[^shishkin:prl:2007-3].
 Alternatively (and preferably), the user can specify an electronic
 iteration counter using [NELMGW](../incar-tags/NELMGW.md)
 ([NELM](../incar-tags/NELM.md) in VASP.6.2 and older):
@@ -485,11 +485,11 @@ times (starting from the DFT eigenvalues) in both G and W. For
 [ALGO](../incar-tags/ALGO.md)=*QPGW* (or [ALGO](../incar-tags/ALGO.md)=*scGW* in
 VASP.5.2.11 and older), the one electron energies and one electron
 orbitals are updated 3 times
-<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>.
+[^shishkin:prl:2007-3].
 As for [ALGO](../incar-tags/ALGO.md) = *QPGW0* (or *scGW0* in vasp.5.2.11
 and older), the "static" COHSEX approximation can be selected by setting
 [NOMEGA](../incar-tags/NOMEGA.md)=1
-<sup>[\[6\]](#cite_note-bruneval:prb:06-6)</sup>.
+[^bruneval:prb:06-6].
 
 To improve convergence to the ground-state, the charge density is mixed
 using a Kerker type mixing starting with VASP.5.3.2 (see
@@ -516,7 +516,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Caveats">edit</a> \| (./index.php.md)\]
 
 Fully self-consistent QPGW calculations with an update of the orbitals
-in $G$ and $W$<sup>[\[3\]](#cite_note-shishkin:prl:2007-3)</sup>
+in $G$ and $W$[^shishkin:prl:2007-3]
 require significant care and are prone to diverge (QPGW0 calculations
 are usually less critical). As discussed, above, one can select this
 mode using:
@@ -570,8 +570,8 @@ class="mw-editsection-visualeditor"
 title="Edit section: Low scaling GW algorithms">edit</a> \| (./index.php.md)\]
 
 The GW implementations in VASP described in the papers of Shishkin *et
-al.*<sup>[\[1\]](#cite_note-shishkin:prb:2006-1)</sup>
-<sup>[\[2\]](#cite_note-shishkin:prb:2007-2)</sup>
+al.*[^shishkin:prb:2006-1]
+[^shishkin:prb:2007-2]
 avoids storage of the Green's function $G$ as well as
 Fourier transformations between time and frequency domain entirely. That
 is, all calculations are performed solely on the real frequency axis
@@ -580,10 +580,10 @@ $\chi$ and $\Sigma$ in
 reciprocal space.
 
 As of VASP.6 a new cubic scaling GW algorithm
-<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
+[^liu:prb:2016-7]
 (called space-time implementation in the following) can be selected.
 This approach follows the idea of Rojas *et al.*
-<sup>[\[8\]](#cite_note-rojas:prl:1995-8)</sup>
+[^rojas:prl:1995-8]
 and performs the GW self-consistency cycle on imaginary time
 $t\to i\tau$ and imaginary frequency axes
 $\omega\to i\omega$.
@@ -613,14 +613,14 @@ This algorithm evaluates:
 
 - Single-shot GW quasiparticle energies (from an analytical continuation
   of the self-energy to the real
-  axis)<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
+  axis)[^liu:prb:2016-7]
 
 <!-- -->
 
 - Natural orbitals from the first order change of the density matrix
   (i.e. $G_0 \Sigma G_0$), see the [NATURALO](../incar-tags/NATURALO.md) tag
   for more information
-  <sup>[\[9\]](#cite_note-ramberger:jcp:2019-9)</sup>.
+  [^ramberger:jcp:2019-9].
 
 |  |
 |----|
@@ -692,9 +692,9 @@ The meaning of each column is explained briefly in the following.
   quasi-particle
 - `QP_DIFF` difference of QP energies (of linearized self-energy)
   obtained from Eq. 77 of Liu et.
-  al.<sup>[\[7\]](#cite_note-liu:prb:2016-7)</sup>
+  al.[^liu:prb:2016-7]
   and M. Grumets
-  thesis<sup>[\[10\]](#cite_note-grumet:thesis:2017-10)</sup>.
+  thesis[^grumet:thesis:2017-10].
 
  
 
@@ -710,7 +710,7 @@ Optionally, RPA forces can be calculated by adding following line to the
 
 After the QP-energies, VASP performs a linear-response calculation that
 is required for the RPA
-forces.<sup>[\[11\]](#cite_note-ramberger:prl:118-11)</sup>
+forces.[^ramberger:prl:118-11]
 Following data block in the
 [OUTCAR](../output-files/OUTCAR.md)
 file can be found after a successful run:
@@ -835,7 +835,7 @@ title="Edit section: Fully self-consistent GW caluclations: GWR">edit</a> \| (./
 
 If the screened potential should be updated during the self-consistency
 circle
-<sup>[\[12\]](#cite_note-grumet:prb:2018-12)</sup>
+[^grumet:prb:2018-12]
 the following [INCAR](../input-files/INCAR.md) file can be used
 
     System = SiC
@@ -969,70 +969,15 @@ href="/wiki/index.php?title=Practical_guide_to_GW_calculations&amp;veaction=edit
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-shishkin:prb:2006_1-0)</sup>
-    <sup>[b](#cite_ref-shishkin:prb:2006_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>74</strong>, 035101 (2006).</a>
-2.  ↑
-    <sup>[a](#cite_ref-shishkin:prb:2007_2-0)</sup>
-    <sup>[b](#cite_ref-shishkin:prb:2007_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.75.235102"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>75</strong>, 235102 (2007).</a>
-3.  ↑
-    <sup>[a](#cite_ref-shishkin:prl:2007_3-0)</sup>
-    <sup>[b](#cite_ref-shishkin:prl:2007_3-1)</sup>
-    <sup>[c](#cite_ref-shishkin:prl:2007_3-2)</sup>
-    <sup>[d](#cite_ref-shishkin:prl:2007_3-3)</sup>
-    <sup>[e](#cite_ref-shishkin:prl:2007_3-4)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.99.246403"
-    class="external text" rel="nofollow">M. Shishkin, M. Marsman, and G.
-    Kresse, Phys. Rev. Lett. <strong>99</strong>, 246403 (2007).</a>
-4.  [↑](#cite_ref-fuchs:prb:2007_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.115109"
-    class="external text" rel="nofollow">F. Fuchs, J. Furthmüller, F.
-    Bechstedt, M. Shishkin, and G. Kresse, Phys. Rev. B <strong>76</strong>,
-    115109 (2007).</a>
-5.  [↑](#cite_ref-hybertsen:prb:1986_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.34.5390" class="external text"
-    rel="nofollow">M. S. Hybertsen and S. G. Louie, Phys. Ref. B
-    <strong>34</strong>, 5390 (1986).</a>
-6.  ↑
-    <sup>[a](#cite_ref-bruneval:prb:06_6-0)</sup>
-    <sup>[b](#cite_ref-bruneval:prb:06_6-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.74.045102"
-    class="external text" rel="nofollow">F. Bruneval, N. Vast, and L.
-    Reining, Phys. Rev. B <strong>74</strong>, 45102 (2006).</a>
-7.  ↑
-    <sup>[a](#cite_ref-liu:prb:2016_7-0)</sup>
-    <sup>[b](#cite_ref-liu:prb:2016_7-1)</sup>
-    <sup>[c](#cite_ref-liu:prb:2016_7-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.94.165109"
-    class="external text" rel="nofollow">P. Liu, M. Kaltak, J. Klimes, and
-    G. Kresse, Phys. Rev. B <strong>94</strong>, 165109 (2016).</a>
-8.  [↑](#cite_ref-rojas:prl:1995_8-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
-    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
-    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
-9.  [↑](#cite_ref-ramberger:jcp:2019_9-0)
-    <a href="https://doi.org/10.1063/1.5128415" class="external text"
-    rel="nofollow">B. Ramberger, Z. Surkuma, T. Schäfer, and G. Kresse, J.
-    Chem. Phys. <strong>151</strong>, 214106 (2019).</a>
-10. [↑](#cite_ref-grumet:thesis:2017_10-0)
-    <a href="https://utheses.univie.ac.at/detail/43403#"
-    class="external text" rel="nofollow">M. Grumet, Thesis: Self-consistent
-    GW calculations for solids(2017).</a>
-11. [↑](#cite_ref-ramberger:prl:118_11-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
-    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
-    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
-12. [↑](#cite_ref-grumet:prb:2018_12-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.155143"
-    class="external text" rel="nofollow">M. Grumet, P. Liu, M. Kaltak, J.
-    Klimeš, and G. Kresse, Phys. Rev. B <strong>98</strong>, 155143
-    (2018).</a>
-
-
+[^shishkin:prb:2006-1]: [M. Shishkin and G. Kresse, Phys. Rev. B **74**, 035101 (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
+[^shishkin:prb:2007-2]: [M. Shishkin and G. Kresse, Phys. Rev. B **75**, 235102 (2007).](https://doi.org/10.1103/PhysRevB.75.235102)
+[^shishkin:prl:2007-3]: [M. Shishkin, M. Marsman, and G. Kresse, Phys. Rev. Lett. **99**, 246403 (2007).](https://doi.org/10.1103/PhysRevLett.99.246403)
+[^fuchs:prb:2007-4]: [F. Fuchs, J. Furthmüller, F. Bechstedt, M. Shishkin, and G. Kresse, Phys. Rev. B **76**, 115109 (2007).](https://doi.org/10.1103/PhysRevB.76.115109)
+[^hybertsen:prb:1986-5]: [M. S. Hybertsen and S. G. Louie, Phys. Ref. B **34**, 5390 (1986).](https://doi.org/10.1103/PhysRevB.34.5390)
+[^bruneval:prb:06-6]: [F. Bruneval, N. Vast, and L. Reining, Phys. Rev. B **74**, 45102 (2006).](https://doi.org/10.1103/PhysRevB.74.045102)
+[^liu:prb:2016-7]: [P. Liu, M. Kaltak, J. Klimes, and G. Kresse, Phys. Rev. B **94**, 165109 (2016).](https://doi.org/10.1103/PhysRevB.94.165109)
+[^rojas:prl:1995-8]: [H. N. Rojas, R. W. Godby, and R. J. Needs, Phys. Rev. Lett. **74**, 1827 (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
+[^ramberger:jcp:2019-9]: [B. Ramberger, Z. Surkuma, T. Schäfer, and G. Kresse, J. Chem. Phys. **151**, 214106 (2019).](https://doi.org/10.1063/1.5128415)
+[^grumet:thesis:2017-10]: [M. Grumet, Thesis: Self-consistent GW calculations for solids(2017).](https://utheses.univie.ac.at/detail/43403#)
+[^ramberger:prl:118-11]: [B. Ramberger, T. Schäfer and G. Kresse, Phys. Rev. Lett **118**, 106403 (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)
+[^grumet:prb:2018-12]: [M. Grumet, P. Liu, M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **98**, 155143 (2018).](https://doi.org/10.1103/PhysRevB.98.155143)

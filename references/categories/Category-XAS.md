@@ -88,7 +88,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Supercell core-hole (SCH)">edit</a> \| (./index.php.md)")\]
 
 The SCH
-approach<sup>[\[1\]](#cite_note-karsai:prb:2018-1)[\[2\]](#cite_note-unzog:prb:2022-2)</sup>
+approach[^karsai:prb:2018-1][^unzog:prb:2022-2]
 is explained in detail on the following [theory
 page](../theory/Supercell_core-hole_theory.md).
 When the core hole is explicitly introduced in one of the atoms, i.e., a
@@ -120,7 +120,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Bethe-Salpeter equation">edit</a> \| (./index.php.md)\]
 
 Within the BSE
-approach<sup>[\[2\]](#cite_note-unzog:prb:2022-2)</sup>,
+approach[^unzog:prb:2022-2],
 the interaction between the core hole and the excited electron is
 explicitly included in the polarizability as explained in the [theory
 page](../theory/Bethe-Salpeter_equation.md). The BSE
@@ -160,14 +160,14 @@ better insight into the physics of the excitons. Furthermore, some
 results indicate that the valence state excitations have to be included
 in the XAS calculations as well to reproduce the experimental results,
 which is only possible within the BSE formalism
-<sup>[\[3\]](#cite_note-tang:pnas:2022-3)</sup>.
+[^tang:pnas:2022-3].
 SCH has been shown to provide overall an accurate approximation for the
 deep core excitations
-<sup>[\[1\]](#cite_note-karsai:prb:2018-1)</sup>,
+[^karsai:prb:2018-1],
 but it can be less accurate for some systems, where the BSE+GW
 calculations are required to accurately reproduce the experimental
 spectra
-<sup>[\[2\]](#cite_note-unzog:prb:2022-2)[\[4\]](#cite_note-liang:prl:2017-4)</sup>.
+[^unzog:prb:2022-2][^liang:prl:2017-4].
 
 |  |
 |----|
@@ -188,34 +188,7 @@ href="/wiki/index.php?title=Category:XAS&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-karsai:prb:2018_1-0)</sup>
-    <sup>[b](#cite_ref-karsai:prb:2018_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.98.235205"
-    class="external text" rel="nofollow">F. Karsai, M. Humer, E.
-    Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B <strong>98</strong>,
-    235205 (2018).</a>
-2.  ↑
-    <sup>[a](#cite_ref-unzog:prb:2022_2-0)</sup>
-    <sup>[b](#cite_ref-unzog:prb:2022_2-1)</sup>
-    <sup>[c](#cite_ref-unzog:prb:2022_2-2)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
-    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
-    <em>X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
-    (2022).</a>
-3.  [↑](#cite_ref-tang:pnas:2022_3-0)
-    <a href="https://doi.org/10.1073/pnas.2201258119" class="external text"
-    rel="nofollow">F. Tang, Z. Li, C. Zhang, and X. Wu, <em>Many-body
-    effects in the X-ray absorption spectra of liquid water</em>, Proc.
-    Natl. Acad. Sci. USA <strong>119</strong>, 1 (2022).</a>
-4.  [↑](#cite_ref-liang:prl:2017_4-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevLett.118.096402"
-    class="external text" rel="nofollow">Y. Liang, J. Vinson, S. Pemmaraju,
-    W. S. Drisdell, E. L. Shirley, and D. Prendergast, <em>Accurate X-Ray
-    Spectral Predictions: An Advanced Self-Consistent-Field Approach
-    Inspired by Many-Body Perturbation Theory</em>, Phys. Rev. Lett.
-    <strong>118</strong>, 096402 (2017)</a>
-
-
+[^karsai:prb:2018-1]: [F. Karsai, M. Humer, E. Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B **98**, 235205 (2018).](https://doi.org/10.1103/PhysRevB.98.235205)
+[^unzog:prb:2022-2]: [M. Unzog, A. Tal, G. Kresse, *X-ray absorption using the projector augmented-wave method and the Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133 (2022).](http://doi.org/10.1103/PhysRevB.106.155133)
+[^tang:pnas:2022-3]: [F. Tang, Z. Li, C. Zhang, and X. Wu, *Many-body effects in the X-ray absorption spectra of liquid water*, Proc. Natl. Acad. Sci. USA **119**, 1 (2022).](https://doi.org/10.1073/pnas.2201258119)
+[^liang:prl:2017-4]: [Y. Liang, J. Vinson, S. Pemmaraju, W. S. Drisdell, E. L. Shirley, and D. Prendergast, *Accurate X-Ray Spectral Predictions: An Advanced Self-Consistent-Field Approach Inspired by Many-Body Perturbation Theory*, Phys. Rev. Lett. **118**, 096402 (2017)](http://dx.doi.org/10.1103/PhysRevLett.118.096402)

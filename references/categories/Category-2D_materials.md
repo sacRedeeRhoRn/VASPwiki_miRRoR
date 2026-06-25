@@ -202,7 +202,7 @@ title="Edit section: Slab stoichiometry">edit</a> \| (./index.php.md)\]
 
 Slab stoichiometry is usually less important than symmetry for the
 computation setup. But in
-[surface-energy-calculation](#surface-energy_calculation) methods that
+[surface-energy-calculation](#surface-energy-calculations) methods that
 reference the bulk energy (which is always stoichiometric),
 complications can arise.
 
@@ -226,9 +226,9 @@ While it is entirely possible to create a slab model by visualizing a
 crystal and thinking hard about lattice planes and stacking, it is
 usually more convenient and less error-prone to use available tools. The
 Python packages
-ASE<sup>[\[1\]](#cite_note-ase-1)</sup>
+ASE[^ase-1]
 and
-Pymatgen<sup>[\[2\]](#cite_note-pymatgen-2)</sup>
+Pymatgen[^pymatgen-2]
 both provide surface-building capabilities. The following ASE code
 snippet creates an NaCl (001) slab with six layers and 10 Å vacuum, for
 example:
@@ -307,7 +307,7 @@ which surface is energetically most favorable.
 
 |  |
 |----|
-| **Tip:** The surface energy must be converged with respect to both the number of layers and the vacuum thickness. This can be challenging. To achieve good convergence of the surface energy with respect to slab thickness, it is beneficial to use a bulk cell with the same symmetry as the surface cell to ensure equivalent k-point sampling. Another approach is to infer the bulk energy from the energies of progressively thicker slabs using the Boettger method<sup>[\[3\]](#cite_note-boettger:prb:1994-3)</sup>. |
+| **Tip:** The surface energy must be converged with respect to both the number of layers and the vacuum thickness. This can be challenging. To achieve good convergence of the surface energy with respect to slab thickness, it is beneficial to use a bulk cell with the same symmetry as the surface cell to ensure equivalent k-point sampling. Another approach is to infer the bulk energy from the energies of progressively thicker slabs using the Boettger method[^boettger:prb:1994-3]. |
 
 |  |
 |----|
@@ -402,16 +402,6 @@ href="/wiki/index.php?title=Category:2D_materials&amp;veaction=edit&amp;section=
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ase_1-0)
-    <a href="https://wiki.fysik.dtu.dk/ase/" class="external text"
-    rel="nofollow">https://wiki.fysik.dtu.dk/ase/ (2025).</a>
-2.  [↑](#cite_ref-pymatgen_2-0)
-    <a href="https://pymatgen.org/" class="external text"
-    rel="nofollow">https://pymatgen.org/ (2022).</a>
-3.  [↑](#cite_ref-boettger:prb:1994_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.49.16798"
-    class="external text" rel="nofollow">J. C. Boettger, Phys. Rev. B
-    <strong>49</strong>, 16798 (1994).</a>
-
-
+[^ase-1]: [https://wiki.fysik.dtu.dk/ase/ (2025).](https://wiki.fysik.dtu.dk/ase/)
+[^pymatgen-2]: [https://pymatgen.org/ (2022).](https://pymatgen.org/)
+[^boettger:prb:1994-3]: [J. C. Boettger, Phys. Rev. B **49**, 16798 (1994).](https://doi.org/10.1103/PhysRevB.49.16798)

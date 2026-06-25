@@ -29,7 +29,7 @@ contributions to the partial charge density.
 
 
 - [1 PARCHG.nb.nk
-  files](#parchgnbnk-files)
+  files](#parchg)
 - [2
   Format](#format)
   - [2.1

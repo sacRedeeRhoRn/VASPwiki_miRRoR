@@ -68,16 +68,16 @@ matrix:
 
 The new orbitals $|\Psi'_{\nu {\bf k}}\rangle$ together with $f'_{\nu {\bf k}}$ are then used to calculate the new charge density. For
 more information see
-Ref.<sup>[\[1\]](#cite_note-schueler:jpcm:30-1)</sup>
+Ref.[^schueler:jpcm:30-1]
 Eq. (30)-(32).
 
 The TRIQS software
-package<sup>[\[2\]](#cite_note-parcollet:cpc:196-2)</sup>
+package[^parcollet:cpc:196-2]
 makes use of it to perform charge self-consistent DFT plus dynamical
 mean field theory (DMFT)
-calculations<sup>[\[3\]](#cite_note-merkel:joss:7-3)[\[4\]](#cite_note-aichhorn:cpc:204-4)</sup>,
+calculations[^merkel:joss:7-3][^aichhorn:cpc:204-4],
 and provides tutorials on how to perform such calculations with
-VASP<sup>[\[5\]](#cite_note-triqsdfttoolstutorial:web-5)[\[6\]](#cite_note-soliddmfttutorial:web-6)</sup>.
+VASP[^triqsdfttoolstutorial:web-5][^soliddmfttutorial:web-6].
 
 |  |
 |----|
@@ -95,38 +95,9 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-schueler:jpcm:30_1-0)
-    <a href="https://doi.org/10.1088/1361-648X/aae80a" class="external text"
-    rel="nofollow">M. Schüler, O. E. Peil, G. J. Kraberger, R. Pordzik, M.
-    Marsman, G. Kresse, T. O. Wehling, and M. Aichhorn, Journal of Physics:
-    Condensed Matter <strong>30</strong>, 475901 (2018).</a>
-2.  [↑](#cite_ref-parcollet:cpc:196_2-0)
-    <a href="http://dx.doi.org/10.1016/j.cpc.2015.04.023"
-    class="external text" rel="nofollow">O. Parcollet, M. Ferrero, T. Ayral,
-    H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics
-    Communications <strong>196</strong>, 398 (2015).</a>
-3.  [↑](#cite_ref-merkel:joss:7_3-0)
-    <a href="https://doi.org/10.21105/joss.04623" class="external text"
-    rel="nofollow">M. E. Merkel, A. Carta, S. Beck and Alexander Hampel,
-    Journal of Open Source Software <strong>7</strong>, 77 (2022).</a>
-4.  [↑](#cite_ref-aichhorn:cpc:204_4-0)
-    <a href="https://doi.org/10.1016/j.cpc.2016.03.014"
-    class="external text" rel="nofollow">M. Aichhorn, L. Pourovskii, P.
-    Seth, V. Vildosola, M. Zingl, O. E. Peil, X. Deng, J. Mravlje, G. J.
-    Kraberger, C. Martins, M. Ferrero, O. Parcollet, Computer Physics
-    Communications <strong>204</strong>, 200 (2016).</a>
-5.  [↑](#cite_ref-triqsdfttoolstutorial:web_5-0)
-    <a
-    href="https://triqs.github.io/dft_tools/latest/tutorials.html#vasp-interface-examples"
-    class="external text"
-    rel="nofollow">triqs.github.io/dft_tools/latest/tutorials.html#vasp-interface-examples
-    (2024).</a>
-6.  [↑](#cite_ref-soliddmfttutorial:web_6-0)
-    <a
-    href="https://triqs.github.io/solid_dmft/tutorials/PrNiO3_csc_vasp_plo_cthyb/tutorial.html"
-    class="external text"
-    rel="nofollow">triqs.github.io/solid_dmft/tutorials/PrNiO3_csc_vasp_plo_cthyb/tutorial
-    (2024).</a>
-
-
+[^schueler:jpcm:30-1]: [M. Schüler, O. E. Peil, G. J. Kraberger, R. Pordzik, M. Marsman, G. Kresse, T. O. Wehling, and M. Aichhorn, Journal of Physics: Condensed Matter **30**, 475901 (2018).](https://doi.org/10.1088/1361-648X/aae80a)
+[^parcollet:cpc:196-2]: [O. Parcollet, M. Ferrero, T. Ayral, H. Hafermann, I. Krivenko, L. Messio and P. Seth, Computer Physics Communications **196**, 398 (2015).](http://dx.doi.org/10.1016/j.cpc.2015.04.023)
+[^merkel:joss:7-3]: [M. E. Merkel, A. Carta, S. Beck and Alexander Hampel, Journal of Open Source Software **7**, 77 (2022).](https://doi.org/10.21105/joss.04623)
+[^aichhorn:cpc:204-4]: [M. Aichhorn, L. Pourovskii, P. Seth, V. Vildosola, M. Zingl, O. E. Peil, X. Deng, J. Mravlje, G. J. Kraberger, C. Martins, M. Ferrero, O. Parcollet, Computer Physics Communications **204**, 200 (2016).](https://doi.org/10.1016/j.cpc.2016.03.014)
+[^triqsdfttoolstutorial:web-5]: [triqs.github.io/dft_tools/latest/tutorials.html#vasp-interface-examples (2024).](https://triqs.github.io/dft_tools/latest/tutorials.html#vasp-interface-examples)
+[^soliddmfttutorial:web-6]: [triqs.github.io/solid_dmft/tutorials/PrNiO3_csc_vasp_plo_cthyb/tutorial (2024).](https://triqs.github.io/solid_dmft/tutorials/PrNiO3_csc_vasp_plo_cthyb/tutorial.html)

@@ -10,7 +10,7 @@ Default: **LIBMBD_METHOD** = mbd-rsscs (default in libMBD) 
 Description: LIBMBD_METHOD
 selects one of the methods available in the library libMBD of many-body
 dispersion
-methods<sup>[\[1\]](#cite_note-libmbd_1-1)[\[2\]](#cite_note-libmbd_2-2)[\[3\]](#cite_note-hermann:jcp:2023-3)</sup>.
+methods[^libmbd_1-1][^libmbd_2-2][^hermann:jcp:2023-3].
 Only used when [`IVDW`](IVDW.md)` = 14`.
 
 ------------------------------------------------------------------------
@@ -18,11 +18,11 @@ Only used when [`IVDW`](IVDW.md)` = 14`.
 LIBMBD_METHOD can be set to a
 label (string) corresponding to one of the methods listed on the libMBD
 website (see **method** at the page
-<sup>[\[4\]](#cite_note-libmbd_input-4)</sup>).
+[^libmbd_input-4]).
 
 |  |
 |----|
-| **Mind:** Note that the use of the mbd-nl method<sup>[\[5\]](#cite_note-hermann:prl:2020-5)</sup> is currently not possible, since the associated atomic polarizabilities and semilocal functional are currently not implemented in VASP. |
+| **Mind:** Note that the use of the mbd-nl method[^hermann:prl:2020-5] is currently not possible, since the associated atomic polarizabilities and semilocal functional are currently not implemented in VASP. |
 
 |  |
 |----|
@@ -50,7 +50,7 @@ produce wrong results.</li>
 </table>
 
 libMBD is a separate library package that has to be
-downloaded<sup>[\[2\]](#cite_note-libmbd_2-2)</sup>
+downloaded[^libmbd_2-2]
 and compiled before VASP is compiled with the corresponding [precompiler
 options](../misc/Precompiler_options.md) and
 [links to the
@@ -86,34 +86,10 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LIBMBD_METHOD-_incategory-Ex
 href="/wiki/index.php?title=LIBMBD_METHOD&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-libmbd_1_1-0)
-    <a href="https://libmbd.github.io/" class="external text"
-    rel="nofollow">https://libmbd.github.io/</a>
-2.  ↑
-    <sup>[a](#cite_ref-libmbd_2_2-0)</sup>
-    <sup>[b](#cite_ref-libmbd_2_2-1)</sup>
-    <a href="https://github.com/libmbd/" class="external text"
-    rel="nofollow">https://github.com/libmbd/</a>
-3.  [↑](#cite_ref-hermann:jcp:2023_3-0)
-    <a href="https://doi.org/10.1063/5.0170972" class="external text"
-    rel="nofollow">J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi,
-    R. J. Maurer, and A. Tkatchenko, <em>libMBD: A general-purpose package
-    for scalable quantum many-body dispersion calculations</em>, J. Chem.
-    Phys. <strong>159</strong>, 174802 (2023).</a>
-4.  [↑](#cite_ref-libmbd_input_4-0)
-    <a href="https://libmbd.github.io/type/mbd_input_t.html"
-    class="external text"
-    rel="nofollow">https://libmbd.github.io/type/mbd_input_t.html</a>
-5.  [↑](#cite_ref-hermann:prl:2020_5-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.124.146401"
-    class="external text" rel="nofollow">J. Hermann and A. Tkatchenko,
-    <em>Density Functional Model for van der Waals Interactions: Unifying
-    Many-Body Atomic Approaches with Nonlocal Functionals</em>, Phys. Rev.
-    Lett. <strong>124</strong>, 146401 (2020).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^libmbd_1-1]: [https://libmbd.github.io/](https://libmbd.github.io/)
+[^libmbd_2-2]: [https://github.com/libmbd/](https://github.com/libmbd/)
+[^hermann:jcp:2023-3]: [J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi, R. J. Maurer, and A. Tkatchenko, *libMBD: A general-purpose package for scalable quantum many-body dispersion calculations*, J. Chem. Phys. **159**, 174802 (2023).](https://doi.org/10.1063/5.0170972)
+[^libmbd_input-4]: [https://libmbd.github.io/type/mbd_input_t.html](https://libmbd.github.io/type/mbd_input_t.html)
+[^hermann:prl:2020-5]: [J. Hermann and A. Tkatchenko, *Density Functional Model for van der Waals Interactions: Unifying Many-Body Atomic Approaches with Nonlocal Functionals*, Phys. Rev. Lett. **124**, 146401 (2020).](https://doi.org/10.1103/PhysRevLett.124.146401)

@@ -10,9 +10,9 @@ integration
 calculations](../tutorials/Thermodynamic_integration_calculations.md).
 A detailed description of thermodynamic integration is given in
 reference
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>.
+[^dorner:PRL:2018-1].
 An important historic paper is Kirkwood 1936
-<sup>[\[2\]](#cite_note-kirkwood:jcp:1935-2)</sup>.
+[^kirkwood:jcp:1935-2].
 
 
 ## Contents
@@ -41,7 +41,7 @@ The free energy of a fully interacting system can be written as the sum
 of the free energy a non-interacting reference system and the difference
 in the free energy of the fully interacting system and the
 non-interacting system
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>
+[^dorner:PRL:2018-1]
 
 $A_{1} = A_{0} + \Delta A_{0\rightarrow 1}$.
 
@@ -65,7 +65,7 @@ There are many options that can be taken for the non-interacting and
 interacting systems. In Dorner et al., TI was first performed from a
 harmonic system (the ideal gas) to the full *ab initio* Hamiltonian
 (e.g., PBE) to include the anharmonic contributions
-<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)</sup>;
+[^dorner:PRL:2018-1];
 a second TI was then performed to increase the *k*-mesh density and
 change the density functional (e.g., SCAN, HSE06). We will now describe
 the theory when going from a harmonic to anharmonic system, as this
@@ -87,7 +87,7 @@ where $\Delta
 A_{0,\mathbf{x}\rightarrow 1}$ is anharmonic free
 energy. The latter term can be determined by means of thermodynamic
 integration (TI)
-<sup>[\[2\]](#cite_note-kirkwood:jcp:1935-2)</sup>
+[^kirkwood:jcp:1935-2]
 
 $\Delta A_{0,\mathbf{x}\rightarrow 1} = \int_0^1 d\lambda \langle V_1
 -V_{0,\mathbf{x}} \rangle_\lambda$
@@ -161,7 +161,7 @@ title="Edit section: Thermodynamic integration using internal coordinates">edit<
 
 The problems of TI using a harmonic reference have been addressed in a
 series of works by Amsler et al
-<sup>[\[3\]](#cite_note-bucko:studt:jctc:2021-3)[\[4\]](#cite_note-bucko:studt:jctc:2023-4)</sup>.
+[^bucko:studt:jctc:2021-3][^bucko:studt:jctc:2023-4].
 First, the method was formulated in terms of rotationally and
 translationally invariant internal coordinates
 $\mathbf{q}=\mathbf{q}(\mathbf{x})$, whereby the free
@@ -218,31 +218,7 @@ href="/wiki/index.php?title=Thermodynamic_integration&amp;veaction=edit&amp;sect
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-dorner:PRL:2018_1-0)</sup>
-    <sup>[b](#cite_ref-dorner:PRL:2018_1-1)</sup>
-    <sup>[c](#cite_ref-dorner:PRL:2018_1-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.121.195701"
-    class="external text" rel="nofollow">F. Dorner, Z. Sukurma, C. Dellago,
-    and G. Kresse, Phys. Rev. Lett. <strong>121</strong>, 195701 (2018).</a>
-2.  ↑
-    <sup>[a](#cite_ref-kirkwood:jcp:1935_2-0)</sup>
-    <sup>[b](#cite_ref-kirkwood:jcp:1935_2-1)</sup>
-    <a href="https://doi.org/10.1063/1.1749657" class="external text"
-    rel="nofollow">J. Kirkwood, <em>Statistical Mechanics of Fluid
-    Mixtures</em>, J. Chem. Phys. <strong>3</strong>, 300–313 (1935).</a>
-3.  [↑](#cite_ref-bucko:studt:jctc:2021_3-0)
-    <a href="https://doi.org/10.1021/acs.jctc.0c01022" class="external text"
-    rel="nofollow">J. Amsler, P. N. Plessow, F. Studt, T. Bucko,
-    <em>Anharmonic Correction to Adsorption Free Energy from DFT-Based MD
-    Using Thermodynamic Integration</em>, J. Chem. Theory Comput.
-    <strong>17</strong>, 1155-1169 (2021).</a>
-4.  [↑](#cite_ref-bucko:studt:jctc:2023_4-0)
-    <a href="https://doi.org/10.1021/acs.jctc.3c00169" class="external text"
-    rel="nofollow">J. Amsler, P. N. Plessow, F. Studt, T. Bucko,
-    <em>Anharmonic Correction to Free Energy Barriers from DFT-Based
-    Molecular Dynamics Using Constrained Thermodynamic Integration</em>, J.
-    Chem. Theory Comput. <strong>19</strong>, 2455-2468 (2023).</a>
-
-
+[^dorner:PRL:2018-1]: [F. Dorner, Z. Sukurma, C. Dellago, and G. Kresse, Phys. Rev. Lett. **121**, 195701 (2018).](https://doi.org/10.1103/PhysRevLett.121.195701)
+[^kirkwood:jcp:1935-2]: [J. Kirkwood, *Statistical Mechanics of Fluid Mixtures*, J. Chem. Phys. **3**, 300–313 (1935).](https://doi.org/10.1063/1.1749657)
+[^bucko:studt:jctc:2021-3]: [J. Amsler, P. N. Plessow, F. Studt, T. Bucko, *Anharmonic Correction to Adsorption Free Energy from DFT-Based MD Using Thermodynamic Integration*, J. Chem. Theory Comput. **17**, 1155-1169 (2021).](https://doi.org/10.1021/acs.jctc.0c01022)
+[^bucko:studt:jctc:2023-4]: [J. Amsler, P. N. Plessow, F. Studt, T. Bucko, *Anharmonic Correction to Free Energy Barriers from DFT-Based Molecular Dynamics Using Constrained Thermodynamic Integration*, J. Chem. Theory Comput. **19**, 2455-2468 (2023).](https://doi.org/10.1021/acs.jctc.3c00169)

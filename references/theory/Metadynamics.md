@@ -5,7 +5,7 @@
 
 
 In
-metadynamics,<sup>[\[1\]](#cite_note-laio:pnas:02-1)[\[2\]](#cite_note-iannuzzi:prl:03-2)</sup>
+metadynamics,[^laio:pnas:02-1][^iannuzzi:prl:03-2]
 the bias potential that acts on a selected number of geometric
 parameters (collective variables) ξ={ξ<sub>1</sub>, ξ<sub>2</sub>,
 ...,ξ<sub>*m*</sub>} is constructed on-the-fly during the simulation.
@@ -33,13 +33,13 @@ $A(\xi) = - \lim_{t \to \infty} \tilde{V}(t,\xi) + const.$
 
 Practical hints as how to adjust the parameters used in metadynamics
 (*h*, *w*, *t*<sub>G</sub>) are given in
-Refs.<sup>[\[3\]](#cite_note-ensing:jpc:05-3)</sup>
+Refs.[^ensing:jpc:05-3]
 and
-<sup>[\[4\]](#cite_note-laio:jpc:05-4)</sup>.
+[^laio:jpc:05-4].
 
 The error estimation in free-energy calculations with metadynamics is
 discussed in
-Ref.<sup>[\[4\]](#cite_note-laio:jpc:05-4)</sup>.
+Ref.[^laio:jpc:05-4].
 
 ## Related tags and sections\[<a
 href="/wiki/index.php?title=Metadynamics&amp;veaction=edit&amp;section=1"
@@ -59,31 +59,9 @@ calculations](../tutorials/Metadynamics_calculations.md)
 href="/wiki/index.php?title=Metadynamics&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-laio:pnas:02_1-0)
-    <a href="https://doi.org/10.1073/pnas.202427399" class="external text"
-    rel="nofollow">R. A. Laio and M. Parrinello, Proc. Natl. Acad, Sci. USA
-    <strong>99</strong>, 12562 (2002).</a>
-2.  [↑](#cite_ref-iannuzzi:prl:03_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.90.238302"
-    class="external text" rel="nofollow">M. Iannuzzi, A. Laio, and M.
-    Parrinello, Phys. Rev. Lett. <strong>90</strong>, 238302 (2003).</a>
-3.  [↑](#cite_ref-ensing:jpc:05_3-0)
-    <a href="https://doi.org/10.1021/jp045571i" class="external text"
-    rel="nofollow">B. Ensing, A. Laio, M. Parrinello, and M. L. Klein, J.
-    Phys. Chem. B <strong>109</strong>, 6676 (2005).</a>
-4.  ↑
-    <sup>[a](#cite_ref-laio:jpc:05_4-0)</sup>
-    <sup>[b](#cite_ref-laio:jpc:05_4-1)</sup>
-    <a href="https://doi.org/10.1021/jp045424k" class="external text"
-    rel="nofollow">A. Laio, A. Rodriguez-Fortea, F. L. Gervasio, M.
-    Ceccarelli, and M. Parrinello, J. Phys. Chem. B <strong>109</strong>,
-    6714 (2005).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^laio:pnas:02-1]: [R. A. Laio and M. Parrinello, Proc. Natl. Acad, Sci. USA **99**, 12562 (2002).](https://doi.org/10.1073/pnas.202427399)
+[^iannuzzi:prl:03-2]: [M. Iannuzzi, A. Laio, and M. Parrinello, Phys. Rev. Lett. **90**, 238302 (2003).](https://doi.org/10.1103/PhysRevLett.90.238302)
+[^ensing:jpc:05-3]: [B. Ensing, A. Laio, M. Parrinello, and M. L. Klein, J. Phys. Chem. B **109**, 6676 (2005).](https://doi.org/10.1021/jp045571i)
+[^laio:jpc:05-4]: [A. Laio, A. Rodriguez-Fortea, F. L. Gervasio, M. Ceccarelli, and M. Parrinello, J. Phys. Chem. B **109**, 6714 (2005).](https://doi.org/10.1021/jp045424k)

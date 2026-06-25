@@ -170,7 +170,7 @@ The TDHF calculations can be performed in two steps:
 
 For example, an optical absorption calculation of bulk Si can be
 performed using a dielectric-dependent hybrid-functional described in
-Refs.<sup>[\[1\]](#cite_note-chen2018nonempirical-1)[\[2\]](#cite_note-cui2018doubly-2)[\[3\]](#cite_note-liu2019assessing-3)</sup>.
+Refs.[^chen2018nonempirical-1][^cui2018doubly-2][^liu2019assessing-3].
 
     SYSTEM    = Si
     ISMEAR    = 0 
@@ -270,26 +270,6 @@ href="/wiki/index.php?title=Time-dependent_density-functional_theory_calculation
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-chen2018nonempirical_1-0)
-    <a href="https://doi.org/10.1103/PhysRevMaterials.2.073803"
-    class="external text" rel="nofollow">W. Chen, G. Miceli, G.M. Rignanese,
-    and A. Pasquarello, <em>Nonempirical dielectric-dependent hybrid
-    functional with range separation for semiconductors and insulators</em>,
-    Phys. Rev. Mater. <strong>2</strong>, 073803 (2018).</a>
-2.  [↑](#cite_ref-cui2018doubly_2-0)
-    <a href="https://doi.org/10.1021/acs.jpclett.8b00919"
-    class="external text" rel="nofollow">Z.H. Cui, Y.C. Wang, M.Y. Zhang, X.
-    Xu, and H. Jiang, <em>Doubly Screened Hybrid Functional: An Accurate
-    First-Principles Approach for Both Narrow- and Wide-Gap
-    Semiconductors</em> J. Phys. Chem. Lett., <strong>9</strong>, 2338-2345
-    (2018).</a>
-3.  [↑](#cite_ref-liu2019assessing_3-0)
-    <a href="https://doi.org/10.1088/1361-648x/ab4150" class="external text"
-    rel="nofollow">P. Liu, C. Franchini, M. Marsman, and G. Kresse,
-    <em>Assessing model-dielectric-dependent hybrid functionals on the
-    antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and
-    NiO</em>, J. Phys.: Condens. Matter <strong>32</strong>, 015502
-    (2020).</a>
-
-
+[^chen2018nonempirical-1]: [W. Chen, G. Miceli, G.M. Rignanese, and A. Pasquarello, *Nonempirical dielectric-dependent hybrid functional with range separation for semiconductors and insulators*, Phys. Rev. Mater. **2**, 073803 (2018).](https://doi.org/10.1103/PhysRevMaterials.2.073803)
+[^cui2018doubly-2]: [Z.H. Cui, Y.C. Wang, M.Y. Zhang, X. Xu, and H. Jiang, *Doubly Screened Hybrid Functional: An Accurate First-Principles Approach for Both Narrow- and Wide-Gap Semiconductors* J. Phys. Chem. Lett., **9**, 2338-2345 (2018).](https://doi.org/10.1021/acs.jpclett.8b00919)
+[^liu2019assessing-3]: [P. Liu, C. Franchini, M. Marsman, and G. Kresse, *Assessing model-dielectric-dependent hybrid functionals on the antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and NiO*, J. Phys.: Condens. Matter **32**, 015502 (2020).](https://doi.org/10.1088/1361-648x/ab4150)

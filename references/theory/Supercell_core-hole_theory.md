@@ -5,7 +5,7 @@
 
 
 In the Supercell core-hole
-method<sup>[\[1\]](#cite_note-karsai:prb:2018-1)</sup>
+method[^karsai:prb:2018-1]
 (SCH) a chosen core electron is removed from the core leaving behind a
 positive charge, cf. [ICORELEVEL](../incar-tags/ICORELEVEL.md). Since
 one wants to simulate the excitation of this electron into energetically
@@ -48,14 +48,14 @@ the XCH spectra.</figcaption>
 Two different approaches can be used to treat the excited electron in
 SCH. The excited electron can be placed into the lowest conduction band
 in the **excited electron and core-hole
-(XCH)**<sup>[\[2\]](#cite_note-hetenyi:jcp:2004-2)</sup>
+(XCH)**[^hetenyi:jcp:2004-2]
 approach, alternatively the excited electron can be accounted for by a
 negative background charge to ensure that the cell remains neutral in
 the **full core-hole (FCH)**
-<sup>[\[3\]](#cite_note-Prendergasst:prl:2006-3)</sup>
+[^Prendergasst:prl:2006-3]
 method. These two approaches are discussed and compared in great detail
 in Ref.
-<sup>[\[4\]](#cite_note-unzog:prb:2022-4)</sup>.
+[^unzog:prb:2022-4].
 The main shortcoming of the XCH approach comes from the self-interaction
 effects of the electron exchange and correlation functional caused when
 the excited electron is placed in the conduction band, which is more
@@ -77,7 +77,7 @@ localized conduction states, e.g. Li-halides, the FCH has been shown to
 yield better agreement with the results of the [BSE+GW
 calculations](../tutorials/Bethe-Salpeter_equation_for_core_excitations.md)
 as well as the experimental spectra
-<sup>[\[4\]](#cite_note-unzog:prb:2022-4)</sup>.
+[^unzog:prb:2022-4].
 
 ## Dielectric function used in the SCH method\[<a
 href="/wiki/index.php?title=Supercell_core-hole_theory&amp;veaction=edit&amp;section=2"
@@ -160,37 +160,9 @@ $\epsilon_{\alpha \beta}^{(2)} (\omega) = \frac{4 \pi^{2} e^{2}
 href="/wiki/index.php?title=Supercell_core-hole_theory&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-karsai:prb:2018_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.235205"
-    class="external text" rel="nofollow">F. Karsai, M. Humer, E.
-    Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B <strong>98</strong>,
-    235205 (2018).</a>
-2.  [↑](#cite_ref-hetenyi:jcp:2004_2-0)
-    <a href="https://doi.org/10.1063/1.1703526" class="external text"
-    rel="nofollow">B. Hetényi, F. De Angelis, P. Giannozzi, and R. Car,
-    <em>Calculation of near-edge x-ray-absorption fine structure at finite
-    temperatures: spectral signatures of hydrogen bond breaking in liquid
-    water</em> , J. Chem. Phys. <strong>120</strong>, 8632 (2004).</a>
-3.  [↑](#cite_ref-Prendergasst:prl:2006_3-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.96.215502"
-    class="external text" rel="nofollow">D. Prendergasst and G. Galli,
-    <em>X-Ray Absorption Spectra of Water from First Principles
-    Calculations</em>, Phys. Rev. Lett. <strong>96</strong>, 215502
-    (2006).</a>
-4.  ↑
-    <sup>[a](#cite_ref-unzog:prb:2022_4-0)</sup>
-    <sup>[b](#cite_ref-unzog:prb:2022_4-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
-    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
-    <em>X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
-    (2022).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^karsai:prb:2018-1]: [F. Karsai, M. Humer, E. Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B **98**, 235205 (2018).](https://doi.org/10.1103/PhysRevB.98.235205)
+[^hetenyi:jcp:2004-2]: [B. Hetényi, F. De Angelis, P. Giannozzi, and R. Car, *Calculation of near-edge x-ray-absorption fine structure at finite temperatures: spectral signatures of hydrogen bond breaking in liquid water* , J. Chem. Phys. **120**, 8632 (2004).](https://doi.org/10.1063/1.1703526)
+[^Prendergasst:prl:2006-3]: [D. Prendergasst and G. Galli, *X-Ray Absorption Spectra of Water from First Principles Calculations*, Phys. Rev. Lett. **96**, 215502 (2006).](https://doi.org/10.1103/PhysRevLett.96.215502)
+[^unzog:prb:2022-4]: [M. Unzog, A. Tal, G. Kresse, *X-ray absorption using the projector augmented-wave method and the Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133 (2022).](http://doi.org/10.1103/PhysRevB.106.155133)

@@ -66,7 +66,7 @@ projection targets have to be chosen and placed manually using the
 [LOCPROJ](../incar-tags/LOCPROJ.md) tag. In contrast, the SCDM approach
 offers very little control and instead generates Wannier orbitals
 automatically from a small set of input
-parameters<sup>[\[1\]](#cite_note-damle:mms:2018-1)</sup>.
+parameters[^damle:mms:2018-1].
 This is convenient for systems where the electronic character of the
 band structure is complicated or unknown.
 
@@ -552,10 +552,4 @@ href="/wiki/index.php?title=Constructing_Wannier_orbitals&amp;veaction=edit&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-damle:mms:2018_1-0)
-    <a href="https://doi.org/10.1137/17M1129696" class="external text"
-    rel="nofollow">A. Damle and L. Lin, Multiscale Model. Simul.,
-    <strong>16(3)</strong>, 1392–1410 (2018).</a>
-
-
+[^damle:mms:2018-1]: [A. Damle and L. Lin, Multiscale Model. Simul., **16(3)**, 1392–1410 (2018).](https://doi.org/10.1137/17M1129696)

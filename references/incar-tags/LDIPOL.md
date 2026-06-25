@@ -28,7 +28,7 @@ optionally the tag [DIPOL](DIPOL.md) as well.
 
 |  |
 |----|
-| **Mind:** This is in the spirit of Neugebauer *et al.* <sup>[\[1\]](#cite_note-neugebauer:prb:1992-1)</sup>, though more general. Note that the total energy is correctly implemented, whereas Ref. <sup>[\[1\]](#cite_note-neugebauer:prb:1992-1)</sup> contains an erroneous factor 2 in the total energy. |
+| **Mind:** This is in the spirit of Neugebauer *et al.* [^neugebauer:prb:1992-1], though more general. Note that the total energy is correctly implemented, whereas Ref. [^neugebauer:prb:1992-1] contains an erroneous factor 2 in the total energy. |
 
 The biggest advantage of this mode is that leading errors in the forces
 are corrected and that the work function can be evaluated for asymmetric
@@ -64,12 +64,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LDIPOL-_incategory-Examples)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-neugebauer:prb:1992_1-0)</sup>
-    <sup>[b](#cite_ref-neugebauer:prb:1992_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.46.16067"
-    class="external text" rel="nofollow">J. Neugebauer and M. Scheffler,
-    Phys. Rev. B <strong>46</strong>, 16067 (1992).</a>
-
-
+[^neugebauer:prb:1992-1]: [J. Neugebauer and M. Scheffler, Phys. Rev. B **46**, 16067 (1992).](https://doi.org/10.1103/PhysRevB.46.16067)

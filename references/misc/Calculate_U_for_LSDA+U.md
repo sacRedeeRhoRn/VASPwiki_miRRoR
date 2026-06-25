@@ -37,7 +37,7 @@ title="Edit section: Task">edit</a> \| (./index.php.md)\]
 In this exercise, you will calculate the U parameter for the DFT+U
 treatment of Ni *d*-electrons in NiO using the linear response *ansatz*
 of Cococcioni *et
-al.*.<sup>[\[1\]](#cite_note-cococcioni:2005-1)</sup>
+al.*.[^cococcioni:2005-1]
 
 ## [POSCAR](../input-files/POSCAR.md)\[<a
 href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;section=2"
@@ -453,10 +453,4 @@ href="/wiki/index.php?title=Calculate_U_for_LSDA%2BU&amp;veaction=edit&amp;secti
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-cococcioni:2005_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.71.035105"
-    class="external text" rel="nofollow">M. Cococcioni and S. de Gironcoli,
-    Phys. Rev. B <strong>71</strong>, 035105 (2005).</a>
-
-
+[^cococcioni:2005-1]: [M. Cococcioni and S. de Gironcoli, Phys. Rev. B **71**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.71.035105)

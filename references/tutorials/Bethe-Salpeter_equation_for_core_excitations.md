@@ -77,7 +77,7 @@ energies of the core states are taken from the potentials in the
 core excitations are not accurate, but the overall shape and the
 relative positions of the spectral feature can be captured with high
 precision within BSE
-<sup>[\[1\]](#cite_note-unzog:prb:2022-1)[\[2\]](#cite_note-karsai:prb:2018-2)</sup>.
+[^unzog:prb:2022-1][^karsai:prb:2018-2].
 
 The BSE calculation workflow consists of the following steps:
 
@@ -185,7 +185,7 @@ The dielectric function for the core states can be calculated with the
 model BSE approach or the Casida TDDFT formalism by selecting the
 algorithm [ALGO](../incar-tags/ALGO.md)=TDHF. However, these approximations
 were found inaccurate for XANES
-<sup>[\[1\]](#cite_note-unzog:prb:2022-1)</sup>.
+[^unzog:prb:2022-1].
 
 ## Comparing to the SCH\[<a
 href="/wiki/index.php?title=Bethe-Salpeter_equation_for_core_excitations&amp;veaction=edit&amp;section=8"
@@ -222,19 +222,5 @@ href="/wiki/index.php?title=Bethe-Salpeter_equation_for_core_excitations&amp;vea
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-unzog:prb:2022_1-0)</sup>
-    <sup>[b](#cite_ref-unzog:prb:2022_1-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
-    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
-    <em>X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
-    (2022).</a>
-2.  [↑](#cite_ref-karsai:prb:2018_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.235205"
-    class="external text" rel="nofollow">F. Karsai, M. Humer, E.
-    Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B <strong>98</strong>,
-    235205 (2018).</a>
-
-
+[^unzog:prb:2022-1]: [M. Unzog, A. Tal, G. Kresse, *X-ray absorption using the projector augmented-wave method and the Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133 (2022).](http://doi.org/10.1103/PhysRevB.106.155133)
+[^karsai:prb:2018-2]: [F. Karsai, M. Humer, E. Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B **98**, 235205 (2018).](https://doi.org/10.1103/PhysRevB.98.235205)

@@ -469,7 +469,7 @@ The dielectric function computed either in the static or dynamical
 response regimes does not consider the effects coming from changes of
 the ionic positions due to the incoming electric field. This can be
 corrected by computing the relaxed-ion (or dressed) dielectric function
-$\bar\epsilon$<sup>[\[1\]](#cite_note-wu:prb:2005-1)</sup>
+$\bar\epsilon$[^wu:prb:2005-1]
 
 $\bar\epsilon_{\alpha\beta} = \epsilon_{\alpha\beta} +
 \Omega_0^{-1}Z_{m\alpha}(\Phi^{-1})_{mn}Z_{n\beta},$
@@ -497,7 +497,7 @@ the first, $\chi_{\rho\rho}$; and a current-current response function,
 $\chi_{jj}$. This circumstance is a common source of
 error when comparing experimental and computational optical properties
 of periodic systems, as discussed by Sangalli et
-al.<sup>[\[2\]](#cite_note-sangalli:prb:2017-2)</sup>.
+al.[^sangalli:prb:2017-2].
 
 Infact, perturbations associated with longitudinal fields will be
 described by the density-density polarisability function
@@ -662,7 +662,7 @@ title="Edit section: Low-frequency corrections from atomic displacements">edit</
 
 The corrections from ionic motion to the low frequency regime can be
 added to $\epsilon_{\alpha\beta}^\infty$
-following<sup>[\[3\]](#cite_note-gonze:prb:1997-3)</sup>
+following[^gonze:prb:1997-3]
 
 $\epsilon_{\alpha\beta}(\omega) = \epsilon_{\alpha\beta}^\infty +
 \frac{4\pi
@@ -706,7 +706,7 @@ discontinuity near $\Gamma$, i.e.
 $\omega^2_\nu(\mathbf{q\to 0}) \neq \omega^2_\nu(\mathbf{q= 0})$, and in fact, for a given unitary directional vector
 $\mathbf q$, it can be shown that the
 Lyddane-Sachs-Teller relationship
-holds<sup>[\[3\]](#cite_note-gonze:prb:1997-3)</sup>
+holds[^gonze:prb:1997-3]
 
 $\prod_\nu\frac{\omega^2_\nu(\mathbf{q \to
 0})-\omega^2}{\omega^2_\nu(\mathbf{q= 0}) - \omega^2} =
@@ -787,25 +787,6 @@ href="/wiki/index.php?title=Category:Dielectric_properties&amp;veaction=edit&amp
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-wu:prb:2005_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.72.035105"
-    class="external text" rel="nofollow">X. Wu, D. Vanderbilt, and D. R.
-    Hamann, Phys. Rev. B <strong>72</strong>, 035105 (2005).</a>
-2.  [↑](#cite_ref-sangalli:prb:2017_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.95.155203"
-    class="external text" rel="nofollow">Davide Sangalli, J. A. Berger,
-    Claudio Attaccalite, Myrta Grüning, and Pina Romaniello, <em>Optical
-    properties of periodic systems within the current-current response
-    framework: Pitfalls and remedies</em> , Phys. Rev. B
-    <strong>95</strong>, 155203 (2017)</a>
-3.  ↑
-    <sup>[a](#cite_ref-gonze:prb:1997_3-0)</sup>
-    <sup>[b](#cite_ref-gonze:prb:1997_3-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.55.10355" class="external text"
-    rel="nofollow">X. Gonze and C. Lee, <em>Dynamical matrices, Born
-    effective charges, dielectric permittivity tensors, and interatomic
-    force constants from density-functional perturbation theory</em>, Phys.
-    Rev. B <strong>55</strong>, 10355 (1997).</a>
-
-
+[^wu:prb:2005-1]: [X. Wu, D. Vanderbilt, and D. R. Hamann, Phys. Rev. B **72**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.72.035105)
+[^sangalli:prb:2017-2]: [Davide Sangalli, J. A. Berger, Claudio Attaccalite, Myrta Grüning, and Pina Romaniello, *Optical properties of periodic systems within the current-current response framework: Pitfalls and remedies* , Phys. Rev. B **95**, 155203 (2017)](https://doi.org/10.1103/PhysRevB.95.155203)
+[^gonze:prb:1997-3]: [X. Gonze and C. Lee, *Dynamical matrices, Born effective charges, dielectric permittivity tensors, and interatomic force constants from density-functional perturbation theory*, Phys. Rev. B **55**, 10355 (1997).](http://doi.org/10.1103/PhysRevB.55.10355)

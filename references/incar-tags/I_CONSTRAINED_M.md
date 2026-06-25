@@ -76,7 +76,7 @@ $V_I (\mathbf{r})=2\lambda \left( \vec{M}_I-\vec{M}^0_I \right)\cdot
 
 - I_CONSTRAINED_M=4: Constrain
   the *direction and sign* of the magnetic
-  moments<sup>[\[1\]](#cite_note-ma:prb:15-1)</sup>,
+  moments[^ma:prb:15-1],
   available since VASP.6.4.0.
 
 The total energy is given by
@@ -106,7 +106,7 @@ As is probably clear from the above, applying constraints by means of a
 penalty functional contributes to the total energy. This contribution,
 however, decreases with increasing [LAMBDA](LAMBDA.md) and
 can in principle be made vanishingly small
-<sup>[\[1\]](#cite_note-ma:prb:15-1)</sup>.
+[^ma:prb:15-1].
 Increasing [LAMBDA](LAMBDA.md) stepwise, from one run to
 another (slowly so the solution remains stable) one thus converges
 towards the DFT total energy for a given magnetic configuration.
@@ -173,13 +173,4 @@ href="/wiki/index.php?title=I_CONSTRAINED_M&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-ma:prb:15_1-0)</sup>
-    <sup>[b](#cite_ref-ma:prb:15_1-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevB.91.054420"
-    class="external text" rel="nofollow">P.-W. Ma and S. L. Dudarev,
-    <em>Constrained density functional for noncollinear magnetism</em>,
-    Phys. Rev. B <strong>91</strong>, 054420 (2015).</a>
-
-
+[^ma:prb:15-1]: [P.-W. Ma and S. L. Dudarev, *Constrained density functional for noncollinear magnetism*, Phys. Rev. B **91**, 054420 (2015).](http://doi.org/10.1103/PhysRevB.91.054420)

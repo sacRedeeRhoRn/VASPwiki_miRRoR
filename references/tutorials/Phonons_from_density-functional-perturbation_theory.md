@@ -118,7 +118,7 @@ Furthermore, the [Born effective
 charges](../theory/Phonons-_Theory.md) are
 determined analytically by contracting the linear response of the
 orbitals over the "polarization" vector Eq. (30) in Ref.
-<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)</sup>.
+[^gajdos:prb:2006-1].
 These should agree well with the Born effective charges that were
 previously determined when the linear response with respect to external
 fields [LEPSILON](../incar-tags/LEPSILON.md)=.TRUE. was calculated
@@ -133,10 +133,10 @@ by computing the force constants on a sufficiently large supercell and
 Fourier interpolating the dynamical matrices in the primitive cell.
 
 It is also possible to use
-phonopy<sup>[\[2\]](#cite_note-phonopy-2)</sup>
+phonopy[^phonopy-2]
 to use the results of a density-functional-perturbation theory
 calculation done with
-VASP.<sup>[\[3\]](#cite_note-phonopy_dfpt-3)</sup>
+VASP.[^phonopy_dfpt-3]
 
 |  |
 |----|
@@ -157,20 +157,6 @@ href="/wiki/index.php?title=Phonons_from_density-functional-perturbation_theory&
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
-    (2006).</a>
-2.  [↑](#cite_ref-phonopy_2-0)
-    <a href="http://phonopy.github.io/phonopy/index.html"
-    class="external text"
-    rel="nofollow">http://phonopy.github.io/phonopy/index.html (2022).</a>
-3.  [↑](#cite_ref-phonopy_dfpt_3-0)
-    <a href="http://phonopy.github.io/phonopy/vasp-dfpt.html"
-    class="external text"
-    rel="nofollow">http://phonopy.github.io/phonopy/vasp-dfpt.html
-    (2022).</a>
-
-
+[^gajdos:prb:2006-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
+[^phonopy-2]: [http://phonopy.github.io/phonopy/index.html (2022).](http://phonopy.github.io/phonopy/index.html)
+[^phonopy_dfpt-3]: [http://phonopy.github.io/phonopy/vasp-dfpt.html (2022).](http://phonopy.github.io/phonopy/vasp-dfpt.html)

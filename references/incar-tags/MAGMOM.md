@@ -59,11 +59,11 @@ constrain the on-site magnetic moments.
 
 |  |
 |----|
-| **Tip:** To converge to the magnetic ground state, we recommend setting the magnetic moments slightly larger than the expected values, e.g., using the experimental magnetic moment multiplied by 1.2-1.5. A growing collection of experimental data is available at the Bilbao crystallographic server.<sup>[\[1\]](#cite_note-bilbao.crystal.server-1)</sup> If no experimental data is available, MAGMOM can be defined according to the procedure outlined in the Huebsch et al. 2021.<sup>[\[2\]](#cite_note-huebsch:prx:11-2)</sup> |
+| **Tip:** To converge to the magnetic ground state, we recommend setting the magnetic moments slightly larger than the expected values, e.g., using the experimental magnetic moment multiplied by 1.2-1.5. A growing collection of experimental data is available at the Bilbao crystallographic server.[^bilbao.crystal.server-1] If no experimental data is available, MAGMOM can be defined according to the procedure outlined in the Huebsch et al. 2021.[^huebsch:prx:11-2] |
 
 |  |
 |----|
-| **Important:** The final magnetic state strongly depends on the initial values for MAGMOM.<sup>[\[2\]](#cite_note-huebsch:prx:11-2)</sup> This is true even if no symmetry is used ([ISYM](ISYM.md)=-1), because of the many local minima that most exchange-correlation functionals have within spin-density-functional theory. |
+| **Important:** The final magnetic state strongly depends on the initial values for MAGMOM.[^huebsch:prx:11-2] This is true even if no symmetry is used ([ISYM](ISYM.md)=-1), because of the many local minima that most exchange-correlation functionals have within spin-density-functional theory. |
 
 ## Format and basis\[<a href="/wiki/index.php?title=MAGMOM&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
@@ -187,18 +187,5 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-MAGMOM-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-bilbao.crystal.server_1-0)
-    <a href="https://www.cryst.ehu.es/magndata/search.php?show_db=1"
-    class="external text" rel="nofollow">MAGNDATA, Bilbao crystallographic
-    server</a>
-2.  ↑
-    <sup>[a](#cite_ref-huebsch:prx:11_2-0)</sup>
-    <sup>[b](#cite_ref-huebsch:prx:11_2-1)</sup>
-    <a href="http://doi.org/10.1103/PhysRevX.11.011031"
-    class="external text" rel="nofollow">Huebsch, M-T and Nomoto, T and
-    Suzuki, M-T and Arita, R,<em>Benchmark for ab initio prediction of
-    magnetic structures based on cluster-multipole theory</em>, Phys. Rev. X
-    <strong>11</strong>, 011031 (2021).</a>
-
-
+[^bilbao.crystal.server-1]: [MAGNDATA, Bilbao crystallographic server](https://www.cryst.ehu.es/magndata/search.php?show_db=1)
+[^huebsch:prx:11-2]: [Huebsch, M-T and Nomoto, T and Suzuki, M-T and Arita, R,*Benchmark for ab initio prediction of magnetic structures based on cluster-multipole theory*, Phys. Rev. X **11**, 011031 (2021).](http://doi.org/10.1103/PhysRevX.11.011031)

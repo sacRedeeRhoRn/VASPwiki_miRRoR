@@ -97,12 +97,12 @@ these two branches stay separate. Though there are many differences
 introduced by the choice of basis and periodicity, there are more
 similarities between GTO and plane-wave calculations than may at first
 be apparent
-<sup>[\[1\]](#cite_note-robinson:lee:2025-1)</sup>,
+[^robinson:lee:2025-1],
 largely differing only in the choice of terminology. They both use the
 same basic methods, e.g. Hartree-Fock
-<sup>[\[2\]](#cite_note-paier:jcp:05-2)</sup>,
+[^paier:jcp:05-2],
 Density Functional Theory (DFT)
-<sup>[\[3\]](#cite_note-hafner:2008-3)</sup>,
+[^hafner:2008-3],
 and use the same algorithms both
 [electronic](../categories/Category-Electronic_minimization.md)
 (e.g. [RMM-DIIS](RMM-DIIS.md)) and
@@ -113,7 +113,7 @@ optimization, [conjugate
 gradient](../tutorials/Structure_optimization.md)).
 This is because they are simply different basis sets for expressing the
 orbitals; the Hamiltonian remains the same
-<sup>[\[4\]](#cite_note-martin:book:2004-4)</sup>,
+[^martin:book:2004-4],
 though it is diagonalised iteratively in VASP, compared to being
 explicitly calculated in GTO codes. Sometimes the same algorithm is used
 for seemingly very different problems, e.g., the Davidson algorithm is
@@ -123,12 +123,12 @@ for diagonalizing the Hamiltonian in VASP (i.e., electronic structure),
 while in GTO codes, it can be used to diagonalize the configuration
 interaction (CI) matrices (i.e., excited state calculations), such as
 the CI singles (CIS) matrix
-<sup>[\[5\]](#cite_note-head-gordon:pople:1992-5)</sup>.
+[^head-gordon:pople:1992-5].
 In each case, the problem is an eigenvalue problem for large,
 real-symmetric, sparse matrices where only the first few eigenvalues and
 eigenvectors are of interest, i.e., orbitals and low-lying excited
 states
-<sup>[\[6\]](#cite_note-davidson:1975-6)</sup>.
+[^davidson:1975-6].
 
 ### Hartree-Fock\[<a
 href="/wiki/index.php?title=VASP_from_a_Gaussian-type_orbitals_perspective&amp;veaction=edit&amp;section=2"
@@ -138,7 +138,7 @@ title="Edit section: Hartree-Fock">edit</a> \| (./index.php.md)\]
 Assuming the Born-Oppenheimer approximation, the Hamiltonian
 $\hat{H}$ for electrons *p* and nuclei *A* takes the
 form
-<sup>[\[7\]](#cite_note-szabo:ostlund:book:2004-7)[\[8\]](#cite_note-cramer:book:2004-8)</sup>:
+[^szabo:ostlund:book:2004-7][^cramer:book:2004-8]:
 
 $\hat{H} = \hat{T} + \hat{V}_{ne} + \hat{V}_{ee} + E_{nn}$
 
@@ -233,7 +233,7 @@ a density functional, instead of Hartree-Fock (HF) and the post-HF
 methods (e.g., MP2, CCSD). The Kohn-Sham (KS) energy *E<sub>KS</sub>*
 equation differs from the HF to include the exchange-correlation energy
 *E<sub>xc</sub>* (in a.u.)
-<sup>[\[9\]](#cite_note-kohn:pr:1965-9)[\[10\]](#cite_note-payne:1992-10)</sup>:
+[^kohn:pr:1965-9][^payne:1992-10]:
 
 $E_{KS} = \langle \hat{T} \rangle + \int d^3r \\ \hat{V}_{ion}(r)
 n(r) + E_{H} + E_{xc} + E_{nn}$,
@@ -264,10 +264,10 @@ Before tackling the integral evaluation, it is key to consider another
 common difference between plane-wave and GTO approaches. Typically, GTOs
 are used for non-periodic and plane waves for periodic systems. There
 are exceptions to this where only Gaussians are used in periodic systems
-<sup>[\[11\]](#cite_note-pisani:dovesi:roetti:1988-11)</sup>,
+[^pisani:dovesi:roetti:1988-11],
 and where the two are combined, i.e., in the Gaussian Plane Waves (GPW)
 method
-<sup>[\[12\]](#cite_note-hutter:parrinello:2010-12)</sup>.
+[^hutter:parrinello:2010-12].
 Periodic codes can also be used to model non-periodic systems through
 the use of a vacuum and a large unit cell. It is possible to mimic small
 unit cells with local basis sets in a cluster approximation. These
@@ -275,12 +275,12 @@ approaches are typically used for systems that have periodic and local
 parts, e.g., molecules adsorbed on a surface.
 
 Returning to plane waves, Bloch's theorem states that
-<sup>[\[13\]](#cite_note-ashcroft:mermin:1976-13)</sup>,
+[^ashcroft:mermin:1976-13],
 for electrons in a perfect crystal (i.e., Bravais lattice), a basis can
 be chosen such that the wavefunction is a product of a cell-periodic
 part *u<sub>n**k**</sub>(**r**)* and a wavelike part
 *e<sup>i**k**⋅**r**</sup>*
-<sup>[\[13\]](#cite_note-ashcroft:mermin:1976-13)[\[10\]](#cite_note-payne:1992-10)</sup>:
+[^ashcroft:mermin:1976-13][^payne:1992-10]:
 
 $\psi_{n \textbf{k}}(\textbf{r}) = e^{i\textbf{k}\cdot\textbf{r}} u_{n
 \textbf{k}}(\textbf{r})$,
@@ -324,7 +324,7 @@ title="Edit section: Plane waves">edit</a> \| (./index.php.md)\]
 Since *u<sub>n**k**</sub>(**r**)* has the same periodicity as the
 lattice, it can be expanded as a Fourier series (e.g., plane waves) in
 reciprocal (or k-) space
-<sup>[\[14\]](#cite_note-reciprocal:web-14)</sup>:
+[^reciprocal:web-14]:
 
 $u_{n \textbf{k}}(\textbf{r}) = \sum_\textbf{G}
 c_{\textbf{G},n}(\textbf{k}) e^{i\textbf{G}\cdot\textbf{r}}$,
@@ -339,7 +339,7 @@ c_{\textbf{G},n}(\textbf{k}) e^{i ( \textbf{G} + \textbf{k} )
 \cdot\textbf{r}}$.
 
 The orbital is evaluated over reciprocal (or momentum) space
-<sup>[\[14\]](#cite_note-reciprocal:web-14)</sup>,
+[^reciprocal:web-14],
 where the entire periodic system may be efficiently described within a
 small part of reciprocal space, the first Brillouin zone (BZ). The BZ is
 uniquely defined such that everything in reciprocal space can be folded
@@ -351,7 +351,7 @@ k-point integration means setting a [KPOINTS](../input-files/KPOINTS.md)
 file to describe the k-point mesh. These wavefunctions are those of the
 electronic bands, the band structure being the periodic analogue of
 molecular orbitals (MOs) seen in GTO calculations
-<sup>[\[15\]](#cite_note-MO:web-15)[\[16\]](#cite_note-bands:web-16)</sup>.
+[^MO:web-15][^bands:web-16].
 
 
 <figure class="mw-halign-center" typeof="mw:File/Thumb">
@@ -395,7 +395,7 @@ In contrast to the delocalized plane-wave approach, in the atom-centered
 approach, the MOs *ψ*<sub>i</sub> are expanded in terms of atomic basis
 functions *ɸ*<sub>*μ*</sub> and corresponding expansion coefficients
 *C*<sub>*μi*</sub>
-<sup>[\[7\]](#cite_note-szabo:ostlund:book:2004-7)</sup>:
+[^szabo:ostlund:book:2004-7]:
 
 $\psi_i = \sum_{\mu = 1} C_{\mu i} \phi_{\mu}$.
 
@@ -403,7 +403,7 @@ Slater-type (exponential) functions or Gaussian-type functions can then
 be chosen. The advantage of Gaussian-type functions is that the electron
 integrals can be evaluated analytically. Using a Gaussian basis, the MOs
 can be expanded in terms of *primitive* Gaussians
-<sup>[\[1\]](#cite_note-robinson:lee:2025-1)</sup>:
+[^robinson:lee:2025-1]:
 
 $\phi_{\mu}(\textbf{r},\alpha,\textbf{I}) = e^{-\alpha
 |\textbf{r}_\textbf{I}|^2}$,
@@ -452,11 +452,11 @@ title="Edit section: Gaussian basis">edit</a> \| (./index.php.md)\]
 
 Slater (exponential) functions more accurately model atomic orbitals,
 but the resulting electron integrals can only be evaluated numerically
-<sup>[\[17\]](#cite_note-nagy:jensen:2017-17)</sup>.
+[^nagy:jensen:2017-17].
 However, Gaussian integrals can be evaluated analytically, significantly
 reducing computational cost. First, we define Cartesian Gaussians
 *G<sub>ijk</sub>*
-<sup>[\[18\]](#cite_note-helgaker:2000-18)</sup>:
+[^helgaker:2000-18]:
 
 $G_{ijk}(\textbf{r},\alpha,\textbf{I}) = x_I^i y_I^j z_I^k e^{- \alpha
 \mathbf{r_I}^2}$,
@@ -482,7 +482,7 @@ $G_{lm}(\textbf{r},\alpha,\textbf{I}) = S_{lm}(x_I, y_I, z_I) e^{-
 
 where *l* and *m* are the orbital angular momentum and magnetic quantum
 numbers, and $S_{lm}(\textbf{r}_A)$ are real solid harmonics
-<sup>[\[19\]](#cite_note-solid:harmonics:web-19)</sup>.
+[^solid:harmonics:web-19].
 
 #### Gaussian product rule\[<a
 href="/wiki/index.php?title=VASP_from_a_Gaussian-type_orbitals_perspective&amp;veaction=edit&amp;section=9"
@@ -492,7 +492,7 @@ title="Edit section: Gaussian product rule">edit</a> \| (./index.php.md)\]
 We include an important definition for subsequently evaluating
 integrals, the *Gaussian product rule* (i.e., the product of two
 Gaussians is also a Gaussian)
-<sup>[\[20\]](#cite_note-boys:1950-20)</sup>.
+[^boys:1950-20].
 
 
 **Click to reveal the Gaussian product rule**
@@ -530,7 +530,7 @@ The Gaussian product rule simplifies the evaluation of integrals. We
 will use the Obara-Saika scheme to present recurrence relations for the
 various integrals without including the derivations; those interested
 can refer to the referenced books and papers
-<sup>[\[18\]](#cite_note-helgaker:2000-18)[\[21\]](#cite_note-obara:saika:1986-21)[\[22\]](#cite_note-obara:saika:1988-22)</sup>.
+[^helgaker:2000-18][^obara:saika:1986-21][^obara:saika:1988-22].
 
 
 **Click to reveal the overlap integral evaluation using a Gaussian
@@ -602,7 +602,7 @@ Gaussian basis**
 
 These do not have an analytic representation but one can be found using
 the *n*th-order Boys function *F<sub>n</sub>*
-<sup>[\[20\]](#cite_note-boys:1950-20)</sup>,
+[^boys:1950-20],
 which is related to the error function and incomplete gamma function:
 
 $F_n(x) = \int_0^1 e^{-xt^2}t^{2n} dt$
@@ -614,11 +614,11 @@ $\Theta_{ijklmn}^N$, where *i,j,k* and *l,m,n* are the
 orbital angular momenta about the Cartesian axes for the basis functions
 *a* and *b*, respectively, and *N* is a non-zero integer, with *N* = 0
 denoting the final Coulomb integrals
-<sup>[\[18\]](#cite_note-helgaker:2000-18)</sup>.
+[^helgaker:2000-18].
 
 The Obara-Saika recurrence relations for the one-electron Coulomb
 integrals are
-<sup>[\[21\]](#cite_note-obara:saika:1986-21)[\[22\]](#cite_note-obara:saika:1988-22)</sup>:
+[^obara:saika:1986-21][^obara:saika:1988-22]:
 
 $\Theta_{i+1,j,k,l,m,n}^N = X_{PA} \Theta_{ijklmn}^N +
 \frac{1}{2p}(i\Theta_{i-1,j,k,l,m,n}^N + j\Theta_{i,j-1,k,l,m,n}^N)\\
@@ -640,7 +640,7 @@ and the Coulomb integral:
 $\Theta_{ijklmn}^0 = ( a | V_{ne} | b )$,
 
 so for two 1*s* orbitals
-<sup>[\[7\]](#cite_note-szabo:ostlund:book:2004-7)</sup>:
+[^szabo:ostlund:book:2004-7]:
 
 $\Theta_{000000}^0 = ( a | V_{ne} | b ) = \frac{-2 \pi}{a + b} Z_I
 e^{-\frac{ab}{a+b}|\mathbf{A}-\mathbf{B}|^2}
@@ -675,7 +675,7 @@ center between A and B, Q is the center betwen C and D, and
 $\alpha = \frac{pq}{p+q}$ is the *reduced exponent*.
 
 So, for four 1s orbitals it would be
-<sup>[\[7\]](#cite_note-szabo:ostlund:book:2004-7)</sup>:
+[^szabo:ostlund:book:2004-7]:
 
 $\Theta_{0000}^0 = g_{0000} = (00|00) =
 \frac{2\pi^{5/2}}{(a+b)(c+d)(a+b+c+d)^{1/2}}
@@ -685,7 +685,7 @@ F_0\[\frac{(a+b)(c+d)}{(a+b+c+d)}|\mathbf{P}-\mathbf{Q}|^2\]$.
 
 A set of two-electron integrals can then be generated using a four-term
 version of the Obara-Saika recurrence relations
-<sup>[\[22\]](#cite_note-obara:saika:1988-22)</sup>:
+[^obara:saika:1988-22]:
 
 $\Theta_{i+1,0,0,0}^N = X_{PA}\Theta_{i000}^N -
 \frac{\alpha}{p}X_{PQ}\Theta_{i000}^{N+1} +
@@ -722,7 +722,7 @@ non-local, the angular momentum does not need to be explicitly included.
 Starting with the kinetic energy integral in real space
 $\langle \hat{T} \rangle$ for a specific k-point
 $\mathbf{k}$
-<sup>[\[4\]](#cite_note-martin:book:2004-4)[\[10\]](#cite_note-payne:1992-10)[\[13\]](#cite_note-ashcroft:mermin:1976-13)</sup>:
+[^martin:book:2004-4][^payne:1992-10][^ashcroft:mermin:1976-13]:
 
 $\langle \mathbf{k}+\mathbf{G'} | \hat{T} | \mathbf{k}+\mathbf{G}
 \rangle = -\frac{\hbar^2}{2m} \int d^3r e^{-i(\mathbf{k}+\mathbf{G'})
@@ -773,13 +773,13 @@ treated "locally" in reciprocal space as the product of the total
 density, i.e., the each electron interacts collectively with all the
 other electrons, scaling at $O(Nlog(N))$,
 where *N* is the number of grid points
-<sup>[\[4\]](#cite_note-martin:book:2004-4)</sup>.
+[^martin:book:2004-4].
 This is significantly cheaper than evaluating using GTOs, where the
 two-center electron repulsion integrals (ERIs) must be evaluated
 directly, scaling at nominally $O(N^4)$,
 where *N* is the number of basis functions, though approximations can be
 made to reduce this to $O(N^2)$
-<sup>[\[23\]](#cite_note-gill:head-gordon:1994-23)</sup>.
+[^gill:head-gordon:1994-23].
 GGAs using plane waves are therefore significantly cheaper than using
 GTOs.
 
@@ -804,12 +804,12 @@ $O(N^2)$ with respect to grid points. In GTOs,
 evaluating the exchange integral scales at $O(N^4)$,
 which can be reduced to $O(N^3)$ with
 respect to basis functions
-<sup>[\[24\]](#cite_note-head-gordon:2015-24)</sup>.
+[^head-gordon:2015-24].
 Since GTOs are a local basis, the integrals can be screened such that
 not all exchange integrals need to be evaluated. As a result, hybrid
 calculations using GTOs are not significantly more costly than for GGAs,
 ~1.5 times the cost
-<sup>[\[25\]](#cite_note-ulian:tosoni:valdre:2013-25)</sup>.
+[^ulian:tosoni:valdre:2013-25].
 
 Having expressed all the integrals for both GTOs and plane waves, it is
 reasonable to conclude that the integral evaluation is, in general,
@@ -827,34 +827,34 @@ often challenging, and third, basis set superposition errors must be
 avoided.
 
 For selecting the basis, there are a plethora of bases to choose from
-<sup>[\[17\]](#cite_note-nagy:jensen:2017-17)</sup>,
+[^nagy:jensen:2017-17],
 e.g., Ahlrichs' split-valence (def2-*X*ZVP(PD))
-<sup>[\[26\]](#cite_note-weigend:ahlrichs:2005-26)</sup>,
+[^weigend:ahlrichs:2005-26],
 Dunning's correlation-consistent ((aug-)cc-pV*X*Z)
-<sup>[\[27\]](#cite_note-dunning:1989-27)</sup>,
+[^dunning:1989-27],
 among others shown in the basis set exchange
-<sup>[\[28\]](#cite_note-basis:set:exchange:web-28)</sup>.
+[^basis:set:exchange:web-28].
 *X* denotes how many basis functions are used to describe a particular
 atomic orbital, according to the exponential coefficient 'zeta' ζ.
 Choosing the correct basis can be particularly difficult. To reach
 converged results, it is often necessary to use triple-zeta bases and
 extrapolate to the complete basis set (CBS) limit
-<sup>[\[29\]](#cite_note-dunning:2000-29)</sup>.
+[^dunning:2000-29].
 For heavier elements, it is common to use effective core potentials
 (ECPs), pseudopotentials that model the interactions of core electrons
 using a potential instead of explicitly, resulting in significantly
 reduced computational cost
-<sup>[\[30\]](#cite_note-schwerdtfeger:2011-30)</sup>.
+[^schwerdtfeger:2011-30].
 These will be discussed in more detail below.
 
 Besides the difficulty of choosing a basis, even when a basis has been
 chosen, the incompleteness of the basis can introduce further erroneous
 interaction energies, the basis-set superposition error (BSSE)
-<sup>[\[31\]](#cite_note-boys:bernardi:1970-31)</sup>,
+[^boys:bernardi:1970-31],
 as one molecule uses the orbitals on a neighboring molecule to reduce
 its own energy, effectively increasing its basis. The BSSE must be
 corrected, e.g., using the counterpoise correction (CPC) scheme
-<sup>[\[31\]](#cite_note-boys:bernardi:1970-31)</sup>.
+[^boys:bernardi:1970-31].
 
 <figure class="mw-halign-right" typeof="mw:File/Thumb">
 <a href="/wiki/File:Plane_wave_on_grid.png"
@@ -951,7 +951,7 @@ the nodal oscillations in the wavefunction close to the nucleus would
 require many plane waves, reaching cutoffs of 100-1000 keV (hundreds of
 thousands to millions of plane waves) for all-electron (AE) calculations
 even when using a smooth potential
-<sup>[\[32\]](#cite_note-gygi:jctc:2023-32)</sup>.
+[^gygi:jctc:2023-32].
 This can be seen in our earlier
 <a href="#Plane_waves" class="mw-selflink-fragment">plane-wave
 figure</a>, where it is clear that much larger plane-wave momenta are
@@ -962,7 +962,7 @@ is used to describe close to the nucleus exactly within a core radius
 *r<sub>c</sub>*, reducing the number of plane waves required. Several
 types of pseudopotentials are available, e.g., ultrasoft
 pseudopotentials (USPPs) and the projector augmented-wave (PAW) approach
-<sup>[\[33\]](#cite_note-vanderbilt:prb:1990-33)[\[34\]](#cite_note-bloechl:prb:94b-34)[\[35\]](#cite_note-kresse:cms:1996-35)[\[36\]](#cite_note-kresse:prb:99-36)[\[30\]](#cite_note-schwerdtfeger:2011-30)</sup>.
+[^vanderbilt:prb:1990-33][^bloechl:prb:94b-34][^kresse:cms:1996-35][^kresse:prb:99-36][^schwerdtfeger:2011-30].
 Specifically, the PAW approach is used in VASP. In this way, the CBS
 limit can be more easily reached. The PAW approach is comparable to
 pseudopotentials, effective core potential (ECP), commonly used for
@@ -974,7 +974,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Effective core potentials">edit</a> \| (./index.php.md)\]
 
 The ECP Hamiltonian *H<sub>ECP</sub>* can be expressed as
-<sup>[\[37\]](#cite_note-andrae:preuss:1990-37)[\[38\]](#cite_note-figgen:stoll:2009-38)</sup>:
+[^andrae:preuss:1990-37][^figgen:stoll:2009-38]:
 
 $H_{\text{ECP}} = -\frac{\hbar^2}{2m} \nabla^2 + V_{H}(\mathbf{r}) +
 V_{\text{xc}}(\mathbf{r}) + V_{\text{ECP}}(\mathbf{r})$
@@ -1017,7 +1017,7 @@ the interaction of the valence bands.</figcaption>
 In VASP, the [projector-augmented
 wave](../methods/Projector-augmented-wave_formalism.md)
 (PAW) approach is used
-<sup>[\[34\]](#cite_note-bloechl:prb:94b-34)</sup>.
+[^bloechl:prb:94b-34].
 In the PAW approach, the one-electron wavefunctions
 $\psi_{n\mathbf{k}}$, the orbitals, are derived from
 pseudo-orbitals $\widetilde{\psi}_{n\mathbf{k}}$ by means of a linear
@@ -1073,7 +1073,7 @@ core states can be reconstructed, e.g., for [NMR
 calculations](../categories/Category-NMR.md).
 
 The PAW Hamiltonian *H<sub>PAW</sub>* can be expressed as
-<sup>[\[36\]](#cite_note-kresse:prb:99-36)</sup>:
+[^kresse:prb:99-36]:
 
 $H_{\text{PAW}} = -\frac{\hbar^2}{2m} \nabla^2 +
 \tilde{V}_{\text{ion}}(\mathbf{r}) + \tilde{V}_H(\mathbf{r}) +
@@ -1101,7 +1101,7 @@ The choice of basis set is difficult when using GTOs, with many
 different GTO bases available, all generated according to different
 preferences. The same is true of ECPs, though these are more easily
 defined for using GTOs, by only a few coefficients and exponents
-<sup>[\[37\]](#cite_note-andrae:preuss:1990-37)[\[38\]](#cite_note-figgen:stoll:2009-38)</sup>.
+[^andrae:preuss:1990-37][^figgen:stoll:2009-38].
 The respective equations for the Hamiltonians are analogous, with the
 selection of projectors being one of the key differences. For a
 plane-wave basis, the choice of basis is simple, it is the generation of
@@ -1165,11 +1165,11 @@ between real and reciprocal space scaling at O(N<sup>2</sup>log(N)) for
 DFT, O(N<sup>4</sup>) for the random-phase approximation (RPA) (a sort
 of CCSD) compared to O(N<sup>6</sup>) in GTOs, and O(N<sup>3</sup>) or
 O(N<sup>4</sup>) for quantum Monte Carlo (QMC)
-<sup>[\[39\]](#cite_note-taheridehkordi:jcp:2023-39)</sup>.
+[^taheridehkordi:jcp:2023-39].
 
 |  |
 |----|
-| **Important:** Note that lower scaling implementations of RPA, e.g., O(N<sup>3</sup>) in [plane wave](Category-Low-scaling_GW_and_RPA.md), and O(N<sup>4</sup>log(N)) in GTO exist <sup>[\[40\]](#cite_note-eshuis:furche:2010-40)</sup>). |
+| **Important:** Note that lower scaling implementations of RPA, e.g., O(N<sup>3</sup>) in [plane wave](Category-Low-scaling_GW_and_RPA.md), and O(N<sup>4</sup>log(N)) in GTO exist [^eshuis:furche:2010-40]). |
 
 Using GTOs, a cluster can be used to model a surface or solid. With
 increasing cluster size, this will gradually approach the periodic
@@ -1183,7 +1183,7 @@ waves and it is necessary to include many of these.
 
 |  |
 |----|
-| **Mind:** The plane waves are inherently delocalized. Bands can be localized to molecular orbitals using Wannier functions. However, applying post-HF methods using Wannier functions is not routinely done. There are specialist techniques where the conduction bands are projected onto atomic orbitals to create a smaller basis for performing coupled cluster calculations <sup>[\[41\]](#cite_note-gruber:prx:2018-41)[\[42\]](#cite_note-zhang:grueneis:2019-42)</sup>. |
+| **Mind:** The plane waves are inherently delocalized. Bands can be localized to molecular orbitals using Wannier functions. However, applying post-HF methods using Wannier functions is not routinely done. There are specialist techniques where the conduction bands are projected onto atomic orbitals to create a smaller basis for performing coupled cluster calculations [^gruber:prx:2018-41][^zhang:grueneis:2019-42]. |
 
 Several post-HF methods are available, for example, the familiar
 [MP2](../categories/Category-Many-body_perturbation_theory.md) "Category:Many-body perturbation theory").
@@ -1195,15 +1195,15 @@ The RPA can be considered from a few different directions, the most
 familiar of which to those coming from a GTO basis, is coupled cluster.
 The RPA is coupled cluster doubles (CCD) with only the ring diagrams
 included (rCCD)
-<sup>[\[43\]](#cite_note-scuseria:jcp:2008-43)[\[44\]](#cite_note-henderson:molphys:2010-44)</sup>;
+[^scuseria:jcp:2008-43][^henderson:molphys:2010-44];
 additionally, in the exchange diagrams are typically excluded, making it
 direct ring CCD (drCCD)
-<sup>[\[45\]](#cite_note-ren:scheffler:2012-45)</sup>.
+[^ren:scheffler:2012-45].
 The bands do not need to be converted to localized orbitals, as the
 correlation energy is calculated via the response function in the
 adiabatic-correction-fluctuation-dissipation theorem
 ([ACFDT](../methods/ACFDT__RPA_calculations.md))
-<sup>[\[46\]](#cite_note-harl:2008-46)[\[47\]](#cite_note-harl:prl:2009-47)[\[48\]](#cite_note-harl:2010-48)</sup>.
+[^harl:2008-46][^harl:prl:2009-47][^harl:2010-48].
 Using finite-order perturbation theory (e.g., MP2), the correlation
 energy diverges for metals, due to their zero-band gap. RPA is an
 exception to this, allowing the application of post-HF methods to
@@ -1211,9 +1211,9 @@ metals.
 
 Additionally, there has been some use of coupled cluster (e.g., CCSD(T))
 in solid-state physics
-<sup>[\[41\]](#cite_note-gruber:prx:2018-41)[\[42\]](#cite_note-zhang:grueneis:2019-42)</sup>.
+[^gruber:prx:2018-41][^zhang:grueneis:2019-42].
 This is an area of active research
-<sup>[\[49\]](#cite_note-shi:jacs:2023-49)</sup>.
+[^shi:jacs:2023-49].
 An alternative method that can more accurately describe the system is
 quantum Monte Carlo (QMC) . This is not typically done within the PAW
 approach, though implementations do exist . Both coupled cluster and QMC
@@ -1417,304 +1417,52 @@ href="/wiki/index.php?title=VASP_from_a_Gaussian-type_orbitals_perspective&amp;v
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-robinson:lee:2025_1-0)</sup>
-    <sup>[b](#cite_ref-robinson:lee:2025_1-1)</sup>
-    <a href="https://doi.org/10.1002/wcms.70005" class="external text"
-    rel="nofollow">P. Robinson, A. Rettig, H. Dinh, M.-F. Chen, and J. Lee,
-    <em>Condensed-Phase Quantum Chemistry</em>, Wiley Interdiscip. Rev.
-    Comput. Mol. Sci. <strong>15</strong>, e70005 (2025).</a>
-2.  [↑](#cite_ref-paier:jcp:05_2-0)
-    <a href="https://doi.org/10.1063/1.1926272" class="external text"
-    rel="nofollow">J. Paier, R. Hirschl, M. Marsman, and G. Kresse, J. Chem.
-    Phys. <strong>122</strong>, 234102 (2005).</a>
-3.  [↑](#cite_ref-hafner:2008_3-0)
-    <a href="https://doi.org/10.1002/jcc.21057" class="external text"
-    rel="nofollow">J. Hafner, <em>Ab-Initio Simulations of Materials Using
-    VASP: Density-Functional Theory and Beyond</em>, J. Comput. Chem.
-    <strong>29</strong>, 2044 (2008).</a>
-4.  ↑
-    <sup>[a](#cite_ref-martin:book:2004_4-0)</sup>
-    <sup>[b](#cite_ref-martin:book:2004_4-1)</sup>
-    <sup>[c](#cite_ref-martin:book:2004_4-2)</sup>
-    <a href="https://doi.org/10.1017/CBO9780511805769" class="external text"
-    rel="nofollow">R. Martin, Electronic Structure - Basic Theory and
-    Practical Methods (Cambridge University Press, Cambridge, 2004).</a>
-5.  [↑](#cite_ref-head-gordon:pople:1992_5-0)
-    <a href="https://doi.org/10.1021/j100180a030" class="external text"
-    rel="nofollow">J. Foresman, M. Head-Gordon, J. Pople, and M. Frisch,
-    <em>Toward a systematic molecular orbital theory for excited
-    states</em>, J. Phys. Chem. <strong>96</strong>, 135–149 (1992).</a>
-6.  [↑](#cite_ref-davidson:1975_6-0)
-    <a href="https://doi.org/10.1016/0021-9991(75)90065-0"
-    class="external text" rel="nofollow">E. Davidson, <em>The iterative
-    calculation of a few of the lowest eigenvalues and corresponding
-    eigenvectors of large real-symmetric matrices</em>, J. Comput. Phys,
-    <strong>17</strong>, 87-94 (1975).</a>
-7.  ↑
-    <sup>[a](#cite_ref-szabo:ostlund:book:2004_7-0)</sup>
-    <sup>[b](#cite_ref-szabo:ostlund:book:2004_7-1)</sup>
-    <sup>[c](#cite_ref-szabo:ostlund:book:2004_7-2)</sup>
-    <sup>[d](#cite_ref-szabo:ostlund:book:2004_7-3)</sup>
-    <a
-    href="https://store.doverpublications.com/products/9780486691862?srsltid=AfmBOoqC0bm7tkUxB65pg6r5uh36fVAg6Ud8QT1wNzEWFHxCyVaDJJi9"
-    class="external text" rel="nofollow">A. Szabo and N. Ostlund, Modern
-    Quantum Chemistry - Introduction to Advanced Electronic Structure Theory
-    (Dover Publications, New York, 1996).</a>
-8.  [↑](#cite_ref-cramer:book:2004_8-0)
-    <a
-    href="https://www.wiley.com/en-us/Essentials+of+Computational+Chemistry%3A+Theories+and+Models%2C+2nd+Edition-p-9780470091821"
-    class="external text" rel="nofollow">C. Cramer, Essentials of
-    Computational Chemistry - Theories and Models (Second Edition, John
-    Wiley and Sons, Chichester, 2004).</a>
-9.  [↑](#cite_ref-kohn:pr:1965_9-0)
-    <a href="https://doi.org/10.1103/PhysRev.140.A1133"
-    class="external text" rel="nofollow">W. Kohn and L. J. Sham,
-    <em>Self-Consistent Equations Including Exchange and Correlation
-    Effects</em>, Phys. Rev. <strong>140</strong>, A1133 (1965).</a>
-10. ↑
-    <sup>[a](#cite_ref-payne:1992_10-0)</sup>
-    <sup>[b](#cite_ref-payne:1992_10-1)</sup>
-    <sup>[c](#cite_ref-payne:1992_10-2)</sup>
-    <a href="https://doi.org/10.1103/RevModPhys.64.1045"
-    class="external text" rel="nofollow">M. Payne, M. Teter, D. Allan, T.
-    Arias, and J. Joannopoulos, <em>Iterative minimization techniques for ab
-    initio total-energy calculations: molecular dynamics and conjugate
-    gradients</em>, Rev. Mod. Phys. <strong>64</strong>, 1045 (1992).</a>
-11. [↑](#cite_ref-pisani:dovesi:roetti:1988_11-0)
-    <a href="https://doi.org/10.1007/978-3-642-93385-1"
-    class="external text" rel="nofollow">C. Pisani, R. Dovesi, and C.
-    Roetti, Hartree-Fock Ab Initio Treatment of Crystalline Systems, Lecture
-    Notes in Chemistry (Springer, Heidelberg, 1988).</a>
-12. [↑](#cite_ref-hutter:parrinello:2010_12-0)
-    <a href="https://www.tandfonline.com/doi/abs/10.1080/002689797170220"
-    class="external text" rel="nofollow">G. Lippert, J. Hutter, and M.
-    Parrinello, <em>A hybrid Gaussian and plane wave density functional
-    scheme</em>, Mol. Phys. <strong>92</strong> 477 (1997).</a>
-13. ↑
-    <sup>[a](#cite_ref-ashcroft:mermin:1976_13-0)</sup>
-    <sup>[b](#cite_ref-ashcroft:mermin:1976_13-1)</sup>
-    <sup>[c](#cite_ref-ashcroft:mermin:1976_13-2)</sup>
-    <a
-    href="https://www.cengage.uk/c/solid-state-physics-1e-ashcroft-mermin/9780357670811/"
-    class="external text" rel="nofollow">N. Ashcroft and N. Mermin, Solid
-    State Physics (First Edition, Harcourt Inc., Orlando, 1976).</a>
-14. ↑
-    <sup>[a](#cite_ref-reciprocal:web_14-0)</sup>
-    <sup>[b](#cite_ref-reciprocal:web_14-1)</sup>
-    <a href="https://en.wikipedia.org/wiki/Reciprocal_lattice"
-    class="external text" rel="nofollow">Reciprocal space,
-    https://en.wikipedia.org/ (2025)</a>
-15. [↑](#cite_ref-MO:web_15-0)
-    <a
-    href="https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/09%3A_Molecular_Geometry_and_Bonding_Theories/9.07%3A_Molecular_Orbitals"
-    class="external text" rel="nofollow">Molecular orbitals,
-    https://chem.libretexts.org/ (2025)</a>
-16. [↑](#cite_ref-bands:web_16-0)
-    <a
-    href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Band_Structure"
-    class="external text" rel="nofollow">Band structure,
-    https://chem.libretexts.org/ (2025)</a>
-17. ↑
-    <sup>[a](#cite_ref-nagy:jensen:2017_17-0)</sup>
-    <sup>[b](#cite_ref-nagy:jensen:2017_17-1)</sup>
-    <a href="https://doi.org/10.1002/9781119356059.ch3"
-    class="external text" rel="nofollow">B. Nagy and F. Jensen, Basis Sets
-    in Quantum Chemistry. In Reviews in Computational Chemistry (eds A.L.
-    Parrill and K.B. Lipkowitz).</a>
-18. ↑
-    <sup>[a](#cite_ref-helgaker:2000_18-0)</sup>
-    <sup>[b](#cite_ref-helgaker:2000_18-1)</sup>
-    <sup>[c](#cite_ref-helgaker:2000_18-2)</sup>
-    <a href="https://doi.org/10.1002/9781119019572" class="external text"
-    rel="nofollow">T. Helgaker, P. Jørgensen, and J. Olsen, Molecular
-    Electronic‐Structure Theory (First Edition, John Wiley and Sons, Ltd.,
-    Chichester, 2000).</a>
-19. [↑](#cite_ref-solid:harmonics:web_19-0)
-    <a href="https://en.wikipedia.org/wiki/Solid_harmonics"
-    class="external text" rel="nofollow">Solid harmonics,
-    https://en.wikipedia.org/ (2025)</a>
-20. ↑
-    <sup>[a](#cite_ref-boys:1950_20-0)</sup>
-    <sup>[b](#cite_ref-boys:1950_20-1)</sup>
-    <a href="http://doi.org/10.1098/rspa.1950.0036" class="external text"
-    rel="nofollow">S. Boys, <em>Electronic wave functions - I. A general
-    method of calculation for the stationary states of any molecular
-    system</em>, Proc. R. Soc. Lond. <strong>200</strong> 554 (1950).</a>
-21. ↑
-    <sup>[a](#cite_ref-obara:saika:1986_21-0)</sup>
-    <sup>[b](#cite_ref-obara:saika:1986_21-1)</sup>
-    <a href="https://doi.org/10.1063/1.450106" class="external text"
-    rel="nofollow">S. Obara and A. Saika, <em>Efficient recursive
-    computation of molecular integrals over Cartesian Gaussian
-    functions</em>, J. Chem. Phys. <strong>84</strong> 3963 (1986).</a>
-22. ↑
-    <sup>[a](#cite_ref-obara:saika:1988_22-0)</sup>
-    <sup>[b](#cite_ref-obara:saika:1988_22-1)</sup>
-    <sup>[c](#cite_ref-obara:saika:1988_22-2)</sup>
-    <a href="https://doi.org/10.1063/1.455717" class="external text"
-    rel="nofollow">S. Obara and A. Saika, <em>General recurrence formulas
-    for molecular integrals over Cartesian Gaussian functions</em>, J. Chem.
-    Phys. <strong>89</strong> 1540 (1988).</a>
-23. [↑](#cite_ref-gill:head-gordon:1994_23-0)
-    <a href="https://doi.org/10.1016/0009-2614(94)01128-1"
-    class="external text" rel="nofollow">C. White, B. Johnson, P. Gill, and
-    M. Head-Gordon, <em>The continuous fast multipole method</em>, Chem.
-    Phys. Lett. <strong>230</strong>, 8 (1994).</a>
-24. [↑](#cite_ref-head-gordon:2015_24-0)
-    <a href="https://doi.org/10.1063/1.4923369" class="external text"
-    rel="nofollow">S. Manzer, P. Horn, N. Mardirossian, and M. Head-Gordon,
-    <em>Fast, accurate evaluation of exact exchange: The occ-RI-K
-    algorithm</em>, J. Chem. Phys. <strong>143</strong>, 024133 (2015).</a>
-25. [↑](#cite_ref-ulian:tosoni:valdre:2013_25-0)
-    <a href="https://doi.org/10.1063/1.4830405" class="external text"
-    rel="nofollow">G. Ulian, S. Tosoni, and G. Valdre, <em>Comparison
-    between Gaussian-type orbitals and plane wave ab initio density
-    functional theory modeling of layer silicates: Talc Mg3Si4O10(OH)2 as
-    model system</em>, J. Chem. Phys. <strong>139</strong>, 204101
-    (2013).</a>
-26. [↑](#cite_ref-weigend:ahlrichs:2005_26-0)
-    <a href="https://doi.org/10.1039/B508541A" class="external text"
-    rel="nofollow">F. Weigend and R. Ahlrichs, <em>Balanced basis sets of
-    split valence, triple zeta valence and quadruple zeta valence quality
-    for H to Rn: Design and assessment of accuracy</em>, Phys. Chem. Chem.
-    Phys. <strong>7</strong>, 3297 (2005).</a>
-27. [↑](#cite_ref-dunning:1989_27-0)
-    <a href="https://doi.org/10.1063/1.456153" class="external text"
-    rel="nofollow">T. Dunning, <em>Gaussian basis sets for use in correlated
-    molecular calculations. I. The atoms boron through neon and
-    hydrogen</em>, J. Chem. Phys. <strong>90</strong>, 1007 (1989).</a>
-28. [↑](#cite_ref-basis:set:exchange:web_28-0)
-    <a href="https://www.basissetexchange.org/" class="external text"
-    rel="nofollow">Basis set exchange, https://www.basissetexchange.org/
-    (2025)</a>
-29. [↑](#cite_ref-dunning:2000_29-0)
-    <a href="https://doi.org/10.1021/jp001507z" class="external text"
-    rel="nofollow">T. Dunning, <em>A Road Map for the Calculation of
-    Molecular Binding Energies</em>, J. Phys. Chem. A <strong>104</strong>
-    9062 (2000).</a>
-30. ↑
-    <sup>[a](#cite_ref-schwerdtfeger:2011_30-0)</sup>
-    <sup>[b](#cite_ref-schwerdtfeger:2011_30-1)</sup>
-    <a href="https://doi.org/10.1002/cphc.201100387" class="external text"
-    rel="nofollow">P. Schwerdtfeger, <em>The Pseudopotential Approximation
-    in Electronic Structure Theory</em>, Chem. Phys. Chem.
-    <strong>12</strong>, 3143 (2011).</a>
-31. ↑
-    <sup>[a](#cite_ref-boys:bernardi:1970_31-0)</sup>
-    <sup>[b](#cite_ref-boys:bernardi:1970_31-1)</sup>
-    <a href="https://doi.org/10.1080/00268977000101561"
-    class="external text" rel="nofollow">S. Boys and F. Bernardi, <em>The
-    calculation of small molecular interactions by the differences of
-    separate total energies. Some procedures with reduced errors</em>, Mol.
-    Phys. <strong>19</strong> 553 (1970).</a>
-32. [↑](#cite_ref-gygi:jctc:2023_32-0)
-    <a href="https://doi.org/10.1021/acs.jctc.2c01191" class="external text"
-    rel="nofollow">G. Gygi, <em>All-Electron Plane-Wave Electronic Structure
-    Calculations</em>, J. Chem. Theory Comput. <strong>19</strong>, 1300
-    (2023).</a>
-33. [↑](#cite_ref-vanderbilt:prb:1990_33-0)
-    <a href="https://link.aps.org/doi/10.1103/PhysRevB.41.7892"
-    class="external text" rel="nofollow">David Vanderbilt, <em>Soft
-    self-consistent pseudopotentials in a generalized eigenvalue
-    formalism</em>, Phys. Rev. B <strong>41</strong>(11), 7892-7895
-    (1990).</a>
-34. ↑
-    <sup>[a](#cite_ref-bloechl:prb:94b_34-0)</sup>
-    <sup>[b](#cite_ref-bloechl:prb:94b_34-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.50.17953"
-    class="external text" rel="nofollow">P. E. Blöchl, Phys. Rev. B
-    <strong>50</strong>, 17953 (1994).</a>
-35. [↑](#cite_ref-kresse:cms:1996_35-0)
-    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
-    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
-36. ↑
-    <sup>[a](#cite_ref-kresse:prb:99_36-0)</sup>
-    <sup>[b](#cite_ref-kresse:prb:99_36-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.59.1758" class="external text"
-    rel="nofollow">I. G. Kresse and D. Joubert, Phys. Rev. B
-    <strong>59</strong>, 1758 (1999).</a>
-37. ↑
-    <sup>[a](#cite_ref-andrae:preuss:1990_37-0)</sup>
-    <sup>[b](#cite_ref-andrae:preuss:1990_37-1)</sup>
-    <a href="https://doi.org/10.1007/BF01114537" class="external text"
-    rel="nofollow">D. Andrae, U. Häußermann, M. Dolg, H. Stoll, and H.
-    Preuß, <em>Energy-adjusted ab initio pseudopotentials for the second and
-    third row transition elements</em>, Theor. Chim. Acta
-    <strong>77</strong> 123 (1990).</a>
-38. ↑
-    <sup>[a](#cite_ref-figgen:stoll:2009_38-0)</sup>
-    <sup>[b](#cite_ref-figgen:stoll:2009_38-1)</sup>
-    <a href="https://doi.org/10.1063/1.3119665" class="external text"
-    rel="nofollow">D. Figgen, K. Peterson, M. Dolg, and H. Stoll,
-    <em>Energy-consistent pseudopotentials and correlation consistent basis
-    sets for the 5d elements Hf–Pt</em>, J. Chem. Phys. <strong>130</strong>
-    164108 (2009).</a>
-39. [↑](#cite_ref-taheridehkordi:jcp:2023_39-0)
-    <a href="https://doi.org/10.1063/5.0156657" class="external text"
-    rel="nofollow">A. Taheridehkordi, M. Schlipf, Z. Sukurma, M. Humer, A.
-    Grüneis, and G. Kresse, <em>Phaseless auxiliary field quantum Monte
-    Carlo with projector-augmented wave method for solids</em> J. Chem.
-    Phys. <strong>159</strong>, 044109 (2023).</a>
-40. [↑](#cite_ref-eshuis:furche:2010_40-0)
-    <a href="https://doi.org/10.1063/1.3442749" class="external text"
-    rel="nofollow">H. Eshuis, J. Yarkony, and F. Furche, <em>Fast
-    computation of molecular random phase approximation correlation energies
-    using resolution of the identity and imaginary frequency
-    integration</em>, J. Chem. Phys. <strong>132</strong> 234114 (2010).</a>
-41. ↑
-    <sup>[a](#cite_ref-gruber:prx:2018_41-0)</sup>
-    <sup>[b](#cite_ref-gruber:prx:2018_41-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevX.8.021043"
-    class="external text" rel="nofollow">T. Gruber, K. Liao, T. Tsatsoulis,
-    F. Hummel, and A. Grüneis, <em>Applying the Coupled-Cluster Ansatz to
-    Solids and Surfaces in the Thermodynamic Limit</em>, Phys. Rev. X
-    <strong>8</strong>, 021043 (2018).</a>
-42. ↑
-    <sup>[a](#cite_ref-zhang:grueneis:2019_42-0)</sup>
-    <sup>[b](#cite_ref-zhang:grueneis:2019_42-1)</sup>
-    <a href="https://doi.org/10.3389/fmats.2019.00123" class="external text"
-    rel="nofollow">I. Zhang and A. Grüneis, <em>Coupled Cluster Theory in
-    Materials Science</em>, Front. Mater. <strong>6</strong>, 123:1
-    (2019).</a>
-43. [↑](#cite_ref-scuseria:jcp:2008_43-0)
-    <a href="https://doi.org/10.1063/1.3043729" class="external text"
-    rel="nofollow">G. Scuseria, T. Henderson, and D. Sorensen, <em>The
-    ground state correlation energy of the random phase approximation from a
-    ring coupled cluster doubles approach</em>, J. Chem. Phys.
-    <strong>129</strong>, 231101 (2008).</a>
-44. [↑](#cite_ref-henderson:molphys:2010_44-0)
-    <a href="https://doi.org/10.1080/00268976.2010.507227"
-    class="external text" rel="nofollow">T. Henderson and G. Scuseria,
-    <em>The connection between self-interaction and static correlation: a
-    random phase approximation perspective</em>, Mol. Phys.
-    <strong>108</strong>, 2511 (2010).</a>
-45. [↑](#cite_ref-ren:scheffler:2012_45-0)
-    <a href="https://doi.org/10.1007/s10853-012-6570-4"
-    class="external text" rel="nofollow">X. Ren, P. Rinke, C. Joas, and M.
-    Scheffler, <em>Random-phase approximation and its applications in
-    computational chemistry and materials science</em>, J. Mater. Sci.
-    <strong>47</strong>, 7447 (2012).</a>
-46. [↑](#cite_ref-harl:2008_46-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-47. [↑](#cite_ref-harl:prl:2009_47-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.103.056401"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, <em>Accurate
-    Bulk Properties from Approximate Many-Body Techniques</em>, Phys. Rev.
-    Lett. <strong>103</strong>, 056401 (2009).</a>
-48. [↑](#cite_ref-harl:2010_48-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
-    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
-49. [↑](#cite_ref-shi:jacs:2023_49-0)
-    <a href="https://doi.org/10.1021/jacs.3c09616" class="external text"
-    rel="nofollow">B. Shi, A. Zen, V. Kapil, P. Nagy, A. Grüneis, and A.
-    Michaelides, <em>Many-Body Methods for Surface Chemistry Come of Age:
-    Achieving Consensus with Experiments</em>, J. Am. Chem. Soc.
-    <strong>145</strong>, 25372 (2023).</a>
-
-
+[^robinson:lee:2025-1]: [P. Robinson, A. Rettig, H. Dinh, M.-F. Chen, and J. Lee, *Condensed-Phase Quantum Chemistry*, Wiley Interdiscip. Rev. Comput. Mol. Sci. **15**, e70005 (2025).](https://doi.org/10.1002/wcms.70005)
+[^paier:jcp:05-2]: [J. Paier, R. Hirschl, M. Marsman, and G. Kresse, J. Chem. Phys. **122**, 234102 (2005).](https://doi.org/10.1063/1.1926272)
+[^hafner:2008-3]: [J. Hafner, *Ab-Initio Simulations of Materials Using VASP: Density-Functional Theory and Beyond*, J. Comput. Chem. **29**, 2044 (2008).](https://doi.org/10.1002/jcc.21057)
+[^martin:book:2004-4]: [R. Martin, Electronic Structure - Basic Theory and Practical Methods (Cambridge University Press, Cambridge, 2004).](https://doi.org/10.1017/CBO9780511805769)
+[^head-gordon:pople:1992-5]: [J. Foresman, M. Head-Gordon, J. Pople, and M. Frisch, *Toward a systematic molecular orbital theory for excited states*, J. Phys. Chem. **96**, 135–149 (1992).](https://doi.org/10.1021/j100180a030)
+[^davidson:1975-6]: [E. Davidson, *The iterative calculation of a few of the lowest eigenvalues and corresponding eigenvectors of large real-symmetric matrices*, J. Comput. Phys, **17**, 87-94 (1975).](https://doi.org/10.1016/0021-9991(75)90065-0)
+[^szabo:ostlund:book:2004-7]: [A. Szabo and N. Ostlund, Modern Quantum Chemistry - Introduction to Advanced Electronic Structure Theory (Dover Publications, New York, 1996).](https://store.doverpublications.com/products/9780486691862?srsltid=AfmBOoqC0bm7tkUxB65pg6r5uh36fVAg6Ud8QT1wNzEWFHxCyVaDJJi9)
+[^cramer:book:2004-8]: [C. Cramer, Essentials of Computational Chemistry - Theories and Models (Second Edition, John Wiley and Sons, Chichester, 2004).](https://www.wiley.com/en-us/Essentials+of+Computational+Chemistry%3A+Theories+and+Models%2C+2nd+Edition-p-9780470091821)
+[^kohn:pr:1965-9]: [W. Kohn and L. J. Sham, *Self-Consistent Equations Including Exchange and Correlation Effects*, Phys. Rev. **140**, A1133 (1965).](https://doi.org/10.1103/PhysRev.140.A1133)
+[^payne:1992-10]: [M. Payne, M. Teter, D. Allan, T. Arias, and J. Joannopoulos, *Iterative minimization techniques for ab initio total-energy calculations: molecular dynamics and conjugate gradients*, Rev. Mod. Phys. **64**, 1045 (1992).](https://doi.org/10.1103/RevModPhys.64.1045)
+[^pisani:dovesi:roetti:1988-11]: [C. Pisani, R. Dovesi, and C. Roetti, Hartree-Fock Ab Initio Treatment of Crystalline Systems, Lecture Notes in Chemistry (Springer, Heidelberg, 1988).](https://doi.org/10.1007/978-3-642-93385-1)
+[^hutter:parrinello:2010-12]: [G. Lippert, J. Hutter, and M. Parrinello, *A hybrid Gaussian and plane wave density functional scheme*, Mol. Phys. **92** 477 (1997).](https://www.tandfonline.com/doi/abs/10.1080/002689797170220)
+[^ashcroft:mermin:1976-13]: [N. Ashcroft and N. Mermin, Solid State Physics (First Edition, Harcourt Inc., Orlando, 1976).](https://www.cengage.uk/c/solid-state-physics-1e-ashcroft-mermin/9780357670811/)
+[^reciprocal:web-14]: [Reciprocal space, https://en.wikipedia.org/ (2025)](https://en.wikipedia.org/wiki/Reciprocal_lattice)
+[^MO:web-15]: [Molecular orbitals, https://chem.libretexts.org/ (2025)](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/09%3A_Molecular_Geometry_and_Bonding_Theories/9.07%3A_Molecular_Orbitals)
+[^bands:web-16]: [Band structure, https://chem.libretexts.org/ (2025)](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Band_Structure)
+[^nagy:jensen:2017-17]: [B. Nagy and F. Jensen, Basis Sets in Quantum Chemistry. In Reviews in Computational Chemistry (eds A.L. Parrill and K.B. Lipkowitz).](https://doi.org/10.1002/9781119356059.ch3)
+[^helgaker:2000-18]: [T. Helgaker, P. Jørgensen, and J. Olsen, Molecular Electronic‐Structure Theory (First Edition, John Wiley and Sons, Ltd., Chichester, 2000).](https://doi.org/10.1002/9781119019572)
+[^solid:harmonics:web-19]: [Solid harmonics, https://en.wikipedia.org/ (2025)](https://en.wikipedia.org/wiki/Solid_harmonics)
+[^boys:1950-20]: [S. Boys, *Electronic wave functions - I. A general method of calculation for the stationary states of any molecular system*, Proc. R. Soc. Lond. **200** 554 (1950).](http://doi.org/10.1098/rspa.1950.0036)
+[^obara:saika:1986-21]: [S. Obara and A. Saika, *Efficient recursive computation of molecular integrals over Cartesian Gaussian functions*, J. Chem. Phys. **84** 3963 (1986).](https://doi.org/10.1063/1.450106)
+[^obara:saika:1988-22]: [S. Obara and A. Saika, *General recurrence formulas for molecular integrals over Cartesian Gaussian functions*, J. Chem. Phys. **89** 1540 (1988).](https://doi.org/10.1063/1.455717)
+[^gill:head-gordon:1994-23]: [C. White, B. Johnson, P. Gill, and M. Head-Gordon, *The continuous fast multipole method*, Chem. Phys. Lett. **230**, 8 (1994).](https://doi.org/10.1016/0009-2614(94)01128-1)
+[^head-gordon:2015-24]: [S. Manzer, P. Horn, N. Mardirossian, and M. Head-Gordon, *Fast, accurate evaluation of exact exchange: The occ-RI-K algorithm*, J. Chem. Phys. **143**, 024133 (2015).](https://doi.org/10.1063/1.4923369)
+[^ulian:tosoni:valdre:2013-25]: [G. Ulian, S. Tosoni, and G. Valdre, *Comparison between Gaussian-type orbitals and plane wave ab initio density functional theory modeling of layer silicates: Talc Mg3Si4O10(OH)2 as model system*, J. Chem. Phys. **139**, 204101 (2013).](https://doi.org/10.1063/1.4830405)
+[^weigend:ahlrichs:2005-26]: [F. Weigend and R. Ahlrichs, *Balanced basis sets of split valence, triple zeta valence and quadruple zeta valence quality for H to Rn: Design and assessment of accuracy*, Phys. Chem. Chem. Phys. **7**, 3297 (2005).](https://doi.org/10.1039/B508541A)
+[^dunning:1989-27]: [T. Dunning, *Gaussian basis sets for use in correlated molecular calculations. I. The atoms boron through neon and hydrogen*, J. Chem. Phys. **90**, 1007 (1989).](https://doi.org/10.1063/1.456153)
+[^basis:set:exchange:web-28]: [Basis set exchange, https://www.basissetexchange.org/ (2025)](https://www.basissetexchange.org/)
+[^dunning:2000-29]: [T. Dunning, *A Road Map for the Calculation of Molecular Binding Energies*, J. Phys. Chem. A **104** 9062 (2000).](https://doi.org/10.1021/jp001507z)
+[^schwerdtfeger:2011-30]: [P. Schwerdtfeger, *The Pseudopotential Approximation in Electronic Structure Theory*, Chem. Phys. Chem. **12**, 3143 (2011).](https://doi.org/10.1002/cphc.201100387)
+[^boys:bernardi:1970-31]: [S. Boys and F. Bernardi, *The calculation of small molecular interactions by the differences of separate total energies. Some procedures with reduced errors*, Mol. Phys. **19** 553 (1970).](https://doi.org/10.1080/00268977000101561)
+[^gygi:jctc:2023-32]: [G. Gygi, *All-Electron Plane-Wave Electronic Structure Calculations*, J. Chem. Theory Comput. **19**, 1300 (2023).](https://doi.org/10.1021/acs.jctc.2c01191)
+[^vanderbilt:prb:1990-33]: [David Vanderbilt, *Soft self-consistent pseudopotentials in a generalized eigenvalue formalism*, Phys. Rev. B **41**(11), 7892-7895 (1990).](https://link.aps.org/doi/10.1103/PhysRevB.41.7892)
+[^bloechl:prb:94b-34]: [P. E. Blöchl, Phys. Rev. B **50**, 17953 (1994).](https://doi.org/10.1103/PhysRevB.50.17953)
+[^kresse:cms:1996-35]: [G. Kresse and J. Furthmüller, Comp. Mater. Sci. **6**, 15 (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
+[^kresse:prb:99-36]: [I. G. Kresse and D. Joubert, Phys. Rev. B **59**, 1758 (1999).](https://doi.org/10.1103/PhysRevB.59.1758)
+[^andrae:preuss:1990-37]: [D. Andrae, U. Häußermann, M. Dolg, H. Stoll, and H. Preuß, *Energy-adjusted ab initio pseudopotentials for the second and third row transition elements*, Theor. Chim. Acta **77** 123 (1990).](https://doi.org/10.1007/BF01114537)
+[^figgen:stoll:2009-38]: [D. Figgen, K. Peterson, M. Dolg, and H. Stoll, *Energy-consistent pseudopotentials and correlation consistent basis sets for the 5d elements Hf–Pt*, J. Chem. Phys. **130** 164108 (2009).](https://doi.org/10.1063/1.3119665)
+[^taheridehkordi:jcp:2023-39]: [A. Taheridehkordi, M. Schlipf, Z. Sukurma, M. Humer, A. Grüneis, and G. Kresse, *Phaseless auxiliary field quantum Monte Carlo with projector-augmented wave method for solids* J. Chem. Phys. **159**, 044109 (2023).](https://doi.org/10.1063/5.0156657)
+[^eshuis:furche:2010-40]: [H. Eshuis, J. Yarkony, and F. Furche, *Fast computation of molecular random phase approximation correlation energies using resolution of the identity and imaginary frequency integration*, J. Chem. Phys. **132** 234114 (2010).](https://doi.org/10.1063/1.3442749)
+[^gruber:prx:2018-41]: [T. Gruber, K. Liao, T. Tsatsoulis, F. Hummel, and A. Grüneis, *Applying the Coupled-Cluster Ansatz to Solids and Surfaces in the Thermodynamic Limit*, Phys. Rev. X **8**, 021043 (2018).](https://doi.org/10.1103/PhysRevX.8.021043)
+[^zhang:grueneis:2019-42]: [I. Zhang and A. Grüneis, *Coupled Cluster Theory in Materials Science*, Front. Mater. **6**, 123:1 (2019).](https://doi.org/10.3389/fmats.2019.00123)
+[^scuseria:jcp:2008-43]: [G. Scuseria, T. Henderson, and D. Sorensen, *The ground state correlation energy of the random phase approximation from a ring coupled cluster doubles approach*, J. Chem. Phys. **129**, 231101 (2008).](https://doi.org/10.1063/1.3043729)
+[^henderson:molphys:2010-44]: [T. Henderson and G. Scuseria, *The connection between self-interaction and static correlation: a random phase approximation perspective*, Mol. Phys. **108**, 2511 (2010).](https://doi.org/10.1080/00268976.2010.507227)
+[^ren:scheffler:2012-45]: [X. Ren, P. Rinke, C. Joas, and M. Scheffler, *Random-phase approximation and its applications in computational chemistry and materials science*, J. Mater. Sci. **47**, 7447 (2012).](https://doi.org/10.1007/s10853-012-6570-4)
+[^harl:2008-46]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^harl:prl:2009-47]: [J. Harl and G. Kresse, *Accurate Bulk Properties from Approximate Many-Body Techniques*, Phys. Rev. Lett. **103**, 056401 (2009).](https://doi.org/10.1103/PhysRevLett.103.056401)
+[^harl:2010-48]: [J. Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126 (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^shi:jacs:2023-49]: [B. Shi, A. Zen, V. Kapil, P. Nagy, A. Grüneis, and A. Michaelides, *Many-Body Methods for Surface Chemistry Come of Age: Achieving Consensus with Experiments*, J. Am. Chem. Soc. **145**, 25372 (2023).](https://doi.org/10.1021/jacs.3c09616)

@@ -20,7 +20,7 @@ diagonal function which converges to $\frac{2m}{\hbar^2
 vectors, and possess a constant value for small
 $\mathbf{G}$ vectors. We actually use the
 preconditioning function proposed by Teter et.
-al<sup>[\[1\]](#cite_note-teter:prb:1989-1)</sup>
+al[^teter:prb:1989-1]
 
 $\langle \mathbf{G} | {\bf K} | \mathbf{G'}\rangle =
 \delta_{\mathbf{G} \mathbf{G'}} \frac{ 27 + 18 x+12 x^2 + 8x^3} {27 +
@@ -37,14 +37,6 @@ p_n \rangle = {\bf K} | R_n \rangle.$
 href="/wiki/index.php?title=Preconditioning&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-teter:prb:1989_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.40.12255"
-    class="external text" rel="nofollow">M. P. Teter, M. C. Payne, and D. C.
-    Allan, Phys. Rev. B <strong>40</strong>, 12255 (1989).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^teter:prb:1989-1]: [M. P. Teter, M. C. Payne, and D. C. Allan, Phys. Rev. B **40**, 12255 (1989).](https://doi.org/10.1103/PhysRevB.40.12255)

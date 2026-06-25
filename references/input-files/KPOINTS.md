@@ -25,7 +25,7 @@ points:
 A [band
 structure](../categories/Category-Band_structure.md) is
 often visualized along high-symmetry paths. Some external
-tools<sup>[\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2)</sup>
+tools[^bilbao:kvec-1][^seekpath-2]
 help to identify these points for materials of any symmetry. Use the
 template below to setup [band-structure
 calculations](#band-structure-calculations). Alternatively, use a
@@ -178,12 +178,12 @@ Use the explicit mode for
 - the irreducible part of the <a href="#generalized_regular_meshes"
   class="mw-selflink-fragment">genereralized regular meshes</a>
   generated for a particular target sampling
-  density.<sup>[\[3\]](#cite_note-wisesa:prb:2016-3)[\[4\]](#cite_note-morgan:cms:2020-4)</sup>
+  density.[^wisesa:prb:2016-3][^morgan:cms:2020-4]
   Generate the corresponding
   KPOINTS files with
-  KpLib<sup>[\[5\]](#cite_note-kplib-5)</sup>
+  KpLib[^kplib-5]
   or
-  autoGR<sup>[\[6\]](#cite_note-auto_gr-6)</sup>.
+  autoGR[^auto_gr-6].
 
 **Tetrahedron method**
 
@@ -247,7 +247,7 @@ KPOINTS file like this
 - The first nonblank character of the third line determines the center
   of the mesh. The possible choice are
   Γ-centered (*G*, *g*) or the Monkhorst-Pack scheme (*M*,
-  *m*).<sup>[\[7\]](#cite_note-monkhorst:prb:1976-7)</sup>
+  *m*).[^monkhorst:prb:1976-7]
 - Specify the desired number of
   subdivisions
   $N_1$, $N_2$ and
@@ -552,12 +552,12 @@ $N_3=4$.
 
 Furthermore, using generalized regular meshes potentially requires fewer
 **k** points compared to Monkhorst-Pack meshes to converge total energy
-calculations.<sup>[\[3\]](#cite_note-wisesa:prb:2016-3)[\[4\]](#cite_note-morgan:cms:2020-4)</sup>
+calculations.[^wisesa:prb:2016-3][^morgan:cms:2020-4]
 Specifically this statement applies to the number of **k** points in the
 irreducible part of the Brillouin zone after symmetry reduction. For the
 moment, however, VASP does not automatically construct optimal
 generalized regular **k**-point meshes. But external
-tools<sup>[\[5\]](#cite_note-kplib-5)[\[6\]](#cite_note-auto_gr-6)</sup>
+tools[^kplib-5][^auto_gr-6]
 construct meshes with certain target sampling density in the spirit of
 the aforementioned publications.
 
@@ -639,7 +639,7 @@ Transforming the same template to Cartesian coordinates produces
       0   0   1   Γ
 
 External
-tools<sup>[\[1\]](#cite_note-bilbao:kvec-1)[\[2\]](#cite_note-seekpath-2)</sup>
+tools[^bilbao:kvec-1][^seekpath-2]
 are useful to decide which paths in the Brillouin zone to include. The
 tools provide the coordinates and the labels for a given structure.
 Because these paths depend on the symmetry, take special care that the
@@ -758,45 +758,10 @@ smearing](../misc/Number_of_k_points_and_method_for_smearing.md)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-bilbao:kvec_1-0)</sup>
-    <sup>[b](#cite_ref-bilbao:kvec_1-1)</sup>
-    <a href="https://www.cryst.ehu.es/cryst/get_kvec.html"
-    class="external text"
-    rel="nofollow">www.cryst.ehu.es/cryst/get_kvec.html (2022).</a>
-2.  ↑
-    <sup>[a](#cite_ref-seekpath_2-0)</sup>
-    <sup>[b](#cite_ref-seekpath_2-1)</sup>
-    <a href="https://www.materialscloud.org/work/tools/seekpath"
-    class="external text"
-    rel="nofollow">www.materialscloud.org/work/tools/seekpath (2022).</a>
-3.  ↑
-    <sup>[a](#cite_ref-wisesa:prb:2016_3-0)</sup>
-    <sup>[b](#cite_ref-wisesa:prb:2016_3-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.93.155109"
-    class="external text" rel="nofollow">P. Wisesa, K.A. McGill, and T.
-    Mueller, Phys. Rev. B <strong>93</strong>, 155109 (2016).</a>
-4.  ↑
-    <sup>[a](#cite_ref-morgan:cms:2020_4-0)</sup>
-    <sup>[b](#cite_ref-morgan:cms:2020_4-1)</sup>
-    <a href="https://doi.org/10.1016/j.commatsci.2019.109340"
-    class="external text" rel="nofollow">W.S. Morgan, J.E. Christensen, P.K.
-    Hamilton, J.J. Jorgensen, B.J. Campbell, G.L.W. Hart, and R.W. Forcade,
-    Comput. Mater. Sci. <strong>173</strong>, 109340 (2020).</a>
-5.  ↑ <sup>[a](#cite_ref-kplib_5-0)</sup>
-    <sup>[b](#cite_ref-kplib_5-1)</sup>
-    <a href="https://muellergroup.jhu.edu/K-Points.html"
-    class="external text"
-    rel="nofollow">https://muellergroup.jhu.edu/K-Points.html (2022).</a>
-6.  ↑
-    <sup>[a](#cite_ref-auto_gr_6-0)</sup>
-    <sup>[b](#cite_ref-auto_gr_6-1)</sup>
-    <a href="https://github.com/msg-byu/autoGR" class="external text"
-    rel="nofollow">https://github.com/msg-byu/autoGR (2022).</a>
-7.  [↑](#cite_ref-monkhorst:prb:1976_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.13.5188" class="external text"
-    rel="nofollow">H.J. Monkhorst and J.D. Pack, Phys. Rev. B
-    <strong>13</strong>, 5188 (1976).</a>
-
-
+[^bilbao:kvec-1]: [www.cryst.ehu.es/cryst/get_kvec.html (2022).](https://www.cryst.ehu.es/cryst/get_kvec.html)
+[^seekpath-2]: [www.materialscloud.org/work/tools/seekpath (2022).](https://www.materialscloud.org/work/tools/seekpath)
+[^wisesa:prb:2016-3]: [P. Wisesa, K.A. McGill, and T. Mueller, Phys. Rev. B **93**, 155109 (2016).](https://doi.org/10.1103/PhysRevB.93.155109)
+[^morgan:cms:2020-4]: [W.S. Morgan, J.E. Christensen, P.K. Hamilton, J.J. Jorgensen, B.J. Campbell, G.L.W. Hart, and R.W. Forcade, Comput. Mater. Sci. **173**, 109340 (2020).](https://doi.org/10.1016/j.commatsci.2019.109340)
+[^kplib-5]: [https://muellergroup.jhu.edu/K-Points.html (2022).](https://muellergroup.jhu.edu/K-Points.html)
+[^auto_gr-6]: [https://github.com/msg-byu/autoGR (2022).](https://github.com/msg-byu/autoGR)
+[^monkhorst:prb:1976-7]: [H.J. Monkhorst and J.D. Pack, Phys. Rev. B **13**, 5188 (1976).](https://doi.org/10.1103/PhysRevB.13.5188)

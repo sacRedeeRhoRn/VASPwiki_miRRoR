@@ -74,7 +74,7 @@ between a harmonic and an anharmonic system.</figcaption>
 
 In the [thermodynamic
 integration](../theory/Thermodynamic_integration.md)
-method,<sup>[\[1\]](#cite_note-dorner:PRL:2018-1)[\[2\]](#cite_note-kirkwood:jcp:1935-2)</sup>
+method,[^dorner:PRL:2018-1][^kirkwood:jcp:1935-2]
 the energy differences of a fully interacting and non-interacting system
 are calculated. This is achieved by making the potential energy depend
 on a coupling parameter and defining the free energy as a smooth
@@ -117,7 +117,7 @@ selected geometric parameters are constrained during the calculations
 using the [ICONST](../input-files/ICONST.md) file. This is achieved by
 extending the Lagrangian with a term incorporating the desired
 constraints ([SHAKE
-algorithm](../theory/Constrained_molecular_dynamics.md)<sup>[\[3\]](#cite_note-ryckaertt:jcp:1977-3)</sup>)
+algorithm](../theory/Constrained_molecular_dynamics.md)[^ryckaertt:jcp:1977-3])
 directly. This method can be used on its own to support molecular
 dynamics calculations but some of the methods on this page also
 incorporate constraints via the same methodology.
@@ -148,7 +148,7 @@ umbrella sampling.</figcaption>
 [Biased molecular
 dynamics](../theory/Biased_molecular_dynamics.md)
 refers to methods introducing a biased potential
-<sup>[\[4\]](#cite_note-frenkel:ap-book:2002-4)</sup>.
+[^frenkel:ap-book:2002-4].
 In one of this method's most popular representatives, the umbrella
 sampling or umbrella integration, the biased potential is used to pin
 the system to given configurations. This way the sampling of a system is
@@ -186,7 +186,7 @@ minima.</figcaption>
 </figure>
 
 In
-[metadynamics](../theory/Metadynamics.md),<sup>[\[5\]](#cite_note-laio:pnas:02-5)[\[6\]](#cite_note-iannuzzi:prl:03-6)</sup>
+[metadynamics](../theory/Metadynamics.md),[^laio:pnas:02-5][^iannuzzi:prl:03-6]
 a [biased potential](../input-files/PENALTYPOT.md) that acts on a few
 selected geometric parameters (collective variables) is added to the
 Hamiltonian of a system. The biased potential is constantly built up
@@ -220,11 +220,11 @@ the unbiased free-energy derivative.</figcaption>
 </figure>
 
 The [blue moon ensemble](../theory/Blue_moon_ensemble.md)
-method<sup>[\[7\]](#cite_note-carter:kapral:1989-7)</sup>
+method[^carter:kapral:1989-7]
 is designed to calculate the free energy profile along the path of
 selected reaction coordinates. It also employs constraining of the atoms
 during molecular dynamics ([SHAKE
-algorithm](../theory/Constrained_molecular_dynamics.md)<sup>[\[3\]](#cite_note-ryckaertt:jcp:1977-3)</sup>).
+algorithm](../theory/Constrained_molecular_dynamics.md)[^ryckaertt:jcp:1977-3]).
 The term "[blue moon](../incar-tags/LBLUEOUT.md)" refers to rare events
 such as the "moon turning blue".
 
@@ -255,14 +255,14 @@ followed linearly on a reaction coordinate (x) from the reactant state
 </figure>
 
 In the [slow-growth
-approach](../theory/Slow-growth_approach.md),<sup>[\[8\]](#cite_note-woo:ziegler:1997-8)</sup>
+approach](../theory/Slow-growth_approach.md),[^woo:ziegler:1997-8]
 the free energy profile is scanned along a reaction coordinate. The
 scanning is done by linearly changing the reaction coordinate from that
 of the reactant state to that of a transition or product state via
 [constrained molecular
 dynamics](../theory/Constrained_molecular_dynamics.md)
 ([SHAKE
-algorithm](../theory/Constrained_molecular_dynamics.md)<sup>[\[3\]](#cite_note-ryckaertt:jcp:1977-3)</sup>).
+algorithm](../theory/Constrained_molecular_dynamics.md)[^ryckaertt:jcp:1977-3]).
 
 Like in the [blue moon
 ensemble](../theory/Blue_moon_ensemble.md), this method is
@@ -295,7 +295,7 @@ interface.</figcaption>
 </figure>
 
 In [interface
-pinning](../theory/Interface_pinning.md),<sup>[\[9\]](#cite_note-pedersen:prb:13-9)</sup>
+pinning](../theory/Interface_pinning.md),[^pedersen:prb:13-9]
 two different phases of the same system are simulated in a single
 simulation box. The goal of this method is to look for the right
 conditions where both phases would coexist, which corresponds to a phase
@@ -327,10 +327,10 @@ title="Edit section: Books">edit</a> \| (./index.php.md)\]
 
 - *Statistical Mechanics: Theory and Molecular Simulation* by M.
   Tuckerman
-  <sup>[\[10\]](#cite_note-tuckerman:book:2023-10)</sup>.
+  [^tuckerman:book:2023-10].
 - *Understanding Molecular Simulation - From Algorithms to Applications*
   by D. Frenkel and B. Smit
-  <sup>[\[11\]](#cite_note-frenkel:smit:2023-11)</sup>.
+  [^frenkel:smit:2023-11].
 
 ### Tutorials\[<a
 href="/wiki/index.php?title=Category:Advanced_molecular-dynamics_sampling&amp;veaction=edit&amp;section=10"
@@ -363,57 +363,14 @@ href="/wiki/index.php?title=Category:Advanced_molecular-dynamics_sampling&amp;ve
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-dorner:PRL:2018_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.121.195701"
-    class="external text" rel="nofollow">F. Dorner, Z. Sukurma, C. Dellago,
-    and G. Kresse, Phys. Rev. Lett. <strong>121</strong>, 195701 (2018).</a>
-2.  [↑](#cite_ref-kirkwood:jcp:1935_2-0)
-    <a href="https://doi.org/10.1063/1.1749657" class="external text"
-    rel="nofollow">J. Kirkwood, <em>Statistical Mechanics of Fluid
-    Mixtures</em>, J. Chem. Phys. <strong>3</strong>, 300–313 (1935).</a>
-3.  ↑
-    <sup>[a](#cite_ref-ryckaertt:jcp:1977_3-0)</sup>
-    <sup>[b](#cite_ref-ryckaertt:jcp:1977_3-1)</sup>
-    <sup>[c](#cite_ref-ryckaertt:jcp:1977_3-2)</sup>
-    <a href="http://dx.doi.org/10.1016/0021-9991(77)90098-5"
-    class="external text" rel="nofollow">J. P. Ryckaert, G. Ciccotti, and H.
-    J. C. Berendsen, J. Comp. Phys. <strong>23</strong>, 327 (1977).</a>
-4.  [↑](#cite_ref-frenkel:ap-book:2002_4-0)
-    <a href="http://doi.org/10.1016/0021-9991(77)90121-8"
-    class="external text" rel="nofollow">D. Frenkel and B. Smit,
-    <em>Understanding molecular simulations: from algorithms to
-    applications</em>, Academic Press: San Diego, 2002.</a>
-5.  [↑](#cite_ref-laio:pnas:02_5-0)
-    <a href="https://doi.org/10.1073/pnas.202427399" class="external text"
-    rel="nofollow">R. A. Laio and M. Parrinello, Proc. Natl. Acad, Sci. USA
-    <strong>99</strong>, 12562 (2002).</a>
-6.  [↑](#cite_ref-iannuzzi:prl:03_6-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.90.238302"
-    class="external text" rel="nofollow">M. Iannuzzi, A. Laio, and M.
-    Parrinello, Phys. Rev. Lett. <strong>90</strong>, 238302 (2003).</a>
-7.  [↑](#cite_ref-carter:kapral:1989_7-0)
-    <a href="https://doi.org/10.1016/S0009-2614(89)87314-2"
-    class="external text" rel="nofollow">E. Carter, G. Ciccotti, J. Hynes,
-    R. Kapral, Chem. Phys. Lett., <strong>156</strong>, 472 (1989).</a>
-8.  [↑](#cite_ref-woo:ziegler:1997_8-0)
-    <a href="https://doi.org/10.1021/jp9717296" class="external text"
-    rel="nofollow">T. Woo, P. Margl, P. Blöchl, T. Ziegler. J. Phys. Chem.,
-    <strong>101</strong>, 40 (1997)</a>
-9.  [↑](#cite_ref-pedersen:prb:13_9-0)
-    <a href="https://doi.org/10.1103/PhysRevB.88.094101"
-    class="external text" rel="nofollow">U. R. Pedersen, F. Hummel, G.
-    Kresse, G. Kahl, and C. Dellago, Phys. Rev. B <strong>88</strong>,
-    094101 (2013).</a>
-10. [↑](#cite_ref-tuckerman:book:2023_10-0)
-    <a href="https://doi.org/10.1093/oso/9780198825562.001.0001"
-    class="external text" rel="nofollow">M. Tuckerman, <em>Statistical
-    Mechanics: Theory and Molecular Simulation (2nd edn)</em>, Oxford
-    University Press (2023).</a>
-11. [↑](#cite_ref-frenkel:smit:2023_11-0)
-    <a href="https://doi.org/10.1016/B978-0-12-267351-1.X5000-7"
-    class="external text" rel="nofollow">D. Frenkel, B. Smit,
-    <em>Understanding Molecular Simulation - From Algorithms to Applications
-    (2nd edn)</em>, Elsevier Science (2023).</a>
-
-
+[^dorner:PRL:2018-1]: [F. Dorner, Z. Sukurma, C. Dellago, and G. Kresse, Phys. Rev. Lett. **121**, 195701 (2018).](https://doi.org/10.1103/PhysRevLett.121.195701)
+[^kirkwood:jcp:1935-2]: [J. Kirkwood, *Statistical Mechanics of Fluid Mixtures*, J. Chem. Phys. **3**, 300–313 (1935).](https://doi.org/10.1063/1.1749657)
+[^ryckaertt:jcp:1977-3]: [J. P. Ryckaert, G. Ciccotti, and H. J. C. Berendsen, J. Comp. Phys. **23**, 327 (1977).](http://dx.doi.org/10.1016/0021-9991(77)90098-5)
+[^frenkel:ap-book:2002-4]: [D. Frenkel and B. Smit, *Understanding molecular simulations: from algorithms to applications*, Academic Press: San Diego, 2002.](http://doi.org/10.1016/0021-9991(77)90121-8)
+[^laio:pnas:02-5]: [R. A. Laio and M. Parrinello, Proc. Natl. Acad, Sci. USA **99**, 12562 (2002).](https://doi.org/10.1073/pnas.202427399)
+[^iannuzzi:prl:03-6]: [M. Iannuzzi, A. Laio, and M. Parrinello, Phys. Rev. Lett. **90**, 238302 (2003).](https://doi.org/10.1103/PhysRevLett.90.238302)
+[^carter:kapral:1989-7]: [E. Carter, G. Ciccotti, J. Hynes, R. Kapral, Chem. Phys. Lett., **156**, 472 (1989).](https://doi.org/10.1016/S0009-2614(89)87314-2)
+[^woo:ziegler:1997-8]: [T. Woo, P. Margl, P. Blöchl, T. Ziegler. J. Phys. Chem., **101**, 40 (1997)](https://doi.org/10.1021/jp9717296)
+[^pedersen:prb:13-9]: [U. R. Pedersen, F. Hummel, G. Kresse, G. Kahl, and C. Dellago, Phys. Rev. B **88**, 094101 (2013).](https://doi.org/10.1103/PhysRevB.88.094101)
+[^tuckerman:book:2023-10]: [M. Tuckerman, *Statistical Mechanics: Theory and Molecular Simulation (2nd edn)*, Oxford University Press (2023).](https://doi.org/10.1093/oso/9780198825562.001.0001)
+[^frenkel:smit:2023-11]: [D. Frenkel, B. Smit, *Understanding Molecular Simulation - From Algorithms to Applications (2nd edn)*, Elsevier Science (2023).](https://doi.org/10.1016/B978-0-12-267351-1.X5000-7)

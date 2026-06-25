@@ -25,22 +25,22 @@ class="mw-editsection-visualeditor"
 title="Edit section: Basics of the PAW formalism">edit</a> \| (./index.php.md)\]
 
 The PAW formalism is a generalization of ideas of both
-Vanderbilt-type<sup>[\[1\]](#cite_note-vander:90-1)</sup>
-ultrasoft-pseudopotentials<sup>[\[2\]](#cite_note-kresshaf:94-2)</sup>
+Vanderbilt-type[^vander:90-1]
+ultrasoft-pseudopotentials[^kresshaf:94-2]
 (USPP) and the linearized
-augmented-plane-wave<sup>[\[3\]](#cite_note-andersen:75-3)</sup>
+augmented-plane-wave[^andersen:75-3]
 (LAPW) method. The method was first proposed and implemented by
-Blöchl<sup>[\[4\]](#cite_note-bloechl:94-4)</sup>.
+Blöchl[^bloechl:94-4].
 The formal relationship between Vanderbilt-type ultrasoft
 pseudopotentials and the PAW method has been derived by Kresse and
-Joubert<sup>[\[5\]](#cite_note-kressjoub:99-5)</sup>,
+Joubert[^kressjoub:99-5],
 and the generalization of the PAW method to noncollinear magnetism has
 been discussed by Hobbs, Kresse and
-Hafner<sup>[\[6\]](#cite_note-hobbs:00-6)</sup>.
+Hafner[^hobbs:00-6].
 We briefly summarize the basics of the PAW method below (following Refs.
-<sup>[\[4\]](#cite_note-bloechl:94-4)</sup>
+[^bloechl:94-4]
 and
-<sup>[\[5\]](#cite_note-kressjoub:99-5)</sup>).
+[^kressjoub:99-5]).
 
 In the PAW method the one electron wavefunctions
 $\psi_{n\mathbf{k}}$, in the following simply called
@@ -139,7 +139,7 @@ $n(\mathbf{r}) =
 \psi^{\ast}_{n\mathbf{k}}(\mathbf{r})\\\psi_{m\mathbf{k}}(\mathbf{r})$
 
 can be rewritten as (for details we refer to Ref.
-<sup>[\[4\]](#cite_note-bloechl:94-4)</sup>):
+[^bloechl:94-4]):
 
 $n(\mathbf{r}) = \widetilde{n} (\mathbf{r}) -
 \widetilde{n}^{1}(\mathbf{r})+ n^{1}(\mathbf{r}).$
@@ -232,7 +232,7 @@ $n^{1}$ is identical to that of
 $\widetilde{n}^{1}+\widehat{n}$ outside the augmentation
 sphere. Details on the construction of the compensation charge density
 in the VASP program have been published
-elsewhere<sup>[\[5\]](#cite_note-kressjoub:99-5)</sup>.
+elsewhere[^kressjoub:99-5].
 The compensation charge density is written in the form of a one-center
 multipole expansion
 
@@ -252,47 +252,17 @@ Y_{LM}(\widehat{\mathbf{r}-\mathbf{R}_\alpha}).$
 The moment $L$ of the
 function $g_L(r)$ is
 equal to 1. The quantity $q_{\alpha\beta}^{LM}$ is defined in Eq. (25) of Ref.
-<sup>[\[5\]](#cite_note-kressjoub:99-5)</sup>.
+[^kressjoub:99-5].
 
 ## References\[<a
 href="/wiki/index.php?title=Projector-augmented-wave_formalism&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-vander:90_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.41.7892" class="external text"
-    rel="nofollow">D. Vanderbilt, Phys. Rev. B 41, 7892 (1990).</a>
-2.  [↑](#cite_ref-kresshaf:94_2-0)
-    <a
-    href="http://iopscience.iop.org/article/10.1088/0953-8984/6/40/015/pdf"
-    class="external text" rel="nofollow">G. Kresse, and J. Hafner, J. Phys.:
-    Condens. Matter 6, 8245 (1994).</a> 
-3.  [↑](#cite_ref-andersen:75_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.12.3060" class="external text"
-    rel="nofollow">O.K. Andersen, Phys. Rev. B 12, 3060 (1975).</a>
-    
-4.  ↑
-    <sup>[a](#cite_ref-bloechl:94_4-0)</sup>
-    <sup>[b](#cite_ref-bloechl:94_4-1)</sup>
-    <sup>[c](#cite_ref-bloechl:94_4-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.50.17953"
-    class="external text" rel="nofollow">P.E. Blöchl, Phys. Rev. B 50, 17953
-    (1994).</a> 
-5.  ↑
-    <sup>[a](#cite_ref-kressjoub:99_5-0)</sup>
-    <sup>[b](#cite_ref-kressjoub:99_5-1)</sup>
-    <sup>[c](#cite_ref-kressjoub:99_5-2)</sup>
-    <sup>[d](#cite_ref-kressjoub:99_5-3)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.59.1758" class="external text"
-    rel="nofollow">G. Kresse, and D. Joubert, Phys. Rev. B 59, 1758
-    (1999).</a> 
-6.  [↑](#cite_ref-hobbs:00_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.62.11556"
-    class="external text" rel="nofollow">D. Hobbs, G. Kresse, and J. Hafner,
-    Phys. Rev. B. 62 (2000).</a> 
-
-
 ------------------------------------------------------------------------
 
-
+[^vander:90-1]: [D. Vanderbilt, Phys. Rev. B 41, 7892 (1990).](https://doi.org/10.1103/PhysRevB.41.7892)
+[^kresshaf:94-2]: [G. Kresse, and J. Hafner, J. Phys.: Condens. Matter 6, 8245 (1994).](http://iopscience.iop.org/article/10.1088/0953-8984/6/40/015/pdf)
+[^andersen:75-3]: [O.K. Andersen, Phys. Rev. B 12, 3060 (1975).](https://doi.org/10.1103/PhysRevB.12.3060)
+[^bloechl:94-4]: [P.E. Blöchl, Phys. Rev. B 50, 17953 (1994).](https://doi.org/10.1103/PhysRevB.50.17953)
+[^kressjoub:99-5]: [G. Kresse, and D. Joubert, Phys. Rev. B 59, 1758 (1999).](https://doi.org/10.1103/PhysRevB.59.1758)
+[^hobbs:00-6]: [D. Hobbs, G. Kresse, and J. Hafner, Phys. Rev. B. 62 (2000).](https://doi.org/10.1103/PhysRevB.62.11556)

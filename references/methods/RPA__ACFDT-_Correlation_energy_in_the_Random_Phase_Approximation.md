@@ -43,7 +43,7 @@ theorem and is an alternative way to derive the energy expression for
 the correlation energy in the random phase approximation (RPA). In the
 following, the diagrammatic description is presented. For the ACFDT
 formulation, the reader is referred to the
-literature.<sup>[\[1\]](#cite_note-harl:2008-1)</sup>
+literature.[^harl:2008-1]
 There is also a lecture
 <a href="https://youtu.be/0hV5bTpY89M" class="external text"
 rel="nofollow">introducing RPA</a> on our YouTube channel.
@@ -65,13 +65,13 @@ the homogeneous electron gas and was later recognized by Gell-Mann and
 Brueckner as an approximation of $E_c$ that can
 be expressed in the same language as Feynman used a few years earlier to
 describe the positron.
-<sup>[\[2\]](#cite_note-bohm:pr:82-2)[\[3\]](#cite_note-gell-mann:pr:106-3)[\[4\]](#cite_note-feynman:pr:76-4)</sup>
+[^bohm:pr:82-2][^gell-mann:pr:106-3][^feynman:pr:76-4]
 
 Feynman's diagrammatic approach is based on quantum field theory (QFT),
 which in turn is based on the Gell-Mann and Low theorem. This theorem
 states that the eigenstate of an interacting Hamiltonian can be
 expressed in terms of the eigenstates of the non-interacting
-one.<sup>[\[5\]](#cite_note-gell-mann:pr:84-5)</sup>
+one.[^gell-mann:pr:84-5]
 For this reason, each diagrammatic calculation, like the RPA or
 [GW](GW_approximation_of_Hedin's_equations.md),
 requires the solution of the non-interacting Hamiltonian
@@ -90,7 +90,7 @@ $|\Psi_0\rangle$, causing fluctuations at a specific
 point in time. The main idea of QFT is to understand observations, which
 can be measured by an observer, as a collective phenomenon of all
 possible
-fluctuations.<sup>[\[6\]](#cite_note-mattuck:2012-6)</sup>
+fluctuations.[^mattuck:2012-6]
 
 Thereby, fluctuations are understood as the creation of virtual
 electrons (and holes) that interact with each other and are annihilated
@@ -146,12 +146,12 @@ S_\eta(0,-\infty)|\Psi_\nu\rangle}{\langle
 \Omega_\nu|\Psi_\nu\rangle}$
 
 are the eigenstates of the interacting
-Hamiltonian.<sup>[\[5\]](#cite_note-gell-mann:pr:84-5)</sup>
+Hamiltonian.[^gell-mann:pr:84-5]
 
 We follow the common literature and suppress the infinitesimal
 $\eta$ in the following bearing in mind that the limit
 $\eta \to 0$ is performed at the very end of the
-calculation.<sup>[\[7\]](#cite_note-negele:1988-7)[\[8\]](#cite_note-fetter:2003-8)</sup>
+calculation.[^negele:1988-7][^fetter:2003-8]
 
 ### Diagrammatic perturbation theory\[<a
 href="/wiki/index.php?title=RPA/ACFDT:_Correlation_energy_in_the_Random_Phase_Approximation&amp;veaction=edit&amp;section=3"
@@ -160,7 +160,7 @@ title="Edit section: Diagrammatic perturbation theory">edit</a> \| (./index.php.
 
 A consequence of the Gell-Mann and Low theorem, is the following form of
 the interacting groundstate
-energy<sup>[\[8\]](#cite_note-fetter:2003-8)</sup>
+energy[^fetter:2003-8]
 
 $E_{tot}=E_0 = \langle \Omega_0|\hat H|\Omega_0\rangle =
 \frac{\langle\Psi_0| \hat S(\infty,-\infty)\hat
@@ -173,7 +173,7 @@ expanding the time-evolution operator $\hat S$ into
 a series. The resulting matrix-elements of creation and annihilation
 operators are evaluated term by term using the canonical anti-commutator
 relations defined above (Wick's
-theorem<sup>[\[9\]](#cite_note-wick:1950-9)</sup>).
+theorem[^wick:1950-9]).
 It follows that all terms in perturbation theory are expressed by only
 two quantities, the non-interacting Feynman propagator
 
@@ -208,7 +208,7 @@ G_0(3,4)G_0(4,3), \quad {\rm d}(1,\cdots,4) = {\rm d}{\bf r}_1{\rm
 d}t_1\cdots {\rm d}{\bf r}_4{\rm d}t_4$
 
 All Feynman rules can be found in the book of Negele and Orland or
-elsewhere.<sup>[\[7\]](#cite_note-negele:1988-7)[\[8\]](#cite_note-fetter:2003-8)</sup>
+elsewhere.[^negele:1988-7][^fetter:2003-8]
 
 ## The random-phase approximation\[<a
 href="/wiki/index.php?title=RPA/ACFDT:_Correlation_energy_in_the_Random_Phase_Approximation&amp;veaction=edit&amp;section=4"
@@ -235,7 +235,7 @@ particle polarizability is of bosonic character. Because the RPA
 neglects all non-bosonic terms in the perturbation series, it
 corresponds essentially to a "bosonization" of the many-body problem for
 which the n-th order term can be written analytically
-as<sup>[\[7\]](#cite_note-negele:1988-7)</sup>
+as[^negele:1988-7]
 
 $E^{(n)}_{\rm dMP} = \frac1{2n}\int_{-\infty}^\infty\frac{{\rm
 d}\omega}{2\pi} {\rm Tr}\left\[ \tilde \chi_0(\omega) \cdot V
@@ -273,7 +273,7 @@ q},\omega_n)=\tilde \chi_0({\bf q+G},{\bf q+G}',\omega_n)$ on each of the $N_{\b
 sampling points of the first Brillouin zone for
 $N_{\omega}$ frequency points. The number of frequency
 points is reduced drastically, by performing the integration over the
-imaginary frequency axis $\omega\to i\omega$.<sup>[\[10\]](#cite_note-kaltak:2014-10)</sup>
+imaginary frequency axis $\omega\to i\omega$.[^kaltak:2014-10]
 
 The independent particle polarizability on the imaginary axis can be
 determined with two alternative methods.
@@ -285,8 +285,8 @@ title="Edit section: Quartic scaling RPA: Direct calculation">edit</a> \| (./ind
 
 Direct calculation of $\tilde\chi^0$
 using the formula of Adler and
-Wiser<sup>[\[11\]](#cite_note-adler:1962-11)</sup>
-<sup>[\[12\]](#cite_note-wiser:1963-12)</sup>
+Wiser[^adler:1962-11]
+[^wiser:1963-12]
 
 $\tilde\chi^0_{{\bf GG}'}({\bf q},i\omega) = \sum\limits_{{\bf k}\in
 BZ}\sum\limits_{n,n'} \frac{ f_{n{\bf k}}(1 - f_{n{\bf k-q}}) }{
@@ -308,7 +308,7 @@ title="Edit section: Cubic scaling RPA: Contraction of imaginary time Green&#39;
 
 An alternative way to determine $\tilde\chi^0$
 is to frist determine imaginary time Green's functions of the
-form<sup>[\[13\]](#cite_note-rojas:prl:1995-13)</sup>
+form[^rojas:prl:1995-13]
 
 $G_0({\bf r,r'},i\tau) = \sum\limits_{{\bf k}\in BZ}\sum\limits_{n}
 \phi_{n{\bf k}}({\bf r})\phi_{n \bf k}^\*({\bf r'})
@@ -325,7 +325,7 @@ Although more evolved, this approach has the advantage that the
 computational cost for the determination of $\tilde \chi_0$ scales with $N_\omega N_{\bf k} N_{\bf
 G}^3$ and is essentially only cubic in system size. The
 space-time method allows to study relatively large systems with the
-RPA.<sup>[\[14\]](#cite_note-kaltak:prb:2014-14)</sup>
+RPA.[^kaltak:prb:2014-14]
 
 ## Basis set convergence of RPA-ACFDT calculations\[<a
 href="/wiki/index.php?title=RPA/ACFDT:_Correlation_energy_in_the_Random_Phase_Approximation&amp;veaction=edit&amp;section=8"
@@ -358,7 +358,7 @@ Since correlation energies converge very slowly with respect to
 $\mathbf{G}_{\rm max }$, VASP automatically
 extrapolates to the infinite basis set limit using a linear regression
 to the equation:
-<sup>[\[1\]](#cite_note-harl:2008-1)[\[15\]](#cite_note-harl:2010-15)[\[16\]](#cite_note-klimes:2014-16)</sup>
+[^harl:2008-1][^harl:2010-15][^klimes:2014-16]
 
 $E_{\mathrm{c}}({\mathbf{G}})=E_{\mathrm{c}}(\infty)+\frac{A}{{\mathbf{G}}^3}$.
 
@@ -368,7 +368,7 @@ Furthermore, the Coulomb kernel is smoothly truncated between
 function (Hann window function). Alternatively, the basis set
 extrapolation can be performed by setting
 [LSCK](../incar-tags/LSCK.md)=.TRUE., using the squeezed Coulomb kernel
-method.<sup>[\[17\]](#cite_note-riemelmoser:jcp:2020-17)</sup>
+method.[^riemelmoser:jcp:2020-17]
 
 The default for [ENCUTGWSOFT](../incar-tags/ENCUTGWSOFT.md) is
 0.8$\times$[ENCUTGW](../incar-tags/ENCUTGW.md) (again we do
@@ -376,7 +376,7 @@ not recommend to change this default).
 
 The integral over $\omega$ is
 evaluated by means of a highly accurate minimax
-integration.<sup>[\[10\]](#cite_note-kaltak:2014-10)</sup>
+integration.[^kaltak:2014-10]
 The number of $\omega$
 points is determined by the flag [NOMEGA](../incar-tags/NOMEGA.md),
 whereas the energy range of transitions is determined by the band gap
@@ -408,7 +408,7 @@ title="Edit section: Matsubara Formalism: Metallic systems at finite Temperature
 The zero-temperature formalism of many-body perturbation theory breaks
 down for metals (systems with zero energy band-gap) as pointed out by
 Kohn and
-Luttinger.<sup>[\[18\]](#cite_note-KohnLuttinger:PR:1960-18)</sup>
+Luttinger.[^KohnLuttinger:PR:1960-18]
 This conundrum is lifted by considering diagrammatic perturbation theory
 at finite temperature $T>0$, which
 may be understood by an analytical continuation of the real-time
@@ -417,7 +417,7 @@ Matsubara has shown that this Wick rotation in time
 $t\to-i\tau$ reveals an intriguing connection to the
 inverse temperature $\beta=1/T$ of
 the
-system.<sup>[\[19\]](#cite_note-Matsubara:PTP:1955-19)</sup>
+system.[^Matsubara:PTP:1955-19]
 More precisely, Matsubara has shown that all terms in perturbation
 theory at finite temperature can be expressed as integrals of imaginary
 time quantities (such as the polarizability $\chi(-i\tau)$) over the fundamental interval
@@ -449,7 +449,7 @@ Although formally convenient, the Matsubara series converges poorly with
 the number of considered terms in practice. VASP, therefore, uses a
 compressed representation of the Fourier modes by employing the
 Minimax-Isometry
-method.<sup>[\[20\]](#cite_note-Kaltak:PRB:2020-20)</sup>
+method.[^Kaltak:PRB:2020-20]
 This approach converges exponentially with the number of considered
 frequency points.
 
@@ -480,99 +480,23 @@ href="/wiki/index.php?title=RPA/ACFDT:_Correlation_energy_in_the_Random_Phase_Ap
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-harl:2008_1-0)</sup>
-    <sup>[b](#cite_ref-harl:2008_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl and G. Kresse, Phys. Rev. B
-    <strong>77</strong>, 045136 (2008).</a>
-2.  [↑](#cite_ref-bohm:pr:82_2-0)
-    <a href="https://doi.org/10.1103/PhysRev.82.625" class="external text"
-    rel="nofollow">D. Bohm and D. Pines, J. Phys. <strong>82</strong>, 625
-    (1951).</a>
-3.  [↑](#cite_ref-gell-mann:pr:106_3-0)
-    <a href="https://doi.org/10.1103/PhysRev.106.364" class="external text"
-    rel="nofollow">M. Gell-Mann and K. Brueckner, J. Phys.
-    <strong>106</strong>, 364 (1957).</a>
-4.  [↑](#cite_ref-feynman:pr:76_4-0)
-    <a href="https://doi.org/10.1103/PhysRev.76.749" class="external text"
-    rel="nofollow">R. P. Feynman, J. Phys. <strong>76</strong>, 749
-    (1948).</a>
-5.  ↑
-    <sup>[a](#cite_ref-gell-mann:pr:84_5-0)</sup>
-    <sup>[b](#cite_ref-gell-mann:pr:84_5-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRev.84.350" class="external text"
-    rel="nofollow">M. Gell-Mann and F. Low, J. Phys. <strong>84</strong>,
-    350 (1951).</a>
-6.  [↑](#cite_ref-mattuck:2012_6-0)
-    <a href="https://books.google.at/books?id=1P_DAgAAQBAJ&amp;hl=en"
-    class="external text" rel="nofollow">R. D. Mattuck, Dover Books on
-    Physics (2012).</a>
-7.  ↑
-    <sup>[a](#cite_ref-negele:1988_7-0)</sup>
-    <sup>[b](#cite_ref-negele:1988_7-1)</sup>
-    <sup>[c](#cite_ref-negele:1988_7-2)</sup>
-    <a
-    href="https://books.google.at/books/about/Quantum_many_particle_systems.html?id=EV8sAAAAYAAJ&amp;redir_esc=y"
-    class="external text" rel="nofollow">J. Negele and H. Orland, Frontiers
-    in Physics (1988).</a>
-8.  ↑
-    <sup>[a](#cite_ref-fetter:2003_8-0)</sup>
-    <sup>[b](#cite_ref-fetter:2003_8-1)</sup>
-    <sup>[c](#cite_ref-fetter:2003_8-2)</sup>
-    <a
-    href="https://books.google.at/books/about/Quantum_Theory_of_Many_particle_Systems.html?id=0wekf1s83b0C&amp;redir_esc=y"
-    class="external text" rel="nofollow">A. L. Fetter and J. D. Walecka,
-    Dover Books on Physics (2003).</a>
-9.  [↑](#cite_ref-wick:1950_9-0)
-    <a href="https://doi.org/10.1103/PhysRev.80.268" class="external text"
-    rel="nofollow">G. C. Wick, Phys. Rev. <strong>80</strong>, 268
-    (1950).</a>
-10. ↑
-    <sup>[a](#cite_ref-kaltak:2014_10-0)</sup>
-    <sup>[b](#cite_ref-kaltak:2014_10-1)</sup>
-    <a href="https://doi.org/10.1021/ct5001268" class="external text"
-    rel="nofollow">M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory
-    Comput. <strong>10</strong>, 2498-2507 (2014).</a>
-11. [↑](#cite_ref-adler:1962_11-0)
-    <a href="https://doi.org/10.1103/PhysRev.126.413" class="external text"
-    rel="nofollow">S. L. Adler, Phys. Rev. <strong>126</strong>, 413
-    (1962)</a>
-12. [↑](#cite_ref-wiser:1963_12-0)
-    <a href="https://doi.org/10.1103/PhysRev.129.62" class="external text"
-    rel="nofollow">N. Wiser, Phys. Rev. <strong>129</strong>, 62 (1963)</a>
-13. [↑](#cite_ref-rojas:prl:1995_13-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.74.1827"
-    class="external text" rel="nofollow">H. N. Rojas, R. W. Godby, and R. J.
-    Needs, Phys. Rev. Lett. <strong>74</strong>, 1827 (1995).</a>
-14. [↑](#cite_ref-kaltak:prb:2014_14-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.054115"
-    class="external text" rel="nofollow">M. Kaltak, J. Klimeš, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 054115 (2014).</a>
-15. [↑](#cite_ref-harl:2010_15-0)
-    <a href="https://doi.org/10.1103/PhysRevB.81.115126"
-    class="external text" rel="nofollow">J. Harl, L. Schimka, and G. Kresse,
-    Phys. Rev. B <strong>81</strong>, 115126 (2010).</a>
-16. [↑](#cite_ref-klimes:2014_16-0)
-    <a href="https://doi.org/10.1103/PhysRevB.90.075125"
-    class="external text" rel="nofollow">J. Klimeš, M. Kaltak, and G.
-    Kresse, Phys. Rev. B <strong>90</strong>, 075125 (2014).</a>
-17. [↑](#cite_ref-riemelmoser:jcp:2020_17-0)
-    <a href="https://doi.org/10.1063/5.0002246" class="external text"
-    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>152(13)</strong>, 134103 (2020).</a>
-18. [↑](#cite_ref-KohnLuttinger:PR:1960_18-0)
-    <a href="https://doi.org/10.1103/PhysRev.118.41" class="external text"
-    rel="nofollow">W. Kohn and J. M. Luttinger, Phys. Rev.
-    <strong>118</strong>, 41 (1960).</a>
-19. [↑](#cite_ref-Matsubara:PTP:1955_19-0)
-    <a href="https://doi.org/10.1143/PTP.14.351" class="external text"
-    rel="nofollow">T. Matsubara, Prog. Theor. Phys. <strong>14</strong>, 351
-    (1955).</a>
-20. [↑](#cite_ref-Kaltak:PRB:2020_20-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-
-
+[^harl:2008-1]: [J. Harl and G. Kresse, Phys. Rev. B **77**, 045136 (2008).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^bohm:pr:82-2]: [D. Bohm and D. Pines, J. Phys. **82**, 625 (1951).](https://doi.org/10.1103/PhysRev.82.625)
+[^gell-mann:pr:106-3]: [M. Gell-Mann and K. Brueckner, J. Phys. **106**, 364 (1957).](https://doi.org/10.1103/PhysRev.106.364)
+[^feynman:pr:76-4]: [R. P. Feynman, J. Phys. **76**, 749 (1948).](https://doi.org/10.1103/PhysRev.76.749)
+[^gell-mann:pr:84-5]: [M. Gell-Mann and F. Low, J. Phys. **84**, 350 (1951).](https://doi.org/10.1103/PhysRev.84.350)
+[^mattuck:2012-6]: [R. D. Mattuck, Dover Books on Physics (2012).](https://books.google.at/books?id=1P_DAgAAQBAJ&hl=en)
+[^negele:1988-7]: [J. Negele and H. Orland, Frontiers in Physics (1988).](https://books.google.at/books/about/Quantum_many_particle_systems.html?id=EV8sAAAAYAAJ&redir_esc=y)
+[^fetter:2003-8]: [A. L. Fetter and J. D. Walecka, Dover Books on Physics (2003).](https://books.google.at/books/about/Quantum_Theory_of_Many_particle_Systems.html?id=0wekf1s83b0C&redir_esc=y)
+[^wick:1950-9]: [G. C. Wick, Phys. Rev. **80**, 268 (1950).](https://doi.org/10.1103/PhysRev.80.268)
+[^kaltak:2014-10]: [M. Kaltak, J. Klimeš, and G. Kresse, J. Chem. Theory Comput. **10**, 2498-2507 (2014).](https://doi.org/10.1021/ct5001268)
+[^adler:1962-11]: [S. L. Adler, Phys. Rev. **126**, 413 (1962)](https://doi.org/10.1103/PhysRev.126.413)
+[^wiser:1963-12]: [N. Wiser, Phys. Rev. **129**, 62 (1963)](https://doi.org/10.1103/PhysRev.129.62)
+[^rojas:prl:1995-13]: [H. N. Rojas, R. W. Godby, and R. J. Needs, Phys. Rev. Lett. **74**, 1827 (1995).](https://doi.org/10.1103/PhysRevLett.74.1827)
+[^kaltak:prb:2014-14]: [M. Kaltak, J. Klimeš, and G. Kresse, Phys. Rev. B **90**, 054115 (2014).](https://doi.org/10.1103/PhysRevB.90.054115)
+[^harl:2010-15]: [J. Harl, L. Schimka, and G. Kresse, Phys. Rev. B **81**, 115126 (2010).](https://doi.org/10.1103/PhysRevB.81.115126)
+[^klimes:2014-16]: [J. Klimeš, M. Kaltak, and G. Kresse, Phys. Rev. B **90**, 075125 (2014).](https://doi.org/10.1103/PhysRevB.90.075125)
+[^riemelmoser:jcp:2020-17]: [S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys. **152(13)**, 134103 (2020).](https://doi.org/10.1063/5.0002246)
+[^KohnLuttinger:PR:1960-18]: [W. Kohn and J. M. Luttinger, Phys. Rev. **118**, 41 (1960).](https://doi.org/10.1103/PhysRev.118.41)
+[^Matsubara:PTP:1955-19]: [T. Matsubara, Prog. Theor. Phys. **14**, 351 (1955).](https://doi.org/10.1143/PTP.14.351)
+[^Kaltak:PRB:2020-20]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)

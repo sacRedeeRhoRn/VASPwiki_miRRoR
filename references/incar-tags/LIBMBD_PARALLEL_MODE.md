@@ -15,17 +15,17 @@ Description:
 LIBMBD_PARALLEL_MODE selects
 the parallelization scheme used in the library libMBD of many-body
 dispersion
-methods<sup>[\[1\]](#cite_note-libmbd_1-1)[\[2\]](#cite_note-libmbd_2-2)[\[3\]](#cite_note-hermann:jcp:2023-3)</sup>.
+methods[^libmbd_1-1][^libmbd_2-2][^hermann:jcp:2023-3].
 
 ------------------------------------------------------------------------
 
 LIBMBD_PARALLEL_MODE allows to
 choose the parallelization scheme used in the library libMBD of
 many-body dispersion
-methods<sup>[\[1\]](#cite_note-libmbd_1-1)[\[2\]](#cite_note-libmbd_2-2)[\[3\]](#cite_note-hermann:jcp:2023-3)</sup>.
+methods[^libmbd_1-1][^libmbd_2-2][^hermann:jcp:2023-3].
 The value is internally passed to the libMBD input **parallel_mode**
 described at the page
-<sup>[\[4\]](#cite_note-libmbd_input-4)</sup>.
+[^libmbd_input-4].
 
 <table class="vasp-dark-link-panel"
 style="border: 0px solid var(--vpurple); --box-emph-color: var(--vpurple); padding: 5px; color: var(--vdefault-text-nb); background: var(--vpurple-bg)">
@@ -49,7 +49,7 @@ title="Precompiler options">-DLIBMBD</a>.</li>
 </table>
 
 libMBD is a separate library package that has to be
-downloaded<sup>[\[2\]](#cite_note-libmbd_2-2)</sup>
+downloaded[^libmbd_2-2]
 and compiled before VASP is compiled with the corresponding [precompiler
 options](../misc/Precompiler_options.md) and
 [links to the
@@ -69,33 +69,9 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LIBMBD_PARALLEL_MODE-_incate
 href="/wiki/index.php?title=LIBMBD_PARALLEL_MODE&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-libmbd_1_1-0)</sup>
-    <sup>[b](#cite_ref-libmbd_1_1-1)</sup>
-    <a href="https://libmbd.github.io/" class="external text"
-    rel="nofollow">https://libmbd.github.io/</a>
-2.  ↑
-    <sup>[a](#cite_ref-libmbd_2_2-0)</sup>
-    <sup>[b](#cite_ref-libmbd_2_2-1)</sup>
-    <sup>[c](#cite_ref-libmbd_2_2-2)</sup>
-    <a href="https://github.com/libmbd/" class="external text"
-    rel="nofollow">https://github.com/libmbd/</a>
-3.  ↑
-    <sup>[a](#cite_ref-hermann:jcp:2023_3-0)</sup>
-    <sup>[b](#cite_ref-hermann:jcp:2023_3-1)</sup>
-    <a href="https://doi.org/10.1063/5.0170972" class="external text"
-    rel="nofollow">J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi,
-    R. J. Maurer, and A. Tkatchenko, <em>libMBD: A general-purpose package
-    for scalable quantum many-body dispersion calculations</em>, J. Chem.
-    Phys. <strong>159</strong>, 174802 (2023).</a>
-4.  [↑](#cite_ref-libmbd_input_4-0)
-    <a href="https://libmbd.github.io/type/mbd_input_t.html"
-    class="external text"
-    rel="nofollow">https://libmbd.github.io/type/mbd_input_t.html</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^libmbd_1-1]: [https://libmbd.github.io/](https://libmbd.github.io/)
+[^libmbd_2-2]: [https://github.com/libmbd/](https://github.com/libmbd/)
+[^hermann:jcp:2023-3]: [J. Hermann, M. Stöhr, S. Góger, S. Chaudhuri, B. Aradi, R. J. Maurer, and A. Tkatchenko, *libMBD: A general-purpose package for scalable quantum many-body dispersion calculations*, J. Chem. Phys. **159**, 174802 (2023).](https://doi.org/10.1063/5.0170972)
+[^libmbd_input-4]: [https://libmbd.github.io/type/mbd_input_t.html](https://libmbd.github.io/type/mbd_input_t.html)

@@ -5,7 +5,7 @@
 
 
 The nudged elastic band (NEB)
-method<sup>[\[1\]](#cite_note-mills:surf-sci:1995-1)[\[2\]](#cite_note-jonsson:book:1998-2)</sup>
+method[^mills:surf-sci:1995-1][^jonsson:book:1998-2]
 is a computational technique used for studying energy landscapes and
 reaction pathways in chemical reactions or phase transitions. It entails
 creating an initial path connecting the system's initial and final
@@ -190,19 +190,5 @@ href="/wiki/index.php?title=Nudged_elastic_bands&amp;veaction=edit&amp;section=9
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-mills:surf-sci:1995_1-0)
-    <a href="http://doi.org/10.1016/0039-6028(94)00731-4"
-    class="external text" rel="nofollow">G. Mills, H. Jonsson and G. K.
-    Schenter, <em>Reversible work transition state theory: application to
-    dissociative adsorption of hydrogen</em>, Surf. Sci.,
-    <strong>324</strong>, 305 (1995).</a>
-2.  [↑](#cite_ref-jonsson:book:1998_2-0)
-    <a href="https://doi.org/10.1142/9789812839664_0016"
-    class="external text" rel="nofollow">H. Jonsson, G. Mills and K. W.
-    Jacobsen, <em>Nudged Elastic Band Method for Finding Minimum Energy
-    Paths of Transitions</em>, in <em>Classical and Quantum Dynamics in
-    Condensed Phase Simulations</em>, ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998).</a>
-
-
+[^mills:surf-sci:1995-1]: [G. Mills, H. Jonsson and G. K. Schenter, *Reversible work transition state theory: application to dissociative adsorption of hydrogen*, Surf. Sci., **324**, 305 (1995).](http://doi.org/10.1016/0039-6028(94)00731-4)
+[^jonsson:book:1998-2]: [H. Jonsson, G. Mills and K. W. Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions*, in *Classical and Quantum Dynamics in Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F. Coker (World Scientific, 1998).](https://doi.org/10.1142/9789812839664_0016)

@@ -67,11 +67,11 @@ title="Edit section: Create the input files">edit</a> \| (./index.php.md)\]
 **Step 1**: Create a [POSCAR](../input-files/POSCAR.md) file containing the
 structure for which you want to compute the electronic groundstate.
 External tools like
-VESTA<sup>[\[1\]](#cite_note-vesta-1)</sup>,
+VESTA[^vesta-1],
 or Python packages like the Atomic Simulation Environment
-(ASE)<sup>[\[2\]](#cite_note-ase-2)</sup>
+(ASE)[^ase-2]
 or
-pymatgen<sup>[\[3\]](#cite_note-pymatgen-3)</sup>
+pymatgen[^pymatgen-3]
 can help with this step.
 
 **Step 2**: [Choose an exchange-correlation (XC)
@@ -236,7 +236,7 @@ title="Edit section: Example">edit</a> \| (./index.php.md)\]
 We will do a small DFT calculation of GaAs in the zincblende structure,
 using the local-density approximation (LDA) with the Perdew-Zunger
 parametrization of Ceperley-Alder Monte Carlo correlation
-data.<sup>[\[4\]](#cite_note-ceperley1980-4)[\[5\]](#cite_note-perdewzunger1981-5)</sup>.
+data.[^ceperley1980-4][^perdewzunger1981-5].
 Thus, our [XC
 functional](../categories/Category-Exchange-correlation_functionals.md)
 will be set to [`XC`](../incar-tags/XC.md)` = CA`.
@@ -313,7 +313,7 @@ rel="nofollow">py4vasp</a>.</figcaption>
 
 
 If
-ASE<sup>[\[2\]](#cite_note-ase-2)</sup>
+ASE[^ase-2]
 is installed, an equivalent [POSCAR](../input-files/POSCAR.md) file can be
 created as follows:
 
@@ -507,24 +507,8 @@ href="/wiki/index.php?title=Setting_up_an_electronic_minimization&amp;veaction=e
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-vesta_1-0)
-    <a href="https://jp-minerals.org/vesta/en/" class="external text"
-    rel="nofollow">https://jp-minerals.org/vesta/en/ (2025).</a>
-2.  ↑ <sup>[a](#cite_ref-ase_2-0)</sup>
-    <sup>[b](#cite_ref-ase_2-1)</sup>
-    <a href="https://wiki.fysik.dtu.dk/ase/" class="external text"
-    rel="nofollow">https://wiki.fysik.dtu.dk/ase/ (2025).</a>
-3.  [↑](#cite_ref-pymatgen_3-0)
-    <a href="https://pymatgen.org/" class="external text"
-    rel="nofollow">https://pymatgen.org/ (2022).</a>
-4.  [↑](#cite_ref-ceperley1980_4-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.45.566"
-    class="external text" rel="nofollow">D. M. Ceperley and B. J. Alder,
-    Phys. Rev. Lett. <strong>45</strong>, 566 (1980).</a>
-5.  [↑](#cite_ref-perdewzunger1981_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.23.5048" class="external text"
-    rel="nofollow">J. P. Perdew and A. Zunger, Phys. Rev. B
-    <strong>23</strong>, 5048 (1981).</a>
-
-
+[^vesta-1]: [https://jp-minerals.org/vesta/en/ (2025).](https://jp-minerals.org/vesta/en/)
+[^ase-2]: [https://wiki.fysik.dtu.dk/ase/ (2025).](https://wiki.fysik.dtu.dk/ase/)
+[^pymatgen-3]: [https://pymatgen.org/ (2022).](https://pymatgen.org/)
+[^ceperley1980-4]: [D. M. Ceperley and B. J. Alder, Phys. Rev. Lett. **45**, 566 (1980).](https://doi.org/10.1103/PhysRevLett.45.566)
+[^perdewzunger1981-5]: [J. P. Perdew and A. Zunger, Phys. Rev. B **23**, 5048 (1981).](https://doi.org/10.1103/PhysRevB.23.5048)

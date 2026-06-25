@@ -5,9 +5,9 @@
 
 
 Simple
-DFT-D3<sup>[\[1\]](#cite_note-ehlert:joss:2024-1)[\[2\]](#cite_note-sdftd3_1-2)[\[3\]](#cite_note-sdftd3_2-3)</sup>
+DFT-D3[^ehlert:joss:2024-1][^sdftd3_1-2][^sdftd3_2-3]
 is an external package that implements the DFT-D3
-method<sup>[\[4\]](#cite_note-grimme:jcp:10-4)[\[5\]](#cite_note-grimme:jcc:11-5)</sup>
+method[^grimme:jcp:10-4][^grimme:jcc:11-5]
 and can be [linked to
 VASP](../misc/Makefile.include.md).
 DFT-D3 adds to the DFT energy expression a term that accounts for the
@@ -20,9 +20,9 @@ which allows for a fast computation. Since every functional has
 different interactions between atoms, DFT-D3 tailors its adjustable
 parameters to the functional. For more information regarding these
 parameters, please refer to the DFT-D3
-papers<sup>[\[4\]](#cite_note-grimme:jcp:10-4)[\[5\]](#cite_note-grimme:jcc:11-5)</sup>
+papers[^grimme:jcp:10-4][^grimme:jcc:11-5]
 and simple DFT-D3
-websites.<sup>[\[2\]](#cite_note-sdftd3_1-2)[\[3\]](#cite_note-sdftd3_2-3)</sup>
+websites.[^sdftd3_1-2][^sdftd3_2-3]
 
 Compared to the implementation in VASP of DFT-D3
 ([IVDW](../incar-tags/IVDW.md)=11 and 12, see
@@ -105,37 +105,6 @@ VASP allows setting the following tags in the
 href="/wiki/index.php?title=Simple-DFT-D3&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-ehlert:joss:2024_1-0)
-    <a href="https://doi.org/10.21105/joss.07169" class="external text"
-    rel="nofollow">S. Ehlert, <em>Simple dft-d3: library first
-    implementation of the d3 dispersion correction</em>, J. Open Source
-    Softw. <strong>9</strong>, 7169 (2024).</a>
-2.  ↑
-    <sup>[a](#cite_ref-sdftd3_1_2-0)</sup>
-    <sup>[b](#cite_ref-sdftd3_1_2-1)</sup>
-    <a href="https://dftd3.readthedocs.io/" class="external text"
-    rel="nofollow">https://dftd3.readthedocs.io</a>
-3.  ↑
-    <sup>[a](#cite_ref-sdftd3_2_3-0)</sup>
-    <sup>[b](#cite_ref-sdftd3_2_3-1)</sup>
-    <a href="https://github.com/dftd3/" class="external text"
-    rel="nofollow">https://github.com/dftd3</a>
-4.  ↑
-    <sup>[a](#cite_ref-grimme:jcp:10_4-0)</sup>
-    <sup>[b](#cite_ref-grimme:jcp:10_4-1)</sup>
-    <a href="https://doi.org/10.1063/1.3382344" class="external text"
-    rel="nofollow">S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem.
-    Phys. <strong>132</strong>, 154104 (2010).</a>
-5.  ↑
-    <sup>[a](#cite_ref-grimme:jcc:11_5-0)</sup>
-    <sup>[b](#cite_ref-grimme:jcc:11_5-1)</sup>
-    <a href="https://doi.org/10.1002/jcc.21759" class="external text"
-    rel="nofollow">S. Grimme, S. Ehrlich, and L. Goerigk, J. Comput. Chem.
-    <strong>32</strong>, 1456 (2011).</a>
-
-
 ## Related tags and articles\[<a
 href="/wiki/index.php?title=Simple-DFT-D3&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
@@ -152,4 +121,8 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 [VDW_CNRADIUS](../incar-tags/VDW_CNRADIUS.md),
 [DFT-D3](DFT-D3.md), [DFT-D4](DFT-D4.md)
 
-
+[^ehlert:joss:2024-1]: [S. Ehlert, *Simple dft-d3: library first implementation of the d3 dispersion correction*, J. Open Source Softw. **9**, 7169 (2024).](https://doi.org/10.21105/joss.07169)
+[^sdftd3_1-2]: [https://dftd3.readthedocs.io](https://dftd3.readthedocs.io/)
+[^sdftd3_2-3]: [https://github.com/dftd3](https://github.com/dftd3/)
+[^grimme:jcp:10-4]: [S. Grimme, J. Antony, S. Ehrlich, and S. Krieg, J. Chem. Phys. **132**, 154104 (2010).](https://doi.org/10.1063/1.3382344)
+[^grimme:jcc:11-5]: [S. Grimme, S. Ehrlich, and L. Goerigk, J. Comput. Chem. **32**, 1456 (2011).](https://doi.org/10.1002/jcc.21759)

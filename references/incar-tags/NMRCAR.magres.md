@@ -18,7 +18,7 @@ e.g.
 rel="nofollow">magresview</a> or the Python package
 <a href="https://ccp-nc.github.io/soprano/intro.html"
 class="external text" rel="nofollow">Soprano</a>
-<sup>[\[1\]](#cite_note-liborio:jcp:2018-1)</sup>.
+[^liborio:jcp:2018-1].
 Mind that, while the Magres format does not clearly state if the
 [macroscopic
 susceptibility](../categories/Category-NMR.md)
@@ -49,12 +49,4 @@ href="/wiki/index.php?title=NMRCAR.magres&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-liborio:jcp:2018_1-0)
-    <a href="https://doi.org/10.1063/1.5024450" class="external text"
-    rel="nofollow">L. Liborio, S. Sturniolo, and D. Jochym,
-    <em>Computational prediction of muon stopping sites using ab initio
-    random structure searching (AIRSS)</em>, J. Chem. Phys.
-    <strong>148</strong>, 134114 (2018).</a>
-
-
+[^liborio:jcp:2018-1]: [L. Liborio, S. Sturniolo, and D. Jochym, *Computational prediction of muon stopping sites using ab initio random structure searching (AIRSS)*, J. Chem. Phys. **148**, 134114 (2018).](https://doi.org/10.1063/1.5024450)

@@ -32,7 +32,7 @@ $G
 In both cases, the RPA density matrix is determined as
 $\gamma= \lim_{\tau \to 0^-} G(\tau)$. More details on
 the use of RPA natural orbitals can be found in Ref.
-<sup>[\[1\]](#cite_note-ramberger2019rpa-1)</sup>.
+[^ramberger2019rpa-1].
 
 The following settings are currently supported
 
@@ -60,9 +60,9 @@ The following settings are currently supported
   their KS values (the occupancies will remain 1 for occupied Kohn-Sham
   orbitals and 0 for natural orbitals representing the virtual
   manifold). This setting has been used in Ref.
-  <sup>[\[1\]](#cite_note-ramberger2019rpa-1)</sup>.
+  [^ramberger2019rpa-1].
   See also Ref.
-  <sup>[\[2\]](#cite_note-GruneisNO-2)</sup>
+  [^GruneisNO-2]
   for further information. Note that all orbitals- even those with a
   tiny fractional occupancy -are treated as occupied orbitals and not
   updated: the algorithm should hence even work for metallic systems.
@@ -99,7 +99,7 @@ The following settings are currently supported
   above. This flag, in combination with [ALGO](ALGO.md) =
   scGW0R, can be used to evaluate the GW-singles contribution to the
   correlation
-  energy.<sup>[\[3\]](#cite_note-Klimessingles-3)</sup>
+  energy.[^Klimessingles-3]
   One can deduct the HF singles and the GW singles energies from the
   energies after
 
@@ -157,25 +157,8 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=NATURALO&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-ramberger2019rpa_1-0)</sup>
-    <sup>[b](#cite_ref-ramberger2019rpa_1-1)</sup>
-    <a href="https://doi.org/10.1063/1.5128415" class="external text"
-    rel="nofollow">B. Ramberger, Z. Sukurma, T. Schäfer, G. Kresse, J. Chem.
-    Phys. 151, 214106 (2019).</a>
-2.  [↑](#cite_ref-GruneisNO_2-0)
-    
-    <a href="https://doi.org/10.1021/ct200263g" class="external text"
-    rel="nofollow">A. Grüneis et al. J. Chem. Theory Comput. 7, 2780
-    (2011).</a> 
-3.  [↑](#cite_ref-Klimessingles_3-0)
-    <a href="https://doi.org/10.1063/1.4929346" class="external text"
-    rel="nofollow">Jiří Klimeš et al., J. Chem. Phys. 143, 102816
-    (2015).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^ramberger2019rpa-1]: [B. Ramberger, Z. Sukurma, T. Schäfer, G. Kresse, J. Chem. Phys. 151, 214106 (2019).](https://doi.org/10.1063/1.5128415)
+[^GruneisNO-2]: [A. Grüneis et al. J. Chem. Theory Comput. 7, 2780 (2011).](https://doi.org/10.1021/ct200263g)
+[^Klimessingles-3]: [Jiří Klimeš et al., J. Chem. Phys. 143, 102816 (2015).](https://doi.org/10.1063/1.4929346)

@@ -10,7 +10,7 @@ response to an applied magnetic field. It is a bulk property, in
 contrast to the chemical shielding, which is for each nucleus. Like the
 chemical shielding, the magnetic susceptibility is calculated by linear
 response using [LCHIMAG](../incar-tags/LCHIMAG.md)
-<sup>[\[1\]](#cite_note-pickard:prb:2001-1)[\[2\]](#cite_note-yates:prb:2007-2)</sup>,
+[^pickard:prb:2001-1][^yates:prb:2007-2],
 so they will both be shown in the same [OUTCAR](../output-files/OUTCAR.md)
 file. The magnetic susceptibility is measured using the Guoy balance (or
 method); alternatively, an Evans or Faraday balance can be used. The
@@ -98,7 +98,7 @@ incrementally, i.e., 1x1x1, 2x2x2, 3x3x3, until convergence within 0.01
 The purpose of these calculations is to compare to the experiment. The
 computed magnetic susceptibilities can be directly compared to the
 measured magnetic susceptibility, in contrast to the chemical shielding
-<sup>[\[3\]](#cite_note-mauri:louie:1996-3)</sup>.
+[^mauri:louie:1996-3].
 
 ## Recommendations and advice\[<a
 href="/wiki/index.php?title=Calculating_the_magnetic_susceptibility&amp;veaction=edit&amp;section=2"
@@ -261,22 +261,6 @@ href="/wiki/index.php?title=Calculating_the_magnetic_susceptibility&amp;veaction
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-pickard:prb:2001_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.63.245101"
-    class="external text" rel="nofollow">C. J. Pickard and F. Mauri,
-    <em>All-electron magnetic response with pseudopotentials: NMR chemical
-    shifts</em>, Phys. Rev. B <strong>63</strong>, 245101 (2001).</a>
-2.  [↑](#cite_ref-yates:prb:2007_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.76.024401"
-    class="external text" rel="nofollow">J. R. Yates, C. J. Pickard, and F.
-    Mauri, <em>Calculation of NMR chemical shifts for extended systems using
-    ultrasoft pseudopotentials</em>, Phys. Rev. B <strong>76</strong>,
-    024401 (2007).</a>
-3.  [↑](#cite_ref-mauri:louie:1996_3-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.76.4246"
-    class="external text" rel="nofollow">F. Mauri and S. G. Louie,
-    <em>Magnetic Susceptibility of Insulators from First Principles</em>,
-    Phys. Rev. Lett. <strong>76</strong>, 4246 (1996).</a>
-
-
+[^pickard:prb:2001-1]: [C. J. Pickard and F. Mauri, *All-electron magnetic response with pseudopotentials: NMR chemical shifts*, Phys. Rev. B **63**, 245101 (2001).](https://doi.org/10.1103/PhysRevB.63.245101)
+[^yates:prb:2007-2]: [J. R. Yates, C. J. Pickard, and F. Mauri, *Calculation of NMR chemical shifts for extended systems using ultrasoft pseudopotentials*, Phys. Rev. B **76**, 024401 (2007).](https://doi.org/10.1103/PhysRevB.76.024401)
+[^mauri:louie:1996-3]: [F. Mauri and S. G. Louie, *Magnetic Susceptibility of Insulators from First Principles*, Phys. Rev. Lett. **76**, 4246 (1996).](https://doi.org/10.1103/PhysRevLett.76.4246)

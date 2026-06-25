@@ -26,7 +26,7 @@ listed separately for each version of VASP.
   compilers became more strict and do not accept certain code constructs
   used in older VASP versions. Here are a few known examples:
   - Compilation with GCC \> 7.X.X is only possible as of VASP.6.2.0
-    .<sup>[\[1\]](#cite_note-gcc-beyond-7-support-1)</sup>
+    .[^gcc-beyond-7-support-1]
   - Compilation with GCC \> 14.2.X is currently (as of VASP.6.5.1) not
     possible since it dropped legacy code support in C and Fortran
     formatted strings. This can be worked around by adding the compiler
@@ -210,9 +210,7 @@ OpenMP offload</td>
 <td>Rocky Linux 8.8<br />
 NEC SX-Aurora TSUBASA<br />
 vector engine</td>
-<td>VASP &gt;= 6.3.0<sup><a href="#cite_note-nec-aurora-support-2"><span
-class="cite-bracket">[</span>2<span
-class="cite-bracket">]</span></a></sup></td>
+<td>VASP &gt;= 6.3.0[^nec-aurora-support-2]</td>
 </tr>
 <tr>
 <td>nvhpc-25.1<br />
@@ -371,9 +369,7 @@ optimization level</a></span></td>
 <td>Rocky Linux 8.8<br />
 NEC SX-Aurora TSUBASA<br />
 vector engine</td>
-<td>VASP &gt;= 6.3.0<sup><a href="#cite_note-nec-aurora-support-2"><span
-class="cite-bracket">[</span>2<span
-class="cite-bracket">]</span></a></sup></td>
+<td>VASP &gt;= 6.3.0[^nec-aurora-support-2]</td>
 </tr>
 </tbody>
 </table>
@@ -483,9 +479,7 @@ optimization level</a></span></td>
 <td>Rocky Linux 8.8<br />
 NEC SX-Aurora TSUBASA<br />
 vector engine</td>
-<td>VASP &gt;= 6.3.0<sup><a href="#cite_note-nec-aurora-support-2"><span
-class="cite-bracket">[</span>2<span
-class="cite-bracket">]</span></a></sup></td>
+<td>VASP &gt;= 6.3.0[^nec-aurora-support-2]</td>
 <td></td>
 </tr>
 </tbody>
@@ -598,9 +592,7 @@ AMD Zen3</td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>gcc-7.5.0</td>
@@ -612,9 +604,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-22.2<br />
@@ -631,9 +621,7 @@ NVIDIA GPUs<br />
 (P100 &amp; V100)</td>
 <td>OpenACC<br />
 +<br />
-OpenMP<sup><a href="#cite_note-omp-acc-bug-1-4"><span
-class="cite-bracket">[</span>4<span
-class="cite-bracket">]</span></a></sup></td>
+OpenMP[^omp-acc-bug-1-4]</td>
 </tr>
 <tr>
 <td>nvhpc-21.2<br />
@@ -649,9 +637,7 @@ class="cite-bracket">]</span></a></sup></td>
 <td>Centos 8.3<br />
 NVIDIA GPUs<br />
 (P100 &amp; V100)</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-21.2</td>
@@ -663,9 +649,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-21.2</td>
@@ -678,9 +662,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>aocc-3.2.0</td>
@@ -708,9 +690,7 @@ libxc-5.2.2</td>
 <td>Centos 8.3<br />
 NEC SX-Aurora TSUBASA<br />
 vector engine</td>
-<td>VASP &gt;= 6.3.0<sup><a href="#cite_note-nec-aurora-support-2"><span
-class="cite-bracket">[</span>2<span
-class="cite-bracket">]</span></a></sup></td>
+<td>VASP &gt;= 6.3.0[^nec-aurora-support-2]</td>
 </tr>
 </tbody>
 </table>
@@ -769,12 +749,8 @@ Intel Broadwell</td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span><br />
-VASP &gt;= 6.2.0<sup><a href="#cite_note-gcc-beyond-7-support-1"><span
-class="cite-bracket">[</span>1<span
-class="cite-bracket">]</span></a></sup></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span><br />
+VASP &gt;= 6.2.0[^gcc-beyond-7-support-1]</td>
 </tr>
 <tr>
 <td>gcc-7.5.0</td>
@@ -786,9 +762,7 @@ class="cite-bracket">]</span></a></sup></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-21.2<br />
@@ -804,9 +778,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>Centos 8.3<br />
 NVIDIA GPUs<br />
 (P100 &amp; V100)</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-21.2</td>
@@ -818,9 +790,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 <tr>
 <td>nvhpc-21.2</td>
@@ -833,9 +803,7 @@ class="cite-bracket">]</span></a></sup></span></td>
 <td>wannier90-3.1.0</td>
 <td>Centos 8.3<br />
 Intel Broadwell</td>
-<td><span style="background:#f5d9da">Memory-leak<sup><a
-href="#cite_note-ompi-bug-1-3"><span class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup></span></td>
+<td><span style="background:#f5d9da">Memory-leak[^ompi-bug-1-3]</span></td>
 </tr>
 </tbody>
 </table>
@@ -844,47 +812,6 @@ class="cite-bracket">]</span></a></sup></span></td>
 href="/wiki/index.php?title=Toolchains&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: Footnotes and references">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-gcc-beyond-7-support_1-0)</sup>
-    <sup>[b](#cite_ref-gcc-beyond-7-support_1-1)</sup>
-    Support for GCC \> 7.X.X was added with
-    VASP.6.2.0. Do not use GCC-8.X.X compilers: the way we use the
-    `CONTIGUOUS` construct in VASP is broken when using these
-    compilers.
-2.  ↑
-    <sup>[a](#cite_ref-nec-aurora-support_2-0)</sup>
-    <sup>[b](#cite_ref-nec-aurora-support_2-1)</sup>
-    <sup>[c](#cite_ref-nec-aurora-support_2-2)</sup>
-    <sup>[d](#cite_ref-nec-aurora-support_2-3)</sup>
-    The NEC SX-Aurora TSUBASA vector engine
-    is supported as of VASP.6.3.0.
-3.  ↑
-    <sup>[a](#cite_ref-ompi-bug-1_3-0)</sup>
-    <sup>[b](#cite_ref-ompi-bug-1_3-1)</sup>
-    <sup>[c](#cite_ref-ompi-bug-1_3-2)</sup>
-    <sup>[d](#cite_ref-ompi-bug-1_3-3)</sup>
-    <sup>[e](#cite_ref-ompi-bug-1_3-4)</sup>
-    <sup>[f](#cite_ref-ompi-bug-1_3-5)</sup>
-    <sup>[g](#cite_ref-ompi-bug-1_3-6)</sup>
-    <sup>[h](#cite_ref-ompi-bug-1_3-7)</sup>
-    <sup>[i](#cite_ref-ompi-bug-1_3-8)</sup>
-    <sup>[j](#cite_ref-ompi-bug-1_3-9)</sup>
-    A bug in OpenMPI versions 4.0.4-4.1.1
-    causes a memory leak in some ScaLAPACK calls. This mainly affects
-    long
-    [molecular-dynamics](https://vasp.at/wiki/index.php/Category:Molecular_dynamics)
-    runs. This issue is fixed as of openmpi-4.1.2.
-4.  [↑](#cite_ref-omp-acc-bug-1_4-0)
-    The NVIDIA HPC-SDK versions 22.1 and
-    22.2 have a serious bug that prohibits the execution of the OpenACC
-    GPU port of VASP in conjunction with OpenMP-threading. When using
-    these compiler versions you should compile the OpenACC GPU port of
-    VASP without OpenMP-support. This bug is fixed as of NVIDIA HPC-SDK
-    version 22.3.
-
-
 ## Related articles\[<a
 href="/wiki/index.php?title=Toolchains&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
@@ -901,4 +828,7 @@ tests](Validation_tests.md), [Known
 issues](Known_issues.md), [Personal computer
 installation](Personal_computer_installation.md)
 
-
+[^gcc-beyond-7-support-1]: Support for GCC \> 7.X.X was added with VASP.6.2.0. Do not use GCC-8.X.X compilers: the way we use the `CONTIGUOUS` construct in VASP is broken when using these compilers.
+[^nec-aurora-support-2]: The NEC SX-Aurora TSUBASA vector engine is supported as of VASP.6.3.0.
+[^ompi-bug-1-3]: A bug in OpenMPI versions 4.0.4-4.1.1 causes a memory leak in some ScaLAPACK calls. This mainly affects long [molecular-dynamics](/wiki/Category:Molecular_dynamics "Category:Molecular dynamics") runs. This issue is fixed as of openmpi-4.1.2.
+[^omp-acc-bug-1-4]: The NVIDIA HPC-SDK versions 22.1 and 22.2 have a serious bug that prohibits the execution of the OpenACC GPU port of VASP in conjunction with OpenMP-threading. When using these compiler versions you should compile the OpenACC GPU port of VASP without OpenMP-support. This bug is fixed as of NVIDIA HPC-SDK version 22.3.

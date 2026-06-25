@@ -25,11 +25,11 @@ diverges for small G vectors. To alleviate this issue and improve the
 convergence of the exact exchange integral with respect to supercell
 size (or k-point mesh density) different methods have been proposed: the
 auxiliary function
-methods<sup>[\[1\]](#cite_note-gygi:prb:86-1)</sup>,
+methods[^gygi:prb:86-1],
 probe-charge Ewald
-<sup>[\[2\]](#cite_note-massidda:prb:93-2)</sup>
+[^massidda:prb:93-2]
 ([HFALPHA](HFALPHA.md)), and Coulomb truncation
-methods<sup>[\[3\]](#cite_note-spenceralavi:prb:08-3)</sup>
+methods[^spenceralavi:prb:08-3]
 ([HFRCUT](HFRCUT.md)). These mostly involve modifying the
 Coulomb Kernel in a way that yields the same result as the unmodified
 kernel within the limit of large supercell sizes.
@@ -113,18 +113,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-HFRCUT-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-gygi:prb:86_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.34.4405" class="external text"
-    rel="nofollow">F. Gygi and A. Baldereschi, Phys. Rev. B
-    <strong>34</strong>, 4405(R) (1986).</a>
-2.  [↑](#cite_ref-massidda:prb:93_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.48.5058" class="external text"
-    rel="nofollow">S. Massidda, M. Posternak, and A. Baldereschi, Phys. Rev.
-    B <strong>48</strong>, 5058 (1993).</a>
-3.  [↑](#cite_ref-spenceralavi:prb:08_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.77.193110"
-    class="external text" rel="nofollow">J. Spencer and A. Alavi, Phys.
-    Phys. Rev. B <strong>77</strong>, 193110 (2008).</a>
-
-
+[^gygi:prb:86-1]: [F. Gygi and A. Baldereschi, Phys. Rev. B **34**, 4405(R) (1986).](https://doi.org/10.1103/PhysRevB.34.4405)
+[^massidda:prb:93-2]: [S. Massidda, M. Posternak, and A. Baldereschi, Phys. Rev. B **48**, 5058 (1993).](https://doi.org/10.1103/PhysRevB.48.5058)
+[^spenceralavi:prb:08-3]: [J. Spencer and A. Alavi, Phys. Phys. Rev. B **77**, 193110 (2008).](https://doi.org/10.1103/PhysRevB.77.193110)

@@ -8,9 +8,9 @@ The [standard Nosé-Hoover
 thermostat](../tutorials/Nosé-Hoover_thermostat.md)
 suffers from well-known issues, such as the ergodicity violation in the
 case of simple harmonic
-oscillator<sup>[\[1\]](#cite_note-martyna:jcp:92-1)</sup>.
+oscillator[^martyna:jcp:92-1].
 As proposed by Martyna and
-Klein<sup>[\[1\]](#cite_note-martyna:jcp:92-1)</sup>,
+Klein[^martyna:jcp:92-1],
 these problems can be solved by using multiple Nosé-Hoover thermostats
 connected in a chain. Although the underlining dynamics is
 non-Hamiltonian, the corresponding equations of motion conserve the
@@ -57,9 +57,9 @@ $Q_j = k_{B} T \tau^2; \\ \\ \\ j=2,\dots,M$
 Furthermore, due to rapidly varying forces in thermostat variables
 propagators, the standard velocity Verlet algorithm with fixed
 integration step might be insufficiently accurate. As proposed by
-Tuckerman<sup>[\[2\]](#cite_note-2)</sup>,
+Tuckerman[^2],
 the
-RESPA<sup>[\[3\]](#cite_note-3)</sup>
+RESPA[^3]
 methodology can be used to overcome this problem, in which the
 integration step used in thermostat variables propagation is split into
 [NHC_NRESPA](../incar-tags/NHC_NRESPA.md) equal parts, each of which
@@ -87,21 +87,6 @@ href="/wiki/index.php?title=Nos%C3%A9-Hoover_chain_thermostat&amp;veaction=edit&
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-martyna:jcp:92_1-0)</sup>
-    <sup>[b](#cite_ref-martyna:jcp:92_1-1)</sup>
-    <a href="https://doi.org/10.1063/1.463940" class="external text"
-    rel="nofollow">J. Martyna, M. L. Klein, and M. Tuckerman, J. Chem. Phys.
-    <strong>97</strong>, 2635 (1992).</a>
-2.  [↑](#cite_ref-2)
-    M. E. Tuckerman, Statistical mechanics:
-    theory and molecular simulation, Oxford University Press Inc., New
-    York, 2010; pp 194-199.
-3.  [↑](#cite_ref-3)
-    <a
-    href="https://pubs.aip.org/aip/jcp/article/97/3/1990/221848/Reversible-multiple-time-scale-molecular"
-    class="external text" rel="nofollow">M. Tuckerman, B. J. Berne, and G.
-    J. Martyna, J. Chem. Phys. 97, 1900 (1992)</a>
-
-
+[^martyna:jcp:92-1]: [J. Martyna, M. L. Klein, and M. Tuckerman, J. Chem. Phys. **97**, 2635 (1992).](https://doi.org/10.1063/1.463940)
+[^2]: M. E. Tuckerman, Statistical mechanics: theory and molecular simulation, Oxford University Press Inc., New York, 2010; pp 194-199.
+[^3]: [M. Tuckerman, B. J. Berne, and G. J. Martyna, J. Chem. Phys. 97, 1900 (1992)](https://pubs.aip.org/aip/jcp/article/97/3/1990/221848/Reversible-multiple-time-scale-molecular)

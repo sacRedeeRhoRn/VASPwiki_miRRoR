@@ -16,7 +16,7 @@ and thus account for the Stockes shifts. This method is commonly used
 for calculating the [optical
 properties](../categories/Category-Dielectric_properties.md)
 of point defects in semiconductors and insulators
-<sup>[\[1\]](#cite_note-Freysoldt2014-1)</sup>.
+[^Freysoldt2014-1].
 
 
 ## Contents
@@ -182,7 +182,7 @@ We consider a negatively charged point defect in diamond, so-called
 $\mathrm{NV}^-$, which consists of an N substitution and
 a vacancy. This is a well-studied point defect in diamond, which can be
 used here for illustrating the principle of the ZPL calculations
-<sup>[\[2\]](#cite_note-Lofgren2018-2)</sup>.
+[^Lofgren2018-2].
 In this example, we consider a single $\mathrm{NV}^-$ in a 64-atom supercell.
 
 ### Step 1\[<a
@@ -291,15 +291,5 @@ href="/wiki/index.php?title=Delta_self-consistent_field&amp;veaction=edit&amp;se
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-Freysoldt2014_1-0)
-    <a href="http://dx.doi.org/10.1103/RevModPhys.86.253"
-    class="external text" rel="nofollow">Christoph Freysoldt, Blazej
-    Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and Anderson
-    Janotti, Rev. Mod. Phys. (2014).</a>
-2.  [↑](#cite_ref-Lofgren2018_2-0)
-    <a href="http://dx.doi.org/10.1088/1367-2630/aaa382"
-    class="external text" rel="nofollow">R. Löfgren, R. Pawar, and S. Öberg,
-    New J. Phys. (2018).</a>
-
-
+[^Freysoldt2014-1]: [Christoph Freysoldt, Blazej Grabowski, Tilmann Hickel, Jörg Neugebauer, Georg Kresse, and Anderson Janotti, Rev. Mod. Phys. (2014).](http://dx.doi.org/10.1103/RevModPhys.86.253)
+[^Lofgren2018-2]: [R. Löfgren, R. Pawar, and S. Öberg, New J. Phys. (2018).](http://dx.doi.org/10.1088/1367-2630/aaa382)

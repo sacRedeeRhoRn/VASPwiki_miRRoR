@@ -54,7 +54,7 @@ intermediate period, a micro-canonical ensemble is simulated.
 For SMASS≥0, a canonical
 ensemble is simulated using the algorithm of Nosé. The Nosé mass
 controls the frequency of the temperature oscillations during the
-simulation.<sup>[\[1\]](#cite_note-nose:jcp:1984-1)[\[2\]](#cite_note-nose:ptp:1991-2)[\[3\]](#cite_note-bylander:prb:1992-3)</sup>
+simulation.[^nose:jcp:1984-1][^nose:ptp:1991-2][^bylander:prb:1992-3]
 For SMASS=0, a Nosé-mass
 corresponding to period of 40 time steps will be chosen. The Nosé-mass
 should be set such that the induced temperature fluctuation show
@@ -83,24 +83,8 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-SMASS-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=SMASS&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-nose:jcp:1984_1-0)
-    <a href="https://doi.org/10.1063/1.447334" class="external text"
-    rel="nofollow">S. Nosé, J. Chem. Phys. <strong>81</strong>, 511
-    (1984).</a>
-2.  [↑](#cite_ref-nose:ptp:1991_2-0)
-    <a href="https://doi.org/10.1143/PTPS.103.1" class="external text"
-    rel="nofollow">S. Nosé, Prog. Theor. Phys. Suppl. <strong>103</strong>,
-    1 (1991).</a>
-3.  [↑](#cite_ref-bylander:prb:1992_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.46.13756"
-    class="external text" rel="nofollow">D. M. Bylander and L. Kleinman,
-    Phys. Rev. B <strong>46</strong>, 13756 (1992).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^nose:jcp:1984-1]: [S. Nosé, J. Chem. Phys. **81**, 511 (1984).](https://doi.org/10.1063/1.447334)
+[^nose:ptp:1991-2]: [S. Nosé, Prog. Theor. Phys. Suppl. **103**, 1 (1991).](https://doi.org/10.1143/PTPS.103.1)
+[^bylander:prb:1992-3]: [D. M. Bylander and L. Kleinman, Phys. Rev. B **46**, 13756 (1992).](https://doi.org/10.1103/PhysRevB.46.13756)

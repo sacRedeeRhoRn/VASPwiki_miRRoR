@@ -30,7 +30,7 @@ functionals that are implemented in VASP or in Libxc.
 The number of functionals with modifiable parameters is for the moment
 very limited and concerns only a few MGGAs. Among the functionals listed
 at [METAGGA](METAGGA.md), there is MS0, MS1, and
-MS2,<sup>[\[1\]](#cite_note-sun:jcp:12-1)[\[2\]](#cite_note-sun:jcp:13-2)</sup>
+MS2,[^sun:jcp:12-1][^sun:jcp:13-2]
 for instance. The functionals with modifiable parameters can be found by
 searching for "XC%PARAM" in the subroutine SET_XC_DATA in the setex.F
 file.
@@ -39,7 +39,7 @@ file.
 
 For many of the functionals implemented in the library of
 exchange-correlation functionals
-Libxc<sup>[\[3\]](#cite_note-marques:cpc:2012-3)[\[4\]](#cite_note-lehtola:sx:2018-4)[\[5\]](#cite_note-tran:arxiv:2026-5)[\[6\]](#cite_note-libxc-6)</sup>
+Libxc[^marques:cpc:2012-3][^lehtola:sx:2018-4][^tran:arxiv:2026-5][^libxc-6]
 it is possible to modify the parameters. If a functional from Libxc has
 modifiable parameters, then they are listed in
 [OUTCAR](../output-files/OUTCAR.md) below "Parameters of Libxc functionals:"
@@ -63,13 +63,13 @@ class="mw-editsection-visualeditor"
 title="Edit section: Examples">edit</a> \| (./index.php.md)\]
 
 - In the GGA PBE
-  functional,<sup>[\[7\]](#cite_note-perdew:prl:1996-7)</sup>
+  functional,[^perdew:prl:1996-7]
   as implemented in Libxc, the default parameters
   $\mu=0.21951$ in exchange and
   $\beta=0.066725$ in correlation are changed to
   $\mu=10/81\approx0.12345679$ and
   $\beta=0.046$ to get the PBEsol
-  functional<sup>[\[8\]](#cite_note-perdew:prl:2008-8)</sup>
+  functional[^perdew:prl:2008-8]
   (of course, the simpler way to use PBEsol from Libxc would be to call
   it directly with "[XC](XC.md)=GGA_X_PBE_SOL GGA_C_PBE_SOL").
   This example is equivalent to the one given for
@@ -85,7 +85,7 @@ title="Edit section: Examples">edit</a> \| (./index.php.md)\]
   $\kappa=0.404$, $c=0.18150$
   and $b=1.0$ in
   exchange (see Table I in Ref.
-  <sup>[\[2\]](#cite_note-sun:jcp:13-2)</sup>)
+  [^sun:jcp:13-2])
   are changed to $\kappa=0.504$, $c=0.14601$
   and $b=4.0$ to
   get the MS2 functional.
@@ -110,49 +110,13 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=XCm_Pn&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-sun:jcp:12_1-0)
-    <a href="https://doi.org/10.1063/1.4742312" class="external text"
-    rel="nofollow">J. Sun, B. Xiao, and A. Ruzsinszky, J. Chem. Phys.
-    <strong>137</strong>, 051101 (2012).</a>
-2.  ↑
-    <sup>[a](#cite_ref-sun:jcp:13_2-0)</sup>
-    <sup>[b](#cite_ref-sun:jcp:13_2-1)</sup>
-    <a href="https://doi.org/10.1063/1.4789414" class="external text"
-    rel="nofollow">J. Sun, R. Haunschild, B. Xiao, I. W. Bulik, G. E.
-    Scuseria, and J. P. Perdew, J. Chem. Phys. <strong>138</strong>, 044113
-    (2013).</a>
-3.  [↑](#cite_ref-marques:cpc:2012_3-0)
-    <a href="https://doi.org/10.1016/j.cpc.2012.05.007"
-    class="external text" rel="nofollow">M. A. L. Marques, M. J. T.
-    Oliveira, and T. Burnus, Comput. Phys. Commun., <strong>183</strong>,
-    2272 (2012).</a>
-4.  [↑](#cite_ref-lehtola:sx:2018_4-0)
-    <a href="https://doi.org/10.1016/j.softx.2017.11.002"
-    class="external text" rel="nofollow">S. Lehtola, C. Steigemann, M. J. T.
-    Oliveira, and M. A. L. Marques, SoftwareX, <strong>7</strong>, 1
-    (2018).</a>
-5.  [↑](#cite_ref-tran:arxiv:2026_5-0)
-    <a href="https://doi.org/10.48550/arXiv.2602.17333"
-    class="external text" rel="nofollow">F. Tran, S. Lehtola, S. Pittalis,
-    and M. A. L. Marques, <em>Semi-Local Exchange-Correlation Approximations
-    in Density Functional Theory</em>, arXiv <strong>2602.17333</strong>
-    (2026).</a>
-6.  [↑](#cite_ref-libxc_6-0)
-    <a href="https://libxc.gitlab.io" class="external text"
-    rel="nofollow">https://libxc.gitlab.io</a>
-7.  [↑](#cite_ref-perdew:prl:1996_7-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.77.3865"
-    class="external text" rel="nofollow">J. P. Perdew, K. Burke, and M.
-    Ernzerhof, Phys. Rev. Lett., <strong>77</strong>, 3865 (1996).</a>
-8.  [↑](#cite_ref-perdew:prl:2008_8-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.100.136406"
-    class="external text" rel="nofollow">J. P. Perdew, A. Ruzsinszky, G. I.
-    Csonka, O. A. Vydrov, G. E. Scuseria, L. A. Constantin, X. Zhou, and K.
-    Burke, Phys. Rev. Lett. <strong>100</strong>, 136406 (2008).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^sun:jcp:12-1]: [J. Sun, B. Xiao, and A. Ruzsinszky, J. Chem. Phys. **137**, 051101 (2012).](https://doi.org/10.1063/1.4742312)
+[^sun:jcp:13-2]: [J. Sun, R. Haunschild, B. Xiao, I. W. Bulik, G. E. Scuseria, and J. P. Perdew, J. Chem. Phys. **138**, 044113 (2013).](https://doi.org/10.1063/1.4789414)
+[^marques:cpc:2012-3]: [M. A. L. Marques, M. J. T. Oliveira, and T. Burnus, Comput. Phys. Commun., **183**, 2272 (2012).](https://doi.org/10.1016/j.cpc.2012.05.007)
+[^lehtola:sx:2018-4]: [S. Lehtola, C. Steigemann, M. J. T. Oliveira, and M. A. L. Marques, SoftwareX, **7**, 1 (2018).](https://doi.org/10.1016/j.softx.2017.11.002)
+[^tran:arxiv:2026-5]: [F. Tran, S. Lehtola, S. Pittalis, and M. A. L. Marques, *Semi-Local Exchange-Correlation Approximations in Density Functional Theory*, arXiv **2602.17333** (2026).](https://doi.org/10.48550/arXiv.2602.17333)
+[^libxc-6]: [https://libxc.gitlab.io](https://libxc.gitlab.io)
+[^perdew:prl:1996-7]: [J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett., **77**, 3865 (1996).](https://doi.org/10.1103/PhysRevLett.77.3865)
+[^perdew:prl:2008-8]: [J. P. Perdew, A. Ruzsinszky, G. I. Csonka, O. A. Vydrov, G. E. Scuseria, L. A. Constantin, X. Zhou, and K. Burke, Phys. Rev. Lett. **100**, 136406 (2008).](https://doi.org/10.1103/PhysRevLett.100.136406)

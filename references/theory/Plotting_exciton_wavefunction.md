@@ -21,7 +21,7 @@ position, and localization.
 The exciton wavefunction is written as a function of coordinates of two
 particles (one hole and one electron) $\psi_\lambda(\mathbf{r}_e,\mathbf{r}_h)=\sum_{vc} A_{vc}^\lambda
 \phi_v^\*(\mathbf{r}_h)\phi_c(\mathbf{r}_e)$
-<sup>[\[1\]](#cite_note-gatti:prb:2013-1)</sup>.
+[^gatti:prb:2013-1].
 In order to visualize such a function in 3D space, we need to "fix" one
 of the coordinates: the position of the electron
 $\psi_\lambda(r_e,\mathbf{r}_h)$ or the position of
@@ -126,10 +126,4 @@ href="/wiki/index.php?title=Plotting_exciton_wavefunction&amp;veaction=edit&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-gatti:prb:2013_1-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.88.155113"
-    class="external text" rel="nofollow">Matteo Gatti and Francesco Sottile,
-    Phys. Rev. B <strong>88</strong>, 155113 (2013).</a>
-
-
+[^gatti:prb:2013-1]: [Matteo Gatti and Francesco Sottile, Phys. Rev. B **88**, 155113 (2013).](http://dx.doi.org/10.1103/PhysRevB.88.155113)

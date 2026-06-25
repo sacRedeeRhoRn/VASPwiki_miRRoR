@@ -15,7 +15,7 @@ title="Precompiler flags">-Dtbdyn</a>).
 ------------------------------------------------------------------------
 
 In the approach proposed by
-Andersen<sup>[\[1\]](#cite_note-Andersen80-1)</sup>
+Andersen[^Andersen80-1]
 the system is thermally coupled to a fictitious heat bath with the
 desired temperature. The coupling is represented by stochastic impulsive
 forces that act occasionally on randomly selected particles. The
@@ -43,13 +43,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ANDERSEN_PROB-_incategory-Ex
 href="/wiki/index.php?title=ANDERSEN_PROB&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Andersen80_1-0)
-    <a href="http://dx.doi.org/10.1063/1.439486" class="external text"
-    rel="nofollow">H. C. Andersen, J. Chem. Phys. 72, 2384 (1980).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^Andersen80-1]: [H. C. Andersen, J. Chem. Phys. 72, 2384 (1980).](http://dx.doi.org/10.1063/1.439486)

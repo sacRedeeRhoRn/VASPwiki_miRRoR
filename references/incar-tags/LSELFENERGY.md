@@ -142,7 +142,7 @@ To identify the band index and **k** point, the ordering has to be taken
 from the QP shifts block in the [OUTCAR](../output-files/OUTCAR.md). The
 band index is faster than the **k** point. The imaginary frequency is
 selected by the Minimax
-routines<sup>[\[1\]](#cite_note-Kaltak:PRB:2020-1)</sup>,
+routines[^Kaltak:PRB:2020-1],
 and the number of points depends on [NOMEGA](NOMEGA.md).
 
 ## Related tags and articles\[<a
@@ -165,10 +165,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSELFENERGY-_incategory-Exam
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-Kaltak:PRB:2020_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-
-
+[^Kaltak:PRB:2020-1]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)

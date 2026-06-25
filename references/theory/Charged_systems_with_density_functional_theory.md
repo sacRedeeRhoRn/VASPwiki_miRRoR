@@ -56,7 +56,7 @@ is its norm.
 An obvious issue with computing $V(\mathbf{G})$ is that it diverges for $\mathrm{G}\to 0$. This divergence is handled in charge neutral DFT
 calculations by cancelling out individual divergences for the total
 electrostatic
-energy,<sup>[\[1\]](#cite_note-ihm:jpcss:1979-1)</sup>
+energy,[^ihm:jpcss:1979-1]
 which is the sum of electron-electron, ion-electron and ion-ion energies
 
 $E_{\mathrm{electrostatic}} = E_{\mathrm{electron-electron}} +
@@ -142,7 +142,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Treating charged systems in practice">edit</a> \| (./index.php.md)\]
 
 We
-implement<sup>[\[2\]](#cite_note-vijay:prb:2025-2)</sup>
+implement[^vijay:prb:2025-2]
 two separate methods to deal with charged systems. These methods are
 specific to the dimensionality of the system that is being computed.
 
@@ -153,10 +153,10 @@ analytical monopole-monolpole corrections (see
 Surfaces and other two dimensional materials are treated with Coulomb
 kernel truncation methods. These methods replace the Coulomb kernel
 $v(\mathbf{G})$, i.e., the $\frac{4\pi}{\mathrm{G}^2}$ in $V(\mathbf{G})$ with a 2D
-kernel<sup>[\[3\]](#cite_note-rozzi:prb:2006-3)</sup>
+kernel[^rozzi:prb:2006-3]
 ($v_{\text{2D}}(\mathbf{G})$) that removes electrostatic
 interactions between non-periodic replicas along the surface
-normal,<sup>[\[4\]](#cite_note-sohier:prb:2017-4)</sup>
+normal,[^sohier:prb:2017-4]
 
 $v_{\text{2D}}(\mathbf{G}) = \begin{cases} 4\pi / \mathrm{G}^2 \left\[
 1 - e^{-\mathrm{G}_{\parallel}R} \left ( \cos(\mathrm{G}_\perp
@@ -201,27 +201,7 @@ href="/wiki/index.php?title=Charged_systems_with_density_functional_theory&amp;v
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ihm:jpcss:1979_1-0)
-    <a href="https://doi.org/10.1088/0022-3719/12/21/009"
-    class="external text" rel="nofollow">J. Ihm, A. Zunger, M. L. Cohen,
-    Journal of Physics C: Solid State Physics <strong>12</strong>, 4409
-    (1979).</a>
-2.  [↑](#cite_ref-vijay:prb:2025_2-0)
-    <a href="https://doi.org/10.1103/cd6s-cdkf" class="external text"
-    rel="nofollow">S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak,
-    M. Marsman, and G. Kresse, <em>Efficient periodic density functional
-    theory calculations of charged molecules and surfaces using Coulomb
-    kernel truncation</em>, Phys. Rev. B <strong>112</strong>, 045409
-    (2025).</a>
-3.  [↑](#cite_ref-rozzi:prb:2006_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.205119"
-    class="external text" rel="nofollow">C. A. Rozzi, D. Varsano, A. Marini,
-    E. K. Gross, A. J. Rubio, Phys. Rev. B <strong>73</strong>, 20511
-    (2006).</a>
-4.  [↑](#cite_ref-sohier:prb:2017_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.96.075448"
-    class="external text" rel="nofollow">T. Sohier, M. Calandra, and F.
-    Mauri, Phys. Rev. B 96, 75448 (2017).</a>
-
-
+[^ihm:jpcss:1979-1]: [J. Ihm, A. Zunger, M. L. Cohen, Journal of Physics C: Solid State Physics **12**, 4409 (1979).](https://doi.org/10.1088/0022-3719/12/21/009)
+[^vijay:prb:2025-2]: [S. Vijay, M. Schlipf, H. Miranda, F. Karsai, M. Kaltak, M. Marsman, and G. Kresse, *Efficient periodic density functional theory calculations of charged molecules and surfaces using Coulomb kernel truncation*, Phys. Rev. B **112**, 045409 (2025).](https://doi.org/10.1103/cd6s-cdkf)
+[^rozzi:prb:2006-3]: [C. A. Rozzi, D. Varsano, A. Marini, E. K. Gross, A. J. Rubio, Phys. Rev. B **73**, 20511 (2006).](https://doi.org/10.1103/PhysRevB.73.205119)
+[^sohier:prb:2017-4]: [T. Sohier, M. Calandra, and F. Mauri, Phys. Rev. B 96, 75448 (2017).](https://doi.org/10.1103/PhysRevB.96.075448)

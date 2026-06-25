@@ -35,7 +35,7 @@ where $\\ f_i | i=1,..,N \\$ are the partial occupancies, and
 ${\bf H}_{nm}=\langle \psi_m \vert \hat{H} \vert \psi_n \rangle$
 
 is the Hamiltonian expressed within the subspace spanned by the current
-orbitals $\\ \psi_i | i=1,..,N \\$.<sup>[\[1\]](#cite_note-kresse:cms:1996-1)</sup>
+orbitals $\\ \psi_i | i=1,..,N \\$.[^kresse:cms:1996-1]
 
 The structure of the gradient may be understood as follows: the first
 part on the right-hand side describes the change of the free energy with
@@ -61,7 +61,7 @@ $U_{nm} = \delta_{nm} - \Delta \frac{H_{nm}}{H_{mm}-H_{nn}}$
 
 where $\Delta$
 denotes the
-stepsize.<sup>[\[2\]](#cite_note-gillan:jpc:89-2)</sup>
+stepsize.[^gillan:jpc:89-2]
 Note that taking a step along this search direction amounts to a
 rotation of the orbitals (*rotation* on account of
 $U$ being unitary):
@@ -71,7 +71,7 @@ $\vert \psi_n \rangle = \sum^N_{m=1} U_{nm} \vert \psi_m \rangle$
 Per default, however, VASP constructs a search direction for the
 subspace rotational part of the gradient in the manner proposed by
 Freysoldt *et
-al.*<sup>[\[3\]](#cite_note-freysoldt:prb:2009-3)</sup>
+al.*[^freysoldt:prb:2009-3]
 
 Changes in the partial occupancies are computed in accordance with the
 aforementioned work as well.
@@ -107,24 +107,8 @@ subsequent direct optimization.
 href="/wiki/index.php?title=Direct_optimization_of_the_orbitals&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-kresse:cms:1996_1-0)
-    <a href="https://doi.org/10.1016/0927-0256(96)00008-0"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Comp.
-    Mater. Sci. <strong>6</strong>, 15 (1996)</a>
-2.  [↑](#cite_ref-gillan:jpc:89_2-0)
-    <a href="https://doi.org/10.1088/0953-8984/1/4/005"
-    class="external text" rel="nofollow">M. J. Gillan, J. Phys.: Condens.
-    Matter <strong>1</strong>, 689 (1989).</a>
-3.  [↑](#cite_ref-freysoldt:prb:2009_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.79.241103"
-    class="external text" rel="nofollow">C. Freysoldt, S. Beck, and J.
-    Neugebauer, <em>Direct minimization technique for metals in density
-    functional theory</em>, Phys. Rev. B <strong>79</strong>, 241103R
-    (2009).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kresse:cms:1996-1]: [G. Kresse and J. Furthmüller, Comp. Mater. Sci. **6**, 15 (1996)](https://doi.org/10.1016/0927-0256(96)00008-0)
+[^gillan:jpc:89-2]: [M. J. Gillan, J. Phys.: Condens. Matter **1**, 689 (1989).](https://doi.org/10.1088/0953-8984/1/4/005)
+[^freysoldt:prb:2009-3]: [C. Freysoldt, S. Beck, and J. Neugebauer, *Direct minimization technique for metals in density functional theory*, Phys. Rev. B **79**, 241103R (2009).](https://doi.org/10.1103/PhysRevB.79.241103)

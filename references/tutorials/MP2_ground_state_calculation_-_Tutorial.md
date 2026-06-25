@@ -21,17 +21,17 @@ This tutorial introduces how to calculate the ground state energy using
 second order Møller-Plesset perturbation theory (MP2) with VASP.
 Currently there are three implementations available:
 
-- **MP2**<sup>[\[1\]](#cite_note-marsman-1)</sup>:
+- **MP2**[^marsman-1]:
   this implementation is recommended for very small unit cells, very few
   k-points and very low plane-wave cuttofs. The system size scaling of
   this algorithm is N⁵.
-- **LTMP2**<sup>[\[2\]](#cite_note-schaefer2017-2)</sup>:
+- **LTMP2**[^schaefer2017-2]:
   for all larger systems this Laplace transformed MP2 (LTMP)
   implementation is recommended. Larger cutoffs and denser k-point
   meshes can be used. It possesses a lower system size scaling (N⁴) and
   a more efficient k-point sampling.
 - **stochastic
-  LTMP2**<sup>[\[3\]](#cite_note-schaefer2018-3)</sup>:
+  LTMP2**[^schaefer2018-3]:
   even faster calculations at the price of statistical noise can be
   achieved with the stochastic MP2 algorithm. It is an optimal choice
   for very large systems where only relative errors per valence electron
@@ -130,22 +130,8 @@ Depending on your choice, please switch to the corresponding page.
 href="/wiki/index.php?title=MP2_ground_state_calculation_-_Tutorial&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-marsman_1-0)
-    <a href="http://dx.doi.org/10.1063/1.3126249" class="external text"
-    rel="nofollow">M. Marsman, A. Grüneis, J. Paier, and G. Kresse, J. Chem.
-    Phys. 130, 184103 (2009).</a>
-2.  [↑](#cite_ref-schaefer2017_2-0)
-    <a href="http://dx.doi.org/10.1063/1.4976937" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    146, 104101 (2017).</a>
-3.  [↑](#cite_ref-schaefer2018_3-0)
-    <a href="https://doi.org/10.1063/1.5016100" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    148, 064103 (2018).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^marsman-1]: [M. Marsman, A. Grüneis, J. Paier, and G. Kresse, J. Chem. Phys. 130, 184103 (2009).](http://dx.doi.org/10.1063/1.3126249)
+[^schaefer2017-2]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. 146, 104101 (2017).](http://dx.doi.org/10.1063/1.4976937)
+[^schaefer2018-3]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. 148, 064103 (2018).](https://doi.org/10.1063/1.5016100)

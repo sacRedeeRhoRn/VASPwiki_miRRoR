@@ -5,7 +5,7 @@
 
 
 The SCH
-approach<sup>[\[1\]](#cite_note-karsai:prb:2018-1)[\[2\]](#cite_note-unzog:prb:2022-2)</sup>
+approach[^karsai:prb:2018-1][^unzog:prb:2022-2]
 is explained in detail on the following [theory
 page](../theory/Supercell_core-hole_theory.md).
 When the core hole is explicitly introduced in one of the atoms, i.e., a
@@ -19,10 +19,10 @@ calculated using Fermi's golden rule.
 Two different approaches can be used to treat the excited electron. The
 excited electron can be placed into the lowest conduction band in the
 **excited electron and core-hole
-(XCH)**<sup>[\[3\]](#cite_note-hetenyi:jcp:2004-3)</sup>
+(XCH)**[^hetenyi:jcp:2004-3]
 approach, alternatively the excited electron can be accounted for by a
 negative background charge in the **full core-hole (FCH)**
-<sup>[\[4\]](#cite_note-Prendergasst:prl:2006-4)</sup>
+[^Prendergasst:prl:2006-4]
 method.
 
 
@@ -333,29 +333,7 @@ href="/wiki/index.php?title=Supercell_core-hole_calculations&amp;veaction=edit&a
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-karsai:prb:2018_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.98.235205"
-    class="external text" rel="nofollow">F. Karsai, M. Humer, E.
-    Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B <strong>98</strong>,
-    235205 (2018).</a>
-2.  [↑](#cite_ref-unzog:prb:2022_2-0)
-    <a href="http://doi.org/10.1103/PhysRevB.106.155133"
-    class="external text" rel="nofollow">M. Unzog, A. Tal, G. Kresse,
-    <em>X-ray absorption using the projector augmented-wave method and the
-    Bethe-Salpeter equation</em>, Phys. Rev. B <strong>106</strong>, 155133
-    (2022).</a>
-3.  [↑](#cite_ref-hetenyi:jcp:2004_3-0)
-    <a href="https://doi.org/10.1063/1.1703526" class="external text"
-    rel="nofollow">B. Hetényi, F. De Angelis, P. Giannozzi, and R. Car,
-    <em>Calculation of near-edge x-ray-absorption fine structure at finite
-    temperatures: spectral signatures of hydrogen bond breaking in liquid
-    water</em> , J. Chem. Phys. <strong>120</strong>, 8632 (2004).</a>
-4.  [↑](#cite_ref-Prendergasst:prl:2006_4-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.96.215502"
-    class="external text" rel="nofollow">D. Prendergasst and G. Galli,
-    <em>X-Ray Absorption Spectra of Water from First Principles
-    Calculations</em>, Phys. Rev. Lett. <strong>96</strong>, 215502
-    (2006).</a>
-
-
+[^karsai:prb:2018-1]: [F. Karsai, M. Humer, E. Flage-Larsen, P. Blaha, and G. Kresse, Phys. Rev. B **98**, 235205 (2018).](https://doi.org/10.1103/PhysRevB.98.235205)
+[^unzog:prb:2022-2]: [M. Unzog, A. Tal, G. Kresse, *X-ray absorption using the projector augmented-wave method and the Bethe-Salpeter equation*, Phys. Rev. B **106**, 155133 (2022).](http://doi.org/10.1103/PhysRevB.106.155133)
+[^hetenyi:jcp:2004-3]: [B. Hetényi, F. De Angelis, P. Giannozzi, and R. Car, *Calculation of near-edge x-ray-absorption fine structure at finite temperatures: spectral signatures of hydrogen bond breaking in liquid water* , J. Chem. Phys. **120**, 8632 (2004).](https://doi.org/10.1063/1.1703526)
+[^Prendergasst:prl:2006-4]: [D. Prendergasst and G. Galli, *X-Ray Absorption Spectra of Water from First Principles Calculations*, Phys. Rev. Lett. **96**, 215502 (2006).](https://doi.org/10.1103/PhysRevLett.96.215502)

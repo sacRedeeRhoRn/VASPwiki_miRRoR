@@ -126,7 +126,7 @@ the second step, VASP projects onto these optimized projectors, yielding
 a single complex number for each orbital, site and
 $l$-quantum number, which is written to the
 [PROCAR](../output-files/PROCAR.md) file. For details we also refer to
-<sup>[\[1\]](#cite_note-Schuler:JPCM:2018-1)</sup>.
+[^Schuler:JPCM:2018-1].
 LORBIT=12 should no longer be
 used except for qualitative calculations. LORBIT=13 chooses the
 projectors also automatically, but allows for different optimal linear
@@ -298,15 +298,6 @@ You can learn more about plotting and calculating it in our tutorials:
 ## References\[<a href="/wiki/index.php?title=LORBIT&amp;veaction=edit&amp;section=7"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Schuler:JPCM:2018_1-0)
-    <a href="https://doi.org/10.1088/1361-648X/aae80a" class="external text"
-    rel="nofollow">M. Schüler, O.E. Peil, G.J. Kraberger, R. Pordzik, M.
-    Marsman, G. Kresse, T.O. Wehling, and M. Aichhorn, J. Phys.: Condens.
-    Matter <strong>30</strong>, 475901 (2018).</a>
-
-
 ## Related tags and articles\[<a href="/wiki/index.php?title=LORBIT&amp;veaction=edit&amp;section=8"
 class="mw-editsection-visualeditor"
 title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
@@ -317,4 +308,4 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-LORBIT-_incategory-Examples)
 
-
+[^Schuler:JPCM:2018-1]: [M. Schüler, O.E. Peil, G.J. Kraberger, R. Pordzik, M. Marsman, G. Kresse, T.O. Wehling, and M. Aichhorn, J. Phys.: Condens. Matter **30**, 475901 (2018).](https://doi.org/10.1088/1361-648X/aae80a)

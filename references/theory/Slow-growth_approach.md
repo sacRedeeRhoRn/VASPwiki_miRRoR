@@ -6,7 +6,7 @@
 
 The free-energy profile along a geometric parameter
 $\xi$ can be scanned by an approximate slow-growth
-approach<sup>[\[1\]](#cite_note-woo:ziegler:1997-1)</sup>.
+approach[^woo:ziegler:1997-1].
 In this method, the value of $\xi$ is
 linearly changed from the value characteristic for the initial state (1)
 to that for the final state (2) with a velocity of transformation
@@ -21,7 +21,7 @@ the work $w^{irrev}_{1 \rightarrow 2}$ corresponds to the free-energy difference
 the final and initial state. In the general case,
 $w^{irrev}_{1 \rightarrow 2}$ is the irreversible work
 related to the free energy via Jarzynski's identity
-<sup>[\[2\]](#cite_note-jarzynski:prl:1997-2)</sup>:
+[^jarzynski:prl:1997-2]:
 
 $exp^{-\frac{\Delta A_{1 \rightarrow 2}}{k_B\\T}}= \bigg \langle
 exp^{-\frac{w^{irrev}_{1 \rightarrow 2}}{k_B\\T}} \bigg\rangle.$
@@ -33,7 +33,7 @@ $1
 \rightarrow 2$ transformation. Detailed description of
 the simulation protocol that employs Jarzynski's identity can be found
 in reference
-<sup>[\[3\]](#cite_note-overhofer:geissler:2005-3)</sup>.
+[^overhofer:geissler:2005-3].
 
 ## How to\[<a
 href="/wiki/index.php?title=Slow-growth_approach&amp;veaction=edit&amp;section=1"
@@ -86,18 +86,6 @@ href="/wiki/index.php?title=Slow-growth_approach&amp;veaction=edit&amp;section=3
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-woo:ziegler:1997_1-0)
-    <a href="https://doi.org/10.1021/jp9717296" class="external text"
-    rel="nofollow">T. Woo, P. Margl, P. Blöchl, T. Ziegler. J. Phys. Chem.,
-    <strong>101</strong>, 40 (1997)</a>
-2.  [↑](#cite_ref-jarzynski:prl:1997_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.78.2690"
-    class="external text" rel="nofollow">C. Jarzynski, Phys. Rev. Lett.
-    <strong>78</strong>, 2690 (1997).</a>
-3.  [↑](#cite_ref-overhofer:geissler:2005_3-0)
-    <a href="https://doi.org/10.1021/jp044556a" class="external text"
-    rel="nofollow">Oberhofer, C. Dellago, P. L. Geissler, J. Phys. Chem. B
-    109, 6902 (2005).</a>
-
-
+[^woo:ziegler:1997-1]: [T. Woo, P. Margl, P. Blöchl, T. Ziegler. J. Phys. Chem., **101**, 40 (1997)](https://doi.org/10.1021/jp9717296)
+[^jarzynski:prl:1997-2]: [C. Jarzynski, Phys. Rev. Lett. **78**, 2690 (1997).](https://doi.org/10.1103/PhysRevLett.78.2690)
+[^overhofer:geissler:2005-3]: [Oberhofer, C. Dellago, P. L. Geissler, J. Phys. Chem. B 109, 6902 (2005).](https://doi.org/10.1021/jp044556a)

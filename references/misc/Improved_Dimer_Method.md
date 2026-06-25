@@ -5,11 +5,11 @@
 
 
 The dimer
-method<sup>[\[1\]](#cite_note-henkelman:jpc:1999-1)</sup>
+method[^henkelman:jpc:1999-1]
 is a technique for the optimization of transition states. In VASP, the
 improved dimer method (IDM) by Heyden et al. is implemented, and a
 detailed presentation of the method can be found in their
-paper<sup>[\[2\]](#cite_note-heyden:jpc:2005-2)</sup>.
+paper[^heyden:jpc:2005-2].
 
 The initial curvature along the dimer axis is computed using finite
 differences. The initial dimer direction must be provided (see below).
@@ -282,18 +282,5 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-henkelman:jpc:1999_1-0)
-    <a href="https://doi.org/10.1063/1.480097" class="external text"
-    rel="nofollow">G. Henkelman and H. Jónsson, <em>A dimer method for
-    finding saddle points on high dimensional potential surfaces using only
-    first derivatives</em>, J. Chem. Phys. <strong>111</strong>, 7010–7022
-    (1999).</a>
-2.  [↑](#cite_ref-heyden:jpc:2005_2-0)
-    <a href="https://doi.org/10.1063/1.2104507" class="external text"
-    rel="nofollow">A. Heyden, A. T. Bell, and F. J. Keil, <em>Efficient
-    methods for finding transition states in chemical reactions: Comparison
-    of improved dimer method and partitioned rational function optimization
-    method</em>, J. Chem. Phys. <strong>123</strong>, 224101 (2005).</a>
-
-
+[^henkelman:jpc:1999-1]: [G. Henkelman and H. Jónsson, *A dimer method for finding saddle points on high dimensional potential surfaces using only first derivatives*, J. Chem. Phys. **111**, 7010–7022 (1999).](https://doi.org/10.1063/1.480097)
+[^heyden:jpc:2005-2]: [A. Heyden, A. T. Bell, and F. J. Keil, *Efficient methods for finding transition states in chemical reactions: Comparison of improved dimer method and partitioned rational function optimization method*, J. Chem. Phys. **123**, 224101 (2005).](https://doi.org/10.1063/1.2104507)

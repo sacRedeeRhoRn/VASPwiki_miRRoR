@@ -158,7 +158,7 @@ Finally, [IBRION](../incar-tags/IBRION.md)=6 and
 [ISIF](../incar-tags/ISIF.md)≥3 allows to calculate the elastic constants.
 The elastic tensor is determined by performing six finite distortions of
 the lattice and deriving the elastic constants from the strain-stress
-relationship.<sup>[\[1\]](#cite_note-lepage:prb:2002-1)</sup>
+relationship.[^lepage:prb:2002-1]
 The elastic tensor is calculated both, for 'clamped' ions, as well, as
 allowing for relaxation of the ions. The elastic moduli for rigid ions
 are written after the line
@@ -167,7 +167,7 @@ are written after the line
 
 The ionic contributions are determined by inverting the ionic Hessian
 matrix and multiplying with the internal strain
-tensor,<sup>[\[2\]](#cite_note-wu:prb:2005-2)</sup>
+tensor,[^wu:prb:2005-2]
 and the corresponding contributions are written after the lines:
 
     ELASTIC MODULI CONTR FROM IONIC RELAXATION (kBar)
@@ -220,10 +220,10 @@ frequencies at the Gamma point. When replicating the unit cell to a
 sampling. For a 4x4x4 supercell, a 3x3x3 **k** point mesh will suffice.
 
 It is possible to use
-phonopy<sup>[\[3\]](#cite_note-phonopy-3)</sup>
+phonopy[^phonopy-3]
 to post-process the results of a finite differences calculation done
 with
-VASP.<sup>[\[4\]](#cite_note-phonopy_dfpt-4)</sup>
+VASP.[^phonopy_dfpt-4]
 
 |  |
 |----|
@@ -276,23 +276,7 @@ href="/wiki/index.php?title=Phonons_from_finite_differences&amp;veaction=edit&am
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-lepage:prb:2002_1-0)
-    <a href="http://doi.org/10.1103/PhysRevB.65.104104"
-    class="external text" rel="nofollow">Y. Le Page and P. Saxe, Phys. Rev.
-    B <strong>65</strong>, 104104 (2002).</a>
-2.  [↑](#cite_ref-wu:prb:2005_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.72.035105"
-    class="external text" rel="nofollow">X. Wu, D. Vanderbilt, and D. R.
-    Hamann, Phys. Rev. B <strong>72</strong>, 035105 (2005).</a>
-3.  [↑](#cite_ref-phonopy_3-0)
-    <a href="http://phonopy.github.io/phonopy/index.html"
-    class="external text"
-    rel="nofollow">http://phonopy.github.io/phonopy/index.html (2022).</a>
-4.  [↑](#cite_ref-phonopy_dfpt_4-0)
-    <a href="http://phonopy.github.io/phonopy/vasp-dfpt.html"
-    class="external text"
-    rel="nofollow">http://phonopy.github.io/phonopy/vasp-dfpt.html
-    (2022).</a>
-
-
+[^lepage:prb:2002-1]: [Y. Le Page and P. Saxe, Phys. Rev. B **65**, 104104 (2002).](http://doi.org/10.1103/PhysRevB.65.104104)
+[^wu:prb:2005-2]: [X. Wu, D. Vanderbilt, and D. R. Hamann, Phys. Rev. B **72**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.72.035105)
+[^phonopy-3]: [http://phonopy.github.io/phonopy/index.html (2022).](http://phonopy.github.io/phonopy/index.html)
+[^phonopy_dfpt-4]: [http://phonopy.github.io/phonopy/vasp-dfpt.html (2022).](http://phonopy.github.io/phonopy/vasp-dfpt.html)

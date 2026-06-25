@@ -42,7 +42,7 @@ larger effective interactions compared to
 or the [projector-cRPA
 method](../theory/Constrained–random-phase–approximation_formalism.md) "Constrained–random-phase–approximation formalism")
 and conserves the number of
-electrons.<sup>[\[1\]](#cite_note-kaltak:prb:2025-1)</sup>
+electrons.[^kaltak:prb:2025-1]
 
 ## Related tags and articles\[<a href="/wiki/index.php?title=LSCRPA&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
@@ -58,10 +58,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSCRPA-_incategory-Howto)
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-kaltak:prb:2025_1-0)
-    <a href="https://doi.org/10.1103/m3gh-g6r6" class="external text"
-    rel="nofollow">M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and
-    G. Kresse, Phys. Rev. B <strong>112</strong>, 245102 (2025).</a>
-
-
+[^kaltak:prb:2025-1]: [M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and G. Kresse, Phys. Rev. B **112**, 245102 (2025).](https://doi.org/10.1103/m3gh-g6r6)

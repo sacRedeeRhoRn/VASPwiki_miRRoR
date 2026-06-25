@@ -20,7 +20,7 @@ In conjunction with [`LCHIMAG`](LCHIMAG.md)` = True`,
 NUCIND calculates the chemical
 shielding tensor $\sigma_{ij}(\mathbf{R})$ at positions $\textbf{R}$
 off-nucleus, hence nucleus-independent chemical shielding (NICS)
-<sup>[\[1\]](#cite_note-schleyer:1996-1)[\[2\]](#cite_note-chen:schleyer:2005-2)</sup>.
+[^schleyer:1996-1][^chen:schleyer:2005-2].
 VASP calculates only from the plane wave grid, there is no one-center
 augmentation.
 
@@ -60,12 +60,12 @@ using
 
 
 to select the isotropic chemical shielding $\sigma_{iso}$ in 3D space
-<sup>[\[3\]](#cite_note-klod:kleinpeter:2001-3)[\[4\]](#cite_note-kleinpeter:klod:koch:2007-4)</sup>.
+[^klod:kleinpeter:2001-3][^kleinpeter:klod:koch:2007-4].
 It will produce an isosurface of the shielding (positive) and
 deshielding (negative) over the crystal structure.
 
 Alternatively, produce a 2D contour plot of the NICS in a plane
-<sup>[\[5\]](#cite_note-karadakov:horner:2013-5)</sup>:
+[^karadakov:horner:2013-5]:
 
 
     import py4vasp as pv
@@ -83,7 +83,7 @@ For both the 2D and 3D plots, the isotropic chemical shielding is used
 by default. You can alternatively select the other properties (see
 [LCHIMAG](LCHIMAG.md) for details. Herzfeld-Berger
 convention is followed
-<sup>[\[6\]](#cite_note-mason:ssn:1993-6)</sup>)
+[^mason:ssn:1993-6])
 by inputting them as arguments into the functions, e.g.,
 `calc.nics.plot("anisotropic")` or
 `calc.nics.to_contour("span", a=0.5)`:
@@ -155,44 +155,9 @@ class="external text" rel="nofollow">LNICSALL tutorial</a>
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-schleyer:1996_1-0)
-    <a href="https://doi.org/10.1021/ja960582d" class="external text"
-    rel="nofollow">P. von Ragué Schleyer, C. Maerker, A. Dransfeld, H. Jiao,
-    and N. J. R. van Eikema Hommes, <em>Nucleus-Independent Chemical
-    Shifts:  A Simple and Efficient Aromaticity Probe</em>, J. Am. Chem.
-    Soc. <strong>118</strong>, 6317 (1996).</a>
-2.  [↑](#cite_ref-chen:schleyer:2005_2-0)
-    <a href="https://doi.org/10.1021/cr030088+" class="external text"
-    rel="nofollow">Z. Chen, C. S. Wannere, C. Corminboeuf, R. Puchta, and P.
-    von Ragué Schleyer, <em>Nucleus-Independent Chemical Shifts (NICS) as an
-    Aromaticity Criterion</em>, Chem. Rev. 10, <strong>105</strong>,
-    3842–3888 (2005).</a>
-3.  [↑](#cite_ref-klod:kleinpeter:2001_3-0)
-    <a href="https://doi.org/10.1039/B009809O" class="external text"
-    rel="nofollow">S. Klod and E. Kleinpeter, <em>Ab initio calculation of
-    the anisotropy effect of multiple bonds and the ring current effect of
-    arenes—application in conformational and configurational analysis</em>,
-    J. Chem. Soc., Perkin Trans. <strong>2</strong>, 1893-1898 (2001).</a>
-4.  [↑](#cite_ref-kleinpeter:klod:koch:2007_4-0)
-    <a href="https://doi.org/10.1016/j.theochem.2007.02.049"
-    class="external text" rel="nofollow">E. Kleinpeter, S. Klod, and A.
-    Koch, <em>Visualization of through space NMR shieldings of aromatic and
-    anti-aromatic molecules and a simple means to compare and estimate
-    aromaticity</em>, J. Mol. Struct. THEOCHEM <strong>811</strong>, 45-60
-    (2007).</a>
-5.  [↑](#cite_ref-karadakov:horner:2013_5-0)
-    <a href="https://doi.org/10.1021/jp311536c" class="external text"
-    rel="nofollow">P. Karadakov and K. Horner, <em>Magnetic Shielding in and
-    around Benzene and Cyclobutadiene: A Source of Information about
-    Aromaticity, Antiaromaticity, and Chemical Bonding</em>, J. Phys. Chem.
-    A, <strong>117</strong>, 518-523 (2013).</a>
-6.  [↑](#cite_ref-mason:ssn:1993_6-0)
-    <a href="https://doi.org/10.1016/0926-2040(93)90010-K"
-    class="external text" rel="nofollow">J. Mason, <em>Conventions for the
-    reporting of nuclear magnetic shielding (or shift) tensors suggested by
-    participants in the NATO ARW on NMR shielding constants at the
-    University of Maryland, College Park, July 1992</em>, Solid State Nucl.
-    Magn. Reson. <strong>2</strong>, 285 (1993).</a>
-
-
+[^schleyer:1996-1]: [P. von Ragué Schleyer, C. Maerker, A. Dransfeld, H. Jiao, and N. J. R. van Eikema Hommes, *Nucleus-Independent Chemical Shifts:  A Simple and Efficient Aromaticity Probe*, J. Am. Chem. Soc. **118**, 6317 (1996).](https://doi.org/10.1021/ja960582d)
+[^chen:schleyer:2005-2]: [Z. Chen, C. S. Wannere, C. Corminboeuf, R. Puchta, and P. von Ragué Schleyer, *Nucleus-Independent Chemical Shifts (NICS) as an Aromaticity Criterion*, Chem. Rev. 10, **105**, 3842–3888 (2005).](https://doi.org/10.1021/cr030088+)
+[^klod:kleinpeter:2001-3]: [S. Klod and E. Kleinpeter, *Ab initio calculation of the anisotropy effect of multiple bonds and the ring current effect of arenes—application in conformational and configurational analysis*, J. Chem. Soc., Perkin Trans. **2**, 1893-1898 (2001).](https://doi.org/10.1039/B009809O)
+[^kleinpeter:klod:koch:2007-4]: [E. Kleinpeter, S. Klod, and A. Koch, *Visualization of through space NMR shieldings of aromatic and anti-aromatic molecules and a simple means to compare and estimate aromaticity*, J. Mol. Struct. THEOCHEM **811**, 45-60 (2007).](https://doi.org/10.1016/j.theochem.2007.02.049)
+[^karadakov:horner:2013-5]: [P. Karadakov and K. Horner, *Magnetic Shielding in and around Benzene and Cyclobutadiene: A Source of Information about Aromaticity, Antiaromaticity, and Chemical Bonding*, J. Phys. Chem. A, **117**, 518-523 (2013).](https://doi.org/10.1021/jp311536c)
+[^mason:ssn:1993-6]: [J. Mason, *Conventions for the reporting of nuclear magnetic shielding (or shift) tensors suggested by participants in the NATO ARW on NMR shielding constants at the University of Maryland, College Park, July 1992*, Solid State Nucl. Magn. Reson. **2**, 285 (1993).](https://doi.org/10.1016/0926-2040(93)90010-K)

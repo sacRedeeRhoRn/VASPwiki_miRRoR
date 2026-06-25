@@ -30,7 +30,7 @@ compressed
 grid is used (instead of the zero-temperature formalism of many-body
 perturbation theory). This allows for GW and RPA calculations for
 metallic systems.
-<sup>[\[1\]](#cite_note-Kaltak:PRB:2020-1)</sup>
+[^Kaltak:PRB:2020-1]
 To this end, the electronic temperature is set with the k-point smearing
 parameter [SIGMA](SIGMA.md) in units of eV, e.g. a value of
 $\sigma=1 eV$ corresponds to a electronic temperature of
@@ -51,10 +51,4 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-Kaltak:PRB:2020_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.101.205145"
-    class="external text" rel="nofollow">M. Kaltak and G. Kresse, Phys. Rev.
-    B. <strong>101</strong>, 205145 (2020).</a>
-
-
+[^Kaltak:PRB:2020-1]: [M. Kaltak and G. Kresse, Phys. Rev. B. **101**, 205145 (2020).](https://doi.org/10.1103/PhysRevB.101.205145)

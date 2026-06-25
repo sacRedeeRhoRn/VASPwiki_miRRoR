@@ -18,7 +18,7 @@ The Kohn-Sham kinetic-energy density
 $\tau_{\sigma}=\frac{1}{2}\sum_{i}\nabla\psi_{i\sigma}^{\*}\cdot\nabla\psi_{i\sigma}$
 
 should, in principle, be larger than the von Weizsäcker kinetic-energy
-density<sup>[\[1\]](#cite_note-kurth:ijqc:1999-1)</sup>
+density[^kurth:ijqc:1999-1]
 
 $\tau_{\sigma}^{\textrm{W}}=\frac{\left\vert\nabla
 n_{\sigma}\right\vert^{2}}{8 n_{\sigma}}.$
@@ -71,13 +71,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LNOAUGXC-_incategory-Example
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-kurth:ijqc:1999_1-0)
-    <a
-    href="https://doi.org/10.1002/(SICI)1097-461X(1999)75:4/5%3C889::AID-QUA54%3E3.0.CO;2-8"
-    class="external text" rel="nofollow">S. Kurth, J. P. Perdew, and P.
-    Blaha, <em>Molecular and solid-state tests of density functional
-    approximations: LSD, GGAs, and meta-GGAs</em>, Int. J. Quantum Chem.
-    <strong>75</strong>, 889 (1999).</a>
-
-
+[^kurth:ijqc:1999-1]: [S. Kurth, J. P. Perdew, and P. Blaha, *Molecular and solid-state tests of density functional approximations: LSD, GGAs, and meta-GGAs*, Int. J. Quantum Chem. **75**, 889 (1999).](https://doi.org/10.1002/(SICI)1097-461X(1999)75:4/5%3C889::AID-QUA54%3E3.0.CO;2-8)

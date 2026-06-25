@@ -5,7 +5,7 @@
 
 
 The many-body dispersion energy method (MBD@rsSCS) of Tkatchenko et
-al.,<sup>[\[1\]](#cite_note-tkatchenko:prl:12-1)[\[2\]](#cite_note-ambrosetti:jcp:14-2)</sup>
+al.,[^tkatchenko:prl:12-1][^ambrosetti:jcp:14-2]
 invoked by setting [IVDW](../incar-tags/IVDW.md)=202, is based on the
 random-phase expression for the correlation energy
 
@@ -17,7 +17,7 @@ whereby the response function $\chi_0$ is
 approximated by a sum of atomic contributions represented by quantum
 harmonic oscillators. The expression for the dispersion energy used in
 the VASP k-space implementation of the MBD@rsSCS method (see reference
-<sup>[\[3\]](#cite_note-bucko:jpcm:16-3)</sup>
+[^bucko:jpcm:16-3]
 for details) is as follows:
 
 $E_{\mathrm{disp}} =
@@ -34,12 +34,12 @@ components of $\mathbf{A}_{LR}$ are obtained using an atoms-in-molecule approach
 employed in the pairwise [Tkatchenko-Scheffler
 method](Tkatchenko-Scheffler_method.md)
 (see references
-<sup>[\[2\]](#cite_note-ambrosetti:jcp:14-2)[\[3\]](#cite_note-bucko:jpcm:16-3)</sup>
+[^ambrosetti:jcp:14-2][^bucko:jpcm:16-3]
 for details).
 
 Details of the implementation of the MBD@rsSCS method in VASP are
 presented in reference
-<sup>[\[3\]](#cite_note-bucko:jpcm:16-3)</sup>.
+[^bucko:jpcm:16-3].
 
 ## Usage\[<a
 href="/wiki/index.php?title=Many-body_dispersion_energy&amp;veaction=edit&amp;section=1"
@@ -82,7 +82,7 @@ are the default ones):
 $\left(1-\mathbf{A}^{(0)}_{LR}(\omega)
 {\mathbf{T}}_{LR}({\mathbf{k}})\right)$are
 non-positive, see
-reference<sup>[\[4\]](#cite_note-4)</sup>
+reference[^4]
 for details
 
   
@@ -128,9 +128,7 @@ terminates with an error message
 that this problem is not caused by a bug, but rather it is due to a
 limitation of the underlying physical model.</li>
 <li>Analytical gradients of the energy are implemented (fore details see
-reference <sup><a href="#cite_note-bucko:jpcm:16-3"><span
-class="cite-bracket">[</span>3<span
-class="cite-bracket">]</span></a></sup>) and hence the atomic and
+reference [^bucko:jpcm:16-3]) and hence the atomic and
 lattice relaxations can be performed.</li>
 <li>Due to the long-range nature of dispersion interactions, the
 convergence of energy with respect to the number of k-points should be
@@ -173,34 +171,9 @@ polarizability](Many-body_dispersion_energy_with_fractionally_ionic_model_for_po
 href="/wiki/index.php?title=Many-body_dispersion_energy&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-tkatchenko:prl:12_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.108.236402"
-    class="external text" rel="nofollow">A. Tkatchenko, R. A. DiStasio, Jr.,
-    R. Car, and M. Scheffler, Phys. Rev. Lett. <strong>108</strong>, 236402
-    (2012).</a>
-2.  ↑
-    <sup>[a](#cite_ref-ambrosetti:jcp:14_2-0)</sup>
-    <sup>[b](#cite_ref-ambrosetti:jcp:14_2-1)</sup>
-    <a href="https://doi.org/10.1063/1.4865104" class="external text"
-    rel="nofollow">A. Ambrosetti, A. M. Reilly, and R. A. DiStasio Jr., J.
-    Chem. Phys. <strong>140</strong>, 018A508 (2014).</a>
-3.  ↑
-    <sup>[a](#cite_ref-bucko:jpcm:16_3-0)</sup>
-    <sup>[b](#cite_ref-bucko:jpcm:16_3-1)</sup>
-    <sup>[c](#cite_ref-bucko:jpcm:16_3-2)</sup>
-    <sup>[d](#cite_ref-bucko:jpcm:16_3-3)</sup>
-    <a href="https://doi.org/10.1088/0953-8984/28/4/045201"
-    class="external text" rel="nofollow">T. Bučko, S. Lebègue, T. Gould, and
-    J. G. Ángyán, J. Phys.: Condens. Matter <strong>28</strong>, 045201
-    (2016).</a>
-4.  [↑](#cite_ref-4)
-    <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jctc.6b00925"
-    class="external text" rel="nofollow">T. Gould, S. Lebègue, J. G. Ángyán,
-    and T. Bučko, J. Chem. Theory Comput. 12, 5920 (2016).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^tkatchenko:prl:12-1]: [A. Tkatchenko, R. A. DiStasio, Jr., R. Car, and M. Scheffler, Phys. Rev. Lett. **108**, 236402 (2012).](https://doi.org/10.1103/PhysRevLett.108.236402)
+[^ambrosetti:jcp:14-2]: [A. Ambrosetti, A. M. Reilly, and R. A. DiStasio Jr., J. Chem. Phys. **140**, 018A508 (2014).](https://doi.org/10.1063/1.4865104)
+[^bucko:jpcm:16-3]: [T. Bučko, S. Lebègue, T. Gould, and J. G. Ángyán, J. Phys.: Condens. Matter **28**, 045201 (2016).](https://doi.org/10.1088/0953-8984/28/4/045201)
+[^4]: [T. Gould, S. Lebègue, J. G. Ángyán, and T. Bučko, J. Chem. Theory Comput. 12, 5920 (2016).](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.6b00925)

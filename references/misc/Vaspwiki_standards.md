@@ -166,27 +166,15 @@ class="external text">Links in a mediawiki environment</a>
     </references>
 
 .... in your text somewhere ...
-<sup>[\[1\]](#cite_note-name1-1)</sup>
+[^name1-1]
 and .. somewhere else
-<sup>[\[2\]](#cite_note-name2-2)</sup>
+[^name2-2]
 .... ....
 
 ## References\[<a
 href="/wiki/index.php?title=Vaspwiki_standards&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-name1_1-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.39.4997"
-    class="external text" rel="nofollow">|I. Stich, R. Car, M. Parrinello
-    and S. Baroni, Phys Rev. B 39, 4997 (1989).</a>
-2.  [↑](#cite_ref-name2_2-0)
-    <a href="http://dx.doi.org/10.1088/0953-8984/1/4/005"
-    class="external text" rel="nofollow">|M.J. Gillan, J. Phys.: Condens.
-    Matter 1, 689 (1989).</a>
-
-
 - End with
 
 <!-- -->
@@ -194,4 +182,5 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
     ----
     [[Category:INCAR]]
 
-
+[^name1-1]: [\|I. Stich, R. Car, M. Parrinello and S. Baroni, Phys Rev. B 39, 4997 (1989).](http://link.aps.org/doi/10.1103/PhysRevB.39.4997)
+[^name2-2]: [\|M.J. Gillan, J. Phys.: Condens. Matter 1, 689 (1989).](http://dx.doi.org/10.1088/0953-8984/1/4/005)

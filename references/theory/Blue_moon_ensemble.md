@@ -29,7 +29,7 @@ $Z_{\alpha,\beta}={\sum}_{i=1}^{3N} m_i^{-1} \nabla_i \xi_\alpha \cdot
 
 It can be shown that the free energy gradient can be computed using the
 equation:
-<sup>[\[1\]](#cite_note-carter:kapral:1989-1)[\[2\]](#cite_note-denotter:briels:2000-2)[\[3\]](#cite_note-darve:pohorille:2010-3)[\[4\]](#cite_note-fleurat:ziegler:2005-4)</sup>
+[^carter:kapral:1989-1][^denotter:briels:2000-2][^darve:pohorille:2010-3][^fleurat:ziegler:2005-4]
 
 $\Bigl(\frac{\partial A}{\partial
 \xi_k}\Bigr)_{\xi^\*}=\frac{1}{\langle|Z|^{-1/2}\rangle_{\xi^\*}}\langle
@@ -44,12 +44,12 @@ temperature, and $\lambda_{\xi_k}$ is the Lagrange multiplier associated with th
 parameter ${\xi_k}$ used
 in the [SHAKE
 algorithm](Constrained_molecular_dynamics.md)
-<sup>[\[5\]](#cite_note-ryckaertt:jcp:1977-5)</sup>
+[^ryckaertt:jcp:1977-5]
 
 The free-energy difference between states (1) and (2) can be computed by
 integrating the free-energy gradients over a connecting path, e.g. using
 the Simpson
-method<sup>[\[6\]](#cite_note-simpson:web-6)</sup>:
+method[^simpson:web-6]:
 
 ${\Delta}A_{1 \rightarrow 2} = \int_{{\xi(1)}}^{{\xi(2)}}\Bigl(
 \frac{\partial {A}} {\partial \xi} \Bigr)_{\xi^\*} \cdot d{\xi}.$
@@ -78,30 +78,9 @@ href="/wiki/index.php?title=Blue_moon_ensemble&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-carter:kapral:1989_1-0)
-    <a href="https://doi.org/10.1016/S0009-2614(89)87314-2"
-    class="external text" rel="nofollow">E. Carter, G. Ciccotti, J. Hynes,
-    R. Kapral, Chem. Phys. Lett., <strong>156</strong>, 472 (1989).</a>
-2.  [↑](#cite_ref-denotter:briels:2000_2-0)
-    <a href="https://doi.org/10.1080/00268970009483348"
-    class="external text" rel="nofollow">W. den Otter, W. Briels, Mol.
-    Phys., <strong>98</strong>, 773 (2000).</a>
-3.  [↑](#cite_ref-darve:pohorille:2010_3-0)
-    <a href="https://doi.org/10.1080/08927020211975" class="external text"
-    rel="nofollow">E. Darve, M. Wilson, A. Pohorille, Mol. Simul.,
-    <strong>28</strong>, 113 (2010).</a>
-4.  [↑](#cite_ref-fleurat:ziegler:2005_4-0)
-    <a href="https://doi.org/10.1063/1.1948367" class="external text"
-    rel="nofollow">P. Fleurat-Lessard, T. Ziegler, J. Chem. Phys.,
-    <strong>123</strong>, 084101 (2005).</a>
-5.  [↑](#cite_ref-ryckaertt:jcp:1977_5-0)
-    <a href="http://dx.doi.org/10.1016/0021-9991(77)90098-5"
-    class="external text" rel="nofollow">J. P. Ryckaert, G. Ciccotti, and H.
-    J. C. Berendsen, J. Comp. Phys. <strong>23</strong>, 327 (1977).</a>
-6.  [↑](#cite_ref-simpson:web_6-0)
-    <a href="https://en.wikipedia.org/wiki/Simpson%27s_rule"
-    class="external text" rel="nofollow">Simpson's rule, www.wikipedia.org
-    (2024)</a>
-
-
+[^carter:kapral:1989-1]: [E. Carter, G. Ciccotti, J. Hynes, R. Kapral, Chem. Phys. Lett., **156**, 472 (1989).](https://doi.org/10.1016/S0009-2614(89)87314-2)
+[^denotter:briels:2000-2]: [W. den Otter, W. Briels, Mol. Phys., **98**, 773 (2000).](https://doi.org/10.1080/00268970009483348)
+[^darve:pohorille:2010-3]: [E. Darve, M. Wilson, A. Pohorille, Mol. Simul., **28**, 113 (2010).](https://doi.org/10.1080/08927020211975)
+[^fleurat:ziegler:2005-4]: [P. Fleurat-Lessard, T. Ziegler, J. Chem. Phys., **123**, 084101 (2005).](https://doi.org/10.1063/1.1948367)
+[^ryckaertt:jcp:1977-5]: [J. P. Ryckaert, G. Ciccotti, and H. J. C. Berendsen, J. Comp. Phys. **23**, 327 (1977).](http://dx.doi.org/10.1016/0021-9991(77)90098-5)
+[^simpson:web-6]: [Simpson's rule, www.wikipedia.org (2024)](https://en.wikipedia.org/wiki/Simpson%27s_rule)

@@ -9,14 +9,14 @@ Default: **LSINGLES** = .FALSE. 
 
 Description: Switch on singles contribution to correlation energy for
 [GW
-algorithms](../methods/Practical_guide_to_GW_calculations.md).<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+algorithms](../methods/Practical_guide_to_GW_calculations.md).[^klimes:jcp:143-1]
 
 ------------------------------------------------------------------------
 
 LSINGLES enables the
 calculation of the singles contributions to the correlation energy that
 can be represented by the following Feynman (time-ordered)
-diagrams:<sup>[\[2\]](#cite_note-kaltak:thesis2015-2)[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+diagrams:[^kaltak:thesis2015-2][^klimes:jcp:143-1]
 
 <a href="/wiki/File:SinglesDiagrams.png"
 class="mw-file-description"><img
@@ -44,7 +44,7 @@ following lines to [OUTCAR](../output-files/OUTCAR.md)
 
 Here, **renomalized HF singles** corresponds to the renormalized singles
 contribution suggested by Ren and
-coworkers:<sup>[\[3\]](#cite_note-ren:prb:88-3)</sup>
+coworkers:[^ren:prb:88-3]
 
 $E^{rSE}_c = -\sum_{a\in virt, i\in occ} \frac{|\langle i| V^{HF} -
 V_0^{KS}|a\rangle|^2 }{\epsilon_a-\epsilon_i}$
@@ -52,11 +52,11 @@ V_0^{KS}|a\rangle|^2 }{\epsilon_a-\epsilon_i}$
 This contribution accounts for the change of the mean-field exchange
 energy and can be derived consistently within the AC-FDT framework as
 described in Sec. II D Eq. (28) of Klimeš et
-al.<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+al.[^klimes:jcp:143-1]
 
 In contrast, the **HF single shot energy change** line contains the
 somewhat simpler
-contribution<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+contribution[^klimes:jcp:143-1]
 
 $E_c^{rSE} = \mathrm{Tr}\left\[ (\gamma_{HF} - \gamma_{DFT})\hat
 h_{HF} \right\],$
@@ -78,7 +78,7 @@ $E_c^{GWSE} = \mathrm{Tr}\left\[ (\gamma_{RPA} - \gamma_{DFT})\hat
 h_{HF} \right\],$
 
 where $\gamma_{RPA}$ is the RPA density
-matrix.<sup>[\[1\]](#cite_note-klimes:jcp:143-1)</sup>
+matrix.[^klimes:jcp:143-1]
 For versions \<= 6.4.2, this contribution is not directly printed to
 file. However, the first and second term is printed to
 [OUTCAR](../output-files/OUTCAR.md):
@@ -134,23 +134,6 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  ↑
-    <sup>[a](#cite_ref-klimes:jcp:143_1-0)</sup>
-    <sup>[b](#cite_ref-klimes:jcp:143_1-1)</sup>
-    <sup>[c](#cite_ref-klimes:jcp:143_1-2)</sup>
-    <sup>[d](#cite_ref-klimes:jcp:143_1-3)</sup>
-    <sup>[e](#cite_ref-klimes:jcp:143_1-4)</sup>
-    <a href="https://doi.org/10.1063/1.4929346" class="external text"
-    rel="nofollow">J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>143</strong>, 102816 (2015).</a>
-2.  [↑](#cite_ref-kaltak:thesis2015_2-0)
-    <a href="https://utheses.univie.ac.at/detail/33771#"
-    class="external text" rel="nofollow">M. Kaltak, Thesis: Merging GW with
-    DMFT (2015).</a>
-3.  [↑](#cite_ref-ren:prb:88_3-0)
-    <a href="http://doi.org/10.1103/PhysRevB.88.035120"
-    class="external text" rel="nofollow">X. Ren, P. Rinke, G. E. Scuseria,
-    and M. Scheffler, Phys. Rev. B <strong>88</strong>, 035120 (2013).</a>
-
-
+[^klimes:jcp:143-1]: [J. Klimeš, M. Kaltak, and G. Kresse, J. Chem. Phys. **143**, 102816 (2015).](https://doi.org/10.1063/1.4929346)
+[^kaltak:thesis2015-2]: [M. Kaltak, Thesis: Merging GW with DMFT (2015).](https://utheses.univie.ac.at/detail/33771#)
+[^ren:prb:88-3]: [X. Ren, P. Rinke, G. E. Scuseria, and M. Scheffler, Phys. Rev. B **88**, 035120 (2013).](http://doi.org/10.1103/PhysRevB.88.035120)

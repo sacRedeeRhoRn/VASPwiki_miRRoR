@@ -10,7 +10,7 @@ Default: **BMIX_MAG** = 1.0 
 Description: Sets the cutoff wave vector for Kerker mixing scheme
 ([IMIX](IMIX.md)=1 and/or [INIMIX](INIMIX.md)=1)
 for the magnetization density
-<sup>[\[1\]](#cite_note-kerker:prb:1981-1)</sup>.
+[^kerker:prb:1981-1].
 
 ------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ convergence turns out to be very slow. In particular, for slabs,
 magnetic systems and insulating systems (e.g. molecules and clusters),
 an initial "linear mixing" can result in faster convergence than the
 Kerker model function
-<sup>[\[1\]](#cite_note-kerker:prb:1981-1)</sup>.
+[^kerker:prb:1981-1].
 One can therefore try to use the following setting
 
     AMIX     = 0.2
@@ -59,13 +59,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-BMIX_MAG-_incategory-Example
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-kerker:prb:1981_1-0)</sup>
-    <sup>[b](#cite_ref-kerker:prb:1981_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.23.3082" class="external text"
-    rel="nofollow">G. P. Kerker, <em>Efficient iteration scheme for
-    self-consistent pseudopotential calculations</em>, Phys. Rev. B
-    <strong>23</strong>, 3082 (1981).</a>
-
-
+[^kerker:prb:1981-1]: [G. P. Kerker, *Efficient iteration scheme for self-consistent pseudopotential calculations*, Phys. Rev. B **23**, 3082 (1981).](https://doi.org/10.1103/PhysRevB.23.3082)

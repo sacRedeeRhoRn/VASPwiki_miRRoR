@@ -15,9 +15,9 @@ Parrinello-Rahman dynamics (in case VASP was compiled with
 ------------------------------------------------------------------------
 
 When running *NpT* simulations with a [Langevin
-thermostat](MDALGO.md)<sup>[\[1\]](#cite_note-Allen91-1)</sup>
+thermostat](MDALGO.md)[^Allen91-1]
 ([MDALGO](MDALGO.md)=3), using the method of [Parrinello and
-Rahman](../misc/NpT_ensemble.md),<sup>[\[2\]](#cite_note-Parrinello80-2)[\[3\]](#cite_note-Parrinello81-3)</sup>
+Rahman](../misc/NpT_ensemble.md),[^Parrinello80-2][^Parrinello81-3]
 a fictitious mass (in amu) for the lattice degrees-of-freedom has to be
 assigned using the PMASS tag.
 The friction coefficient for lattice degrees-of-freedom have to be
@@ -38,7 +38,7 @@ problems. We strongly recommend to make careful tests with various
 settings before performing the production run.
 
 As demonstrated by Nosé and
-Klein<sup>[\[4\]](#cite_note-4)</sup>,
+Klein[^4],
 the harmonic frequency of oscillation of a cubic cell can be expressed
 as $\omega_L = \sqrt{\frac{3BL}{W}}$, where
 $B$, $L$, and
@@ -59,29 +59,12 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=PMASS&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Allen91_1-0)
-    M. P. Allen and D. J. Tildesley,
-    *Computer simulation of liquids*, Oxford university press: New York,
-    1991.
-2.  [↑](#cite_ref-Parrinello80_2-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevLett.45.1196"
-    class="external text" rel="nofollow">M. Parrinello and A. Rahman, Phys.
-    Rev. Lett. 45, 1196 (1980).</a>
-3.  [↑](#cite_ref-Parrinello81_3-0)
-    <a href="http://dx.doi.org/10.1063/1.328693" class="external text"
-    rel="nofollow">M. Parrinello and A. Rahman, J. Appl. Phys. 52, 7182
-    (1981).</a>
-4.  [↑](#cite_ref-4)
-    <a href="http://dx.doi.org/10.1080/00268978300102851" class="extiw"
-    title="doi:10.1080/00268978300102851">S. Nosé and M. L. Klein, Mol.
-    Phys. 50, 1055 (1983)</a>
-
-
 [Examples that use this
 tag](https://vasp.at/wiki/index.php/Special-Search/-PMASS-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
+[^Allen91-1]: M. P. Allen and D. J. Tildesley, *Computer simulation of liquids*, Oxford university press: New York, 1991.
+[^Parrinello80-2]: [M. Parrinello and A. Rahman, Phys. Rev. Lett. 45, 1196 (1980).](http://dx.doi.org/10.1103/PhysRevLett.45.1196)
+[^Parrinello81-3]: [M. Parrinello and A. Rahman, J. Appl. Phys. 52, 7182 (1981).](http://dx.doi.org/10.1063/1.328693)
+[^4]: [S. Nosé and M. L. Klein, Mol. Phys. 50, 1055 (1983)](http://dx.doi.org/10.1080/00268978300102851 "doi:10.1080/00268978300102851")

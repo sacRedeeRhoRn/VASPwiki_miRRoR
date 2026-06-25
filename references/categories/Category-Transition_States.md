@@ -22,11 +22,11 @@ then the ejection by the new chloride.</figcaption>
 A **transition state** (TS) in chemistry refers to a high-energy,
 short-lived configuration that occurs during a chemical reaction as
 reactants transform into
-products<sup>[\[1\]](#cite_note-tst:web-1)</sup>.
+products[^tst:web-1].
 At this point, the reaction's progress is maximized. In other words, the
 transition state is a metastable structure that corresponds to a saddle
 point on the high-dimensional potential energy surface
-(PES)<sup>[\[2\]](#cite_note-hratchian:schlegel:2005-2)</sup>.
+(PES)[^hratchian:schlegel:2005-2].
 
 Identifying the transition state is essential for understanding reaction
 mechanisms, energy barriers, and rates of reaction. The energy barrier
@@ -39,15 +39,15 @@ frequency) connects R and P. For comparison to experimental values,
 additional thermodynamic corrections can be made to the simple energetic
 barrier, including the zero-point vibrational energy, the population of
 the vibrational states, and entropy to enable better comparison to the
-experiment<sup>[\[3\]](#cite_note-mcquarrie:2000-3)</sup>.
+experiment[^mcquarrie:2000-3].
 It is also possible to model solid-solid phase transitions in a similar
-manner<sup>[\[4\]](#cite_note-henkelman:jcp:2012-4)</sup>.
+manner[^henkelman:jcp:2012-4].
 
 There are many thorough review articles and books on transition state
 theory
-(TST)<sup>[\[5\]](#cite_note-truhlar:jpc:1996-5)[\[6\]](#cite_note-roussel:2023-6)</sup>
+(TST)[^truhlar:jpc:1996-5][^roussel:2023-6]
 and its subsequent development variational TST
-(VTST)<sup>[\[7\]](#cite_note-truhlar:csr:2017-7)</sup>
+(VTST)[^truhlar:csr:2017-7]
 which we refer to for the interested reader. There are various methods
 available to pinpoint transition states in VASP.
 
@@ -113,14 +113,14 @@ desired saddle point, i.e. the TS.</figcaption>
 </figure>
 
 The dimer
-method<sup>[\[8\]](#cite_note-henkelman:jpc:1999-8)</sup>
+method[^henkelman:jpc:1999-8]
 is a technique for determining activated transitions without knowledge
 of the final state. Beginning with a trial transition state (TS)
 structure, a relaxed TS is obtained. In VASP, the improved dimer method
 (IDM) by Heyden et al. is implemented. The modification reduces the
 number of gradient calculations per cycle, improving algorithm
 performance. A detailed presentation of the method can be found in their
-paper<sup>[\[9\]](#cite_note-heyden:jpc:2005-9)</sup>.
+paper[^heyden:jpc:2005-9].
 The main tag is [IBRION](../incar-tags/IBRION.md)=44.
 
 Follow the how-to in order to learn [how to perform an IDM
@@ -145,7 +145,7 @@ fixed. The TS is the maximum of the PES (red).</figcaption>
 </figure>
 
 The nudged elastic band (NEB)
-method<sup>[\[10\]](#cite_note-mills:surf-sci:1995-10)[\[11\]](#cite_note-jonsson:book:1998-11)</sup>
+method[^mills:surf-sci:1995-10][^jonsson:book:1998-11]
 involves the creation of an initial path connecting the system's initial
 and final states, utilizing a set of intermediate configurations
 ([IMAGES](../incar-tags/IMAGES.md)). Hence, as a prerequisite, the initial
@@ -208,11 +208,11 @@ only femto or picoseconds, while seconds would be required to encounter
 a TS. However, using [constrained
 MD](../theory/Constrained_molecular_dynamics.md),
 e.g. a [blue moon
-simulation](../theory/Blue_moon_ensemble.md)<sup>[\[12\]](#cite_note-gesvandtnerova:rucco:bucko:2021-12)</sup>,
+simulation](../theory/Blue_moon_ensemble.md)[^gesvandtnerova:rucco:bucko:2021-12],
 a path-based coordinate ([IRCCAR](../input-files/IRCCAR.md)), or
 [metadynamics](../theory/Metadynamics.md) (cf. [metadynamics for
 transition state
-MLFFs](../methods/Using_metadynamics_to_train_a_machine-learned_force_field.md))<sup>[\[13\]](#cite_note-klein:2006-13)[\[14\]](#cite_note-tiwary:parrinello:2006-14)</sup>,
+MLFFs](../methods/Using_metadynamics_to_train_a_machine-learned_force_field.md))[^klein:2006-13][^tiwary:parrinello:2006-14],
 finding even rare events like the TS becomes feasible.
 
 More detail for each of these methods, as well as other advanced MD
@@ -232,7 +232,7 @@ title="Edit section: Books">edit</a> \| (./index.php.md)\]
 
 - *Investigating chemical reactions with VASP - A practical guide* by
   Tomáš Bučko - a book guiding modeling chemical reactions in VASP
-  <sup>[\[15\]](#cite_note-bucko:book:2025-15)</sup>.
+  [^bucko:book:2025-15].
 
 ### How to\[<a
 href="/wiki/index.php?title=Category:Transition_states&amp;veaction=edit&amp;section=8"
@@ -283,90 +283,18 @@ href="/wiki/index.php?title=Category:Transition_states&amp;veaction=edit&amp;sec
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-tst:web_1-0)
-    <a href="https://en.wikipedia.org/wiki/Transition_state_theory"
-    class="external text" rel="nofollow">Transition state theory,
-    www.wikipedia.org (2024)</a>
-2.  [↑](#cite_ref-hratchian:schlegel:2005_2-0)
-    <a
-    href="https://www.sciencedirect.com/science/article/abs/pii/B9780444517197500536"
-    class="external text" rel="nofollow">H. Hratchian, H. Schlegel, Theory
-    and Application of Computational Chemistry, Chapter 10 - Finding minima,
-    transition states, and following reaction pathways on ab initio
-    potential energy surfaces (2005), p. 195-249</a>
-3.  [↑](#cite_ref-mcquarrie:2000_3-0)
-    <a href="https://uscibooks.aip.org/books/statistical-mechanics/"
-    class="external text" rel="nofollow">D. McQuarrie, <em>Statistical
-    Mechanics</em>, (2000).</a>
-4.  [↑](#cite_ref-henkelman:jcp:2012_4-0)
-    <a href="https://doi.org/10.1063/1.3684549" class="external text"
-    rel="nofollow">D. Sheppard, P. Xiao, W. Chemelweski, D. Johnson, G.
-    Henkelman, <em>A generalized solid-state nudged elastic band
-    method</em>, J. Chem. Phys. <strong>136</strong>, 074103 (2012).</a>
-5.  [↑](#cite_ref-truhlar:jpc:1996_5-0)
-    <a href="https://doi.org/10.1039/C7CS00602K" class="external text"
-    rel="nofollow">D. Truhlar, B. Garrett, and S. Klippenstein, <em>Current
-    Status of Transition-State Theory</em>, J. Phys. Chem.
-    <strong>100</strong>, 12771 (1996).</a>
-6.  [↑](#cite_ref-roussel:2023_6-0)
-    <a href="https://doi.org/10.1088/978-0-7503-5321-2"
-    class="external text" rel="nofollow">M. Roussel, <em>Foundations of
-    Chemical Kinetics, Chapter 7 - Transition-state theory</em>, (2023), p.
-    195-249.</a>
-7.  [↑](#cite_ref-truhlar:csr:2017_7-0)
-    <a href="https://doi.org/10.1039/C7CS00602K" class="external text"
-    rel="nofollow">J. Bao and D. Truhlar, <em>Variational transition state
-    theory: theoretical framework and recent developments</em>, Chem. Soc.
-    Rev. <strong>46</strong>, 7548 (2017).</a>
-8.  [↑](#cite_ref-henkelman:jpc:1999_8-0)
-    <a href="https://doi.org/10.1063/1.480097" class="external text"
-    rel="nofollow">G. Henkelman and H. Jónsson, <em>A dimer method for
-    finding saddle points on high dimensional potential surfaces using only
-    first derivatives</em>, J. Chem. Phys. <strong>111</strong>, 7010–7022
-    (1999).</a>
-9.  [↑](#cite_ref-heyden:jpc:2005_9-0)
-    <a href="https://doi.org/10.1063/1.2104507" class="external text"
-    rel="nofollow">A. Heyden, A. T. Bell, and F. J. Keil, <em>Efficient
-    methods for finding transition states in chemical reactions: Comparison
-    of improved dimer method and partitioned rational function optimization
-    method</em>, J. Chem. Phys. <strong>123</strong>, 224101 (2005).</a>
-10. [↑](#cite_ref-mills:surf-sci:1995_10-0)
-    <a href="http://doi.org/10.1016/0039-6028(94)00731-4"
-    class="external text" rel="nofollow">G. Mills, H. Jonsson and G. K.
-    Schenter, <em>Reversible work transition state theory: application to
-    dissociative adsorption of hydrogen</em>, Surf. Sci.,
-    <strong>324</strong>, 305 (1995).</a>
-11. [↑](#cite_ref-jonsson:book:1998_11-0)
-    <a href="https://doi.org/10.1142/9789812839664_0016"
-    class="external text" rel="nofollow">H. Jonsson, G. Mills and K. W.
-    Jacobsen, <em>Nudged Elastic Band Method for Finding Minimum Energy
-    Paths of Transitions</em>, in <em>Classical and Quantum Dynamics in
-    Condensed Phase Simulations</em>, ed. B. J. Berne, G. Ciccotti and D. F.
-    Coker (World Scientific, 1998).</a>
-12. [↑](#cite_ref-gesvandtnerova:rucco:bucko:2021_12-0)
-    <a href="https://doi.org/10.1016/j.jcat.2021.02.011"
-    class="external text" rel="nofollow">M. Gešvandtnerová, D. Rocca, T.
-    Bučko, <em>Methanol carbonylation over acid mordenite: Insights from ab
-    initio molecular dynamics and machine learning thermodynamic
-    perturbation theory</em>, J. Catal. <strong>396</strong>, 166
-    (2021).</a>
-13. [↑](#cite_ref-klein:2006_13-0)
-    <a href="https://doi.org/10.1021/ar040198i" class="external text"
-    rel="nofollow">B. Ensing, M. De Vivo, Z. Liu, P. Moore, M. Klein,
-    <em>Metadynamics as a Tool for Exploring Free Energy Landscapes of
-    Chemical Reactions</em>, Acc. Chem. Res. <strong>39</strong>, 73
-    (2006)</a>
-14. [↑](#cite_ref-tiwary:parrinello:2006_14-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.111.230602"
-    class="external text" rel="nofollow">P. Tiwary, M. Parrinello, <em>From
-    Metadynamics to Dynamics</em>, Phys. Rev. Lett. <strong>111</strong>,
-    230602 (2013).</a>
-15. [↑](#cite_ref-bucko:book:2025_15-0)
-    <a
-    href="https://stella.uniba.sk/texty/PRIF_TB_investigating_chemical_reactions_vasp.pdf"
-    class="external text" rel="nofollow">T. Bučko, <em>Investigating
-    chemical reactions with VASP - A practical guide</em>, Comenius
-    University Bratislava (2025), p.50-51.</a>
-
-
+[^tst:web-1]: [Transition state theory, www.wikipedia.org (2024)](https://en.wikipedia.org/wiki/Transition_state_theory)
+[^hratchian:schlegel:2005-2]: [H. Hratchian, H. Schlegel, Theory and Application of Computational Chemistry, Chapter 10 - Finding minima, transition states, and following reaction pathways on ab initio potential energy surfaces (2005), p. 195-249](https://www.sciencedirect.com/science/article/abs/pii/B9780444517197500536)
+[^mcquarrie:2000-3]: [D. McQuarrie, *Statistical Mechanics*, (2000).](https://uscibooks.aip.org/books/statistical-mechanics/)
+[^henkelman:jcp:2012-4]: [D. Sheppard, P. Xiao, W. Chemelweski, D. Johnson, G. Henkelman, *A generalized solid-state nudged elastic band method*, J. Chem. Phys. **136**, 074103 (2012).](https://doi.org/10.1063/1.3684549)
+[^truhlar:jpc:1996-5]: [D. Truhlar, B. Garrett, and S. Klippenstein, *Current Status of Transition-State Theory*, J. Phys. Chem. **100**, 12771 (1996).](https://doi.org/10.1039/C7CS00602K)
+[^roussel:2023-6]: [M. Roussel, *Foundations of Chemical Kinetics, Chapter 7 - Transition-state theory*, (2023), p. 195-249.](https://doi.org/10.1088/978-0-7503-5321-2)
+[^truhlar:csr:2017-7]: [J. Bao and D. Truhlar, *Variational transition state theory: theoretical framework and recent developments*, Chem. Soc. Rev. **46**, 7548 (2017).](https://doi.org/10.1039/C7CS00602K)
+[^henkelman:jpc:1999-8]: [G. Henkelman and H. Jónsson, *A dimer method for finding saddle points on high dimensional potential surfaces using only first derivatives*, J. Chem. Phys. **111**, 7010–7022 (1999).](https://doi.org/10.1063/1.480097)
+[^heyden:jpc:2005-9]: [A. Heyden, A. T. Bell, and F. J. Keil, *Efficient methods for finding transition states in chemical reactions: Comparison of improved dimer method and partitioned rational function optimization method*, J. Chem. Phys. **123**, 224101 (2005).](https://doi.org/10.1063/1.2104507)
+[^mills:surf-sci:1995-10]: [G. Mills, H. Jonsson and G. K. Schenter, *Reversible work transition state theory: application to dissociative adsorption of hydrogen*, Surf. Sci., **324**, 305 (1995).](http://doi.org/10.1016/0039-6028(94)00731-4)
+[^jonsson:book:1998-11]: [H. Jonsson, G. Mills and K. W. Jacobsen, *Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions*, in *Classical and Quantum Dynamics in Condensed Phase Simulations*, ed. B. J. Berne, G. Ciccotti and D. F. Coker (World Scientific, 1998).](https://doi.org/10.1142/9789812839664_0016)
+[^gesvandtnerova:rucco:bucko:2021-12]: [M. Gešvandtnerová, D. Rocca, T. Bučko, *Methanol carbonylation over acid mordenite: Insights from ab initio molecular dynamics and machine learning thermodynamic perturbation theory*, J. Catal. **396**, 166 (2021).](https://doi.org/10.1016/j.jcat.2021.02.011)
+[^klein:2006-13]: [B. Ensing, M. De Vivo, Z. Liu, P. Moore, M. Klein, *Metadynamics as a Tool for Exploring Free Energy Landscapes of Chemical Reactions*, Acc. Chem. Res. **39**, 73 (2006)](https://doi.org/10.1021/ar040198i)
+[^tiwary:parrinello:2006-14]: [P. Tiwary, M. Parrinello, *From Metadynamics to Dynamics*, Phys. Rev. Lett. **111**, 230602 (2013).](https://doi.org/10.1103/PhysRevLett.111.230602)
+[^bucko:book:2025-15]: [T. Bučko, *Investigating chemical reactions with VASP - A practical guide*, Comenius University Bratislava (2025), p.50-51.](https://stella.uniba.sk/texty/PRIF_TB_investigating_chemical_reactions_vasp.pdf)

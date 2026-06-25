@@ -17,7 +17,7 @@ Ni</figcaption>
 **Strongly correlated materials** are systems in which electron-electron
 interactions play a dominant role and cannot be adequately described by
 independent-particle approximations such as standard DFT
-<sup>[\[1\]](#cite_note-martin:book:2016-1)</sup>.
+[^martin:book:2016-1].
 These systems typically include elements with partially filled
 $d$ and $f$ electron
 orbitals which are localized. Correlation effects lead to phenomena such
@@ -89,7 +89,7 @@ are some strategies to obtain a value for U:
   ([`LDAUTYPE`](../incar-tags/LDAUTYPE.md)` = 3`). Within this approach
   the effective interaction $U$ can be
   determined via the linear response approach
-  <sup>[\[2\]](#cite_note-cococcioni:2005-2)</sup>
+  [^cococcioni:2005-2]
 
 $U=\chi^{-1}-\chi_0^{-1} \approx\left(\frac{\partial
 N_I^{\mathrm{SCF}}}{\partial V_I}\right)^{-1}-\left(\frac{\partial
@@ -184,7 +184,7 @@ title="Edit section: Dynamical mean-field theory (DMFT)">edit</a> \| (./index.ph
 
 In [DFT+DMFT
 calculations](../tutorials/DFT+DMFT_calculations.md),
-DMFT<sup>[\[3\]](#cite_note-kotliar:rmp:2006-3)</sup>
+DMFT[^kotliar:rmp:2006-3]
 augments the DFT calculation with an additional local correlated
 subproblem — typically a specific $d$- or
 $f$-shell. The key idea is to map the full lattice problem
@@ -228,7 +228,7 @@ functionals](Category-Hybrid_functionals.md)
 partially mitigate the self-interaction error inherent to standard DFT.
 This reduction of the self-interaction error has been shown to yield an
 improved description of strongly correlated systems
-<sup>[\[4\]](#cite_note-Silva2007-4)[\[5\]](#cite_note-liu2019assessing-5)</sup>.
+[^Silva2007-4][^liu2019assessing-5].
 
 ### Hybrid functionals + U\[<a
 href="/wiki/index.php?title=Category:Strongly_correlated_electrons&amp;veaction=edit&amp;section=6"
@@ -243,7 +243,7 @@ functional framework ([hybrid +
 U](../categories/Category-Exchange-correlation_functionals.md) "Category:Exchange-correlation functionals"))
 has been shown to address inaccuracies arising from the overscreening of
 localized states
-<sup>[\[6\]](#cite_note-Ivady2014-6)</sup>.
+[^Ivady2014-6].
 
 ### Quasi-particle GW (QPGW)\[<a
 href="/wiki/index.php?title=Category:Strongly_correlated_electrons&amp;veaction=edit&amp;section=7"
@@ -257,7 +257,7 @@ limitations of the underlying DFT description of localized states. In
 contrast, self-consistent GW schemes such as QPGW, which are independent
 of the starting electronic structure, have been shown to provide an
 accurate description of correlated electrons
-<sup>[\[7\]](#cite_note-Cunningham2023-7)[\[8\]](#cite_note-shishkin:prl:2007-8)</sup>.
+[^Cunningham2023-7][^shishkin:prl:2007-8].
 
 ## Additional resources\[<a
 href="/wiki/index.php?title=Category:Strongly_correlated_electrons&amp;veaction=edit&amp;section=8"
@@ -272,63 +272,22 @@ title="Edit section: Books">edit</a> \| (./index.php.md)\]
 - *Interacting Electrons - Theory and Computational Approaches* by
   Richard Martin, Lucia Reining, and David Ceperley - a book about
   strong correlation
-  <sup>[\[1\]](#cite_note-martin:book:2016-1)</sup>.
+  [^martin:book:2016-1].
 - *Dynamical Mean-Field Theory for Strongly Correlated Materials* by
   Volodymyr Turkowski - a book about DMFT
-  <sup>[\[9\]](#cite_note-turkowski:book:2021-9)</sup>.
+  [^turkowski:book:2021-9].
 
 ## References\[<a
 href="/wiki/index.php?title=Category:Strongly_correlated_electrons&amp;veaction=edit&amp;section=10"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-martin:book:2016_1-0)</sup>
-    <sup>[b](#cite_ref-martin:book:2016_1-1)</sup>
-    <a href="https://doi.org/10.1017/CBO9781139050807" class="external text"
-    rel="nofollow">R. Martin, L. Reining, D. Ceperley, <em>Interacting
-    Electrons: Theory and Computational Approaches</em>, Cambridge
-    University Press (2016).</a>
-2.  [↑](#cite_ref-cococcioni:2005_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.71.035105"
-    class="external text" rel="nofollow">M. Cococcioni and S. de Gironcoli,
-    Phys. Rev. B <strong>71</strong>, 035105 (2005).</a>
-3.  [↑](#cite_ref-kotliar:rmp:2006_3-0)
-    <a href="https://link.aps.org/doi/10.1103/RevModPhys.78.865"
-    class="external text" rel="nofollow">G. Kotliar, S. Y. Savrasov, K.
-    Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti,
-    <em>Electronic structure calculations with dynamical mean-field
-    theory</em>, Rev. Mod. Phys. <strong>78</strong>, 865 (2006)</a>
-4.  [↑](#cite_ref-Silva2007_4-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.75.045121"
-    class="external text" rel="nofollow">Juarez L. F. Da Silva, M. Verónica
-    Ganduglia-Pirovano, Joachim Sauer, Veronika Bayer, Phys. Rev. B
-    <strong>75</strong>, 045121 (2007).</a>
-5.  [↑](#cite_ref-liu2019assessing_5-0)
-    <a href="https://doi.org/10.1088/1361-648x/ab4150" class="external text"
-    rel="nofollow">P. Liu, C. Franchini, M. Marsman, and G. Kresse,
-    <em>Assessing model-dielectric-dependent hybrid functionals on the
-    antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and
-    NiO</em>, J. Phys.: Condens. Matter <strong>32</strong>, 015502
-    (2020).</a>
-6.  [↑](#cite_ref-Ivady2014_6-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.90.035146"
-    class="external text" rel="nofollow">Viktor Ivády, Rickard Armiento,
-    Krisztián Szász, Erik Janzén, Adam Gali, Phys. Rev. B
-    <strong>90</strong>, 035146 (2014).</a>
-7.  [↑](#cite_ref-Cunningham2023_7-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.108.165104"
-    class="external text" rel="nofollow">Brian Cunningham, Myrta Grüning,
-    Dimitar Pashov, Phys. Rev. B <strong>108</strong>, 165104 (2023).</a>
-8.  [↑](#cite_ref-shishkin:prl:2007_8-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.99.246403"
-    class="external text" rel="nofollow">M. Shishkin, M. Marsman, and G.
-    Kresse, Phys. Rev. Lett. <strong>99</strong>, 246403 (2007).</a>
-9.  [↑](#cite_ref-turkowski:book:2021_9-0)
-    <a href="https://doi.org/10.1007/978-3-030-64904-3"
-    class="external text" rel="nofollow">V. Turkowski, <em>Dynamical
-    Mean-Field Theory for Strongly Correlated Materials</em>, Springer Cham
-    (2021).</a>
-
-
+[^martin:book:2016-1]: [R. Martin, L. Reining, D. Ceperley, *Interacting Electrons: Theory and Computational Approaches*, Cambridge University Press (2016).](https://doi.org/10.1017/CBO9781139050807)
+[^cococcioni:2005-2]: [M. Cococcioni and S. de Gironcoli, Phys. Rev. B **71**, 035105 (2005).](https://doi.org/10.1103/PhysRevB.71.035105)
+[^kotliar:rmp:2006-3]: [G. Kotliar, S. Y. Savrasov, K. Haule, V. S. Oudovenko, O. Parcollet, and C. A. Marianetti, *Electronic structure calculations with dynamical mean-field theory*, Rev. Mod. Phys. **78**, 865 (2006)](https://link.aps.org/doi/10.1103/RevModPhys.78.865)
+[^Silva2007-4]: [Juarez L. F. Da Silva, M. Verónica Ganduglia-Pirovano, Joachim Sauer, Veronika Bayer, Phys. Rev. B **75**, 045121 (2007).](http://dx.doi.org/10.1103/PhysRevB.75.045121)
+[^liu2019assessing-5]: [P. Liu, C. Franchini, M. Marsman, and G. Kresse, *Assessing model-dielectric-dependent hybrid functionals on the antiferromagnetic transition-metal monoxides MnO, FeO, CoO, and NiO*, J. Phys.: Condens. Matter **32**, 015502 (2020).](https://doi.org/10.1088/1361-648x/ab4150)
+[^Ivady2014-6]: [Viktor Ivády, Rickard Armiento, Krisztián Szász, Erik Janzén, Adam Gali, Phys. Rev. B **90**, 035146 (2014).](http://dx.doi.org/10.1103/PhysRevB.90.035146)
+[^Cunningham2023-7]: [Brian Cunningham, Myrta Grüning, Dimitar Pashov, Phys. Rev. B **108**, 165104 (2023).](http://dx.doi.org/10.1103/PhysRevB.108.165104)
+[^shishkin:prl:2007-8]: [M. Shishkin, M. Marsman, and G. Kresse, Phys. Rev. Lett. **99**, 246403 (2007).](https://doi.org/10.1103/PhysRevLett.99.246403)
+[^turkowski:book:2021-9]: [V. Turkowski, *Dynamical Mean-Field Theory for Strongly Correlated Materials*, Springer Cham (2021).](https://doi.org/10.1007/978-3-030-64904-3)

@@ -52,7 +52,7 @@ theory and then apply approximations to make the calculations feasible
 at the DFT level. For a comprehensive theoretical description of
 electron-phonon interactions using many-body perturbation theory, we
 recommend to read Ref.
-<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>
+[^giustino:rmp:2017-1]
 or other contemporary literature.
 
 ### Electron self-energy\[<a
@@ -127,7 +127,7 @@ change in the KS potential due to phonon mode
 $(\nu, \mathbf{q})$. To evaluate this term in practice,
 we employ the rigid-ion approximation, which simplifies the calculation
 by assuming that the potential changes rigidly with atomic
-displacements<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>.
+displacements[^giustino:rmp:2017-1].
 This approximation is implemented in VASP. It means that we do not need
 to compute the second derivatives of the KS potential explicitly, but
 can instead use the first derivatives (i.e., the electron-phonon matrix
@@ -136,7 +136,7 @@ elements) to estimate the DW term.
 The combination of $\Sigma^{\text{FM}}_{n\mathbf{k}}(T) +
 \Sigma^{\text{DW}}_{n\mathbf{k}}(T)$ at this level of
 approximation is often called the Allen-Heine-Cardona (AHC)
-theory<sup>[\[2\]](#cite_note-allen:jpcss:1976-2)[\[3\]](#cite_note-allen:prb:1981-3)</sup>.
+theory[^allen:jpcss:1976-2][^allen:prb:1981-3].
 To be precise, the expressions we showed here are have come to be know
 as nonadiabatic AHC theory, owing to the fact that the phonon frequency
 $\omega_{\nu \mathbf{q}}$ appears in the denominator of
@@ -218,7 +218,7 @@ important to include both the FM and DW contributions to the
 self-energy. Neglecting the DW term can lead to significant errors in
 the predicted bandgap renormalization, as the DW term often partially
 cancels the FM
-contribution<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>.
+contribution[^giustino:rmp:2017-1].
 
 For information on how to compute the band-structure renormalization
 using VASP, please refer to [this how-to
@@ -236,7 +236,7 @@ describe how efficiently charge, heat, or another quantity is carried
 through the material. The electronic transport coefficients are derived
 via the linearized Boltzmann equation within the relaxation time
 approximation (RTA)
-<sup>[\[1\]](#cite_note-giustino:rmp:2017-1)</sup>:
+[^giustino:rmp:2017-1]:
 
 $\frac{\partial f^0_{n \mathbf{k}}}{\partial \varepsilon_{n
 \mathbf{k}}} \mathbf{v}_{n \mathbf{k}} \cdot (-e)\textbf{E} = -
@@ -286,7 +286,7 @@ atom within the coordinates $\kappa+d\kappa$ (where $\kappa$
 denotes the Cartesian coordinates as well as the atom number) at
 temperature $T$ in the
 harmonic approximation is given by the following
-expression<sup>[\[4\]](#cite_note-bloch:zfp:1932-4)[\[5\]](#cite_note-landau:ctp:1959-5)</sup>
+expression[^bloch:zfp:1932-4][^landau:ctp:1959-5]
 
 $dW_{\nu}(\kappa,T)=\frac{1}{2\pi \langle u^{2}_{\nu \kappa}\rangle}
 e^{-\kappa^{2}/(2 \langle u^{2}_{\nu \kappa}\rangle)} d\kappa,$
@@ -341,7 +341,7 @@ title="Edit section: ZG configuration (one-shot method)">edit</a> \| (./index.ph
 Motivated by the empirical observation that for increasing super-cell
 sizes the number of required structures in the MC method can be
 decreased, M. Zacharias and F.
-Giustino<sup>[\[6\]](#cite_note-zacharias:prb:2016-6)</sup>
+Giustino[^zacharias:prb:2016-6]
 proposed a one-shot method where only a single set of displacements is
 used
 
@@ -357,14 +357,14 @@ $\sigma_{\nu,T} = \sqrt{(2 n_{\nu,T}+1) \frac{\hbar}{2 \omega_{\nu}}}.$
 
 Here $n_{\nu,T}=\[\mathrm{exp}(\hbar \omega_{\nu} /k_{B}T)-1\]^{-1}$ denotes the Bose-Einstein occupation number. In this
 way, the sum for the observable $\langle O(T)\rangle$ is reduced to a single calculation. In Ref.
-<sup>[\[6\]](#cite_note-zacharias:prb:2016-6)</sup>
+[^zacharias:prb:2016-6]
 it was shown that for super-cell sizes $N\rightarrow \infty$ the structural configuration obtained using the ZG
 configuration should lead to equivalent results as fully converged MC
 calculations. In practice, it was shown that already relatively small
 supercell sizes are sufficient to achieve good accuracy, but the
 convergence with respect to the cell size can vary between different
 materials. In Ref.
-<sup>[\[7\]](#cite_note-karsai:njp:2018-7)</sup>
+[^karsai:njp:2018-7]
 we have also used a slightly modified approach, in which the signs of
 the displacements are chosen randomly instead of
 $\pm 1$. This was only necessary when calculating
@@ -385,48 +385,12 @@ of the manual.
 href="/wiki/index.php?title=Electron-phonon_interactions_theory&amp;veaction=edit&amp;section=8"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-giustino:rmp:2017_1-0)</sup>
-    <sup>[b](#cite_ref-giustino:rmp:2017_1-1)</sup>
-    <sup>[c](#cite_ref-giustino:rmp:2017_1-2)</sup>
-    <sup>[d](#cite_ref-giustino:rmp:2017_1-3)</sup>
-    <a href="https://doi.org/10.1103/RevModPhys.89.015003"
-    class="external text" rel="nofollow">F. Giustino, <em>Electron-phonon
-    interactions from first principles</em>, Rev. Mod. Phys.
-    <strong>89</strong>, 015003 (2017).</a>
-2.  [↑](#cite_ref-allen:jpcss:1976_2-0)
-    <a href="https://doi.org/10.1088/0022-3719/9/12/013"
-    class="external text" rel="nofollow">P. B. Allen and V. Heine,
-    <em>Theory of the temperature dependence of electronic band
-    structures</em>, J. Phys. C: Solid State Phys. <strong>9</strong>, 2305
-    (1976).</a>
-3.  [↑](#cite_ref-allen:prb:1981_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.23.1495" class="external text"
-    rel="nofollow">P. B. Allen and M. Cardona, <em>Theory of the temperature
-    dependence of the direct gap of germanium</em>, Phys. Rev. B
-    <strong>23</strong>, 1495 (1981).</a>
-4.  [↑](#cite_ref-bloch:zfp:1932_4-0)
-    <a href="https://doi.org/10.1007/BF01337791" class="external text"
-    rel="nofollow">F. Bloch, Zeitschrift fuer Physik. <strong>74</strong>,
-    295 (1932).</a>
-5.  [↑](#cite_ref-landau:ctp:1959_5-0)
-    <a href="https://doi.org/10.1016/C2009-0-24487-4" class="external text"
-    rel="nofollow">L. D. Landau and E. M. Lifshitz, Course of Theoretical
-    Physics: Statistical Physics vol 5, (London: Pergamon), (1959).</a>
-6.  ↑
-    <sup>[a](#cite_ref-zacharias:prb:2016_6-0)</sup>
-    <sup>[b](#cite_ref-zacharias:prb:2016_6-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
-    Rev. B <strong>94</strong>, 075125 (2016).</a>
-7.  [↑](#cite_ref-karsai:njp:2018_7-0)
-    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
-    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
-    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^giustino:rmp:2017-1]: [F. Giustino, *Electron-phonon interactions from first principles*, Rev. Mod. Phys. **89**, 015003 (2017).](https://doi.org/10.1103/RevModPhys.89.015003)
+[^allen:jpcss:1976-2]: [P. B. Allen and V. Heine, *Theory of the temperature dependence of electronic band structures*, J. Phys. C: Solid State Phys. **9**, 2305 (1976).](https://doi.org/10.1088/0022-3719/9/12/013)
+[^allen:prb:1981-3]: [P. B. Allen and M. Cardona, *Theory of the temperature dependence of the direct gap of germanium*, Phys. Rev. B **23**, 1495 (1981).](https://doi.org/10.1103/PhysRevB.23.1495)
+[^bloch:zfp:1932-4]: [F. Bloch, Zeitschrift fuer Physik. **74**, 295 (1932).](https://doi.org/10.1007/BF01337791)
+[^landau:ctp:1959-5]: [L. D. Landau and E. M. Lifshitz, Course of Theoretical Physics: Statistical Physics vol 5, (London: Pergamon), (1959).](https://doi.org/10.1016/C2009-0-24487-4)
+[^zacharias:prb:2016-6]: [M. Zacharias and F. Giustino, Phys. Rev. B **94**, 075125 (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
+[^karsai:njp:2018-7]: [F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008 (2018).](https://doi.org/10.1088/1367-2630/aaf53f)

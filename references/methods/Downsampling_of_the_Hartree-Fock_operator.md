@@ -111,7 +111,7 @@ range-separated functionals (e.g., HSE03/HSE06). It can be applied, for
 instance, in the PBE0 and pure HF cases as well, although from the above
 it might be clear that the range-separated functionals, in general, will
 allow for a larger reduction of the
-grid.<sup>[\[1\]](#cite_note-paier:jcp:06-1)</sup>
+grid.[^paier:jcp:06-1]
 
 
 #### Caveat: when one should not use downsampling\[<a
@@ -260,14 +260,6 @@ formalism](Hybrid_functionals-_formalism.md)
 href="/wiki/index.php?title=Downsampling_of_the_Hartree-Fock_operator&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-paier:jcp:06_1-0)
-    <a href="https://doi.org/10.1063/1.2187006" class="external text"
-    rel="nofollow">J. Paier, M. Marsman, K. Hummer, G. Kresse, I.C. Gerber,
-    and J.G. Ángyán, J. Chem. Phys. <strong>124</strong>, 154709 (2006).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^paier:jcp:06-1]: [J. Paier, M. Marsman, K. Hummer, G. Kresse, I.C. Gerber, and J.G. Ángyán, J. Chem. Phys. **124**, 154709 (2006).](https://doi.org/10.1063/1.2187006)

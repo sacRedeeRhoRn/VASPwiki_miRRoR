@@ -55,7 +55,7 @@ $V_{\mathrm{x,(SR/LR)}}^{\mathrm{HF}}\left(\mu,\mathbf{r},\mathbf{r}'\right)=
 
 The orbital-dependent form of the HF exchange energy is such that hybrid
 functionals are implemented within the generalized KS
-scheme<sup>[\[1\]](#cite_note-seidl:prb:96-1)</sup>.
+scheme[^seidl:prb:96-1].
 Thus, the total energy is minimized with respect to the orbitals instead
 of the electron density as in LDA and GGA, which means that the HF
 potential is a nonlocal operator as in the Hartree-Fock-Roothaan theory.
@@ -182,7 +182,7 @@ The corresponding long-range potentials are given by
 $v_{\mathrm{LR}}^{\mathrm{erf/exp}}=v^{\mathrm{bare}}-v_{\mathrm{SR}}^{\mathrm{erf/exp}}$.
 
 In VASP, these expressions are implemented within the [PAW
-formalism](Projector-augmented-wave_formalism.md).<sup>[\[2\]](#cite_note-paier:jcp:05-2)[\[3\]](#cite_note-angyan:jpa:2006-3)</sup>
+formalism](Projector-augmented-wave_formalism.md).[^paier:jcp:05-2][^angyan:jpa:2006-3]
 
 The families of hybrid functionals implemented in VASP are listed below
 along with examples, whose corresponding [INCAR](../input-files/INCAR.md)
@@ -231,17 +231,17 @@ title="AEXX">AEXX</a>=0.25, but can be set to another value.</li>
 These are the original and most simple forms of hybrid functionals. Two
 examples, PBE0 and B3LYP, are given below.
 
-- [PBE0](List_of_hybrid_functionals.md):<sup>[\[4\]](#cite_note-perdew:jcp:1996-4)</sup>
+- [PBE0](List_of_hybrid_functionals.md):[^perdew:jcp:1996-4]
 
 $E_{\mathrm{xc}}^{\mathrm{PBE0}}=\frac{1}{4}
 E_{\mathrm{x}}^{\mathrm{HF}} + \frac{3}{4}
 E_{\mathrm{x}}^{\mathrm{PBE}} + E_{\mathrm{c}}^{\mathrm{PBE}}$
 
 It is based on the PBE GGA
-functional<sup>[\[5\]](#cite_note-perdew:prl:1996-5)</sup>
+functional[^perdew:prl:1996-5]
 and $a=1/4$.
 
-- [B3LYP](List_of_hybrid_functionals.md)<sup>[\[6\]](#cite_note-stephens:jpc:1994-6)</sup>,
+- [B3LYP](List_of_hybrid_functionals.md)[^stephens:jpc:1994-6],
   well known and popular amongst quantum chemists:
 
  
@@ -254,12 +254,12 @@ E_{\mathrm{c}}^{\mathrm{VWN3}}+ 0.81 E_{\mathrm{c}}^{\mathrm{LYP}}
 
 The exchange part consists of 80% of LDA exchange plus 20% of HF
 exchange, and 72% of the gradient corrections of the B88 GGA
-functional.<sup>[\[7\]](#cite_note-becke:pra:1988-7)</sup>
+functional.[^becke:pra:1988-7]
 The correlation consists of 81% of
-LYP<sup>[\[8\]](#cite_note-lee:prb:1988-8)</sup>
+LYP[^lee:prb:1988-8]
 correlation energy, which contains a LDA and a GGA part, and 19% of the
 LDA Vosko-Wilk-Nusair correlation functional
-III,<sup>[\[9\]](#cite_note-vosko1980-9)</sup>
+III,[^vosko1980-9]
 which was fitted to the correlation energy in the random phase
 approximation of the homogeneous electron gas.
 
@@ -282,9 +282,9 @@ controlled by the [AEXX](../incar-tags/AEXX.md) and
 
 The most popular range-separated functional, HSE, is given below.
 
-- [HSE03](List_of_hybrid_functionals.md)<sup>[\[10\]](#cite_note-heyd:jcp:03-10)[\[11\]](#cite_note-heyd:jcp:04-11)[\[12\]](#cite_note-heyd:jcp:06-12)</sup>
+- [HSE03](List_of_hybrid_functionals.md)[^heyd:jcp:03-10][^heyd:jcp:04-11][^heyd:jcp:06-12]
   and
-  [HSE06](List_of_hybrid_functionals.md)<sup>[\[13\]](#cite_note-krukau:jcp:06-13)</sup>:
+  [HSE06](List_of_hybrid_functionals.md)[^krukau:jcp:06-13]:
 
 $E_{\mathrm{xc}}^{\mathrm{HSE}}=
 \frac{1}{4}E_{\mathrm{x,SR}}^{\mathrm{HF}}(\mu) + \frac{3}{4}
@@ -292,11 +292,11 @@ E_{\mathrm{x,SR}}^{\mathrm{PBE}}(\mu) +
 E_{\mathrm{x,LR}}^{\mathrm{PBE}}(\mu) + E_{\mathrm{c}}^{\mathrm{PBE}}$
 
 They are based on the PBE GGA
-functional<sup>[\[5\]](#cite_note-perdew:prl:1996-5)</sup>
+functional[^perdew:prl:1996-5]
 and $a_{\mathrm{SR}}=1/4$. It has been shown that the optimum
 $\mu$, controlling the range separation is approximately
 0.2-0.3
-Å<sup>-1</sup>.<sup>[\[10\]](#cite_note-heyd:jcp:03-10)[\[11\]](#cite_note-heyd:jcp:04-11)[\[12\]](#cite_note-heyd:jcp:06-12)[\[13\]](#cite_note-krukau:jcp:06-13)</sup>
+Å<sup>-1</sup>.[^heyd:jcp:03-10][^heyd:jcp:04-11][^heyd:jcp:06-12][^krukau:jcp:06-13]
 [HSE03](List_of_hybrid_functionals.md)
 and
 [HSE06](List_of_hybrid_functionals.md)
@@ -333,7 +333,7 @@ $\mu$ by the [HFSCREEN](../incar-tags/HFSCREEN.md) tag.
 This functional form has been used in the context of
 dielectric-dependent hybrids. Examples are provided below.
 
-- [RS-DDH](List_of_hybrid_functionals.md):<sup>[\[14\]](#cite_note-skone:prb:2016-14)</sup>
+- [RS-DDH](List_of_hybrid_functionals.md):[^skone:prb:2016-14]
 
 $E_{\mathrm{xc}}^{\mathrm{RS-DDH}}=\frac{1}{4}
 E_{\mathrm{x,SR}}^{\mathrm{HF}}(\mu) + a_{\mathrm{LR}}
@@ -345,8 +345,8 @@ E_{\mathrm{c}}^{\mathrm{PBE}}$
 where $a_{\mathrm{SR}}=1/4$ and $a_{\mathrm{LR}}=\varepsilon^{-1}$ is chosen as the
 inverse of the dielectric constant $\varepsilon^{-1}$.
 
-- [DD-RSH-CAM](List_of_hybrid_functionals.md),<sup>[\[15\]](#cite_note-chen2018nonempirical-15)</sup>
-  [DSH](List_of_hybrid_functionals.md):<sup>[\[16\]](#cite_note-cui2018doubly-16)</sup>
+- [DD-RSH-CAM](List_of_hybrid_functionals.md),[^chen2018nonempirical-15]
+  [DSH](List_of_hybrid_functionals.md):[^cui2018doubly-16]
 
 $E_{\mathrm{xc}}^{\mathrm{DD-RSH-CAM}}=E_{\mathrm{x,SR}}^{\mathrm{HF}}(\mu) +
 a_{\mathrm{LR}} E_{\mathrm{x,LR}}^{\mathrm{HF}}(\mu) +
@@ -391,7 +391,7 @@ solids. Examples belonging to this class of functionals are:
 
 - [RSHXLDA](List_of_hybrid_functionals.md)
   and
-  [RSHXPBE](List_of_hybrid_functionals.md):<sup>[\[17\]](#cite_note-iikura:jcp:2001-17)[\[18\]](#cite_note-gerber:cpl:2005-18)[\[19\]](#cite_note-gerber:jcp:2007-19)</sup>
+  [RSHXPBE](List_of_hybrid_functionals.md):[^iikura:jcp:2001-17][^gerber:cpl:2005-18][^gerber:jcp:2007-19]
 
 $E_{\mathrm{xc}}^{\mathrm{RSHXLDA}} =
 E_{\mathrm{x,LR}}^{\mathrm{HF}}(\mu) +
@@ -403,7 +403,7 @@ E_{\mathrm{x,SR}}^{\mathrm{PBE}}(\mu) + E_{\mathrm{c}}^{\mathrm{PBE}}$
 
 When LDA is chosen, a value of $\mu=0.75$
 Å<sup>-1</sup> is recommended for
-solids.<sup>[\[19\]](#cite_note-gerber:jcp:2007-19)</sup>
+solids.[^gerber:jcp:2007-19]
 
 ### HF exchange at short range (exponential screening)\[<a
 href="/wiki/index.php?title=Hybrid_functionals:_formalism&amp;veaction=edit&amp;section=8"
@@ -420,7 +420,7 @@ E_{\mathrm{x,SR}}^{\mathrm{HF}}(\mu) +
 E_{\mathrm{x,LR}}^{\mathrm{SL}}(\mu) + E_{\mathrm{c}}^{\mathrm{SL}}$
 
 The exponential screening, also called Thomas-Fermi (TF)
-screening,<sup>[\[20\]](#cite_note-bylander:prb:90-20)[\[1\]](#cite_note-seidl:prb:96-1)[\[21\]](#cite_note-picozzi:prb:00-21)</sup>
+screening,[^bylander:prb:90-20][^seidl:prb:96-1][^picozzi:prb:00-21]
 is activated by setting [LTHOMAS](../incar-tags/LTHOMAS.md)=.TRUE.. The
 mixing $a_{\mathrm{SR}}$ and screening $\mu=k_{\rm TF}$ are controlled by the [AEXX](../incar-tags/AEXX.md) and
 [HFSCREEN](../incar-tags/HFSCREEN.md) tags, respectively.
@@ -455,7 +455,7 @@ title="GGA">GGA</a>=CA).</li>
 The sX-LDA functional, which uses $a_{\mathrm{SR}}=1$, is probably the first hybrid using an exponential
 screening:
 
-- [sX-LDA](List_of_hybrid_functionals.md):<sup>[\[20\]](#cite_note-bylander:prb:90-20)</sup>
+- [sX-LDA](List_of_hybrid_functionals.md):[^bylander:prb:90-20]
 
 $E_{\mathrm{xc}}^{\mathrm{sX-LDA}} =
 E_{\mathrm{x,SR}}^{\mathrm{HF}}(\mu) +
@@ -482,7 +482,7 @@ values reported by VASP are often not recommended.
 
 Another important detail concerns the implementation of the local LDA
 part in VASP. Literature \[see Eqs. (3.10), (3.14), and (3.15) in Ref.
-<sup>[\[1\]](#cite_note-seidl:prb:96-1)</sup>\]
+[^seidl:prb:96-1]\]
 suggests to use in the enhancement factor $F(z)$ a
 position-independent variable $z=k_{\rm TF}/\bar{k}_{\rm F}$ where $\bar{k}_{\rm F}$ is as defined above but using the average density
 $\bar{n}$ in the unit cell. However, implemented in VASP
@@ -517,123 +517,24 @@ href="/wiki/index.php?title=Hybrid_functionals:_formalism&amp;veaction=edit&amp;
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  ↑
-    <sup>[a](#cite_ref-seidl:prb:96_1-0)</sup>
-    <sup>[b](#cite_ref-seidl:prb:96_1-1)</sup>
-    <sup>[c](#cite_ref-seidl:prb:96_1-2)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.53.3764" class="external text"
-    rel="nofollow">A. Seidl, A. Görling, P. Vogl, J.A. Majewski, and M.
-    Levy, Phys. Rev. B <strong>53</strong>, 3764 (1996).</a>
-2.  [↑](#cite_ref-paier:jcp:05_2-0)
-    <a href="https://doi.org/10.1063/1.1926272" class="external text"
-    rel="nofollow">J. Paier, R. Hirschl, M. Marsman, and G. Kresse, J. Chem.
-    Phys. <strong>122</strong>, 234102 (2005).</a>
-3.  [↑](#cite_ref-angyan:jpa:2006_3-0)
-    <a href="http://dx.doi.org/10.1088/0305-4470/39/27/005"
-    class="external text" rel="nofollow">J. G. Ángyán, I. Gerber, and M.
-    Marsman, <em>Spherical harmonic expansion of short-range screened
-    Coulomb interactions</em>, J. Phys. A: Math. Gen. <strong>39</strong>,
-    8613 (2006).</a>
-4.  [↑](#cite_ref-perdew:jcp:1996_4-0)
-    <a href="https://doi.org/10.1063/1.472933" class="external text"
-    rel="nofollow">J. P. Perdew, M. Ernzerhof, and K. Burke, J. Chem. Phys.
-    <strong>105</strong>, 9982 (1996).</a>
-5.  ↑
-    <sup>[a](#cite_ref-perdew:prl:1996_5-0)</sup>
-    <sup>[b](#cite_ref-perdew:prl:1996_5-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.77.3865"
-    class="external text" rel="nofollow">J. P. Perdew, K. Burke, and M.
-    Ernzerhof, Phys. Rev. Lett., <strong>77</strong>, 3865 (1996).</a>
-6.  [↑](#cite_ref-stephens:jpc:1994_6-0)
-    <a href="https://doi.org/10.1021/j100096a001" class="external text"
-    rel="nofollow">P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M.
-    J. Frisch, J. Phys. Chem. <strong>98</strong>, 11623 (1994).</a>
-7.  [↑](#cite_ref-becke:pra:1988_7-0)
-    <a href="https://doi.org/10.1103/PhysRevA.38.3098" class="external text"
-    rel="nofollow">A. D. Becke, <em>Density-functional exchange-energy
-    approximation with correct asymptotic behavior</em>, Phys. Rev. A
-    <strong>38</strong>, 3098 (1988).</a>
-8.  [↑](#cite_ref-lee:prb:1988_8-0)
-    <a href="https://doi.org/10.1103/PhysRevB.37.785" class="external text"
-    rel="nofollow">C. Lee, W. Yang, and R. G. Parr, <em>Development of the
-    Colle-Salvetti correlation-energy formula into a functional of the
-    electron density</em>, Phys. Rev. B <strong>37</strong>, 785 (1988).</a>
-9.  [↑](#cite_ref-vosko1980_9-0)
-    <a href="https://doi.org/10.1139/p80-159" class="external text"
-    rel="nofollow">S. H. Vosko, L. Wilk, and M. Nusair, Can. J. Phys.
-    <strong>58</strong>, 1200 (1980).</a>
-10. ↑
-    <sup>[a](#cite_ref-heyd:jcp:03_10-0)</sup>
-    <sup>[b](#cite_ref-heyd:jcp:03_10-1)</sup>
-    <a href="https://doi.org/10.1063/1.1564060" class="external text"
-    rel="nofollow">J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys.
-    <strong>118</strong>, 8207 (2003).</a>
-11. ↑
-    <sup>[a](#cite_ref-heyd:jcp:04_11-0)</sup>
-    <sup>[b](#cite_ref-heyd:jcp:04_11-1)</sup>
-    <a href="https://doi.org/10.1063/1.1760074" class="external text"
-    rel="nofollow">J. Heyd and G. E. Scuseria, J. Chem. Phys.
-    <strong>121</strong>, 1187 (2004).</a>
-12. ↑
-    <sup>[a](#cite_ref-heyd:jcp:06_12-0)</sup>
-    <sup>[b](#cite_ref-heyd:jcp:06_12-1)</sup>
-    <a href="https://doi.org/10.1063/1.2204597" class="external text"
-    rel="nofollow">J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys.
-    <strong>124</strong>, 219906 (2006).</a>
-13. ↑
-    <sup>[a](#cite_ref-krukau:jcp:06_13-0)</sup>
-    <sup>[b](#cite_ref-krukau:jcp:06_13-1)</sup>
-    <a href="https://doi.org/10.1063/1.2404663" class="external text"
-    rel="nofollow">A. V. Krukau , O. A. Vydrov, A. F. Izmaylov, and G. E.
-    Scuseria, J. Chem. Phys. <strong>125</strong>, 224106 (2006).</a>
-14. [↑](#cite_ref-skone:prb:2016_14-0)
-    <a href="http://doi.org/10.1103/PhysRevB.93.235106"
-    class="external text" rel="nofollow">J. H. Skone, M. Govoni, and G.
-    Galli, <em>Nonempirical range-separated hybrid functionals for solids
-    and molecules</em>, Phys. Rev. B <strong>93</strong>, 235106 (2016).</a>
-15. [↑](#cite_ref-chen2018nonempirical_15-0)
-    <a href="https://doi.org/10.1103/PhysRevMaterials.2.073803"
-    class="external text" rel="nofollow">W. Chen, G. Miceli, G.M. Rignanese,
-    and A. Pasquarello, <em>Nonempirical dielectric-dependent hybrid
-    functional with range separation for semiconductors and insulators</em>,
-    Phys. Rev. Mater. <strong>2</strong>, 073803 (2018).</a>
-16. [↑](#cite_ref-cui2018doubly_16-0)
-    <a href="https://doi.org/10.1021/acs.jpclett.8b00919"
-    class="external text" rel="nofollow">Z.H. Cui, Y.C. Wang, M.Y. Zhang, X.
-    Xu, and H. Jiang, <em>Doubly Screened Hybrid Functional: An Accurate
-    First-Principles Approach for Both Narrow- and Wide-Gap
-    Semiconductors</em> J. Phys. Chem. Lett., <strong>9</strong>, 2338-2345
-    (2018).</a>
-17. [↑](#cite_ref-iikura:jcp:2001_17-0)
-    <a href="http://doi.org/10.1063/1.1383587" class="external text"
-    rel="nofollow">H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, <em>A
-    long-range correction scheme for generalized-gradient-approximation
-    exchange functionals</em>, J. Chem. Phys. <strong>115</strong>, 3540
-    (2001).</a>
-18. [↑](#cite_ref-gerber:cpl:2005_18-0)
-    <a href="http://doi.org/10.1016/j.cplett.2005.08.060"
-    class="external text" rel="nofollow">I. C. Gerber and J. G. Ángyán,
-    <em>Hybrid functional with separated range</em>, Chem. Phys. Lett.
-    <strong>415</strong>, 100 (2005).</a>
-19. ↑
-    <sup>[a](#cite_ref-gerber:jcp:2007_19-0)</sup>
-    <sup>[b](#cite_ref-gerber:jcp:2007_19-1)</sup>
-    <a href="http://doi.org/10.1063/1.2759209" class="external text"
-    rel="nofollow">I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse,
-    <em>Range separated hybrid density functional with long-range
-    Hartree-Fock exchange applied to solids</em>, J. Chem. Phys.
-    <strong>127</strong>, 054101 (2007).</a>
-20. ↑
-    <sup>[a](#cite_ref-bylander:prb:90_20-0)</sup>
-    <sup>[b](#cite_ref-bylander:prb:90_20-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.41.7868" class="external text"
-    rel="nofollow">D. M. Bylander and L. Kleinman, Phys. Rev. B
-    <strong>41</strong>, 7868 (1990).</a>
-21. [↑](#cite_ref-picozzi:prb:00_21-0)
-    <a href="https://doi.org/10.1103/PhysRevB.61.4677" class="external text"
-    rel="nofollow">S. Picozzi, A. Continenza, R. Asahi, W. Mannstadt, A.J.
-    Freeman, W. Wolf, E. Wimmer, and C.B. Geller, Phys. Rev. B
-    <strong>61</strong>, 4677 (2000).</a>
-
-
+[^seidl:prb:96-1]: [A. Seidl, A. Görling, P. Vogl, J.A. Majewski, and M. Levy, Phys. Rev. B **53**, 3764 (1996).](https://doi.org/10.1103/PhysRevB.53.3764)
+[^paier:jcp:05-2]: [J. Paier, R. Hirschl, M. Marsman, and G. Kresse, J. Chem. Phys. **122**, 234102 (2005).](https://doi.org/10.1063/1.1926272)
+[^angyan:jpa:2006-3]: [J. G. Ángyán, I. Gerber, and M. Marsman, *Spherical harmonic expansion of short-range screened Coulomb interactions*, J. Phys. A: Math. Gen. **39**, 8613 (2006).](http://dx.doi.org/10.1088/0305-4470/39/27/005)
+[^perdew:jcp:1996-4]: [J. P. Perdew, M. Ernzerhof, and K. Burke, J. Chem. Phys. **105**, 9982 (1996).](https://doi.org/10.1063/1.472933)
+[^perdew:prl:1996-5]: [J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett., **77**, 3865 (1996).](https://doi.org/10.1103/PhysRevLett.77.3865)
+[^stephens:jpc:1994-6]: [P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch, J. Phys. Chem. **98**, 11623 (1994).](https://doi.org/10.1021/j100096a001)
+[^becke:pra:1988-7]: [A. D. Becke, *Density-functional exchange-energy approximation with correct asymptotic behavior*, Phys. Rev. A **38**, 3098 (1988).](https://doi.org/10.1103/PhysRevA.38.3098)
+[^lee:prb:1988-8]: [C. Lee, W. Yang, and R. G. Parr, *Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density*, Phys. Rev. B **37**, 785 (1988).](https://doi.org/10.1103/PhysRevB.37.785)
+[^vosko1980-9]: [S. H. Vosko, L. Wilk, and M. Nusair, Can. J. Phys. **58**, 1200 (1980).](https://doi.org/10.1139/p80-159)
+[^heyd:jcp:03-10]: [J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. **118**, 8207 (2003).](https://doi.org/10.1063/1.1564060)
+[^heyd:jcp:04-11]: [J. Heyd and G. E. Scuseria, J. Chem. Phys. **121**, 1187 (2004).](https://doi.org/10.1063/1.1760074)
+[^heyd:jcp:06-12]: [J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. **124**, 219906 (2006).](https://doi.org/10.1063/1.2204597)
+[^krukau:jcp:06-13]: [A. V. Krukau , O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria, J. Chem. Phys. **125**, 224106 (2006).](https://doi.org/10.1063/1.2404663)
+[^skone:prb:2016-14]: [J. H. Skone, M. Govoni, and G. Galli, *Nonempirical range-separated hybrid functionals for solids and molecules*, Phys. Rev. B **93**, 235106 (2016).](http://doi.org/10.1103/PhysRevB.93.235106)
+[^chen2018nonempirical-15]: [W. Chen, G. Miceli, G.M. Rignanese, and A. Pasquarello, *Nonempirical dielectric-dependent hybrid functional with range separation for semiconductors and insulators*, Phys. Rev. Mater. **2**, 073803 (2018).](https://doi.org/10.1103/PhysRevMaterials.2.073803)
+[^cui2018doubly-16]: [Z.H. Cui, Y.C. Wang, M.Y. Zhang, X. Xu, and H. Jiang, *Doubly Screened Hybrid Functional: An Accurate First-Principles Approach for Both Narrow- and Wide-Gap Semiconductors* J. Phys. Chem. Lett., **9**, 2338-2345 (2018).](https://doi.org/10.1021/acs.jpclett.8b00919)
+[^iikura:jcp:2001-17]: [H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, *A long-range correction scheme for generalized-gradient-approximation exchange functionals*, J. Chem. Phys. **115**, 3540 (2001).](http://doi.org/10.1063/1.1383587)
+[^gerber:cpl:2005-18]: [I. C. Gerber and J. G. Ángyán, *Hybrid functional with separated range*, Chem. Phys. Lett. **415**, 100 (2005).](http://doi.org/10.1016/j.cplett.2005.08.060)
+[^gerber:jcp:2007-19]: [I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse, *Range separated hybrid density functional with long-range Hartree-Fock exchange applied to solids*, J. Chem. Phys. **127**, 054101 (2007).](http://doi.org/10.1063/1.2759209)
+[^bylander:prb:90-20]: [D. M. Bylander and L. Kleinman, Phys. Rev. B **41**, 7868 (1990).](https://doi.org/10.1103/PhysRevB.41.7868)
+[^picozzi:prb:00-21]: [S. Picozzi, A. Continenza, R. Asahi, W. Mannstadt, A.J. Freeman, W. Wolf, E. Wimmer, and C.B. Geller, Phys. Rev. B **61**, 4677 (2000).](https://doi.org/10.1103/PhysRevB.61.4677)

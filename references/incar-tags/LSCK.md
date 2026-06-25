@@ -19,7 +19,7 @@ switches on the squeezed Coulomb kernel.
 If LSCK is set to .TRUE., the
 squeezed Coulomb kernel is used instead of the [cosine
 window](ENCUTGWSOFT.md)
-<sup>[\[1\]](#cite_note-riemelmoser:jcp:2020-1)</sup>:
+[^riemelmoser:jcp:2020-1]:
 
 $v_{G} = 4 \pi e^2 \frac{ (G_{max}-G_{min})(G_{max}-G) }{
 (G_{min}^2 - G(2G_{min}-G_{max}))^2 } \qquad \mbox{for} \quad
@@ -48,10 +48,4 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-LSCK-_incategory-Examples)
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-riemelmoser:jcp:2020_1-0)
-    <a href="https://doi.org/10.1063/5.0002246" class="external text"
-    rel="nofollow">S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys.
-    <strong>152(13)</strong>, 134103 (2020).</a>
-
-
+[^riemelmoser:jcp:2020-1]: [S. Riemelmoser, M. Kaltak, and G. Kresse, J. Chem. Phys. **152(13)**, 134103 (2020).](https://doi.org/10.1063/5.0002246)

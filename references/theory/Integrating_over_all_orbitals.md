@@ -52,7 +52,7 @@ title="Edit section: Integrating over k points">edit</a> \| (./index.php.md)\]
 
 Discretizing the **k**-point integral involves replacing the continuous
 integral over the Brillouin zone by a **k**-point
-mesh.<sup>[\[1\]](#cite_note-baldereschi:prb:1973-1)[\[2\]](#cite_note-chadi:prb:1973-2)[\[3\]](#cite_note-monkhorst:prb:1976-3)</sup>
+mesh.[^baldereschi:prb:1973-1][^chadi:prb:1973-2][^monkhorst:prb:1976-3]
 
 $\frac{1}{\Omega_{\mathrm{BZ}}} \int_{\Omega_{\mathrm{BZ}}} \to
 \sum_{\mathbf{k}} w_{\mathbf{k}}.$
@@ -109,7 +109,7 @@ In the figure, we illustrate the different smearing methods implemented
 in VASP. The Fermi-Dirac smearing
 ([`ISMEAR`](../incar-tags/ISMEAR.md)` = -1`) uses σ as the temperature in
 the Fermi-Dirac
-distribution<sup>[\[4\]](#cite_note-mermin:pra:1965-4)</sup>
+distribution[^mermin:pra:1965-4]
 
 $f_\sigma(\epsilon) =
 \Bigl\[\exp(\frac{\epsilon-\epsilon_{\mathrm{F}}}{\sigma})+1\Bigr\]^{-1}~.$
@@ -117,7 +117,7 @@ $f_\sigma(\epsilon) =
 One can also use the complementary error function
 ([`ISMEAR`](../incar-tags/ISMEAR.md)` = 0`) which results from integrating
 a Gaussian distribution as the occupation
-function.<sup>[\[5\]](#cite_note-devita:phd:1992-5)</sup>
+function.[^devita:phd:1992-5]
 This leads to a narrower edge than the Fermi-Dirac distribution for the
 same σ and a faster approach to the asymptotic behavior
 
@@ -125,7 +125,7 @@ $f_\sigma(\epsilon) = \frac{1}{2}
 \text{erfc}\Bigl\[\frac{\epsilon-\epsilon_{\mathrm{F}}}{\sigma}\Bigr\]~.$
 
 Methfessel and Paxton
-<sup>[\[6\]](#cite_note-methfessel:prb:1989-6)</sup>
+[^methfessel:prb:1989-6]
 developed higher order approximations to the step function
 ([`ISMEAR`](../incar-tags/ISMEAR.md)` > 0`).
 
@@ -206,7 +206,7 @@ point individually, we triangulate the **k**-point mesh, i.e., we split
 it into as many tetrahedra as necessary to cover the whole Brillouin
 zone. We use a linear interpolation of the band energies
 ϵ<sub>n**k**</sub> within each tetrahedron the band energies.
-Blöchl<sup>[\[7\]](#cite_note-bloechl:prb:1994-7)</sup>
+Blöchl[^bloechl:prb:1994-7]
 derived correction terms to cancel the linearization errors of the
 tetrahedron method.
 
@@ -270,38 +270,12 @@ technique](../tutorials/Smearing_technique.md)
 href="/wiki/index.php?title=Integrating_over_all_orbitals&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-baldereschi:prb:1973_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.7.5212" class="external text"
-    rel="nofollow">A. Baldereschi, Phys. Rev. B <strong>7</strong>, 5212
-    (1973).</a>
-2.  [↑](#cite_ref-chadi:prb:1973_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.8.5747" class="external text"
-    rel="nofollow">D.J. Chadi and M.L. Cohen, Phys. Rev. B
-    <strong>8</strong>, 5747 (1973).</a>
-3.  [↑](#cite_ref-monkhorst:prb:1976_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.13.5188" class="external text"
-    rel="nofollow">H.J. Monkhorst and J.D. Pack, Phys. Rev. B
-    <strong>13</strong>, 5188 (1976).</a>
-4.  [↑](#cite_ref-mermin:pra:1965_4-0)
-    <a href="https://doi.org/10.1103/PhysRev.137.A1441"
-    class="external text" rel="nofollow">N.D. Mermin, Phys. Rev.
-    <strong>137</strong>, A1441 (1965).</a>
-5.  [↑](#cite_ref-devita:phd:1992_5-0)
-    \[ A. De Vita, PhD Thesis, Keele
-    University 1992; A. De Vita and M.J. Gillan, preprint (Aug.
-    1992).\]
-6.  [↑](#cite_ref-methfessel:prb:1989_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.40.3616" class="external text"
-    rel="nofollow">M. Methfessel and A.T. Paxton, Phys. Rev. B
-    <strong>40</strong>, 3616 (1989).</a>
-7.  [↑](#cite_ref-bloechl:prb:1994_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.49.16223"
-    class="external text" rel="nofollow">P.E. Blöchl, O. Jepsen, and O.K.
-    Andersen, Phys. Rev. B <strong>49</strong>, 16223 (1994).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^baldereschi:prb:1973-1]: [A. Baldereschi, Phys. Rev. B **7**, 5212 (1973).](https://doi.org/10.1103/PhysRevB.7.5212)
+[^chadi:prb:1973-2]: [D.J. Chadi and M.L. Cohen, Phys. Rev. B **8**, 5747 (1973).](https://doi.org/10.1103/PhysRevB.8.5747)
+[^monkhorst:prb:1976-3]: [H.J. Monkhorst and J.D. Pack, Phys. Rev. B **13**, 5188 (1976).](https://doi.org/10.1103/PhysRevB.13.5188)
+[^mermin:pra:1965-4]: [N.D. Mermin, Phys. Rev. **137**, A1441 (1965).](https://doi.org/10.1103/PhysRev.137.A1441)
+[^devita:phd:1992-5]: \[ A. De Vita, PhD Thesis, Keele University 1992; A. De Vita and M.J. Gillan, preprint (Aug. 1992).\]
+[^methfessel:prb:1989-6]: [M. Methfessel and A.T. Paxton, Phys. Rev. B **40**, 3616 (1989).](https://doi.org/10.1103/PhysRevB.40.3616)
+[^bloechl:prb:1994-7]: [P.E. Blöchl, O. Jepsen, and O.K. Andersen, Phys. Rev. B **49**, 16223 (1994).](https://doi.org/10.1103/PhysRevB.49.16223)

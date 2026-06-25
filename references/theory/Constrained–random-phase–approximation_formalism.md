@@ -243,7 +243,7 @@ $U=U(\omega\to 0)$.
 
 In practice, one often simplifies the model Hamiltonian further and
 works with the Hubbard-Kanamori
-parameters:<sup>[\[1\]](#cite_note-vaugier:prb:86-1)</sup>
+parameters:[^vaugier:prb:86-1]
 
 ${\cal U }^{\sigma\sigma'} = \frac 1 N \sum_{i\in \cal T}
 U_{iiii}^{\sigma\sigma'}$
@@ -291,7 +291,7 @@ title="Edit section: Band method">edit</a> \| (./index.php.md)\]
 
 The simplest way to define the target polarizability is to use the
 expression of Adler and
-Wiser<sup>[\[2\]](#cite_note-adler:1962-2)[\[3\]](#cite_note-wiser:1963-3)[\[4\]](#cite_note-aryasetiawan:prb70-4)</sup>
+Wiser[^adler:1962-2][^wiser:1963-3][^aryasetiawan:prb70-4]
 
 $\tilde \chi^\sigma_{{\bf G,G}'}({\bf q},i\omega)= \frac
 1{N_k}\sum_{\bf k}\sum_{nn'\in{\cal T}} \frac{ f_{n\bf k}-f_{n'\bf
@@ -317,13 +317,13 @@ class="mw-editsection-visualeditor"
 title="Edit section: Disentanglement-cRPA method (d-cRPA)">edit</a> \| (./index.php.md)")\]
 
 Miyake, Aryasetiawan, and
-Imada<sup>[\[5\]](#cite_note-miyake:prb:80-5)</sup>
+Imada[^miyake:prb:80-5]
 propose to disentangle the target space from the full space by
 diagonalizing the Hamiltonian in both spaces independently. This yields
 a disentangled band structure similar to the one shown in the third
 example above. The corresponding target polarizability reduces to a
 constrained Adler and Wiser
-expression<sup>[\[2\]](#cite_note-adler:1962-2)[\[3\]](#cite_note-wiser:1963-3)</sup>
+expression[^adler:1962-2][^wiser:1963-3]
 
 $\tilde \chi^\sigma_{{\bf G,G}'}({\bf q},i\omega)= \frac
 1{N_k}\sum_{\bf k}\sum_{nn'\in{\cal T}} \frac{ f_{n\bf k}-f_{n'\bf
@@ -348,7 +348,7 @@ class="mw-editsection-visualeditor"
 title="Edit section: Weighted-cRPA method (w-cRPA)">edit</a> \| (./index.php.md)")\]
 
 Sasioglu, Friedrich and Blügel propose an alternative
-approach.<sup>[\[6\]](#cite_note-sasioglu:prb:83-6)</sup>
+approach.[^sasioglu:prb:83-6]
 They calculate the screening effects within the target space as follows:
 
 $\tilde \chi^\sigma_{{\bf G,G}'}({\bf q},i\omega)= \frac
@@ -381,7 +381,7 @@ title="Edit section: Projector-cRPA method (p-cRPA)">edit</a> \| (./index.php.md
 A consistent expression for the target polarizability gives rise to the
 projector-cRPA (p-cRPA) method. The main goal is to subdivide the target
 from the full Fock space in a Wannier
-basis.<sup>[\[7\]](#cite_note-kaltak:prb:2025:2-7)</sup>
+basis.[^kaltak:prb:2025:2-7]
 To this end, we work with the target projectors
 
 $P_{mn}^{\sigma({\bf k})} = \sum_{i\in \cal T} T_{i m}^{\*\sigma({\bf
@@ -389,7 +389,7 @@ k})} T_{i n}^{\sigma({\bf k})}$
 
 that filter out target space contributions to each Bloch state. Using
 these projectors, the target polarizability for the projector method
-reads<sup>[\[8\]](#cite_note-kaltak:thesis2015-8)</sup>
+reads[^kaltak:thesis2015-8]
 
 $\tilde \chi^\sigma_{{\bf G,G}'}({\bf q},i\omega)= \frac
 1{N_k}\sum_{nn'{\bf k}} \frac{ f_{n\bf k}-f_{n'\bf k-q} }{
@@ -415,7 +415,7 @@ title="Edit section: Caveats of p-cRPA">edit</a> \| (./index.php.md)\]
 
 The p-cRPA method employs a regularization of the projectors. This
 regularization is not conserving the number of
-electrons.<sup>[\[9\]](#cite_note-kaltak:prb:2025-9)</sup>
+electrons.[^kaltak:prb:2025-9]
 As a consequence, the long-wave limit calculated from k-p perturbation
 theory can become negative and deteriorate **k**-point convergence
 drastically. For such cases, the [WAVEDER](../input-files/WAVEDER.md) file
@@ -430,7 +430,7 @@ title="Edit section: Spectral-cRPA method (s-cRPA)">edit</a> \| (./index.php.md)
 
 The spectral-cRPA method (s-cRPA) is a robust approach that remedies the
 main drawbacks of both w-cRPA and
-p-cRPA.<sup>[\[9\]](#cite_note-kaltak:prb:2025-9)</sup>
+p-cRPA.[^kaltak:prb:2025-9]
 This method uses the eigenspectrum of the original projectors
 
 $P_{nm}^{({\bf k})} \approx \Theta_{n}^{({\bf k})}\delta_{nm}$
@@ -549,48 +549,12 @@ href="/wiki/index.php?title=Constrained%E2%80%93random-phase%E2%80%93approximati
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-vaugier:prb:86_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.86.165105"
-    class="external text" rel="nofollow">L. Vaugier, H. Jiang, and S.
-    Biermann, Phys. Rev. B <strong>86</strong>, 165105 (2012).</a>
-2.  ↑
-    <sup>[a](#cite_ref-adler:1962_2-0)</sup>
-    <sup>[b](#cite_ref-adler:1962_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRev.126.413" class="external text"
-    rel="nofollow">S. L. Adler, Phys. Rev. <strong>126</strong>, 413
-    (1962)</a>
-3.  ↑
-    <sup>[a](#cite_ref-wiser:1963_3-0)</sup>
-    <sup>[b](#cite_ref-wiser:1963_3-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRev.129.62" class="external text"
-    rel="nofollow">N. Wiser, Phys. Rev. <strong>129</strong>, 62 (1963)</a>
-4.  [↑](#cite_ref-aryasetiawan:prb70_4-0)
-    <a href="https://doi.org/10.1103/PhysRevB.70.195104"
-    class="external text" rel="nofollow">F. Aryasetiawan, M. Imada, A.
-    Georges, G. Kotliar, S. Biermann, and A. I. Lichtenstein, Phys. Rev. B
-    <strong>70</strong>, 195104 (2004).</a>
-5.  [↑](#cite_ref-miyake:prb:80_5-0)
-    <a href="https://doi.org/10.1103/PhysRevB.80.155134"
-    class="external text" rel="nofollow">T. Miyake, F. Aryasetiawan, and M.
-    Imada, Phys. Rev. B <strong>80</strong>, 155134 (2009).</a>
-6.  [↑](#cite_ref-sasioglu:prb:83_6-0)
-    <a href="https://doi.org/10.1103/PhysRevB.83.121101"
-    class="external text" rel="nofollow">E. Sasioglu, C. Friedrich, and S.
-    Blügel, Phys. Rev. B <strong>83</strong>, 121101 (2011).</a>
-7.  [↑](#cite_ref-kaltak:prb:2025:2_7-0)
-    <a href="https://doi.org/10.1103/PhysRevB.111.195144"
-    class="external text" rel="nofollow">M. Kaltak, I. R. Reddy and B. Kim,
-    Phys. Rev. B <strong>111</strong>, 195144 (2025).</a>
-8.  [↑](#cite_ref-kaltak:thesis2015_8-0)
-    <a href="https://utheses.univie.ac.at/detail/33771#"
-    class="external text" rel="nofollow">M. Kaltak, Thesis: Merging GW with
-    DMFT (2015).</a>
-9.  ↑
-    <sup>[a](#cite_ref-kaltak:prb:2025_9-0)</sup>
-    <sup>[b](#cite_ref-kaltak:prb:2025_9-1)</sup>
-    <a href="https://doi.org/10.1103/m3gh-g6r6" class="external text"
-    rel="nofollow">M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and
-    G. Kresse, Phys. Rev. B <strong>112</strong>, 245102 (2025).</a>
-
-
+[^vaugier:prb:86-1]: [L. Vaugier, H. Jiang, and S. Biermann, Phys. Rev. B **86**, 165105 (2012).](https://doi.org/10.1103/PhysRevB.86.165105)
+[^adler:1962-2]: [S. L. Adler, Phys. Rev. **126**, 413 (1962)](https://doi.org/10.1103/PhysRev.126.413)
+[^wiser:1963-3]: [N. Wiser, Phys. Rev. **129**, 62 (1963)](https://doi.org/10.1103/PhysRev.129.62)
+[^aryasetiawan:prb70-4]: [F. Aryasetiawan, M. Imada, A. Georges, G. Kotliar, S. Biermann, and A. I. Lichtenstein, Phys. Rev. B **70**, 195104 (2004).](https://doi.org/10.1103/PhysRevB.70.195104)
+[^miyake:prb:80-5]: [T. Miyake, F. Aryasetiawan, and M. Imada, Phys. Rev. B **80**, 155134 (2009).](https://doi.org/10.1103/PhysRevB.80.155134)
+[^sasioglu:prb:83-6]: [E. Sasioglu, C. Friedrich, and S. Blügel, Phys. Rev. B **83**, 121101 (2011).](https://doi.org/10.1103/PhysRevB.83.121101)
+[^kaltak:prb:2025:2-7]: [M. Kaltak, I. R. Reddy and B. Kim, Phys. Rev. B **111**, 195144 (2025).](https://doi.org/10.1103/PhysRevB.111.195144)
+[^kaltak:thesis2015-8]: [M. Kaltak, Thesis: Merging GW with DMFT (2015).](https://utheses.univie.ac.at/detail/33771#)
+[^kaltak:prb:2025-9]: [M. Kaltak, A. Hampel, M. Schlipf, I. R. Reddy, B. Kim and G. Kresse, Phys. Rev. B **112**, 245102 (2025).](https://doi.org/10.1103/m3gh-g6r6)

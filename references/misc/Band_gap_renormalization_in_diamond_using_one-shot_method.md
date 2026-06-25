@@ -56,7 +56,7 @@ title="Edit section: Task">edit</a> \| (./index.php.md)\]
 
 Calculating the zero-point renormalization (ZPR) and the temperature
 dependence of the indirect band gap in diamond using a [one-shot
-method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon interactions theory")<sup>[\[1\]](#cite_note-Zacharias:PRL:2015-1)[\[2\]](#cite_note-zacharias:prb:2016-2)</sup>.
+method](../theory/Electron-phonon_interactions_theory.md) "Electron-phonon interactions theory")[^Zacharias:PRL:2015-1][^zacharias:prb:2016-2].
 
 ## Input\[<a
 href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=2"
@@ -549,7 +549,7 @@ srcset="/wiki/images/6/6b/Temperature_dependence_of_cd-C_4x4x4.jpg 1.5x"
 width="600" height="450" /></a>
 
 The experimental data (blue lines and circles) are taken from reference
-<sup>[\[3\]](#cite_note-ODonnell:APL:1991-3)</sup>.
+[^ODonnell:APL:1991-3].
 
 ## Temperature dependence of the band gap including volume effects\[<a
 href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=12"
@@ -560,7 +560,7 @@ In the previous step, we see that the experimental slope of the
 temperature dependence of the band gap is underestimated. To improve the
 agreement we will now also consider the volume dependence. The volume
 dependence is calculated from quasi-harmonic calculations
-<sup>[\[4\]](#cite_note-Baroni:RMG:2010-4)</sup>.
+[^Baroni:RMG:2010-4].
 
 First save your obtained band gap vs. temperature curve, since it will
 be overwritten otherwise. Type the following:
@@ -830,49 +830,22 @@ to experiment. A discrepancy between experiment and theory is expected,
 since the electron exchange and correlation are not sufficiently
 described within PBE which was used in this example. To get a really
 excellent agreement one needs to use the GW approximation
-<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>.
+[^karsai:njp:2018-5].
 
 Strictly speaking, the correct way to add volume effects to
 electron-phonon interactions would be to first change the volume for
 each temperature and then calculate the electron-phonon interaction for
 that temperature. In this tutorial and also in reference
-<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>,
+[^karsai:njp:2018-5],
 it is done the other way around. Hence the electron-phonon interactions
 need to be calculated only once. In reference
-<sup>[\[5\]](#cite_note-karsai:njp:2018-5)</sup>
+[^karsai:njp:2018-5]
 we observed that the two approaches give very similar results.
 
 ## References\[<a
 href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=13"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-Zacharias:PRL:2015_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias, C. E. Patrick, and F.
-    Giustino, Phys. Rev. Lett. <strong>115</strong>, 177401 (2015).</a>
-2.  [↑](#cite_ref-zacharias:prb:2016_2-0)
-    <a href="https://doi.org/10.1103/PhysRevB.94.075125"
-    class="external text" rel="nofollow">M. Zacharias and F. Giustino, Phys.
-    Rev. B <strong>94</strong>, 075125 (2016).</a>
-3.  [↑](#cite_ref-ODonnell:APL:1991_3-0)
-    <a href="https://doi.org/10.1063/1.104723" class="external text"
-    rel="nofollow">K.P. ODonnel and X. Chen, Appl. Phys. Lett.
-    <strong>58</strong>, 2924 (1991).</a>
-4.  [↑](#cite_ref-Baroni:RMG:2010_4-0)
-    <a href="https://doi.org/10.2138/rmg.2010.71.3" class="external text"
-    rel="nofollow">S. Baroni, P. Giannozzi, and E. Isaev, Rev. Min. Geochem.
-    <strong>71</strong>, 39 (2010).</a>
-5.  ↑
-    <sup>[a](#cite_ref-karsai:njp:2018_5-0)</sup>
-    <sup>[b](#cite_ref-karsai:njp:2018_5-1)</sup>
-    <sup>[c](#cite_ref-karsai:njp:2018_5-2)</sup>
-    <a href="https://doi.org/10.1088/1367-2630/aaf53f" class="external text"
-    rel="nofollow">F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New
-    J. of Phys. <strong>20</strong>, 123008 (2018).</a>
-
-
 ## Download\[<a
 href="/wiki/index.php?title=Band_gap_renormalization_in_diamond_using_one-shot_method&amp;veaction=edit&amp;section=14"
 class="mw-editsection-visualeditor"
@@ -888,4 +861,8 @@ using one-shot
 method \> [List of
 tutorials](../categories/Category-Tutorials.md)
 
-
+[^Zacharias:PRL:2015-1]: [M. Zacharias, C. E. Patrick, and F. Giustino, Phys. Rev. Lett. **115**, 177401 (2015).](https://doi.org/10.1103/PhysRevB.94.075125)
+[^zacharias:prb:2016-2]: [M. Zacharias and F. Giustino, Phys. Rev. B **94**, 075125 (2016).](https://doi.org/10.1103/PhysRevB.94.075125)
+[^ODonnell:APL:1991-3]: [K.P. ODonnel and X. Chen, Appl. Phys. Lett. **58**, 2924 (1991).](https://doi.org/10.1063/1.104723)
+[^Baroni:RMG:2010-4]: [S. Baroni, P. Giannozzi, and E. Isaev, Rev. Min. Geochem. **71**, 39 (2010).](https://doi.org/10.2138/rmg.2010.71.3)
+[^karsai:njp:2018-5]: [F. Karsai, M. Engel, E. Flage-Larssen, and G. Kresse, New J. of Phys. **20**, 123008 (2018).](https://doi.org/10.1088/1367-2630/aaf53f)

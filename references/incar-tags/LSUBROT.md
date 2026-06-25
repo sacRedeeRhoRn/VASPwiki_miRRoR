@@ -22,7 +22,7 @@ LSUBROT =.FALSE. is the
 standard algorithm, in which the rotation matrix between occupied and
 unoccupied orbitals is determined essentially using Loewdin perturbation
 theory, as for instance explained in Ref.
-<sup>[\[1\]](#cite_note-kresse:prb:96-1)</sup>.
+[^kresse:prb:96-1].
 For LSUBROT =.TRUE. the
 rotation matrix is instead optimized by performing a few standard SCF
 steps, in which the orbitals are kept fixed, but rotations between the
@@ -41,14 +41,6 @@ efficient for hybrid functionals (HF-type calculations).
 ## References\[<a href="/wiki/index.php?title=LSUBROT&amp;veaction=edit&amp;section=1"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-kresse:prb:96_1-0)
-    <a href="http://link.aps.org/doi/10.1103/PhysRevB.54.11169"
-    class="external text" rel="nofollow">G. Kresse and J. Furthmüller, Phys.
-    Rev. B 54, 11169 (1996).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kresse:prb:96-1]: [G. Kresse and J. Furthmüller, Phys. Rev. B 54, 11169 (1996).](http://link.aps.org/doi/10.1103/PhysRevB.54.11169)

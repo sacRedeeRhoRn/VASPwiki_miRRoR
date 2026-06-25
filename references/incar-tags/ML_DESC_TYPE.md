@@ -79,7 +79,7 @@ title="Edit section: Element-reduced descriptor">edit</a> \| (./index.php.md)\]
 Another type of descriptor
 (ML_DESC_TYPE=1) which was
 proposed in Ref.
-<sup>[\[1\]](#cite_note-csanyi:npj:2022-1)</sup>
+[^csanyi:npj:2022-1]
 applies a reduction of one of the intermediate coefficients
 $c_{nlm}$ and is written as
 
@@ -145,17 +145,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-ML_IALGO_LINREG-_incategory-
 href="/wiki/index.php?title=ML_DESC_TYPE&amp;veaction=edit&amp;section=5"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-csanyi:npj:2022_1-0)
-    <a href="https://doi.org/10.1038/s41524-022-00847-y"
-    class="external text" rel="nofollow">J. P. Darby, J. R. Kermode, and G.
-    Csanyi, <em>Compressing local atomic neighbourhood descriptors</em>, New
-    Phys. J. <strong>8</strong>, 166 (2022).</a>
-
-
-  
-
 ------------------------------------------------------------------------
 
-
+[^csanyi:npj:2022-1]: [J. P. Darby, J. R. Kermode, and G. Csanyi, *Compressing local atomic neighbourhood descriptors*, New Phys. J. **8**, 166 (2022).](https://doi.org/10.1038/s41524-022-00847-y)

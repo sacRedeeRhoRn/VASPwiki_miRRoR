@@ -5,7 +5,7 @@
 
 
 In the DFT-ulg method of Kim et
-al.<sup>[\[1\]](#cite_note-kim:jpcl:2012-1)</sup>,
+al.[^kim:jpcl:2012-1],
 the correction term takes the form:
 
 $E_{\mathrm{disp}} = -\frac{1}{2} s_{lg}\sum_{i=1}^{N_{at}}
@@ -29,7 +29,7 @@ title="Edit section: Usage">edit</a> \| (./index.php.md)\]
 The DFT-ulg method can be activated by setting
 [IVDW](../incar-tags/IVDW.md)=3. The parameters in the DFT-ulg method (see
 Ref.
-<sup>[\[1\]](#cite_note-kim:jpcl:2012-1)</sup>
+[^kim:jpcl:2012-1]
 for details) that can be modified are listed below.
 
 - [VDW_RADIUS](../incar-tags/VDW_RADIUS.md)=50.0 : cutoff radius (in
@@ -52,7 +52,7 @@ for details) that can be modified are listed below.
 
 |  |
 |----|
-| **Mind:** The default value of the parameter $s_{lg}$ (0.7012) was determined in conjunction with the PBE [GGA](../incar-tags/GGA.md) functional<sup>[\[1\]](#cite_note-kim:jpcl:2012-1)</sup>. Therefore, it is not recommended to use the DFT-ulg dispersion correction with a [GGA](../incar-tags/GGA.md) functional other than PBE, unless $s_{lg}$ is reoptimized. |
+| **Mind:** The default value of the parameter $s_{lg}$ (0.7012) was determined in conjunction with the PBE [GGA](../incar-tags/GGA.md) functional[^kim:jpcl:2012-1]. Therefore, it is not recommended to use the DFT-ulg dispersion correction with a [GGA](../incar-tags/GGA.md) functional other than PBE, unless $s_{lg}$ is reoptimized. |
 
 ## Related tags and articles\[<a href="/wiki/index.php?title=DFT-ulg&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
@@ -67,17 +67,6 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=DFT-ulg&amp;veaction=edit&amp;section=3"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-kim:jpcl:2012_1-0)</sup>
-    <sup>[b](#cite_ref-kim:jpcl:2012_1-1)</sup>
-    <sup>[c](#cite_ref-kim:jpcl:2012_1-2)</sup>
-    <a href="https://doi.org/10.1021/jz2016395" class="external text"
-    rel="nofollow">H. Kim, J.-M. Choi, and W. A. Goddard, III, J. Phys.
-    Chem. Lett. <strong>3</strong>, 360 (2012).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^kim:jpcl:2012-1]: [H. Kim, J.-M. Choi, and W. A. Goddard, III, J. Phys. Chem. Lett. **3**, 360 (2012).](https://doi.org/10.1021/jz2016395)

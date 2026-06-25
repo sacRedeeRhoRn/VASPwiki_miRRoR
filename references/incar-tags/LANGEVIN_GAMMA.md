@@ -17,7 +17,7 @@ title="Precompiler flags">-Dtbdyn</a>).
 ------------------------------------------------------------------------
 
 When using a [Langevin
-thermostat](../tutorials/Langevin_thermostat.md)<sup>[\[1\]](#cite_note-allen:book:1991-1)</sup>
+thermostat](../tutorials/Langevin_thermostat.md)[^allen:book:1991-1]
 ([MDALGO](MDALGO.md)=3), the friction coefficients γ for the
 atomic degrees-of-freedom are specified (in ps<sup>-1</sup>) using the
 LANGEVIN_GAMMA-tag.
@@ -66,12 +66,4 @@ title="Edit section: References">edit</a> \| (./index.php.md)\]
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-allen:book:1991_1-0)
-    <a
-    href="https://books.google.co.jp/books?id=WFExDwAAQBAJ&amp;lpg=PP1&amp;hl=ja&amp;pg=PP1#v=onepage&amp;q&amp;f=false"
-    class="external text" rel="nofollow">M. P. Allen and D. J. Tildesley,
-    <em>Computer simulation of liquids</em> (Oxford university press: New
-    York, 1991).</a>
-
-
+[^allen:book:1991-1]: [M. P. Allen and D. J. Tildesley, *Computer simulation of liquids* (Oxford university press: New York, 1991).](https://books.google.co.jp/books?id=WFExDwAAQBAJ&lpg=PP1&hl=ja&pg=PP1#v=onepage&q&f=false)

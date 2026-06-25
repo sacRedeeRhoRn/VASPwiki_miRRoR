@@ -10,7 +10,7 @@ Default: **MSDGW_F** = -1 
 Description: A positive value of
 MSDGW_F triggers the mixed
 stochastic-deterministic compression algorithm of Altman and
-co-workers.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
+co-workers.[^altman:prl:2024-1]
 
 ------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ calculations](../methods/Practical_guide_to_GW_calculations.md).
 It has been demonstrated that one can reduce the unoccupied manifold by
 more than 50 per cent and speed up the GW step by a factor of 2 or more
 with a resulting error of only 50 meV or less on the quasi-particle band
-gap.<sup>[\[1\]](#cite_note-altman:prl:2024-1)</sup>
+gap.[^altman:prl:2024-1]
 
 |  |
 |----|
@@ -101,18 +101,6 @@ title="Edit section: Related tags and articles">edit</a> \| (./index.php.md)\]
 ## References\[<a href="/wiki/index.php?title=MSDGW_F&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  ↑
-    <sup>[a](#cite_ref-altman:prl:2024_1-0)</sup>
-    <sup>[b](#cite_ref-altman:prl:2024_1-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevLett.132.086401"
-    class="external text" rel="nofollow">Altman, A. R. and Kundu, S. and da
-    Jornada, F. H., <em>Mixed Stochastic-Deterministic Approach for
-    Many-Body Perturbation Theory Calculations</em>, Phys. Rev. Lett.
-    <strong>132</strong>, 086401 (2024).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^altman:prl:2024-1]: [Altman, A. R. and Kundu, S. and da Jornada, F. H., *Mixed Stochastic-Deterministic Approach for Many-Body Perturbation Theory Calculations*, Phys. Rev. Lett. **132**, 086401 (2024).](https://doi.org/10.1103/PhysRevLett.132.086401)

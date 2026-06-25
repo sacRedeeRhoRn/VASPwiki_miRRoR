@@ -8,9 +8,9 @@ For charged cells or for calculations of molecules and surfaces with a
 large dipole moment, the energy converges very slowly with respect to
 the size $L$ of the
 supercell. Using methods discussed by Makov *et
-al.*<sup>[\[1\]](#cite_note-Makov95-1)</sup>
+al.*[^Makov95-1]
 and Neugebauer *et
-al.*<sup>[\[2\]](#cite_note-Neugebauer92-2)</sup>,
+al.*[^Neugebauer92-2],
 VASP can correct for the leading errors (in many details, we have taken
 a more general approach, though).
 
@@ -199,14 +199,5 @@ href="/wiki/index.php?title=Electrostatic_corrections&amp;veaction=edit&amp;sect
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-Makov95_1-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.51.4014"
-    class="external text" rel="nofollow">G. Makov and M. C. Payne, Phys.
-    Rev. B 51, 4014 (1995).</a>
-2.  [↑](#cite_ref-Neugebauer92_2-0)
-    <a href="http://dx.doi.org/10.1103/PhysRevB.46.16067"
-    class="external text" rel="nofollow">J. Neugebauer and M. Scheffler,
-    Phys. Rev. B 46, 16067 (1992).</a>
-
-
+[^Makov95-1]: [G. Makov and M. C. Payne, Phys. Rev. B 51, 4014 (1995).](http://dx.doi.org/10.1103/PhysRevB.51.4014)
+[^Neugebauer92-2]: [J. Neugebauer and M. Scheffler, Phys. Rev. B 46, 16067 (1992).](http://dx.doi.org/10.1103/PhysRevB.46.16067)

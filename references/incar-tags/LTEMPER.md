@@ -18,7 +18,7 @@ different INCAR, KPOINTS, POTCAR, or POSCAR files are performed. The
 parallel tempering mode is explained in this section, however, please
 read the section [IMAGES](IMAGES.md) first. Parallel
 tempering is also known as replica-exchange molecular
-dynamics.<sup>[\[1\]](#cite_note-sugi99-1)</sup>
+dynamics.[^sugi99-1]
 
 If the tags [IMAGES](IMAGES.md)=nn and
 LTEMPER=.TRUE. are set in the
@@ -72,14 +72,6 @@ tag](https://vasp.at/wiki/index.php/Special-Search/-IMAGES-_incategory-Examples)
 ## References\[<a href="/wiki/index.php?title=LTEMPER&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-sugi99_1-0)
-    <a href="http://dx.doi.org/10.1016/S0009-2614(99)01123-9"
-    class="external text" rel="nofollow">Y. Sugita and Y. Okamoto, Chemical
-    Physics Letters. 314, 141 (1999).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^sugi99-1]: [Y. Sugita and Y. Okamoto, Chemical Physics Letters. 314, 141 (1999).](http://dx.doi.org/10.1016/S0009-2614(99)01123-9)

@@ -13,7 +13,7 @@ method](../theory/Constrained–random-phase–approximation_formalism.md) "Cons
 ------------------------------------------------------------------------
 
 Selects the cRPA method of Miyake, Aryasetiawan, and
-Imada<sup>[\[1\]](#cite_note-miyake:prb:80-1)</sup>.
+Imada[^miyake:prb:80-1].
 Following screening is subtracted from the full RPA polarizability:
 
 $\tilde \chi^\sigma_{{\bf G,G}'}({\bf q},i\omega)= \frac
@@ -43,10 +43,4 @@ href="/wiki/index.php?title=LDISENTANGLED&amp;veaction=edit&amp;section=2"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-miyake:prb:80_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.80.155134"
-    class="external text" rel="nofollow">T. Miyake, F. Aryasetiawan, and M.
-    Imada, Phys. Rev. B <strong>80</strong>, 155134 (2009).</a>
-
-
+[^miyake:prb:80-1]: [T. Miyake, F. Aryasetiawan, and M. Imada, Phys. Rev. B **80**, 155134 (2009).](https://doi.org/10.1103/PhysRevB.80.155134)

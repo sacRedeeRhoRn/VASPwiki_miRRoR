@@ -97,7 +97,7 @@ As it was mentioned before, to compute the response with respect to an
 external electric field $\mathcal{E_\alpha}$ one requires the derivative of the orbitals with
 respect to $\mathbf{k}$
 and $\mathcal{E_\alpha}$. For the former we have
-that<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)</sup>
+that[^gajdos:prb:2006-1]
 
 $\left\[ H(\mathbf{k}) - e_{n\mathbf{k}}S(\mathbf{k}) \right\]
 |\partial_\mathbf{k}\tilde{u}_{n\mathbf{k}}\rangle =
@@ -277,11 +277,4 @@ href="/wiki/index.php?title=Electric_field_response_from_density-functional-pert
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
-    (2006).</a>
-
-
+[^gajdos:prb:2006-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)

@@ -66,7 +66,7 @@ value. Here, VASP computes the polarizability in two steps.
 
 First, the spectral density of the polarizability is calculated using
 Fermi's golden
-rule<sup>[\[1\]](#cite_note-gajdos:prb:2006-1)[\[2\]](#cite_note-shishkin:prb:2006-2)</sup>
+rule[^gajdos:prb:2006-1][^shishkin:prb:2006-2]
 
 $S_{{\bf G G}'}({\bf q},\omega) = \sum_{nm}\sum_{\bf k q}
 \delta(\epsilon_{n\bf k} - \epsilon_{m\bf k-q} -\omega) \left\langle
@@ -76,7 +76,7 @@ $S_{{\bf G G}'}({\bf q},\omega) = \sum_{nm}\sum_{\bf k q}
 The delta function is approximated by a triangular function centered at
 the transition energy. The real and imaginary part of the polarizability
 is calculated in a second step using a Hilbert
-transformation<sup>[\[2\]](#cite_note-shishkin:prb:2006-2)</sup>
+transformation[^shishkin:prb:2006-2]
 
 $\chi_{{\bf G G}'}({\bf q},\omega) = \int \mathrm{d}\omega' S_{{\bf G
 G}'}({\bf q},\omega') \left( \frac{1}{\omega-\omega' - i \eta } -
@@ -141,7 +141,7 @@ title="Edit section: Direct calculation of the dielectric function">edit</a> \| 
 
 The polarizability can be calculated directly without using a Hilbert
 transformation via the formula of Adler and
-Wiser.<sup>[\[3\]](#cite_note-adler:1962-3)[\[4\]](#cite_note-wiser:1963-4)</sup>
+Wiser.[^adler:1962-3][^wiser:1963-4]
 
 $\chi_{{\bf G G}'}({\bf q},\omega) = \sum_{nm}\sum_{\bf k q} \left(
 \frac{\left\langle {n\bf k} \right| {\bf G} \left| {m\bf k-q}
@@ -305,24 +305,7 @@ set to [NOMEGA](../incar-tags/NOMEGA.md)=1 and
 
 ------------------------------------------------------------------------
 
-
-1.  [↑](#cite_ref-gajdos:prb:2006_1-0)
-    <a href="https://doi.org/10.1103/PhysRevB.73.045112"
-    class="external text" rel="nofollow">M. Gajdoš, K. Hummer, G. Kresse, J.
-    Furthmüller, and F. Bechstedt, Phys. Rev. B <strong>73</strong>, 045112
-    (2006).</a>
-2.  ↑
-    <sup>[a](#cite_ref-shishkin:prb:2006_2-0)</sup>
-    <sup>[b](#cite_ref-shishkin:prb:2006_2-1)</sup>
-    <a href="https://doi.org/10.1103/PhysRevB.74.035101"
-    class="external text" rel="nofollow">M. Shishkin and G. Kresse, Phys.
-    Rev. B <strong>74</strong>, 035101 (2006).</a>
-3.  [↑](#cite_ref-adler:1962_3-0)
-    <a href="https://doi.org/10.1103/PhysRev.126.413" class="external text"
-    rel="nofollow">S. L. Adler, Phys. Rev. <strong>126</strong>, 413
-    (1962)</a>
-4.  [↑](#cite_ref-wiser:1963_4-0)
-    <a href="https://doi.org/10.1103/PhysRev.129.62" class="external text"
-    rel="nofollow">N. Wiser, Phys. Rev. <strong>129</strong>, 62 (1963)</a>
-
-
+[^gajdos:prb:2006-1]: [M. Gajdoš, K. Hummer, G. Kresse, J. Furthmüller, and F. Bechstedt, Phys. Rev. B **73**, 045112 (2006).](https://doi.org/10.1103/PhysRevB.73.045112)
+[^shishkin:prb:2006-2]: [M. Shishkin and G. Kresse, Phys. Rev. B **74**, 035101 (2006).](https://doi.org/10.1103/PhysRevB.74.035101)
+[^adler:1962-3]: [S. L. Adler, Phys. Rev. **126**, 413 (1962)](https://doi.org/10.1103/PhysRev.126.413)
+[^wiser:1963-4]: [N. Wiser, Phys. Rev. **129**, 62 (1963)](https://doi.org/10.1103/PhysRev.129.62)

@@ -10,7 +10,7 @@ are available in VASP, and furthermore if VASP is
 [compiled](../misc/Makefile.include.md)
 with the library of exchange-correlation functionals Libxc, then most of
 the existing hybrid functionals can be
-used<sup>[\[1\]](#cite_note-libxc_list-1)</sup>.
+used[^libxc_list-1].
 Examples of [INCAR](../input-files/INCAR.md) files are shown below. Since
 VASP.6.4.0 it is possible to use hybrid functionals that mix meta-GGA
 and Hartree-Fock exchange. Note that it is in general recommended to use
@@ -38,7 +38,7 @@ title="Edit section: Range-separated hybrid functionals">edit</a> \| (./index.ph
 
  
 
-- HSE06<sup>[\[2\]](#cite_note-krukau:jcp:06-2)</sup>
+- HSE06[^krukau:jcp:06-2]
 
 <!-- -->
 
@@ -52,7 +52,7 @@ with the default values [AEXX](../incar-tags/AEXX.md)=0.25,
 
  
 
-- HSE03<sup>[\[3\]](#cite_note-heyd:jcp:03-3)[\[4\]](#cite_note-heyd:jcp:04-4)[\[5\]](#cite_note-heyd:jcp:06-5)</sup>
+- HSE03[^heyd:jcp:03-3][^heyd:jcp:04-4][^heyd:jcp:06-5]
 
 <!-- -->
 
@@ -66,7 +66,7 @@ with the default values [AEXX](../incar-tags/AEXX.md)=0.25,
 
  
 
-- HSEsol<sup>[\[6\]](#cite_note-schimka:jcp:11-6)</sup>
+- HSEsol[^schimka:jcp:11-6]
 
 <!-- -->
 
@@ -81,7 +81,7 @@ with the default values [AEXX](../incar-tags/AEXX.md)=0.25,
  
 
 - Dielectric-dependent hybrid (DDH)
-  RS-DDH<sup>[\[7\]](#cite_note-skone:prb:2016-7)</sup>
+  RS-DDH[^skone:prb:2016-7]
 
 <!-- -->
 
@@ -101,7 +101,7 @@ description of the DDH functionals in the documentation for the
  
 
 - Dielectric-dependent hybrid (DDH)
-  DD-RSH-CAM,<sup>[\[8\]](#cite_note-chen2018nonempirical-8)</sup>DSH<sup>[\[9\]](#cite_note-cui2018doubly-9)</sup>
+  DD-RSH-CAM,[^chen2018nonempirical-8]DSH[^cui2018doubly-9]
 
 <!-- -->
 
@@ -121,7 +121,7 @@ functionals in the documentation for the
 
  
 
-- RSHXLDA<sup>[\[10\]](#cite_note-gerber:jcp:2007-10)</sup>
+- RSHXLDA[^gerber:jcp:2007-10]
 
 <!-- -->
 
@@ -135,7 +135,7 @@ with the default value [AEXX](../incar-tags/AEXX.md)=1.
 
  
 
-- RSHXPBE<sup>[\[11\]](#cite_note-gerber:cpl:2005-11)</sup>
+- RSHXPBE[^gerber:cpl:2005-11]
 
 <!-- -->
 
@@ -150,7 +150,7 @@ with the default values [AEXX](../incar-tags/AEXX.md)=1.
 
  
 
-- sX-LDA<sup>[\[12\]](#cite_note-bylander:prb:90-12)</sup>
+- sX-LDA[^bylander:prb:90-12]
 
 <!-- -->
 
@@ -174,7 +174,7 @@ title="Edit section: Unscreened hybrid functionals">edit</a> \| (./index.php.md)
  
 
 - PBE0
-  (PBEh)<sup>[\[13\]](#cite_note-perdew:jcp:1996-13)[\[14\]](#cite_note-ernzerhof:jcp:99-14)[\[15\]](#cite_note-adamo:jcp:1999-15)</sup>
+  (PBEh)[^perdew:jcp:1996-13][^ernzerhof:jcp:99-14][^adamo:jcp:1999-15]
 
 <!-- -->
 
@@ -187,7 +187,7 @@ with the default values [AEXX](../incar-tags/AEXX.md)=0.25,
 
  
 
-- B3LYP<sup>[\[16\]](#cite_note-stephens:jpc:94-16)</sup>
+- B3LYP[^stephens:jpc:94-16]
   with VWN3 (or VWN5) for LDA correlation
 
 <!-- -->
@@ -204,7 +204,7 @@ with the default value
 
  
 
-- B3PW91<sup>[\[17\]](#cite_note-becke:jcp:93-17)</sup>
+- B3PW91[^becke:jcp:93-17]
   (using Libxc, see the tag [LIBXC1](../incar-tags/LIBXC1.md))
 
 <!-- -->
@@ -216,7 +216,7 @@ with the default value
 
  
 
-- B1-WC<sup>[\[18\]](#cite_note-bilc:prb:08-18)</sup>
+- B1-WC[^bilc:prb:08-18]
   (using Libxc, see the tag [LIBXC1](../incar-tags/LIBXC1.md))
 
 <!-- -->
@@ -302,91 +302,23 @@ formalism](Hybrid_functionals-_formalism.md)
 href="/wiki/index.php?title=List_of_hybrid_functionals&amp;veaction=edit&amp;section=4"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
-
-
-1.  [↑](#cite_ref-libxc_list_1-0)
-    <a href="https://libxc.gitlab.io/functionals/" class="external text"
-    rel="nofollow">https://libxc.gitlab.io/functionals/</a>
-2.  [↑](#cite_ref-krukau:jcp:06_2-0)
-    <a href="https://doi.org/10.1063/1.2404663" class="external text"
-    rel="nofollow">A. V. Krukau , O. A. Vydrov, A. F. Izmaylov, and G. E.
-    Scuseria, J. Chem. Phys. <strong>125</strong>, 224106 (2006).</a>
-3.  [↑](#cite_ref-heyd:jcp:03_3-0)
-    <a href="https://doi.org/10.1063/1.1564060" class="external text"
-    rel="nofollow">J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys.
-    <strong>118</strong>, 8207 (2003).</a>
-4.  [↑](#cite_ref-heyd:jcp:04_4-0)
-    <a href="https://doi.org/10.1063/1.1760074" class="external text"
-    rel="nofollow">J. Heyd and G. E. Scuseria, J. Chem. Phys.
-    <strong>121</strong>, 1187 (2004).</a>
-5.  [↑](#cite_ref-heyd:jcp:06_5-0)
-    <a href="https://doi.org/10.1063/1.2204597" class="external text"
-    rel="nofollow">J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys.
-    <strong>124</strong>, 219906 (2006).</a>
-6.  [↑](#cite_ref-schimka:jcp:11_6-0)
-    <a href="https://doi.org/10.1063/1.3524336" class="external text"
-    rel="nofollow">L. Schimka, J. Harl, and G. Kresse, J. Chem. Phys.
-    <strong>134</strong>, 024116 (2011).</a>
-7.  [↑](#cite_ref-skone:prb:2016_7-0)
-    <a href="http://doi.org/10.1103/PhysRevB.93.235106"
-    class="external text" rel="nofollow">J. H. Skone, M. Govoni, and G.
-    Galli, <em>Nonempirical range-separated hybrid functionals for solids
-    and molecules</em>, Phys. Rev. B <strong>93</strong>, 235106 (2016).</a>
-8.  [↑](#cite_ref-chen2018nonempirical_8-0)
-    <a href="https://doi.org/10.1103/PhysRevMaterials.2.073803"
-    class="external text" rel="nofollow">W. Chen, G. Miceli, G.M. Rignanese,
-    and A. Pasquarello, <em>Nonempirical dielectric-dependent hybrid
-    functional with range separation for semiconductors and insulators</em>,
-    Phys. Rev. Mater. <strong>2</strong>, 073803 (2018).</a>
-9.  [↑](#cite_ref-cui2018doubly_9-0)
-    <a href="https://doi.org/10.1021/acs.jpclett.8b00919"
-    class="external text" rel="nofollow">Z.H. Cui, Y.C. Wang, M.Y. Zhang, X.
-    Xu, and H. Jiang, <em>Doubly Screened Hybrid Functional: An Accurate
-    First-Principles Approach for Both Narrow- and Wide-Gap
-    Semiconductors</em> J. Phys. Chem. Lett., <strong>9</strong>, 2338-2345
-    (2018).</a>
-10. [↑](#cite_ref-gerber:jcp:2007_10-0)
-    <a href="http://doi.org/10.1063/1.2759209" class="external text"
-    rel="nofollow">I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse,
-    <em>Range separated hybrid density functional with long-range
-    Hartree-Fock exchange applied to solids</em>, J. Chem. Phys.
-    <strong>127</strong>, 054101 (2007).</a>
-11. [↑](#cite_ref-gerber:cpl:2005_11-0)
-    <a href="http://doi.org/10.1016/j.cplett.2005.08.060"
-    class="external text" rel="nofollow">I. C. Gerber and J. G. Ángyán,
-    <em>Hybrid functional with separated range</em>, Chem. Phys. Lett.
-    <strong>415</strong>, 100 (2005).</a>
-12. [↑](#cite_ref-bylander:prb:90_12-0)
-    <a href="https://doi.org/10.1103/PhysRevB.41.7868" class="external text"
-    rel="nofollow">D. M. Bylander and L. Kleinman, Phys. Rev. B
-    <strong>41</strong>, 7868 (1990).</a>
-13. [↑](#cite_ref-perdew:jcp:1996_13-0)
-    <a href="https://doi.org/10.1063/1.472933" class="external text"
-    rel="nofollow">J. P. Perdew, M. Ernzerhof, and K. Burke, J. Chem. Phys.
-    <strong>105</strong>, 9982 (1996).</a>
-14. [↑](#cite_ref-ernzerhof:jcp:99_14-0)
-    <a href="https://doi.org/10.1063/1.478401" class="external text"
-    rel="nofollow">M. Ernzerhof and G. E. Scuseria, J. Chem. Phys.
-    <strong>110</strong>, 5029 (1999).</a>
-15. [↑](#cite_ref-adamo:jcp:1999_15-0)
-    <a href="https://doi.org/10.1063/1.478522" class="external text"
-    rel="nofollow">C. Adamo and V. Barone, Phys. Rev. Lett.,
-    <strong>110</strong>, 6158 (1999).</a>
-16. [↑](#cite_ref-stephens:jpc:94_16-0)
-    <a href="https://doi.org/10.1021/j100096a001" class="external text"
-    rel="nofollow">P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M.
-    J. Frisch, J. Phys. Chem. <strong>98</strong>, 11623 (1994).</a>
-17. [↑](#cite_ref-becke:jcp:93_17-0)
-    <a href="https://doi.org/10.1063/1.464913" class="external text"
-    rel="nofollow">A. D. Becke, J. Chem. Phys. <strong>98</strong>, 5648
-    (1993).</a>
-18. [↑](#cite_ref-bilc:prb:08_18-0)
-    <a href="https://doi.org/10.1103/PhysRevB.77.165107"
-    class="external text" rel="nofollow">D. I. Bilc, R. Orlando, R. Shaltaf,
-    G.-M. Rignanese, J. Iniguez, and P. Ghosez, Phys. Rev. B
-    <strong>77</strong>, 165107 (2008).</a>
-
-
 ------------------------------------------------------------------------
 
-
+[^libxc_list-1]: [https://libxc.gitlab.io/functionals/](https://libxc.gitlab.io/functionals/)
+[^krukau:jcp:06-2]: [A. V. Krukau , O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria, J. Chem. Phys. **125**, 224106 (2006).](https://doi.org/10.1063/1.2404663)
+[^heyd:jcp:03-3]: [J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. **118**, 8207 (2003).](https://doi.org/10.1063/1.1564060)
+[^heyd:jcp:04-4]: [J. Heyd and G. E. Scuseria, J. Chem. Phys. **121**, 1187 (2004).](https://doi.org/10.1063/1.1760074)
+[^heyd:jcp:06-5]: [J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. **124**, 219906 (2006).](https://doi.org/10.1063/1.2204597)
+[^schimka:jcp:11-6]: [L. Schimka, J. Harl, and G. Kresse, J. Chem. Phys. **134**, 024116 (2011).](https://doi.org/10.1063/1.3524336)
+[^skone:prb:2016-7]: [J. H. Skone, M. Govoni, and G. Galli, *Nonempirical range-separated hybrid functionals for solids and molecules*, Phys. Rev. B **93**, 235106 (2016).](http://doi.org/10.1103/PhysRevB.93.235106)
+[^chen2018nonempirical-8]: [W. Chen, G. Miceli, G.M. Rignanese, and A. Pasquarello, *Nonempirical dielectric-dependent hybrid functional with range separation for semiconductors and insulators*, Phys. Rev. Mater. **2**, 073803 (2018).](https://doi.org/10.1103/PhysRevMaterials.2.073803)
+[^cui2018doubly-9]: [Z.H. Cui, Y.C. Wang, M.Y. Zhang, X. Xu, and H. Jiang, *Doubly Screened Hybrid Functional: An Accurate First-Principles Approach for Both Narrow- and Wide-Gap Semiconductors* J. Phys. Chem. Lett., **9**, 2338-2345 (2018).](https://doi.org/10.1021/acs.jpclett.8b00919)
+[^gerber:jcp:2007-10]: [I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse, *Range separated hybrid density functional with long-range Hartree-Fock exchange applied to solids*, J. Chem. Phys. **127**, 054101 (2007).](http://doi.org/10.1063/1.2759209)
+[^gerber:cpl:2005-11]: [I. C. Gerber and J. G. Ángyán, *Hybrid functional with separated range*, Chem. Phys. Lett. **415**, 100 (2005).](http://doi.org/10.1016/j.cplett.2005.08.060)
+[^bylander:prb:90-12]: [D. M. Bylander and L. Kleinman, Phys. Rev. B **41**, 7868 (1990).](https://doi.org/10.1103/PhysRevB.41.7868)
+[^perdew:jcp:1996-13]: [J. P. Perdew, M. Ernzerhof, and K. Burke, J. Chem. Phys. **105**, 9982 (1996).](https://doi.org/10.1063/1.472933)
+[^ernzerhof:jcp:99-14]: [M. Ernzerhof and G. E. Scuseria, J. Chem. Phys. **110**, 5029 (1999).](https://doi.org/10.1063/1.478401)
+[^adamo:jcp:1999-15]: [C. Adamo and V. Barone, Phys. Rev. Lett., **110**, 6158 (1999).](https://doi.org/10.1063/1.478522)
+[^stephens:jpc:94-16]: [P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch, J. Phys. Chem. **98**, 11623 (1994).](https://doi.org/10.1021/j100096a001)
+[^becke:jcp:93-17]: [A. D. Becke, J. Chem. Phys. **98**, 5648 (1993).](https://doi.org/10.1063/1.464913)
+[^bilc:prb:08-18]: [D. I. Bilc, R. Orlando, R. Shaltaf, G.-M. Rignanese, J. Iniguez, and P. Ghosez, Phys. Rev. B **77**, 165107 (2008).](https://doi.org/10.1103/PhysRevB.77.165107)

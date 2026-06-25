@@ -135,14 +135,14 @@ title="Edit section: Bethe-Salpeter equations (BSE)">edit</a> \| (./index.php.md
 VASP offers a powerful module for solving time-dependent DFT (TD-DFT)
 and time-dependent Hartree-Fock equations (TDHF) (the Casida equation)
 or the Bethe-Salpeter (BSE)
-equation<sup>[\[1\]](#cite_note-albrecht:prl:98-1)[\[2\]](#cite_note-rohlfing:prl:98-2)</sup>.
+equation[^albrecht:prl:98-1][^rohlfing:prl:98-2].
 These approaches are used for obtaining the frequency-dependent
 dielectric function with excitonic effects and can be based on the
 ground-state electronic structure in the DFT, hybrid-functional, or
 [GW](../methods/Practical_guide_to_GW_calculations.md)
 approximations. VASP also offers the TDHF and BSE calculations beyond
 the Tamm-Dancoff approximation
-(TDA)<sup>[\[3\]](#cite_note-sander:prb:15-3)</sup>.
+(TDA)[^sander:prb:15-3].
 
 - [Bethe-Salpeter
   equations](../theory/Category-Bethe-Salpeter_equations.md)
@@ -176,17 +176,17 @@ title="Edit section: Second-order Møller-Plesset perturbation theory (MP2)">edi
 There are three implementations available:
 
 - **MP2**
-  <sup>[\[4\]](#cite_note-paier:2009-4)</sup>:
+  [^paier:2009-4]:
   this implementation is recommended for very small unit cells, very few
   k-points and very low plane-wave cutoffs. The system size scaling of
   this algorithm is N⁵.
-- **LTMP2**<sup>[\[5\]](#cite_note-schaefer:2017-5)</sup>:
+- **LTMP2**[^schaefer:2017-5]:
   for all larger systems this Laplace-transformed MP2 (LTMP2)
   implementation is recommended. Larger cutoffs and denser k-point
   meshes can be used. It possesses a lower system size scaling (N⁴) and
   a more efficient k-point sampling.
 - **stochastic
-  LTMP2**<sup>[\[6\]](#cite_note-schaefer:2018-6)</sup>:
+  LTMP2**[^schaefer:2018-6]:
   even faster calculations at the price of statistical noise can be
   achieved with the stochastic MP2 algorithm. It is an optimal choice
   for very large systems where only relative errors per valence electron
@@ -206,33 +206,9 @@ href="/wiki/index.php?title=Category:Many-body_perturbation_theory&amp;veaction=
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-albrecht:prl:98_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.80.4510"
-    class="external text" rel="nofollow">S. Albrecht, L. Reining, R. Del
-    Sole, and G. Onida, Phys. Rev. Lett. <strong>80</strong>, 4510-4513
-    (1998).</a>
-2.  [↑](#cite_ref-rohlfing:prl:98_2-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.81.2312"
-    class="external text" rel="nofollow">M. Rohlfing and S. G. Louie, Phys.
-    Rev. Lett. <strong>81</strong>, 2312-2315 (1998).</a>
-3.  [↑](#cite_ref-sander:prb:15_3-0)
-    <a href="https://doi.org/10.1103/PhysRevB.92.045209"
-    class="external text" rel="nofollow">T. Sander, E. Maggio, and G.
-    Kresse, <em>Beyond the Tamm-Dancoff approximation for extended systems
-    using exact diagonalization</em>, Phys. Rev. B <strong>92</strong>,
-    045209 (2015).</a>
-4.  [↑](#cite_ref-paier:2009_4-0)
-    <a href="https://doi.org/10.1063/1.3126249" class="external text"
-    rel="nofollow">M. Marsman, A. Grüneis, J. Paier, G. Kresse, J. Chem.
-    Phys. <strong>130</strong>, 184103 (2009).</a>
-5.  [↑](#cite_ref-schaefer:2017_5-0)
-    <a href="https://doi.org/10.1063/1.4976937" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    <strong>146</strong>, 104101 (2017).</a>
-6.  [↑](#cite_ref-schaefer:2018_6-0)
-    <a href="https://doi.org/10.1063/1.5016100" class="external text"
-    rel="nofollow">T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys.
-    <strong>148</strong>, 064103 (2018).</a>
-
-
+[^albrecht:prl:98-1]: [S. Albrecht, L. Reining, R. Del Sole, and G. Onida, Phys. Rev. Lett. **80**, 4510-4513 (1998).](https://doi.org/10.1103/PhysRevLett.80.4510)
+[^rohlfing:prl:98-2]: [M. Rohlfing and S. G. Louie, Phys. Rev. Lett. **81**, 2312-2315 (1998).](https://doi.org/10.1103/PhysRevLett.81.2312)
+[^sander:prb:15-3]: [T. Sander, E. Maggio, and G. Kresse, *Beyond the Tamm-Dancoff approximation for extended systems using exact diagonalization*, Phys. Rev. B **92**, 045209 (2015).](https://doi.org/10.1103/PhysRevB.92.045209)
+[^paier:2009-4]: [M. Marsman, A. Grüneis, J. Paier, G. Kresse, J. Chem. Phys. **130**, 184103 (2009).](https://doi.org/10.1063/1.3126249)
+[^schaefer:2017-5]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. **146**, 104101 (2017).](https://doi.org/10.1063/1.4976937)
+[^schaefer:2018-6]: [T. Schäfer, B. Ramberger, and G. Kresse, J. Chem. Phys. **148**, 064103 (2018).](https://doi.org/10.1063/1.5016100)

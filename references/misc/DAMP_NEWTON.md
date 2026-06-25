@@ -26,7 +26,7 @@ class="external text" rel="nofollow">Random Phase Approximation</a>
 
 where **H**<sup>−1</sup> is the inverse of the DFT Hessian (computed
 during the RPA force calculation) and **F**<sub>RPA</sub> are the RPA
-forces.<sup>[\[1\]](#cite_note-ramberger:prl:118-1)</sup>
+forces.[^ramberger:prl:118-1]
 The resulting updated positions are written to the
 [CONTCAR](../output-files/CONTCAR.md) file (provided
 [NSW](../incar-tags/NSW.md)=0). Iterating this procedure—by copying
@@ -123,10 +123,4 @@ href="/wiki/index.php?title=DAMP_NEWTON&amp;veaction=edit&amp;section=6"
 class="mw-editsection-visualeditor"
 title="Edit section: References">edit</a> \| (./index.php.md)\]
 
-
-1.  [↑](#cite_ref-ramberger:prl:118_1-0)
-    <a href="https://doi.org/10.1103/PhysRevLett.118.106403"
-    class="external text" rel="nofollow">B. Ramberger, T. Schäfer and G.
-    Kresse, Phys. Rev. Lett <strong>118</strong>, 106403 (2017).</a>
-
-
+[^ramberger:prl:118-1]: [B. Ramberger, T. Schäfer and G. Kresse, Phys. Rev. Lett **118**, 106403 (2017).](https://doi.org/10.1103/PhysRevLett.118.106403)
